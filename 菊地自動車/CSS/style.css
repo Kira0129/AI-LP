@@ -52,3 +52,14 @@ img {
   0% { transform: translateX(-150%) skewX(-12deg); }
   100% { transform: translateX(150%) skewX(-12deg); }
 }
+@keyframes loop-slider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-loop-slider {
+  animation: loop-slider 20s linear infinite;
+  width: max-content;
+}
+.animate-loop-slider:hover {
+  animation-play-state: paused;
+}

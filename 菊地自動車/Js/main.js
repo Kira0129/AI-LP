@@ -99,4 +99,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Image Modal (Lightbox) Logic
+  const imageModal = document.getElementById('image-modal');
+  const modalImage = document.getElementById('modal-image');
+  const modalClose = document.getElementById('modal-close');
+  const zoomableImages = document.querySelectorAll('.zoomable-image');
+
+  if (imageModal && modalImage && modalClose) {
+    const openModal = (src) => {
+      modalImage.src = src;
+      imageModal.classList.remove('opacity-0', 'pointer-events-none');
+      imageModal.classList.add('opacity-100', 'pointer-events-auto');
+      setTimeout(() => {
+        modalImage.classList.remove('scale-95');
+        modalImage.classList.add('scale-100');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+      imageModal.classList.remove('opacity-100', 'pointer-events-auto');
+      imageModal.classList.add('opacity-0', 'pointer-events-none');
+      modalImage.classList.remove('scale-100');
+      modalImage.classList.add('scale-95');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        modalImage.src = '';
+      }, 300); // match duration-300
+    };
+
+    zoomableImages.forEach(img => {
+      img.addEventListener('click', () => {
+        openModal(img.src);
+      });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    imageModal.addEventListener('click', (e) => {
+      // Close if clicked outside the image
+      if (e.target === imageModal) {
+        closeModal();
+      }
+    });
+  }
 });
