@@ -63,3 +63,21 @@ img {
 .animate-loop-slider:hover {
   animation-play-state: paused;
 }
+
+@keyframes fv-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  33% { opacity: 1; }
+  43% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.animate-fv {
+  animation: fv-fade 15s infinite;
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .text-2xl {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+}

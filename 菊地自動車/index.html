@@ -11,8 +11,9 @@
   <meta property="og:title" content="車の板金塗装・修理・カスタム｜塩竈市 菊地自動車">
   <meta property="og:description" content="宮城県塩竈市の菊地自動車。小さなキズから大きな修理、カスタムまで、あなたの「こうしたい」に寄り添います。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kikuti-zidousha-lp.com/">
-  <meta property="og:image" content="https://kikuti-zidousha-lp.com/img/ogp.jpg">
+  <meta property="og:url" content="https://kikuti-zidousha.happytry.fun/">
+  <meta property="og:image" content="https://kikuti-zidousha.happytry.fun/img/ogp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:site_name" content="菊地自動車">
 
   <!-- Google Fonts: Noto Sans JP -->
@@ -64,7 +65,7 @@
 
 </head>
 
-<body class="overflow-x-hidden relative">
+<body class="overflow-x-hidden relative" oncontextmenu="return false;">
 
   <header id="header"
     class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
@@ -79,14 +80,14 @@
         <nav class="flex gap-6 text-sm font-medium text-textMain">
           <a href="#about" class="hover:text-primary transition-colors">当社について</a>
           <a href="#service" class="hover:text-primary transition-colors">サービス</a>
+          <a href="#features" class="hover:text-primary transition-colors">特徴</a>
+          <a href="#pricing" class="hover:text-primary transition-colors">料金</a>
+          <a href="#voice" class="hover:text-primary transition-colors">お客様の声</a>
+          <a href="#message" class="hover:text-primary transition-colors">ご挨拶</a>
           <a href="#company" class="hover:text-primary transition-colors">店舗情報</a>
         </nav>
         <div class="flex items-center gap-3">
-          <a href="tel:050-5448-7441"
-            class="flex items-center gap-2 bg-accentYellow text-textMain font-bold py-2 px-4 rounded-full hover:bg-yellow-400 transition-colors shadow-sm">
-            <i class="fa-solid fa-phone"></i> 050-5448-7441
-          </a>
-          <a href="https://kikuti-zidousha.com/contact/" target="_blank" rel="noopener noreferrer"
+          <a href="https://kikuti-zidousha.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
             class="flex items-center gap-2 bg-textMain text-white font-bold py-2 px-5 rounded-full shadow-lg shadow-textMain/30 hover:scale-105 transition-transform">
             <i class="fa-regular fa-envelope text-lg"></i> WEBでお問い合わせ
           </a>
@@ -107,6 +108,10 @@
       <nav class="flex flex-col gap-4 text-center text-lg font-bold text-textMain">
         <a href="#about" class="mobile-link py-3 border-b border-gray-100">当社について</a>
         <a href="#service" class="mobile-link py-3 border-b border-gray-100">サービス</a>
+        <a href="#features" class="mobile-link py-3 border-b border-gray-100">特徴</a>
+        <a href="#pricing" class="mobile-link py-3 border-b border-gray-100">料金</a>
+        <a href="#voice" class="mobile-link py-3 border-b border-gray-100">お客様の声</a>
+        <a href="#message" class="mobile-link py-3 border-b border-gray-100">ご挨拶</a>
         <a href="#company" class="mobile-link py-3 border-b border-gray-100">店舗情報</a>
       </nav>
     </div>
@@ -126,18 +131,19 @@
             塩竈市の頼れる車屋さん
           </div>
           <h1
-            class="text-3xl sm:text-4xl lg:text-[42px] xl:text-[50px] 2xl:text-[55px] font-black text-textMain leading-snug lg:leading-[1.4] mb-6">
+            class="text-[29px] sm:text-4xl lg:text-[42px] xl:text-[50px] 2xl:text-[55px] font-black text-textMain leading-snug lg:leading-[1.4] mb-6">
             キズも、へこみも<br>
             <span class="text-primary relative inline-block whitespace-nowrap">
               愛車を、もっとカッコよく
             </span>
           </h1>
           <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed mb-8">
-            鈑金塗装から修理、カスタムまで。<br>塩竈市の菊地自動車が、あなたの「こうしたい」に寄り添います。
+            鈑金塗装から修理、カスタムまで。<br>塩竈市の菊地自動車が、<br class="block md:hidden">あなたの「こうしたい」に寄り添います。
           </p>
 
           <!-- 3つの丸円バッジ（大きめ） -->
-          <div class="relative z-10 animate-[fade-up_1s_ease-out] flex items-center gap-3 sm:gap-5 mt-8">
+          <div
+            class="relative z-10 animate-[fade-up_1s_ease-out] flex items-center justify-center md:justify-start gap-3 sm:gap-5 mt-8">
             <!-- 白バッジ -->
             <div
               class="w-24 h-24 sm:w-28 sm:h-28 bg-white/95 backdrop-blur-sm rounded-full flex flex-col items-center justify-center shadow-lg border border-white text-center transform hover:-translate-y-1 transition-transform">
@@ -162,8 +168,12 @@
         <!-- Image -->
         <div class="w-full lg:w-7/12 relative fade-left">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-8 border-white bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80"
-              alt="自動車の鈑金塗装イメージ" class="w-full h-full object-cover">
+            <img src="img/fv01.jpg" alt="自動車の鈑金塗装イメージ1" class="absolute inset-0 w-full h-full object-cover animate-fv"
+              style="animation-delay: 0s;">
+            <img src="img/fv02.jpg" alt="自動車の鈑金塗装イメージ2" class="absolute inset-0 w-full h-full object-cover animate-fv"
+              style="animation-delay: 5s;">
+            <img src="img/fv03.jpg" alt="自動車の鈑金塗装イメージ3" class="absolute inset-0 w-full h-full object-cover animate-fv"
+              style="animation-delay: 10s;">
           </div>
           <!-- 浮遊バッジ -->
           <div
@@ -237,8 +247,8 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 relative bg-fixed bg-center bg-cover bg-no-repeat"
-    style="background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80');">
+  <section class="py-16 md:py-24 relative bg-fixed bg-[55%_center] md:bg-center bg-cover bg-no-repeat"
+    style="background-image: url('img/worrybg.jpg');">
     <!-- 背景オーバーレイ -->
     <div class="absolute inset-0 bg-[#204bad]/70 z-0"></div>
 
@@ -250,33 +260,39 @@
       </div>
 
       <div
-        class="bg-white/85 backdrop-blur-lg rounded-3xl border border-white/40 p-4 pt-10 md:p-12 shadow-2xl relative fade-up">
+        class="bg-white/85 backdrop-blur-lg rounded-3xl border border-white/40 p-[20px] pt-10 md:p-12 shadow-2xl relative fade-up">
         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-primary text-5xl opacity-20">
           <i class="fa-solid fa-clipboard-question"></i>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 relative z-10">
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
             <p class="font-medium text-[14px] md:text-[16px]">車を擦ってキズがついてしまった</p>
           </div>
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
             <p class="font-medium text-[14px] md:text-[16px]">へこみをできるだけキレイに直したい</p>
           </div>
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
-            <p class="font-medium text-[14px] md:text-[16px]">ディーラーの見積もりが高くて悩んでいる</p>
+            <p class="font-medium text-[14px] md:text-[16px]">ディーラーの見積もりが高くて<br class="block md:hidden">悩んでいる</p>
           </div>
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
             <p class="font-medium text-[14px] md:text-[16px]">できるだけ費用を抑えて修理したい</p>
           </div>
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
             <p class="font-medium text-[14px] md:text-[16px]">他店で部品交換が必要と言われた</p>
           </div>
-          <div class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-4 rounded-xl shadow-sm">
+          <div
+            class="flex items-center gap-3 bg-primaryLight/20 border border-primary/10 p-[10px] md:p-4 rounded-xl shadow-sm">
             <div class="text-primary"><i class="fa-solid fa-circle-check text-lg"></i></div>
             <p class="font-medium text-[14px] md:text-[16px]">愛車を自分好みにカスタムしたい</p>
           </div>
@@ -284,7 +300,7 @@
 
         <div class="mt-10 text-center">
           <p class="text-lg md:text-xl font-bold">
-            小さなキズから大きな修理、カスタムまで、<br>
+            小さなキズから大きな修理、<br class="block md:hidden">カスタムまで、<br>
             <span class="text-xl md:text-2xl text-primary inline-block mt-2">まずはお気軽にご相談ください。</span>
           </p>
         </div>
@@ -301,7 +317,8 @@
 
         <div class="text-center md:text-left text-white">
           <h2 class="text-2xl md:text-3xl font-black mb-2">お見積り・ご相談は無料です</h2>
-          <p class="text-[14px] md:text-[16px] opacity-90">まずはお車の状態やご希望をお聞かせください。親身に対応いたします。</p>
+          <p class="text-[14px] md:text-[16px] opacity-90">まずはお車の状態やご希望をお聞かせください。<br class="block md:hidden">親身に対応いたします。
+          </p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
@@ -309,7 +326,7 @@
             class="flex items-center justify-center gap-2 bg-accentYellow text-textMain font-bold py-3.5 px-6 md:px-8 rounded-full shadow-lg hover:bg-yellow-400 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto text-lg">
             <i class="fa-solid fa-phone"></i> 050-5448-7441
           </a>
-          <a href="https://kikuti-zidousha.com/contact/" target="_blank" rel="noopener noreferrer"
+          <a href="https://kikuti-zidousha.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
             class="flex items-center justify-center gap-2 bg-textMain text-white font-bold py-3.5 px-6 md:px-8 rounded-full shadow-lg hover:scale-105 transition-transform w-full sm:w-auto text-lg">
             <i class="fa-regular fa-envelope"></i> WEBでお問い合わせ
           </a>
@@ -338,7 +355,7 @@
           <div class="w-full md:w-1/2 h-48 md:h-auto relative">
             <img src="img/serpic01.jpg" alt="鈑金・塗装" class="w-full h-full object-cover absolute inset-0">
           </div>
-          <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-full md:w-1/2 p-[20px] md:p-12 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div
                 class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl shadow-md shrink-0">
@@ -359,7 +376,7 @@
           <div class="w-full md:w-1/2 h-48 md:h-auto relative">
             <img src="img/serpic02.jpg" alt="キズ・へこみ修理" class="w-full h-full object-cover absolute inset-0">
           </div>
-          <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-full md:w-1/2 p-[20px] md:p-12 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div
                 class="w-14 h-14 bg-accentYellow text-textMain rounded-2xl flex items-center justify-center text-2xl shadow-md shrink-0">
@@ -380,7 +397,7 @@
           <div class="w-full md:w-1/2 h-48 md:h-auto relative">
             <img src="img/serpic03.jpg" alt="自動車塗装" class="w-full h-full object-cover absolute inset-0">
           </div>
-          <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-full md:w-1/2 p-[20px] md:p-12 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div
                 class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl shadow-md shrink-0">
@@ -401,7 +418,7 @@
           <div class="w-full md:w-1/2 h-48 md:h-auto relative">
             <img src="img/serpic04.jpg" alt="事故・保険修理" class="w-full h-full object-cover absolute inset-0">
           </div>
-          <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-full md:w-1/2 p-[20px] md:p-12 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div
                 class="w-14 h-14 bg-accentYellow text-textMain rounded-2xl flex items-center justify-center text-2xl shadow-md shrink-0">
@@ -422,13 +439,13 @@
           <div class="w-full md:w-1/2 h-48 md:h-auto relative">
             <img src="img/serpic05.jpg" alt="カスタム・その他" class="w-full h-full object-cover absolute inset-0">
           </div>
-          <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="w-full md:w-1/2 p-[20px] md:p-12 flex flex-col justify-center">
             <div class="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div
                 class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl shadow-md shrink-0">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </div>
-              <h3 class="text-2xl font-bold text-textMain">カスタム・その他のご相談</h3>
+              <h3 class="text-2xl font-bold text-textMain">カスタム・<br class="block md:hidden">その他のご相談</h3>
             </div>
             <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed">
               「こんな見た目にしたい」「愛車をもっと自分好みにしたい」など、カスタムについてのご相談も承ります。まずはご希望をお聞かせください。
@@ -464,8 +481,9 @@
               class="absolute top-4 left-4 bg-accentYellow text-textMain font-black text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
               01</div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
-            <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">25年以上培ってきた確かな技術</h3>
+          <div class="p-[20px] md:p-8 flex flex-col flex-1">
+            <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">25年以上培ってきた確かな技術
+            </h3>
             <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed flex-1">
               長年の経験を活かし、車の状態を一台ずつしっかり確認。<br>
               交換が必要と思われる部品でも、鈑金技術で修復できる可能性を検討し、できるだけ無駄な費用を抑えた修理を目指します。
@@ -477,15 +495,15 @@
         <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-gray-100 flex flex-col group fade-up"
           style="transition-delay: 100ms;">
           <div class="relative h-56 md:h-64 overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
-              alt="予算に合わせて、直し方を選べる"
+            <img src="img/featurespic02.jpg" alt="予算に合わせて、直し方を選べる"
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
             <div
               class="absolute top-4 left-4 bg-accentYellow text-textMain font-black text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
               02</div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
-            <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">予算に合わせて、直し方を選べる</h3>
+          <div class="p-[20px] md:p-8 flex flex-col flex-1">
+            <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">予算に合わせて、直し方を選べる
+            </h3>
             <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed flex-1">
               修理に対する希望は人それぞれ。<br>
               <span class="font-bold text-primary block mt-2">「とにかく費用を抑えたい」</span>
@@ -499,14 +517,13 @@
         <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-gray-100 flex flex-col group fade-up"
           style="transition-delay: 200ms;">
           <div class="relative h-56 md:h-64 overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80"
-              alt="自社工場と充実した設備"
+            <img src="img/featurespic03.jpg" alt="自社工場と充実した設備"
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
             <div
               class="absolute top-4 left-4 bg-accentYellow text-textMain font-black text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
               03</div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
+          <div class="p-[20px] md:p-8 flex flex-col flex-1">
             <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">自社工場と充実した設備</h3>
             <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed flex-1">
               鈑金塗装に必要な設備を整え、ご相談から施工、お引き渡しまで自社で対応します。<br>
@@ -519,14 +536,13 @@
         <div class="bg-white rounded-3xl overflow-hidden shadow-soft border border-gray-100 flex flex-col group fade-up"
           style="transition-delay: 300ms;">
           <div class="relative h-56 md:h-64 overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=800&q=80"
-              alt="ふらっと相談できる車屋さん"
+            <img src="img/featurespic04.jpg" alt="ふらっと相談できる車屋さん"
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
             <div
               class="absolute top-4 left-4 bg-accentYellow text-textMain font-black text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
               04</div>
           </div>
-          <div class="p-8 flex flex-col flex-1">
+          <div class="p-[20px] md:p-8 flex flex-col flex-1">
             <h3 class="text-xl md:text-2xl font-bold text-textMain mb-4">ふらっと相談できる車屋さん</h3>
             <p class="text-[14px] md:text-[16px] text-textLight leading-relaxed flex-1">
               専門店だからといって、難しく考える必要はありません。<br>
@@ -541,7 +557,7 @@
 
   <!-- Pricing Section -->
   <section id="pricing" class="py-16 md:py-24 relative overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat"
-    style="background-image: url('https://images.unsplash.com/photo-1632733711679-529326f6db12?auto=format&fit=crop&w=1920&q=80');">
+    style="background-image: url('img/menubg.jpg');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-[#0056b3]/85 z-0"></div>
 
@@ -559,12 +575,13 @@
       <div class="flex flex-col-reverse lg:flex-row items-stretch gap-12">
         <!-- Text Content -->
         <div
-          class="w-full lg:w-1/2 fade-up text-[14px] md:text-[16px] leading-relaxed space-y-6 bg-white/10 p-8 md:p-10 rounded-3xl backdrop-blur-sm border border-white/20 shadow-xl flex flex-col justify-center">
+          class="w-full lg:w-1/2 fade-up text-[14px] md:text-[16px] leading-relaxed space-y-6 bg-white/10 p-[20px] md:p-10 rounded-3xl backdrop-blur-sm border border-white/20 shadow-xl flex flex-col justify-center">
           <p>
             鈑金塗装や修理の料金は、キズやへこみの大きさ、車種、修理方法によって異なります。<br>
             そのため、まずはお車の状態を確認したうえで、お見積もりをご案内します。
           </p>
-          <div class="bg-white/20 p-6 rounded-2xl border border-white/30 font-bold text-[15px] md:text-lg shadow-inner">
+          <div
+            class="bg-white/20 p-[20px] md:p-6 rounded-2xl border border-white/30 font-bold text-[15px] md:text-lg shadow-inner">
             <p class="mb-3 text-accentYellow"><i class="fa-solid fa-check text-white mr-2"></i>できるだけリーズナブルに</p>
             <p class="mb-3 text-accentYellow"><i class="fa-solid fa-check text-white mr-2"></i>仕上がりを重視したい</p>
             <p class="text-accentYellow"><i class="fa-solid fa-check text-white mr-2"></i>この予算でどこまでできる？</p>
@@ -585,9 +602,8 @@
             <img src="img/menupic02.jpg" alt="料金イメージ2"
               class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
             <img src="img/menupic03.jpg" alt="料金イメージ3"
-              class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
-            <img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=400&q=80"
-              alt="料金イメージ4"
+              class="w-[200px] md:w-[300px] h-full object-cover object-[80%_center] shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
+            <img src="img/menupic04.jpg" alt="料金イメージ4"
               class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
             <!-- Duplicated Set for Infinite Loop -->
             <img src="img/menupic01.jpg" alt="料金イメージ1"
@@ -595,9 +611,8 @@
             <img src="img/menupic02.jpg" alt="料金イメージ2"
               class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
             <img src="img/menupic03.jpg" alt="料金イメージ3"
-              class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
-            <img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?auto=format&fit=crop&w=400&q=80"
-              alt="料金イメージ4"
+              class="w-[200px] md:w-[300px] h-full object-cover object-[80%_center] shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
+            <img src="img/menupic04.jpg" alt="料金イメージ4"
               class="w-[200px] md:w-[300px] h-full object-cover shrink-0 rounded-2xl shadow-xl zoomable-image cursor-zoom-in transition-transform duration-300 hover:scale-[1.02] pointer-events-auto">
           </div>
         </div>
@@ -615,7 +630,8 @@
 
         <div class="text-center md:text-left text-white">
           <h2 class="text-2xl md:text-3xl font-black mb-2">お見積り・ご相談は無料です</h2>
-          <p class="text-[14px] md:text-[16px] opacity-90">まずはお車の状態やご希望をお聞かせください。親身に対応いたします。</p>
+          <p class="text-[14px] md:text-[16px] opacity-90">まずはお車の状態やご希望をお聞かせください。<br class="block md:hidden">親身に対応いたします。
+          </p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
@@ -623,7 +639,7 @@
             class="flex items-center justify-center gap-2 bg-accentYellow text-textMain font-bold py-3.5 px-6 md:px-8 rounded-full shadow-lg hover:bg-yellow-400 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto text-lg">
             <i class="fa-solid fa-phone"></i> 050-5448-7441
           </a>
-          <a href="https://kikuti-zidousha.com/contact/" target="_blank" rel="noopener noreferrer"
+          <a href="https://kikuti-zidousha.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
             class="flex items-center justify-center gap-2 bg-textMain text-white font-bold py-3.5 px-6 md:px-8 rounded-full shadow-lg hover:scale-105 transition-transform w-full sm:w-auto text-lg">
             <i class="fa-regular fa-envelope"></i> WEBでお問い合わせ
           </a>
@@ -648,7 +664,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
         <!-- Voice 1 -->
-        <div class="bg-beige rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col">
+        <div class="bg-beige rounded-2xl p-[20px] md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col">
           <div class="flex items-center gap-4 mb-4">
             <div
               class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-inner shrink-0">
@@ -677,7 +693,7 @@
         </div>
 
         <!-- Voice 2 -->
-        <div class="bg-beige rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col"
+        <div class="bg-beige rounded-2xl p-[20px] md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col"
           style="transition-delay: 100ms;">
           <div class="flex items-center gap-4 mb-4">
             <div
@@ -708,7 +724,7 @@
         </div>
 
         <!-- Voice 3 -->
-        <div class="bg-beige rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col"
+        <div class="bg-beige rounded-2xl p-[20px] md:p-8 shadow-sm border border-gray-100 fade-up flex flex-col"
           style="transition-delay: 200ms;">
           <div class="flex items-center gap-4 mb-4">
             <div
@@ -740,7 +756,7 @@
       </div>
 
       <div class="mt-12 text-center fade-up">
-        <a href="https://www.google.com/search?sca_esv=b5758367d36a4841&rlz=1C1TMBY_jaJP1190JP1190&sxsrf=APpeQnsu3RL8iMXZDD67qkpUJLzSE5w5XQ:1783914214674&kgmid=/g/11fvd9kckd&q=%E8%8F%8A%E5%9C%B0%E8%87%AA%E5%8B%95%E8%BB%8A&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/1&kgs=3c12dfec3fe1eb3e&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/uni/m1/1#lrd=0x5f8985ebc5abe9a7:0x3509cb13b9c4d11b,1,,,,"
+        <a href="https://kikuti-zidousha.happytry.fun/jump02.html"
           target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-2 bg-textMain text-white font-bold py-3.5 px-8 rounded-full shadow-lg hover:scale-105 transition-transform text-[15px] md:text-lg group">
           その他の口コミはこちら
@@ -751,7 +767,7 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-beige overflow-hidden">
+  <section id="message" class="py-16 md:py-24 bg-beige overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
 
@@ -760,8 +776,7 @@
           <div class="absolute -top-4 -left-2 md:-top-6 md:-left-6 w-full h-full bg-primaryLight rounded-3xl z-0"></div>
           <div
             class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] border-8 border-white z-10 bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1000&q=80"
-              alt="お客様に寄り添う車屋" class="w-full h-full object-cover">
+            <img src="img/messagepic.jpg" alt="お客様に寄り添う車屋" class="w-full h-full object-cover">
           </div>
         </div>
 
@@ -799,7 +814,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        <div class="bg-beige rounded-3xl p-8 md:p-10 shadow-soft fade-up border border-gray-100">
+        <div class="bg-beige rounded-3xl p-[20px] md:p-10 shadow-soft fade-up border border-gray-100">
           <h2 class="text-2xl font-black text-primary border-b-2 border-primaryLight pb-4 mb-6">
             店舗情報
           </h2>
@@ -811,7 +826,7 @@
               </tr>
               <tr class="border-b border-gray-200/60">
                 <th class="py-4 font-bold text-textMain">住所</th>
-                <td class="py-4 text-textLight">〒985-0011<br>宮城県塩竈市貞山通２丁目４−８</td>
+                <td class="py-4 text-textLight">〒985-0011<br>宮城県塩竈市貞山通<br class="block md:hidden">２丁目４−８</td>
               </tr>
               <tr class="border-b border-gray-200/60">
                 <th class="py-4 font-bold text-textMain">電話番号</th>
@@ -833,12 +848,12 @@
           <!-- SNS -->
           <div class="mt-8 flex items-center gap-4">
             <span class="text-xs font-bold text-textLight">リンク：</span>
-            <a href="https://kikuti-zidousha.com/contact/" target="_blank" rel="noopener noreferrer"
+            <a href="https://kikuti-zidousha.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
               class="w-12 h-12 bg-textMain text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform text-xl shadow-md"
               aria-label="Contact">
               <i class="fa-regular fa-envelope"></i>
             </a>
-            <a href="https://kikuti-zidousha-lp.com/" target="_blank" rel="noopener noreferrer"
+            <a href="https://kikuti-zidousha.happytry.fun/jump03.html" target="_blank" rel="noopener noreferrer"
               class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform text-xl shadow-md"
               aria-label="Website">
               <i class="fa-solid fa-globe"></i>
@@ -872,7 +887,7 @@
   <!-- Fixed CTA for Mobile -->
   <div
     class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 flex gap-2 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-    <a href="https://kikuti-zidousha.com/contact/" target="_blank" rel="noopener noreferrer"
+    <a href="https://kikuti-zidousha.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
       class="flex-1 bg-textMain text-white flex flex-col items-center justify-center py-2 rounded-xl active:bg-gray-800 transition-colors">
       <i class="fa-regular fa-envelope text-xl mb-0.5"></i>
       <span class="text-[10px] font-bold">WEBでお問い合わせ</span>
