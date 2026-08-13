@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本料理ちかもと | 淡路島・東浦の完全予約制和食</title>
+    <meta name="description" content="淡路島の旬を味わう、完全予約制の日本料理「ちかもと」。落ち着いた空間で、季節の食材を活かしたおまかせコースをゆっくりとお楽しみください。">
+
+    <!-- OGP -->
+    <meta property="og:title" content="日本料理ちかもと | 淡路島・東浦の完全予約制和食">
+    <meta property="og:description" content="淡路島の旬を味わう、完全予約制の日本料理「ちかもと」。落ち着いた空間で、季節の食材を活かしたおまかせコースをゆっくりとお楽しみください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chikamoto-awaji.happytry.org">
+    <meta property="og:image" content="https://chikamoto-awaji.happytry.org/img/ogp.jpg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'zen': ['"Zen Old Mincho"', 'serif'] },
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        /* 暖簾や和紙のような温かみのある生成り色 */
+                        'brand-offwhite': '#F4EFEA',
+                        /* テーブルや店内の木枠のダークブラウン */
+                        'brand-brown': '#523B2B',
+                        /* さらに濃い焦げ茶（引き締め用） */
+                        'brand-accent': '#33251A',
+                        /* 壁のモルタルグレーに合わせたウォームグレー */
+                        'brand-gray': '#6B655E',
+                        /* 墨黒（文字色用） */
+                        'brand-charcoal': '#1A1817',
+                    },
+                    spacing: { '18': '4.5rem', '30': '7.5rem' },
+                    letterSpacing: { 'widest-2': '0.2em' }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body class="font-zen text-brand-gray bg-brand-white antialiased" oncontextmenu="return false;">
+
+    <!-- PC Floating Global Header -->
+    <header id="global-header"
+        class="fixed top-0 left-0 w-full z-[80] bg-brand-white/95 backdrop-blur-md border-b border-brand-brown/10 px-12 py-4 shadow-sm transition-all duration-500 transform -translate-y-full opacity-0 pointer-events-none hidden lg:flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="#" class="flex items-center">
+                <!-- フローティングヘッダー用はテキストか小さくトリミングした画像を推奨 -->
+                <span class="text-xl font-serif tracking-widest text-brand-charcoal">ちかもと</span>
+            </a>
+        </div>
+        <nav class="flex items-center gap-8 text-sm tracking-widest text-brand-charcoal">
+            <a href="#service" class="hover:text-brand-brown transition-colors duration-300">特徴</a>
+            <a href="#menu" class="hover:text-brand-brown transition-colors duration-300">お品書き</a>
+            <a href="#gallery" class="hover:text-brand-brown transition-colors duration-300">美食の記憶</a>
+            <a href="#message" class="hover:text-brand-brown transition-colors duration-300">ご挨拶</a>
+            <a href="#access" class="hover:text-brand-brown transition-colors duration-300">店舗情報</a>
+        </nav>
+        <div class="flex items-center gap-6">
+            <a href="tel:05057953519"
+                class="text-sm font-serif tracking-widest text-brand-charcoal hover:text-brand-brown transition-colors">
+                050-5795-3519
+            </a>
+            <a href="https://chikamoto-awaji.happytry.org/jump01.html"
+                target="_blank"
+                class="bg-brand-brown text-white text-xs tracking-widest font-medium py-3 px-6 hover:bg-brand-charcoal transition-colors duration-300">
+                Web予約
+            </a>
+        </div>
+    </header>
+
+    <!-- SP Floating Global Header -->
+    <header id="sp-global-header"
+        class="fixed top-0 left-0 w-full z-[45] bg-brand-white/95 backdrop-blur-md border-b border-brand-brown/10 px-6 py-4 shadow-sm transition-all duration-500 transform -translate-y-full opacity-0 pointer-events-none flex lg:hidden items-center justify-between">
+        <div class="flex items-center">
+            <a href="#" class="text-lg font-serif tracking-widest text-brand-charcoal">
+                ちかもと
+            </a>
+        </div>
+    </header>
+
+    <!-- SP Hamburger Menu Button -->
+    <header
+        class="block lg:hidden fixed top-0 left-0 w-full z-50 flex justify-end items-center px-6 py-4 pointer-events-none">
+        <button id="hamburger-btn" class="space-y-1.5 focus:outline-none z-50 group pointer-events-auto p-2">
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-transform duration-300 group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-opacity duration-300 group-[.active]:opacity-0"></span>
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-transform duration-300 group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+        </button>
+    </header>
+
+    <!-- SP Navigation Overlay -->
+    <nav id="sp-nav"
+        class="fixed inset-0 bg-brand-white z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden">
+        <ul class="space-y-6 text-center text-lg font-medium tracking-widest text-brand-charcoal mb-10">
+            <li><a href="#about-sp" class="sp-nav-link block py-2">ABOUT</a></li>
+            <li><a href="#service" class="sp-nav-link block py-2">特徴</a></li>
+            <li><a href="#menu" class="sp-nav-link block py-2">お品書き</a></li>
+            <li><a href="#gallery" class="sp-nav-link block py-2">美食の記憶</a></li>
+            <li><a href="#message" class="sp-nav-link block py-2">ご挨拶</a></li>
+            <li><a href="#access" class="sp-nav-link block py-2">店舗情報</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ============================================
+       PHASE 1: FV ~ About
+    ============================================= -->
+    <div class="layout-phase-1">
+
+        <!-- Left Side: Sticky Information -->
+        <aside class="sticky-sidebar hidden lg:flex custom-scrollbar overflow-y-auto">
+            <!-- Top: Vertical Copy -->
+            <div class="flex-none h-auto min-h-[20vh] flex justify-center pt-8 items-center mb-0">
+                <div
+                    class="text-lg tracking-[0.2em] text-brand-charcoal border-b border-brand-brown/40 pb-2 px-4 text-center leading-relaxed">
+                    淡路島の旬を味わう、<br>
+                    完全予約制の日本料理。
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div
+                class="flex-none h-auto min-h-[15vh] flex flex-col items-center justify-center mb-12 relative mix-blend-multiply">
+                <!-- 縦書きのロゴ画像を配置 -->
+                <a href="#" class="block w-full max-w-[120px] lg:max-w-[150px]">
+                    <img src="img/logo.jpg" alt="日本料理 ちかもと" class="w-full h-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Bottom: Nav, Button, About Content -->
+            <div class="flex-none h-auto flex flex-col items-center justify-start pb-4">
+                <!-- Vertical Nav -->
+                <nav
+                    class="text-sm tracking-[0.3em] gap-8 mb-12 h-auto flex flex-row items-start justify-center text-brand-charcoal">
+                    <a href="#service"
+                        class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 relative group">・特徴</a>
+                    <a href="#menu"
+                        class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 relative group whitespace-nowrap">・お品書き</a>
+                    <a href="#gallery"
+                        class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 relative group whitespace-nowrap">・美食の記憶</a>
+                    <a href="#message"
+                        class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 relative group">・ご挨拶</a>
+                    <a href="#access"
+                        class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 relative group">・店舗情報</a>
+                </nav>
+
+                <!-- Reserve Buttons Area -->
+                <div class="flex flex-col gap-6 w-full max-w-[220px] mb-16 flex-none items-center">
+                    <div class="text-center w-full">
+                        <p class="text-[10px] tracking-widest text-brand-gray mb-2">お電話でのご予約</p>
+                        <a href="tel:05057953519"
+                            class="block text-xl font-serif tracking-widest text-brand-charcoal hover:text-brand-brown transition-colors">
+                            050-5795-3519
+                        </a>
+                    </div>
+                    <a href="https://chikamoto-awaji.happytry.org/jump01.html"
+                        target="_blank"
+                        class="block w-full py-4 bg-brand-brown border border-brand-brown text-white text-center tracking-[0.2em] font-medium hover:bg-brand-charcoal hover:border-brand-charcoal transition-all duration-500 rounded-none relative">
+                        Web予約<br><span class="text-xs tracking-wider font-normal">Reserve</span>
+                    </a>
+                </div>
+
+                <!-- About Content -->
+                <div id="about-pc" class="relative w-full bg-transparent px-2 text-center pb-20">
+                    <div class="fade-in-up">
+                        <span
+                            class="text-brand-brown font-serif tracking-[0.3em] text-xs mb-4 block uppercase">About</span>
+                        <div
+                            class="text-base leading-loose tracking-wider space-y-6 text-brand-gray text-justify inline-block text-left">
+                            <p>日本料理ちかもとは、淡路島・東浦エリアにある完全予約制の和食店です。</p>
+                            <p>店内は落ち着いた雰囲気を大切にし、ゆっくりとお食事を楽しんでいただける空間をご用意しています。</p>
+                            <p>ご家族とのお食事や記念日、大切な方とのひとときなど、日常から少し離れた特別な時間をお過ごしください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side: Scroll Content (Images) -->
+        <div class="scroll-content-area w-full lg:w-[65%]">
+            <!-- SP Only Header Area (Logo Image) -->
+            <div
+                class="lg:hidden bg-brand-white py-12 flex justify-center flex-col items-center relative mix-blend-multiply">
+                <img src="img/logo.jpg" alt="日本料理 ちかもと" class="w-[120px] h-auto object-contain">
+            </div>
+
+            <!-- FV Area: 4 Images Slider (アップロードされたお店の写真に差し替え) -->
+            <section id="fv" class="w-full relative overflow-hidden bg-brand-charcoal">
+                <div class="swiper fv-swiper w-full h-full">
+                    <div class="swiper-wrapper">
+                        <!-- 画像1: 外観・暖簾 -->
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <img src="img/fv01.jpg" alt="外観・暖簾"
+                                    class="w-full h-full object-cover animate-kenburns brightness-[0.85]">
+                            </picture>
+                        </div>
+                        <!-- 画像2: テーブルセッティング -->
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <img src="img/fv02.jpg" alt="テーブルセッティング"
+                                    class="w-full h-full object-cover animate-kenburns brightness-[0.85]">
+                            </picture>
+                        </div>
+                        <!-- 画像3: 個室・テーブル -->
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <img src="img/fv03.jpg" alt="個室"
+                                    class="w-full h-full object-cover animate-kenburns brightness-[0.85]">
+                            </picture>
+                        </div>
+                        <!-- 画像4: 店内・暖簾 -->
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <img src="img/fv04.jpg" alt="店内の雰囲気"
+                                    class="w-full h-full object-cover animate-kenburns brightness-[0.85]">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SP Only Navigation -->
+            <div class="lg:hidden bg-brand-white flex flex-col items-center">
+                <nav class="pt-10 pb-20 flex justify-center items-start gap-10">
+                    <div
+                        class="flex flex-row-reverse items-start gap-8 text-sm tracking-[0.4em] text-brand-charcoal font-serif">
+                        <a href="#service"
+                            class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 whitespace-nowrap">・特徴</a>
+                        <a href="#menu"
+                            class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 whitespace-nowrap">・お品書き</a>
+                        <a href="#gallery"
+                            class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 whitespace-nowrap">・美食の記憶</a>
+                        <a href="#message"
+                            class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 whitespace-nowrap">・ご挨拶</a>
+                        <a href="#access"
+                            class="writing-vertical-rl hover:text-brand-brown transition-colors py-2 whitespace-nowrap">・店舗情報</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- About Section (Mobile Only) -->
+            <div id="about-sp"
+                class="lg:hidden relative w-full bg-brand-white py-20 px-8 text-center border-t border-gray-100">
+                <div class="fade-in-up">
+                    <h2 class="text-xl font-serif tracking-widest mb-10 leading-relaxed text-brand-charcoal font-bold">
+                        淡路島の旬を味わう、<br>完全予約制の日本料理。
+                    </h2>
+                    <div class="text-sm leading-loose tracking-wider space-y-6 text-brand-gray text-justify">
+                        <p>日本料理ちかもとは、淡路島・東浦エリアにある完全予約制の和食店です。</p>
+                        <p>店内は落ち着いた雰囲気を大切にし、ゆっくりとお食事を楽しんでいただける空間をご用意しています。</p>
+                        <p>ご家族とのお食事や記念日、大切な方とのひとときなど、日常から少し離れた特別な時間をお過ごしください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       PHASE 2: Recommendation ~ Footer
+    ============================================= -->
+    <div class="layout-phase-2">
+
+        <!-- Recommendation Section -->
+        <section id="recommendation" class="break-out-full-width py-16 lg:py-20 relative bg-cover bg-center"
+            style="background-image: url('img/setionbg.png');">
+            <!-- Light Overlay (文字の可読性を保ちつつ和柄を見せるために透過率を調整) -->
+            <div class="absolute inset-0 bg-white/60 z-0 pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center fade-in-up relative z-10">
+                <div class="flex flex-col items-center justify-center mb-8 fade-in-up text-center">
+                    <span
+                        class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-2 block uppercase">Recommendation</span>
+                    <h2
+                        class="text-2xl lg:text-3xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-3">
+                        おすすめ
+                        <span
+                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                    </h2>
+                </div>
+
+                <p class="text-sm tracking-widest mb-6 text-brand-charcoal">こんな方におすすめです</p>
+
+                <div class="inline-block text-left">
+                    <ul
+                        class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-3 lg:gap-y-4 text-brand-gray tracking-wider text-sm lg:text-base">
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 淡路島で特別な食事を楽しみたい方</li>
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 落ち着いた空間でゆっくり食事をしたい方</li>
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 記念日やお祝いの席に利用したい方</li>
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 旅行先で思い出に残る食事を楽しみたい方</li>
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 旬の食材を活かした和食が好きな方</li>
+                        <li class="flex items-start gap-3"><span
+                                class="text-brand-brown text-lg leading-none mt-0.5">◆</span> 完全予約制のお店を探している方</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service" class="break-out-full-width py-20 lg:py-32 bg-japanese-pattern">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                <span class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Features</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4">
+                    特徴
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                </h2>
+            </div>
+
+            <div class="flex flex-col gap-24 max-w-5xl mx-auto px-6 lg:px-0">
+                <!-- Service 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-5/12 aspect-[4/5] overflow-hidden bg-brand-offwhite">
+                        <img src="img/serpic01.jpg" alt="旬を味わうおまかせコース"
+                            class="w-full h-full object-cover mix-blend-darken">
+                    </div>
+                    <div class="w-full lg:w-7/12 lg:pl-10">
+                        <span class="block text-brand-brown tracking-widest mb-3 text-lg font-serif italic">No.
+                            01</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-8 tracking-[0.1em] font-serif leading-relaxed text-brand-charcoal border-b border-brand-brown/20 pb-4 inline-block">
+                            旬を味わう<br>おまかせコース</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify text-sm lg:text-base">
+                            その日の仕入れや季節に合わせて、内容が変わるおまかせコースをご提供しています。<br>
+                            季節ごとの美味しさを大切にしながら、一皿一皿丁寧に仕立てています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-5/12 aspect-[4/5] overflow-hidden bg-brand-offwhite">
+                        <img src="img/serpic02.jpg" alt="完全予約制のおもてなし"
+                            class="w-full h-full object-cover mix-blend-darken">
+                    </div>
+                    <div class="w-full lg:w-7/12 lg:pr-10">
+                        <span class="block text-brand-brown tracking-widest mb-3 text-lg font-serif italic">No.
+                            02</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-8 tracking-[0.1em] font-serif leading-relaxed text-brand-charcoal border-b border-brand-brown/20 pb-4 inline-block">
+                            完全予約制だからこその<br>おもてなし</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify text-sm lg:text-base">
+                            ご予約のお客様を中心にお迎えすることで、料理やサービスにしっかりと向き合える環境を整えています。<br>
+                            落ち着いて食事を楽しみたい方にもおすすめです。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-5/12 aspect-[4/5] overflow-hidden bg-brand-offwhite">
+                        <img src="img/serpic03.jpg" alt="和食の魅力を楽しむ空間"
+                            class="w-full h-full object-cover mix-blend-darken">
+                    </div>
+                    <div class="w-full lg:w-7/12 lg:pl-10">
+                        <span class="block text-brand-brown tracking-widest mb-3 text-lg font-serif italic">No.
+                            03</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-8 tracking-[0.1em] font-serif leading-relaxed text-brand-charcoal border-b border-brand-brown/20 pb-4 inline-block">
+                            和食の魅力を<br>ゆっくり楽しめる空間</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify text-sm lg:text-base">
+                            料理だけでなく、過ごす時間そのものも楽しんでいただけるよう、居心地の良い空間づくりを大切にしています。<br>
+                            会話を楽しみながら、ゆったりとした時間をお過ごしください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu"
+            class="break-out-full-width py-20 lg:py-32 relative border-t border-brand-offwhite bg-cover bg-center bg-scroll lg:bg-fixed"
+            style="background-image: url('img/menubg.jpg');">
+            <!-- Light Overlay -->
+            <div class="absolute inset-0 bg-brand-offwhite/90 z-0"></div>
+
+            <div class="max-w-6xl mx-auto px-6 lg:px-0 relative z-10">
+                <div class="flex flex-col items-center justify-center mb-16 fade-in-up text-center">
+                    <span class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Menu</span>
+                    <h2
+                        class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4">
+                        お品書き
+                        <span
+                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start fade-in-up">
+                    <!-- 画像1: 表紙 -->
+                    <div class="w-full overflow-hidden shadow-sm border border-gray-100 bg-white group cursor-pointer"
+                        onclick="openModal('img/menupic01.jpg')">
+                        <img src="img/menupic01.jpg" alt="メニュー"
+                            class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <!-- 画像2: Lunch -->
+                    <div class="w-full overflow-hidden shadow-sm border border-gray-100 bg-white group cursor-pointer"
+                        onclick="openModal('img/menupic02.jpg')">
+                        <img src="img/menupic02.jpg" alt="Lunch メニュー"
+                            class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <!-- 画像3: Dinner -->
+                    <div class="w-full overflow-hidden shadow-sm border border-gray-100 bg-white group cursor-pointer"
+                        onclick="openModal('img/menupic03.jpg')">
+                        <img src="img/menupic03.jpg" alt="Dinner メニュー"
+                            class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <!-- 画像4: Drink -->
+                    <div class="w-full overflow-hidden shadow-sm border border-gray-100 bg-white group cursor-pointer"
+                        onclick="openModal('img/menupic04.jpg')">
+                        <img src="img/menupic04.jpg" alt="Drink メニュー"
+                            class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <!-- ご予約時のお願い -->
+                <div class="mt-20 flex justify-center fade-in-up">
+                    <div
+                        class="bg-white border border-brand-brown/20 p-8 lg:p-12 text-left inline-block w-full max-w-3xl shadow-sm">
+                        <h4
+                            class="text-lg font-serif tracking-widest text-brand-charcoal mb-6 border-b border-brand-brown/20 pb-3 inline-block">
+                            ご予約時のお願い</h4>
+                        <ul class="space-y-3 text-sm lg:text-base text-brand-gray tracking-wider">
+                            <li class="flex items-start gap-3"><span
+                                    class="text-brand-brown">・</span>ご予約は前日18時まで承っております。</li>
+                            <li class="flex items-start gap-3"><span
+                                    class="text-brand-brown">・</span>8名様以上でのご利用やお子様連れの場合はお電話にてご相談ください。</li>
+                            <li class="flex items-start gap-3"><span
+                                    class="text-brand-brown">・</span>ご予約時間に遅れる場合は、事前にご連絡をお願いいたします。</li>
+                            <li class="flex items-start gap-3"><span
+                                    class="text-brand-brown">・</span>料理の香りをお楽しみいただくため、香水など香りの強いものを付けてのご来店はご遠慮ください。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="break-out-full-width py-20 lg:py-32 bg-japanese-pattern">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                <span class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Gallery</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4">
+                    美食の記憶
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-4 lg:px-0 fade-in-up">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-[3px]">
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic01.jpg')">
+                        <img src="img/gallerypic01.jpg" alt="Gallery 1"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic02.jpg')">
+                        <img src="img/gallerypic02.jpg" alt="Gallery 2"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic03.jpg')">
+                        <img src="img/gallerypic03.jpg" alt="Gallery 3"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic04.jpg')">
+                        <img src="img/gallerypic04.jpg" alt="Gallery 4"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic05.jpg')">
+                        <img src="img/gallerypic05.jpg" alt="Gallery 5"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                    <div class="aspect-square overflow-hidden relative bg-brand-charcoal group cursor-pointer"
+                        onclick="openModal('img/gallerypic06.jpg')">
+                        <img src="img/gallerypic06.jpg" alt="Gallery 6"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 saturate-75 group-hover:saturate-100">
+                    </div>
+                </div>
+
+                <!-- Instagram Button -->
+                <div class="mt-12 lg:mt-16 flex justify-center fade-in-up">
+                    <a href="https://chikamoto-awaji.happytry.org/jump02.html" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-3 py-4 px-12 bg-transparent border border-brand-brown text-brand-charcoal text-sm tracking-[0.2em] hover:bg-brand-brown hover:text-white transition-all duration-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Instagramを見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Section -->
+        <section id="voice" class="break-out-full-width py-20 lg:py-32 relative bg-cover bg-center"
+            style="background-image: url('img/setionbg.png');">
+            <!-- Light Overlay -->
+            <div class="absolute inset-0 bg-white/60 z-0 pointer-events-none"></div>
+
+            <div class="relative z-10">
+                <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                    <span
+                        class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Reviews</span>
+                    <h2
+                        class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4">
+                        お客様の声
+                        <span
+                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                    </h2>
+                </div>
+
+                <div class="swiper voice-swiper pb-12 fade-in-up">
+                    <div class="swiper-wrapper">
+                        <!-- Review 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="bg-brand-white shadow-sm p-8 lg:p-10 h-full flex flex-col items-center text-center border border-brand-brown/10">
+                                <div class="text-brand-brown text-xs mb-3">★★★★★</div>
+                                <div class="flex items-center justify-center gap-2.5 mb-4 select-none">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-brand-brown/10 text-brand-brown flex items-center justify-center text-xs font-serif font-semibold">
+                                        む</div>
+                                    <h4
+                                        class="font-serif text-sm lg:text-base tracking-widest text-brand-charcoal font-medium">
+                                        むむ 様</h4>
+                                </div>
+                                <div class="review-text-wrapper relative w-full flex flex-col items-center">
+                                    <p
+                                        class="review-text text-sm lg:text-base leading-loose text-brand-gray text-left whitespace-pre-line line-clamp-3 overflow-hidden w-full">
+                                        淡路島にある「ちかもと」さんでランチ。
+                                        阪神・近本選手のお兄さんが営むお店ということで前から気になっていて、今回ようやく伺えました。
+                                        <br>
+                                        今回いただいたのは 竹ランチ（3,300円）。
+                                        最初の豆腐サラダに始まり、柿の白和えやお造り（鯛・鰤）と、季節感のある料理が続きます。
+                                        特に 鰆の幽庵焼き は香ばしく、しっとりした身がとても美味しかったです。
+                                        <br>
+                                        大根餅の餡かけ や 茶碗蒸し も優しい味わいで、ほっと落ち着く一品。
+                                        天ぷらは鱧・鰤・ししとう・蓮根と種類も多く、揚げたてサクッと軽い食感。
+                                        <br>
+                                        そして楽しみにしていた 土鍋で炊いたきのこのご飯。
+                                        香りが良く、おこげまで美味しくておかわりしたくなる味でした。
+                                        〆の赤だしもホッとする味で、最後の 淡路島牛乳×黒糖のアイスクリーム まで大満足。
+                                        <br>
+                                        全体的に一品一品の丁寧さが伝わるランチで、淡路島に来たらまた寄りたいお店です。
+                                    </p>
+                                    <button
+                                        class="read-more-btn mt-4 text-xs text-brand-brown font-medium tracking-wider hover:underline focus:outline-none">続きを読む</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="bg-brand-white shadow-sm p-8 lg:p-10 h-full flex flex-col items-center text-center border border-brand-brown/10">
+                                <div class="text-brand-brown text-xs mb-3">★★★★★</div>
+                                <div class="flex items-center justify-center gap-2.5 mb-4 select-none">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-brand-brown/10 text-brand-brown flex items-center justify-center text-xs font-serif font-semibold">
+
+                                        花</div>
+                                    <h4
+                                        class="font-serif text-sm lg:text-base tracking-widest text-brand-charcoal font-medium">
+
+                                        花そら 様</h4>
+                                </div>
+                                <div class="review-text-wrapper relative w-full flex flex-col items-center">
+                                    <p
+                                        class="review-text text-sm lg:text-base leading-loose text-brand-gray text-left whitespace-pre-line line-clamp-3 overflow-hidden w-full">
+                                        昨年9月に予約して
+                                        3ヶ月、待ちに待った日☺️☺️☺️
+                                        とても緊張して扉を開けると
+                                        奥様(後で奥様と判明)がお出迎えくださいました。
+                                        近本ファンの友人は私以上にドキドキしてました😅
+                                        ドリンクをオーダーして
+                                        コースのはじまりです😋
+                                        (全ておいしくいただきましたが
+                                        やはり、淡路の３年虎河豚 大変おいしゅございました)
+                                        2人がたべるタイミングを大将がしっかり確認しながら 気遣いさせない程度で進めてくださいました。
+                                        <br>
+                                        御料理が後半になると奥様、大将、ご親戚の方皆様が とても気さくにお話くださいました。
+                                        その結果 私も友人も大将のファンに🤗
+                                        <br>
+                                        夜ならは比較的予約も取りやすいこと、
+                                        近くにホテルがあること等教えてくださいました。
+                                        予約困難店だと思いますがリピ確定です。
+                                        幸せな時間ありがとうございました🤭
+                                        ご馳走さまでした😋
+                                    </p>
+                                    <button
+                                        class="read-more-btn mt-4 text-xs text-brand-brown font-medium tracking-wider hover:underline focus:outline-none">続きを読む</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="bg-brand-white shadow-sm p-8 lg:p-10 h-full flex flex-col items-center text-center border border-brand-brown/10">
+                                <div class="text-brand-brown text-xs mb-3">★★★★★</div>
+                                <div class="flex items-center justify-center gap-2.5 mb-4 select-none">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-brand-brown/10 text-brand-brown flex items-center justify-center text-xs font-serif font-semibold">
+
+                                        み</div>
+                                    <h4
+                                        class="font-serif text-xs lg:text-sm tracking-wider text-brand-charcoal font-medium">
+
+                                        みアッキー 様</h4>
+                                </div>
+                                <div class="review-text-wrapper relative w-full flex flex-col items-center">
+                                    <p
+                                        class="review-text text-sm lg:text-base leading-loose text-brand-gray text-left whitespace-pre-line line-clamp-3 overflow-hidden w-full">
+                                        淡路島観光にふらり立ち寄り。
+                                        前日で急な連絡であったのですが。快く対応して頂き、良き時間を過ごせました。
+                                        コースでお食事。
+                                        飲兵衛夫婦。
+                                        地域の旬の物を丁寧な仕立てで頂き満足度が高い料理を頂けました。
+                                        地酒も最高でした!次は酒造さんの見学もし、また、こちらに再訪したいです！
+                                    </p>
+                                    <button
+                                        class="read-more-btn mt-4 text-xs text-brand-brown font-medium tracking-wider hover:underline focus:outline-none">続きを読む</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End of swiper-wrapper -->
+                    <div class="swiper-pagination mt-8"></div>
+                </div>
+
+                <!-- Google Reviews Button -->
+                <div class="mt-12 lg:mt-16 flex justify-center fade-in-up">
+                    <a href="https://chikamoto-awaji.happytry.org/jump03.html"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center py-4 px-12 bg-transparent border border-brand-brown text-brand-charcoal text-sm tracking-[0.2em] hover:bg-brand-brown hover:text-white transition-all duration-500">
+                        その他口コミはこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="break-out-full-width py-20 lg:py-32 relative text-white overflow-hidden bg-cover bg-center bg-scroll lg:bg-fixed"
+            style="background-image: url('img/messagebg.jpg');">
+            <!-- Overlay to ensure text readability -->
+            <div class="absolute inset-0 bg-brand-charcoal/70 z-0 pointer-events-none"></div>
+            <div class="relative z-10">
+                <div class="max-w-4xl mx-auto px-6 text-left lg:text-center fade-in-up">
+                    <h3 class="text-[20px] lg:text-3xl font-serif mb-12 tracking-[0.2em] leading-relaxed">
+                        一皿一皿に、<br class="md:hidden">感謝の気持ちを込めて
+                    </h3>
+                    <div class="space-y-8 text-sm lg:text-base leading-loose tracking-widest text-white/90">
+                        <p>この度は、日本料理ちかもとのページをご覧いただきありがとうございます。</p>
+                        <p>当店では、料理を通じてお客様の大切な時間に寄り添えるよう、<br class="hidden lg:block">一つひとつ丁寧にご用意しております。</p>
+                        <p>ご来店いただく皆様に、「また来たい」と思っていただけるようなお店を目指しております。</p>
+                        <p>淡路島でのひとときが素敵な思い出となりますよう、心を込めてお迎えいたします。<br>皆様のご予約を心よりお待ちしております。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta"
+            class="break-out-full-width py-16 lg:py-24 bg-brand-offwhite text-brand-charcoal text-center border-y border-brand-brown/10">
+            <div class="max-w-4xl mx-auto px-6 fade-in-up">
+                <span
+                    class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Reservation</span>
+                <h2 class="text-2xl lg:text-3xl font-serif tracking-widest text-brand-charcoal mb-10">
+                    ご予約・お問い合わせ
+                </h2>
+
+                <p class="text-sm lg:text-base tracking-wider leading-loose text-brand-gray mb-10">
+                    特別な日のお食事や、記念日など、<br class="md:hidden">お気軽にお問い合わせください。<br>
+                    皆様のご来店を心よりお待ちしております。
+                </p>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                    <div class="text-center w-full md:w-auto">
+                        <p class="text-[10px] tracking-[0.2em] text-brand-brown mb-2 uppercase">お電話でのご予約</p>
+                        <a href="tel:05057953519"
+                            class="block text-2xl lg:text-3xl font-serif tracking-widest text-brand-charcoal hover:text-brand-brown transition-colors">
+                            050-5795-3519
+                        </a>
+                    </div>
+                    <a href="https://chikamoto-awaji.happytry.org/jump01.html"
+                        target="_blank"
+                        class="block w-full md:w-auto py-4 px-16 bg-brand-brown border border-brand-brown text-white text-center tracking-[0.2em] font-medium hover:bg-white hover:text-brand-brown transition-all duration-500 rounded-none relative">
+                        Web予約<br><span class="text-xs tracking-wider font-normal">Reserve</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="break-out-full-width py-20 lg:py-32 bg-japanese-pattern">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                <span class="text-brand-brown font-serif tracking-[0.3em] text-sm mb-3 block uppercase">Access</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4">
+                    店舗情報
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-px bg-brand-brown"></span>
+                </h2>
+            </div>
+
+            <div class="w-full px-6 lg:px-0 max-w-5xl mx-auto fade-in-up">
+                <div class="flex flex-col lg:flex-row shadow-sm border border-brand-brown/10">
+                    <div
+                        class="w-full lg:w-1/2 bg-brand-offwhite p-10 lg:p-16 space-y-10 border-t-4 border-brand-brown">
+                        <div>
+                            <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">Restaurant</p>
+                            <h3 class="text-2xl font-serif tracking-widest text-brand-charcoal">ちかもと</h3>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">Address</p>
+                            <p class="text-sm lg:text-base tracking-wider leading-loose text-brand-gray">
+                                〒656-2311<br>兵庫県淡路市久留麻２０６３−１
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">Tel</p>
+                            <p class="text-2xl font-serif tracking-widest text-brand-charcoal">
+                                <a href="tel:05057953519">050-5795-3519</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-6 text-sm lg:text-base text-brand-gray">
+                            <div>
+                                <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">Open</p>
+                                <p class="tracking-wider">11:30 - 14:00<br>17:30 - 22:00</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">Close</p>
+                                <p class="tracking-wider">月曜日</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-brown tracking-[0.4em] mb-2 uppercase">SNS</p>
+                                <a href="https://chikamoto-awaji.happytry.org/jump02.html" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 text-brand-brown hover:text-brand-charcoal transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="tracking-widest">Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 h-[350px] lg:h-auto min-h-[400px] bg-gray-200">
+                        <!-- Google Maps Iframe -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.130912217188!2d134.9902908!3d34.5249111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554cd03a89bb6bf%3A0xef4f6fe4d4e94513!2z44Gh44GL44KC44Go!5e0!3m2!1sja!2sjp!4v1780903692866!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="break-out-full-width pb-24 lg:pb-8 text-center pt-12 bg-brand-accent">
+            <div class="mb-6 flex justify-center">
+                <img src="img/logo.jpg" alt="ちかもと" class="h-16 w-auto mix-blend-screen opacity-90">
+            </div>
+            <p class="text-[10px] tracking-widest text-white/60">&copy; CHIKAMOTO. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+    <!-- End of Phase 2 -->
+
+
+    <!-- SP Bottom Fixed CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-[60] flex lg:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.05)] text-center">
+        <a href="tel:05057953519"
+            class="w-1/2 bg-brand-white py-4 text-brand-charcoal border-r border-gray-200 flex flex-col justify-center items-center hover:bg-gray-50">
+            <span class="text-[10px] mb-1 tracking-widest text-brand-gray">お電話</span>
+            <span class="font-bold text-sm tracking-wide">050-5795-3519</span>
+        </a>
+        <a href="https://chikamoto-awaji.happytry.org/jump01.html"
+            target="_blank"
+            class="w-1/2 bg-brand-brown py-4 text-white flex flex-col justify-center items-center hover:bg-brand-accent transition-colors">
+            <span class="text-[10px] mb-1 tracking-widest text-white/80">Web予約</span>
+            <span class="font-bold text-sm tracking-wide">Reserve</span>
+        </a>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] bg-brand-charcoal/95 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModalBtn"
+            class="absolute top-8 right-8 text-white text-4xl font-thin hover:text-brand-brown hover:rotate-90 transition-all duration-500 z-50">×</button>
+        <img id="modalImage" src="" alt="Expanded" class="max-w-full max-h-[85vh] object-contain shadow-2xl">
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop"
+        class="fixed bottom-24 right-5 lg:bottom-12 lg:right-12 z-50 w-10 h-10 border border-gray-200 bg-brand-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:bg-brand-brown hover:text-white hover:border-brand-brown rounded-full text-lg">
+        ↑
+    </button>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

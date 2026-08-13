@@ -1,0 +1,86 @@
+/* ベース設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+
+  /* TXT選択禁止 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  /* スマホ時の固定CTA用の余白 */
+  padding-bottom: 80px; 
+}
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+}
+
+/* 画像保存・ドラッグ・長押し禁止 */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* スクロール時の多彩なアニメーション */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 画面内に入ったときの共通状態 */
+.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* モバイル用ナビゲーションメニューの開閉 */
+#mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 背景パターンの装飾 */
+.bg-pattern {
+  background-image: radial-gradient(#006a9c 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+/* ボタンのキラッと光るエフェクト */
+@keyframes shine {
+  0% { transform: translateX(-150%) skewX(-12deg); }
+  100% { transform: translateX(150%) skewX(-12deg); }
+}

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth overflow-x-hidden w-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社Aoi - 解体作業員 求人募集</title>
+    <!-- OGP Settings -->
+    <meta property="og:title" content="株式会社Aoi - 解体作業員 求人募集">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aoi-recruit.happytry.org/">
+    <meta property="og:image" content="https://aoi-recruit.happytry.org/img/ogp.jpg">
+    <meta property="og:site_name" content="株式会社Aoi">
+    <meta property="og:description" content="未経験から、解体のプロへ。松戸市を拠点に解体工事を行う株式会社Aoiでは、解体作業員を募集しています。">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontSize: {
+                    'xs': '12px',
+                    'sm': '14px',
+                    'base': '16px',
+                    'lg': '18px',
+                    'xl': '20px',
+                    '2xl': '24px',
+                    '3xl': '30px',
+                    '4xl': '36px',
+                    '5xl': '48px',
+                    '6xl': '60px',
+                },
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3da116', // 指定されたメインの緑
+                            hover: '#74cc52',   // 指定された明るめの緑（ホバー等）
+                            light: '#e6f7df',   // 薄い背景用
+                            pale: '#f4fceb',    // さらに薄い背景用
+                        },
+                        dark: '#1f2937', // gray-800
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body class="bg-white antialiased overflow-x-hidden w-full">
+
+    <!-- Header (Sticky) -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-xl font-bold text-primary">
+                <i class="fa-solid fa-helmet-safety"></i>
+                <span>株式会社Aoi</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="#about" class="font-medium text-gray-600 hover:text-primary transition">私たちについて</a>
+                <a href="#service" class="font-medium text-gray-600 hover:text-primary transition">事業内容</a>
+                <a href="#features" class="font-medium text-gray-600 hover:text-primary transition">働く特徴</a>
+                <a href="#recruit" class="font-medium text-gray-600 hover:text-primary transition">募集要項</a>
+                <div class="flex items-center gap-3">
+                    <a href="tel:08092674482"
+                        class="flex items-center gap-2 text-dark font-bold hover:text-primary transition">
+                        <i class="fa-solid fa-phone text-primary"></i>080-9267-4482
+                    </a>
+                    <a href="https://aoi-recruit.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-primary-hover hover:-translate-y-0.5 transition duration-200">
+                        WEBで応募する
+                    </a>
+                </div>
+            </div>
+            <!-- Hamburger Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-dark focus:outline-none z-50">
+                <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 translate-x-full transition-transform duration-300 lg:hidden flex flex-col items-center justify-center gap-6">
+        <a href="#about" class="text-xl font-bold text-dark hover:text-primary transition menu-link">私たちについて</a>
+        <a href="#service" class="text-xl font-bold text-dark hover:text-primary transition menu-link">事業内容</a>
+        <a href="#features" class="text-xl font-bold text-dark hover:text-primary transition menu-link">働く特徴</a>
+        <a href="#recruit" class="text-xl font-bold text-dark hover:text-primary transition menu-link">募集要項</a>
+
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-diagonal">
+            <!-- プレースホルダー画像（実際の解体現場や笑顔の職人さんの写真に差し替えてください） -->
+            <img src="img/fv01.jpg" alt="解体現場の様子" class="hero-slider-img slide-bg-1">
+            <img src="img/fv02.jpg" alt="チームワーク" class="hero-slider-img slide-bg-2">
+            <img src="img/fv03.jpg" alt="作業風景" class="hero-slider-img slide-bg-3">
+        </div>
+        <div class="hero-accent-line"></div>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <span
+                class="inline-block py-1.5 px-4 rounded-full bg-primary-light text-primary font-bold shadow-sm mb-6 border border-primary/20 text-sm md:text-base">
+                松戸市拠点・未経験大歓迎！
+            </span>
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6 text-dark drop-shadow-sm">
+                未経験から、<br>
+                <span class="text-primary relative inline-block">解体のプロへ。
+                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary-hover/40" viewBox="0 0 100 20"
+                        preserveAspectRatio="none">
+                        <path d="M0 10 Q 50 20 100 10 L 100 20 L 0 20 Z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            </h1>
+            <p class="text-gray-600 mb-10 text-base md:text-xl font-medium leading-relaxed">
+                壊す仕事ではなく、<br>
+                新しい街づくりの始まりを支える仕事です。
+            </p>
+
+            <div class="hidden md:flex flex-row gap-4 w-auto">
+                <a href="https://aoi-recruit.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+                    class="group bg-primary text-white text-lg px-8 py-4 rounded-full font-bold shadow-[0_8px_20px_rgba(61,161,22,0.3)] hover:bg-primary-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    <span>WEBで今すぐ応募する</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="tel:08092674482"
+                    class="bg-white text-dark border-2 border-gray-200 text-lg px-8 py-4 rounded-full font-bold hover:border-primary hover:text-primary transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>080-9267-4482</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            SCROLL DOWN
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <!-- Casual abstract shapes -->
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-primary-light rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform -translate-x-1/2 translate-y-1/2">
+        </div>
+
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">こんな方に<span class="text-primary">おすすめ</span>です</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-primary-pale rounded-3xl p-3 sm:p-6 md:p-10 border border-primary-light shadow-sm"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">未経験から手に職をつけたい方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">体を動かす仕事が好きな方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">正社員として安定して働きたい方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">解体工事や建設業に興味がある方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">チームで協力して働ける方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">資格を取得してスキルアップしたい方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">経験を活かして働きたい方</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 md:gap-3 bg-white px-3 md:px-5 py-3 md:py-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-light text-primary flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-check text-sm md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 whitespace-nowrap tracking-tighter md:tracking-normal text-[12px] min-[375px]:text-[13px] sm:text-sm md:text-base">松戸市、三郷市周辺で仕事を探している方</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 pattern-bg bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">About Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">株式会社Aoiについて</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-4 md:p-8 rounded-3xl shadow-lg border-t-4 border-primary"
+                data-aos="fade-up">
+                <div class="w-full md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] bg-primary-light">
+                        <img src="img/aboutpic.jpg" alt="会社風景" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-dark leading-tight">安全第一で、<br>チームで支え合う現場です</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 font-normal">
+                        株式会社Aoiは、松戸市を拠点に一都三県で解体工事を行う会社です。<br>
+                        建物解体・内装解体・店舗スケルトン工事など、さまざまな現場に対応しています。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed font-normal">
+                        現場では安全を第一に、チームで声を掛け合いながら作業を進めています。<br>
+                        未経験の方も、まずは道具の使い方や現場での動き方から覚えていけるため、安心してスタートできる環境を整えています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Service</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">主な業務内容</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 font-medium max-w-2xl mx-auto">
+                    私たちは様々な解体工事に対応しており、幅広い現場で経験を積むことができます。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-3xl p-4 md:p-8 border border-gray-200 hover:border-primary hover:shadow-xl transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-house-chimney-crack"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-primary-light pb-2 inline-block">建物解体工事</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        戸建て住宅やマンションなど、建物の解体工事を行います。<br>
+                        周囲の安全に配慮しながら、現場ごとに適した方法で作業を進めます。
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-3xl p-4 md:p-8 border border-gray-200 hover:border-primary hover:shadow-xl transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-primary-light pb-2 inline-block">内装解体工事</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        リフォームや改装に伴う、室内の解体作業を行います。<br>
+                        壁・床・天井などを丁寧に撤去し、次の工事へとスムーズにつなげます。
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-3xl p-4 md:p-8 border border-gray-200 hover:border-primary hover:shadow-xl transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 border-b-2 border-primary-light pb-2 inline-block">店舗スケルトン工事</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        店舗の退去や改装に合わせて、内装を解体しスケルトン（骨組み）状態に戻します。<br>
+                        店舗や商業施設など、幅広い現場で経験を積めます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-50 border-y border-gray-200 overflow-hidden">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Features</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">働く<span class="text-primary">4つ</span>の特徴</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Feature 01 & 02 (Grid on Desktop) -->
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-white p-4 md:p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute -right-6 -top-6 text-[8rem] font-black text-gray-50 opacity-50 leading-none">
+                            01</div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-lg">01</span>
+                                未経験から始められる
+                            </h3>
+                            <div class="mb-4 rounded-xl overflow-hidden h-48 bg-gray-100">
+                                <img src="img/serpic01.jpg" alt="未経験歓迎" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                最初は先輩スタッフの補助からスタートします。現場の流れや道具の使い方を少しずつ覚えられるので、経験がない方も安心して飛び込んできてください。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 md:p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute -right-6 -top-6 text-[8rem] font-black text-gray-50 opacity-50 leading-none">
+                            02</div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-lg">02</span>
+                                資格取得をサポート
+                            </h3>
+                            <div class="mb-4 rounded-xl overflow-hidden h-48 bg-gray-100">
+                                <img src="img/serpic02.jpg" alt="資格取得支援" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                仕事に必要な資格取得を会社が支援しています。働きながら一生モノのスキルを身につけ、できる仕事の幅をどんどん広げていける環境です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 03 & 04 (Grid on Desktop) -->
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-white p-4 md:p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute -right-6 -top-6 text-[8rem] font-black text-gray-50 opacity-50 leading-none">
+                            03</div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-lg">03</span>
+                                さまざまな現場で経験を
+                            </h3>
+                            <div class="mb-4 rounded-xl overflow-hidden h-48 bg-gray-100">
+                                <img src="img/serpic03.jpg" alt="多様な現場" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                一都三県を中心に、建物解体・内装解体・店舗工事など幅広い現場があります。毎回違う現場で経験を積めるため、飽きがこず成長しやすい環境です。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 md:p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute -right-6 -top-6 text-[8rem] font-black text-gray-50 opacity-50 leading-none">
+                            04</div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="bg-primary text-white text-sm px-3 py-1 rounded-lg">04</span>
+                                経験者は即戦力として歓迎
+                            </h3>
+                            <div class="mb-4 rounded-xl overflow-hidden h-48 bg-gray-100">
+                                <img src="img/serpic04.jpg" alt="経験者優遇" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                解体工事や建設現場の経験がある方は、これまでのスキルを存分に活かせます。経験や能力に応じて給与も優遇し、現場でしっかり活躍していただけます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruit Section -->
+    <section id="recruit" class="pt-24 bg-white relative overflow-hidden flex flex-col">
+        <!-- Casual background element -->
+        <div class="absolute top-1/2 left-0 w-full h-1/2 bg-primary-pale -z-10 skew-y-3 transform origin-bottom-left">
+        </div>
+
+        <div class="container mx-auto px-4 max-w-5xl relative z-10 pb-16 md:pb-24">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-primary text-white font-bold text-sm mb-2">RECRUIT</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">募集要項</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden relative z-20 flex flex-col"
+                data-aos="fade-up" data-aos-delay="200">
+                <!-- Image Area (上に配置) -->
+                <div class="w-full relative h-64 md:h-80 lg:h-96">
+                    <img src="img/recruitpic.jpg" alt="一緒に働きましょう" class="absolute inset-0 w-full h-full object-cover">
+                    <!-- 画像上のテキスト装飾 -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent flex items-end p-6 md:p-8">
+                        <div>
+                            <span
+                                class="inline-block bg-primary text-white text-sm font-bold px-3 py-1 rounded mb-2 shadow-sm">未経験歓迎</span>
+                            <p class="text-white font-bold text-2xl md:text-3xl drop-shadow-md leading-tight">
+                                新しい街づくりを<br>一緒に支えませんか？</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Area (下に配置) -->
+                <div class="w-full flex flex-col">
+                    <dl class="divide-y divide-gray-200">
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                募集職種
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                解体作業員
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                業務内容
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3 leading-relaxed">
+                                建物解体、内装解体、店舗スケルトン工事などの現場作業をお任せします。<br>
+                                未経験の方は補助作業から始め、少しずつ仕事を覚えていただきます。
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                就業場所
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                一都三県の各現場
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                給与
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3 leading-relaxed">
+                                未経験者：日給9,000円〜<br>
+                                経験者：日給13,000円〜
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                勤務時間
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                8:00〜17:00
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                休日
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                日曜日
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200">
+                                応募資格
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>経験・年齢・学歴不問</li>
+                                    <li>未経験者歓迎</li>
+                                    <li>経験者優遇</li>
+                                    <li>運転免許をお持ちの方は優遇</li>
+                                </ul>
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                福利厚生
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                資格取得支援あり
+                            </dd>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
+                            <dt
+                                class="px-6 py-5 font-bold text-gray-900 bg-gray-100 md:bg-transparent md:border-r border-gray-200 flex items-center">
+                                雇用形態
+                            </dt>
+                            <dd class="px-6 py-5 text-gray-700 md:col-span-3">
+                                正社員
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <div class="bg-primary-pale p-6 md:p-8 text-center border-t border-gray-200 mt-auto">
+                        <p class="font-bold mb-4 text-gray-800">ご質問だけでも大歓迎です！<br>お気軽にご連絡ください。</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="https://aoi-recruit.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+                                class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-primary-hover hover:-translate-y-0.5 transition-all">
+                                WEBから応募・お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section & Animation -->
+    <section class="pt-24 bg-primary relative overflow-hidden flex flex-col">
+        <div class="container relative z-10 mx-auto px-4 max-w-5xl pb-6 md:pb-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-white/80 font-bold tracking-widest uppercase text-sm">Message</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">メッセージ</h2>
+                <div class="w-16 h-1.5 bg-white mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-10 text-white" data-aos="fade-up">
+                <div class="w-full md:w-1/2">
+                    <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-white/10">
+                        <img src="img/messagepic.jpg" alt="メッセージ" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                        前向きに取り組む姿勢を<br>大切にしています
+                    </h3>
+
+                    <div class="space-y-4 text-white/90 font-medium leading-relaxed">
+                        <p>解体工事は、次の建物や新しい空間をつくるために欠かせない仕事です。安全に作業を進めるためには、チームワークと丁寧な仕事が大切です。</p>
+                        <p>株式会社Aoiでは、経験よりも前向きに取り組む姿勢を評価します。未経験の方も、先輩スタッフがしっかりサポートします。</p>
+                        <p class="pt-4 font-bold text-white drop-shadow-md">手に職をつけたい方、安定して働きたい方、現場で成長したい方は、ぜひご応募ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG Animation (Messageセクション下部に移動) -->
+        <div class="relative w-full h-32 md:h-40 mt-auto pointer-events-none z-0">
+            <!-- 道路の線 (白系に変更) -->
+            <div class="absolute bottom-6 w-full h-[1px] bg-white/30"></div>
+            <div class="absolute bottom-6 w-full h-[3px]"
+                style="background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(255,255,255,0.5) 15px, rgba(255,255,255,0.5) 30px); background-size: 60px 3px; animation: moveRoad 1s linear infinite;">
+            </div>
+
+            <!-- カジュアルなショベルカー風SVG (線を白、塗りを透過/薄緑に調整) -->
+            <div class="absolute bottom-[27px] left-0 w-full h-20 md:h-24">
+                <svg class="anim-excavator h-full w-auto drop-shadow-md" viewBox="0 0 150 80" fill="none"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- キャビン（運転席） -->
+                    <path d="M40,55 L40,25 C40,22 42,20 45,20 L65,20 C68,20 70,22 70,25 L70,55 Z"
+                        fill="rgba(255,255,255,0.2)" />
+                    <!-- 窓 -->
+                    <path d="M45,25 L65,25 L65,35 L45,35 Z" fill="#ffffff" stroke="none" />
+                    <!-- 本体後部 -->
+                    <path d="M20,55 L20,35 C20,32 22,30 25,30 L40,30 L40,55 Z" fill="rgba(255,255,255,0.2)" />
+                    <!-- アーム部 1 -->
+                    <path d="M65,40 L100,15" stroke-width="6" stroke="#ffffff" />
+                    <circle cx="65" cy="40" r="4" fill="#ffffff" stroke="none" />
+                    <!-- アーム部 2 -->
+                    <path d="M100,15 L120,45" stroke-width="5" stroke="#ffffff" />
+                    <circle cx="100" cy="15" r="3" fill="#ffffff" stroke="none" />
+                    <!-- バケット（シャベル部分） -->
+                    <path d="M115,45 C125,45 135,50 130,60 L115,55 Z" fill="rgba(255,255,255,0.2)" stroke="#ffffff"
+                        stroke-width="2" />
+                    <circle cx="120" cy="45" r="2" fill="#ffffff" stroke="none" />
+
+                    <!-- キャタピラ部分 -->
+                    <rect x="15" y="55" width="60" height="15" rx="7.5" fill="rgba(255,255,255,0.2)" stroke="#ffffff"
+                        stroke-width="2" />
+                    <circle cx="22.5" cy="62.5" r="4" fill="#ffffff" stroke="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 22.5 62.5" to="360 22.5 62.5"
+                            dur="1s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="67.5" cy="62.5" r="4" fill="#ffffff" stroke="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 67.5 62.5" to="360 67.5 62.5"
+                            dur="1s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="45" cy="62.5" r="4" fill="#ffffff" stroke="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 45 62.5" to="360 45 62.5"
+                            dur="1s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">よくある質問</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                    data-aos="fade-up">
+                    <div class="flex gap-4 mb-3">
+                        <div class="text-primary font-black text-2xl shrink-0">Q.</div>
+                        <h3 class="font-bold text-lg pt-1">未経験でも応募していいですか？</h3>
+                    </div>
+                    <div class="flex gap-4 pt-3 border-t border-gray-100">
+                        <div class="text-gray-300 font-black text-2xl shrink-0">A.</div>
+                        <p class="text-gray-600 font-medium pt-1">もちろんです。未経験の方でも先輩がしっかりサポートしますので、お気軽にご応募ください。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-4 mb-3">
+                        <div class="text-primary font-black text-2xl shrink-0">Q.</div>
+                        <h3 class="font-bold text-lg pt-1">経験者の方は給与はいくらになりますか？</h3>
+                    </div>
+                    <div class="flex gap-4 pt-3 border-t border-gray-100">
+                        <div class="text-gray-300 font-black text-2xl shrink-0">A.</div>
+                        <p class="text-gray-600 font-medium pt-1">経験や能力を考慮し、<span
+                                class="font-bold text-orange-600">日給13,000円～</span>のスタートとなります。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-4 mb-3">
+                        <div class="text-primary font-black text-2xl shrink-0">Q.</div>
+                        <h3 class="font-bold text-lg pt-1">給与形態は何になりますか？</h3>
+                    </div>
+                    <div class="flex gap-4 pt-3 border-t border-gray-100">
+                        <div class="text-gray-300 font-black text-2xl shrink-0">A.</div>
+                        <p class="text-gray-600 font-medium pt-1">日給月給制になります。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl p-4 md:p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-4 mb-3">
+                        <div class="text-primary font-black text-2xl shrink-0">Q.</div>
+                        <h3 class="font-bold text-lg pt-1">現場の地域はどこになりますか？</h3>
+                    </div>
+                    <div class="flex gap-4 pt-3 border-t border-gray-100">
+                        <div class="text-gray-300 font-black text-2xl shrink-0">A.</div>
+                        <p class="text-gray-600 font-medium pt-1">一都三県（東京都・埼玉県・千葉県・神奈川県）が主になります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Information -->
+    <footer id="contact" class="bg-dark text-gray-300 py-12 pb-24 lg:pb-12 border-t-4 border-primary">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center mb-10">
+
+                <!-- Company Info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-helmet-safety text-primary"></i>株式会社Aoi
+                    </h2>
+                    <p class="text-gray-400 mb-6">解体工事（建物解体・内装解体・店舗スケルトン工事）</p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot text-xs text-primary-light"></i>
+                            </div>
+                            <span>〒341-0034<br>埼玉県三郷市新和５丁目３５</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-clock text-xs text-primary-light"></i>
+                            </div>
+                            <span>営業時間: 9:00～19:00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-calendar-xmark text-xs text-primary-light"></i>
+                            </div>
+                            <span>定休日: 日曜日, 祝日</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="bg-gray-800 p-8 rounded-3xl text-center border border-gray-700 shadow-inner">
+                    <p class="text-white font-bold mb-4">お問い合わせ・ご応募はこちら</p>
+                    <a href="tel:08092674482"
+                        class="block w-full bg-white text-dark text-xl py-3 rounded-xl font-bold shadow-md hover:bg-gray-100 transition mb-3 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-primary"></i>080-9267-4482
+                    </a>
+                    <a href="https://aoi-recruit.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+                        class="block w-full bg-primary text-white text-lg py-3 rounded-xl font-bold shadow-md hover:bg-primary-hover transition mb-3 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i>WEBから応募する
+                    </a>
+                    <a href="https://aoi-recruit.happytry.org/jump02.html" target="_blank" rel="noopener noreferrer"
+                        class="block w-full bg-transparent border-2 border-primary text-white text-lg py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-globe"></i>公式ホームページはこちら
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Google Map -->
+            <div class="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-700">
+                <!-- 埼玉県三郷市新和５丁目３５のマップ -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.5425152163607!2d139.8797951!3d35.8111629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189b799406b759%3A0xc66c3a4087e6665a!2z5qCq5byP5Lya56S-QW9p!5e0!3m2!1sja!2sjp!4v1781502101076!5m2!1sja!2sjp"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500">
+                &copy; 株式会社Aoi. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SP Fixed CTA -->
+    <div
+        class="lg:hidden fixed bottom-0 left-0 w-full z-[60] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] p-2 safe-area-bottom flex gap-2">
+        <a href="tel:08092674482"
+            class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-dark py-3 rounded-xl font-bold border border-gray-300 active:bg-gray-200 transition-colors">
+            <i class="fa-solid fa-phone text-primary"></i>電話する
+        </a>
+        <a href="https://aoi-recruit.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+            class="flex-1 flex items-center justify-center gap-1 bg-primary text-white py-3 rounded-xl font-bold shadow-md active:bg-primary-hover transition-colors">
+            <i class="fa-solid fa-paper-plane"></i>WEB応募
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-20 lg:bottom-6 right-6 z-50 w-12 h-12 bg-gray-800/80 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary hover:-translate-y-1 focus:outline-none">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

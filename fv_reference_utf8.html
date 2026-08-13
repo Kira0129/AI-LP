@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ | 蛻晏ｿ・・°繧画･ｽ縺励ａ繧九た繝ｭ繧ｮ繧ｿ繝ｼ</title>
+    <meta name="description" content="螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ縺ｯ縲√ぐ繧ｿ繝ｼ繧呈･ｽ縺励∩縺溘＞荳ｭ鬮伜ｹｴ縺ｮ譁ｹ繧剃ｸｭ蠢・→縺励◆繧ｵ繝ｼ繧ｯ繝ｫ縺ｧ縺吶ょ渕遉弱°繧我ｸ∝ｯｧ縺ｫ蟄ｦ縺ｹ繧九・縺ｧ縲∝・蠢・・・譁ｹ繧ょｮ牙ｿ・＠縺ｦ蟋九ａ繧峨ｌ縺ｾ縺吶・>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B6F47',
+                        secondary: '#6E5636',
+                        accent: '#6B7D6D',
+                        dark: '#3F4E5E',
+                        light: '#F5EFE6',
+                        section: '#E8DFD4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        display: ['"Noto Serif JP"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://otonanosorogita-sa-kuru.happytry.org/img/favicon.jpg" type="image/jpeg">
+
+    <!-- OGP -->
+    <meta property="og:title" content="螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ | 蛻晏ｿ・・°繧画･ｽ縺励ａ繧九た繝ｭ繧ｮ繧ｿ繝ｼ">
+    <meta property="og:description" content="繧ｮ繧ｿ繝ｼ繧貞渕遉弱°繧牙ｭｦ縺ｳ縲∽ｻｲ髢薙→讌ｽ縺励￥荳企＃縺ｧ縺阪ｋ螟ｧ莠ｺ縺ｮ縺溘ａ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ縲・>
+    <meta property="og:image" content="https://otonanosorogita-sa-kuru.happytry.org/img/icatch.jpg">
+    <meta property="og:url" content="https://otonanosorogita-sa-kuru.hp.peraichi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="antialiased text-dark">
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 left-0 w-full z-50 py-3 transition-all duration-300 bg-light shadow-sm border-b border-primary/5">
+        <div class="container mx-auto px-6 md:px-0 lg:px-12 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-serif font-bold text-dark tracking-tight leading-tight">螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ
+            </div>
+
+            <!-- Nav PC -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#about"
+                    class="text-base lg:text-lg font-serif font-medium text-dark hover:text-primary transition">繧ｵ繝ｼ繧ｯ繝ｫ縺ｫ縺､縺・※</a>
+                <a href="#service"
+                    class="text-base lg:text-lg font-serif font-medium text-dark hover:text-primary transition">3縺､縺ｮ迚ｹ蠕ｴ</a>
+                <a href="#menu"
+                    class="text-base lg:text-lg font-serif font-medium text-dark hover:text-primary transition">繧ｳ繝ｼ繧ｹ譯亥・</a>
+                <a href="#qa"
+                    class="text-base lg:text-lg font-serif font-medium text-dark hover:text-primary transition">繧医￥縺ゅｋ雉ｪ蝠・/a>
+                <a href="#registration"
+                    class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-base lg:text-lg hover:bg-secondary transition shadow-sm">
+                    辟｡譁吩ｽ馴ｨ薙・隕句ｭｦ
+                </a>
+            </nav>
+
+            <button id="hamburger-btn" class="lg:hidden p-2 text-dark">
+                <div class="space-y-1.5">
+                    <span class="block w-6 h-px bg-dark"></span>
+                    <span class="block w-6 h-px bg-dark"></span>
+                    <span class="block w-6 h-px bg-dark"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP Menu -->
+    <div id="mobile-menu" class="hamburger-menu bg-light text-dark">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-2xl text-dark"><i
+                class="fa-solid fa-times"></i></button>
+        <nav class="flex flex-col space-y-8 text-center text-xl font-serif pt-20">
+            <a href="#about" class="mobile-link">繧ｵ繝ｼ繧ｯ繝ｫ縺ｫ縺､縺・※</a>
+            <a href="#service" class="mobile-link">3縺､縺ｮ迚ｹ蠕ｴ</a>
+            <a href="#menu" class="mobile-link">繧ｳ繝ｼ繧ｹ譯亥・</a>
+            <a href="#qa" class="mobile-link">繧医￥縺ゅｋ雉ｪ蝠・/a>
+            <a href="#registration" class="mobile-link text-primary font-bold">辟｡譁吩ｽ馴ｨ薙・隕句ｭｦ</a>
+        </nav>
+    </div>
+
+    <!-- FV -->
+    <section id="fv"
+        class="relative flex flex-col md:flex-row md:min-h-screen overflow-hidden bg-light md:pt-0 border-b border-primary/5">
+        <!-- Background/Video Area -->
+        <div class="relative w-full h-[25vh] md:absolute md:inset-0 md:h-full z-0 bg-dark">
+            <video src="video/fv_01.mp4" autoplay loop muted playsinline
+                class="w-full h-full object-cover opacity-100 md:opacity-70"></video>
+            <!-- Gradient Overlay (Desktop Only - for Readability) -->
+            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-light/40 via-transparent to-transparent">
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div
+            class="container mx-auto px-6 py-12 md:py-0 md:px-12 relative z-10 w-full flex items-center bg-light md:bg-transparent">
+            <div class="max-w-2xl">
+                <div class="mb-6 overflow-hidden">
+                    <p
+                        class="text-primary lg:text-white font-display tracking-widest text-base lg:text-lg uppercase mb-4 opacity-70 flex items-center gap-4 fade-in-left">
+                        <span class="w-12 h-px bg-primary/30 md:bg-white/30"></span>
+                        <span>Adult Solo Guitar Circle</span>
+                    </p>
+                </div>
+
+                <h1
+                    class="text-3xl md:text-5xl lg:text-7xl font-serif leading-[1.3] mb-8 md:mb-10 text-dark md:text-white text-white-shadow">
+                    <span class="char-note char-delay-1">螟ｧ</span><span class="char-note char-delay-2">莠ｺ</span><span
+                        class="char-note char-delay-3">縺ｫ</span><span class="char-note char-delay-4">縺ｪ</span><span
+                        class="char-note char-delay-5">縺｣</span><span class="char-note char-delay-6">縺ｦ</span><span
+                        class="char-note char-delay-7">縺・/span><span class="char-note char-delay-8">繧・/span><span
+                        class="char-note char-delay-9">縲・/span><br>
+                    <span class="text-primary font-bold">
+                        <span class="char-note char-delay-10">繧・/span><span
+                            class="char-note char-delay-11">縺・/span><span class="char-note char-delay-12">荳</span><span
+                            class="char-note char-delay-13">蠎ｦ</span><span class="char-note char-delay-14">繧ｮ</span><span
+                            class="char-note char-delay-15">繧ｿ</span><span class="char-note char-delay-16">繝ｼ</span><span
+                            class="char-note char-delay-17">繧・/span>
+                    </span><br>
+                    <span class="char-note char-delay-18">讌ｽ</span><span class="char-note char-delay-19">縺・/span><span
+                        class="char-note char-delay-20">縺ｿ</span><span class="char-note char-delay-21">縺ｾ</span><span
+                        class="char-note char-delay-22">縺・/span><span class="char-note char-delay-23">繧・/span><span
+                        class="char-note char-delay-24">縺・/span>
+                </h1>
+
+                <div class="space-y-6 md:space-y-8 border-l-[3px] border-primary/20 pl-6 py-2">
+                    <div class="text-dark md:text-white text-base md:text-xl leading-loose">
+                        <p
+                            class="font-bold mb-3 md:mb-4 text-lg md:text-xl text-shiny-sparkle text-dark-shadow reveal-light-in">
+                            荳莠ｺ縺ｧ縺ｯ邯壹°縺ｪ縺九▲縺滓婿繧ゅ・br>莉ｲ髢薙→荳邱偵↑繧・br>辟｡逅・↑縺冗ｶ壹￠繧峨ｌ縺ｾ縺吶・/p>
+                        <p class="opacity-90 text-lg reveal-light-in text-dark-shadow" style="animation-delay: 1.5s;">
+                            蝓ｺ遉弱°繧我ｸ∝ｯｧ縺ｫ蟄ｦ縺ｳ縺ｪ縺後ｉ縲・br>螂ｽ縺阪↑譖ｲ縺ｫ謖第姶縺ｧ縺阪ｋ<br class="md:hidden">繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ縺ｧ縺吶・                        </p>
+                    </div>
+
+                    <ul class="space-y-4 md:space-y-5 text-lg text-dark md:text-white">
+                        <li class="flex items-center gap-4 animate-rhythm-pop text-dark-shadow"
+                            style="animation-delay: 2.0s;">
+                            <i class="fa-solid fa-circle-check text-primary text-lg md:text-xl shadow-sm"></i>
+                            蛻晏ｿ・・・譁ｹ繧・br class="md:hidden">蝓ｺ遉弱°繧牙ｮ牙ｿ・＠縺ｦ繧ｹ繧ｿ繝ｼ繝・                        </li>
+                        <li class="flex items-center gap-4 animate-rhythm-pop text-dark-shadow"
+                            style="animation-delay: 2.2s;">
+                            <i class="fa-solid fa-circle-check text-primary text-lg md:text-xl shadow-sm"></i>
+                            莉ｲ髢薙→讌ｽ縺励￥邯壹￠繧峨ｌ繧狗腸蠅・                        </li>
+                        <li class="flex items-center gap-4 animate-rhythm-pop text-dark-shadow"
+                            style="animation-delay: 2.4s;">
+                            <i class="fa-solid fa-circle-check text-primary text-lg md:text-xl shadow-sm"></i>
+                            繧ｯ繝ｩ繧ｷ繝・け縺九ｉ繝昴ヴ繝･繝ｩ繝ｼ縺ｾ縺ｧ<br class="md:hidden">蟷・ｺ・￥蟇ｾ蠢・                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circular CTA (Centered on Mobile flow, Fixed on Desktop) -->
+        <a href="#registration" class="floating-cta relative md:fixed md:left-auto md:right-[5%]">
+            <span class="cta-balloon">\ 縺頑ｰ苓ｻｽ縺ｫ縺泌盾蜉縺上□縺輔＞ /</span>
+            <span class="cta-text">
+                <span class="cta-line1">縺ｾ縺壹・</span>
+                <span class="cta-line2">辟｡譁吩ｽ馴ｨ・/span>
+                <span class="cta-line3">縺九ｉ</span>
+            </span>
+        </a>
+    </section>
+
+    <!-- Main Content -->
+    <main class="relative z-10 bg-light">
+
+        <!-- Checklist -->
+        <section class="relative py-24 md:py-32 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="img/main_content_bg.jpeg" alt="" class="w-full h-full object-cover object-bottom">
+                <div class="absolute inset-0" style="background-color: #553c18c2;"></div>
+            </div>
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-2xl md:text-4xl font-serif text-white leading-relaxed">
+                        縺ｲ縺ｨ縺､縺ｧ繧ょｽ薙※縺ｯ縺ｾ繧区婿縺ｯ縲・br class="md:hidden">縺懊・荳蠎ｦ縺泌盾蜉縺上□縺輔＞
+                    </h2>
+                    <div class="w-16 h-px bg-white mx-auto mt-8 opacity-50"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 fade-up">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">繧ｮ繧ｿ繝ｼ繧貞ｧ九ａ縺ｦ縺ｿ縺溘＞縺後・br>蟋九ａ譁ｹ縺後ｏ縺九ｉ縺ｪ縺・婿</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">迢ｬ蟄ｦ縺ｧ邱ｴ鄙偵＠縺ｦ縺・ｋ縺後・br>騾比ｸｭ縺ｧ豁｢縺ｾ縺｣縺ｦ縺励∪縺｣縺滓婿</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">譏斐ぐ繧ｿ繝ｼ繧偵ｄ縺｣縺ｦ縺・※縲・br>繧ゅ≧荳蠎ｦ蜀埼幕縺励◆縺・婿</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">蝓ｺ遉弱°繧峨＠縺｣縺九ｊ<br>蟄ｦ縺ｳ逶ｴ縺励◆縺・→閠・∴縺ｦ縺・ｋ譁ｹ</p>
+                        </li>
+                    </ul>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">荳莠ｺ縺ｧ縺ｯ邯壹￠縺ｫ縺上￥縲・br>莉ｲ髢薙→讌ｽ縺励￥邱ｴ鄙偵＠縺溘＞譁ｹ</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">閾ｪ蛻・・螂ｽ縺阪↑譖ｲ繧・br>蠑ｾ縺代ｋ繧医≧縺ｪ繧翫◆縺・婿</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">螳壼ｹｴ蠕後ｄ雜｣蜻ｳ縺ｮ譎る俣縺ｨ縺励※縲・br>譁ｰ縺励＞縺薙→縺ｫ謖第姶縺励◆縺・婿</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-white mt-1"></i>
+                            <p class="text-white text-lg opacity-90">辟｡逅・↑縺剰・蛻・・繝壹・繧ｹ縺ｧ<br>邯壹￠繧峨ｌ繧狗腸蠅・ｒ謗｢縺励※縺・ｋ譁ｹ</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="relative py-24 md:py-40 overflow-hidden bg-fixed-ios bg-pattern-about">
+            <!-- Overlay for readability -->
+            <div class="absolute inset-0 z-0" style="background-color: rgb(245 239 230 / 46%);"></div>
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 fade-up">
+                    <div class="w-full md:w-1/2">
+                        <img src="img/about_01.jpg" alt="About"
+                            class="rounded-3xl shadow-xl w-full aspect-[4/5] object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-2xl md:text-4xl font-serif text-dark mb-8 leading-relaxed">
+                            螟ｧ莠ｺ縺檎┌逅・↑縺乗･ｽ縺励ａ繧・br>繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ
+                        </h2>
+                        <div class="space-y-6 text-dark text-lg leading-loose">
+                            <p>螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ縺ｯ縲√ぐ繧ｿ繝ｼ繧呈･ｽ縺励∩縺溘＞荳ｭ鬮伜ｹｴ縺ｮ譁ｹ繧剃ｸｭ蠢・→縺励◆繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ縺ｧ縺吶・/p>
+                            <p>縺薙ｌ縺九ｉ繧ｮ繧ｿ繝ｼ繧貞ｧ九ａ縺溘＞譁ｹ縺ｯ繧ゅ■繧阪ｓ縲∫峡蟄ｦ縺ｧ邱ｴ鄙偵＠縺ｦ縺阪◆譁ｹ繧・√ｂ縺・ｸ蠎ｦ蝓ｺ遉弱°繧芽ｦ狗峩縺励◆縺・婿縺ｫ繧ゅ＃蜿ょ刈縺・◆縺縺・※縺・∪縺吶・/p>
+                            <p>繧ｰ繝ｫ繝ｼ繝励〒讌ｽ縺励￥邱ｴ鄙偵＠縺ｪ縺後ｉ縲√ぐ繧ｿ繝ｼ縺ｮ讒九∴譁ｹ繧・欠縺ｮ菴ｿ縺・婿縲・浹髫弱∝柱髻ｳ縲√い繝ｫ繝壹ず繧ｪ縺ｪ縺ｩ縺ｮ蝓ｺ遉弱ｒ螟ｧ蛻・↓蟄ｦ縺ｹ繧九・縺檎音蠕ｴ縺ｧ縺吶・/p>
+                            <p>荳莠ｺ縺ｧ縺ｯ邯壹￠縺ｫ縺上°縺｣縺滓婿繧ゅ∽ｻｲ髢薙→荳邱偵↓邱ｴ鄙偵☆繧九％縺ｨ縺ｧ縲∫┌逅・↑縺冗ｶ咏ｶ壹＠繧・☆縺・腸蠅・ｒ謨ｴ縺医※縺・∪縺吶・/p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area & Genre -->
+        <section class="relative py-24 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="img/areagenre_bg.jpeg" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background-color: rgb(245 239 230 / 21%);"></div>
+            </div>
+            <div class="container mx-auto px-6 max-w-7xl relative z-10">
+                <div class="grid md:grid-cols-2 gap-8 fade-up">
+                    <div class="bg-section p-8 md:p-16 rounded-3xl">
+                        <h4 class="text-2xl font-serif mb-6 text-dark border-b-2 border-primary/20 pb-4">蟇ｾ蠢懊お繝ｪ繧｢</h4>
+                        <p class="font-bold text-xl mb-4 text-primary text-center md:text-left">菴仙牙ｸょ捉霎ｺ繧剃ｸｭ蠢・↓縲・br>蟷・ｺ・＞蝨ｰ蝓溘°繧・br
+                                class="md:hidden">蜿ょ刈縺輔ｌ縺ｦ縺・∪縺吶・/p>
+                        <p class="text-dark text-lg leading-loose mb-8">
+                            隍・焚縺ｮ邱ｴ鄙剃ｼ壼ｴ縺後≠繧九◆繧√・壹＞繧・☆縺・ｴ謇繧帝∈縺ｳ縺ｪ縺後ｉ縺泌盾蜉縺・◆縺縺代∪縺吶・br>
+                            菴仙牙ｸゅｒ荳ｭ蠢・↓縲∬ｿ鷹團繧ｨ繝ｪ繧｢縺九ｉ繧ょ､壹￥縺ｮ譁ｹ縺悟盾蜉縺輔ｌ縺ｦ縺・∪縺吶・                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">菴仙牙ｸ・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">蜈ｫ蜊・ｻ｣蟶・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">蝗幄｡鈴％蟶・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">謌千伐蟶・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">蜊・痩蟶・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">鄙貞ｿ鈴㍽蟶・/span>
+                            <span
+                                class="px-6 py-2 bg-white rounded-full text-lg font-bold text-dark shadow-sm">蜊ｰ隘ｿ蟶・/span>
+                        </div>
+                    </div>
+                    <div class="bg-section p-8 md:p-16 rounded-3xl">
+                        <h4 class="text-2xl font-serif mb-6 text-dark border-b-2 border-primary/20 pb-4">蟇ｾ蠢懊ず繝｣繝ｳ繝ｫ</h4>
+                        <p class="font-bold text-xl mb-4 text-primary text-center md:text-left">縺雁･ｽ縺阪↑譖ｲ繧・br
+                                class="md:hidden">讌ｽ縺励∩縺ｪ縺後ｉ縲・br>邱ｴ鄙偵〒縺阪∪縺吶・                        </p>
+                        <p class="text-dark text-lg leading-loose mb-8">
+                            蝓ｺ遉弱ｒ螟ｧ蛻・↓縺励↑縺後ｉ縲∝ｹ・ｺ・＞繧ｸ繝｣繝ｳ繝ｫ縺ｮ讌ｽ譖ｲ縺ｫ蜿悶ｊ邨・ｓ縺ｧ縺・∪縺吶・br>
+                            縲悟ｼｾ縺・※縺ｿ縺溘＞縲阪→縺・≧豌玲戟縺｡繧貞､ｧ蛻・↓縺励↑縺後ｉ縲√＃閾ｪ霄ｫ縺ｮ逶ｮ讓吶↓蜷医ｏ縺帙※邱ｴ鄙偵＠縺ｦ縺・◆縺縺代∪縺吶・                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-6 py-2 bg-primary text-white rounded-full text-lg font-bold shadow-md">繧ｯ繝ｩ繧ｷ繝・け</span>
+                            <span
+                                class="px-6 py-2 bg-primary text-white rounded-full text-lg font-bold shadow-md">譏逕ｻ髻ｳ讌ｽ</span>
+                            <span
+                                class="px-6 py-2 bg-primary text-white rounded-full text-lg font-bold shadow-md">譏ｭ蜥後・繝｡繝ｭ繝・ぅ繝ｼ</span>
+                            <span
+                                class="px-6 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-lg font-bold">貍疲ｭ・/span>
+                            <span
+                                class="px-6 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-lg font-bold">謚呈ュ豁・/span>
+                            <span
+                                class="px-6 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-lg font-bold">髱呈丼繝輔か繝ｼ繧ｯ</span>
+                            <span
+                                class="px-6 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-lg font-bold">繝昴ヴ繝･繝ｩ繝ｼ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="relative py-24 md:py-40 overflow-hidden bg-fixed-ios bg-pattern-about">
+            <!-- Overlay for readability -->
+            <div class="absolute inset-0 z-0" style="background-color: rgb(245 239 230 / 46%);"></div>
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="text-center mb-20 fade-up">
+                    <h2 class="text-3xl md:text-5xl font-serif text-dark leading-relaxed">
+                        辟｡逅・↑縺冗ｶ壹￠繧峨ｌ繧九・br>螟ｧ莠ｺ縺ｮ縺溘ａ縺ｮ<br class="md:hidden">3縺､縺ｮ謨吶∴譁ｹ
+                    </h2>
+                    <div class="w-16 h-px bg-primary mx-auto mt-8"></div>
+                </div>
+
+                <div class="space-y-32">
+                    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 fade-up">
+                        <div class="w-full md:w-1/2">
+                            <img src="img/service_01.jpg" alt="Basic"
+                                class="rounded-3xl shadow-xl w-full aspect-[4/3] object-cover">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="text-primary font-serif italic text-6xl opacity-20 block mb-4">01</span>
+                            <h3 class="text-2xl md:text-3xl font-serif text-dark mb-6">蛻晏ｿ・・°繧・br
+                                    class="md:hidden">螳牙ｿ・＠縺ｦ蟋九ａ繧峨ｌ繧・br>蝓ｺ遉朱㍾隕悶・繝ｬ繝・せ繝ｳ</h3>
+                            <p class="text-dark text-lg leading-loose">
+                                繧ｮ繧ｿ繝ｼ縺悟・繧√※縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・＠縺ｦ蜿悶ｊ邨・ａ繧九ｈ縺・∵ｧ九∴譁ｹ繧・欠縺ｮ菴ｿ縺・婿縺ｨ縺・▲縺溷渕遉弱°繧我ｸ∝ｯｧ縺ｫ騾ｲ繧√※縺・″縺ｾ縺吶・br><br>
+                                髻ｳ髫弱・蜥碁浹繝ｻ繧｢繝ｫ繝壹ず繧ｪ縺ｪ縺ｩ縲∵ｼ泌･上・蝨溷床縺ｨ縺ｪ繧狗ｷｴ鄙偵ｒ螟ｧ蛻・↓縺励↑縺後ｉ縲∵ｮｵ髫守噪縺ｫ逅・ｧ｣繧呈ｷｱ繧√※縺・￥縺溘ａ縲∫┌逅・↑縺冗ｶ壹￠繧・☆縺・・螳ｹ縺ｧ縺吶・                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-20 fade-up">
+                        <div class="w-full md:w-1/2">
+                            <img src="img/service_02.jpg" alt="Friends"
+                                class="rounded-3xl shadow-xl w-full aspect-[4/3] object-cover">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="text-primary font-serif italic text-6xl opacity-20 block mb-4">02</span>
+                            <h3 class="text-2xl md:text-3xl font-serif text-dark mb-6">莉ｲ髢薙→荳邱偵□縺九ｉ邯壹￥縲・br>讌ｽ縺励￥蟄ｦ縺ｹ繧狗腸蠅・/h3>
+                            <p class="text-dark text-lg leading-loose">
+                                荳莠ｺ縺ｧ縺ｯ邯壹￠縺ｫ縺上＞邱ｴ鄙偵ｂ縲∝酔縺倩ｶ｣蜻ｳ繧呈戟縺､莉ｲ髢薙→荳邱偵↑繧芽・辟ｶ縺ｨ邯咏ｶ壹＠繧・☆縺上↑繧翫∪縺吶・br><br>
+                                蜥後ｄ縺九↑髮ｰ蝗ｲ豌励・荳ｭ縺ｧ縲√♀莠偵＞縺ｫ蛻ｺ豼繧貞女縺代↑縺後ｉ蜿悶ｊ邨・ａ繧九◆繧√∵･ｽ縺励∩縺ｪ縺後ｉ繧ｮ繧ｿ繝ｼ縺ｫ蜷代″蜷医∴繧狗腸蠅・〒縺吶・                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 fade-up">
+                        <div class="w-full md:w-1/2">
+                            <img src="img/service_03.jpg" alt="Genre"
+                                class="rounded-3xl shadow-xl w-full aspect-[4/3] object-cover">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="text-primary font-serif italic text-6xl opacity-20 block mb-4">03</span>
+                            <h3 class="text-2xl md:text-3xl font-serif text-dark mb-6">螂ｽ縺阪↑譖ｲ縺ｫ謖第姶縺ｧ縺阪ｋ<br>閾ｪ逕ｱ蠎ｦ縺ｮ鬮倥＞繧ｹ繧ｿ繧､繝ｫ</h3>
+                            <p class="text-dark text-lg leading-loose">
+                                繧ｯ繝ｩ繧ｷ繝・け縺ｫ髯舌ｉ縺壹∵丐逕ｻ髻ｳ讌ｽ繧・亊蜥後・蜷肴峇縲∵ｼ疲ｭ後√・繝斐Η繝ｩ繝ｼ縺ｪ縺ｩ縲∝ｹ・ｺ・＞繧ｸ繝｣繝ｳ繝ｫ縺ｫ蟇ｾ蠢懊＠縺ｦ縺・∪縺吶・br><br>
+                                縺碑・霄ｫ縺ｮ蠑ｾ縺阪◆縺・峇繧堤岼讓吶↓險ｭ螳壹＠縲∝渕遉弱→荳ｦ陦後＠縺ｦ蜿悶ｊ邨・ａ繧九％縺ｨ縺ｧ縲√悟ｼｾ縺代ｋ讌ｽ縺励＆縲阪ｒ螳滓─縺励ｄ縺吶＞縺ｮ縺檎音蠕ｴ縺ｧ縺吶・                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trial & Menu (Integrated Section with Fixed Background) -->
+        <section id="trial-menu" class="relative py-24 md:py-40 overflow-hidden bg-fixed-ios bg-pattern-menu">
+            <!-- Overlay with specific opacity (48%) -->
+            <div class="absolute inset-0 z-0" style="background-color: rgb(245 239 230 / 48%);"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Trial Part -->
+                <div id="trial" class="max-w-5xl mx-auto mb-32">
+                    <div class="bg-white p-8 md:p-20 rounded-3xl shadow-2xl border border-primary/5 fade-up">
+                        <div class="max-w-4xl mx-auto">
+                            <h2
+                                class="text-3xl md:text-4xl font-serif text-dark mb-8 leading-relaxed text-center animate-bounce-slow">
+                                縺ｾ縺壹・<br class="md:hidden">辟｡譁吩ｽ馴ｨ薙°繧・br>縺泌盾蜉縺上□縺輔＞</h2>
+                            <p
+                                class="text-primary font-bold mb-10 text-lg flex items-center justify-center gap-3 text-center">
+                                蛻昴ａ縺ｦ縺ｮ譁ｹ縺ｧ繧・br class="md:hidden">螳牙ｿ・＠縺ｦ縺泌盾蜉縺・◆縺縺代∪縺・                            </p>
+
+                            <div class="space-y-12 text-dark text-lg leading-loose text-center lg:text-left">
+                                <div class="my-8 max-w-2xl mx-auto text-center">
+                                    <img src="img/worries_01.jpg" alt="謔ｩ繧譁ｹ縺ｮ繧､繝｡繝ｼ繧ｸ" class="w-full h-auto">
+                                </div>
+                                <p class="text-center md:text-left">縺昴ｓ縺ｪ譁ｹ縺ｮ縺溘ａ縺ｫ縲・br class="md:hidden">辟｡譁吩ｽ馴ｨ薙・隕句ｭｦ繧・br
+                                        class="md:hidden">縺皮畑諢上＠縺ｦ縺・∪縺吶・/p>
+
+                                <ul
+                                    class="space-y-4 py-8 border-y border-primary/10 bg-section/10 px-6 rounded-2xl text-lg">
+                                    <li class="flex items-center gap-4 font-bold text-primary leading-snug"><i
+                                            class="fa-solid fa-check-circle"></i> 譛螟ｧ2譎る俣縺ｾ縺ｧ<br class="md:hidden">辟｡譁吩ｽ馴ｨ灘庄閭ｽ
+                                    </li>
+                                    <li class="flex items-center gap-4 font-bold text-primary leading-snug"><i
+                                            class="fa-solid fa-check-circle"></i> 1譎る俣縺九ｉ縺ｮ<br class="md:hidden">蜿ょ刈繧ょ庄閭ｽ</li>
+                                    <li class="flex items-center gap-4 font-bold text-primary leading-snug"><i
+                                            class="fa-solid fa-check-circle"></i> 隕句ｭｦ縺ｮ縺ｿ縺ｮ<br class="md:hidden">縺泌盾蜉繧ょ庄閭ｽ</li>
+                                </ul>
+
+                                <!-- Text and Image side-by-side on PC -->
+                                <div class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 items-center">
+                                    <div class="flex-1 space-y-8">
+                                        <p class="text-left lg:text-center">
+                                            縺ｾ縺溘∫┌逅・↑蜍ｧ隱倥・陦後▲縺ｦ縺翫ｊ縺ｾ縺帙ｓ縺ｮ縺ｧ縲・br class="hidden lg:block">菴馴ｨ薙・縺ｿ縺ｮ縺泌盾蜉繧ょｮ牙ｿ・＠縺ｦ縺願ｶ翫＠縺上□縺輔＞縲・                                        </p>
+                                        <p class="font-bold border-l-8 border-primary pl-4 lg:pl-8 text-lg lg:text-xl">
+                                            繧ｮ繧ｿ繝ｼ譛ｪ邨碁ｨ薙・譁ｹ繧・・br class="md:hidden">縺贋ｸ莠ｺ縺ｧ<br class="md:hidden">蜿ょ刈縺輔ｌ繧区婿繧ょ､壹￥縲・br
+                                                class="md:hidden">蛻昴ａ縺ｦ縺ｮ譁ｹ縺ｧ繧・br class="md:hidden">辟｡逅・↑縺上＃蜿ょ刈縺・◆縺縺代ｋ<br
+                                                class="md:hidden">迺ｰ蠅・〒縺吶・/p>
+                                        <p
+                                            class="text-xl lg:text-2xl font-bold text-primary mt-12 bg-primary/5 py-4 text-center rounded-xl">
+                                            縺ｾ縺壹・<br class="md:hidden">螳滄圀縺ｮ髮ｰ蝗ｲ豌励ｒ<br>菴捺─縺励※縺ｿ縺ｦ縺上□縺輔＞縲・/p>
+                                    </div>
+
+                                    <!-- Moved Image next to text on PC -->
+                                    <div class="flex-1 w-full">
+                                        <img src="img/master_16-9.jpg" alt="Trial"
+                                            class="w-full h-auto rounded-2xl shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Part -->
+                <div id="menu" class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16 fade-up">
+                        <h2 class="text-3xl font-serif text-dark mb-4">縺昴・莉悶・繝｡繝九Η繝ｼ</h2>
+                        <p class="text-primary font-bold mb-4 text-xl">縺碑・霄ｫ縺ｮ繝ｬ繝吶Ν縺ｫ<br class="md:hidden">蜷医ｏ縺帙※驕ｸ縺ｹ繧九さ繝ｼ繧ｹ</p>
+                        <p class="text-dark opacity-80 text-lg leading-loose max-w-2xl mx-auto">
+                            縺皮ｵ碁ｨ薙ｄ逶ｮ逧・↓蠢懊§縺ｦ縲・br class="md:hidden">隍・焚縺ｮ繧ｳ繝ｼ繧ｹ繧偵＃逕ｨ諢上＠縺ｦ縺・∪縺吶・br>辟｡逅・・縺ｪ縺・・繝ｼ繧ｹ縺ｧ<br
+                                class="md:hidden">蝓ｺ遉弱°繧牙叙繧顔ｵ・ａ繧・br class="md:hidden">蜀・ｮｹ縺ｨ縺ｪ縺｣縺ｦ縺・∪縺吶・                        </p>
+                        <div class="w-16 h-px bg-primary mx-auto mt-8"></div>
+                    </div>
+
+                    <div class="space-y-8 fade-up">
+                        <!-- Course 1: Primary (Warm Beige) -->
+                        <div class="course-card p-8 md:p-12 rounded-3xl shadow-sm border border-primary/10"
+                            style="background-color: rgba(139, 111, 71, 0.12);">
+                            <div class="flex flex-col gap-8">
+                                <div class="text-left">
+                                    <h3 class="text-2xl font-bold text-dark flex items-center gap-3 mb-4">
+                                        <span
+                                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-serif">1</span>
+                                        繧ｮ繧ｿ繝ｼ蜈･髢繧ｳ繝ｼ繧ｹ
+                                    </h3>
+                                    <p class="text-dark opacity-80 text-lg">
+                                        繧ｮ繧ｿ繝ｼ縺悟・繧√※縺ｮ譁ｹ蜷代￠縺ｮ繧ｳ繝ｼ繧ｹ縺ｧ縺吶・br>讒九∴譁ｹ繧・ｼｾ縺肴婿縺ｪ縺ｩ縲∝渕譛ｬ縺九ｉ荳∝ｯｧ縺ｫ騾ｲ繧√※縺・″縺ｾ縺吶・/p>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-base font-bold">
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-secondary flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">蜈･莨夐≡</span>
+                                        <span class="text-lg">ﾂ･1,000</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-accent flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">謨吝援譛ｬ</span>
+                                        <span class="text-lg">ﾂ･1,000</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-primary border-l-4 border-primary flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60 font-bold">譛井ｼ夊ｲｻ</span>
+                                        <span class="text-xl">ﾂ･4,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course 2: Accent (Mint Beige) -->
+                        <div class="course-card p-8 md:p-12 rounded-3xl shadow-sm border border-accent/10"
+                            style="background-color: rgba(107, 125, 109, 0.12);">
+                            <div class="flex flex-col gap-8">
+                                <div class="text-left">
+                                    <h3 class="text-2xl font-bold text-dark flex items-center gap-3 mb-4">
+                                        <span
+                                            class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center text-lg font-serif">2</span>
+                                        繧ｯ繝ｩ繧ｷ繝・け繧ｮ繧ｿ繝ｼ<br class="md:hidden">蛻晉ｴ壹さ繝ｼ繧ｹ
+                                    </h3>
+                                    <p class="text-dark opacity-80 text-lg">蜈･髢繧ｳ繝ｼ繧ｹ菫ｮ莠・ｾ後√＆繧峨↓繧ｹ繝・ャ繝励い繝・・縺励◆縺・婿蜷代￠縺ｧ縺吶・                                    </p>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-base font-bold">
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-secondary flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">蜈･莨夐≡</span>
+                                        <span class="text-lg">ﾂ･1,000</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-accent flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">謨吝援譛ｬ</span>
+                                        <span class="text-lg">ﾂ･1,500</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-accent border-l-4 border-accent flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60 font-bold">譛井ｼ夊ｲｻ</span>
+                                        <span class="text-xl">ﾂ･5,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course 3: Secondary (Earth Beige) -->
+                        <div class="course-card p-8 md:p-12 rounded-3xl shadow-sm border border-secondary/10"
+                            style="background-color: rgba(110, 86, 54, 0.12);">
+                            <div class="flex flex-col gap-8">
+                                <div class="text-left">
+                                    <h3 class="text-2xl font-bold text-dark flex items-center gap-3 mb-4">
+                                        <span
+                                            class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-lg font-serif">3</span>
+                                        繧｢繧ｳ繝ｼ繧ｹ繝・ぅ繝・け<br class="md:hidden">繧ｮ繧ｿ繝ｼ繧ｳ繝ｼ繧ｹ
+                                    </h3>
+                                    <p class="text-dark opacity-80 text-lg">繧｢繧ｳ繝ｼ繧ｹ繝・ぅ繝・け繧ｮ繧ｿ繝ｼ縺ｧ貍泌･上ｒ讌ｽ縺励∩縺溘＞譁ｹ蜷代￠縺ｮ繧ｳ繝ｼ繧ｹ縺ｧ縺吶・                                    </p>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-base font-bold">
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-secondary flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">蜈･莨夐≡</span>
+                                        <span class="text-lg">ﾂ･1,000</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-dark border-l-4 border-accent flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60">謨吝援譛ｬ</span>
+                                        <span class="text-lg">ﾂ･1,000</span>
+                                    </div>
+                                    <div
+                                        class="px-6 py-4 bg-white rounded-xl text-secondary border-l-4 border-secondary flex justify-between items-center shadow-sm">
+                                        <span class="text-lg opacity-60 font-bold">譛井ｼ夊ｲｻ</span>
+                                        <span class="text-xl">ﾂ･4,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- QA -->
+        <section id="qa" class="relative py-24 md:py-40 overflow-hidden bg-fixed-ios bg-pattern-about">
+            <!-- Overlay for readability -->
+            <div class="absolute inset-0 z-0" style="background-color: rgb(245 239 230 / 46%);"></div>
+            <div class="container mx-auto px-6 max-w-4xl relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-5xl font-serif text-dark mb-4">繧医￥縺ゅｋ縺碑ｳｪ蝠・/h2>
+                    <p class="text-primary font-bold text-lg">蛻昴ａ縺ｦ縺ｮ譁ｹ縺九ｉ繧医￥縺・◆縺縺上＃雉ｪ蝠・/p>
+                    <div class="w-16 h-px bg-primary mx-auto mt-8"></div>
+                </div>
+                <div class="space-y-8 fade-up">
+                    <div class="bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-primary/5 shadow-sm">
+                        <h3 class="font-serif text-xl md:text-2xl mb-6 flex items-start gap-4 text-dark">
+                            <span class="text-primary font-bold text-3xl">Q.</span>
+                            繧ｮ繧ｿ繝ｼ縺後∪縺｣縺溘￥蛻昴ａ縺ｦ縺ｧ繧ょ､ｧ荳亥､ｫ縺ｧ縺吶°・・                        </h3>
+                        <div class="flex gap-4 border-t border-primary/10 pt-6">
+                            <span class="text-dark/30 font-bold text-3xl">A.</span>
+                            <p class="text-dark text-lg leading-loose pt-1">
+                                <span class="font-bold block mb-2 text-xl">縺ｯ縺・∝撫鬘後＃縺悶＞縺ｾ縺帙ｓ縲・/span>
+                                蛻昴ａ縺ｦ縺ｮ譁ｹ蜷代￠縺ｮ繧ｳ繝ｼ繧ｹ繧ゅ＃逕ｨ諢上＠縺ｦ縺翫ｊ縲∵ｧ九∴譁ｹ繧・ｼｾ縺肴婿縺ｪ縺ｩ蝓ｺ遉弱°繧我ｸ∝ｯｧ縺ｫ騾ｲ繧√※縺・″縺ｾ縺吶・                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-primary/5 shadow-sm">
+                        <h3 class="font-serif text-xl md:text-2xl mb-6 flex items-start gap-4 text-dark">
+                            <span class="text-primary font-bold text-3xl">Q.</span>
+                            荳莠ｺ縺ｧ蜿ょ刈縺励※繧ょ､ｧ荳亥､ｫ縺ｧ縺励ｇ縺・°・・                        </h3>
+                        <div class="flex gap-4 border-t border-primary/10 pt-6">
+                            <span class="text-dark/30 font-bold text-3xl">A.</span>
+                            <p class="text-dark text-lg leading-loose pt-1">
+                                <span class="font-bold block mb-2 text-xl">縺ｯ縺・√♀荳莠ｺ縺ｧ蜿ょ刈縺輔ｌ繧区婿縺後⊇縺ｨ繧薙←縺ｧ縺吶・/span>
+                                蜷後§繧医≧縺ｫ繧ｮ繧ｿ繝ｼ繧呈･ｽ縺励∩縺溘＞譁ｹ縺碁寔縺ｾ繧九◆繧√∝ｮ牙ｿ・＠縺ｦ縺泌盾蜉縺・◆縺縺代∪縺吶・                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-primary/5 shadow-sm">
+                        <h3 class="font-serif text-xl md:text-2xl mb-6 flex items-start gap-4 text-dark">
+                            <span class="text-primary font-bold text-3xl">Q.</span>
+                            辟｡譁吩ｽ馴ｨ薙□縺代〒繧ょ､ｧ荳亥､ｫ縺ｧ縺吶°・・                        </h3>
+                        <div class="flex gap-4 border-t border-primary/10 pt-6">
+                            <span class="text-dark/30 font-bold text-3xl">A.</span>
+                            <p class="text-dark text-lg leading-loose pt-1">
+                                <span class="font-bold block mb-2 text-xl">縺ｯ縺・∽ｽ馴ｨ薙・縺ｿ縺ｮ縺泌盾蜉繧よｭ楢ｿ弱＠縺ｦ縺翫ｊ縺ｾ縺吶・/span>
+                                辟｡逅・↓蜈･莨壹ｒ縺翫☆縺吶ａ縺吶ｋ縺薙→縺ｯ縺ゅｊ縺ｾ縺帙ｓ縺ｮ縺ｧ縲√∪縺壹・髮ｰ蝗ｲ豌励ｒ縺皮｢ｺ隱阪￥縺縺輔＞縲・                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-primary/5 shadow-sm">
+                        <h3 class="font-serif text-xl md:text-2xl mb-6 flex items-start gap-4 text-dark">
+                            <span class="text-primary font-bold text-3xl">Q.</span>
+                            繧ｮ繧ｿ繝ｼ繧呈戟縺｣縺ｦ縺・↑縺・・縺ｧ縺吶′蜿ょ刈縺ｧ縺阪∪縺吶°・・                        </h3>
+                        <div class="flex gap-4 border-t border-primary/10 pt-6">
+                            <span class="text-dark/30 font-bold text-3xl">A.</span>
+                            <p class="text-dark text-lg leading-loose pt-1">
+                                <span class="font-bold block mb-2 text-xl">縺ｯ縺・√＃逶ｸ隲・＞縺溘□縺代∪縺吶・/span>
+                                縺薙ｌ縺九ｉ蟋九ａ縺溘＞譁ｹ縺ｫ繧ゅ＃蜿ょ刈縺・◆縺縺代ｋ繧医≧縲∵･ｽ蝎ｨ縺ｫ縺､縺・※縺ｮ縺皮嶌隲・ｂ謇ｿ縺｣縺ｦ縺翫ｊ縺ｾ縺吶・                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration (CTA) -->
+        <section id="registration" class="py-24 bg-section border-y border-primary/10">
+            <div class="container mx-auto px-6 max-w-6xl fade-up">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-5xl font-serif mb-6 text-dark leading-tight">
+                        <span
+                            class="registration-heading-premium animate-bounce-slow animate-flow-bg rounded-full">辟｡譁吩ｽ馴ｨ薙・<br
+                                class="md:hidden">縺顔筏縺苓ｾｼ縺ｿ縺ｯ縺薙■繧・/span>
+                    </h3>
+                    <p
+                        class="text-dark text-lg md:text-xl font-bold text-primary mb-8 underline decoration-primary underline-offset-8">
+                        縺秘・蜷医・繧医＞譁ｹ豕輔〒<br class="md:hidden">縺頑ｰ苓ｻｽ縺ｫ縺秘｣邨｡縺上□縺輔＞</p>
+                    <div
+                        class="mt-8 text-lg md:text-xl text-dark leading-loose max-w-3xl mx-auto text-left lg:text-center">
+                        辟｡譁吩ｽ馴ｨ薙・隕句ｭｦ縺ｯ縲仝EB繝輔か繝ｼ繝縺ｾ縺溘・縺企崕隧ｱ縺ｫ縺ｦ蜿励￠莉倥￠縺ｦ縺翫ｊ縺ｾ縺吶・br>
+                        縺比ｸ肴・轤ｹ縺ｮ縺皮嶌隲・□縺代〒繧ょ撫鬘後＃縺悶＞縺ｾ縺帙ｓ縺ｮ縺ｧ縲√♀豌苓ｻｽ縺ｫ縺秘｣邨｡縺上□縺輔＞縲・                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 md:p-16 rounded-3xl text-center shadow-xl border border-primary/5">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                            <i class="fa-solid fa-envelope text-primary text-3xl"></i>
+                        </div>
+                        <h4 class="font-serif text-2xl md:text-3xl mb-6 text-dark">WEB縺九ｉ縺ｮ<br class="md:hidden">縺顔筏縺苓ｾｼ縺ｿ
+                        </h4>
+                        <p class="text-lg text-dark mb-10">24譎る俣蜿嶺ｻ・/p>
+                        <a href="https://otonanosorogita-sa-kuru.happytry.org/jump1.html" target="_blank"
+                            class="block w-full py-6 bg-primary text-white font-bold tracking-widest rounded-xl hover:bg-secondary transition duration-300 shadow-xl text-xl">
+                            WEB繝輔か繝ｼ繝縺ｯ縺薙■繧・                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 md:p-16 rounded-3xl text-center shadow-xl border border-primary/5">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                            <i class="fa-solid fa-phone-volume text-primary text-3xl animate-pulse"></i>
+                        </div>
+                        <h4 class="font-serif text-2xl md:text-3xl mb-6 text-dark">縺企崕隧ｱ縺ｧ縺ｮ<br class="md:hidden">縺雁撫縺・粋繧上○
+                        </h4>
+                        <p class="text-lg text-dark mb-10">蜿嶺ｻ俶凾髢難ｼ・3:00縲・7:00</p>
+                        <a href="tel:05054485035"
+                            class="block w-full py-6 border-4 border-primary text-primary font-bold tracking-widest rounded-xl hover:bg-primary hover:text-white transition duration-300 shadow-lg text-3xl md:text-4xl font-serif">
+                            050-5448-5035
+                        </a>
+                        <p class="text-sm text-dark/40 mt-6 tracking-widest uppercase">Inquiry by Phone</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="access" class="bg-dark text-white pt-24 pb-36 md:pb-16 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-6xl grid md:grid-cols-2 gap-20">
+            <div class="fade-up">
+                <h2 class="text-2xl md:text-3xl font-serif mb-12 border-l-8 border-primary pl-8">繧｢繧ｯ繧ｻ繧ｹ繝ｻ縺雁撫縺・粋繧上○</h2>
+                <div class="space-y-10 text-lg">
+                    <div>
+                        <p class="text-primary font-bold mb-2 uppercase tracking-widest text-lg">Circle Name</p>
+                        <p class="font-bold text-2xl">螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ</p>
+                    </div>
+                    <div>
+                        <p class="text-primary font-bold mb-2 uppercase tracking-widest text-lg">Location</p>
+                        <p class="text-white/80 leading-relaxed text-xl">
+                            縲・85-0854<br>蜊・痩逵御ｽ仙牙ｸゆｸ雁ｺｧ・包ｼ暦ｼ絶・・包ｼ・                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-primary font-bold mb-2 uppercase tracking-widest text-lg">Phone</p>
+                            <p class="text-white/80 text-2xl font-serif">050-5448-5035</p>
+                        </div>
+                        <div>
+                            <p class="text-primary font-bold mb-2 uppercase tracking-widest text-lg">Contact Hours</p>
+                            <p class="text-white/80">13:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6 mt-16">
+                    <a href="https://otonanosorogita-sa-kuru.happytry.org/jump2.html" target="_blank"
+                        class="flex-1 bg-white/5 border border-white/10 py-5 text-center hover:bg-white hover:text-dark transition font-bold tracking-widest flex items-center justify-center gap-4 rounded-xl shadow-sm">
+                        <i class="fa-solid fa-rss text-primary"></i>
+                        蜈ｬ蠑上ヶ繝ｭ繧ｰ
+                    </a>
+                    <a href="https://otonanosorogita-sa-kuru.happytry.org/jump3.html" target="_blank"
+                        class="flex-1 bg-white/5 border border-white/10 py-5 text-center hover:bg-white hover:text-dark transition font-bold tracking-widest flex items-center justify-center gap-4 rounded-xl shadow-sm">
+                        <i class="fa-solid fa-globe text-primary"></i>
+                        蜈ｬ蠑上し繧､繝・HP)
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="h-80 md:h-auto bg-white/5 rounded-3xl border border-white/10 flex items-center justify-center relative overflow-hidden fade-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.1703295524576!2d140.1509188!3d35.7220293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228742456e6461%3A0x9a407cfce954a562!2z5aSn5Lq644Gu44K944Ot44Ku44K_44O844K144O844Kv44Or!5e0!3m2!1sja!2sjp!4v1773821005357!5m2!1sja!2sjp"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-24 pt-10 text-center text-base text-white/20 tracking-widest">
+            &copy; 螟ｧ莠ｺ縺ｮ繧ｽ繝ｭ繧ｮ繧ｿ繝ｼ繧ｵ繝ｼ繧ｯ繝ｫ. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Button -->
+    <div
+        class="mobile-cta fixed bottom-0 left-0 w-full bg-white flex md:hidden z-[100] border-t border-primary/10 shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
+        <a href="tel:05054485035"
+            class="flex-1 py-5 flex flex-col items-center justify-center text-dark transition hover:bg-section border-r border-primary/5">
+            <i class="fa-solid fa-phone text-2xl mb-1 text-primary"></i>
+            <span class="text-base lg:text-lg font-bold">髮ｻ隧ｱ</span>
+        </a>
+        <a href="https://otonanosorogita-sa-kuru.happytry.org/jump1.html" target="_blank"
+            class="flex-1 py-5 bg-primary text-white flex flex-col items-center justify-center transition hover:bg-secondary">
+            <i class="fa-solid fa-envelope text-2xl mb-1 text-white"></i>
+            <span class="text-base lg:text-lg font-bold tracking-widest uppercase">WEB繝輔か繝ｼ繝</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top"
+        class="fixed bottom-32 right-6 w-12 h-12 bg-white/80 backdrop-blur-sm border border-primary/20 text-primary rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible hover:bg-primary hover:text-white z-[90] md:bottom-10">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYKE | 美しさと健やかさを、ひとつの場所で。</title>
+    <meta name="description" content="七道駅近くの2フロアサロン「MYKE」。ネイルやアイラッシュ、トレーニングを通して、女性の毎日をトータルサポートします。">
+
+    <!-- OGP -->
+    <meta property="og:url" content="https://myke.happytry.fun">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MYKE | 美しさと健やかさを、ひとつの場所で。">
+    <meta property="og:description" content="七道駅近くの2フロアサロン「MYKE」。ネイルやアイラッシュ、トレーニングを通して、女性の毎日をトータルサポートします。">
+    <meta property="og:site_name" content="MYKE">
+    <meta property="og:image" content="https://myke.happytry.fun/img/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Mrs+Saint+Delafield&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        en: ['"Playfair Display"', 'serif'],
+                        mrs: ['"Mrs Saint Delafield"', 'cursive'],
+                    },
+                    colors: {
+                        theme: {
+                            navy: '#1B2A47',    /* メインカラー：ネイビー */
+                            beige: '#F5F2EB',   /* 背景カラー：ベージュ */
+                            gray: '#8C8C8C',    /* サブカラー：グレー */
+                            darkGray: '#4A4A4A',/* テキストカラー */
+                            light: '#FAFAFA',
+                        }
+                    },
+                    letterSpacing: {
+                        wider: '0.05em',
+                        widest: '0.1em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body class="font-sans antialiased text-[14px] md:text-[16px]" oncontextmenu="return false;">
+
+    <!-- iOS Parallax Fixed Background -->
+    <div class="fixed inset-0 w-full h-full bg-[url('./img/bg.jpg')] bg-center bg-cover -z-10 pointer-events-none"></div>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 left-0 z-50" id="header">
+        <div
+            class="absolute inset-0 bg-theme-beige/90 backdrop-blur-md border-b border-theme-navy/10 transition-all duration-300 pointer-events-none">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center z-[60]">
+
+            <!-- Logo -->
+            <a href="#" class="block h-14 md:h-16">
+                <img src="./img/logo.png" alt="MYKE" class="h-full w-auto object-contain">
+            </a>
+
+            <!-- PC Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-theme-navy font-serif text-sm tracking-widest">
+                <a href="#about" class="hover:text-theme-gray transition">ABOUT</a>
+                <a href="#service" class="hover:text-theme-gray transition">SERVICE</a>
+                <a href="#features" class="hover:text-theme-gray transition">FEATURES</a>
+                <a href="#menu" class="hover:text-theme-gray transition">MENU</a>
+                <a href="#access" class="hover:text-theme-gray transition">ACCESS</a>
+
+                <!-- LINE Button -->
+                <a href="https://myke.happytry.fun/jump01.html" target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-theme-navy text-theme-beige px-6 py-2.5 flex items-center gap-2 hover:bg-theme-navy/80 transition duration-300 rounded-sm">
+                    <!-- LINE Icon (SVG) -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zM7.426 12.593H4.409c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.359h2.673c.19 0 .344.154.344.344s-.154.344-.344.344zm3.013 0H9.752c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704c0 .19-.154.344-.344.344zm6.064-.344c0 .19-.154.344-.344.344h-3.016c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704zm1.517.344h-1.637c-.19 0-.344-.154-.344-.344v-4.704c0-.19.154-.344.344-.344h1.637c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344z" />
+                    </svg>
+                    <span class="font-sans text-xs">LINE予約</span>
+                </a>
+            </nav>
+
+            <!-- SP Hamburger Button -->
+            <button
+                class="md:hidden hamburger flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none z-[60]"
+                id="sp-menu-open">
+                <span class="block w-6 h-[2px] bg-theme-navy"></span>
+                <span class="block w-6 h-[2px] bg-theme-navy"></span>
+                <span class="block w-6 h-[2px] bg-theme-navy"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP Fullscreen Menu (New) -->
+    <div id="sp-menu"
+        class="fixed top-0 left-0 w-full h-screen bg-theme-beige z-[100] hidden flex-col items-center justify-center transition-opacity duration-300 opacity-0 overflow-y-auto py-36">
+
+        <!-- Close Button -->
+        <button id="sp-menu-close"
+            class="absolute top-5 right-4 sm:right-6 md:hidden w-10 h-10 flex flex-col justify-center items-center focus:outline-none">
+            <span class="block w-8 h-[2px] bg-theme-navy rotate-45 translate-y-[1px]"></span>
+            <span class="block w-8 h-[2px] bg-theme-navy -rotate-45 -translate-y-[1px]"></span>
+        </button>
+
+        <nav
+            class="flex flex-col items-center space-y-8 text-center font-serif text-xl text-theme-navy tracking-widest w-full px-6">
+            <a href="#about" class="sp-nav-link hover:text-theme-gray transition">ABOUT</a>
+            <a href="#service" class="sp-nav-link hover:text-theme-gray transition">SERVICE</a>
+            <a href="#features" class="sp-nav-link hover:text-theme-gray transition">FEATURES</a>
+            <a href="#menu" class="sp-nav-link hover:text-theme-gray transition">MENU</a>
+            <a href="#access" class="sp-nav-link hover:text-theme-gray transition">ACCESS</a>
+
+            <a href="https://myke.happytry.fun/jump01.html" target="_blank"
+                rel="noopener noreferrer"
+                class="bg-theme-navy text-theme-beige w-full max-w-[280px] mx-auto py-4 mt-10 flex items-center justify-center gap-3 rounded-full shadow-xl border-2 border-theme-navy active:scale-95 transition-all group">
+                <svg viewBox="0 0 24 24" fill="currentColor"
+                    class="w-6 h-6 transform group-active:scale-110 transition-transform">
+                    <path
+                        d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zM7.426 12.593H4.409c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.359h2.673c.19 0 .344.154.344.344s-.154.344-.344.344zm3.013 0H9.752c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704c0 .19-.154.344-.344.344zm6.064-.344c0 .19-.154.344-.344.344h-3.016c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704zm1.517.344h-1.637c-.19 0-.344-.154-.344-.344v-4.704c0-.19.154-.344.344-.344h1.637c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344z" />
+                </svg>
+                <span class="font-sans text-sm">LINEで予約する</span>
+            </a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- First View -->
+        <section
+            class="relative w-full h-auto min-h-screen md:h-screen flex flex-col md:flex-row pt-20 overflow-hidden bg-theme-beige">
+            <!-- 左側 1/3 背景 (PCのみ) -->
+            <div class="hidden md:block w-1/3 h-full relative z-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-theme-light to-theme-beige"></div>
+            </div>
+
+            <!-- 右側 2/3 スライダー -->
+            <div class="w-full md:w-2/3 h-[50vh] md:h-full relative z-0 overflow-hidden bg-theme-navy shrink-0">
+                <!-- 境界のグラデーション (左から右へベージュが消えていく) -->
+                <div
+                    class="absolute inset-y-0 left-0 bg-gradient-to-r from-theme-beige to-transparent z-10 hidden md:block w-[70%] pointer-events-none">
+                </div>
+                <!-- SP用グラデーション (下から上) -->
+                <div
+                    class="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-theme-beige to-transparent z-10 md:hidden pointer-events-none">
+                </div>
+
+                <!-- スライド群 -->
+                <div class="absolute inset-0 fv-slide bg-cover bg-center"
+                    style="background-image: url('img/fv01.jpg'); animation-delay: 0s;">
+                </div>
+                <div class="absolute inset-0 fv-slide bg-cover bg-center"
+                    style="background-image: url('img/fv02.jpg'); animation-delay: -10s;">
+                </div>
+                <div class="absolute inset-0 fv-slide bg-cover bg-center"
+                    style="background-image: url('img/fv03.jpg'); animation-delay: -5s;">
+                </div>
+            </div>
+
+            <!-- コンテンツ (前面) -->
+            <div
+                class="relative md:absolute md:inset-0 z-20 pointer-events-none pt-8 md:pt-20 flex flex-col justify-center md:flex-row md:items-center pb-12 md:pb-0 flex-1 bg-theme-beige md:bg-transparent">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                    <div class="max-w-[700px] pointer-events-auto fade-in-up">
+                        <!-- タグ -->
+                        <div
+                            class="inline-flex md:hidden items-center justify-center bg-[#B89B72] text-white px-4 py-1.5 text-xs font-en tracking-widest mb-6 rounded-sm shadow-md uppercase">
+                            Nail＊Eyelash＊
+                        </div>
+
+                        <!-- キャッチコピー -->
+                        <h2 class="hidden md:block mb-4 md:mb-6">
+                            <img src="./img/logo.png" alt="MYKE" class="h-16 md:h-[15rem] w-auto drop-shadow-sm">
+                        </h2>
+                        <h3
+                            class="font-serif text-[32px] md:text-4xl lg:text-[2.5rem] text-theme-navy font-medium leading-tight mb-6 md:mb-8 drop-shadow-sm">
+                            <span class="text-[#B89B72]">美しさと健やかさを、</span><br>ひとつの場所で
+                        </h3>
+
+                        <!-- サブコピー -->
+                        <p
+                            class="font-sans text-theme-darkGray text-sm md:text-base leading-loose mb-8 md:mb-10 tracking-wider">
+                            ネイルやアイラッシュ、トレーニングを通して、<br class="hidden sm:block">
+                            女性の毎日をトータルサポート。<br>
+                            七道駅近くの2フロアサロンで、<br class="hidden sm:block">
+                            心まで軽くなる時間をお過ごしください。
+                        </p>
+
+                        <!-- ボタン -->
+                        <div class="hidden md:flex flex-col sm:flex-row gap-4">
+                            <a href="https://myke.happytry.fun/jump01.html" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-3 bg-theme-navy text-theme-beige px-8 py-4 hover:bg-theme-navy/90 transition shadow-lg rounded-sm group">
+                                <svg viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-5 h-5 transform group-hover:scale-110 transition">
+                                    <path
+                                        d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zM7.426 12.593H4.409c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.359h2.673c.19 0 .344.154.344.344s-.154.344-.344.344zm3.013 0H9.752c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704c0 .19-.154.344-.344.344zm6.064-.344c0 .19-.154.344-.344.344h-3.016c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704zm1.517.344h-1.637c-.19 0-.344-.154-.344-.344v-4.704c0-.19.154-.344.344-.344h1.637c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344z" />
+                                </svg>
+                                <span class="font-sans text-sm tracking-wider font-medium">LINEで予約する</span>
+                            </a>
+                            <a href="#about"
+                                class="inline-flex items-center justify-center bg-transparent border border-theme-navy/30 text-theme-navy px-8 py-4 hover:border-theme-navy hover:bg-theme-navy/5 transition shadow-sm rounded-sm backdrop-blur-sm">
+                                <span class="font-sans text-sm tracking-wider font-medium">サロンについて</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- スクロールインジケーター -->
+            <a href="#about"
+                class="hidden md:flex absolute bottom-8 left-[16.666%] -translate-x-1/2 flex-col items-center z-30 group decoration-none">
+                <span
+                    class="font-en text-[10px] text-theme-navy/60 mb-2 tracking-[0.2em] group-hover:text-theme-navy transition uppercase">Scroll</span>
+                <div class="w-[1px] h-12 bg-theme-navy/20 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1/2 bg-[#B89B72] animate-[scrollLine_1.5s_ease-in-out_infinite]">
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Concerns Section -->
+        <section class="py-20 px-6 text-theme-navy relative bg-transparent">
+            <div class="absolute inset-0 bg-theme-beige/60 z-0"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10 fade-in-up">
+                <h3 class="font-serif text-[22px] md:text-3xl mb-10 tracking-widest">こんなお悩みありませんか？</h3>
+
+                <ul
+                    class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-6 text-left max-w-3xl mx-auto mb-12 font-sans tracking-wide">
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>忙しく、施術に長い時間をかけられない</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>子どもと一緒に通えるサロンを探している</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>お手頃な価格で美容を楽しみたい</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>自爪への負担を抑えてネイルを続けたい</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>自分に似合うデザインを提案してほしい</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-[#B89B72] mt-1">◆</span>
+                        <span>美容だけでなく、健康や体づくりも始めたい</span>
+                    </li>
+                </ul>
+
+                <p class="font-serif text-base md:text-xl leading-relaxed text-[#B89B72]">
+                    一人ひとりのライフスタイルに寄り添い、<br>
+                    無理なく続けられる美容と健康を<br class="block sm:hidden">ご提案します。
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 px-6 relative overflow-hidden bg-theme-light">
+            <!-- Decorative background element -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-[#E8E4D9] rounded-full blur-3xl -z-10 opacity-60 translate-x-1/2 -translate-y-1/2">
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">ABOUT</h2>
+                    <span class="section-title-ja">MYKEについて</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mt-16">
+                    <!-- Images (Left) -->
+                    <div class="w-full lg:w-1/2 flex gap-4 md:gap-6 fade-in-up relative">
+                        <!-- Decorative Starburst -->
+                        <svg class="absolute -top-4 -left-4 md:-top-8 md:-left-8 w-16 h-16 md:w-24 md:h-24 text-[#B89B72] opacity-70 z-20 animate-[spin_30s_linear_infinite]"
+                            viewBox="0 0 100 100" fill="currentColor">
+                            <path
+                                d="M50 15 C50 35 35 50 15 50 C35 50 50 65 50 85 C50 65 65 50 85 50 C65 50 50 35 50 15 Z" />
+                        </svg>
+
+                        <!-- Left Column (shifted down) -->
+                        <div class="w-1/2 mt-12 md:mt-16 relative">
+                            <!-- Offset Border Decoration -->
+                            <div
+                                class="absolute inset-0 border border-[#B89B72] translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5 rounded-sm z-0">
+                            </div>
+                            <img src="img/aboutpic01.jpg" alt="MYKE Salon Space"
+                                class="w-full h-[250px] md:h-[400px] lg:h-[480px] object-cover rounded-sm shadow-md relative z-10">
+                        </div>
+                        <!-- Right Column -->
+                        <div class="w-1/2 flex flex-col gap-4 md:gap-6 relative">
+                            <img src="img/aboutpic03.jpg" alt="Salon Detail"
+                                class="w-full h-[150px] md:h-[220px] lg:h-[260px] object-cover rounded-sm shadow-md">
+                            <div class="relative">
+                                <img src="img/aboutpic02.jpg" alt="Salon Atmosphere"
+                                    class="w-full h-[180px] md:h-[260px] lg:h-[300px] object-cover rounded-sm shadow-md relative z-10">
+                                <!-- Cursive English Decoration -->
+                                <span
+                                    class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 font-mrs text-4xl md:text-5xl text-[#B89B72] drop-shadow-sm z-20 -rotate-6">Welcome</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text (Right) -->
+                    <div class="w-full lg:w-1/2 fade-in-up flex flex-col justify-center"
+                        style="transition-delay: 0.2s;">
+                        <h3 class="font-serif text-2xl md:text-3xl text-theme-navy mb-8 leading-relaxed">
+                            みんなでつくりあげる、<br>笑顔のための2フロアサロン
+                        </h3>
+                        <div
+                            class="font-sans text-theme-darkGray leading-loose space-y-6 text-sm md:text-base tracking-wide">
+                            <p>
+                                七道駅のすぐ近くにある、ネイル・アイラッシュ・トレーニングなどを楽しめるプライベートサロンです。
+                            </p>
+                            <p>
+                                ネイルサロンから始まった当店は、お客様との会話やご縁をきっかけに、外見だけでなく心と体の健康まで支えられる場所へと広がりました。
+                            </p>
+                            <p>
+                                2つのフロアを活かし、美容施術から少人数制のトレーニング、教室やイベントまで幅広くご用意。<br class="hidden md:block">
+                                女性が自分らしく、きれいで健やかな毎日を過ごせるようトータルでサポートします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service" class="py-24 px-6 bg-theme-beige">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">SERVICE</h2>
+                    <span class="section-title-ja">サービス内容</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="max-w-4xl md:max-w-[70rem] mx-auto flex flex-col gap-6 mt-16">
+                    <!-- NAIL -->
+                    <div
+                        class="bg-white rounded-sm shadow-sm border border-theme-gray/10 flex flex-col md:flex-row overflow-hidden fade-in-up group">
+                        <div class="relative w-full md:w-[260px] shrink-0 aspect-square overflow-hidden">
+                            <!-- アンティーク風の枠線装飾 -->
+                            <div class="absolute inset-3 border border-white/60 z-10 pointer-events-none"></div>
+                            <img src="img/serpic01.jpg" alt="NAIL"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                            <h3 class="font-en text-xl text-theme-navy border-b border-theme-gray/20 pb-3 mb-4">NAIL
+                            </h3>
+                            <h4 class="font-serif text-base text-theme-darkGray mb-3 font-medium leading-relaxed">
+                                自爪をいたわる、<br class="block sm:hidden">スピーディーなネイル</h4>
+                            <p
+                                class="font-sans text-[14px] md:text-[16px] leading-loose text-theme-darkGray tracking-wide">
+                                自爪への負担を抑えやすいフィルイン施術を取り入れています。<br>限られた時間でもネイルを楽しめるよう、スピーディーかつ丁寧に仕上げます。<br>
+                                デザインに迷う方には、雰囲気やご希望に合わせたおまかせデザインもご提案します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- EYELASH -->
+                    <div class="bg-white rounded-sm shadow-sm border border-theme-gray/10 flex flex-col md:flex-row overflow-hidden fade-in-up group"
+                        style="transition-delay: 0.1s;">
+                        <div class="relative w-full md:w-[260px] shrink-0 aspect-square overflow-hidden">
+                            <div class="absolute inset-3 border border-white/60 z-10 pointer-events-none"></div>
+                            <img src="img/serpic02.jpg" alt="EYELASH"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                            <h3 class="font-en text-xl text-theme-navy border-b border-theme-gray/20 pb-3 mb-4">EYELASH
+                            </h3>
+                            <h4 class="font-serif text-base text-theme-darkGray mb-3 font-medium leading-relaxed">
+                                毎日を軽やかにする目元づくり</h4>
+                            <p
+                                class="font-sans text-[14px] md:text-[16px] leading-loose text-theme-darkGray tracking-wide">
+                                お顔立ちやライフスタイルに合わせ、自然で扱いやすい目元をご提案します。<br>
+                                忙しい毎日の身支度を少し楽にしながら、その方らしい魅力を引き出します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- TRAINING -->
+                    <div class="bg-white rounded-sm shadow-sm border border-theme-gray/10 flex flex-col md:flex-row overflow-hidden fade-in-up group"
+                        style="transition-delay: 0.2s;">
+                        <div class="relative w-full md:w-[260px] shrink-0 aspect-square overflow-hidden">
+                            <div class="absolute inset-3 border border-white/60 z-10 pointer-events-none"></div>
+                            <img src="img/serpic03.jpg" alt="TRAINING"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                            <h3 class="font-en text-xl text-theme-navy border-b border-theme-gray/20 pb-3 mb-4">TRAINING
+                            </h3>
+                            <h4 class="font-serif text-base text-theme-darkGray mb-3 font-medium leading-relaxed">
+                                楽しみながら整える、<br class="block sm:hidden">健康的な体づくり</h4>
+                            <p
+                                class="font-sans text-[14px] md:text-[16px] leading-loose text-theme-darkGray tracking-wide">
+                                外部講師を招き、ピラティスや筋力トレーニングなどを少人数制で行っています。<br>
+                                運動が初めての方も参加しやすく、一人ひとりのペースを大切にしながら、無理のない健康づくりをサポートします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- LESSON & EVENT -->
+                    <div class="bg-white rounded-sm shadow-sm border border-theme-gray/10 flex flex-col md:flex-row overflow-hidden fade-in-up group"
+                        style="transition-delay: 0.3s;">
+                        <div class="relative w-full md:w-[260px] shrink-0 aspect-square overflow-hidden">
+                            <div class="absolute inset-3 border border-white/60 z-10 pointer-events-none"></div>
+                            <img src="img/serpic04.jpg" alt="LESSON & EVENT"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+                            <h3 class="font-en text-xl text-theme-navy border-b border-theme-gray/20 pb-3 mb-4">LESSON &
+                                EVENT</h3>
+                            <h4 class="font-serif text-base text-theme-darkGray mb-3 font-medium leading-relaxed">
+                                美容と健康を楽しむ、新しいきっかけ</h4>
+                            <p
+                                class="font-sans text-[14px] md:text-[16px] leading-loose text-theme-darkGray tracking-wide">
+                                ご家族やご友人と楽しめる教室やイベントも開催しています。<br>
+                                美容だけにとどまらず、心と体を整えるさまざまな取り組みを通して、笑顔の輪が広がる場所をつくっています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-24 px-6 relative bg-transparent">
+            <!-- Background Overlay -->
+            <div class="absolute inset-0 bg-theme-beige/60 z-0"></div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">FEATURES</h2>
+                    <span class="section-title-ja">MYKEの特徴</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="mt-16 space-y-16 lg:space-y-24">
+                    <!-- Feature 01 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center fade-in-up">
+                        <div class="w-full md:w-5/12 order-2 md:order-1 relative">
+                            <span
+                                class="absolute -top-12 -left-8 font-en text-8xl text-theme-navy/5 font-bold z-0">01</span>
+                            <div class="relative z-10">
+                                <h3 class="font-serif text-xl md:text-2xl text-theme-navy mb-4">女性の美と健康を<br>トータルサポート
+                                </h3>
+                                <p class="font-sans text-sm md:text-base leading-loose text-theme-darkGray">
+                                    ネイルやアイラッシュなどの美容施術に加え、トレーニングや教室も取り入れています。<br>
+                                    外見を整えるだけでなく、心と体まで健やかになれるサロンを目指しています。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-7/12 order-1 md:order-2">
+                            <div class="relative inline-block w-full">
+                                <img src="img/featurepic01.jpg" alt="Total Support"
+                                    class="w-full aspect-[4/3] md:aspect-[3/2] object-cover rounded-sm shadow-md">
+                                <span
+                                    class="absolute -top-4 left-2 md:top-auto md:left-auto md:-bottom-4 md:-right-2 font-mrs text-4xl md:text-5xl text-[#B89B72] drop-shadow-md z-10 -rotate-3">Total
+                                    Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 02 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center fade-in-up">
+                        <div class="w-full md:w-7/12">
+                            <div class="relative inline-block w-full">
+                                <img src="img/featurepic02.jpg" alt="2 Floors"
+                                    class="w-full aspect-[4/3] md:aspect-[3/2] object-cover rounded-sm shadow-md">
+                                <span
+                                    class="absolute -top-4 left-2 md:top-auto md:left-auto md:-bottom-4 md:-right-2 font-mrs text-4xl md:text-5xl text-[#B89B72] drop-shadow-md z-10 -rotate-3">Private
+                                    Space</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-5/12 relative">
+                            <span
+                                class="absolute -top-12 -left-8 font-en text-8xl text-theme-navy/5 font-bold z-0">02</span>
+                            <div class="relative z-10 md:pl-8">
+                                <h3 class="font-serif text-xl md:text-2xl text-theme-navy mb-4">目的に合わせて過ごせる<br>2フロア</h3>
+                                <p class="font-sans text-sm md:text-base leading-loose text-theme-darkGray">
+                                    2つのフロアを活かし、美容施術やトレーニングなど、それぞれのサービスに合わせた時間をご提供します。<br>
+                                    プライベート感のある空間で、周囲を気にせずゆったりとお過ごしいただけます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 03 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center fade-in-up">
+                        <div class="w-full md:w-5/12 order-2 md:order-1 relative">
+                            <span
+                                class="absolute -top-12 -left-8 font-en text-8xl text-theme-navy/5 font-bold z-0">03</span>
+                            <div class="relative z-10">
+                                <h3 class="font-serif text-xl md:text-2xl text-theme-navy mb-4">お子様連れでも<br>通いやすい空間</h3>
+                                <p class="font-sans text-sm md:text-base leading-loose text-theme-darkGray">
+                                    小さなお子様がいる方も、一緒にご来店いただけます。<br>店内のおもちゃも、気にならない方は自由にご利用ください。<br>
+                                    <span
+                                        class="text-xs mt-2 block text-theme-gray">※託児サービスではないため、施術中も保護者様の見守りをお願いいたします。</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-7/12 order-1 md:order-2">
+                            <div class="relative inline-block w-full">
+                                <img src="img/featurepic03.jpg" alt="Kids Friendly"
+                                    class="w-full aspect-[4/3] md:aspect-[3/2] object-cover rounded-sm shadow-md">
+                                <span
+                                    class="absolute -top-4 left-2 md:top-auto md:left-auto md:-bottom-4 md:-right-2 font-mrs text-4xl md:text-5xl text-[#B89B72] drop-shadow-md z-10 -rotate-3">Kids
+                                    Friendly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 04 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center fade-in-up">
+                        <div class="w-full md:w-7/12">
+                            <div class="relative inline-block w-full">
+                                <img src="img/featurepic04.png" alt="Careful Treatment"
+                                    class="w-full aspect-[4/3] md:aspect-[3/2] object-cover rounded-sm shadow-md">
+                                <span
+                                    class="absolute -top-4 left-2 md:top-auto md:left-auto md:-bottom-4 md:-right-2 font-mrs text-4xl md:text-5xl text-[#B89B72] drop-shadow-md z-10 -rotate-3">Careful
+                                    Treatment</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-5/12 relative">
+                            <span
+                                class="absolute -top-12 -left-8 font-en text-8xl text-theme-navy/5 font-bold z-0">04</span>
+                            <div class="relative z-10 md:pl-8">
+                                <h3 class="font-serif text-xl md:text-2xl text-theme-navy mb-4">忙しい方に寄り添う<br>丁寧な施術</h3>
+                                <p class="font-sans text-sm md:text-base leading-loose text-theme-darkGray">
+                                    限られた時間の中でも美容を楽しめるよう、スピーディーで丁寧な施術を心がけています。<br>
+                                    短時間で済ませたい方も、会話を楽しみながら過ごしたい方も、それぞれのご希望に合わせて対応します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-24 px-6 bg-theme-light overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">MENU</h2>
+                    <span class="section-title-ja">メニュー・料金</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mt-16 items-start">
+                    <!-- Left: Infinite Loop Image Slider -->
+                    <div
+                        class="w-full lg:w-1/2 relative overflow-hidden h-[400px] md:h-[500px] lg:h-[600px] rounded-sm fade-in-up">
+                        <div class="flex h-full w-[600%] animate-[menuSlider_20s_linear_infinite]">
+                            <!-- Original images -->
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic01.jpg" alt="NAIL MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic02.jpg" alt="EYELASH MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic03.jpg" alt="TRAINING MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                            <!-- Duplicated images for infinite loop -->
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic01.jpg" alt="NAIL MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic02.jpg" alt="EYELASH MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                            <div class="w-1/6 h-full p-2">
+                                <img src="img/menupic03.jpg" alt="TRAINING MENU"
+                                    class="w-full h-full object-cover rounded-sm shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Menu Content -->
+                    <div class="w-full lg:w-1/2 space-y-16 lg:py-8 fade-in-up" style="transition-delay: 0.2s;">
+                        <!-- NAIL MENU -->
+                        <div>
+                            <h3 class="font-en text-2xl text-theme-navy border-b border-theme-gray/30 pb-2 mb-6">NAIL
+                            </h3>
+                            <div class="flex flex-col sm:flex-row justify-between items-baseline mb-2">
+                                <span class="font-serif text-lg text-theme-darkGray">おすすめデザインネイル</span>
+                                <div class="hidden sm:block menu-leader"></div>
+                                <span class="font-serif text-lg text-theme-navy font-semibold">6,000円</span>
+                            </div>
+                            <p class="font-sans text-sm text-theme-gray tracking-wide">
+                                4本までお好きなデザインをお選びいただけます。<br>
+                                その他の爪は、ワンカラーまたはグラデーションで仕上げます。
+                            </p>
+                        </div>
+
+                        <!-- EYELASH MENU -->
+                        <div>
+                            <h3 class="font-en text-2xl text-theme-navy border-b border-theme-gray/30 pb-2 mb-6">EYELASH
+                            </h3>
+
+                            <div class="mb-6">
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline mb-2">
+                                    <span class="font-serif text-lg text-theme-darkGray">まつ毛エクステ つけ放題</span>
+                                    <div class="hidden sm:block menu-leader"></div>
+                                    <span class="font-serif text-lg text-theme-navy font-semibold">5,500円</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline mb-2">
+                                    <span class="font-serif text-lg text-theme-darkGray">ラッシュリフト</span>
+                                    <div class="hidden sm:block menu-leader"></div>
+                                    <span class="font-serif text-lg text-theme-navy font-semibold">4,000円</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TRAINING MENU -->
+                        <div>
+                            <h3 class="font-en text-2xl text-theme-navy border-b border-theme-gray/30 pb-2 mb-6">
+                                TRAINING
+                            </h3>
+
+                            <div class="mb-6">
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline mb-2">
+                                    <span class="font-serif text-lg text-theme-darkGray">筋力トレーニング 1回</span>
+                                    <div class="hidden sm:block menu-leader"></div>
+                                    <span class="font-serif text-lg text-theme-navy font-semibold">4,000円</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-col sm:flex-row justify-between items-baseline mb-2">
+                                    <span class="font-serif text-lg text-theme-darkGray">トレーニングチケット 3回分</span>
+                                    <div class="hidden sm:block menu-leader"></div>
+                                    <span class="font-serif text-lg text-theme-navy font-semibold">9,000円</span>
+                                </div>
+                                <p class="font-sans text-sm text-theme-gray tracking-wide">
+                                    1回あたり3,000円でご利用いただける、お得なチケットです。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24 px-6 bg-[#F5F5F5]">
+            <div class="max-w-5xl mx-auto">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">GALLERY</h2>
+                    <span class="section-title-ja">ギャラリー</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <!-- 3-Column Grid Layout (PC), 2-Column (SP) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4 mt-12 mb-16 fade-in-up">
+                    <img src="img/gallerypic01.jpg" alt="Gallery 1"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                    <img src="img/gallerypic02.jpg" alt="Gallery 2"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                    <img src="img/gallerypic03.jpg" alt="Gallery 3"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                    <img src="img/gallerypic04.jpg" alt="Gallery 4"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                    <img src="img/gallerypic05.jpg" alt="Gallery 5"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                    <img src="img/gallerypic06.jpg" alt="Gallery 6"
+                        class="w-full aspect-square object-cover rounded-sm shadow-sm hover:opacity-90 transition">
+                </div>
+
+                <!-- Instagram Button -->
+                <div class="text-center fade-in-up">
+                    <a href="https://myke.happytry.fun/jump02.html" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-3 bg-[#B89B72] text-white px-10 py-4 hover:bg-theme-navy transition duration-300 rounded-sm shadow-md font-sans tracking-widest text-sm">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        Instagramをもっと見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="py-24 px-6 text-theme-navy relative overflow-hidden bg-transparent">
+            <div class="absolute inset-0 bg-theme-beige/60 z-0"></div>
+
+
+            <div class="max-w-4xl mx-auto text-center relative z-10 fade-in-up">
+                <span class="font-en text-sm tracking-[0.2em] text-[#B89B72] block mb-4">MESSAGE</span>
+                <h3 class="font-serif text-2xl md:text-3xl mb-8 leading-relaxed">笑顔100％で<br class="md:hidden">帰れる場所を目指して
+                </h3>
+
+                <img src="./img/messagesvg.svg" alt="decoration" class="w-28 mx-auto mb-10 opacity-90">
+
+                <div
+                    class="font-sans text-sm md:text-base leading-loose tracking-wide space-y-6 text-theme-darkGray text-left md:text-center">
+                    <p class="font-serif text-lg text-theme-navy">
+                        「ずっと笑っていたい」<br>
+                        「笑い声があふれる空間にしたい」
+                    </p>
+                    <p>
+                        そんな想いを大切に、お客様やご家族、ご友人、外部講師の方々と一緒に、<br class="hidden md:block">このサロンをつくりあげてきました。
+                    </p>
+                    <p>
+                        女性はもちろん、男性やお子様にも気軽に立ち寄っていただき、<br class="hidden md:block">美容や健康について楽しみながら向き合える場所でありたいと考えています。
+                    </p>
+                    <p>
+                        施術やトレーニングを終えたあと、心も体も軽くなり、笑顔でお帰りいただけるように。<br>
+                        一人ひとりに寄り添いながら、優しく温かなサロンづくりを続けてまいります。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="py-24 px-6 bg-theme-beige">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-title fade-in-up">
+                    <h2 class="section-title-en">ACCESS</h2>
+                    <span class="section-title-ja">店舗情報・アクセス</span>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div
+                    class="flex flex-col lg:flex-row gap-12 mt-12 bg-white p-6 md:p-10 shadow-sm border border-theme-gray/10 rounded-sm fade-in-up">
+
+                    <!-- Info -->
+                    <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                        <div class="mb-8 flex justify-center lg:justify-start">
+                            <img src="./img/logo.png" alt="MYKE" class="h-[7rem] lg:h-16 w-auto">
+                        </div>
+
+                        <dl class="font-sans text-sm md:text-base space-y-6 text-theme-darkGray tracking-wide">
+                            <div class="flex flex-col sm:flex-row sm:gap-4 border-b border-theme-gray/20 pb-4">
+                                <dt class="font-semibold text-theme-navy w-24 shrink-0 mb-1 sm:mb-0">住所</dt>
+                                <dd>〒590-0928<br>大阪府堺市堺区北旅籠町西３丁３−１７</dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:gap-4 border-b border-theme-gray/20 pb-4">
+                                <dt class="font-semibold text-theme-navy w-24 shrink-0 mb-1 sm:mb-0">電話番号</dt>
+                                <dd><a href="tel:050-5448-4891"
+                                        class="text-inherit hover:opacity-70 transition">050-5448-4891</a></dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:gap-4 border-b border-theme-gray/20 pb-4">
+                                <dt class="font-semibold text-theme-navy w-24 shrink-0 mb-1 sm:mb-0">営業時間</dt>
+                                <dd>9:30～16:00</dd>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:gap-4">
+                                <dt class="font-semibold text-theme-navy w-24 shrink-0 mb-1 sm:mb-0">定休日</dt>
+                                <dd>日曜日</dd>
+                            </div>
+                        </dl>
+
+                        <div class="mt-10 flex flex-col gap-4">
+                            <!-- Instagram -->
+                            <a href="https://myke.happytry.fun/jump02.html" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 border border-theme-navy text-theme-navy px-6 py-3 hover:bg-theme-navy hover:text-theme-beige transition duration-300 rounded-sm">
+                                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                                <span class="font-sans text-sm font-medium tracking-widest">Instagramを見る</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map embed -->
+                    <div class="w-full lg:w-7/12 min-h-[350px] bg-theme-gray/10">
+                        <!-- Google Maps 埋め込み (住所ベース) -->
+                        <iframe
+                            src="https://maps.google.co.jp/maps?q=大阪府堺市堺区北旅籠町西３丁３−１７+MYKE&output=embed&t=m&z=16&hl=ja"
+                            width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-theme-navy text-theme-gray py-8 text-center border-t border-theme-gray/20">
+        <p class="font-en text-sm tracking-widest">&copy; 2026 MYKE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fixed Bottom CTA (SP Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-theme-navy">
+        <a href="https://myke.happytry.fun/jump01.html" target="_blank" rel="noopener noreferrer"
+            class="flex justify-center items-center gap-2 text-theme-beige py-4 font-sans text-sm font-medium tracking-widest">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path
+                    d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zM7.426 12.593H4.409c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.359h2.673c.19 0 .344.154.344.344s-.154.344-.344.344zm3.013 0H9.752c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704c0 .19-.154.344-.344.344zm6.064-.344c0 .19-.154.344-.344.344h-3.016c-.19 0-.344-.154-.344-.344V7.545c0-.19.154-.344.344-.344s.344.154.344.344v4.704zm1.517.344h-1.637c-.19 0-.344-.154-.344-.344v-4.704c0-.19.154-.344.344-.344h1.637c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344h-1.293v1.545h1.293c.19 0 .344.154.344.344s-.154.344-.344.344z" />
+            </svg>
+            LINEで予約・お問い合わせ
+        </a>
+    </div>
+    <!-- Padding for SP fixed footer -->
+    <div class="md:hidden h-[52px]"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop"
+        class="fixed bottom-20 md:bottom-8 right-4 md:right-8 bg-theme-navy text-theme-beige p-3 md:p-4 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-theme-navy/80 hover:-translate-y-1 flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="./Js/main.js"></script>
+</body>
+
+</html>

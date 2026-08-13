@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[店舗名] | 上質なひとときをあなたに</title>
+    <meta name="description" content="[店舗名]の公式Webサイトです。上質な空間とサービスで、心安らぐひとときをご提供します。Web予約、お問い合わせはこちらから。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body oncontextmenu="return false;">
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="#">[LOGO]</a>
+            </h1>
+            <nav class="header__nav pc-only">
+                <ul class="header__list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#recruit">Recruit</a></li>
+                    <li><a href="#access">Access</a></li>
+                </ul>
+            </nav>
+            <div class="header__cta pc-only">
+                <a href="#contact" class="btn btn--reserve">Web予約</a>
+            </div>
+            <div class="header__hamburger sp-only" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- SP Navigation -->
+        <nav class="header__sp-nav" id="js-sp-nav">
+            <ul class="header__sp-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#recruit">Recruit</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#contact" class="btn btn--sp-reserve">Web予約・お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. FV (First View) -->
+        <section id="fv" class="fv">
+            <div class="swiper fv-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/pcfv01.jpg">
+                            <img src="img/spfv01.jpg" alt="First View 1">
+                        </picture>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/pcfv02.jpg">
+                            <img src="img/spfv02.jpg" alt="First View 2">
+                        </picture>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="img/pcfv03.jpg">
+                            <img src="img/spfv03.jpg" alt="First View 3">
+                        </picture>
+                    </div>
+                </div>
+                <!-- Scroll Down Indicator -->
+                <div class="scrolldown">
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 2. CTA -->
+        <section class="section cta">
+            <div class="container">
+                <div class="cta__box soft-shadow">
+                    <img src="img/logo.jpg" alt="[店舗名]" class="cta__logo">
+                    <p class="cta__text">お気軽にお問い合わせください</p>
+                    <div class="cta__buttons">
+                        <a href="tel:0000000000" class="btn btn--tel"><i class="icon-phone"></i> 03-0000-0000</a>
+                        <a href="#contact" class="btn btn--primary">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TV (Third View) - Introduction -->
+        <section id="introduction" class="section section-alt introduction">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_03.jpg" alt="Introduction Heading" class="section__heading-img">
+                    <p class="section__title">Features</p>
+                </div>
+                <div class="grid grid--2col grid--asym-rev introduction__content">
+                    <div class="grid__text">
+                        <ul class="feature-list">
+                            <li>こだわりのオーガニック商材を使用</li>
+                            <li>完全個室のプライベート空間</li>
+                            <li>熟練スタッフによる丁寧なカウンセリング</li>
+                            <li>駅から徒歩3分の好立地</li>
+                            <li>21時まで営業、お仕事帰りにも</li>
+                        </ul>
+                    </div>
+                    <div class="grid__img soft-shadow">
+                        <img src="img/tv_image.jpg" alt="Features Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. About (Broken Grid) -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_04.jpg" alt="About Heading" class="section__heading-img">
+                    <p class="section__title">About Us</p>
+                </div>
+                <div class="broken-grid">
+                    <div class="broken-grid__img soft-shadow">
+                        <img src="img/about_image.jpg" alt="About Image">
+                    </div>
+                    <div class="broken-grid__text soft-shadow">
+                        <h3 class="broken-grid__title">美しさと癒しの<br>新しい体験を。</h3>
+                        <p class="broken-grid__desc">
+                            都会の喧騒を忘れさせる、静寂に包まれた空間。<br>
+                            私たちは単なる施術だけでなく、お客様一人ひとりのライフスタイルに寄り添った「美」をご提案します。<br>
+                            心身ともにリラックスできる、至福のひとときをお過ごしください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 5. Service -->
+        <section id="service" class="section section-alt service">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_06.jpg" alt="Service Heading" class="section__heading-img">
+                    <p class="section__title">Service</p>
+                </div>
+                <div class="service__grid">
+                    <div class="service__item soft-shadow">
+                        <div class="service__img"><img src="img/service_01.jpg" alt="Service 1"></div>
+                        <h3 class="service__title">Cut & Color</h3>
+                        <p class="service__desc">骨格や髪質に合わせた似合わせカットと、ダメージレスなカラーリング。</p>
+                    </div>
+                    <div class="service__item soft-shadow">
+                        <div class="service__img"><img src="img/service_02.jpg" alt="Service 2"></div>
+                        <h3 class="service__title">Head Spa</h3>
+                        <p class="service__desc">アロマの香りに包まれながら、頭皮環境を整える極上のスパタイム。</p>
+                    </div>
+                    <div class="service__item soft-shadow">
+                        <div class="service__img"><img src="img/service_03.jpg" alt="Service 3"></div>
+                        <h3 class="service__title">Treatment</h3>
+                        <p class="service__desc">髪の芯から補修し、生まれたてのような輝きと手触りを取り戻します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CTA -->
+        <section class="section cta">
+            <div class="container">
+                <div class="cta__box soft-shadow">
+                    <img src="img/logo.jpg" alt="[店舗名]" class="cta__logo">
+                    <p class="cta__text">まずはお気軽にご相談ください</p>
+                    <div class="cta__buttons">
+                        <a href="tel:0000000000" class="btn btn--tel"><i class="icon-phone"></i> 03-0000-0000</a>
+                        <a href="#contact" class="btn btn--primary">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Menu/Recommend (Fixed BG) -->
+        <section id="recommend" class="section recommend">
+            <div class="recommend__bg" style="background-image: url('img/recommend_bg.jpg');"></div>
+            <div class="container">
+                <div class="section__heading-wrapper white-text">
+                    <img src="img/heading_07.jpg" alt="Recommend Heading" class="section__heading-img">
+                    <p class="section__title">Recommend</p>
+                </div>
+                <div class="recommend__content soft-shadow">
+                    <h3>Seasonal Special</h3>
+                    <p>季節限定の特別コースをご用意しました。<br>旬のトレンドを取り入れたスタイルで、新しい自分を発見しませんか。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Menu/Price -->
+        <section id="menu" class="section menu">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_08.jpg" alt="Menu Heading" class="section__heading-img">
+                    <p class="section__title">Menu & Price</p>
+                </div>
+                <div class="menu__list">
+                    <!-- Menu Item 1 -->
+                    <div class="menu__item soft-shadow">
+                        <div class="menu__thumb"><img src="img/price_01.jpg" alt="Menu 1"></div>
+                        <div class="menu__info">
+                            <div class="menu__head">
+                                <span class="menu__name">スタンダードカットコース</span>
+                                <span class="menu__price">¥6,600</span>
+                            </div>
+                            <p class="menu__desc">シャンプー・ブロー込。お客様の骨格に合わせた似合わせカット。</p>
+                        </div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="menu__item soft-shadow">
+                        <div class="menu__thumb"><img src="img/price_02.jpg" alt="Menu 2"></div>
+                        <div class="menu__info">
+                            <div class="menu__head">
+                                <span class="menu__name">イルミナカラー</span>
+                                <span class="menu__price">¥8,800</span>
+                            </div>
+                            <p class="menu__desc">透明感とツヤを出すプレミアムカラー。ロング料金なし。</p>
+                        </div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="menu__item soft-shadow">
+                        <div class="menu__thumb"><img src="img/price_03.jpg" alt="Menu 3"></div>
+                        <div class="menu__info">
+                            <div class="menu__head">
+                                <span class="menu__name">髪質改善トリートメント</span>
+                                <span class="menu__price">¥11,000</span>
+                            </div>
+                            <p class="menu__desc">話題の酸熱トリートメントで、うねりを抑えまとまりのある髪へ。</p>
+                        </div>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="menu__item soft-shadow">
+                        <div class="menu__thumb"><img src="img/price_04.jpg" alt="Menu 4"></div>
+                        <div class="menu__info">
+                            <div class="menu__head">
+                                <span class="menu__name">ヘッドスパ (30min)</span>
+                                <span class="menu__price">¥4,400</span>
+                            </div>
+                            <p class="menu__desc">アロマオイルを使用した極上のハンドマッサージ。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Voice -->
+        <section id="voice" class="section section-alt voice">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_09.jpg" alt="Voice Heading" class="section__heading-img">
+                    <p class="section__title">User Voice</p>
+                </div>
+                <div class="voice__grid">
+                    <div class="voice__item soft-shadow">
+                        <div class="voice__icon">User</div>
+                        <div class="voice__text">
+                            <p class="voice__comment">「初めてですが、とても丁寧にカウンセリングしていただきました。仕上がりも大満足です！」</p>
+                            <p class="voice__attr">（20代女性 / 会社員）</p>
+                        </div>
+                    </div>
+                    <div class="voice__item soft-shadow">
+                        <div class="voice__icon">User</div>
+                        <div class="voice__text">
+                            <p class="voice__comment">「お店の雰囲気がおしゃれでで落ち着きます。スタッフの方も気さくで話しやすかったです。」</p>
+                            <p class="voice__attr">（30代女性 / 主婦）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Gallery -->
+        <section id="gallery" class="section gallery">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_05.jpg" alt="Gallery Heading" class="section__heading-img">
+                    <p class="section__title">Gallery</p>
+                </div>
+                <!-- Grid Layout (Swiper Removed) -->
+                <div class="gallery__grid">
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_01.jpg" alt="Gallery 1" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_02.jpg" alt="Gallery 2" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_03.jpg" alt="Gallery 3" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_04.jpg" alt="Gallery 4" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_05.jpg" alt="Gallery 5" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery__item soft-shadow">
+                        <img src="img/gallery_06.jpg" alt="Gallery 6" onclick="openModal(this)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Message -->
+        <section id="message" class="section section-alt message">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_10.jpg" alt="Message Heading" class="section__heading-img">
+                    <p class="section__title">Message</p>
+                </div>
+                <div class="grid grid--2col grid--asym">
+                    <div class="grid__img soft-shadow">
+                        <img src="img/message_image.jpg" alt="Representative">
+                    </div>
+                    <div class="grid__text">
+                        <h3>「あなたらしさ」を引き出す<br>お手伝いをさせてください。</h3>
+                        <p>
+                            美容室は髪を切るだけの場所ではありません。<br>
+                            新しい自分に出会う場所、心をリセットする場所。<br>
+                            私たちは技術だけでなく、空間づくりやサービスにもこだわり、<br>
+                            お客様にとって特別なサードプレイスでありたいと願っています。
+                        </p>
+                        <p class="message__sign">代表: 山田 花子</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Staff -->
+        <section id="staff" class="section staff">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_11.jpg" alt="Staff Heading" class="section__heading-img">
+                    <p class="section__title">Staff</p>
+                </div>
+                <div class="staff__list">
+                    <div class="staff__item">
+                        <div class="staff__icon">Staff</div>
+                        <h4>Hanako Yamada</h4>
+                        <p>Top Stylist</p>
+                    </div>
+                    <div class="staff__item">
+                        <div class="staff__icon">Staff</div>
+                        <h4>Taro Suzuki</h4>
+                        <p>Stylist</p>
+                    </div>
+                    <div class="staff__item">
+                        <div class="staff__icon">Staff</div>
+                        <h4>Mika Sato</h4>
+                        <p>Assistant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Recruit -->
+        <section id="recruit" class="section section-alt recruit">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_12.jpg" alt="Recruit Heading" class="section__heading-img">
+                    <p class="section__title">Recruit</p>
+                </div>
+                <div class="table-responsive soft-shadow">
+                    <table class="recruit__table">
+                        <tr>
+                            <th>募集職種</th>
+                            <td>スタイリスト / アシスタント</td>
+                        </tr>
+                        <tr>
+                            <th>雇用形態</th>
+                            <td>正社員 / パート・アルバイト</td>
+                        </tr>
+                        <tr>
+                            <th>給与</th>
+                            <td>【正】月給25万円〜 【パ】時給1,200円〜</td>
+                        </tr>
+                        <tr>
+                            <th>勤務地</th>
+                            <td>東京都渋谷区〇〇-〇〇</td>
+                        </tr>
+                        <tr>
+                            <th>勤務時間</th>
+                            <td>10:00 〜 20:00（実働8時間・シフト制）</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. Comment -->
+        <section class="section comment">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_13.jpg" alt="Comment Heading" class="section__heading-img">
+                    <p class="section__title">Message for You</p>
+                </div>
+                <div class="comment__box soft-shadow">
+                    <div class="comment__icon">HR</div>
+                    <p>
+                        未経験でも「美容が好き」という気持ちがあれば大歓迎です。<br>
+                        充実した研修制度で、あなたの成長を全力でサポートします。<br>
+                        一緒に素敵なお店を作っていきましょう！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. Q&A -->
+        <section id="qa" class="section section-alt qa">
+            <div class="container container--narrow">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_14.jpg" alt="Q&A Heading" class="section__heading-img">
+                    <p class="section__title">Q&A</p>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__item soft-shadow">
+                        <div class="accordion__head">Q. 予約は必要ですか？</div>
+                        <div class="accordion__body">A. はい、当店は完全予約制となっております。Webまたはお電話にてご予約をお願いいたします。</div>
+                    </div>
+                    <div class="accordion__item soft-shadow">
+                        <div class="accordion__head">Q. クレジットカードは使えますか？</div>
+                        <div class="accordion__body">A. はい、VISA, MasterCard, JCB, AMEXなど主要なカードがご利用いただけます。</div>
+                    </div>
+                    <div class="accordion__item soft-shadow">
+                        <div class="accordion__head">Q. 子供連れでも大丈夫ですか？</div>
+                        <div class="accordion__body">A. もちろんです。個室もございますので、ご予約時にお申し付けください。</div>
+                    </div>
+                    <div class="accordion__item soft-shadow">
+                        <div class="accordion__head">Q. 駐車場はありますか？</div>
+                        <div class="accordion__body">A. 申し訳ございませんが、専用駐車場はございません。近隣のコインパーキングをご利用ください。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. Contact/Access -->
+        <section id="access" class="section access">
+            <div class="container">
+                <div class="section__heading-wrapper">
+                    <img src="img/heading_15.jpg" alt="Access Heading" class="section__heading-img">
+                    <p class="section__title">Access</p>
+                </div>
+                <div class="access__content">
+                    <div class="access__info soft-shadow">
+                        <dl>
+                            <dt>Address</dt>
+                            <dd>〒150-0000<br>東京都渋谷区〇〇 1-2-3</dd>
+                            <dt>Tel</dt>
+                            <dd>03-0000-0000</dd>
+                            <dt>Open</dt>
+                            <dd>10:00 - 20:00</dd>
+                            <dt>Close</dt>
+                            <dd>毎週火曜日 / 第3水曜日</dd>
+                        </dl>
+                        <div class="access__sns">
+                            <a href="#" class="sns-btn sns-btn--insta"><i class="icon-instagram"></i> Instagram</a>
+                            <a href="#" class="sns-btn sns-btn--x"><i class="icon-x"></i> X</a>
+                        </div>
+                    </div>
+                    <div class="access__map soft-shadow">
+                        <!-- Google Map Embed Placeholder -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7016358!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5aW16LC36aeF!5e0!3m2!1sja!2sjp!4v1650000000000!5m2!1sja!2sjp"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2026 [店舗名] All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Items -->
+    <div id="page-top" class="page-top">
+        <a href="#">TOP</a>
+    </div>
+
+    <div class="sp-fixed-cta sp-only">
+        <a href="tel:0000000000" class="sp-fixed-cta__tel">電話予約</a>
+        <a href="#contact" class="sp-fixed-cta__web">Web予約</a>
+    </div>
+
+    <!-- Modal for Gallery -->
+    <div id="modal" class="modal">
+        <span class="modal__close" onclick="closeModal()">&times;</span>
+        <img class="modal__content" id="modal-img">
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

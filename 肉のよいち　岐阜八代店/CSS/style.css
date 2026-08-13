@@ -1,0 +1,1790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 鬯ｮ・｢繝ｻ・ｭ髫ｴ・ｴ繝ｻ・ｧ髯ｷ謳ｾ・ｽ・ｹ髮趣ｽｼ繝ｻ・ｶ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢繝ｻ・ｧ鬮ｮ蛹ｺ・ｩ・ｸ繝ｻ・ｽ繝ｻ・｢郢晢ｽｻ繝ｻ・ｨ髮趣ｽｼ繝ｻ・ｶ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢隴主・蜃ｽ郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｫ鬯ｮ・ｫ繝ｻ・ｱ郢晢ｽｻ繝ｻ・ｿ鬮ｫ・ｰ繝ｻ・ｨ郢晢ｽｻ繝ｻ・ｴ鬩搾ｽｵ繝ｻ・ｺ髯ｷ莨夲ｽｽ・ｱ驕ｯ・ｶ繝ｻ・ｻ鬯ｨ・ｾ陷茨ｽｷ繝ｻ・ｽ繝ｻ・ｽ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｨ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬯ｩ蟷｢・ｽ・｢髣包ｽｵ隴擾ｽｶ・つ繝ｻ・ｲ鬩幢ｽ｢繝ｻ・ｧ鬩怜遜・ｽ・ｫ郢晢ｽｻ陞ｳ螟ｲ・ｽ・ｭ雋企ｦｴ・ｱ蛛ｵ繝ｻ髢ｾ・･繝ｻ・ｸ繝ｻ・ｺ髣包ｽｵ隴趣ｽ｢繝ｻ・ｿ繝ｻ・･鬩搾ｽｵ繝ｻ・ｺ髯ｷ・ｷ繝ｻ・ｶ郢晢ｽｻ郢晢ｽｻ*/
+    --black: #121212;
+    --dark-gray: #1a1a1a;
+    --light-gray: #222222;
+    --bg-light: #fdfcf8; /* 鬮ｯ・ｷ繝ｻ・･鬩募・繝ｻ繝ｻ・ｽ繝ｻ・｢郢晢ｽｻ繝ｻ・ｨ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬯ｨ・ｾ陟・屮・ｽ・ｻ鬮ｮ・｣繝ｻ・ｿ繝ｻ・ｽ鬩幢ｽ｢繝ｻ・ｧ鬯ｯ莨慊・｡隶難ｽｪ */
+    
+    --red: #C41E3A;
+    --gold: #D4AF37;
+    --gold-dark: #b8962e;
+    --text: #f5f5f5;
+    --text-muted: #aaaaaa;
+    --text-dark: #1a1a1a;
+    --text-muted-dark: #555555;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    background-color: var(--black);
+    color: var(--text);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .logo, .section-subtitle, .feature-number, .signature, .highlight-item {
+    font-family: 'Noto Serif JP', 'Yu Mincho', 'Times New Roman', serif;
+}
+
+/* 鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ驛｢譎｢・ｽ・ｪ郢晢ｽｻ繝ｻ・ｽ髯具ｽｹ繝ｻ・ｻ驍ｵ・ｺ隲ｷ蛹・ｽｽ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ繝ｻ雜｣・ｽ・ｦ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ鬮ｫ・ｴ陝・｢・つ鬮ｯ讓奇ｽｻ繧托ｽｽ・ｽ繝ｻ・ｧ鬮ｯ譎｢・ｽ・ｷ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ陞ｳ螢ｼ・ｴ霈斐・繝ｻ・ｶ鬯ｯ・ｮ繝ｻ・ｯ鬮｣莨・ｽｯ莨夲ｽｽ・ｼ繝ｻ・ｰ鬮｣蛹・ｽｽ・ｳ郢晢ｽｻ繝ｻ・ｭ鬮ｯ讓奇ｽｻ繧托ｽｽ・ｽ繝ｻ・ｮ鬮ｯ譏ｴ繝ｻ繝ｻ・ｿ繝ｻ・ｽ髫ｨ・ｳ陷茨ｽｷ繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢隴弱・・ｺ・｢繝ｻ雜｣・ｽ・ｦ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴惹ｹ嶺ｺ憺ｬｮ・ｫ繝ｻ・ｼ鬯ｮ・ｯ繝ｻ・ｦ髫ｰ逍ｲ・ｺ・ｷ繝ｻ・ｮ陝ｷ繝ｻ・｣・ｰ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・｡ */
+.pc-br-only { display: block; }
+.sp-br-only { display: none; }
+@media (max-width: 768px) {
+    .pc-br-only { display: none; }
+    .sp-br-only { display: block; }
+}
+
+/* ==================== 鬩幢ｽ｢隴取ｸ俄ぎ繝ｻ・･驛｢譎｢・ｽ・｣鬩幢ｽ｢隰ｨ魑ｴ竄ｬ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｻ鬩幢ｽ｢隴惹ｼ夲ｽｽ・ｿ繝ｻ・ｫ驛｢譎｢・ｽ・ｳ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header.scrolled {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* PC鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｨ鬩幢ｽ｢隴惹ｼ夲ｽｽ・ｿ繝ｻ・ｫ驛｢譎｢・ｽ・ｳ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ */
+.pc-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.pc-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.pc-nav a:hover {
+    color: var(--gold);
+}
+
+.nav-reserve-btn {
+    background-color: var(--gold);
+    color: #fff !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-reserve-btn:hover {
+    background-color: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+/* 鬩幢ｽ｢隴乗・・ｽ・ｸ髣疲ｩｸ・ｽ・ｦ鬩幢ｽ｢隴寂・繝ｻ郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｬ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・｡鬩幢ｽ｢隴乗・・ｽ・ｹ隴∵ｺｽ・､・ｼ繝ｻ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・｢鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ */
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text-dark);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { top: 22px; }
+
+.hamburger.active span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 11px;
+    transform: rotate(-45deg);
+}
+
+/* ==================== 鬮ｯ・ｷ髣鯉ｽｨ繝ｻ・ｽ繝ｻ・ｱ鬯ｯ・ｨ繝ｻ・ｾ髯橸ｽ｢繝ｻ・ｹ郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｿ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.btn-primary {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    background-color: transparent;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid var(--gold);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    letter-spacing: 0.15em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gold);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.btn-primary:hover {
+    color: #fff;
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+/* SP鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｨ鬩幢ｽ｢隴惹ｼ夲ｽｽ・ｿ繝ｻ・ｫ驛｢譎｢・ｽ・ｳ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・｡鬩幢ｽ｢隴乗・・ｽ・ｹ隴∵ｺｽ・､・ｼ繝ｻ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ */
+.sp-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 1500;
+    transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.sp-nav.active {
+    right: 0;
+}
+
+.sp-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.sp-nav li {
+    margin-bottom: 30px;
+}
+
+.sp-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+}
+
+.sp-nav a:hover {
+    color: var(--gold);
+}
+
+/* ==================== 鬩幢ｽ｢隴惹ｸ翫・郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｭ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽV郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ ==================== */
+.hero {
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+/* 鬮ｯ譎｢・ｽ・ｾ郢晢ｽｻ繝ｻ・ｦ鬮ｯ蜿･・ｹ・｢繝ｻ・ｽ繝ｻ・ｴ鬩幢ｽ｢隴惹ｼ夲ｽｽ・ｿ繝ｻ・ｫ驛｢譎｢・ｽ・ｳ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｲ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ */
+.fv-nav-left {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 100;
+}
+
+.fv-nav-left ul {
+    list-style: none;
+    writing-mode: vertical-rl;
+}
+
+.fv-nav-left li {
+    margin-left: 20px;
+}
+
+.fv-nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    transition: color 0.3s;
+}
+
+.fv-nav-left a:hover {
+    color: var(--gold);
+}
+
+/* SNS鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｨ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｭ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｫ鬩幢ｽ｢隰ｨ魑ｴﾂ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｦ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ */
+.fv-social-scroll {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta-link {
+    margin-bottom: 80px;
+    transform: scale(1.5);
+    transition: transform 0.3s, color 0.3s;
+    color: white;
+    text-decoration: none;
+    display: flex;
+}
+
+.insta-link:hover {
+    color: var(--gold);
+    transform: scale(1.6);
+}
+
+.insta-link svg {
+    stroke: currentColor;
+}
+
+.scroll-down {
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: white;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+    0% { transform: translateX(-50%) translateY(-10px); opacity: 0; }
+    50% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    100% { transform: translateX(-50%) translateY(10px); opacity: 0; }
+}
+
+/* 鬮｣蛹・ｽｽ・ｳ郢晢ｽｻ繝ｻ・ｭ鬮ｯ讓奇ｽｻ繧托ｽｽ・ｽ繝ｻ・ｮ鬯ｩ謳ｾ・ｽ・ｵ郢晢ｽｻ繝ｻ・ｦ鬮ｫ・ｴ陷ｴ繝ｻ・ｽ・ｽ繝ｻ・ｸ鬩搾ｽｵ繝ｻ・ｺ鬯ｮ・ｦ繝ｻ・ｪ驍ｵ・ｺ陷證ｦ・ｽ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・｣鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ驛｢譎｢・ｽ・｡鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｳ鬩幢ｽ｢隴弱・・ｱ蛛ｵ繝ｻ繝ｻ・ｽ */
+.hero-title-vertical {
+    position: absolute;
+    top: 50%;
+    left: clamp(80px, 12vw, 200px);
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #fff;
+    z-index: 100; /* FV鬩幢ｽ｢隴寂・繝ｻ驛｢譎｢・ｽ・｣鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｸ鬩幢ｽ｢繝ｻ・ｧ髯具ｽｹ繝ｻ・ｻ郢晢ｽｻ鬯倅ｿｶ竕ｧ髯憺屮・ｽ・ｼ髫ｰ・ｫ郢晢ｽｻ繝ｻ・ｸ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｫ鬮ｯ・ｷ郢晢ｽｻ繝ｻ・ｽ繝ｻ・ｺ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｽ */
+}
+
+.hero-title-vertical h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+    font-weight: normal;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+    margin: 0;
+    font-family: 'Yuji Syuku', serif; /* 鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｭ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・｣鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ驛｢譎｢・ｽ・｡鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｳ鬩幢ｽ｢隴弱・・ｱ蛛ｵ繝ｻ繝ｻ・ｽ鬩幢ｽ｢繝ｻ・ｧ髯懶ｽ｣繝ｻ・､郢晢ｽｻ繝ｻ・ｭ郢晢ｽｻ繝ｻ・ｽ髫ｴ・ｫ陞滄托ｽｰ蟷・上・・ｱ驛｢譎｢・ｽ・ｵ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩幢ｽ｢隴主・讓滄・鬆托ｽ･・｢隴ｽ遘伉蛹・ｽｽ・ｻ髯晢ｽｲ繝ｻ・ｩ */
+}
+
+/* 鬩幢ｽ｢隴惹ｸ翫・郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｭ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴乗・・ｽ・ｸ驗呻ｽｫ遶包ｽｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ */
+.hero-highlights {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+@media (min-width: 769px) {
+    .hero-highlights {
+        top: 120px;
+        bottom: auto;
+        right: 50px;
+        left: auto;
+        transform: none;
+        width: auto;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+}
+
+.highlight-item {
+    color: white;
+    padding: 0.4rem 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    background: var(--red);
+    opacity: 0;
+    transform: translateY(30px);
+    font-family: 'Noto Sans JP', sans-serif;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 769px) {
+    .highlight-item {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding: 1.2rem 0.4rem;
+        letter-spacing: 0.3em;
+        transform: translateY(-30px);
+    }
+}
+
+.hero-highlights.active .highlight-item {
+    animation: fadeUpItem 0.8s ease forwards;
+}
+
+.highlight-item:nth-child(1) { animation-delay: 0.3s !important; }
+.highlight-item:nth-child(2) { animation-delay: 0.5s !important; }
+.highlight-item:nth-child(3) { animation-delay: 0.7s !important; }
+
+@keyframes fadeUpItem {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== 鬩幢ｽ｢隴惹ｸ翫・郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｭ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴寂・繝ｻ驛｢譎｢・ｽ・｣鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｸ郢晢ｽｻ繝ｻ・ｽ髯具ｽｹ繝ｻ・ｻ髫ｨ蜊債鬮ｯ貊・ｽｯ蟶吶・郢晢ｽｻ繝ｻ・ｽ鬯ｪ・ｰ陷ｿ・･隲｢蟷・建陷代・・ｽ・ｸ陝ｯ・ｩ郢晢ｽｻ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｩ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ ==================== */
+.fv-badge {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    z-index: 50;
+    width: 90vw;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.fv-badge img {
+    width: 100%;
+    height: auto;
+}
+
+.pc-badge {
+    display: block;
+}
+
+.sp-badge {
+    display: none;
+}
+
+/* ==================== 鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬮ｯ諞ｺ螻ｮ繝ｻ・ｽ繝ｻ・ｺ鬮ｫ・ｴ陝ｷ・｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｿ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｫ ==================== */
+section {
+    padding: 8rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+section h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    letter-spacing: 0.15em;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+}
+
+/* 鬯ｮ・ｫ陷肴ｺｷ鄂ｰ郢晢ｽｻ繝ｻ・ｽ鬩搾ｽｵ繝ｻ・ｺ髯ｷ莨夲ｽｽ・ｱ郢晢ｽｻ繝ｻ・ｽ鬮｣蛹・ｽｽ・ｳ鬩怜遜・ｽ・ｫ驕ｶ鬆托ｽ･・｢繝ｻ・･隰ｳ・ｾ繝ｻ・ｽ繝ｻ・､鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｽ繝ｻ荳ｻ・ｸ・ｷ繝ｻ・ｹ繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ */
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 50px;
+    height: 2px;
+    background: var(--red);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+}
+
+.recommended,
+.menu,
+.contact {
+    --bg-base-color: var(--bg-light);
+    --bg-line-color: #f2f0e6;
+    --bg-pattern-size: 5.196rem 3rem; /* 1.732 : 1 ratio */
+    
+    background-color: var(--bg-base-color);
+    background-image:
+        linear-gradient(90deg, var(--bg-line-color) 1.5%, transparent 1.5%, transparent 98.5%, var(--bg-line-color) 98.5%, var(--bg-line-color) 100%),
+        repeating-conic-gradient(at 33.33% 2.6%, transparent 0deg 270deg, var(--bg-line-color) 270deg 360deg),
+        repeating-conic-gradient(at 33.33% 97.4%, transparent 0deg 180deg, var(--bg-line-color) 180deg 270deg, transparent 270deg 360deg),
+        repeating-conic-gradient(at 66.66% 2.6%, var(--bg-line-color) 0deg 90deg, transparent 90deg 360deg),
+        repeating-conic-gradient(at 66.66% 97.4%, transparent 0deg 90deg, var(--bg-line-color) 90deg 180deg, transparent 180deg 360deg),
+        repeating-conic-gradient(at 15.7% 50%, transparent 0deg 210deg, var(--bg-base-color) 210deg 330deg, transparent 330deg 360deg),
+        repeating-conic-gradient(at 19% 50%, transparent 0deg 210deg, var(--bg-line-color) 210deg 330deg, transparent 330deg 360deg),
+        repeating-conic-gradient(at 84.3% 50%, transparent 0deg 30deg, var(--bg-base-color) 30deg 150deg, transparent 150deg 360deg),
+        repeating-conic-gradient(at 81% 50%, transparent 0deg 30deg, var(--bg-line-color) 30deg 150deg, transparent 150deg 360deg),
+        linear-gradient(60deg, transparent 0%, transparent 48.7%, var(--bg-line-color) 48.7%, var(--bg-line-color) 51.3%, transparent 51.3%, transparent 100%),
+        linear-gradient(-60deg, transparent 0%, transparent 48.7%, var(--bg-line-color) 48.7%, var(--bg-line-color) 51.3%, transparent 51.3%, transparent 100%),
+        linear-gradient(30deg, transparent 0%, transparent 48.5%, var(--bg-line-color) 48.5%, var(--bg-line-color) 51.5%, transparent 51.5%, transparent 100%),
+        linear-gradient(-30deg, transparent 0%, transparent 48.5%, var(--bg-line-color) 48.5%, var(--bg-line-color) 51.5%, transparent 51.5%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, transparent 47.4%, var(--bg-line-color) 47.4%, var(--bg-line-color) 52.6%, transparent 52.6%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, transparent 48.5%, var(--bg-line-color) 48.5%, var(--bg-line-color) 51.5%, transparent 51.5%, transparent 100%);
+    
+    background-repeat: repeat;
+    background-size: var(--bg-pattern-size);
+}
+
+.recommended h2, .menu h2, .contact h2 {
+    color: var(--text-dark);
+}
+
+.recommended .section-subtitle, .menu .section-subtitle, .contact .section-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.recommended-list {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* PC鬮ｫ・ｴ陟托ｽｱ繝ｻ繝ｻ繝ｻ繝ｻ・ｽ2鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｫ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ */
+    gap: 0.5rem 4rem; /* 鬮ｫ・ｶ鬮ｮ・｣繝ｻ・ｽ繝ｻ・ｪ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬯ｯ・ｮ繝ｻ・ｫ髯ｷ・･隲・ｹ繝ｻ・ｿ繝ｻ・｣鬩幢ｽ｢繝ｻ・ｧ鬮ｮ蛹ｺ・ｩ・ｸ繝ｻ・ｽ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ遶擾ｽｫ繝ｻ・ｸ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｫ */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommended-list li {
+    list-style: none;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(196, 30, 58, 0.2);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* PC邵ｺ・ｧ邵ｺ・ｯ1髯ｦ蠕後帝勗・ｨ驕会ｽｺ */
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.recommended-list li:nth-child(odd):last-child {
+    grid-column: span 2; /* 鬮ｯ讒ｭ・代・・ｿ繝ｻ・ｽ髴取ｺｷ・､繧托ｽｽ・ｸ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬮ｯ諛ｶ・ｽ・｣郢晢ｽｻ繝ｻ・ｴ鬮ｯ・ｷ繝ｻ・ｷ髯具ｽｹ繝ｻ・ｻ繝ｻ繧・℃驕ｶ謫ｾ・ｽ・ｵ髫ｲ・､陷ｻ・ｵ繝ｻ・ｰ陷肴ｻゑｽｽ・ｾ鬲・ｼ夲ｽｽ・ｽ陞ｳ螟ｲ・｣・ｰ髮懶ｽ｣繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・｡鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｽ */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.recommended-list li::before {
+    content: '\25C6';
+    color: var(--gold);
+    font-size: 0.7rem;
+    margin-right: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* ==================== ABOUT鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ郢晢ｽｻ繝ｻ・ｽ髣費｣ｰ繝ｻ・･髯晏唱鬆・・・ｭ郢晢ｽｻ繝ｻ・ｽ繝ｻ・ｰ郢晢ｽｻ繝ｻ・ｽ髯樊ｺ假ｽ代・・ｽ繝ｻ・ｸ郢晢ｽｻ繝ｻ・ｦ鬮ｫ・ｴ陷ｴ繝ｻ・ｽ・ｽ繝ｻ・ｸ鬩搾ｽｵ繝ｻ・ｺ鬯ｮ・ｦ繝ｻ・ｪ郢晢ｽｻ繝ｻ・ｽ3鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｫ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・｢鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｦ鬩幢ｽ｢隴寂握縺狗ｹ晢ｽｻ繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｽ ==================== */
+.about-concept {
+    background-color: var(--black);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 8rem 0;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.about-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* 鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｻ鬮ｯ・ｷ陷代・・ｽ・ｸ陞ゅ・・ｽ・ｽ陞ｳ螟ｲ・ｽ・ｭ霑壼雀・ｹ・ｲ郢晢ｽｻ繝ｻ・･鬩搾ｽｵ繝ｻ・ｺ髯ｷ莨夲ｽｽ・ｱ驕ｯ・ｶ繝ｻ・ｻ鬮ｫ・ｴ郢晢ｽｻ繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｭ髯ｷ莨夲ｽｽ・ｱ郢晢ｽｻ陝ｶ譎乗套郢晢ｽｻ繝ｻ・ｭ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｿ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｽ髫ｨ蛟･繝ｻ繝ｻ・ｸ繝ｻ・ｺ髣包ｽｳ陝ｯ・ｩ郢晢ｽｻ鬩幢ｽ｢繝ｻ・ｧ髣包ｽｵ隴擾ｽｴ遯ｶ・ｲ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴寂・繝ｻ郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､ */
+.about-concept::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to left, rgba(18,18,18,0.3) 0%, rgba(18,18,18,0.6) 50%, rgba(18,18,18,0.9) 100%);
+    z-index: 1;
+}
+
+.about-concept .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 3鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｫ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・｢鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｦ鬩幢ｽ｢隴寂握縺狗ｹ晢ｽｻ繝ｻ・ｼ髯橸ｽ｢繝ｻ・ｼ髫ｰ繝ｻ・ｽ・ｿ鬩搾ｽｵ繝ｻ・ｺ髣包ｽｵ隴趣ｽ｢繝ｻ・ｽ髣・ｽｽ雎ｺ・ｦ郢晢ｽｻ繝ｻ・ｦ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｸ鬮｣蛹・ｽｽ・ｳ郢晢ｽｻ繝ｻ・ｦ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｽ */
+.about-text-area {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8rem;
+}
+
+/* 鬮｣蛹・ｽｽ・ｳ髣費ｽｨ遶上・・､繧托ｽｽ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ髯具ｽｹ繝ｻ・ｻ繝ｻ荳ｻ・ｸ・ｷ繝ｻ・ｹ隴主・蜃ｽ繝ｻ蜿門款繝ｻ・ｿ繝ｻ・ｽ鬩阪・遘√・・ｽ繝ｻ・ｦ髯ｷ・ｿ繝ｻ・･郢晢ｽｻ繝ｻ・ｽ鬩搾ｽｵ繝ｻ・ｺ髫ｴ莨夲ｽｽ・ｦ郢晢ｽｻ繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｽ */
+.about-top-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.about-col-right {
+    display: flex;
+    justify-content: center;
+}
+
+.about-col-center {
+    display: flex;
+    justify-content: center;
+}
+
+.about-col-left {
+    display: flex;
+}
+
+/* 鬮ｫ・ｴ鬲・ｼ夲ｽｽ・ｽ繝ｻ・･鬮ｫ・ｴ陝ｷ・｢繝ｻ・ｽ繝ｻ・ｬ鬯ｮ・ｫ繝ｻ・ｱ髫ｶ謐ｺ諷｣繝ｻ・ｽ繝ｻ・ｸ郢晢ｽｻ繝ｻ・ｦ鬮ｫ・ｴ陷ｴ繝ｻ・ｽ・ｽ繝ｻ・ｸ鬩搾ｽｵ繝ｻ・ｺ鬯ｮ・ｦ繝ｻ・ｪ郢晢ｽｻ繝ｻ・ｽ鬮ｯ・ｷ髣鯉ｽｨ繝ｻ・ｽ繝ｻ・ｱ鬯ｯ・ｨ繝ｻ・ｾ髯樊ｺｷ・･繝ｻ・ｽ・ｽ繝ｻ・ｨ郢晢ｽｻ繝ｻ・ｭ鬮ｯ讖ｸ・ｽ・ｳ郢晢ｽｻ繝ｻ・ｽ */
+.about-vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* 鬮ｫ菫ｶ隱薙・・ｽ繝ｻ・､鬯ｮ・｢繝ｻ・ｭ髫ｴ・ｴ繝ｻ・ｧ髯ｷ謳ｾ・ｽ・ｹ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴主・蜃ｽ繝ｻ蠑ｱ繝ｻ*/
+.about-label {
+    background-color: var(--red);
+    color: #fff;
+    border: 1px solid var(--red);
+    padding: 20px 8px;
+    font-family: 'Yuji Syuku', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+/* 鬮ｯ讓奇ｽｻ繧托ｽｽ・ｽ繝ｻ・ｧ鬯ｮ・ｫ陷肴ｺｷ鄂ｰ郢晢ｽｻ繝ｻ・ｽ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｽ */
+.about-catch {
+    font-family: 'Yuji Syuku', serif;
+    display: flex;
+    gap: 20px;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin: 0;
+}
+
+/* 鬮ｫ・ｴ陝ｷ・｢繝ｻ・ｽ繝ｻ・ｬ鬮ｫ・ｴ郢晢ｽｻ繝ｻ・ｿ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｼ鬮｢・ｧ繝ｻ・ｲ郢晢ｽｻ繝ｻ・ｸ郢晢ｽｻ繝ｻ・ｦ鬮ｫ・ｴ陷ｴ繝ｻ・ｽ・ｽ繝ｻ・ｸ鬩搾ｽｵ繝ｻ・ｺ髫ｰ・ｳ繝ｻ・ｾ郢晢ｽｻ繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｽ */
+.about-catch::before {
+    display: none;
+}
+
+.about-desc {
+    font-size: 15px;
+    line-height: 2.8;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    margin-right: 5%;
+}
+
+.about-desc p {
+    margin-left: 40px;
+}
+
+/* ==================== 鬮ｴ螟ｧ・､・ｲ繝ｻ・ｽ繝ｻ・ｹ鬮ｯ貅ｷ譯√・・ｽ繝ｻ・ｴ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.features {
+    background: var(--bg-light);
+}
+
+.features h2 {
+    color: var(--text-dark);
+}
+
+.features .section-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    margin-top: 4rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.feature-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-image-wrapper {
+    width: 48%;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-image-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: 15px;
+    border: 1px solid var(--gold);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.feature-item:nth-child(odd) .feature-image-wrapper::after {
+    left: -20px;
+    right: 20px;
+}
+
+.feature-item:nth-child(even) .feature-image-wrapper::after {
+    right: -20px;
+    left: 20px;
+}
+
+.feature-number {
+    font-size: 5rem;
+    color: var(--red);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1rem;
+    opacity: 0.15;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+
+.feature-text {
+    width: 48%;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    z-index: 2;
+    position: relative;
+}
+
+.feature-item:nth-child(odd) .feature-text {
+    margin-left: 0;
+}
+
+.feature-item:nth-child(even) .feature-text {
+    margin-right: 0;
+}
+
+.feature-text h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    position: relative;
+    z-index: 3;
+    line-height: 1.5;
+}
+
+.feature-text p {
+    color: var(--text-muted-dark);
+    font-size: 1rem;
+    position: relative;
+    z-index: 3;
+    line-height: 1.8;
+}
+
+/* ==================== 鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・｡鬩幢ｽ｢隴乗・・ｽ・ｹ隴∵ｺｽ・､・ｼ繝ｻ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.menu {
+    /* 鬯ｮ・｢繝ｻ・ｭ髫ｴ・ｴ繝ｻ・ｧ髯ｷ謳ｾ・ｽ・ｹ鬩幢ｽ｢隴乗・・ｽ・ｻ繝ｻ・｣驍ｵ・ｺ繝ｻ・｡鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｯ鬮｣蛹・ｽｽ・ｳ鬯ｯ莨懌・繝ｻ・ｽ繝ｻ・ｨ髣費ｽｨ隲幢ｽｶ繝ｻ・ｿ繝ｻ・ｽ鬯ｯ・ｨ繝ｻ・ｾ髯橸ｽ｢繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｮ髯樊ｺ假ｽ代・・ｽ繝ｻ・ｾ郢晢ｽｻ繝ｻ・ｩ鬩幢ｽ｢繝ｻ・ｧ髯ｷ莉｣繝ｻ繝ｻ・ｽ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｿ鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｨ */
+}
+
+.special-menu-card {
+    display: flex;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.special-menu-img {
+    flex: 1;
+    min-height: 300px;
+}
+
+.special-menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.special-menu-info {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-badge {
+    display: inline-block;
+    background-color: var(--red);
+    color: white;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.special-menu-info h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+}
+
+.menu-price {
+    color: var(--red);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.menu-price span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-muted-dark);
+}
+
+.menu-contents {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #ccc;
+}
+
+.menu-contents strong {
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.menu-contents p {
+    color: var(--text-muted-dark);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-item p {
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.menu-desc {
+    color: var(--text-muted-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ==================== 鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｩ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩幢ｽ｢隴擾ｽｶ郢晢ｽｻ驍ｵ・ｺ隴惹ｼ夲ｽｽ・ｹ繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.lunch-section {
+    margin-top: 5rem;
+    background: #fff;
+    padding: 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lunch-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* 鬮ｯ譎｢・ｽ・ｾ郢晢ｽｻ繝ｻ・ｦ鬮ｯ蜿･・ｹ・｢繝ｻ・ｽ繝ｻ・ｴ郢晢ｽｻ繝ｻ・ｽ髯橸ｽ｢繝ｻ・ｹ驍ｵ・ｺ陷･・ｲ繝ｻ・ｹ隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｫ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｫ */
+.lunch-carousel {
+    flex: 1;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carousel-main {
+    position: relative;
+}
+
+.carousel-track-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    cursor: zoom-in;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 10, 10, 0.7);
+    color: var(--text);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.carousel-prev { left: -22px; }
+.carousel-next { right: -22px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s;
+    background: transparent;
+}
+
+.dot.active {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+/* 鬮ｯ・ｷ繝ｻ・ｿ郢晢ｽｻ繝ｻ・ｳ鬮ｯ蜿･・ｹ・｢繝ｻ・ｽ繝ｻ・ｴ郢晢ｽｻ繝ｻ・ｽ髯橸ｽ｢繝ｻ・ｹ驛｢譎｢・ｽ・ｦ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｭ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ */
+.lunch-text {
+    flex: 1;
+}
+
+.lunch-text h3 {
+    color: var(--text-dark);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.lunch-text p {
+    color: var(--text-muted-dark);
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 1rem;
+}
+
+.lunch-text .lunch-highlight {
+    color: var(--red);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.lunch-more {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .lunch-more {
+        text-align: center;
+    }
+}
+
+/* ==================== 鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｳ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬮ｫ・ｴ繝ｻ・ｯ髣費｣ｰ繝ｻ・･郢晢ｽｻ繝ｻ・ｽ ==================== */
+.course-notice {
+    margin-top: 6rem;
+    position: relative;
+    padding: 2rem 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border: 1px solid var(--gold);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HTML鬩搾ｽｵ繝ｻ・ｺ髣包ｽｵ隴趣ｽ｢繝ｻ・ｽ髢ｾ・･繝ｻ・ｸ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｮ鬯ｮ・｢繝ｻ・ｭ髫ｴ・ｴ繝ｻ・ｧ髯ｷ謳ｾ・ｽ・ｹ鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｻ鬮ｯ・ｷ陷代・・ｽ・ｸ陝ｯ・ｩ郢晢ｽｻ鬯ｮ・ｯ繝ｻ・ｲ郢晢ｽｻ繝ｻ・ｫ鬩搾ｽｵ繝ｻ・ｺ髯晢ｽｶ陷ｻ・ｻ繝ｻ・ｽ驍・私・ｽ・ｭ霑壼雀・ｹ・ｲ郢晢ｽｻ隶捺慣・ｽ・ｹ繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｪ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴寂・繝ｻ郢晢ｽｻ繝ｻ・ｽ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・､ */
+.course-notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* 鬩幢ｽ｢隴寂・繝ｻ驛｢譎｢・ｽ・ｪ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬮ｫ・ｲ繝ｻ・｢髮九・竏槭・・ｽ陞ｳ螢ｽﾂ蠑ｱ繝ｻ繝ｻ・ｺ鬩搾ｽｵ繝ｻ・ｺ髯ｷ・ｷ繝ｻ・ｶ髫ｨ・ｳ郢晢ｽｻ繝ｻ・ｹ繝ｻ・ｧ驕ｶ荳橸ｽ､・ｲ繝ｻ・ｿ繝ｻ・ｽ鬮ｯ・ｷ・つ郢晢ｽｻ繝ｻ・ｽ髫ｴ・ｽ繝ｻ・ｧ */
+.course-notice::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.course-notice h3 {
+    color: var(--gold);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 3;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.course-notice p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 3;
+}
+
+.course-notice .btn-primary {
+    position: relative;
+    z-index: 3;
+}
+
+.course-link-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.course-link-btn:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+/* ==================== 鬩搾ｽｵ繝ｻ・ｺ鬯ｮ・ｮ郢晢ｽｻ繝ｻ・ｽ繝ｻ・ｮ郢晢ｽｻ繝ｻ・｢鬮ｫ・ｶ髮区･ｪﾂ繝ｻ・･郢晢ｽｻ繝ｻ・ｽ鬮ｯ讖ｸ・ｽ・｢郢晢ｽｻ繝ｻ・ｰ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.voice {
+    background: var(--bg-light);
+}
+
+.voice h2 {
+    color: var(--text-dark);
+}
+
+.voice .section-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.voice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.voice-card {
+    background: #fff;
+    padding: 3rem 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.voice-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.voice-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.voice-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.voice-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.voice-stars {
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.1em;
+}
+
+.voice-title {
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.05em;
+}
+
+.voice-meta {
+    color: var(--text-muted-dark);
+    font-size: 0.94rem;
+}
+
+.voice-text {
+    color: var(--text-muted-dark);
+    font-size: 0.94rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.voice-text.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 5.4em; /* 1.8 * 3 */
+}
+
+.voice-text.expanded {
+    max-height: 1000px; /* 鬮ｯ・ｷ陝ｯ・ｩ郢晢ｽｻ郢晢ｽｻ繝ｻ・ｽ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｪ鬯ｯ・ｯ繝ｻ・ｮ髯区ｻゑｽｽ・･郢晢ｽｻ郢晢ｽｻ*/
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: var(--red);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--red);
+    transition: opacity 0.3s;
+}
+
+.read-more-btn:hover {
+    opacity: 0.7;
+}
+
+.read-more-btn.hidden {
+    display: none;
+}
+
+.voice-more {
+    margin-top: 3.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==================== 鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・｢鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隰ｨ魑ｴﾂ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｫ郢晢ｽｻ繝ｻ・ｽ鬮｢・ｧ繝ｻ・ｲ髯具ｽｻ繝ｻ・､鬮ｯ・ｷ陷代・・ｽ・ｹ隲､諛莞､鬮ｯ讓奇ｽｻ繧托ｽｽ・ｽ繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ ==================== */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--text);
+    font-size: 40px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2001;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--red);
+}
+
+/* ==================== 鬩搾ｽｵ繝ｻ・ｺ鬨ｾ謳ｾ・ｽ・ｲ鬮｢・ｧ繝ｻ・ｩ鬮ｫ・ｲ繝ｻ・｡郢晢ｽｻ繝ｻ・ｶ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.greeting {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 8rem 0;
+}
+
+.greeting-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.greeting h3 {
+    color: var(--text);
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.greeting p {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.signature {
+    color: var(--red);
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+/* ==================== 髣費｣ｰ髢ｧ・ｲ繝ｻ・ｴ郢晢ｽｻ邵ｺ譎会ｽｹ・ｧ繝ｻ・ｯ驛｢・ｧ繝ｻ・ｷ驛｢譎｢・ｽ・ｧ驛｢譎｢・ｽ・ｳ ==================== */
+.reservation {
+    background: var(--bg-light);
+    text-align: center;
+    padding: 5rem 0; /* 驛｢・ｧ陋ｹ・ｻ繝ｻ鬘費ｽｹ・ｧ繝ｻ・ｳ驛｢譎｢・ｽ・ｳ驛｢譏懶ｽｻ・｣邵ｺ驢搾ｽｹ譎冗樟遶翫・*/
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.reservation h2 {
+    color: var(--text-dark);
+}
+
+.reservation .section-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservation-card {
+    background: #fff;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.reservation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.reservation-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+}
+
+.reservation-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.reservation-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.res-tel {
+    margin-bottom: 0.3rem;
+}
+
+.res-tel a {
+    font-size: 1.8rem;
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.res-note, .res-desc {
+    font-size: 0.94rem;
+    color: var(--text-muted-dark);
+    margin-bottom: 1.5rem;
+}
+
+.reservation-card .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .res-tel a {
+        font-size: 1.6rem;
+    }
+    
+    .reservation {
+        padding: 4rem 0;
+    }
+}
+
+/* ==================== 鬮ｯ貊鍋・隰門生繝ｻ繝ｻ・ｽ鬮ｫ・ｲ繝ｻ・ｰ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｱ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｻ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｯ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｧ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ ==================== */
+.contact {
+    /* 鬯ｮ・｢繝ｻ・ｭ髫ｴ・ｴ繝ｻ・ｧ髯ｷ謳ｾ・ｽ・ｹ鬩幢ｽ｢隴乗・・ｽ・ｻ繝ｻ・｣驍ｵ・ｺ繝ｻ・｡鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｳ鬩搾ｽｵ繝ｻ・ｺ郢晢ｽｻ繝ｻ・ｯ鬮｣蛹・ｽｽ・ｳ鬯ｯ莨懌・繝ｻ・ｽ繝ｻ・ｨ髣費ｽｨ隲幢ｽｶ繝ｻ・ｿ繝ｻ・ｽ鬯ｯ・ｨ繝ｻ・ｾ髯橸ｽ｢繝ｻ・ｼ郢晢ｽｻ繝ｻ・ｮ髯樊ｺ假ｽ代・・ｽ繝ｻ・ｾ郢晢ｽｻ繝ｻ・ｩ鬩幢ｽ｢繝ｻ・ｧ髯ｷ莉｣繝ｻ繝ｻ・ｽ繝ｻ・ｽ郢晢ｽｻ繝ｻ・ｿ鬯ｨ・ｾ陋ｹ繝ｻ・ｽ・ｽ繝ｻ・ｨ */
+    position: relative;
+}
+
+.contact h2 {
+    color: var(--text-dark);
+}
+
+.contact .section-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item h3 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--red);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.contact-item p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+}
+
+.contact-item a {
+    color: var(--red);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.contact-item a:hover {
+    color: var(--gold);
+}
+
+.contact-map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== 鬩幢ｽ｢隴弱・・ｽ・ｼ隴∫浹證ｮﾎ斐・・ｧ郢晢ｽｻ繝ｻ・ｿ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｼ ==================== */
+footer {
+    background: #121212;
+    padding: 2rem 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 2px solid var(--red);
+}
+
+/* ==================== 鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｽ繝ｻ・ｬ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｹ鬩幢ｽ｢隴弱・・ｺ・｢繝ｻ雜｣・ｽ・ｦ鬩幢ｽ｢繝ｻ・ｧ郢晢ｽｻ繝ｻ・ｷ鬩幢ｽ｢隴趣ｽ｢繝ｻ・ｿ繝ｻ・ｽ ==================== */
+
+@media (max-width: 1024px) {
+    .fv-badge {
+        width: 120vw;
+    }
+    .recommended-list {
+        gap: 0.5rem 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-item,
+    .feature-item:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-image-wrapper, .feature-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .feature-item:nth-child(odd) .feature-text,
+    .feature-item:nth-child(even) .feature-text {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -4rem;
+        padding: 1.0rem;
+        background: #fff;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-number {
+        position: static;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .pc-nav { display: none; }
+    .hamburger { display: block; }
+    .hero { 
+        background-image: url('../img/spfv.jpg') !important;
+        background-attachment: scroll !important; 
+        background-size: cover !important;
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        height: 133.33vw !important;
+    }
+    
+    .hero::before,
+    .hero::after {
+        display: none !important;
+    }
+
+    .fv-nav-left,
+    .hero-title-vertical,
+    .fv-badge,
+    .hero-highlights { 
+        display: none !important; 
+    }
+
+    .fv-social-scroll {
+        display: flex !important;
+        left: 15px;
+        transform: scale(0.85) translateY(-50%);
+        transform-origin: left center;
+    }
+    .container { text-align: left; }
+    section { padding: 4rem 0; }
+    .btn-primary { font-size: 0.9rem; padding: 1.0rem 1.0rem; }
+    section h2 { font-size: 2rem; letter-spacing: 0; }
+    .section-subtitle { font-size: 1.0rem; letter-spacing: 0.05em; }
+    .feature-text h3 { font-size: 19.5px; }
+    .recommended-list { grid-template-columns: 1fr; }
+    .recommended-list li { white-space: normal; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 10px; }
+    .recommended-list li:nth-child(odd):last-child { grid-column: span 1; }
+    
+    .about-concept { padding: 6rem 0; }
+    .about-text-area { 
+        padding: 2rem;
+        margin-top: 1rem;
+        flex-direction: column; 
+        align-items: center;
+        gap: 3rem;
+    }
+    .about-top-wrap { 
+        display: flex;
+        flex-direction: row-reverse; 
+        gap: 20px; 
+        justify-content: center;
+        width: 100%;
+    }
+    .about-col-right, .about-col-center { width: auto; }
+    .about-col-left { 
+        display: flex; 
+        justify-content: center;
+        width: 100%;
+    }
+    .about-label { font-size: 18px; padding: 15px 5px; }
+    .about-catch { font-size: 38px; gap: 10px; }
+    .about-desc { font-size: 15px; line-height: 2.2; margin-right: 0; }
+    .about-desc p { margin-left: 20px; }
+    
+    .special-menu-card { flex-direction: column; }
+    .special-menu-info { padding: 1rem; }
+    .lunch-container { flex-direction: column; gap: 3rem; }
+    .lunch-section { padding: 1rem; }
+    .lunch-text h3 { font-size: 1.4rem; }
+    .lunch-text .lunch-highlight { font-size: 1.15rem; }
+    .carousel-prev { left: 10px; }
+    .carousel-next { right: 10px; }
+    .voice-card { padding: 2rem; }
+    .course-notice h3 { font-size: 1.2rem; }
+    .course-notice p { font-size: 16px; }
+    .greeting h3 { font-size: 25px; }
+    .reservation-card .btn-primary { padding: 0.8rem 0.8rem; }
+    .reservation-card { padding: 2.5rem 1.0rem; }
+    .reservation h2, .reservation .section-subtitle { text-align: center; display: block; width: 100%; }
+    .reservation h2::before { left: 50%; transform: translateX(-50%); }
+    .contact-info { padding: 2rem; }
+}
+
+/* ==================== 繧ｹ繝槭・逕ｨ繝輔Ο繝ｼ繝・ぅ繝ｳ繧ｰ莠育ｴ・・繧ｿ繝ｳ ==================== */
+.floating-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 2000;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        display: flex;
+    }
+    footer {
+        padding-bottom: 60px;
+    }
+}
+
+.floating-cta a {
+    flex: 1;
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+}
+
+.floating-cta svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 8px;
+}
+
+.cta-tel {
+    background-color: var(--text-dark);
+}
+
+.cta-web {
+    background-color: var(--red);
+}
+
+/* ==================== 繝医ャ繝励∈謌ｻ繧九・繧ｿ繝ｳ ==================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--gold-dark);
+    transform: translateY(-5px);
+}
+
+.back-to-top svg {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ==================== テキスト選択禁止・画像保存禁止 ==================== */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+

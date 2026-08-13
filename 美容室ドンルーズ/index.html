@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容室ドン・ルーズ | 静岡市葵区の開運美容室</title>
+    <meta name="description" content="静岡市葵区、静岡駅から車で5分の美容室ドン・ルーズ。髪を整えるだけでなく、心と身体、運気までトータルで整える新しいスタイルの美容室です。夜21時まで受付可能。">
+    <!-- Favicon (Dummy) -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#F4D9D9', // Pale pink
+                        'brand-pink-dark': '#D4A5A5',
+                        'brand-pink-text': '#AC6B79', // Calm Pink
+                        'brand-yellow': '#F9F1D0', // Pale yellow
+                        'brand-gold': '#C5A059', // Gold
+                        'brand-gold-light': '#E6C985',
+                        'brand-black': '#333333',
+                        'brand-gray': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        english: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    spacing: {
+                        'section-sp': '80px',
+                        'section-pc': '120px',
+                    },
+                    letterSpacing: {
+                        'widest-custom': '0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body class="font-sans text-brand-black antialiased bg-white selection:bg-brand-pink-dark selection:text-white"
+    oncontextmenu="return false;">
+
+    <!-- Header -->
+    <header id="header"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <h1 class="text-xl md:text-2xl font-bold tracking-widest text-brand-gold">美容室ドン・ルーズ</h1>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 xl:gap-8">
+                <a href="#about"
+                    class="text-sm font-medium hover:text-brand-gold transition-colors tracking-widest-custom">About</a>
+                <a href="#service"
+                    class="text-sm font-medium hover:text-brand-gold transition-colors tracking-widest-custom">Service</a>
+                <a href="#menu"
+                    class="text-sm font-medium hover:text-brand-gold transition-colors tracking-widest-custom">Menu</a>
+                <a href="#gallery"
+                    class="text-sm font-medium hover:text-brand-gold transition-colors tracking-widest-custom">Gallery</a>
+                <a href="#access"
+                    class="text-sm font-medium hover:text-brand-gold transition-colors tracking-widest-custom">Access</a>
+                <a href="tel:050-0000-0000"
+                    class="btn-primary ml-2 px-5 py-2.5 rounded-full bg-brand-gold text-white font-bold hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-xs lg:text-sm">
+                    予約・お問い合わせ
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn"
+                class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none z-50">
+                <span class="block w-6 h-0.5 bg-brand-black transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-brand-black transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-brand-black transition-all duration-300"></span>
+            </button>
+        </div>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20"> <!-- Header height padding -->
+
+        <!-- FV (First View) -->
+        <section id="fv" class="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-80px)] overflow-hidden">
+            <div class="swiper fv-swiper w-full h-full">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide w-full h-full">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./img/pcfv01.jpg">
+                            <img src="./img/spfv01.jpg" alt="FV Image 1"
+                                class="w-full h-full object-cover object-center align-bottom">
+                        </picture>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide w-full h-full">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./img/pcfv02.jpg">
+                            <img src="./img/spfv02.jpg" alt="FV Image 2"
+                                class="w-full h-full object-cover object-center align-bottom">
+                        </picture>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide w-full h-full">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./img/pcfv03.jpg">
+                            <img src="./img/spfv03.jpg" alt="FV Image 3"
+                                class="w-full h-full object-cover object-center align-bottom">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA 1 -->
+        <!-- CTA 1 -->
+        <section class="w-full bg-brand-yellow/50 py-12 flex justify-center items-center mb-0">
+            <div class="container mx-auto px-4 text-center">
+                <a href="tel:050-0000-0000"
+                    class="flex flex-col md:flex-row items-center justify-center gap-3 text-xl md:text-3xl font-bold text-brand-black hover:text-brand-gold transition-colors text-center">
+                    <span class="text-base font-normal tracking-wide mb-2 md:mb-0">ご予約はお電話で</span>
+                    <span class="flex items-center gap-2">
+                        <span
+                            class="w-8 h-8 md:w-10 md:h-10 bg-brand-black text-white rounded-full flex items-center justify-center text-sm">📞</span>
+                        050-0000-0000
+                    </span>
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- About -->
+        <section id="about" class="w-full bg-brand-pink/10 py-section-sp md:py-section-pc mb-0">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        ABOUT
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        当店について
+                    </h2>
+                </div>
+                <!-- Broken Grid / Asymmetric Layout -->
+                <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-center">
+                    <div class="w-full md:w-[60%] order-2 md:order-1 space-y-6">
+                        <h3 class="text-2xl font-bold text-brand-pink-text">静岡の隠れ家「開運美容室」</h3>
+                        <p class="text-base md:text-lg leading-loose text-gray-700">
+                            静岡市葵区、静岡駅から車で５分ほどの立地にある開運美容室です。<br>
+                            フレンドリーな店主が営む店内はかわいらしい雰囲気に包まれています。<br><br>
+                            単に髪を整えるだけでなく、心と身体、そして運氣までもトータルで整えることを大切にし、お客様の人生をサポートすることをスタンスとしています。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-[40%] order-1 md:order-2">
+                        <div class="relative">
+                            <img src="./img/about_main.jpg" alt="About Salon"
+                                class="w-full h-auto object-cover aspect-[4/5] md:aspect-square">
+                            <!-- Decorative element -->
+                            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-gold/20 -z-10"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- TV (Third View) - Moved -->
+        <section id="tv" class="container mx-auto px-4 py-section-sp md:py-section-pc mb-0 bg-white">
+            <div class="relative flex justify-center items-center py-10 mb-8">
+                <span
+                    class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                    RECOMMENDED
+                </span>
+                <h2 class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                    こんな方におすすめ
+                </h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+                <div class="w-full md:w-[25%]">
+                    <img src="./img/tv_main.png" alt="Recommended" class="w-full h-auto object-cover shadow-none">
+                </div>
+                <div class="w-full md:w-[75%] space-y-6">
+                    <!-- Removed h3 title as requested -->
+                    <ul class="space-y-4 text-base md:text-lg leading-loose">
+                        <li class="flex items-start"><span class="text-brand-gold mr-2 text-xl">✦</span>もっと人生の運気を向上させたい
+                        </li>
+                        <li class="flex items-start"><span
+                                class="text-brand-gold mr-2 text-xl">✦</span>今の髪型を変えて新しい自分になりたい</li>
+                        <li class="flex items-start"><span
+                                class="text-brand-gold mr-2 text-xl">✦</span>誰にも話せない悩みを安心して相談したい</li>
+                        <li class="flex items-start"><span
+                                class="text-brand-gold mr-2 text-xl">✦</span>自分の守護龍を知ってメッセージを受け取りたい</li>
+                    </ul>
+                    <p class="pt-4 leading-relaxed">
+                        心と身体、そして運氣までもトータルで整える開運美容室ドン・ルーズが、あなたの人生をサポートします。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="w-full py-section-sp md:py-section-pc mb-0 bg-brand-pink/10">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        SERVICE
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        特徴
+                    </h2>
+                </div>
+
+                <div class="space-y-16 md:space-y-24">
+                    <!-- Point 1 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center group">
+                        <div class="w-full md:w-1/2 md:pr-8">
+                            <span class="text-brand-gold font-bold tracking-widest text-sm block mb-2">POINT
+                                01</span>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-brand-pink-text transition-colors">
+                                時間も運氣も整える<br>「夜21時までの開運ヘア提案」</h3>
+                            <p class="leading-loose text-gray-700">
+                                お仕事帰りや日中の忙しい合間を避けてゆっくり過ごしたい方のために、夜21時まで受付可能な体制を整えています。高い技術力によるスピーディーな施術と、運氣アップを目指す開運ヘアのご提案で、お客様の貴重な時間を大切にします。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <img src="./img/service_01.jpg" alt="Service 1"
+                                class="w-full h-auto object-cover aspect-video">
+                        </div>
+                    </div>
+
+                    <!-- Point 2 (Reverse) -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 items-center group">
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <span class="text-brand-gold font-bold tracking-widest text-sm block mb-2">POINT
+                                02</span>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-brand-pink-text transition-colors">
+                                心のお悩みに向き合う<br>「守護龍・占い鑑定」</h3>
+                            <p class="leading-loose text-gray-700">
+                                誰にも話せないお悩みや、ご自身の守護龍について知りたいというご相談に対し、守護龍鑑定や占い鑑定を行います。心の平穏と前向きな気持ちをサポートします。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <img src="./img/service_02.jpg" alt="Service 2"
+                                class="w-full h-auto object-cover aspect-video">
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center group">
+                        <div class="w-full md:w-1/2 md:pr-8">
+                            <span class="text-brand-gold font-bold tracking-widest text-sm block mb-2">POINT
+                                03</span>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-brand-pink-text transition-colors">
+                                心と身体をやさしく整える<br>「ヒーリング整体・美白ピーリング」</h3>
+                            <p class="leading-loose text-gray-700">
+                                髪や心だけでなく、身体のコンディションも整えるために、ヒーリング整体をご提供します。さらに、美白ピーリングも行い、お客様のトータルケアをサポートします。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <img src="./img/service_03.jpg" alt="Service 3"
+                                class="w-full h-auto object-cover aspect-video">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- CTA 2 -->
+        <!-- CTA 2 -->
+        <section class="w-full bg-brand-yellow/50 py-12 flex justify-center items-center mb-0">
+            <div class="container mx-auto px-4 text-center">
+                <a href="tel:050-0000-0000"
+                    class="flex flex-col md:flex-row items-center justify-center gap-3 text-xl md:text-3xl font-bold text-brand-black hover:text-brand-gold transition-colors text-center">
+                    <span class="text-base font-normal tracking-wide mb-2 md:mb-0">ご予約はお電話で</span>
+                    <span class="flex items-center gap-2">
+                        <span
+                            class="w-8 h-8 md:w-10 md:h-10 bg-brand-black text-white rounded-full flex items-center justify-center text-sm">📞</span>
+                        050-0000-0000
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Menu/Recommend (Parallax) -->
+        <section id="recommend" class="w-full py-20 bg-cover bg-center bg-fixed bg-no-repeat mb-0"
+            style="background-image: url('./img/recommend_bg.jpg');">
+            <!-- Overlay -->
+
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        RECOMMENDED MENU
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        当店のおすすめ
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Item 1 -->
+                    <div
+                        class="bg-white/90 p-6 flex flex-col md:flex-row gap-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="w-full md:w-1/3">
+                            <img src="./img/recommend_item_01.jpg" alt="Peeling" class="w-full h-32 object-cover">
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">スーパー美白ケミカルピーリング</h4>
+                            <p class="text-right text-brand-gold font-bold text-xl mb-2">¥0,000</p>
+                            <p class="text-sm text-gray-600 line-clamp-3">
+                                肌のターンオーバーを促進し、透明感のある肌へ導きます。ダウンタイムの少ない優しいピーリングです。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="bg-white/90 p-6 flex flex-col md:flex-row gap-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="w-full md:w-1/3">
+                            <img src="./img/recommend_item_02.jpg" alt="Fortune" class="w-full h-32 object-cover">
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <h4 class="font-bold text-lg mb-2">運氣鑑定</h4>
+                            <p class="text-right text-brand-gold font-bold text-xl mb-2">¥0,000</p>
+                            <p class="text-sm text-gray-600 line-clamp-3">
+                                あなたの運勢を鑑定し、今必要なメッセージをお伝えします。美容施術とセットで心もスッキリ。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu/Price -->
+        <section id="menu" class="w-full bg-brand-yellow/10 py-section-sp md:py-section-pc mb-0">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        MENU & PRICE
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        メニュー
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 md:gap-20">
+                    <div class="w-full md:w-[40%]">
+                        <img src="./img/price_main.png" alt="Menu Image"
+                            class="w-full h-auto sticky top-24 object-cover">
+                    </div>
+                    <div class="w-full md:w-[60%] space-y-12">
+                        <!-- Category 1 -->
+                        <div>
+                            <h3
+                                class="text-xl font-bold border-b border-brand-pink-text mb-6 pb-2 inline-block text-brand-pink-text">
+                                ヘア・ビューティー
+                            </h3>
+                            <dl class="space-y-4">
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>開運ヘア</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>開運カラー</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>パーマ</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>カット</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>エステ</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>着付け</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>メイク</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Category 2 -->
+                        <div>
+                            <h3
+                                class="text-xl font-bold border-b border-brand-pink-text mb-6 pb-2 inline-block text-brand-pink-text">
+                                鑑定・占い</h3>
+                            <dl class="space-y-4">
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>守護龍鑑定</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>占い鑑定</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- Category 3 -->
+                        <div>
+                            <h3
+                                class="text-xl font-bold border-b border-brand-pink-text mb-6 pb-2 inline-block text-brand-pink-text">
+                                心身ケア・ヒーリング
+                            </h3>
+                            <dl class="space-y-4">
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>ヒーリング整体</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>心身運氣調整</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline dott-border pb-1">
+                                    <dt>ヒプノセラピー</dt>
+                                    <dd>¥0,000</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="w-full py-section-sp md:py-section-pc bg-white mb-0 overflow-hidden">
+            <div class="container mx-auto px-4 mb-8">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        GALLERY
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        ヘアスタイル
+                    </h2>
+                </div>
+            </div>
+
+            <div class="swiper gallery-swiper container mx-auto pb-10 px-4">
+                <div class="swiper-wrapper">
+                    <!-- Images 1-6 -->
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_01.jpg" alt="Gallery 1"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_02.jpg" alt="Gallery 2"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_03.jpg" alt="Gallery 3"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_04.jpg" alt="Gallery 4"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_05.jpg" alt="Gallery 5"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                    <div
+                        class="swiper-slide w-64 md:w-[300px] h-64 md:h-[300px] flex items-center justify-center bg-gray-50">
+                        <img src="./img/gallery_06.jpg" alt="Gallery 6"
+                            class="gallery-img w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Voice -->
+        <section id="voice" class="w-full bg-brand-gray/30 py-section-sp md:py-section-pc mb-0">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        VOICE
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        お客様の声
+                    </h2>
+                </div>
+
+                <!-- Voice Grid (2 Columns) -->
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <!-- Voice 1 -->
+                    <div
+                        class="w-full md:w-1/2 max-w-lg p-8 bg-white border border-gray-100 shadow-sm flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                                <img src="./img/voice_user_01.png" alt="User Icon" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">mamakazoku</p>
+                                <div class="text-brand-gold text-sm tracking-widest">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-gray-700 flex-grow">
+                            静岡市にある美容室です。<br>
+                            シミが気になりピーリングを施術してもらいました。<br>
+                            ピーリング後は肌に艶がでてトーンも上がり肌が白くなりました。<br>
+                            ピーリング後、翌日の洗顔で肌が柔らかくなっているので手触りが違います。
+                        </p>
+                    </div>
+                    <!-- Voice 2 -->
+                    <div
+                        class="w-full md:w-1/2 max-w-lg p-8 bg-white border border-gray-100 shadow-sm flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                                <img src="./img/voice_user_02.png" alt="User Icon" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">ささささささ</p>
+                                <div class="text-brand-gold text-sm tracking-widest">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-gray-700 flex-grow">
+                            数回ほどお肌のピーリングで通ってます。終わったあとにすぐ肌の変化を実感できるし、落ち着く店内で癒されます。細かいニキビも減って肌の調子がすごくいいです！<br><br>
+                            看板犬の柴犬ちゃんも可愛いです。またお願いいたします。
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="w-full bg-white py-section-sp md:py-section-pc mb-0">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        MESSAGE
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        ご挨拶
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-center">
+                    <div class="w-full md:w-[70%] space-y-6">
+                        <h3 class="text-2xl font-bold text-brand-pink-text">「髪も心も整う、癒しの美容室へようこそ」</h3>
+                        <p class="leading-loose text-gray-700">
+                            髪も心もキレイになれる美容室として、お客様の美と心の健康を大切にしています。<br>
+                            夜の美容室では、日中の忙しさを忘れ、心ゆくまでリラックス。<br>
+                            髪のお悩みに加え、誰にも話せないお悩みも相談できる空間をご提供します。<br>
+                            心身の深いリラックスを促すヒーリング整体も行い、心と身体のバランスをトータルで整えます。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-[30%]">
+                        <img src="./img/message_main.jpg" alt="Owner Message" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+        </section>
+
+        <!-- Contact/Access -->
+        <section id="access" class="w-full bg-gray-50 py-section-sp md:py-section-pc mb-0">
+            <div class="container mx-auto px-4">
+                <div class="relative flex justify-center items-center py-10 mb-8">
+                    <span
+                        class="absolute text-6xl md:text-8xl font-english text-brand-gold/20 font-bold select-none whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-widest z-0">
+                        ACCESS
+                    </span>
+                    <h2
+                        class="relative z-10 text-2xl md:text-3xl font-bold text-brand-black tracking-widest text-center">
+                        店舗情報
+                    </h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <div class="bg-gray-50 p-6 md:p-8">
+                            <h3 class="text-xl font-bold mb-4 text-brand-gold">美容室ドン・ルーズ</h3>
+                            <p class="mb-2">〒420-0001 静岡県静岡市葵区井宮町７−３ 是永ビル</p>
+                            <p class="mb-2 font-bold text-lg"><a href="tel:050-0000-0000">TEL: 050-0000-0000</a></p>
+                            <p class="mb-2">営業時間: ９時〜２１時</p>
+                            <p class="mb-4">定休日: 月曜日　不定休あり</p>
+
+
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="w-full h-64 md:h-full min-h-[300px] bg-gray-200">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4623.011865820374!2d138.37273257253332!3d34.982590503736425!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a4a39013cbbe1%3A0x245e03e8d2cae961!2z576O5a655a6k44OJ44Oz44O744Or44O844K6!5e0!3m2!1sja!2sjp!4v1769074052966!5m2!1sja!2sjp"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-brand-black text-white py-10 pb-24 md:pb-10">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="font-bold tracking-widest text-lg">美容室ドン・ルーズ</div>
+                <nav class="flex flex-wrap gap-4 justify-center text-sm text-gray-400">
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#service" class="hover:text-white transition-colors">Service</a>
+                    <a href="#menu" class="hover:text-white transition-colors">Menu</a>
+                    <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                    <a href="#access" class="hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="text-xs text-gray-500">&copy; 2026 Don Loose. All Rights Reserved.</div>
+            </div>
+        </footer>
+
+        <!-- Fixed Bottom Buttons -->
+        <!-- Scroll to Top -->
+        <button id="scroll-to-top"
+            class="fixed bottom-24 right-4 md:bottom-8 md:right-8 bg-brand-gold text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300 z-40 hover:bg-brand-gold-light">
+            ↑
+        </button>
+
+        <!-- Sticky CTA (Mobile Only) -->
+        <div
+            class="fixed bottom-0 left-0 right-0 w-auto bg-brand-gold md:hidden z-50 flex shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+            <a href="tel:050-0000-0000"
+                class="w-full text-white flex flex-col items-center justify-center py-4 hover:bg-brand-gold-light transition-colors">
+                <span class="text-xl font-bold flex items-center gap-2">
+                    <span class="text-2xl">📞</span> 電話で予約する
+                </span>
+                <span class="text-xs tracking-widest mt-1">050-0000-0000</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Modal for Gallery -->
+    <div id="image-modal" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4">
+        <button id="modal-close" class="absolute top-4 right-4 text-white hover:text-gray-300">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img id="modal-img" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] object-contain">
+    </div>
+
+    <!-- Mobile Menu Overlay (Moved to Body root) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 w-full h-full bg-brand-yellow/95 z-[60] flex flex-col items-center justify-start pt-24 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+        <button id="menu-close" class="absolute top-6 right-6 text-brand-black p-2 z-[70]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </button>
+        <nav class="flex flex-col items-center gap-6 text-lg font-medium py-10">
+            <a href="#about" class="mobile-link">About</a>
+
+            <a href="#service" class="mobile-link">Service</a>
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#voice" class="mobile-link">Voice</a>
+            <a href="#message" class="mobile-link">Message</a>
+            <a href="#access" class="mobile-link">Access</a>
+            <a href="tel:050-0000-0000"
+                class="btn-primary mt-4 px-8 py-3 rounded-full bg-brand-gold text-white font-bold shadow-md">
+                予約・お問い合わせ
+            </a>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./Js/script.js"></script>
+</body>
+
+</html>

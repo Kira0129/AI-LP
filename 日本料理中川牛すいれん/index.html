@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本料理 中川牛すいれん | 滋賀・近江八幡の和食・すき焼き</title>
+    <meta name="description"
+        content="近江八幡駅北口徒歩5分。日本三大和牛「近江牛」の始祖・中川牛を味わえる日本料理店「中川牛すいれん」。落ち着いた個室で、すき焼き、しゃぶしゃぶ、会席料理をご堪能ください。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'zen': ['"Zen Old Mincho"', 'serif'] },
+                    colors: {
+                        'brand-white': '#FAFAF8',
+                        'brand-red': '#B03A48',
+                        'brand-purple': '#6D5268',
+                        'brand-gold': '#D4B483',
+                        'brand-gray': '#5A544E',
+                        'brand-charcoal': '#2D2926',
+                    },
+                    spacing: { '18': '4.5rem', '30': '7.5rem' },
+                    letterSpacing: { 'widest-2': '0.2em' }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-zen text-brand-gray bg-brand-white antialiased selection:bg-brand-red selection:text-white"
+    oncontextmenu="return false;">
+
+    <!-- SP Hamburger Menu Button - Mobile Only (Header itself hidden) -->
+    <header
+        class="block lg:hidden fixed top-0 left-0 w-full z-50 flex justify-end items-center px-6 py-8 pointer-events-none">
+        <button id="hamburger-btn" class="space-y-1.5 focus:outline-none z-50 group pointer-events-auto p-2">
+            <span
+                class="block w-6 h-px bg-brand-purple transition-transform duration-300 group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+            <span
+                class="block w-6 h-px bg-brand-purple transition-opacity duration-300 group-[.active]:opacity-0"></span>
+            <span
+                class="block w-6 h-px bg-brand-purple transition-transform duration-300 group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+        </button>
+    </header>
+
+    <!-- SP Navigation Overlay -->
+    <nav id="sp-nav"
+        class="fixed inset-0 bg-brand-white z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden">
+        <ul class="space-y-6 text-center text-lg font-medium tracking-widest text-brand-purple mb-10">
+            <li><a href="#about-sp" class="sp-nav-link block py-2">当店の想い</a></li>
+            <li><a href="#service" class="sp-nav-link block py-2">特徴</a></li>
+            <li><a href="#recommend" class="sp-nav-link block py-2">お品書き</a></li>
+            <li><a href="#message" class="sp-nav-link block py-2">ご挨拶</a></li>
+            <li><a href="#access" class="sp-nav-link block py-2">店舗情報</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ============================================
+       PHASE 1: FV ~ About (Split Layout on PC)
+    ============================================= -->
+    <div class="layout-phase-1">
+
+        <!-- Left Side: Sticky Information (Scrollable) -->
+        <aside class="sticky-sidebar hidden lg:flex">
+            <!-- Top: Vertical Copy -->
+            <div class="flex-none h-auto min-h-[25vh] flex justify-center pt-8 items-center mb-0">
+                <div
+                    class="text-lg tracking-[0.2em] text-brand-purple border-b border-brand-red/40 pb-2 px-4 text-center leading-relaxed">
+                    気取らず、それでいて上質<br>
+                    座敷で味わう近江牛の贅沢
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="flex-none h-auto min-h-[25vh] flex items-center justify-center mb-12">
+                <img src="./img/logo.png" alt="日本料理 中川牛すいれん" class="w-48 object-contain">
+            </div>
+
+            <!-- Bottom: Nav, Button, About Content -->
+            <div class="flex-none h-auto min-h-[50vh] flex flex-col items-center justify-start pb-4">
+                <!-- Vertical Nav (Items Horizontal, Text Vertical) -->
+                <nav
+                    class="text-base tracking-[0.3em] gap-8 mb-12 h-auto flex flex-row items-start justify-center text-brand-purple">
+                    <a href="#about-sp"
+                        class="writing-vertical-rl hover:text-brand-red transition-colors py-2 relative group lg:hidden">当店の想い</a>
+                    <a href="#service"
+                        class="writing-vertical-rl hover:text-brand-red transition-colors py-2 relative group uppercase">・特徴</a>
+                    <a href="#recommend"
+                        class="writing-vertical-rl hover:text-brand-red transition-colors py-2 relative group whitespace-nowrap">・お品書き</a>
+                    <a href="#message"
+                        class="writing-vertical-rl hover:text-brand-red transition-colors py-2 relative group">・ご挨拶</a>
+                    <a href="#access"
+                        class="writing-vertical-rl hover:text-brand-red transition-colors py-2 relative group">・店舗情報</a>
+                </nav>
+
+                <!-- Reserve Buttons Area -->
+                <div class="flex flex-col gap-6 w-full max-w-[200px] mb-16 flex-none items-center">
+                    <!-- Phone Display (Text) -->
+                    <div class="text-center w-full">
+                        <p class="text-[10px] tracking-widest text-brand-purple mb-2">お電話でのご予約</p>
+                        <a href="tel:05000000000"
+                            class="block text-xl font-serif tracking-widest text-brand-red hover:text-brand-purple transition-colors">
+                            050-0000-0000
+                        </a>
+                    </div>
+
+                    <!-- Web Reserve Button -->
+                    <a href="https://www.google.com/maps/reserve/v/dine/c/CO9kSghI7nE" target="_blank"
+                        class="block w-full py-4 bg-brand-red border border-brand-red text-white text-center tracking-[0.2em] font-medium hover:bg-brand-purple hover:border-brand-purple transition-all duration-500 rounded-none relative">
+                        Web予約<br><span class="text-xs tracking-wider font-normal">Reserve</span>
+                    </a>
+                </div>
+
+                <!-- About Content (Moved Here) -->
+                <div id="about-pc" class="relative w-full bg-transparent px-2 text-center pb-20">
+                    <div class="fade-in-up">
+                        <h2 class="text-xl font-serif tracking-widest mb-10 leading-relaxed text-brand-black font-bold">
+                            希少な中川牧場直送・<br>特選近江牛を味わう
+                        </h2>
+
+                        <div
+                            class="text-base leading-loose tracking-wider space-y-6 font-medium text-brand-gray/90 text-justify inline-block text-left">
+                            <p>
+                                近江八幡駅北口から徒歩5分。
+                            </p>
+                            <p>
+                                落ち着いた座敷空間で、<br>
+                                希少な中川牧場直送の特選近江牛をご堪能いただけます。
+                            </p>
+                            <p>
+                                日本三大和牛のひとつ・近江牛の始祖ともいわれる「中川牛」は、<br>
+                                やわらかな肉質と上品な旨味, 軽やかな脂が特長です。<br>
+                                素材本来の美味しさを活かした, 和の一皿としてご提供いたします。
+                            </p>
+                            <p>
+                                ランチからご宴会まで, 送迎バスも完備し、<br>
+                                大切なひとときを心を込めてお迎えいたします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side: Scroll Content (Images only) -->
+        <div class="scroll-content-area w-full lg:w-[65%]">
+
+            <!-- SP Only Header Area (Logo Only) -->
+            <div class="lg:hidden bg-brand-white py-8 flex justify-center">
+                <img src="./img/logo.png" alt="日本料理 中川牛すいれん" class="w-32 object-contain">
+            </div>
+
+            <!-- FV Area: 3 Images Slider (Swiper) -->
+            <section id="fv" class="w-full relative overflow-hidden bg-brand-black">
+
+                <div class="swiper fv-swiper w-full h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./img/fv01.jpg">
+                                <img src="./img/fv01.jpg" alt="FV1" class="w-full h-full object-cover animate-kenburns">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./img/fv02.jpg">
+                                <img src="./img/fv02.jpg" alt="FV2" class="w-full h-full object-cover animate-kenburns">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide w-full h-full">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./img/fv03.jpg">
+                                <img src="./img/fv03.jpg" alt="FV3" class="w-full h-full object-cover animate-kenburns">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SP Only Navigation & Reserve Area -->
+            <div class="lg:hidden bg-brand-white flex flex-col items-center">
+                <!-- Vertical Nav -->
+                <nav class="pt-8 pb-24 flex justify-center items-start gap-10">
+                    <div
+                        class="flex flex-row-reverse items-start gap-10 text-sm tracking-[0.5em] text-brand-purple font-serif">
+                        <a href="#service"
+                            class="writing-vertical-rl hover:text-brand-red transition-colors py-2 whitespace-nowrap">・特徴</a>
+                        <a href="#recommend"
+                            class="writing-vertical-rl hover:text-brand-red transition-colors py-2 whitespace-nowrap">・お品書き</a>
+                        <a href="#message"
+                            class="writing-vertical-rl hover:text-brand-red transition-colors py-2 whitespace-nowrap">・ご挨拶</a>
+                        <a href="#access"
+                            class="writing-vertical-rl hover:text-brand-red transition-colors py-2 whitespace-nowrap">・店舗情報</a>
+                    </div>
+                </nav>
+
+
+            </div>
+
+            <!-- About Section (Mobile Only) -->
+            <div id="about-sp"
+                class="lg:hidden relative w-full bg-brand-white py-24 px-8 text-center border-t border-gray-100">
+                <div class="fade-in-up">
+                    <h2 class="text-2xl font-serif tracking-widest mb-12 leading-relaxed text-brand-black font-bold">
+                        希少な中川牧場直送・<br>特選近江牛を味わう
+                    </h2>
+
+                    <div
+                        class="text-base leading-loose tracking-wider space-y-8 font-medium text-brand-gray text-justify">
+                        <p>
+                            近江八幡駅北口から徒歩5分。
+                        </p>
+                        <p>
+                            落ち着いた座敷空間で、<br>
+                            希少な中川牧場直送の特選近江牛をご堪能いただけます。
+                        </p>
+                        <p>
+                            日本三大和牛のひとつ・近江牛の始祖ともいわれる「中川牛」は、<br>
+                            やわらかな肉質と上品な旨味、軽やかな脂が特長です。<br>
+                            素材本来の美味しさを活かした、和の一皿としてご提供いたします。
+                        </p>
+                        <p>
+                            ランチからご宴会まで、送迎バスも完備し、<br>
+                            大切なひとときを心を込めてお迎えいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End of Right Side -->
+    </div>
+    <!-- End of Phase 1 -->
+
+
+
+    <!-- ============================================
+       PHASE 2: Service ~ Footer (Standard Layout)
+    ============================================= -->
+    <div class="layout-phase-2">
+
+        <!-- Service Section -->
+        <section id="service" class="py-20 lg:py-40">
+            <div class="flex justify-center mb-16 lg:mb-32 fade-in-up">
+                <h2
+                    class="writing-vertical-rl text-2xl lg:text-3xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red pl-5 leading-relaxed translate-y-4">
+                    特徴
+                </h2>
+            </div>
+
+            <div class="flex flex-col gap-32 lg:gap-40 max-w-6xl mx-auto px-6 lg:px-0">
+                <!-- Service 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="./img/service_01.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm">POINT 01</span>
+                        <h3 class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-medium leading-relaxed">
+                            希少な中川牛を、<br>上質に味わう</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            近江牛発祥の地・中川牧場で育まれた希少な中川牛。
+                            きめ細やかでやわらかな肉質、上品な旨味と甘み、軽やかな脂が特長です。
+                            素材の魅力を引き出す繊細な調理で、特別感のあるひと皿をご提供します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="./img/service_02.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm">POINT 02</span>
+                        <h3 class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-medium leading-relaxed">
+                            お肉もお魚も楽しむ、<br>贅沢な和食</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            中川牛に加え、旬の魚介や近江の食材を取り入れた和のコース。
+                            見た目にも美しく、味わいはやさしく上品に。
+                            自分へのご褒美や、大切な人との食事にふさわしい内容です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="./img/service_03.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm">POINT 03</span>
+                        <h3 class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-medium leading-relaxed">
+                            落ち着いた個室で、<br>大人のひととき</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            静かで上質な個室空間をご用意。
+                            記念日やお祝い、少人数での特別な食事にも最適です。
+                            駅近の立地に加え、送迎バスのご相談も承っております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recommend Section (Fixed Full-Width BG, 3 Items x Image+Text) -->
+        <section id="recommend"
+            class="break-out-full-width py-20 lg:py-40 relative text-brand-gray mb-20 bg-fixed bg-cover bg-center"
+            style="background-image: url('./img/menu_recommend_bg.jpg');">
+            <div class="absolute inset-0 bg-[#FCF9F2]/75 z-0"></div>
+
+            <div class="flex justify-center mb-16 lg:mb-32 fade-in-up relative z-10 w-full">
+                <h2
+                    class="writing-vertical-rl text-2xl lg:text-3xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red/40 pl-5 leading-relaxed translate-y-4">
+                    おすすめ
+                </h2>
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto flex flex-col gap-24 px-8 lg:px-0">
+
+                <!-- Item 1 -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center fade-in-up group">
+                    <div class="w-full lg:w-1/2 aspect-video overflow-hidden border border-brand-purple/10">
+                        <img src="./img/menu_recommend_01.jpg" alt="Recommend 1"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h3
+                            class="text-2xl mb-4 tracking-widest font-medium text-brand-purple group-hover:text-brand-red transition-colors">
+                            中川牛の魅力を余すことなく味わう</h3>
+                        <div class="flex items-baseline gap-4 mb-6 border-b border-brand-purple/20 pb-4">
+                            <p class="text-3xl font-serif text-brand-red">10,000円</p>
+                            <span class="text-sm font-sans text-brand-gray/60">(税抜)</span>
+                        </div>
+                        <ul class="text-sm opacity-80 leading-loose list-disc pl-5 space-y-1">
+                            <li>季節の前菜</li>
+                            <li>サーロインの洗い</li>
+                            <li>中川牛のはりはり仕立てのお吸い物</li>
+                            <li>中川牛のカルパッチョ</li>
+                            <li>サーロイン石焼き 又は サーロインすき焼き</li>
+                            <li>中川牛の炙り握り3貫</li>
+                            <li>季節のデザート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center fade-in-up delay-100 group">
+                    <div class="w-full lg:w-1/2 aspect-video overflow-hidden border border-brand-purple/10">
+                        <img src="./img/menu_recommend_02.jpg" alt="Recommend 2"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h3
+                            class="text-2xl mb-4 tracking-widest font-medium text-brand-purple group-hover:text-brand-red transition-colors">
+                            上質な中川牛をバランスよく楽しむ</h3>
+                        <div class="flex items-baseline gap-4 mb-6 border-b border-brand-purple/20 pb-4">
+                            <p class="text-3xl font-serif text-brand-red">8,000円</p>
+                            <span class="text-sm font-sans text-brand-gray/60">(税抜)</span>
+                        </div>
+                        <ul class="text-sm opacity-80 leading-loose list-disc pl-5 space-y-1">
+                            <li>季節の前菜（牛炙り握り入り）</li>
+                            <li>中川牛の洗い</li>
+                            <li>中川牛のはりはり仕立てのお吸い物</li>
+                            <li>牛のカルパッチョ</li>
+                            <li>中川牛ロース石焼き 又は 中川牛ロースすき焼き</li>
+                            <li>牛のご飯</li>
+                            <li>季節のデザート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center fade-in-up delay-200 group">
+                    <div class="w-full lg:w-1/2 aspect-video overflow-hidden border border-brand-purple/10">
+                        <img src="./img/menu_recommend_03.jpg" alt="Recommend 3"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h3
+                            class="text-2xl mb-4 tracking-widest font-medium text-brand-purple group-hover:text-brand-red transition-colors">
+                            気軽に中川牛の美味しさを堪能できる</h3>
+                        <div class="flex items-baseline gap-4 mb-6 border-b border-brand-purple/20 pb-4">
+                            <p class="text-3xl font-serif text-brand-red">6,000円</p>
+                            <span class="text-sm font-sans text-brand-gray/60">(税抜)</span>
+                        </div>
+                        <ul class="text-sm opacity-80 leading-loose list-disc pl-5 space-y-1">
+                            <li>季節の前菜（牛炙り握り入り）</li>
+                            <li>中川牛の洗い</li>
+                            <li>中川牛のはりはり仕立てのお吸い物</li>
+                            <li>特選石焼き</li>
+                            <li>牛のご飯</li>
+                            <li>季節のデザート</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Menu/Price Section -->
+        <section id="price" class="py-20 lg:py-40">
+            <div class="flex justify-center mb-16 lg:mb-32 fade-in-up">
+                <h2
+                    class="writing-vertical-rl text-2xl lg:text-3xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red pl-5 leading-relaxed translate-y-4">
+                    お品書き
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 max-w-6xl mx-auto px-6 lg:px-0">
+                <!-- Sukiyaki -->
+                <div class="fade-in-up">
+                    <div class="mb-8 overflow-hidden aspect-[4/3]">
+                        <img src="./img/menu_price_01.jpg" alt="Sukiyaki"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000 filter sepia-[0.1]">
+                    </div>
+                    <div class="text-center">
+                        <h3
+                            class="text-2xl font-serif tracking-widest border-b border-brand-red inline-block pb-2 mb-8">
+                            中川牛すき焼き</h3>
+                        <div class="space-y-10">
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">中川牛ブランドプレミアムすき焼き</h4>
+                                <p class="text-xs text-brand-gray mb-2 leading-loose">
+                                    季節の前菜・近江野菜・熟成サーロイン・中川牛の洗い<br>〆玉子とじ・ご飯・お漬物・季節のデザート</p>
+                                <p class="text-brand-red font-bold text-xl">10,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">近江野菜と熟成ロースすき焼き</h4>
+                                <p class="text-xs text-brand-gray mb-2">前菜・ご飯又はうどん・デザート</p>
+                                <p class="text-brand-red font-bold text-xl">7,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">近江野菜と中川牛すき焼き</h4>
+                                <p class="text-xs text-brand-gray mb-2">前菜・うどん・デザート</p>
+                                <p class="text-brand-red font-bold text-xl">5,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <p class="text-xs text-brand-gray/60 mt-6">＋1,000円で造り、＋500円でうどん、お寿司、雑炊をお選びください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shabu-Shabu -->
+                <div class="fade-in-up delay-100">
+                    <div class="mb-8 overflow-hidden aspect-[4/3]">
+                        <img src="./img/menu_price_02.jpg" alt="Shabu-shabu"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000 filter sepia-[0.1]">
+                    </div>
+                    <div class="text-center">
+                        <h3
+                            class="text-2xl font-serif tracking-widest border-b border-brand-red inline-block pb-2 mb-8">
+                            中川牛しゃぶしゃぶ</h3>
+                        <div class="space-y-10">
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">中川牛ブランドプレミアムしゃぶしゃぶ</h4>
+                                <p class="text-xs text-brand-gray mb-2 leading-loose">
+                                    季節の前菜・近江野菜・肩ロース190g・うどん又はご飯<br>中川牛の洗い・お漬物・季節のデザート</p>
+                                <p class="text-brand-red font-bold text-xl">10,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">近江野菜と特製牛しゃぶしゃぶ</h4>
+                                <p class="text-xs text-brand-gray mb-2">前菜・うどん・デザート</p>
+                                <p class="text-brand-red font-bold text-xl">7,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-2 tracking-wide">近江野菜と中川牛しゃぶしゃぶ</h4>
+                                <p class="text-xs text-brand-gray mb-2">前菜・うどん・デザート</p>
+                                <p class="text-brand-red font-bold text-xl">5,000円 <span
+                                        class="text-xs font-normal text-gray-500">(税抜)</span></p>
+                            </div>
+                            <p class="text-xs text-brand-gray/60 mt-6">＋1,000円で造り、＋500円でうどん、お寿司、雑炊をお選びください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="break-out-full-width py-24 bg-brand-purple text-white mb-20 lg:mb-32">
+            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row gap-8 justify-center items-center text-center">
+                <div class="w-full md:w-1/2">
+                    <p class="text-xs tracking-[0.3em] mb-4 opacity-70">お電話でのご予約・お問い合わせ</p>
+                    <a href="tel:05000000000"
+                        class="block text-3xl lg:text-4xl font-serif tracking-widest hover:text-brand-red transition-colors">050-0000-0000</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <p class="text-xs tracking-[0.3em] mb-4 opacity-70">Webからのご予約</p>
+                    <a href="https://www.google.com/maps/reserve/v/dine/c/CO9kSghI7nE" target="_blank"
+                        class="block w-full py-5 border border-white text-lg tracking-[0.2em] hover:bg-white hover:text-brand-purple transition-colors">
+                        WEB予約・お問い合わせ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="break-out-full-width py-0 overflow-hidden">
+            <div class="swiper gallery-swiper w-full">
+                <div class="swiper-wrapper">
+                    <!-- Images -->
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_01.jpg')">
+                        <img src="./img/gallery_01.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_02.jpg')">
+                        <img src="./img/gallery_02.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_03.jpg')">
+                        <img src="./img/gallery_03.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_04.jpg')">
+                        <img src="./img/gallery_04.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_05.jpg')">
+                        <img src="./img/gallery_05.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                    <div class="swiper-slide w-80 lg:w-[450px] cursor-pointer"
+                        onclick="openModal('./img/gallery_06.jpg')">
+                        <img src="./img/gallery_06.jpg"
+                            class="w-full aspect-[3/2] object-cover hover:opacity-80 transition-opacity" alt="Gallery">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Voice Section -->
+        <section id="voice" class="py-20 lg:py-40 bg-brand-white">
+            <div class="flex justify-center mb-16 lg:mb-32 fade-in-up">
+                <h2
+                    class="writing-vertical-rl text-2xl lg:text-3xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red pl-5 leading-relaxed translate-y-4">
+                    お客様の声
+                </h2>
+            </div>
+
+            <div class="swiper voice-swiper pb-12 fade-in-up">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-stone-50 p-8 h-full flex flex-col items-center text-center">
+                            <img src="./img/voice_01.png" alt=""
+                                class="w-16 h-16 rounded-full object-cover mb-4 grayscale">
+                            <div class="text-brand-red text-xs mb-3">★★★★★</div>
+                            <h4 class="font-bold mb-4 tracking-wider">特別な記念日に</h4>
+                            <p class="text-xs leading-loose text-brand-gray text-justify">
+                                落ち着いた個室で、素晴らしいお料理とサービスを堪能しました。お肉が口の中でとろけました。スタッフの対応も丁寧で、また利用したいと思います。</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-stone-50 p-8 h-full flex flex-col items-center text-center">
+                            <img src="./img/voice_02.png" alt=""
+                                class="w-16 h-16 rounded-full object-cover mb-4 grayscale">
+                            <div class="text-brand-red text-xs mb-3">★★★★★</div>
+                            <h4 class="font-bold mb-4 tracking-wider">ランチで贅沢しました</h4>
+                            <p class="text-xs leading-loose text-brand-gray text-justify">
+                                ランチのコースを頂きましたが、ボリュームもあり大満足です。駅近でアクセスも良く、それでいて店内はとても静かでリラックスできました。</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-stone-50 p-8 h-full flex flex-col items-center text-center">
+                            <img src="./img/voice_03.png" alt=""
+                                class="w-16 h-16 rounded-full object-cover mb-4 grayscale">
+                            <div class="text-brand-gold text-xs mb-3">★★★★☆</div>
+                            <h4 class="font-bold mb-4 tracking-wider">雰囲気最高</h4>
+                            <p class="text-xs leading-loose text-brand-gray text-justify">
+                                静かで大人の雰囲気。接待にも使えそうです。日本酒の種類も豊富でした。料理の出てくるタイミングもちょうどよかったです。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://www.google.com/search?q=%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86%E4%B8%AD%E5%B7%9D%E7%89%9B%E3%81%99%E3%81%84%E3%82%8C%E3%82%93"
+                    target="_blank"
+                    class="text-xs border-b border-brand-gray pb-1 hover:text-brand-red transition-colors tracking-widest">Googleマップで全てのレビューを見る</a>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="break-out-full-width py-24 lg:py-48 relative bg-cover bg-center bg-fixed text-white overflow-hidden"
+            style="background-image: url('./img/message_main.jpg');">
+            <!-- Light Overlay for Readability -->
+            <div class="absolute inset-0 bg-[#FCF9F2]/75 z-0"></div>
+
+            <div class="relative z-10">
+                <div class="flex justify-center mb-16 lg:mb-32 fade-in-up">
+                    <h2
+                        class="writing-vertical-rl text-2xl lg:text-4xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red/40 pl-5 leading-relaxed translate-y-4">
+                        ご挨拶
+                    </h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto px-6 text-center fade-in-up text-brand-charcoal">
+                    <h3
+                        class="text-2xl lg:text-4xl font-serif mb-12 tracking-[0.2em] leading-relaxed text-brand-purple">
+                        近江ならではの味わいを、<br class="hidden lg:block">心ゆくまで
+                    </h3>
+                    <div class="space-y-8 text-base lg:text-lg leading-loose tracking-widest text-brand-gray">
+                        <p>
+                            近江八幡でのお食事に、<br class="lg:hidden">近江ならではの和食をご用意しております。
+                        </p>
+                        <p>
+                            中川牧場直送の特選近江牛をはじめ、<br class="lg:hidden">本格的なすき焼きやお得なランチまで、<br>
+                            座敷の落ち着いた空間でゆっくりとご堪能いただけます。
+                        </p>
+                        <p>
+                            宴会会場をお探しの方や、<br class="lg:hidden">大切なお集まりにもおすすめです。<br>
+                            送迎バスのご用意もあり、<br class="lg:hidden">安心してご利用いただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="py-20 lg:py-40 border-t border-gray-100">
+            <div class="flex justify-center mb-16 lg:mb-32 fade-in-up">
+                <h2
+                    class="writing-vertical-rl text-2xl lg:text-3xl font-serif font-bold tracking-[0.5em] text-brand-purple border-l border-brand-red pl-5 leading-relaxed translate-y-4">
+                    店舗情報
+                </h2>
+            </div>
+
+            <div class="w-full px-6 lg:px-16 fade-in-up">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-0 border border-gray-100 shadow-sm">
+                    <div class="w-full lg:w-1/2 space-y-10 bg-white p-8 lg:p-20">
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 uppercase">Restaurant</p>
+                            <h3 class="text-2xl font-serif tracking-widest border-b pb-4 border-gray-100">日本料理
+                                中川牛すいれん
+                            </h3>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 uppercase">Address</p>
+                            <p class="text-base tracking-wider leading-loose">
+                                〒523-0891<br>滋賀県近江八幡市鷹飼町５５９
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 uppercase">Tel</p>
+                            <p class="text-3xl font-serif tracking-widest">050-0000-0000</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-8 sm:gap-16">
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 uppercase">Open</p>
+                                <p class="text-base tracking-wider leading-relaxed">11:00-14:00<br>17:00-21:00</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 uppercase">Close</p>
+                                <p class="text-base tracking-wider">月曜日</p>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://suiren-omihachiman.com/" target="_blank"
+                                class="inline-block border-b border-brand-charcoal pb-1 hover:text-brand-red hover:border-brand-red transition-colors tracking-widest text-sm">公式ホームページ</a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 h-[350px] lg:h-auto lg:min-h-[400px] flex">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3263.3334273338337!2d136.10223540091917!3d35.123352028447826!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60017bceeb50e2f7%3A0x2a46dd5716283182!2z5pel5pys5paZ55CG5Lit5bed54mb44GZ44GE44KM44KT!5e0!3m2!1sja!2sjp!4v1770172526701!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-brand-white pb-8 text-center">
+            <div class="mb-10">
+                <img src="./img/logo.png" alt="logo" class="h-10 w-auto mx-auto opacity-40 grayscale">
+            </div>
+            <p class="text-[10px] tracking-widest text-gray-400">&copy; 2024 NAKAGAWAGYU SUIREN. All Rights
+                Reserved.
+            </p>
+        </footer>
+
+    </div>
+    <!-- End of Phase 2 -->
+
+
+    <!-- SP Bottom Fixed CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-[60] flex lg:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.05)] text-center">
+        <a href="tel:05000000000"
+            class="w-1/2 bg-brand-white py-4 text-brand-purple border-r border-brand-purple/10 flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest">お電話</span>
+            <span class="font-bold text-sm tracking-wide">050-0000-0000</span>
+        </a>
+        <a href="https://www.google.com/maps/reserve/v/dine/c/CO9kSghI7nE" target="_blank"
+            class="w-1/2 bg-brand-red py-4 text-white flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest">Web予約</span>
+            <span class="font-bold text-sm tracking-wide">Reserve</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop"
+        class="fixed bottom-24 right-5 lg:bottom-12 lg:right-12 z-50 w-10 h-10 border border-gray-200 bg-brand-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:bg-brand-black hover:text-white hover:border-brand-black rounded-full text-lg">
+        ↑
+    </button>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] bg-brand-white/98 hidden flex items-center justify-center p-4">
+        <button
+            class="absolute top-8 right-8 text-brand-black text-4xl font-thin hover:rotate-90 transition-transform duration-500"
+            onclick="closeModal()">×</button>
+        <img id="modalImage" src="" alt="Expanded" class="max-w-full max-h-[85vh] object-contain shadow-2xl">
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./Js/main.js"></script>
+</body>
+
+</html>

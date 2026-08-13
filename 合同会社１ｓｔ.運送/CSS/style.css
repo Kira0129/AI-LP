@@ -1,0 +1,227 @@
+.blob-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFE4E6' d='M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.6,-46.1C91.4,-33.1,98,-16.6,97.6,-0.2C97.2,16.2,89.8,32.4,80,46.1C70.2,59.8,58,71,43.9,78.7C29.8,86.4,14.9,90.6,-0.3,91.2C-15.5,91.7,-31,88.5,-44.6,80.8C-58.2,73.1,-69.9,60.9,-78.9,46.9C-87.9,32.9,-94.2,16.4,-94.1,0.1C-94,-16.2,-87.5,-32.4,-77.8,-45.8C-68.1,-59.2,-55.2,-69.8,-41.2,-77.1C-27.2,-84.4,-13.6,-88.4,0.9,-89.9C15.4,-91.5,30.8,-83.6,44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 80%;
+}
+.pattern-bg {
+    background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+}
+
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* テキスト選択禁止 */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 画像の保存・ドラッグ禁止 */
+img {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+
+/* スライダー用アニメーション (3枚用: 計15秒) */
+@keyframes crossfade {
+    0% { opacity: 0; transform: scale(1); }
+    10% { opacity: 1; }
+    43.33% { opacity: 1; }
+    53.33% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; }
+}
+.slide-bg-1 { animation: crossfade 15s infinite; animation-delay: -1.5s; }
+.slide-bg-2 { animation: crossfade 15s infinite; animation-delay: 5s; opacity: 0; }
+.slide-bg-3 { animation: crossfade 15s infinite; animation-delay: 10s; opacity: 0; }
+
+/* FV 斜め切り抜きカスタムスタイル (Type12ベース) */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(225, 29, 72, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(225, 29, 72, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.hero-diagonal {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 55%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+
+
+.hero-slider-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-accent-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, transparent, #e11d48, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 0 5% 0 8%;
+    max-width: 55%;
+}
+
+@media (min-width: 1025px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 8%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e11d48;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 40px;
+    height: 2px;
+    background: rgba(225, 29, 72, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e11d48;
+    animation: scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim {
+    to { left: 100%; }
+}
+
+/* SVG Animation */
+@keyframes drive {
+    0% { transform: translateX(-150px); }
+    100% { transform: translateX(110vw); }
+}
+@keyframes moveRoad {
+    0% { background-position: 0 0; }
+    100% { background-position: -60px 0; }
+}
+.anim-truck {
+    animation: drive 10s linear infinite;
+}
+.anim-road {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(255,255,255,0.4) 15px, rgba(255,255,255,0.4) 30px);
+    background-size: 60px 2px;
+    animation: moveRoad 0.8s linear infinite;
+}
+
+@media (max-width: 1024px) {
+    .hero-content {
+        max-width: 60%;
+        padding: 0 4% 0 6%;
+    }
+    .hero-diagonal {
+        width: 50%;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: unset;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 60px; /* Header分 */
+    }
+    .hero-accent-line, .hero-scroll { display: none; }
+    .hero-diagonal {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        min-height: 300px;
+        clip-path: none;
+    }
+    .hero-content {
+        padding: 40px 15px 60px;
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    section h2 {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Footer Background Image */
+.footer-bg-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.footer-bg-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: 1;
+}
+
+.footer-bg-img > div {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,144 @@
+/* ベース設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+
+  /* TXT選択禁止 (任意で外しても可) */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  /* スマホ時の固定CTA用の余白 */
+  padding-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* 画像保存・ドラッグ・長押し禁止 */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* スクロール時の多彩なアニメーション */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 画面内に入ったときの共通状態 */
+.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* モバイル用ナビゲーションメニューの開閉 */
+#mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 背景パターンの装飾 (ドット) */
+.bg-pattern {
+  background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+}
+
+/* shadow-soft class for custom soft shadow */
+.shadow-soft {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* 自動ループスライダー用CSS */
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.slider-track:hover {
+  animation-play-state: paused; /* ホバーで一時停止 */
+}
+.slider-slide {
+  width: 160px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .slider-slide {
+    width: 240px;
+    height: 160px;
+  }
+}
+.zoomable-image {
+  pointer-events: auto !important; /* ベースのimg制限を上書き */
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zoomable-image:hover {
+  transform: scale(1.05);
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* 全体の半分の幅移動でループ */
+}
+
+/* FVクロスフェードアニメーション */
+.fv-fade-1 { animation: fv-fade 15s infinite 0s; }
+.fv-fade-2 { animation: fv-fade 15s infinite 5s; }
+.fv-fade-3 { animation: fv-fade 15s infinite 10s; }
+
+@keyframes fv-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  33.33% { opacity: 1; }
+  43.33% { opacity: 0; }
+  100% { opacity: 0; }
+}

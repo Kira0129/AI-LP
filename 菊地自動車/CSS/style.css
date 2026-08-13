@@ -1,0 +1,54 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  padding-bottom: 80px; 
+}
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+}
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+#mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.bg-pattern {
+  background-image: radial-gradient(#0056b3 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.04;
+}
+@keyframes shine {
+  0% { transform: translateX(-150%) skewX(-12deg); }
+  100% { transform: translateX(150%) skewX(-12deg); }
+}

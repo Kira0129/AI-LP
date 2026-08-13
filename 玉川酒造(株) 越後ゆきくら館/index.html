@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉川酒造 越後ゆきくら館 | 魚沼の酒蔵見学</title>
+    <meta name="description"
+        content="魚沼の雪と米が育む、寛文13年創業の酒蔵「玉川酒造」。越後ゆきくら館では、酒造り見学や万年雪の貯蔵庫体験、10種類以上の日本酒試飲を予約不要・無料でお楽しみいただけます。">
+
+    <!-- OGP Tags -->
+    <meta property="og:site_name" content="玉川酒造 越後ゆきくら館 | 魚沼の酒蔵見学">
+    <meta property="og:title" content="玉川酒造 越後ゆきくら館 | 魚沼の酒蔵見学">
+    <meta property="og:description"
+        content="魚沼の雪と米が育む、寛文13年創業の酒蔵「玉川酒造」。越後ゆきくら館では、酒造り見学や万年雪の貯蔵庫体験、10種類以上の日本酒試飲を予約不要・無料でお楽しみいただけます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tamagawa-shuzo.happytry.fun">
+    <meta property="og:image" content="https://tamagawa-shuzo.happytry.fun/img/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts: ゴシック体（本文用）と明朝体（見出し用）を読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['"Zen Kaku Gothic New"', 'sans-serif'], // 基本フォントをゴシック体に
+                        'serif': ['"Zen Old Mincho"', 'serif'] // 見出し用明朝体
+                    },
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-offwhite': '#F8F9FA', /* ほんのりグレーがかった白 */
+                        'brand-navy': '#1D2A4D', /* 和風の深い紺色 */
+                        'brand-gray': '#555555',
+                        'brand-charcoal': '#111111', /* 黒 */
+                    },
+                    spacing: { '18': '4.5rem', '30': '7.5rem' },
+                    letterSpacing: { 'widest-2': '0.2em' }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
+</head>
+
+<body class="font-sans text-brand-gray bg-brand-white antialiased text-[14px] lg:text-[16px]"
+    oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
+    <!-- PC Floating Global Header -->
+    <header id="global-header"
+        class="fixed top-0 left-0 w-full z-[80] bg-brand-white/95 backdrop-blur-md border-b border-brand-navy/10 px-12 py-4 shadow-sm transition-all duration-500 transform -translate-y-full opacity-0 pointer-events-none hidden lg:flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="#">
+                <img src="img/logo.gif" alt="越後ゆきくら館" class="h-[50px] w-auto">
+            </a>
+        </div>
+        <nav class="flex items-center gap-8 text-sm tracking-widest text-brand-charcoal">
+            <a href="#features" class="hover:text-brand-navy transition-colors duration-300">酒蔵見学</a>
+            <a href="#tasting" class="hover:text-brand-navy transition-colors duration-300">試飲銘柄</a>
+            <a href="#information" class="hover:text-brand-navy transition-colors duration-300">ご利用案内</a>
+            <a href="#message" class="hover:text-brand-navy transition-colors duration-300">ご挨拶</a>
+            <a href="#access" class="hover:text-brand-navy transition-colors duration-300">店舗情報</a>
+        </nav>
+        <div class="flex items-center gap-6">
+            <a href="tel:05054487060"
+                class="text-sm tracking-widest text-brand-charcoal hover:text-brand-navy transition-colors font-bold">
+                050-5448-7060
+            </a>
+            <a href="https://tamagawa-shuzo.happytry.fun/jump01.html" target="_blank"
+                class="bg-brand-navy text-white text-xs tracking-widest font-medium py-3 px-6 hover:bg-brand-navy/80 hover:shadow-lg transition-all duration-300 rounded-full shadow-sm">
+                WEBお問い合わせ
+            </a>
+        </div>
+    </header>
+
+    <!-- SP Floating Global Header -->
+    <header id="sp-global-header"
+        class="fixed top-0 left-0 w-full z-[45] bg-brand-white/95 backdrop-blur-md border-b border-brand-navy/10 px-6 py-3 shadow-sm transition-all duration-500 transform -translate-y-full opacity-0 pointer-events-none flex lg:hidden items-center justify-between">
+        <div class="flex items-center">
+            <a href="#">
+                <img src="img/logo.gif" alt="越後ゆきくら館" class="h-[50px] w-auto">
+            </a>
+        </div>
+    </header>
+
+    <!-- SP Hamburger Menu Button -->
+    <header
+        class="block lg:hidden fixed top-0 left-0 w-full z-50 flex justify-end items-center px-6 py-4 pointer-events-none">
+        <button id="hamburger-btn" class="space-y-1.5 focus:outline-none z-50 group pointer-events-auto p-2">
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-transform duration-300 group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-opacity duration-300 group-[.active]:opacity-0"></span>
+            <span
+                class="block w-6 h-px bg-brand-charcoal transition-transform duration-300 group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+        </button>
+    </header>
+
+    <!-- SP Navigation Overlay -->
+    <nav id="sp-nav"
+        class="fixed inset-0 bg-brand-white z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden">
+        <ul class="space-y-6 text-center text-lg font-medium tracking-widest text-brand-charcoal mb-10">
+            <li><a href="#about-sp" class="sp-nav-link block py-2">酒蔵について</a></li>
+            <li><a href="#features" class="sp-nav-link block py-2">酒蔵見学</a></li>
+            <li><a href="#tasting" class="sp-nav-link block py-2">試飲銘柄</a></li>
+            <li><a href="#information" class="sp-nav-link block py-2">ご利用案内</a></li>
+            <li><a href="#message" class="sp-nav-link block py-2">ご挨拶</a></li>
+            <li><a href="#access" class="sp-nav-link block py-2">店舗情報</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ============================================
+       PHASE 1: FV ~ About (Split Layout on PC)
+    ============================================= -->
+    <div class="layout-phase-1">
+
+        <!-- Left Side: Sticky Information -->
+        <aside class="sticky-sidebar hidden lg:flex custom-scrollbar overflow-y-auto">
+            <!-- Top: Vertical Copy -->
+            <div class="flex-none h-auto min-h-[20vh] flex justify-center pt-8 items-center mb-0">
+                <div
+                    class="text-[18px] tracking-[0.15em] text-brand-charcoal border-b-2 border-brand-navy/30 pb-3 px-4 text-center leading-relaxed font-bold font-serif">
+                    魚沼の雪と米が育む、<br>
+                    寛文13年創業の酒蔵へ
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="flex-none h-auto min-h-[15vh] flex items-center justify-center mb-8">
+                <h1 class="text-center">
+                    <img src="img/logo.gif" alt="玉川酒造株式会社 越後ゆきくら館" class="w-72 max-w-full mx-auto">
+                </h1>
+            </div>
+
+            <!-- Bottom: Nav, Button, About Content -->
+            <div class="flex-none h-auto flex flex-col items-center justify-start pb-4">
+                <!-- Vertical Nav -->
+                <nav
+                    class="text-sm tracking-[0.2em] gap-8 mb-12 h-auto flex flex-row items-start justify-center text-brand-charcoal font-medium">
+                    <a href="#features"
+                        class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 relative group whitespace-nowrap">・酒蔵見学</a>
+                    <a href="#tasting"
+                        class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 relative group whitespace-nowrap">・試飲銘柄</a>
+                    <a href="#information"
+                        class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 relative group whitespace-nowrap">・ご利用案内</a>
+                    <a href="#message"
+                        class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 relative group">・ご挨拶</a>
+                    <a href="#access"
+                        class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 relative group whitespace-nowrap">・店舗情報</a>
+                </nav>
+
+                <!-- Reserve Buttons Area -->
+                <div class="flex flex-col gap-5 w-full max-w-[240px] mb-16 flex-none items-center">
+                    <div class="text-center w-full">
+                        <p class="text-[11px] tracking-widest text-brand-gray mb-1">お問い合わせ</p>
+                        <a href="tel:05054487060"
+                            class="block text-xl font-bold tracking-wider text-brand-charcoal hover:text-brand-navy transition-colors">
+                            050-5448-7060
+                        </a>
+                    </div>
+                    <a href="https://tamagawa-shuzo.happytry.fun/jump01.html" target="_blank"
+                        class="block w-full py-3.5 bg-brand-navy text-white text-center tracking-[0.1em] font-bold hover:bg-brand-navy/85 hover:shadow-lg transition-all duration-300 rounded-full shadow-md relative">
+                        WEBお問い合わせ
+                    </a>
+                </div>
+
+                <!-- About Content -->
+                <div id="about-pc" class="relative w-full bg-transparent px-2 text-center pb-20">
+                    <div class="fade-in-up">
+                        <h2
+                            class="text-lg font-serif tracking-widest mb-6 leading-relaxed text-brand-charcoal font-bold">
+                            魚沼の地で、<br>350年以上続く酒造り
+                        </h2>
+                        <div
+                            class="text-[16px] leading-loose tracking-wider space-y-4 text-brand-gray text-justify inline-block text-left">
+                            <p>玉川酒造は、寛文13年、西暦1673年より酒造りを続ける魚沼の酒蔵です。</p>
+                            <p>魚沼産コシヒカリでも知られる自然豊かな土地で、米、水、雪国の気候を活かした日本酒づくりを行っています。</p>
+                            <p>越後ゆきくら館では、酒造りの工程や蔵のこだわりを見学しながら、魚沼で生まれる清酒の魅力を感じていただけます。</p>
+                            <div class="bg-brand-offwhite rounded-xl p-4 mt-6 text-center shadow-sm">
+                                <p class="font-bold text-brand-navy text-[15px]">酒蔵見学は予約不要・無料で、<br>お一人様からご見学可能です。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side: Scroll Content (Images only) -->
+        <div class="scroll-content-area w-full lg:w-[65%]">
+            <!-- SP Only Header Area -->
+            <div class="lg:hidden bg-brand-white py-12 flex flex-col items-center justify-center">
+                <h1 class="text-center">
+                    <img src="img/logo.gif" alt="玉川酒造株式会社 越後ゆきくら館" class="w-60 max-w-full mx-auto">
+                </h1>
+            </div>
+
+            <!-- FV Area: 4 Images Slider -->
+            <section id="fv" class="w-full relative overflow-hidden bg-brand-charcoal lg:rounded-bl-3xl">
+                <div class="swiper fv-swiper w-full h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-full h-full">
+                            <img src="img/fv01.jpg" alt="玉川酒造"
+                                class="w-full h-full object-cover animate-kenburns brightness-90">
+                        </div>
+                        <div class="swiper-slide w-full h-full">
+                            <img src="img/fv02.jpg" alt="ゆきくら"
+                                class="w-full h-full object-cover animate-kenburns brightness-90">
+                        </div>
+                        <div class="swiper-slide w-full h-full">
+                            <img src="img/fv03.jpg" alt="日本酒"
+                                class="w-full h-full object-cover animate-kenburns brightness-90">
+                        </div>
+                        <div class="swiper-slide w-full h-full">
+                            <img src="img/fv04.jpg" alt="魚沼の自然"
+                                class="w-full h-full object-cover animate-kenburns brightness-90">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SP Only Navigation & Reserve Area -->
+            <div class="lg:hidden bg-brand-white flex flex-col items-center">
+                <nav class="pt-10 pb-16 flex justify-center items-start gap-10">
+                    <div
+                        class="flex flex-row-reverse items-start gap-8 text-sm tracking-[0.2em] text-brand-charcoal font-medium">
+                        <a href="#features"
+                            class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 whitespace-nowrap">・酒蔵見学</a>
+                        <a href="#tasting"
+                            class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 whitespace-nowrap">・試飲銘柄</a>
+                        <a href="#information"
+                            class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 whitespace-nowrap">・ご利用案内</a>
+                        <a href="#message"
+                            class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 whitespace-nowrap">・ご挨拶</a>
+                        <a href="#access"
+                            class="writing-vertical-rl hover:text-brand-navy transition-colors py-2 whitespace-nowrap">・店舗情報</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- About Section (Mobile Only) -->
+            <div id="about-sp"
+                class="lg:hidden relative w-full bg-brand-white py-16 px-6 text-center border-t border-gray-100">
+                <div class="fade-in-up">
+                    <div
+                        class="text-[16px] tracking-[0.15em] text-brand-charcoal border-b-2 border-brand-navy/30 pb-3 px-2 text-center leading-relaxed mb-8 font-serif font-bold inline-block">
+                        魚沼の雪と米が育む、<br>
+                        寛文13年創業の酒蔵へ
+                    </div>
+                    <h2
+                        class="text-[18px] font-serif tracking-widest mb-8 leading-relaxed text-brand-charcoal font-bold mt-2">
+                        魚沼の地で、<br>350年以上続く酒造り
+                    </h2>
+                    <div class="text-[14px] leading-loose tracking-wider space-y-4 text-brand-gray text-justify">
+                        <p>玉川酒造は、寛文13年、西暦1673年より酒造りを続ける魚沼の酒蔵です。</p>
+                        <p>魚沼産コシヒカリでも知られる自然豊かな土地で、米、水、雪国の気候を活かした日本酒づくりを行っています。</p>
+                        <p>越後ゆきくら館では、酒造りの工程や蔵のこだわりを見学しながら、魚沼で生まれる清酒の魅力を感じていただけます。</p>
+                        <div class="bg-brand-offwhite rounded-xl p-4 mt-6 text-center shadow-sm">
+                            <p class="font-bold text-brand-navy text-[13px]">酒蔵見学は予約不要・無料で、<br>お一人様からご見学可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       PHASE 2: Recommendation ~ Footer
+    ============================================= -->
+    <div class="layout-phase-2">
+
+        <!-- Recommendation Section -->
+        <section id="recommendation" class="break-out-full-width py-20 lg:py-32 bg-japanese-pattern">
+            <div class="max-w-5xl mx-auto px-6 text-center fade-in-up">
+                <div class="flex flex-col items-center justify-center mb-8 fade-in-up text-center">
+                    <span
+                        class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-2 block uppercase">Recommendation</span>
+                    <h2
+                        class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-3 font-bold">
+                        おすすめ
+                        <span
+                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-[3px] rounded-full bg-brand-navy"></span>
+                    </h2>
+                </div>
+                <h3
+                    class="text-xl md:text-2xl font-serif tracking-widest text-brand-navy mb-8 leading-relaxed font-bold">
+                    魚沼観光の思い出に、<br class="md:hidden">特別な酒蔵体験を。
+                </h3>
+                <p class="text-[14px] lg:text-[16px] tracking-widest mb-6 text-brand-charcoal font-bold">こんな方におすすめです</p>
+
+                <div
+                    class="bg-brand-white p-4 lg:p-8 shadow-sm rounded-2xl border border-brand-navy/10 text-left w-full">
+                    <ul
+                        class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 text-brand-gray tracking-wider text-[14px] lg:text-[16px] font-medium">
+                        <li class="flex items-start gap-3">
+                            <!-- 和風の菱形（ひしがた）SVGアイコン -->
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            魚沼観光で立ち寄れるスポットを<br class="md:hidden">探している方
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            酒蔵見学や日本酒の試飲を楽しみたい方
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            日本酒ができるまでの工程を知りたい方
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            雪国ならではの酒造りに興味がある方
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            受賞歴のある銘柄を飲み比べてみたい方
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                            </svg>
+                            酒蔵限定のお土産や限定酒を<br class="md:hidden">探している方
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Tour Section -->
+        <section id="features" class="py-20 lg:py-32">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                <span class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-3 block uppercase">Features &
+                    Tour</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4 font-bold">
+                    酒蔵見学の魅力
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-[3px] rounded-full bg-brand-navy"></span>
+                </h2>
+            </div>
+
+            <div class="flex flex-col gap-24 max-w-5xl mx-auto px-6 lg:px-0">
+                <!-- Feature 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:flex-1 aspect-[4/3] overflow-hidden bg-brand-offwhite rounded-2xl shadow-sm">
+                        <img src="img/serpic01.jpg" alt="魚沼の自然" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:flex-1 lg:pl-4">
+                        <span
+                            class="inline-block bg-brand-navy/10 text-brand-navy font-bold tracking-wider mb-4 text-sm px-4 py-1.5 rounded-full">こだわり
+                            01</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-6 tracking-wide font-serif leading-relaxed text-brand-charcoal font-bold border-b border-brand-navy/20 pb-4 inline-block">
+                            魚沼の自然を活かした酒造り
+                        </h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify text-[14px] lg:text-[16px]">
+                            豊かな雪、水、米に恵まれた魚沼の地で、長い歴史を受け継ぎながら酒造りを行っています。<br>
+                            土地の恵みを活かした清酒の味わいを、見学や試飲を通してお楽しみいただけます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:flex-1 aspect-[4/3] overflow-hidden bg-brand-offwhite rounded-2xl shadow-sm">
+                        <img src="img/serpic02.jpg" alt="酒造りの工程" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:flex-1 lg:pr-4">
+                        <span
+                            class="inline-block bg-brand-navy/10 text-brand-navy font-bold tracking-wider mb-4 text-sm px-4 py-1.5 rounded-full">こだわり
+                            02</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-6 tracking-wide font-serif leading-relaxed text-brand-charcoal font-bold border-b border-brand-navy/20 pb-4 inline-block">
+                            酒造りの工程を楽しく学べる
+                        </h3>
+                        <p
+                            class="text-brand-gray leading-loose tracking-wider text-justify text-[14px] lg:text-[16px] mb-6">
+                            酒蔵見学では、お米から日本酒ができるまでの流れを知ることができます。<br>
+                            専門的な内容も分かりやすくご案内するため、日本酒に詳しくない方でも楽しみながら見学できます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:flex-1 aspect-[4/3] overflow-hidden bg-brand-offwhite rounded-2xl shadow-sm">
+                        <img src="img/serpic03.jpg" alt="ゆきくら" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full lg:flex-1 lg:pl-4">
+                        <span
+                            class="inline-block bg-brand-navy/10 text-brand-navy font-bold tracking-wider mb-4 text-sm px-4 py-1.5 rounded-full">こだわり
+                            03</span>
+                        <h3
+                            class="text-[20px] lg:text-2xl mb-6 tracking-wide font-serif leading-relaxed text-brand-charcoal font-bold border-b border-brand-navy/20 pb-4 inline-block">
+                            万年雪の貯蔵庫「ゆきくら」見学
+                        </h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify text-[14px] lg:text-[16px]">
+                            玉川酒造の見どころのひとつが、万年雪を利用したお酒の貯蔵庫「ゆきくら」です。<br>
+                            雪国・魚沼ならではの自然を活かした貯蔵庫の中に入り、雪と日本酒が生み出す特別な空間を体感できます。酒蔵見学だけでなく、魚沼らしい観光体験としても大変おすすめです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasting Menu Section -->
+        <section id="tasting"
+            class="break-out-full-width py-20 lg:py-32 relative bg-brand-offwhite border-t border-gray-200">
+            <div class="max-w-5xl mx-auto px-6 lg:px-0 relative z-10">
+                <div class="flex flex-col items-center justify-center mb-16 fade-in-up text-center">
+                    <span class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-3 block uppercase">Tasting</span>
+                    <h2
+                        class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4 font-bold">
+                        試飲できる銘柄
+                        <span
+                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-[3px] rounded-full bg-brand-navy"></span>
+                    </h2>
+                </div>
+
+                <div class="bg-brand-white p-4 lg:p-8 shadow-sm rounded-2xl border border-brand-navy/10 fade-in-up">
+                    <div class="text-center mb-10">
+                        <span
+                            class="inline-block bg-brand-navy text-white font-bold tracking-wider mb-4 text-sm px-6 py-1.5 rounded-full">お楽しみ</span>
+                        <h3 class="text-2xl lg:text-3xl font-serif tracking-wide text-brand-charcoal mb-5 font-bold">
+                            見学後は10種類以上の<br class="md:hidden">お酒を試飲可能
+                        </h3>
+                        <p
+                            class="text-[14px] lg:text-[16px] leading-loose tracking-wider text-brand-gray max-w-2xl mx-auto text-left lg:text-center">
+                            見学後には、10種類以上のお酒を無料で試飲いただけます。<br>
+                            鑑評会で受賞した銘柄や、個性豊かな日本酒・リキュールなど、<br class="hidden lg:block">
+                            玉川酒造ならではの味わいを飲み比べできます。
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch border-t border-brand-navy/10 pt-10">
+                        <!-- 左側：スクロール付きお酒リスト -->
+                        <div
+                            class="w-full lg:w-1/2 h-[320px] overflow-y-auto custom-scrollbar pr-4 text-[14px] lg:text-[16px] tracking-wider text-brand-charcoal font-medium">
+                            <div class="flex flex-col gap-y-4">
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    本醸造 魚沼玉風味
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    吟醸 玉風味
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    大吟醸原酒 越後ゆきくら
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    純米大吟醸 目黒五郎助
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    純米吟醸 イットキー
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    越後武士
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    越後武士梅酒
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    ゆずのお酒 UZ
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    ゆきくら珈琲酒
+                                </div>
+                                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                                    <svg class="w-3 h-3 text-brand-navy flex-shrink-0" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                    </svg>
+                                    <span
+                                        class="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap text-[14px] lg:text-[16px] tracking-tight sm:tracking-normal lg:tracking-wider">しぼりたて玉風味
+                                        無濾過生原酒
+                                        <span
+                                            class="border-2 border-brand-navy text-brand-navy font-bold text-[10px] lg:text-[11px] px-1.5 lg:px-2.5 py-0.5 rounded-full tracking-widest">冬季限定</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 右側：5枚画像の自動ループスライダー -->
+                        <div
+                            class="w-full lg:w-1/2 h-[320px] bg-brand-offwhite rounded-2xl overflow-hidden shadow-inner">
+                            <div class="swiper tasting-swiper w-full h-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide w-full h-full">
+                                        <img src="img/sakepic01.jpg" alt="日本酒" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide w-full h-full">
+                                        <img src="img/sakepic02.jpg" alt="日本酒" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide w-full h-full">
+                                        <img src="img/sakepic03.jpg" alt="日本酒" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide w-full h-full">
+                                        <img src="img/sakepic04.jpg" alt="日本酒" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide w-full h-full">
+                                        <img src="img/sakepic05.jpg" alt="日本酒" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-[14px] lg:text-[16px] text-brand-gray mt-10 tracking-widest font-bold">
+                        日本酒が好きな方はもちろん、<br class="md:hidden">甘みのあるお酒や個性的なお酒を<br class="md:hidden">楽しみたい方にもおすすめです。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Section -->
+        <section id="information" class="break-out-full-width py-20 lg:py-32 bg-japanese-pattern">
+            <div class="flex flex-col items-center justify-center mb-16 fade-in-up text-center">
+                <span class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-3 block uppercase">Information</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4 font-bold">
+                    ご利用案内
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-[3px] rounded-full bg-brand-navy"></span>
+                </h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 fade-in-up">
+                <div class="bg-brand-white shadow-sm rounded-2xl border border-brand-navy/10 p-4 lg:p-8">
+                    <h3
+                        class="text-xl lg:text-2xl font-serif text-brand-charcoal font-bold text-center mb-8 tracking-widest border-b border-brand-navy/10 pb-6">
+                        越後ゆきくら館</h3>
+
+                    <div
+                        class="text-center mb-10 text-white font-bold tracking-widest leading-loose bg-brand-navy py-5 px-2 lg:px-4 rounded-xl shadow-md">
+                        酒蔵見学は<span class="text-yellow-400 text-lg lg:text-xl mx-1 font-black">予約不要・無料</span>です。<br>
+                        お一人様からご見学いただけます。
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-12">
+                        <div class="bg-brand-offwhite py-6 rounded-xl border border-gray-100">
+                            <p class="text-xs font-bold tracking-widest text-brand-navy mb-2">営業時間</p>
+                            <p class="font-serif text-xl font-bold text-brand-charcoal">9:00〜16:00</p>
+                        </div>
+                        <div class="bg-brand-offwhite py-6 rounded-xl border border-gray-100">
+                            <p class="text-xs font-bold tracking-widest text-brand-navy mb-2">見学受付</p>
+                            <p class="font-serif text-xl font-bold text-brand-charcoal">15:30まで</p>
+                        </div>
+                        <div class="bg-brand-offwhite py-6 rounded-xl border border-gray-100">
+                            <p class="text-xs font-bold tracking-widest text-brand-navy mb-2">定休日</p>
+                            <p class="font-serif text-xl font-bold text-brand-charcoal">1月1日</p>
+                            <p class="text-[10px] mt-1 text-brand-gray font-medium">
+                                ※12月～2月は臨時休業の可能性があります。<br>ご来館前にお問い合わせください。</p>
+                        </div>
+                    </div>
+
+                    <p
+                        class="text-left lg:text-center text-[14px] lg:text-[16px] leading-loose tracking-wider text-brand-gray mb-8">
+                        見学後には試飲やお買い物もお楽しみいただけます。<br>
+                        酒蔵でしか買えない限定酒もございますので、魚沼へお越しの際はぜひお立ち寄りください。
+                    </p>
+
+                    <div class="flex justify-center mb-12">
+                        <a href="https://tamagawa-shuzo.happytry.fun/jump02.html" target="_blank"
+                            class="inline-flex items-center justify-center py-4 px-12 lg:px-16 bg-brand-navy text-white text-center tracking-widest text-[16px] lg:text-[18px] font-bold hover:bg-brand-navy/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-full shadow-lg group">
+                            詳しくはこちら
+                            <svg class="w-5 h-5 ml-3 transform group-hover:translate-x-2 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- 自動ループ画像スライダー -->
+                    <div class="w-full mb-12 overflow-hidden">
+                        <div class="swiper info-swiper rounded-xl overflow-hidden">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic01.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic02.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic03.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic04.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic05.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                                <div class="swiper-slide aspect-[4/3] bg-brand-offwhite rounded-xl overflow-hidden">
+                                    <img src="img/informationpic06.jpg" alt="見学風景"
+                                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                                        onclick="openModal(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 注意事項 -->
+                    <div class="bg-brand-offwhite border border-brand-navy/10 rounded-2xl p-4 lg:p-8 text-left mt-8">
+                        <h4
+                            class="text-[14px] lg:text-[16px] font-bold text-brand-charcoal mb-5 flex items-center gap-2 border-b border-brand-navy/10 pb-3">
+                            <svg class="w-5 h-5 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            ご来館前にご確認ください
+                        </h4>
+                        <ul
+                            class="text-[14px] lg:text-[16px] text-brand-gray tracking-wider leading-loose space-y-4 font-medium">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                </svg>
+                                お酒の試飲は20歳以上の方に限ります。
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                </svg>
+                                お車を運転される方、妊娠中・授乳中の方は試飲をご遠慮ください。
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                </svg>
+                                営業時間や見学内容は、状況により変更となる場合がございます。ご来館前に最新情報をご確認いただくと安心です。
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-3.5 h-3.5 text-brand-navy mt-1.5 flex-shrink-0" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M12 2.5L21.5 12L12 21.5L2.5 12L12 2.5Z" />
+                                </svg>
+                                団体でのご来館や詳しい見学内容については、事前のお問い合わせをおすすめします。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="break-out-full-width py-20 lg:py-32 relative bg-brand-charcoal text-white overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0 opacity-70">
+                <img src="img/messagebg.jpg" alt="酒蔵風景" class="w-full h-full object-cover">
+            </div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-brand-navy/60 z-10"></div>
+
+            <div class="relative z-20">
+                <div class="max-w-3xl mx-auto px-6 text-left lg:text-center fade-in-up">
+                    <span class="text-white/80 font-bold tracking-[0.2em] text-sm mb-4 block uppercase">Message</span>
+                    <h3
+                        class="text-[20px] lg:text-3xl font-serif mb-10 tracking-[0.15em] leading-relaxed drop-shadow-md font-bold">
+                        魚沼の酒造りを、<br>見て、知って、味わう時間を
+                    </h3>
+                    <div
+                        class="space-y-6 text-[14px] lg:text-[16px] leading-loose tracking-widest text-white/90 text-justify md:text-center inline-block font-medium">
+                        <p>玉川酒造が大切にしているのは、日本酒のおいしさだけではありません。</p>
+                        <p>魚沼の自然、雪国の知恵、長く受け継がれてきた酒造りの歴史。<br class="hidden lg:block">そのすべてを感じていただける場所が、越後ゆきくら館です。</p>
+                        <p>お米から日本酒ができるまでの工程を見学し、万年雪の貯蔵庫に入り、<br class="hidden lg:block">最後は玉川酒造の銘柄を飲み比べる。</p>
+                        <p class="text-white pt-6 font-bold drop-shadow-sm text-[15px] lg:text-[18px]">
+                            日本酒が好きな方も、観光で訪れる方も、<br>魚沼ならではの酒蔵体験をぜひお楽しみください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta"
+            class="break-out-full-width py-16 lg:py-24 bg-brand-offwhite text-brand-charcoal text-center border-y border-brand-navy/10">
+            <div class="max-w-4xl mx-auto px-6 fade-in-up">
+                <span class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-3 block uppercase">Contact</span>
+                <h2 class="text-2xl lg:text-3xl font-serif tracking-widest text-brand-charcoal mb-10 font-bold">
+                    お問い合わせ
+                </h2>
+
+                <p class="text-[14px] lg:text-[16px] tracking-wider leading-loose text-brand-gray mb-10 font-medium">
+                    団体でのご来館や詳しい見学内容については、<br class="md:hidden">事前のお問い合わせをおすすめします。<br>
+                    皆様のご来館を心よりお待ちしております。
+                </p>
+
+                <div class="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 max-w-3xl mx-auto">
+                    <a href="tel:05054487060"
+                        class="flex flex-col justify-center items-center w-full md:w-1/2 py-5 px-8 bg-white border-2 border-brand-navy text-brand-charcoal text-center hover:bg-brand-navy/5 hover:shadow-lg transition-all duration-300 rounded-full shadow-sm relative group">
+                        <span class="text-[11px] font-bold tracking-widest text-brand-navy mb-1 uppercase">お電話</span>
+                        <span
+                            class="block text-2xl lg:text-3xl font-bold tracking-wider group-hover:text-brand-navy transition-colors">050-5448-7060</span>
+                    </a>
+                    <a href="https://tamagawa-shuzo.happytry.fun/jump01.html" target="_blank"
+                        class="flex flex-col justify-center items-center w-full md:w-1/2 py-5 px-8 bg-brand-navy border-2 border-brand-navy text-white text-center hover:bg-brand-navy/85 hover:shadow-lg transition-all duration-300 rounded-full shadow-sm relative">
+                        <span class="text-[11px] font-bold tracking-widest text-white/80 mb-1 uppercase">Contact
+                            form</span>
+                        <span class="block text-xl lg:text-2xl font-bold tracking-[0.1em]">WEBお問い合わせ</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="pt-20 pb-0 lg:pt-32 lg:pb-0">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center">
+                <span class="text-brand-navy font-bold tracking-[0.2em] text-sm mb-3 block uppercase">Access</span>
+                <h2
+                    class="text-3xl lg:text-4xl font-serif tracking-widest text-brand-charcoal relative inline-block pb-4 font-bold">
+                    店舗情報
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-[3px] rounded-full bg-brand-navy"></span>
+                </h2>
+            </div>
+
+            <div class="w-full px-6 lg:px-0 max-w-5xl mx-auto fade-in-up">
+                <div
+                    class="flex flex-col lg:flex-row shadow-sm border border-brand-navy/10 rounded-2xl overflow-hidden bg-brand-white">
+                    <div class="w-full lg:w-1/2 p-4 lg:p-8 space-y-8 flex flex-col justify-center">
+                        <div>
+                            <p class="text-[11px] font-bold text-brand-navy tracking-widest mb-1 uppercase">Store</p>
+                            <h3 class="text-xl lg:text-2xl font-serif tracking-widest text-brand-charcoal font-bold">
+                                玉川酒造(株) 越後ゆきくら館</h3>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-brand-navy tracking-widest mb-1 uppercase">Address</p>
+                            <p
+                                class="text-[14px] lg:text-[16px] tracking-wider leading-loose text-brand-gray font-medium">
+                                〒946-0216<br>新潟県魚沼市須原１６４３
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-brand-navy tracking-widest mb-1 uppercase">Tel</p>
+                            <p class="text-xl lg:text-2xl font-bold tracking-wider text-brand-charcoal">
+                                <a href="tel:05054487060"
+                                    class="hover:text-brand-navy transition-colors">050-5448-7060</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-brand-navy tracking-widest mb-1 uppercase">Open</p>
+                            <p
+                                class="text-[14px] lg:text-[16px] tracking-wider leading-loose text-brand-gray font-medium">
+                                9:00～16:00 <span class="text-[12px]">（見学最終受付15:30）</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold text-brand-navy tracking-widest mb-1 uppercase">Close</p>
+                            <p
+                                class="text-[14px] lg:text-[16px] tracking-wider leading-loose text-brand-gray font-medium">
+                                1月1日 <br><span class="text-[12px]">※12月～2月は臨時休業の可能性あり（要問合せ）</span>
+                            </p>
+                        </div>
+
+                        <!-- SNS Links -->
+                        <div class="pt-6 border-t border-brand-navy/10 flex gap-4">
+                            <a href="https://tamagawa-shuzo.happytry.fun/jump03.html" target="_blank" rel="noopener"
+                                class="w-12 h-12 rounded-full bg-brand-offwhite flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-colors"
+                                title="公式ホームページ">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                            </a>
+                            <a href="https://tamagawa-shuzo.happytry.fun/jump04.html" target="_blank" rel="noopener"
+                                class="w-12 h-12 rounded-full bg-brand-offwhite flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-colors">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                            </a>
+                            <a href="https://tamagawa-shuzo.happytry.fun/jump05.html" target="_blank" rel="noopener"
+                                class="w-12 h-12 rounded-full bg-brand-offwhite flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-colors">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 h-[350px] lg:h-auto min-h-[400px]">
+                        <!-- 実際の所在地付近のGoogle Maps iframe -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.790479622019!2d139.01880749999998!3d37.3237904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff59f4147c6ac37%3A0xaa42278cce9a967c!2z546J5bed6YWS6YCgKOagqikg6LaK5b6M44KG44GN44GP44KJ6aSo!5e0!3m2!1sja!2sjp!4v1784020918387!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin" class="w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <section class="max-w-4xl mx-auto px-6 lg:px-0 pt-8 pb-20 lg:pt-12 lg:pb-24 fade-in-up">
+            <a href="https://tamagawa-shuzo.happytry.fun/jump06.html" target="_blank" rel="noopener"
+                class="block hover:opacity-90 hover:scale-[1.02] transition-all duration-300 shadow-lg rounded-2xl overflow-hidden">
+                <img src="img/banner.png" alt="オンラインショップ" class="w-full h-auto object-cover">
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="break-out-full-width pb-24 lg:pb-8 text-center pt-12" style="background-color: #1D2A4D;">
+            <div class="mb-6 flex flex-col items-center justify-center">
+                <img src="img/logo.gif" alt="玉川酒造株式会社 越後ゆきくら館" class="w-40 max-w-full mx-auto bg-white/90 p-2 rounded">
+            </div>
+            <p class="text-[10px] tracking-widest text-white/60 mt-6">&copy; Tamagawa Sake Brewery. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+    <!-- End of Phase 2 -->
+
+    <!-- Modal for Image Expansion -->
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] bg-brand-charcoal/95 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModalBtn"
+            class="absolute top-8 right-8 text-white text-4xl font-thin hover:text-brand-navy hover:rotate-90 transition-all duration-500 z-50">×</button>
+        <img id="modalImage" src="" alt="拡大画像" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl">
+    </div>
+
+    <!-- SP Bottom Fixed CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-[60] flex lg:hidden shadow-[0_-10px_20px_rgba(0,0,0,0.05)] text-center">
+        <a href="tel:05054487060"
+            class="w-1/2 bg-brand-white py-4 text-brand-charcoal flex flex-col justify-center items-center hover:bg-gray-50 rounded-tl-2xl border-r border-gray-100">
+            <span class="text-[10px] mb-0.5 tracking-widest font-bold text-brand-navy">お電話</span>
+            <span class="font-bold text-[15px] tracking-wider">050-5448-7060</span>
+        </a>
+        <a href="https://tamagawa-shuzo.happytry.fun/jump01.html" target="_blank"
+            class="w-1/2 bg-brand-navy py-4 text-white flex flex-col justify-center items-center hover:bg-brand-navy/90 transition-colors rounded-tr-2xl">
+            <span class="text-[10px] mb-0.5 tracking-widest font-bold text-white/80">お問い合わせ</span>
+            <span class="font-bold text-[15px] tracking-wider">Contact</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop"
+        class="fixed bottom-24 right-5 lg:bottom-12 lg:right-12 z-50 w-12 h-12 bg-brand-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:bg-brand-navy hover:text-white rounded-full text-xl shadow-lg border border-gray-100 font-bold text-brand-navy">
+        ↑
+    </button>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

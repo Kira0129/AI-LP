@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>株式会社三上工業 | プラント工事 求人特設サイト</title>
+
+  <!-- OGP & Twitter Card -->
+  <meta property="og:title" content="株式会社三上工業 | プラント工事 求人特設サイト">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mikami.happytry.org">
+  <meta property="og:image" content="https://mikami.happytry.org/img/ogp.jpg">
+  <meta property="og:site_name" content="株式会社三上工業">
+  <meta property="og:description" content="未経験からでも挑戦できるプラント工事の仕事。川崎市を拠点に、神奈川・関東エリアの現場を支える仲間を募集しています。">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TDLXB6D7WG');
+  </script>
+
+</head>
+
+<body>
+
+  <header>
+    <a href="#" class="logo"><img src="img/logo.png" alt="株式会社三上工業"></a>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav">
+      <a href="#about">ABOUT</a>
+      <a href="#service">SERVICE</a>
+      <a href="#features">働く特徴</a>
+      <a href="#recruit">募集要項</a>
+      <a href="#message">MESSAGE</a>
+      <a href="tel:05054485151" class="header-contact pc-only">電話で相談</a>
+      <a href="https://mikami.happytry.org/jump01.html" class="header-reserve pc-only" target="_blank">Web応募</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+
+    <!-- Plant Construction SVG Animation Background (Simple & Cool) -->
+    <svg class="fv-svg-layer" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="blurNeon">
+          <feGaussianBlur stdDeviation="4" />
+        </filter>
+      </defs>
+
+      <!-- Minimal Blueprint Grid -->
+      <g opacity="0.03">
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="1" />
+        </pattern>
+        <rect width="1440" height="900" fill="url(#grid)" />
+      </g>
+
+      <!-- Industrial Truss / Scaffolding -->
+      <g stroke="rgba(255, 255, 255, 0.03)" stroke-width="2" fill="none">
+        <path d="M 500 0 L 550 0 L 550 900 L 500 900 Z" />
+        <path
+          d="M 500 50 L 550 100 L 500 150 L 550 200 L 500 250 L 550 300 L 500 350 L 550 400 L 500 450 L 550 500 L 500 550 L 550 600 L 500 650 L 550 700 L 500 750 L 550 800 L 500 850" />
+      </g>
+
+      <!-- Piping Network with Flanges -->
+      <g stroke-linejoin="round" fill="none">
+        <!-- Main thick pipe -->
+        <path d="M 940 250 L 650 250 L 650 650 L 800 650 L 800 900" stroke-width="12" stroke="rgba(45, 63, 86, 0.6)" />
+        <rect x="635" y="235" width="30" height="30" rx="4" fill="rgba(23, 63, 103, 0.8)" stroke="rgba(255,255,255,0.1)"
+          stroke-width="1" />
+        <rect x="635" y="635" width="30" height="30" rx="4" fill="rgba(23, 63, 103, 0.8)" stroke="rgba(255,255,255,0.1)"
+          stroke-width="1" />
+        <rect x="785" y="635" width="30" height="30" rx="4" fill="rgba(23, 63, 103, 0.8)" stroke="rgba(255,255,255,0.1)"
+          stroke-width="1" />
+
+        <!-- Accent cyan pipe -->
+        <path class="fv-pipe-flow" d="M 940 350 L 750 350 L 750 550 L 450 550 L 450 800" stroke-width="3"
+          stroke="rgba(0, 210, 255, 0.3)" />
+        <circle cx="750" cy="350" r="6" fill="rgba(0, 210, 255, 0.5)" />
+        <circle cx="750" cy="550" r="6" fill="rgba(0, 210, 255, 0.5)" />
+        <circle cx="450" cy="550" r="6" fill="rgba(0, 210, 255, 0.5)" />
+      </g>
+
+      <!-- Rotating Industrial Gear/Valve -->
+      <g class="fv-rotate-slow" style="transform-origin: 650px 250px;">
+        <circle cx="650" cy="250" r="50" stroke="rgba(0, 210, 255, 0.2)" stroke-width="8" stroke-dasharray="15 10"
+          fill="none" />
+        <circle cx="650" cy="250" r="35" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2" fill="none" />
+        <circle cx="650" cy="250" r="10" fill="rgba(0, 210, 255, 0.2)" stroke="none" />
+        <path d="M 650 200 L 650 300 M 600 250 L 700 250" stroke="rgba(0, 210, 255, 0.3)" stroke-width="3" />
+      </g>
+
+      <!-- Welding Spark / Pulse -->
+      <circle cx="450" cy="550" r="3" fill="#ffffff" class="fv-spark" filter="url(#blurNeon)" />
+
+      <!-- Minimal Text Elements -->
+      <g font-family="Montserrat, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="4">
+        <text x="1220" y="295">PLANT_ENG</text>
+      </g>
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Plant Construction & Maintenance</div>
+      <h1 class="hero-title">技術を身につけ、<br>現場で必要とされる人材へ</h1>
+      <p class="hero-sub">
+        未経験からでも挑戦できるプラント工事の仕事。<br>
+        川崎市を拠点に、神奈川・関東エリアの<br class="sp-only">現場を支える仲間を募集しています。
+      </p>
+      <div class="hero-cta">
+        <a href="https://mikami.happytry.org/jump01.html" class="btn-primary pc-only" target="_blank">Webから応募する &rarr;</a>
+        <a href="#recruit" class="btn-outline">募集要項を見る &rarr;</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap fade-in">
+      <div class="fv-slider">
+        <img src="img/fv01.jpg" alt="プラント工事現場イメージ1" class="fv-slide">
+        <img src="img/fv02.jpg" alt="プラント工事現場イメージ2" class="fv-slide">
+        <img src="img/fv03.jpg" alt="プラント工事現場イメージ3" class="fv-slide">
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>Scroll
+    </div>
+
+    <div class="hero-ticker">
+      <div class="hero-ticker-inner">
+        <span>Plant Construction</span><span class="dot">·</span>
+        <span>Maintenance</span><span class="dot">·</span>
+        <span>Welding</span><span class="dot">·</span>
+        <span>Kawasaki Area</span><span class="dot">·</span>
+        <span>Mikami Kogyo</span><span class="dot">·</span>
+        <span>Plant Construction</span><span class="dot">·</span>
+        <span>Maintenance</span><span class="dot">·</span>
+        <span>Welding</span><span class="dot">·</span>
+        <span>Kawasaki Area</span><span class="dot">·</span>
+        <span>Mikami Kogyo</span><span class="dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-text-block fade-in">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title-ja">株式会社三上工業について</h2>
+      <p class="about-text">
+        株式会社三上工業は、神奈川県川崎市を拠点に、プラント工事・設備修繕工事を行っている会社です。<br>
+        工場や設備に関わる現場を中心に、安全を第一に考えた施工を大切にしています。<br><br>
+        現場では、チームで声を掛け合いながら一つひとつの作業を丁寧に進めています。<br>
+        経験者はもちろん、未経験から技術を身につけたい方も歓迎しています。<br><br>
+        手に職をつけたい方、安定した環境で働きたい方、将来に向けて成長したい方は、ぜひ私たちと一緒に働きませんか。
+      </p>
+    </div>
+    <div class="about-visual fade-in">
+      <div class="about-diagram">
+        <div class="about-image-wrap">
+          <img src="img/aboutpic.jpg" alt="三上工業の現場作業">
+          <div class="orbit-nodes-overlay">
+            <div class="orbit-node active">プラント工事</div>
+            <div class="orbit-node">設備修繕</div>
+            <div class="orbit-node active">製缶・溶接</div>
+            <div class="orbit-node">設計管理</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="features-section">
+    <div class="section-label" style="color: rgba(255,255,255,0.7);">Our Service</div>
+    <h2 class="section-title-ja">業務内容</h2>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <span class="feature-num">01</span>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+          <path d="M17 18h1"></path>
+          <path d="M12 18h1"></path>
+          <path d="M7 18h1"></path>
+        </svg>
+        <h4>プラント工事</h4>
+        <p>工場や各種設備に関わるプラント工事を行っています。<br>機械設備や現場状況に合わせて、必要な施工を安全に進めていきます。</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <span class="feature-num">02</span>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+          </path>
+        </svg>
+        <h4>設備修繕工事</h4>
+        <p>工場内設備や各種設備の補修・修繕に対応しています。<br>不具合箇所の修理や部品交換など、現場の状況に応じた作業を行います。</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <span class="feature-num">03</span>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+          </path>
+        </svg>
+        <h4>製缶・溶接作業</h4>
+        <p>現場で必要となる製作物や補修作業にも対応しています。<br>溶接や加工の技術を活かし、設備を支える重要な作業を行います。</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <span class="feature-num">04</span>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        <h4>設計・施工管理</h4>
+        <p>現場作業だけでなく、設計や管理業務にも対応しています。<br>工事全体を安全かつ円滑に進めるため、現場を支える役割です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section fade-in">
+    <div class="partner-container">
+      <div class="partner-content">
+        <h2>工事のご依頼・協力会社様へ</h2>
+        <p>
+          三上工業では、プラント工事・設備修繕工事を中心に、現場状況に合わせた柔軟な対応を行っています。<br>
+          工場設備の補修、各種修繕、製缶・溶接作業など、関東エリアで工事をご検討中の企業様はお気軽にご相談ください。<br><br>
+          また、共に現場を支えてくださる協力会社様も募集しています。<br>
+          安全を大切にしながら、より良い施工を目指せるパートナー様からのお問い合わせをお待ちしております。
+        </p>
+        <a href="https://mikami.happytry.org/jump02.html" target="_blank" class="partner-btn">
+          <span>お問い合わせはこちら</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="partner-image">
+        <img src="img/partnerpic.jpg" alt="協力会社募集">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="features" class="service">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title-ja">三上工業で働く特徴</h2>
+
+    <div class="service-grid">
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/serpic01.jpg" alt="未経験から技術を学べる" class="svc-img-01">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">01</span>
+          <h3 class="svc-title">未経験から技術を学べる</h3>
+          <p class="svc-desc">入社時に特別な経験がなくても問題ありません。<br>最初は先輩スタッフのサポートを受けながら、道具の使い方や現場での動き方を少しずつ覚えていきます。</p>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/serpic02.jpg" alt="資格取得をサポート">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">02</span>
+          <h3 class="svc-title">資格取得をサポート</h3>
+          <p class="svc-desc">現場で必要となる資格取得を会社がサポートしています。<br>資格を取得することで、できる仕事の幅が広がり、スキルアップにもつながります。</p>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/serpic03.jpg" alt="頑張りをしっかり評価">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">03</span>
+          <h3 class="svc-title">頑張りをしっかり評価</h3>
+          <p class="svc-desc">技術や資格、現場での頑張りは給与にも反映されます。<br>経験を積みながら、自分の成長を実感できる環境です。</p>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/serpic04.jpg" alt="若手メンバーも活躍中">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">04</span>
+          <h3 class="svc-title">若手メンバーも活躍中</h3>
+          <p class="svc-desc">三上工業では、若手スタッフも前向きに活躍しています。<br>「手に職をつけたい」「将来独立したい」「一流の職人を目指したい」など、それぞれの目標に向かって成長できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recruit" class="recruit-section">
+    <div class="recruit-content">
+      <div class="section-label">Recruit Information</div>
+      <h2 class="section-title-ja">募集要項</h2>
+
+      <table class="recruit-table fade-in">
+      <tbody>
+        <tr>
+          <th>募集職種</th>
+          <td>
+            <ul>
+              <li>現場作業スタッフ</li>
+              <li>設備補修作業員</li>
+              <li>設計施工管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>業務内容</th>
+          <td>プラント工事、設備修繕工事、その他工事、設計・管理業務などをお任せします。<br>未経験の方は、現場での補助作業からスタートし、少しずつ技術や知識を身につけていただきます。</td>
+        </tr>
+        <tr>
+          <th>勤務地</th>
+          <td>川崎市をメインに神奈川エリア<br>関東圏内の現場に対応<br><small style="color:var(--text-muted);">※現場により異なります。</small></td>
+        </tr>
+        <tr>
+          <th>給与</th>
+          <td>
+            <strong>未経験：日給12,000円〜</strong><br>
+            <strong>経験者：月給相談可</strong><br>
+            <small style="color:var(--text-muted);">※経験・能力・資格を考慮します。</small>
+          </td>
+        </tr>
+        <tr>
+          <th>勤務時間</th>
+          <td>8:00〜17:00 <small style="color:var(--text-muted);">※現場により変動あり</small></td>
+        </tr>
+        <tr>
+          <th>休日</th>
+          <td>日曜・その他<br><small style="color:var(--text-muted);">※会社カレンダーによる</small></td>
+        </tr>
+        <tr>
+          <th>保険関係</th>
+          <td>完備</td>
+        </tr>
+        <tr>
+          <th>福利厚生</th>
+          <td>資格取得サポート<br>社宅相談可<br>社内教育制度あり</td>
+        </tr>
+        <tr>
+          <th>雇用形態</th>
+          <td>正社員 <small style="color:var(--text-muted);">※試用期間3ヶ月あり</small></td>
+        </tr>
+        <tr>
+          <th>応募条件</th>
+          <td>やる気・向上心のある方<br>未経験OK<br>経験者優遇</td>
+        </tr>
+        <tr>
+          <th>昇給</th>
+          <td>あり（年1回）</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="message" class="message-section">
+    <div class="message-img fade-in">
+      <img src="img/messagepic.jpg" alt="メッセージ">
+    </div>
+    <div class="message-content fade-in">
+      <div class="section-label">Message</div>
+      <h3>プラント工事や設備修繕工事は、<br>工場や設備を安全に動かすために<br class="sp-only">欠かせない仕事です。</h3>
+      <p>
+        一つひとつの作業が、現場の安全やお客様からの信頼につながります。
+      </p>
+      <p>
+        三上工業では、経験よりも「成長したい」という気持ちを大切にしています。<br>
+        未経験の方には基礎から丁寧に指導し、経験者の方にはこれまでの技術を活かせる環境をご用意しています。
+      </p>
+      <p>
+        技術を身につけたい方、安定して働きたい方、将来に向けて一歩踏み出したい方。<br>
+        私たちと一緒に、現場で必要とされる人材を目指しましょう。
+      </p>
+    </div>
+  </section>
+
+
+  <section id="contact" class="contact-banner">
+    <div class="contact-content fade-in">
+      <div class="section-label" style="justify-content: center; color: rgba(255,255,255,0.7);">Contact & Entry</div>
+      <h2 class="contact-title">未経験からでも挑戦できます。<br>まずはお気軽にご応募ください。</h2>
+      <p class="contact-lead">経験者・有資格者も歓迎。<br class="sp-only">これまでの技術を活かして働きませんか。<br>工事のご相談・協力会社様からの<br
+          class="sp-only">お問い合わせも受け付けています。</p>
+
+      <div class="contact-btns">
+        <a href="tel:05054485151" class="cta-btn btn-tel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.29-2.29a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <div class="cta-btn-text">
+            <span>お電話でのお問い合わせ</span>
+            <small>050-5448-5151</small>
+          </div>
+        </a>
+        <a href="https://mikami.happytry.org/jump01.html" class="cta-btn btn-web" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <div class="cta-btn-text">
+            <span>Webから応募する</span>
+            <small>GATEN職 求人ページへ</small>
+          </div>
+        </a>
+        <a href="https://mikami.happytry.org/jump02.html" class="cta-btn btn-web" target="_blank" style="min-width: 200px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <div class="cta-btn-text">
+            <span>HPから問い合わせ</span>
+            <small>公式コンタクトフォーム</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner fade-in">
+      <div class="footer-brand">
+        <a href="#" class="logo"><img src="img/logo.png" alt="株式会社三上工業"></a>
+        <div class="company-info">
+          <strong>【本社住所】</strong><br class="sp-only"> 〒212-0021 神奈川県川崎市幸区都町６１−１<br><br class="sp-only">
+          <strong>【電話番号】</strong><br class="sp-only"> <a href="tel:05054485151" style="color: inherit; text-decoration: none;">050-5448-5151</a><br><br class="sp-only">
+          <strong>【営業時間】</strong><br class="sp-only"> 8:00-17:00<br><br class="sp-only">
+          <strong>【定休日】</strong><br class="sp-only"> 日曜
+        </div>
+        <div class="sns-links">
+          <a href="https://mikami.happytry.org/jump03.html" class="sns-btn" target="_blank"
+            style="display: inline-flex; align-items: center; gap: 8px; justify-content: center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" width="18" height="18">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            ホームページ
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12986.711928334476!2d139.6879232!3d35.5369546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018612b046abcad%3A0x627da4af1d5238d8!2z5qCq5byP5Lya56S-5LiJ5LiK5bel5qWt!5e0!3m2!1sja!2sjp!4v1781502226702!5m2!1sja!2sjp"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Mikami Kogyo All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA for SP -->
+  <div class="sticky-cta">
+    <a href="tel:05054485151" class="sticky-btn sticky-tel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.29-2.29a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      電話で応募
+    </a>
+    <a href="https://mikami.happytry.org/jump01.html" class="sticky-btn sticky-web" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      Webから応募
+    </a>
+  </div>
+
+  <!-- Page Top Button -->
+  <a href="#" class="page-top" id="page-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パソコン出張修理 AiDER | 八王子・京王堀之内エリアのPCトラブル解決</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- OGP -->
+  <meta property="og:title" content="パソコン出張修理 AiDER | 八王子・京王堀之内エリアのPCトラブル解決">
+  <meta property="og:description" content="八王子・京王堀之内を中心にパソコン出張修理サービスを提供。最短30分で駆けつけ、専門用語を使わずに分かりやすくサポートします。診断・お見積もり無料。">
+  <meta property="og:image" content="https://pc-aider.happytry.org/img/ogp.jpg">
+  <meta property="og:url" content="https://pc-aider.happytry.org">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="パソコン出張修理 AiDER">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="パソコン出張修理 AiDER | 八王子・京王堀之内エリアのPCトラブル解決">
+  <meta name="twitter:description" content="八王子・京王堀之内を中心にパソコン出張修理サービスを提供。最短30分で駆けつけ、専門用語を使わずに分かりやすくサポートします。">
+  <meta name="twitter:image" content="https://pc-aider.happytry.org/img/ogp.jpg">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TDLXB6D7WG');
+  </script>
+  <script>
+    // Disable right-click
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo">AiDER<span>.</span></a>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="nav">
+      <a href="#about">AiDERについて</a>
+      <a href="#service">3つの特徴</a>
+      <a href="#menu">料金メニュー</a>
+      <a href="#plans">会員プラン</a>
+      <a href="#access">店舗情報</a>
+      <a href="#contact" class="header-contact">無料相談</a>
+      <a href="https://pc-aider.happytry.org/jump01.html" class="header-reserve" target="_blank">Web予約</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+
+    <!-- SVG Animation Background -->
+    <svg class="fv-svg-layer" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.9" />
+          <stop offset="60%" stop-color="#0057b8" stop-opacity="0.5" />
+          <stop offset="100%" stop-color="#0057b8" stop-opacity="0" />
+        </radialGradient>
+        <filter id="blur12">
+          <feGaussianBlur stdDeviation="12" />
+        </filter>
+        <filter id="blur2">
+          <feGaussianBlur stdDeviation="2" />
+        </filter>
+      </defs>
+
+      <g class="fv-ring-outer">
+        <circle cx="1120" cy="432" r="340" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+        <circle cx="1120" cy="432" r="338" fill="none" stroke="rgba(100,160,255,0.1)" stroke-width="0.5" />
+      </g>
+      <g class="fv-ring-mid">
+        <circle cx="1120" cy="432" r="260" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"
+          stroke-dasharray="6 18" />
+        <circle cx="1120" cy="432" r="256" fill="none" stroke="rgba(74,158,255,0.3)" stroke-width="1" />
+      </g>
+      <g class="fv-ring-inner">
+        <circle cx="1120" cy="432" r="175" fill="none" stroke="rgba(100,160,255,0.2)" stroke-width="1.5"
+          stroke-dasharray="3 10" />
+      </g>
+      <g class="fv-ring-accent">
+        <circle cx="1120" cy="432" r="110" fill="none" stroke="rgba(100,160,255,0.3)" stroke-width="1"
+          stroke-dasharray="2 6" />
+        <circle cx="1120" cy="322" r="5" fill="#4a9eff" opacity="1" filter="url(#blur2)" />
+      </g>
+      <g class="fv-core">
+        <circle cx="1120" cy="432" r="70" fill="url(#coreGlow)" opacity="0.6" filter="url(#blur12)" />
+        <circle cx="1120" cy="432" r="12" fill="rgba(255,255,255,0.15)" />
+        <circle cx="1120" cy="432" r="4" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g class="fv-dots">
+        <circle cx="820" cy="200" r="3" fill="rgba(100,180,255,0.6)" />
+        <circle cx="950" cy="680" r="3.5" fill="rgba(100,180,255,0.5)" />
+        <circle cx="700" cy="350" r="2" fill="rgba(255,255,255,0.3)" />
+      </g>
+      <g class="fv-lines" stroke="rgba(100,160,255,0.2)" stroke-width="1">
+        <line x1="750" y1="100" x2="900" y2="180" />
+        <line x1="1200" y1="750" x2="1380" y2="820" />
+      </g>
+      <g class="fv-arc">
+        <path d="M 1120 432 m -220 0 a 220 220 0 0 1 110 -190" fill="none" stroke="rgba(74,158,255,0.5)"
+          stroke-width="1.5" stroke-linecap="round" />
+      </g>
+      <g font-family="Montserrat, sans-serif" font-size="10" fill="rgba(255,255,255,0.2)" letter-spacing="2">
+        <text x="1030" y="248" text-anchor="middle">PC REPAIR</text>
+        <text x="1220" y="628" text-anchor="middle">SUPPORT</text>
+      </g>
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">On-site PC Repair Service</div>
+      <h1 class="hero-title">パソコンの困ったを、<br>早く・安く、すぐ解決</h1>
+      <p class="hero-sub">
+        専門用語は使わず、<br class="sp-only">丁寧にわかりやすくご説明いたします。<br>
+        出張対応で、ご自宅にいながら<br class="sp-only">安心してご相談いただけます。
+      </p>
+      <div class="hero-cta">
+        <a href="https://pc-aider.happytry.org/jump01.html" class="btn-primary" target="_blank">Web予約・相談はこちら &rarr;</a>
+        <a href="#menu" class="btn-outline">料金メニューを見る &rarr;</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap fade-in">
+      <img src="img/hero_image.jpg" alt="AiDER Hero Image">
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>Scroll
+    </div>
+
+    <div class="hero-ticker">
+      <div class="hero-ticker-inner">
+        <span>PC Repair Service</span><span class="dot">·</span>
+        <span>On-site Support</span><span class="dot">·</span>
+        <span>Data Recovery</span><span class="dot">·</span>
+        <span>Hachioji Area</span><span class="dot">·</span>
+        <span>AiDER</span><span class="dot">·</span>
+        <span>PC Repair Service</span><span class="dot">·</span>
+        <span>On-site Support</span><span class="dot">·</span>
+        <span>Data Recovery</span><span class="dot">·</span>
+        <span>Hachioji Area</span><span class="dot">·</span>
+        <span>AiDER</span><span class="dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TROUBLE -->
+  <section id="trouble" class="trouble">
+    <div class="trouble-bg-circuit">
+      <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="transparent" />
+            <stop offset="50%" stop-color="var(--blue)" />
+            <stop offset="100%" stop-color="transparent" />
+          </linearGradient>
+        </defs>
+        <g class="circuits" stroke="var(--blue)" stroke-width="1.5" fill="none" opacity="0.6">
+          <path d="M 100,200 H 300 V 400 H 500 V 100 H 800 V 300" />
+          <path d="M 900,100 V 400 H 700 V 600 H 200 V 800" />
+          <path d="M 100,900 H 400 V 700 H 600 V 900 H 900" />
+          <path d="M 500,500 L 600,600 L 500,700 L 400,600 Z" />
+        </g>
+        <g class="nodes" fill="var(--blue)">
+          <circle cx="100" cy="200" r="4" />
+          <circle cx="300" cy="400" r="4" />
+          <circle cx="500" cy="100" r="4" />
+          <circle cx="800" cy="300" r="4" />
+          <circle cx="900" cy="100" r="4" />
+          <circle cx="200" cy="800" r="4" />
+          <circle cx="600" cy="900" r="4" />
+        </g>
+        <circle class="pulse-node" cx="500" cy="500" r="6" fill="var(--blue)" />
+      </svg>
+    </div>
+    <div class="container fade-in">
+      <div class="section-label">PC Troubles</div>
+      <h2 class="section-title-ja">こんなことありませんか？</h2>
+      <div class="trouble-grid">
+        <div class="trouble-item">電源が入らない、突然落ちる、<br class="sp-only">起動が遅い</div>
+        <div class="trouble-item">途中でフリーズする、<br class="sp-only">画面が真っ暗のまま映らない</div>
+        <div class="trouble-item">インターネットに接続できない</div>
+        <div class="trouble-item">メールの送受信ができない</div>
+        <div class="trouble-item">ウイルス感染を知らせる画面が出た</div>
+        <div class="trouble-item">偽の警告表示が出た<br class="sp-only">（サポート詐欺など）</div>
+        <div class="trouble-item">データが消えた、パスワードを忘れた</div>
+        <div class="trouble-item">エラーメッセージが出る、<br class="sp-only">音が出ない、文字入力がおかしい</div>
+        <div class="trouble-item">パソコンの基本的な使い方が分からない</div>
+        <div class="trouble-item">初期設定や各種設定方法が分からない</div>
+      </div>
+      <div class="trouble-footer">
+        <p>パソコンのお困りごと<br class="sp-only">何でもご相談ください</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-text-block fade-in">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title-ja">八王子を拠点とする、<br>地域密着型の出張修理</h2>
+      <p class="about-text">
+        八王子市の京王堀之内駅を中心に、パソコンやプリンター、スマートフォンなどの機器トラブルを訪問で解決する出張修理店です。<br><br>
+        動作が遅い、起動しない、インターネットに繋がらないといった日常的な不具合から、液晶破損や部品交換まで幅広く対応しております。<br><br>
+        通勤や在宅ワークで時間のとれないビジネスパーソンの方、機械操作に不安のある方など、すべてのお客様が安心してデジタル機器を使えるよう、迅速かつ柔軟にお手伝いいたします。
+      </p>
+    </div>
+    <div class="about-visual fade-in">
+      <div class="about-diagram">
+        <div class="about-image-wrap">
+          <img src="img/about_image.jpg" alt="AiDERの出張修理">
+          <div class="orbit-nodes-overlay">
+            <div class="orbit-node active">修理・設定</div>
+            <div class="orbit-node">データ復旧</div>
+            <div class="orbit-node active">出張サポート</div>
+            <div class="orbit-node">レクチャー</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service" class="service">
+    <div class="section-label">Service Features</div>
+    <h2 class="section-title-ja">AiDERの3つの特徴</h2>
+
+    <div class="service-grid">
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/feature_speed.jpg" alt="スピード対応">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">01</span>
+          <h3 class="svc-title">最短30分で駆けつける<br class="sp-only">スピード対応</h3>
+          <p class="svc-desc">
+            お電話一本で、対応エリア内へ最短30分ほどでお伺いいたします。<br>ご訪問から作業完了まで最短当日中から翌日でのスピーディーな修理を実現し、急なトラブルによるストレスや業務の遅れを最小限に抑えます。<br>営業時間外や日曜日の対応も柔軟にご相談を承ります。
+          </p>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/feature_price.jpg" alt="無料見積もり">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">02</span>
+          <h3 class="svc-title">お見積もり無料と<br class="sp-only">良心的な修理価格</h3>
+          <p class="svc-desc">
+            出張での点検・診断・お見積もりはすべて無料で対応いたします。<br>修理にかかる費用を事前にお伝えし、ご納得いただいてから作業に入るため、後から不透明な追加費用が発生する心配はありません。<br>メーカーや家電量販店よりもお安く、お財布に優しい価格設定をお約束します。
+          </p>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="svc-image">
+          <img src="img/feature_support.jpg" alt="分かりやすい説明">
+        </div>
+        <div class="svc-content">
+          <span class="svc-num">03</span>
+          <h3 class="svc-title">専門用語を使わない<br class="sp-only">分かりやすい説明</h3>
+          <p class="svc-desc">
+            機械に不慣れなシニア層のお客様にも安心してご利用いただけるよう、専門用語を極力避けた丁寧なご説明を徹底しています。<br>どのような状況で、なぜその修理が必要なのかをしっかりと共有し、事前の電話やLINEでの無料相談から作業完了まで、不安を残さないサポートを行います。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu-section">
+    <div class="menu-intro fade-in">
+      <div class="section-label" style="justify-content:center;">Menu & Pricing</div>
+      <h2 class="section-title-ja">料金メニュー</h2>
+      <h3>相談・診断・見積もり無料！</h3>
+      <p>パソコン、プリンター等が調子悪い・<br class="sp-only">インターネットに繋がらない・途切れる等、<br>パソコン関連のお困り事は、<br
+          class="sp-only">今すぐお電話ください。<br>最短当日〜2日程度で修理可能です。<br><small style="color:#999;">（※自作PCは非対応となります。）</small></p>
+    </div>
+
+    <div class="area-box fade-in">
+      <div class="area-box-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>出張エリア・料金</span>
+      </div>
+      <div class="area-box-content">
+        <p>八王子市<strong>京王堀之内駅</strong>から片道1時間圏内ぐらいを想定しております。</p>
+        <p>基本出張料：<strong>3,300円</strong> <span class="highlight">片道10分圏内は出張料無料！</span></p>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Category 1 -->
+      <div class="menu-category fade-in">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          Windowsシステム
+        </h4>
+        <ul class="menu-list">
+          <li><span>Windows11アップグレード</span> <span>11,000円</span></li>
+          <li><span>遠隔操作修理・サポート</span> <span>2,200円〜</span></li>
+          <li><span>システム修復</span> <span>3,300円〜</span></li>
+          <li><span>リカバリー</span> <span>15,000円</span></li>
+          <li><span>クリーンインストール</span> <span>11,000円</span></li>
+          <li><span>Windowsアップデート</span> <span>3,300円〜</span></li>
+          <li><span>ウイルス・マルウェア駆除</span> <span>3,300円〜</span></li>
+          <li><span>ログインパスワード解除</span> <span>3,300円〜</span></li>
+          <li><span>アカウント取得・再設定</span> <span>5,500円</span></li>
+        </ul>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="menu-category fade-in">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+            </path>
+          </svg>
+          部品修理
+        </h4>
+        <ul class="menu-list">
+          <li><span>SSD交換セット</span> <span>18,000円+部品代</span></li>
+          <li><span>メモリ増設・交換</span> <span>3,300円+部品代</span></li>
+          <li><span>冷却ファン交換</span> <span>5,500円+部品代</span></li>
+          <li><span>液晶パネル交換</span> <span>11,000円〜+部品代</span></li>
+          <li><span>キーボード交換</span> <span>5,500円〜+部品代</span></li>
+          <li><span>ヒンジ破損修理</span> <span>8,800円〜</span></li>
+          <li><span>分解代(普)</span> <span>5,500円</span></li>
+          <li><span>分解代(中)</span> <span>8,800円</span></li>
+          <li><span>分解代(高)</span> <span>12,000円</span></li>
+          <li><span>外付けキーボード設定</span> <span>500円〜2,000円</span></li>
+        </ul>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="menu-category fade-in">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          データ関係
+        </h4>
+        <ul class="menu-list">
+          <li><span>データバックアップ</span> <span>5,500円〜</span></li>
+          <li><span>データ移行</span> <span>8,800円〜</span></li>
+          <li><span>データ救出</span> <span>11,000円〜</span></li>
+          <li><span>データ復旧</span> <span>30,000円〜</span></li>
+          <li><span>データバックアップ設定</span> <span>11,000円〜</span></li>
+          <li><span>バックアップシステム構築</span> <span>15,000円〜</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-footer fade-in">
+      <a href="https://pc-aider.happytry.org/jump07.html" class="btn-menu-more" target="_blank">詳しい料金メニューはこちら &rarr;</a>
+      <p class="tax-note">※表示価格はすべて税別です。</p>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="plans-section">
+    <div class="section-label">Support Member</div>
+    <h2 class="section-title-ja">サポート会員 受付中</h2>
+    <p class="plans-desc">
+      月額制の会員プランで、出張サポートや各種サービスをお得にご利用いただけます。<br>
+      プランに応じて、無料回数や割引内容が異なります。いざという時の安心のためにぜひご検討ください。
+    </p>
+
+    <div class="plans-grid">
+      <div class="plan-card plan-bronze fade-in">
+        <h4>ブロンズ会員</h4>
+        <div class="plan-price">1,500<span>円 /月</span></div>
+        <ul class="plan-features">
+          <li>出張サポート：月1回無料</li>
+          <li>レクチャー：1回無料</li>
+          <li>遠隔サポート：1回無料</li>
+        </ul>
+      </div>
+
+      <div class="plan-card plan-silver fade-in">
+        <h4>シルバー会員</h4>
+        <div class="plan-price">2,000<span>円 /月</span></div>
+        <ul class="plan-features">
+          <li>出張サポート：月2回無料</li>
+          <li>レクチャー：2回無料</li>
+          <li>遠隔サポート：2回無料</li>
+        </ul>
+      </div>
+
+      <div class="plan-card plan-gold fade-in">
+        <h4>ゴールド会員</h4>
+        <div class="plan-price">3,000<span>円 /月</span></div>
+        <ul class="plan-features">
+          <li>出張サポート：月3回無料</li>
+          <li>レクチャー：3回無料</li>
+          <li>遠隔サポート：3回無料</li>
+          <li><strong>作業料：10%割引</strong></li>
+        </ul>
+      </div>
+
+      <div class="plan-card plan-platinum fade-in">
+        <h4>プラチナ会員</h4>
+        <div class="plan-price">5,000<span>円 /月</span></div>
+        <ul class="plan-features">
+          <li>出張サポート：<strong>月5回無料</strong></li>
+          <li>レクチャー：<strong>無料 (無制限)</strong></li>
+          <li>遠隔サポート：月5回無料</li>
+          <li><strong>作業料：20%割引</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="plan-note">※クレジットカード登録制となります。<br>※表示価格はすべて税別です。</p>
+  </section>
+
+  <!-- VOICE -->
+  <section class="voice-section">
+    <div class="section-label">Customer's Voice</div>
+    <h2 class="section-title-ja">お客様の声</h2>
+
+    <div class="voice-grid">
+      <div class="voice-card fade-in">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-content">
+          <p class="voice-text">中古パソコンを探してましたが、貴社に出会え、良い品とご縁で良かったです。とても親切でした。これから頑張ります。</p>
+          <button class="voice-toggle">続きを読む</button>
+        </div>
+        <div class="voice-author">木田恭子 様</div>
+      </div>
+
+      <div class="voice-card fade-in">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-content">
+          <p class="voice-text">
+            OUTlookの作動不良によりメール送受信が出来なくなり困っていたところ、貴社に対応をお願いしましたら、迅速な対応と的確な処理をして頂きとても助かりました。今後もどうぞ、宜しくお願い致します。</p>
+          <button class="voice-toggle">続きを読む</button>
+        </div>
+        <div class="voice-author">芝田幹生 様</div>
+      </div>
+
+      <div class="voice-card fade-in">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-content">
+          <p class="voice-text">地元の業者さんで、最短で対処して頂け、助かりました。今後ともどうぞ、宜しくお願い致します。</p>
+          <button class="voice-toggle">続きを読む</button>
+        </div>
+        <div class="voice-author">Nobi OGAWA 様</div>
+      </div>
+    </div>
+
+    <div class="voice-footer fade-in">
+      <a href="https://pc-aider.happytry.org/jump06.html" class="btn-outline-blue" target="_blank">Googleで全ての口コミを見る
+        &rarr;</a>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section class="message-section">
+    <div class="message-img fade-in"></div>
+    <div class="message-content fade-in">
+      <div class="section-label">Message from Representative</div>
+      <h2 class="section-title-ja">身近なトラブルを、<br>すぐに解決できる存在に。</h2>
+      <div class="profile">
+        <strong>AiDER 代表</strong>
+        <span class="sub">八王子エリア 出張エンジニア</span>
+      </div>
+      <p>
+        私がこの出張修理サービスを始めたのは、「大きな会社には真似できない、小回りのきくサービスを提供したい」という思いがあったからです。
+      </p>
+      <p>
+        マニュアル通りの決まりきった対応ではなく、お客様お一人おひとりの生活スタイルや状況に寄り添い、身近なトラブルをすぐに解決できる存在でありたいと考えています。
+      </p>
+      <p>
+        パソコンやスマートフォンのことでお困りの際は、どうぞお気軽にご相談ください。
+      </p>
+      <div class="signature">
+        <p>代表プロフィール：<br class="sp-only">岡山県倉敷市出身 / 趣味は音楽鑑賞</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section id="access" class="access-section">
+    <div class="section-label">Access</div>
+    <h2 class="section-title-ja">店舗情報・アクセス</h2>
+
+    <div class="access-container fade-in">
+      <div class="access-info">
+        <h3>パソコン出張修理 <br class="sp-only">AiDER（アイディア）</h3>
+        <p><strong>【住所】</strong><br>〒192-0363<br>東京都八王子市別所2丁目9番地</p>
+        <p><strong>【電話番号】</strong><br><a href="tel:05054487437" class="tel-link">050-5448-7437</a></p>
+        <p><strong>【営業時間】</strong><br>9:30～19:00</p>
+        <p><strong>【定休日】</strong><br>土曜日・祝日</p>
+        <div class="access-sns">
+          <a href="https://pc-aider.happytry.org/jump01.html" class="sns-btn sns-official" target="_blank">公式サイト</a>
+          <a href="https://pc-aider.happytry.org/jump02.html" class="sns-btn sns-line" target="_blank">LINE</a>
+          <a href="https://pc-aider.happytry.org/jump03.html" class="sns-btn sns-instagram"
+            target="_blank">Instagram</a>
+          <a href="https://pc-aider.happytry.org/jump04.html" class="sns-btn sns-facebook" target="_blank">Facebook</a>
+          <a href="https://pc-aider.happytry.org/jump05.html" class="sns-btn sns-threads" target="_blank">Threads</a>
+        </div>
+      </div>
+      <div class="access-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415120.9969539987!2d139.4509086!3d35.6244528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41cf2f42cf186d3d%3A0xefb22313f4ab3cc3!2z44OR44K944Kz44Oz5Ye65by15L-u55CGIEFpREVS77yI44Ki44Kk44OH44Kj44Ki77yJ!5e0!3m2!1sja!2sjp!4v1776847237853!5m2!1sja!2sjp"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT BANNER -->
+  <section id="contact" class="contact-banner">
+    <div class="contact-content">
+      <div class="section-label" style="justify-content: center; color: rgba(255,255,255,0.6);">Contact Us</div>
+      <h2 class="contact-title">お困りごとは、今すぐ解決。<br>まずはお気軽にご相談ください。</h2>
+      <p class="contact-lead">診断・お見積もりは無料です。<br class="sp-only">最短当日中の訪問も可能です。</p>
+
+      <div class="contact-btns">
+        <a href="tel:05054487437" class="cta-btn btn-tel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.29-2.29a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <div class="cta-btn-text">
+            <span>お電話で相談</span>
+            <small>050-5448-7437</small>
+          </div>
+        </a>
+        <a href="https://pc-aider.happytry.org/jump01.html" class="cta-btn btn-web" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <div class="cta-btn-text">
+            <span>Webから予約</span>
+            <small>24時間受付中</small>
+          </div>
+        </a>
+      </div>
+
+      <p class="contact-meta">【営業時間】9:30～19:00　 <br class="sp-only">【定休日】土曜日・祝日</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">AiDER<span>.</span></a>
+        <p style="margin-top:20px;">
+          【店舗名】パソコン出張修理 AiDER（アイディア）<br>
+          【住　所】〒192-0363 東京都八王子市別所2丁目9番地<br>
+          【連絡先】050-5448-7437
+        </p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>MENU</h4>
+          <ul>
+            <li><a href="#about">AiDERについて</a></li>
+            <li><a href="#service">3つの特徴</a></li>
+            <li><a href="#menu">料金メニュー</a></li>
+            <li><a href="#plans">会員プラン</a></li>
+            <li><a href="#access">店舗情報・アクセス</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© AiDER All Rights Reserved.</span>
+      <span>パソコン出張修理 AiDER</span>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- STICKY CTA (SP ONLY) -->
+  <div class="sticky-cta">
+    <a href="tel:05054487437" class="sticky-btn btn-call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.29-2.29a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      <span>電話相談</span>
+    </a>
+    <a href="https://pc-aider.happytry.org/jump01.html" class="sticky-btn btn-reserve" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Web予約</span>
+    </a>
+  </div>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* Base Settings */
+body {
+  background-color: theme('colors.brand.black');
+  color: theme('colors.brand.white');
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography helpers */
+.text-shadow {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FV Slider */
+.fv-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  animation: bgFade 18s infinite ease-in-out;
+  background-color: theme('colors.brand.dark');
+}
+.fv-bg-slide:nth-child(1) { 
+  animation-delay: 0s; 
+}
+@media (max-width: 767px) {
+  .fv-bg-slide:nth-child(1) {
+    background-position: 30% center;
+  }
+}
+.fv-bg-slide:nth-child(2) { animation-delay: 6s; }
+.fv-bg-slide:nth-child(3) { animation-delay: 12s; }
+
+@keyframes bgFade {
+  0% { opacity: 0; transform: scale(1.06); }
+  10% { opacity: 1; transform: scale(1.06); }
+  33% { opacity: 1; transform: scale(1.02); }
+  43% { opacity: 0; transform: scale(1.0); }
+  100% { opacity: 0; }
+}
+
+@keyframes fvFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.fv-animate {
+  opacity: 0;
+  animation: fvFadeUp 1s ease forwards;
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+
+/* Scroll Line */
+@keyframes scrollLine {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+.fv-scroll-line-inner {
+  animation: scrollLine 2s 1.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: theme('colors.brand.black'); }
+::-webkit-scrollbar-thumb { background: theme('colors.brand.border'); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: theme('colors.brand.yellow'); }
+
+/* Decorative Line */
+.gold-line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: theme('colors.brand.yellow');
+  margin-bottom: 24px;
+}
+
+/* Luxury SVG Backgrounds */
+.bg-luxury-pattern-beige {
+  background-color: theme('colors.brand.beige');
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0zm0 1L1 20 20 39 39 20 20 1z' fill='%23d6cbb1' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.bg-luxury-pattern-dark {
+  background-color: theme('colors.brand.black');
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0zm0 1L1 20 20 39 39 20 20 1z' fill='%23333333' fill-opacity='0.5' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.bg-luxury-pattern-yellow {
+  background-color: theme('colors.brand.yellow');
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0zm0 1L1 20 20 39 39 20 20 1z' fill='%23d9d900' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>和taru｜大船の居酒屋</title>
+  <link rel="icon" href="img/logo.png">
+  <meta name="description" content="仕事帰りの一杯から仲間との宴会まで、和の情緒あふれる店内でゆったりとした時間を。手作りの料理とお酒を心ゆくまでお楽しみください。">
+
+  <meta property="og:title" content="和taru｜大船の居酒屋">
+  <meta property="og:description" content="仕事帰りの一杯から仲間との宴会まで、和の情緒あふれる店内でゆったりとした時間を。手作りの料理とお酒を心ゆくまでお楽しみください。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wataru-ofuna.com/"> <!-- 実際のURLに合わせて変更してください -->
+  <meta property="og:image" content="https://wataru-izakaya.happytry.org/img/ogp.jpg">
+  <meta property="og:site_name" content="和taru">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <!-- LEFT: Logo -->
+    <a href="#" class="hd-logo">
+      <img src="img/logo.png" alt="和taru ロゴ" class="hd-logo-img">
+    </a>
+
+    <!-- CENTER: Nav -->
+    <nav class="hd-nav">
+      <a href="#about" class="active">ABOUT</a>
+      <a href="#service">FEATURES</a>
+      <a href="#menu">MENU</a>
+      <a href="#owner">MESSAGE</a>
+      <a href="#info">ACCESS</a>
+    </nav>
+
+    <!-- RIGHT: CTA buttons -->
+    <div class="hd-actions">
+      <a href="https://www.hotpepper.jp/strJ004537236/yoyaku/" target="_blank" class="hd-btn-reserve">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+        <span>ネット予約</span>
+      </a>
+      <a href="https://www.instagram.com/ofuna.wataru/" target="_blank" class="hd-btn-insta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <!-- Hamburger Button (SP only) -->
+      <button class="hd-menu-btn" id="menuBtn">
+        <span class="hd-menu-bar bar-top"></span>
+        <span class="hd-menu-bar bar-mid"></span>
+        <span class="hd-menu-bar bar-bot"></span>
+      </button>
+    </div>
+
+    <!-- SP Nav Overlay -->
+    <div class="hd-sp-nav" id="spNav">
+      <nav class="hd-sp-links">
+        <a href="#about">ABOUT<span>和taruについて</span></a>
+        <a href="#service">FEATURES<span>選ばれる理由</span></a>
+        <a href="#menu">MENU<span>お品書き</span></a>
+        <a href="#owner">MESSAGE<span>メッセージ</span></a>
+        <a href="#info">ACCESS<span>店舗情報</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FV -->
+  <div class="fv">
+    <!-- BG DECO -->
+    <div class="fv-bg-lattice"></div>
+
+    <!-- Main body: left text / [center area - cards overlay] / right text -->
+    <div class="fv-body">
+      <!-- SP用テキストラッパー -->
+      <div class="fv-sp-text">
+        <!-- LEFT: vertical copy -->
+        <div class="fv-left-text">
+          <p class="fv-vertical-copy">
+            仕事帰りの一杯から<br>仲間との宴会まで、<br>どんなシーンにも<br>馴染む大人の居酒屋です。
+          </p>
+        </div>
+
+        <!-- CENTER: empty placeholder for grid spacing (desktop only) -->
+        <div class="fv-center-spacer" style="position:relative;height:100%;"></div>
+
+        <!-- RIGHT: catchcopy -->
+        <div class="fv-right-col">
+          <div class="fv-catchcopy-wrap">
+            <div class="fv-catch-border"></div>
+            <div class="fv-catch-lines">
+              <span class="fv-catch-line large">一軒</span>
+              <span class="fv-catch-line large">満足できる</span>
+              <span class="fv-catch-line medium">ちゃんと</span>
+              <span class="fv-catch-line medium">立ち寄れて、</span>
+              <span class="fv-catch-line medium">気軽に</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARDS LAYER -->
+    <div class="fv-cards-layer" id="fvCardsLayer">
+      <div class="fv-card pos-center" data-idx="0">
+        <img src="img/fv00.jpg" alt="料理">
+      </div>
+      <div class="fv-card pos-topright" data-idx="1">
+        <img src="img/fv01.jpg" alt="料理">
+      </div>
+      <div class="fv-card pos-botleft" data-idx="2">
+        <img src="img/fv02.jpg" alt="店内">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="3">
+        <img src="img/fv03.jpg" alt="お酒">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="4">
+        <img src="img/fv04.jpg" alt="料理">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="5">
+        <img src="img/fv05.jpg" alt="店内">
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="fv-dot-row" id="fvDots">
+      <div class="fv-sdot active"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <p class="sec-eyebrow">ABOUT</p>
+        <h2 class="sec-title">大船で気軽に楽しめる、<br><span class="hl">和食居酒屋「和taru」</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>和taruは、JR大船駅東口から徒歩約4分の場所にある和食居酒屋です。<br>
+            おつまみからしっかり食べられるご飯ものまで幅広い料理を揃え、仕事帰りの一杯から仲間との宴会まで、さまざまなシーンでご利用いただけます。</p>
+          <p>店内にはカウンター席とテーブル席があり、お一人様でも気軽に立ち寄れる雰囲気。グループでの飲み会や食事利用にも最適な空間です。</p>
+          <p>種類豊富なお酒と、手作りの料理を楽しみながら、ゆったりとした時間を過ごせる居酒屋として、多くのお客様にご利用いただいています。</p>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-images">
+            <div class="about-img-main">
+              <img src="img/about_main.jpg" alt="和taru 店内" />
+            </div>
+            <div class="about-img-sub-wrap">
+              <div class="about-img-sub">
+                <img src="img/about_sub1.jpg" alt="日本酒" />
+              </div>
+              <div class="about-img-sub">
+                <img src="img/about_sub2.jpg" alt="料理" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service">
+    <div class="container">
+      <div class="reveal">
+        <p class="sec-eyebrow" style="color:var(--wood-lt)">FEATURES</p>
+        <h2 class="sec-title">和taruが選ばれる、<br class="sp-only"><span class="hl">3つの理由。</span></h2>
+      </div>
+      <div class="service-grid reveal">
+        <div class="service-card">
+          <span class="service-no">01</span>
+          <div class="service-icon">🏮</div>
+          <div class="service-bar"></div>
+          <div class="service-name">ふらっと立ち寄れる空間</div>
+          <p class="service-desc">お一人様でも気軽に楽しめるカウンター席と、仲間と過ごせるテーブル席をご用意しています。<br>
+            仕事終わりの一杯や食事、ちょっとした飲み会にも気軽にご利用いただけます。</p>
+        </div>
+        <div class="service-card">
+          <span class="service-no">02</span>
+          <div class="service-icon">🥢</div>
+          <div class="service-bar"></div>
+          <div class="service-name">気軽に楽しめる手作り料理</div>
+          <p class="service-desc">おつまみから一品料理まで、居酒屋らしく気軽に楽しめるメニューをご用意しています。<br>
+            一杯飲みたい日にも、しっかり食べたい日にもご利用いただけます。</p>
+        </div>
+        <div class="service-card">
+          <span class="service-no">03</span>
+          <div class="service-icon">🍶</div>
+          <div class="service-bar"></div>
+          <div class="service-name">シーンに合わせて楽しめる一杯</div>
+          <p class="service-desc">ビールやハイボール、日本酒など、料理と一緒に楽しめるドリンクを揃えています。<br>
+            気分やシーンに合わせて、お好みの一杯をお楽しみください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <div class="reveal">
+        <p class="sec-eyebrow">Menu</p>
+        <h2 class="sec-title">こだわりの一品が、<br class="sp-only"><span class="hl">お酒を進める.</span></h2>
+        <p class="sec-sub">旬の食材を使った日替わりのおすすめメニューも毎日ご用意しています。</p>
+      </div>
+      <div class="menu-tabs reveal">
+        <button class="tab-btn active" onclick="switchTab(event,'featured')">おすすめメニュー</button>
+        <button class="tab-btn" onclick="switchTab(event,'other')">その他メニュー</button>
+      </div>
+      <div id="featured" class="tab-content active reveal">
+        <div class="menu-featured-grid">
+          <div class="menu-item-main">
+            <img src="img/kanban.jpg" alt="馬刺し" class="menu-item-main-img">
+            <div class="menu-item-content">
+              <span class="menu-badge">看板メニュー</span>
+              <div class="item-name">馬レバ刺し ／<br class="sp-only"> 赤身＆こうねセット</div>
+              <div class="item-price">各 ¥1,400（税込）</div>
+              <div class="item-desc">鮮度にこだわった馬刺しは当店の看板メニュー. 素材の旨みをダイレクトに感じる贅沢な一皿は、お酒との相性も抜群です。</div>
+            </div>
+          </div>
+          <div class="menu-item-sm">
+            <div class="item-name">揚げもの各種</div>
+            <div class="item-price">¥550〜¥700（税込）</div>
+            <div class="item-desc">外はサクッと中はジューシー。鶏のから揚げ・ナンコツ・珍しいアサリのから揚げなど、揚げたてをご提供.</div>
+          </div>
+          <div class="menu-item-sm">
+            <div class="item-name">〆のご飯もの</div>
+            <div class="item-price">¥400〜¥850（税込）</div>
+            <div class="item-desc">焼きうどん・タコライス・お茶漬けなど、その日の気分に合わせて選べる〆メニューが充実.</div>
+          </div>
+          <div class="menu-item-sm">
+            <div class="item-name">たこわさ ／ 塩辛</div>
+            <div class="item-price">各 ¥550（税込）</div>
+            <div class="item-desc">すぐに出るスピードメニューとして人気. お酒が進む定番のおつまみをまず最初の一品に.</div>
+          </div>
+          <div class="menu-item-sm">
+            <div class="item-name">日替わりメニュー</div>
+            <div class="item-price">季節の価格</div>
+            <div class="item-desc">旬の食材を使った日替わりのおすすめメニューも多数ご用意. 毎回新しい発見があります.</div>
+          </div>
+        </div>
+        <div class="drink-banner reveal">
+          <div class="drink-banner-text">
+            <div class="drink-banner-title">🍶 乾杯の一杯から〆のサワーまで、豊富なドリンクをご用意</div>
+            <div class="drink-banner-desc">アサヒ生ビール700円をはじめ、芋・麦・甲の焼酎3種（水割り・緑茶割り 各600円）、カクテル・サワー・ハイボールと幅広いラインナップ.</div>
+            <div class="drink-tags">
+              <span class="drink-tag">生ビール</span>
+              <span class="drink-tag">サワー各種</span>
+              <span class="drink-tag">焼酎（芋・麦・甲）</span>
+              <span class="drink-tag">日本酒</span>
+              <span class="drink-tag">カクテル</span>
+              <span class="drink-tag">ハイボール</span>
+              <span class="drink-tag">ソフトドリンク</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="other" class="tab-content">
+        <div class="other-menu-grid reveal">
+          <div class="other-item">
+            <div class="other-item-name">アサリのから揚げ</div>
+            <div class="other-item-price">¥550（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">鶏のから揚げ</div>
+            <div class="other-item-price">¥600（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">ナンコツのから揚げ</div>
+            <div class="other-item-price">¥700（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">手羽先揚げ</div>
+            <div class="other-item-price">¥550（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">揚げ出し豆腐</div>
+            <div class="other-item-price">¥600（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">ポテトフライ</div>
+            <div class="other-item-price">¥550（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">ニラ玉</div>
+            <div class="other-item-price">¥600（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">たこわさ</div>
+            <div class="other-item-price">¥550（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">塩辛</div>
+            <div class="other-item-price">¥550（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">焼きうどん</div>
+            <div class="other-item-price">¥800（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">チャーハン</div>
+            <div class="other-item-price">¥750（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">タコライス</div>
+            <div class="other-item-price">¥850（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">お茶漬け</div>
+            <div class="other-item-price">¥400（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">アサヒ生ビール</div>
+            <div class="other-item-price">¥700（税込）</div>
+          </div>
+          <div class="other-item">
+            <div class="other-item-name">焼酎 水割り / 緑茶割り</div>
+            <div class="other-item-price">¥600（税込）</div>
+          </div>
+        </div>
+        <div class="other-menu-cta reveal">
+          <a href="https://www.hotpepper.jp/strJ004537236/food/" target="_blank" class="btn-more-menu">
+            その他メニューはこちら
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY LOOP -->
+  <section id="gallery-loop" class="reveal">
+    <div class="gallery-loop-wrap">
+      <div class="gallery-loop-track" id="galleryTrack">
+        <!-- 6枚を2組用意（シームレスループ用） -->
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery01.jpg" alt="Gallery 1"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery02.jpg" alt="Gallery 2"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery03.jpg" alt="Gallery 3"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery04.jpg" alt="Gallery 4"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery05.jpg" alt="Gallery 5"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery06.jpg" alt="Gallery 6"></div>
+        <!-- 2組目 -->
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery01.jpg" alt="Gallery 1"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery02.jpg" alt="Gallery 2"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery03.jpg" alt="Gallery 3"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery04.jpg" alt="Gallery 4"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery05.jpg" alt="Gallery 5"></div>
+        <div class="gallery-item" onclick="openLightbox(this)"><img src="img/gallery06.jpg" alt="Gallery 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+  </div>
+
+
+  <!-- OWNER -->
+  <section id="owner">
+    <div class="container">
+      <div class="owner-wrap">
+        <div class="owner-logo-col reveal">
+          <img src="img/logo.png" alt="和taru ロゴ">
+        </div>
+        <div class="owner-quote-col reveal">
+          <p class="sec-eyebrow">Owner's Message</p>
+          <h2 class="sec-title" style="margin-bottom:1.8rem">オーナーからの<span class="hl">一言.</span></h2>
+          <div class="quote-mark">"</div>
+          <blockquote class="owner-quote">
+            和taruでは、気軽に立ち寄れて、料理とお酒をゆっくり楽しめる居酒屋を目指しています。<br>
+            お一人様のちょい飲みから、仲間との食事や宴会まで、どなたでも居心地よく過ごせるお店づくりを大切にしています。<br>
+            <br>
+            お酒に合う料理や、しっかり食べられるメニューも豊富にご用意していますので、ぜひ気軽にお立ち寄りください。<br>
+            皆さまのご来店を心よりお待ちしております。
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section id="info">
+    <div class="container">
+      <div class="reveal">
+        <p class="sec-eyebrow">Access & Info</p>
+        <h2 class="sec-title">店舗情報<span class="hl"> & アクセス</span></h2>
+      </div>
+      <div class="info-grid reveal">
+        <div>
+          <table class="info-table">
+            <tr>
+              <td>店名</td>
+              <td>和taru（わたる）</td>
+            </tr>
+            <tr>
+              <td>住所</td>
+              <td>〒247-0056<br>神奈川県鎌倉市大船1-22-19<br>三友第２ビル 2階C</td>
+            </tr>
+
+            <tr>
+              <td>電話</td>
+              <td>050-5448-7521</td>
+            </tr>
+            <tr>
+              <td>営業時間</td>
+              <td>火〜日・祝日・祝前日 17:00〜23:30<br><span style="font-size:0.78rem;color:var(--muted)">料理LO 23:00 ／ ドリンクLO
+                  23:00</span></td>
+            </tr>
+            <tr>
+              <td>定休日</td>
+              <td>月曜日（臨時休業あり）</td>
+            </tr>
+
+          </table>
+        </div>
+        <div>
+          <div class="info-map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.146106148302!2d139.5327027!3d35.3520202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601845e8238ff43d%3A0xea5eb3f86a4afd6b!2z5ZKMVEFSVQ!5e0!3m2!1sja!2sjp!4v1773911101435!5m2!1sja!2sjp"
+              width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="cta-box">
+            <div class="cta-box-label">ご予約・お問い合わせ</div>
+            <div class="cta-box-tel">050-5448-7521</div>
+            <a href="https://www.hotpepper.jp/strJ004537236/yoyaku/" target="_blank" class="btn-accent">
+              ネット予約はこちら →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="和taru" class="footer-logo-img">
+      </div>
+      <div class="footer-right">© 2026 和taru All Rights Reserved. · IZAKAYA · OFUNA · KAMAKURA</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- FLOATING CTA (Mobile only) -->
+  <div class="floating-cta">
+    <a href="tel:050-5448-7521" class="f-cta-btn f-cta-tel">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      <span>電話で予約</span>
+    </a>
+    <a href="https://www.hotpepper.jp/strJ004537236/yoyaku/" target="_blank" class="f-cta-btn f-cta-reserve">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21V10"></path>
+        <path d="M18 21V6"></path>
+        <path d="M6 21v-4"></path>
+      </svg>
+      <span>ネット予約</span>
+    </a>
+  </div>
+</body>
+
+</html>

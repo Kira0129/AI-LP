@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>配管工 採用求人サイト | 新潟県十日町市の水道・設備工事</title>
+
+  <!-- OGP -->
+  <meta property="og:title" content="配管工 採用求人サイト | 新潟県十日町市の水道・設備工事">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hinode-recruit.happytry.fun">
+  <meta property="og:image" content="https://hinode-recruit.happytry.fun/img/ogp.jpg">
+  <meta property="og:site_name" content="株式会社ヒノデ 採用求人サイト">
+  <meta property="og:description" content="新潟県十日町市の川西地域を拠点に、水道工事・下水工事・空調工事・住設機器の販売や設置を行っています。">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NJQQQJJ1EJ');
+  </script>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════
+     HEADER
+  ══════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <!-- Left nav -->
+    <ul class="nav-group left">
+      <li>
+        <a href="#about">
+          <div class="nav-icon"><svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg></div>
+          <span class="nav-ja">ABOUT</span>
+        </a>
+      </li>
+      <li>
+        <a href="#feature">
+          <div class="nav-icon"><svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg></div>
+          <span class="nav-ja">FEATURE</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Center logo -->
+    <a href="#" class="header-logo">
+      <img src="img/logo.jpg" alt="株式会社ヒノデ" class="header-logo-img">
+    </a>
+
+    <!-- Right nav -->
+    <ul class="nav-group right">
+      <li>
+        <a href="#requirements">
+          <div class="nav-icon"><svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg></div>
+          <span class="nav-ja">REQUIREMENTS</span>
+        </a>
+      </li>
+      <li>
+        <a href="#schedule">
+          <div class="nav-icon"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg></div>
+          <span class="nav-ja">SCHEDULE</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- SP Hamburger -->
+    <button class="hamburger" id="spHamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ══════════════════════════════
+     FV
+  ══════════════════════════════ -->
+  <section class="fv">
+    <div class="slide-counter-wrap">
+      <span class="counter-current" id="curNum">1</span>
+      <div class="counter-sep"></div>
+      <span class="counter-total">3</span>
+      <div class="counter-dots">
+        <button class="cdot active" onclick="goTo(0)"></button>
+        <button class="cdot" onclick="goTo(1)"></button>
+        <button class="cdot" onclick="goTo(2)"></button>
+      </div>
+    </div>
+
+    <div class="fv-stage">
+      <div class="fv-stage-inner">
+        <div class="slide slide-1 active">
+          <div class="slide-bg" style="background-image:url('img/fvpic01.jpg')">
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="slide-bg" style="background-image:url('img/fvpic02.jpg')">
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide-bg" style="background-image:url('img/fvpic03.jpg')">
+          </div>
+        </div>
+
+        <div class="fv-copy">
+          <div class="copy-lead reveal">配管工 求人募集</div>
+          <div class="copy-main reveal">水道工事の技術で、<br>地域の安心を守る仕事</div>
+          <div class="copy-divider reveal"></div>
+
+
+          <a href="mailto:hinode@theia.ocn.ne.jp" class="consult-btn">
+            <div class="consult-inner">
+              <div class="consult-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <span class="consult-ja">メールで<br class="pc-br">応募する</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     FLOATING RIGHT BUTTONS
+  ══════════════════════════════ -->
+  <div class="float-right">
+    <a href="tel:05054487359" class="float-btn float-btn--tel">
+      <div class="float-btn-icon"><svg viewBox="0 0 24 24">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg></div>
+      <span class="float-btn-text">お電話で応募</span>
+    </a>
+    <a href="mailto:hinode@theia.ocn.ne.jp" class="float-btn float-btn--hp">
+      <div class="float-btn-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      </div>
+      <span class="float-btn-text">メールで応募</span>
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════
+     1. ABOUT
+  ══════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-text reveal reveal-left">
+      <div class="about-label">
+        <span class="about-label-en">About</span>
+      </div>
+      <h2 class="about-heading heading-text">
+        地域の暮らしを支える、<br>街の水道屋の仕事
+      </h2>
+      <div class="about-divider"></div>
+      <p class="about-body">
+        新潟県十日町市の川西地域を拠点に、水道工事・下水工事・空調工事・住設機器の販売や設置を行っています。
+      </p>
+      <p class="about-body">
+        地域の皆さまからのご相談に迅速・丁寧に対応し、暮らしに欠かせない水まわりや設備を支える仕事です。<br>
+        創業100年以上の実績があり、ベテランスタッフの知識や技術を学びながら、地域のインフラに関わる技術を身につけられます。
+      </p>
+    </div>
+    <div class="about-images reveal reveal-right">
+      <div class="about-img-main reveal reveal-scale delay-200">
+        <div class="about-img-inner" style="background-image:url('img/aboutpicmain.jpg')">
+        </div>
+      </div>
+      <div class="about-img-sub reveal reveal-scale delay-300">
+        <div class="about-img-inner" style="background-image:url('img/aboutpic01.jpg')">
+        </div>
+      </div>
+      <div class="about-img-sub reveal reveal-scale delay-400">
+        <div class="about-img-inner" style="background-image:url('img/aboutpic02.jpg')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     2. FEATURE (特徴)
+  ══════════════════════════════ -->
+  <section class="section feature" id="feature">
+    <div class="section-inner">
+      <span class="sec-title-en reveal reveal-up">Feature</span>
+      <h2 class="sec-title-ja reveal reveal-up delay-100">当社の特徴</h2>
+      <div class="feat-list">
+
+        <div class="feat-item reveal reveal-up">
+          <div class="feat-img" style="background-image:url('img/serpic01.jpg')">
+          </div>
+          <div class="feat-text">
+            <span class="feat-num">01</span>
+            <h3 class="feat-title">100年以上続く地域密着企業</h3>
+            <p class="feat-desc">
+              創業以来、地域の暮らしを支える水道屋として実績を積み重ねてきました。十日町市を中心に、地域の方から頼りにされる仕事に関われます。</p>
+          </div>
+        </div>
+
+        <div class="feat-item reveal reveal-up delay-100">
+          <div class="feat-img" style="background-image:url('img/serpic02.jpg')">
+          </div>
+          <div class="feat-text">
+            <span class="feat-num">02</span>
+            <h3 class="feat-title">ベテランスタッフから<br>技術を学べる</h3>
+            <p class="feat-desc">経験豊富なスタッフが在籍しているため、現場で必要な知識や対応力を身につけられます。配管工としての技術だけでなく、お客様への説明やアフターサービスの考え方も学べる環境です。
+            </p>
+          </div>
+        </div>
+
+        <div class="feat-item reveal reveal-up delay-200">
+          <div class="feat-img" style="background-image:url('img/serpic03.jpg')">
+          </div>
+          <div class="feat-text">
+            <span class="feat-num">03</span>
+            <h3 class="feat-title">幅広い設備工事に関われる</h3>
+            <p class="feat-desc">
+              水道工事、下水工事、空調工事、住設機器の設置など、さまざまな業務があります。地域のインフラを支える仕事として、日々やりがいを感じながら働けます。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     3. REQUIREMENTS (応募要項)
+  ══════════════════════════════ -->
+  <section class="section requirements" id="requirements">
+    <div class="section-inner">
+      <span class="sec-title-en reveal reveal-up">Requirements</span>
+      <h2 class="sec-title-ja reveal reveal-up delay-100">応募要項</h2>
+      <div class="req-container reveal reveal-up delay-200">
+        <img src="img/requirementspic.jpg" alt="応募要項" class="req-img">
+        <table class="req-table">
+          <tbody>
+            <tr>
+              <th>職種</th>
+              <td>配管工</td>
+            </tr>
+            <tr>
+              <th>業務内容</th>
+              <td>
+                水道工事、下水工事、空調工事、住設機器の設置など、配管業務を中心とした現場作業を行います。<br>お客様からのご相談に対して、現場確認・施工・設置後のアフター対応まで、地域の暮らしを支える業務に携わります。
+              </td>
+            </tr>
+            <tr>
+              <th>こんな方におすすめ</th>
+              <td>
+                <ul class="req-list">
+                  <li>地域に役立つ仕事がしたい方</li>
+                  <li>手に職をつけて長く働きたい方</li>
+                  <li>水道工事や設備工事に興味がある方</li>
+                  <li>真面目にコツコツ仕事へ取り組める方</li>
+                  <li>人の話をしっかり聞ける方</li>
+                  <li>気配りを大切にできる方</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>就業場所</th>
+              <td>十日町市内全般<br>小千谷市の一部</td>
+            </tr>
+            <tr>
+              <th>給与</th>
+              <td>基本給 190,000円〜<br><span style="font-size:13px; color:var(--text-mid);">※経験等を考慮いたします。</span></td>
+            </tr>
+            <tr>
+              <th>勤務時間</th>
+              <td>8:00〜17:30</td>
+            </tr>
+            <tr>
+              <th>休憩時間</th>
+              <td>午前15分 ／ 昼1時間 ／ 午後15分</td>
+            </tr>
+            <tr>
+              <th>休日</th>
+              <td>日曜日・祝日<br>第2・第4土曜日</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     4. SCHEDULE (1日の勤務スケジュール)
+  ══════════════════════════════ -->
+  <section class="section schedule" id="schedule">
+    <div class="section-inner">
+      <span class="sec-title-en reveal reveal-up">Schedule</span>
+      <h2 class="sec-title-ja reveal reveal-up delay-100">1日の勤務スケジュール</h2>
+      <div class="flow-list">
+
+        <div class="flow-item reveal reveal-left delay-100">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Users Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="flow-step">7:30</div>
+          </div>
+          <div class="flow-content">
+            <h4>ミーティング</h4>
+            <p>当日の現場や作業内容を確認します。<br>スタッフ同士で情報を共有し、安全に作業できるよう準備します。</p>
+          </div>
+        </div>
+
+        <div class="flow-item reveal reveal-left delay-200">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Wrench Icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <div class="flow-step">8:00</div>
+          </div>
+          <div class="flow-content">
+            <h4>業務開始</h4>
+            <p>現場へ向かい、配管工事や設備工事などを行います。<br>お客様のご要望や現場の状況に合わせて、丁寧に作業を進めます。</p>
+          </div>
+        </div>
+
+        <div class="flow-item reveal reveal-left delay-300">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Coffee Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <div class="flow-step">10:00</div>
+          </div>
+          <div class="flow-content">
+            <h4>午前休憩</h4>
+            <p>15分休憩を取り、次の作業に備えます。</p>
+          </div>
+        </div>
+
+        <div class="flow-item reveal reveal-left delay-400">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Utensils Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                <path d="M7 2v20" />
+                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+              </svg>
+            </div>
+            <div class="flow-step">12:00</div>
+          </div>
+          <div class="flow-content">
+            <h4>昼休憩</h4>
+            <p>1時間の昼休憩です。<br>午後の作業に向けてしっかり休みます。</p>
+          </div>
+        </div>
+
+        <div class="flow-item reveal reveal-left delay-500">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Coffee Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <div class="flow-step">15:00</div>
+          </div>
+          <div class="flow-content">
+            <h4>午後休憩</h4>
+            <p>15分休憩を取り、作業の進捗を確認します。</p>
+          </div>
+        </div>
+
+        <div class="flow-item reveal reveal-left delay-600">
+          <div class="flow-badge">
+            <div class="flow-icon">
+              <!-- Clipboard Check Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z" />
+                <polyline points="9 14 11 16 15 11" />
+              </svg>
+            </div>
+            <div class="flow-step">17:30</div>
+          </div>
+          <div class="flow-content">
+            <h4>終業</h4>
+            <p>片付けや翌日の確認を行い、業務終了です。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     5. MESSAGE
+  ══════════════════════════════ -->
+  <section class="section message" id="message" style="background-image:url('img/messagebg.jpg')">
+    <div class="section-inner reveal reveal-up">
+      <div class="msg-inner">
+        <div class="msg-img reveal reveal-left delay-200" style="background-image:url('img/messagepic.jpg')">
+        </div>
+        <div class="msg-text reveal reveal-right delay-300">
+          <h2 class="msg-title">地域の安心を<br>支える仕事を一緒に</h2>
+          <p class="msg-desc">水道や設備の仕事は、毎日の暮らしに欠かせない大切な仕事です。</p>
+          <p class="msg-desc">
+            私たちは「地域に仕事をさせていただいている」という気持ちを大切にしながら、一件一件のご相談に向き合っています。<br><br>必要なのは、真面目に取り組む姿勢と、人の話をしっかり聞く力です。<br>地域に根ざした会社で、手に職をつけながら長く働きたい方は、ぜひご応募ください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     6. COMPANY & ACCESS
+  ══════════════════════════════ -->
+  <section class="section company" id="company">
+    <div class="section-inner">
+      <span class="sec-title-en reveal reveal-up">Company</span>
+      <h2 class="sec-title-ja reveal reveal-up delay-100">会社概要・アクセス</h2>
+      <div class="comp-container reveal reveal-up delay-200">
+        <div class="comp-info">
+          <table class="comp-table">
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>（株）ヒノデ</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>〒948-0302<br>新潟県十日町市仁田２２９８−１</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:05054487359" style="color: inherit; text-decoration: none;">050-5448-7359</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>9:00～17:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>日曜日</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="comp-map">
+          <!-- Google Maps iframe -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.805847361678!2d138.748191!3d37.2048407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff5eac0ef46e7d5%3A0x56b13cc9369fe99!2z77yI5qCq77yJ44OS44OO44OH!5e0!3m2!1sja!2sjp!4v1782459865206!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     7. RELATED SITES (関連サイト)
+  ══════════════════════════════ -->
+  <section class="section related" id="related">
+    <div class="section-inner">
+      <span class="sec-title-en reveal reveal-up">Related</span>
+      <h2 class="sec-title-ja reveal reveal-up delay-100">関連サイト</h2>
+      <div class="related-container reveal reveal-up delay-200">
+        <p class="related-desc">当社のサービスや施工事例について、<br class="sp-br">詳しくは下記の特設サイトをご覧ください。</p>
+
+        <!-- バナーリンク -->
+        <a href="https://hinode-recruit.happytry.fun/jump01.html" class="banner-link" target="_blank" rel="noopener">
+          <img src="img/banner.png" alt="特設サイト" style="width: 100%; height: auto; display: block;">
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     8. FOOTER
+  ══════════════════════════════ -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3 class="font-noto">株式会社ヒノデ</h3>
+        <p>〒948-0302 新潟県十日町市仁田２２９８−１</p>
+        <p>対応エリア：十日町市川西地域を中心</p>
+      </div>
+
+      <div class="footer-contact">
+        <p style="margin-bottom: 5px;">お電話でのご相談はこちら</p>
+        <a href="tel:05054487359" class="f-tel font-en">
+          <svg class="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          050-5448-7359
+        </a>
+        <p>営業時間：9:00～17:00</p>
+        <p>定休日：日曜日</p>
+        <a href="mailto:hinode@theia.ocn.ne.jp" class="f-btn font-noto">
+          <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          メールで応募する
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 株式会社ヒノデ All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════
+     SP DRAWER (スマホ用メニュー)
+  ══════════════════════════════ -->
+  <div class="sp-drawer" id="spDrawer">
+    <div class="sp-drawer-overlay" id="spDrawerOverlay"></div>
+    <div class="sp-drawer-panel">
+      <div class="sp-drawer-head">
+        <div class="logo-text" style="font-size:18px;">MENU</div>
+        <button class="sp-drawer-close" id="spDrawerClose">✕</button>
+      </div>
+      <ul class="sp-drawer-nav">
+        <li><a href="#about" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg> ABOUT</a></li>
+        <li><a href="#feature" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg> FEATURE</a></li>
+        <li><a href="#requirements" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg> REQUIREMENTS</a></li>
+        <li><a href="#schedule" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg> SCHEDULE</a></li>
+        <li><a href="#message" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg> MESSAGE</a></li>
+        <li><a href="#company" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg> COMPANY</a></li>
+        <li><a href="#related" onclick="closeDrawer()"><svg viewBox="0 0 24 24">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg> RELATED</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+     SP BOTTOM CTA
+  ══════════════════════════════ -->
+  <div class="sp-bottom-cta" id="spBottomCta">
+    <a href="tel:05054487359" class="sp-bcta-btn sp-bcta-tel">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      電話応募
+    </a>
+    <a href="mailto:hinode@theia.ocn.ne.jp" class="sp-bcta-btn sp-bcta-web">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
+      </svg>
+      メール応募
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍼灸マッサージ院 alfine -アルフィーネ- | 名古屋市中区</title>
+    <meta name="description"
+        content="名古屋市中区正木にある鍼灸マッサージ院alfine（アルフィーネ）。腰痛・肩こり・首こり・頭痛など、慢性的な不調に向き合い、薬に頼りすぎない根本からの身体づくりをサポートします。">
+
+    <!-- OGP Settings -->
+    <meta property="og:title" content="鍼灸マッサージ院 alfine -アルフィーネ- | 名古屋市中区">
+    <meta property="og:description"
+        content="名古屋市中区正木にある鍼灸マッサージ院alfine（アルフィーネ）。腰痛・肩こり・首こり・頭痛など、慢性的な不調に向き合い、薬に頼りすぎない根本からの身体づくりをサポートします。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alfine.happytry.org">
+    <meta property="og:image" content="https://alfine.happytry.org/img/ogp.jpg">
+    <meta property="og:site_name" content="鍼灸マッサージ院 alfine -アルフィーネ-">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alfineMain: '#5a4665',     /* 落ち着いた深い紫（テキストやメインカラー） */
+                        alfineBg: '#fbf9fc',       /* 全体の背景（極薄い紫・白） */
+                        alfineSoft: '#f3ebf6',     /* 柔らかいセクション背景用の薄紫 */
+                        alfineAccent: '#b58fc1',   /* アクセントのラベンダー・ピンクパープル */
+                        alfineLight: '#ffffff',    /* 白 */
+                        alfineGold: '#d4b872',     /* 差し色としての柔らかいゴールド・イエロー系 */
+                    },
+                    fontFamily: {
+                        sans: ['"M PLUS Rounded 1c"', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: 丸みのあるフォントでカジュアル・柔らかさを演出 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper.js (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body oncontextmenu="return false;" onselectstart="return false;" oncopy="return false;">
+    <!-- HEADER -->
+    <header class="site-header">
+        <ul class="nav-group left">
+            <li><a href="#about"><span class="nav-ja">当院について</span><span class="nav-en">About</span></a></li>
+            <li><a href="#features"><span class="nav-ja">特徴</span><span class="nav-en">Features</span></a></li>
+        </ul>
+
+        <a href="#" class="header-logo">
+            <img src="img/logo.png" alt="鍼灸マッサージ院 alfine"
+                class="h-10 md:h-12 w-auto !shadow-none !border-none !rounded-none">
+        </a>
+
+        <ul class="nav-group right">
+            <li><a href="#menu"><span class="nav-ja">メニュー</span><span class="nav-en">Menu</span></a></li>
+            <li><a href="#access"><span class="nav-ja">アクセス</span><span class="nav-en">Access</span></a></li>
+        </ul>
+
+        <!-- Mobile Burger -->
+        <div id="burger" class="lg:hidden flex items-center cursor-pointer">
+            <div class="space-y-1.5">
+                <span class="block w-6 h-1 rounded-full bg-alfineMain"></span>
+                <span class="block w-6 h-1 rounded-full bg-alfineMain"></span>
+                <span class="block w-6 h-1 rounded-full bg-alfineMain"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="drawer" class="flex-col">
+        <button id="close-drawer" class="absolute top-6 right-6 text-4xl text-alfineMain">&times;</button>
+        <nav class="flex flex-col items-center w-full">
+            <a href="#about">当院について</a>
+            <a href="#features">特徴</a>
+            <a href="#menu">メニュー・料金</a>
+            <a href="#voice">お客様の声</a>
+            <a href="#message">代表メッセージ</a>
+            <a href="#faq">よくある質問</a>
+            <a href="#access">アクセス</a>
+
+            <div class="mt-8 flex flex-col gap-4 w-[80%] max-w-xs mx-auto">
+                <a href="tel:050-5448-9395" class="nui-btn !w-full !px-4 !justify-center !text-sm">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+                    </svg>
+                    電話予約
+                </a>
+                <a href="https://alfine.happytry.org/jump01.html" target="_blank"
+                    class="nui-btn nui-btn-accent !w-full !px-4 !justify-center !text-sm">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path
+                            d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+                    </svg>
+                    Web予約
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- FV -->
+    <section class="fv">
+        <!-- Abstract Soft Shapes -->
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+            </svg>
+        </div>
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10" />
+            </svg>
+        </div>
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+            </svg>
+        </div>
+
+        <div class="slide-counter-wrap">
+            <span class="counter-current" id="curNum">01</span>
+            <span class="counter-total">03</span>
+        </div>
+
+        <div class="fv-stage">
+            <div class="fv-stage-inner">
+                <div class="swiper fv-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- プレースホルダー画像 -->
+                        <div class="swiper-slide"><img src="img/fv01.jpg" alt="院内イメージ"></div>
+                        <div class="swiper-slide"><img src="img/fv02.jpg" alt="施術風景"></div>
+                        <div class="swiper-slide"><img src="img/fv03.jpg" alt="カウンセリング">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fv-copy reveal reveal-up delay-300">
+                    <h2 class="copy-main">
+                        <span class="copy-main-text">
+                            薬に頼りすぎず、<br>不調の根本から整える
+                        </span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Contact Btn -->
+        <a href="https://alfine.happytry.org/jump02.html" target="_blank" class="res-circle-btn hidden lg:flex">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+            <span class="btn-ja" style="font-size: 13px; text-align: center;">Web<br>お問い合わせ</span>
+        </a>
+    </section>
+
+    <!-- Float Right Buttons -->
+    <div class="float-right">
+        <a href="tel:050-5448-9395" class="float-btn" style="background: var(--color-main);">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            <span class="float-btn-text">電話予約</span>
+        </a>
+        <a href="https://alfine.happytry.org/jump01.html" target="_blank"
+            class="float-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path
+                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+            </svg>
+            <span class="float-btn-text">Web予約</span>
+        </a>
+    </div>
+
+    <main>
+        <!-- TV: こんなお悩みありませんか？ -->
+        <section class="container mx-auto px-6 max-w-6xl reveal reveal-up pt-12">
+            <div
+                class="grid lg:grid-cols-2 gap-8 items-stretch bg-alfineSoft rounded-[40px] p-6 lg:p-10 border-4 border-white shadow-sm">
+                <div class="reveal reveal-left delay-200 h-full order-2 lg:order-1">
+                    <img src="img/worrypic.jpg" alt="悩む女性のイメージ"
+                        class="w-full h-64 lg:h-full object-cover rounded-[24px]">
+                </div>
+                <div
+                    class="h-full flex flex-col justify-center space-y-6 reveal reveal-right delay-300 order-1 lg:order-2">
+                    <h2 class="text-2xl md:text-3xl font-black text-alfineMain flex items-start md:items-center gap-3">
+                        <span
+                            class="bg-alfineAccent text-white text-sm px-3 py-1 rounded-full shrink-0 mt-1 md:mt-0">CHECK</span>
+                        <span>こんなお悩み<br class="md:hidden">ありませんか？</span>
+                    </h2>
+
+                    <ul class="space-y-4 text-sm md:text-base font-bold text-alfineMain">
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            朝起きると腰がつらい
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            肩こりや首こりがなかなか楽に<br class="md:hidden">ならない
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            頭痛や身体のだるさが気になる
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            猫背や姿勢の崩れを整えたい
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            薬に頼りすぎず身体を整えたい
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-alfineAccent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            何店舗も通ったが変化を感じ<br class="md:hidden">にくい
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="px-6 relative overflow-hidden">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        About Us
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">薬に頼りすぎない、<br class="md:hidden">根本からの身体づくりを</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mt-10">
+                    <div class="space-y-6 reveal reveal-left delay-200">
+                        <p class="text-sm md:text-base leading-loose font-bold text-alfineMain">
+                            鍼灸マッサージ院 alfineは、腰痛・肩こり・首こり・頭痛・しびれなど、慢性的な不調に向き合う鍼灸整体院です。<br><br>
+                            国家資格を持つ院長が、カウンセリングから施術までマンツーマンで対応。<br>
+                            西洋医学・東洋医学・脳科学の考え方を組み合わせた独自のアプローチで、一人ひとりの身体の状態に合わせた施術をご提案します。<br><br>
+                            その場しのぎではなく、姿勢や身体の使い方まで見直しながら、快適に動ける身体づくりをサポートいたします。
+                        </p>
+                    </div>
+                    <div class="reveal reveal-right delay-300">
+                        <img src="img/aboutpic.jpg" alt="院内の様子" class="w-full border-8 border-white shadow-lg rotate-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="bg-alfineSoft px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        Features
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">当院の3つの特徴</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10 lg:gap-12 mt-12 pt-6">
+                    <!-- 01 -->
+                    <div class="feature-card reveal reveal-up delay-100">
+                        <div class="feature-num">01</div>
+                        <img src="img/featurepic01.jpg" alt="経験" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-alfineMain mb-3 border-b-2 border-alfineAccent pb-2">
+                            国家資格者による<br>丁寧な施術</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            あん摩マッサージ指圧師・はり師・きゅう師などの国家資格を持つ院長が、12年以上の臨床経験を活かして身体の状態を丁寧に確認します。
+                        </p>
+                    </div>
+                    <!-- 02 -->
+                    <div class="feature-card reveal reveal-up delay-200">
+                        <div class="feature-num">02</div>
+                        <img src="img/featurepic02.jpg" alt="メソッド" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-alfineMain mb-3 border-b-2 border-alfineAccent pb-2">
+                            西洋×東洋×脳科学の<br>独自メソッド</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            筋肉・関節・姿勢のバランスに加え、鍼灸や自律神経への視点も取り入れ、多角的に不調へアプローチします。
+                        </p>
+                    </div>
+                    <!-- 03 -->
+                    <div class="feature-card reveal reveal-up delay-300">
+                        <div class="feature-num">03</div>
+                        <img src="img/featurepic03.jpg" alt="触診技術" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-alfineMain mb-3 border-b-2 border-alfineAccent pb-2">
+                            繊細な触診で<br>原因を見極める</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            指先の感覚を活かし、筋肉のこわばりや姿勢の崩れなどを確認しながら、一人ひとりに合った施術をご提案します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu" class="px-6">
+            <div class="container mx-auto max-w-5xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        Price
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">施術メニュー・料金</p>
+                </div>
+
+                <!-- おすすめコース（画像入りデザインへ変更） -->
+                <div
+                    class="bg-white rounded-[32px] overflow-hidden border-4 border-alfineAccent shadow-lg reveal reveal-up mb-12 relative flex flex-col md:flex-row items-stretch">
+                    <!-- 画像エリア -->
+                    <div class="w-full md:w-2/5 h-64 md:h-auto shrink-0 relative">
+                        <img src="img/menupic.jpg" alt="オーダーメイドコース" class="w-full h-full object-cover !rounded-none">
+                    </div>
+                    <!-- テキストエリア -->
+                    <div class="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-center bg-white relative">
+                        <div class="mb-4">
+                            <span
+                                class="inline-block bg-alfineAccent text-white px-5 py-1.5 rounded-full font-black text-sm shadow-sm whitespace-nowrap">
+                                おすすめメニュー
+                            </span>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-black text-alfineMain mb-4 leading-tight">
+                            オーダーメイドコース<br class="md:hidden"><span class="text-lg">（鍼灸・整体）50分</span></h3>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed mb-6">
+                            あなたの体を蝕む原因を丁寧なヒアリングと検査で見つけ出し、あなたのためだけの施術をプランニング。背骨や骨盤の調整、鍼灸、整体などあらゆる手技を用いてあなたの体を健康へ導きます。
+                        </p>
+                        <div class="text-right border-t-2 border-dashed border-alfineSoft pt-4">
+                            <span class="text-3xl font-black text-alfineAccent">¥11,000</span> <span
+                                class="text-sm text-gray-500 font-bold">(税込)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- その他メニュー -->
+                <h4 class="text-xl font-black text-alfineMain mb-6 text-center">その他メニュー</h4>
+                <div class="space-y-4">
+                    <!-- メニュー項目1 -->
+                    <div class="menu-item reveal reveal-up delay-100">
+                        <div>
+                            <h5 class="text-lg font-black text-alfineMain mb-1">腰痛改善コース<br class="md:hidden">（鍼灸・整体）50分
+                            </h5>
+                            <p class="text-xs md:text-sm text-gray-600 font-bold">
+                                長引く腰痛。痛みの原因を見つけて根本から改善していきます。その１歩目を体感してみませんか？</p>
+                        </div>
+                        <div class="text-xl font-black text-alfineAccent whitespace-nowrap">¥11,000</div>
+                    </div>
+                    <!-- メニュー項目2 -->
+                    <div class="menu-item reveal reveal-up delay-200">
+                        <div>
+                            <h5 class="text-lg font-black text-alfineMain mb-1">猫背・スマホ首改善コース<br
+                                    class="md:hidden">（鍼灸・整体）50分</h5>
+                            <p class="text-xs md:text-sm text-gray-600 font-bold">姿勢の崩れからくる不調に。原因を見つけて根本から改善していきます。</p>
+                        </div>
+                        <div class="text-xl font-black text-alfineAccent whitespace-nowrap">¥11,000</div>
+                    </div>
+                    <!-- メニュー項目3 -->
+                    <div class="menu-item reveal reveal-up delay-300">
+                        <div>
+                            <h5 class="text-lg font-black text-alfineMain mb-1">首肩こり改善コース<br
+                                    class="md:hidden">（鍼灸・整体）50分</h5>
+                            <p class="text-xs md:text-sm text-gray-600 font-bold">
+                                「もみほぐしに行ってもすぐに戻る」方へ。原因をつきとめ、手技に組み合わせて根本改善をしていきます。</p>
+                        </div>
+                        <div class="text-xl font-black text-alfineAccent whitespace-nowrap">¥11,000</div>
+                    </div>
+                    <!-- メニュー項目4 -->
+                    <div class="menu-item reveal reveal-up delay-400">
+                        <div>
+                            <h5 class="text-lg font-black text-alfineMain mb-1">不眠・頭痛・めまい改善コース<br
+                                    class="md:hidden">（鍼灸・整体）50分</h5>
+                            <p class="text-xs md:text-sm text-gray-600 font-bold">
+                                正しい姿勢を作ることで自律神経を整え、症状の改善を促します。おくすりの量が増えている方にも。</p>
+                        </div>
+                        <div class="text-xl font-black text-alfineAccent whitespace-nowrap">¥11,000</div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 reveal reveal-up">
+                    <a href="https://alfine.happytry.org/jump01.html" target="_blank"
+                        class="nui-btn nui-btn-accent">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+                        </svg>
+                        Webから予約する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOICE -->
+        <section id="voice" class="bg-alfineSoft px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        Voice
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">お客様の声</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <!-- Voice 1 -->
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 reveal reveal-up delay-100 relative">
+                        <div class="text-alfineAccent opacity-20 text-6xl absolute top-2 left-4 font-serif">"</div>
+                        <div class="flex text-yellow-400 mb-2 relative z-10 pt-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p
+                            class="review-text line-clamp-3 relative z-10 text-sm md:text-base font-bold text-gray-700 leading-loose mt-2">
+                            腰の痛みがあり受診しました。<br>説明も丁寧で分かりやすく、施術もとても気持ち良かったです。<br>直後効果も実感でき、日常生活で気をつけることなども教えてくれるのですごく満足度が高かったです。
+                        </p>
+                        <p class="text-right text-xs md:text-sm text-gray-500 font-bold mt-4">masayuki yanagawa 様</p>
+                    </div>
+                    <!-- Voice 2 -->
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 reveal reveal-up delay-200 relative">
+                        <div class="text-alfineAccent opacity-20 text-6xl absolute top-2 left-4 font-serif">"</div>
+                        <div class="flex text-yellow-400 mb-2 relative z-10 pt-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p
+                            class="review-text line-clamp-3 relative z-10 text-sm md:text-base font-bold text-gray-700 leading-loose mt-2">
+                            ストレートネックから来る首・肩の痛みで、行きました。<br>軽いカウンセリングと全身を見ていただいた際に、足も凝っているとのことで施術していただきましたが、施術後に自分でもわかるくらい足が上がりやすくなってました。<br>また、首・肩の痛みもかなり軽減されてて受けて良かったと思ってます。<br>受けてから数日経ちますが、やや姿勢が改善してる気がします。
+                        </p>
+                        <p class="text-right text-xs md:text-sm text-gray-500 font-bold mt-4">Y Y 様</p>
+                    </div>
+                    <!-- Voice 3 -->
+                    <div
+                        class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 reveal reveal-up delay-300 relative">
+                        <div class="text-alfineAccent opacity-20 text-6xl absolute top-2 left-4 font-serif">"</div>
+                        <div class="flex text-yellow-400 mb-2 relative z-10 pt-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p
+                            class="review-text line-clamp-3 relative z-10 text-sm md:text-base font-bold text-gray-700 leading-loose mt-2">
+                            最初に体の動きや状態をしっかりみてもらいながらの丁寧な問診や検査がありました。<br><br>身体のバランスを一緒に確認後、<br>痛みが全くないソフトで静かに手を当てられているかのような施術に感じた為、これで本当に痛みがなくなるのか半信半疑の気持ちがありましたが徐々に不調が改善していくのが目に見えてわかり本当に不思議な体験でした。<br><br>また途中痛みがなくなっているか確認があり肩の痛みがまだ少しあると伝えると、さらに重点的にやって下さり終わる頃には痛みや硬さが嘘みたいになくなりました。
+                        </p>
+                        <p class="text-right text-xs md:text-sm text-gray-500 font-bold mt-4">erina ito 様</p>
+                    </div>
+                </div>
+
+                <!-- More Reviews Button -->
+                <div class="text-center mt-10 reveal reveal-up">
+                    <a href="https://alfine.happytry.org/jump03.html"
+                        target="_blank"
+                        class="nui-btn !bg-white !text-alfineMain border-2 border-alfineSoft shadow-sm hover:!bg-alfineSoft transition-colors">
+                        その他の口コミはこちら
+                        <svg class="w-5 h-5 text-alfineMain" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESSAGE -->
+        <section id="message" class="px-6">
+            <div class="container mx-auto max-w-5xl">
+                <div class="bg-white rounded-[40px] p-8 md:p-12 border-2 border-alfineSoft shadow-xl reveal reveal-up">
+                    <div class="grid md:grid-cols-5 gap-10 items-center">
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <img src="img/messagpic.png" alt="代表 吉田宇洋"
+                                class="w-full max-w-[250px] mx-auto rounded-[32px] border-4 border-alfineSoft">
+                            <div class="mt-4">
+                                <p class="text-sm font-bold text-alfineAccent tracking-widest">代表</p>
+                                <h3 class="text-2xl font-black text-alfineMain mt-1">吉田 宇洋</h3>
+                                <p class="text-xs text-gray-500 font-bold mt-1">ヨシダ タカヒロ</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-3 space-y-5">
+                            <h3 class="text-xl md:text-2xl font-black text-alfineAccent border-b border-gray-100 pb-4">
+                                不調を我慢しない毎日へ</h3>
+                            <p class="text-sm md:text-base font-bold text-gray-700 leading-loose">
+                                私自身、薬の副作用や身体の不調に悩んだ過去があります。<br>
+                                だからこそ、つらさを抱えながら日常を過ごしている方の不安や悩みに、真剣に向き合いたいと考えています。<br><br>
+                                「年齢のせいだから仕方ない」<br>
+                                「もう良くならないかもしれない」<br><br>
+                                そう諦める前に、一度ご相談ください。<br>
+                                身体の状態を丁寧に確認し、今のあなたに必要な施術とケアをご提案いたします。<br><br>
+                                薬に頼りすぎず、自分の身体で軽やかに過ごせる未来を一緒に目指していきましょう。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="bg-alfineSoft px-6">
+            <div class="container mx-auto max-w-3xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        FAQ
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">よくある質問</p>
+                </div>
+
+                <div class="space-y-4 mt-8 reveal reveal-up delay-200">
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span class="faq-q-icon font-black">Q</span>
+                            予約制になりますか？
+                        </div>
+                        <div class="faq-a">
+                            A. 完全予約制になります。ご予約の上、ご来店ください。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span class="faq-q-icon font-black">Q</span>
+                            駐車場はありますか？
+                        </div>
+                        <div class="faq-a">
+                            A. ございません。近くのコインパーキングをご利用ください。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span class="faq-q-icon font-black">Q</span>
+                            支払い方法はどんな方法がありますか？
+                        </div>
+                        <div class="faq-a">
+                            A. 現金、クレジットカード、交通系IC、バーコード決済（PayPay除く）に対応しています。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span class="faq-q-icon font-black">Q</span>
+                            子連れでも大丈夫ですか？
+                        </div>
+                        <div class="faq-a">
+                            A. はい、大丈夫です。お気軽にお越しください。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESS -->
+        <section id="access" class="px-6 pb-24">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                        Access
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                        </svg>
+                    </h2>
+                    <p class="sec-title-ja">店舗情報</p>
+                </div>
+
+                <div
+                    class="grid lg:grid-cols-2 gap-10 bg-white rounded-[32px] overflow-hidden border-4 border-alfineSoft shadow-md">
+                    <!-- Info -->
+                    <div class="p-8 md:p-10 space-y-6 flex flex-col justify-center">
+                        <h3 class="text-xl font-black text-alfineMain mb-4 border-b-2 border-alfineSoft pb-3">鍼灸マッサージ院
+                            alfine <br class="md:hidden">-アルフィーネ-</h3>
+
+                        <dl class="space-y-4 text-sm md:text-base text-gray-700 font-bold">
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-alfineAccent font-black">住所</dt>
+                                <dd class="col-span-3 md:col-span-4">〒460-0024<br>愛知県名古屋市中区<br
+                                        class="md:hidden">正木４丁目２−３０<br>第三フクマルビル 9階C室 第③
+                                </dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-alfineAccent font-black">電話番号</dt>
+                                <dd class="col-span-3 md:col-span-4 text-lg text-alfineMain font-black"><a
+                                        href="tel:050-5448-9395">050-5448-9395</a></dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-alfineAccent font-black">営業時間</dt>
+                                <dd class="col-span-3 md:col-span-4">11:00～21:00<br><span class="text-xs">※水,土のみ
+                                        16:00～21:00</span></dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-alfineAccent font-black">定休日</dt>
+                                <dd class="col-span-3 md:col-span-4">不定休</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex gap-4 pt-4 border-t border-gray-100">
+                            <a href="https://alfine.happytry.org/jump04.html" target="_blank" class="nui-btn flex-1 text-sm !px-2">
+                                ホームページへ
+                            </a>
+                            <a href="https://alfine.happytry.org/jump02.html" target="_blank" class="nui-btn flex-1 text-sm !px-2">
+                                Webお問合せ
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Map -->
+                    <div class="min-h-[300px] lg:h-auto w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.525440532557!2d136.8961113!3d35.1435144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003778e93b53f6f%3A0xc1deca350c37092c!2z6Y2854G444Oe44OD44K144O844K46ZmiIGFsZmluZSAt44Ki44Or44OV44Kj44O844ONLQ!5e0!3m2!1sja!2sjp!4v1780473076926!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full object-cover">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 bg-gray-50 text-alfineMain text-center border-t border-gray-200">
+        <div class="container mx-auto max-w-6xl">
+            <a href="#" class="mb-6 flex justify-center items-center">
+                <img src="img/logo.png" alt="鍼灸マッサージ院 alfine"
+                    class="h-12 md:h-16 w-auto !shadow-none !border-none !rounded-none">
+            </a>
+            <nav class="mb-8">
+                <ul class="flex flex-wrap justify-center gap-6 text-sm font-bold">
+                    <li><a href="#about" class="hover:text-alfineAccent transition">ABOUT</a></li>
+                    <li><a href="#features" class="hover:text-alfineAccent transition">FEATURES</a></li>
+                    <li><a href="#menu" class="hover:text-alfineAccent transition">MENU</a></li>
+                    <li><a href="#message" class="hover:text-alfineAccent transition">MESSAGE</a></li>
+                    <li><a href="#access" class="hover:text-alfineAccent transition">ACCESS</a></li>
+                </ul>
+            </nav>
+            <p class="text-xs opacity-60 tracking-widest">&copy; 2026 鍼灸マッサージ院 alfine. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom CTA -->
+    <div class="bottom-cta lg:hidden">
+        <a href="tel:050-5448-9395" style="background-color: var(--color-main);">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            電話予約
+        </a>
+        <a href="https://alfine.happytry.org/jump01.html" target="_blank"
+            style="background-color: var(--color-btn);">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path
+                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+            </svg>
+            Web予約
+        </a>
+    </div>
+    <!-- Page Top Btn -->
+    <a href="#" id="page-top" class="page-top">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M12 4l8 8h-6v8h-4v-8H4z" />
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

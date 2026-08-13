@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabi nails tokyo | 茗荷谷の隠れ家ネイルサロン</title>
+    <meta name="description" content="茗荷谷で叶える、上品で美しい大人ネイル。駅チカで通いやすい、癒しの隠れ家ネイルサロン「tabi nails tokyo」です。">
+
+    <!-- OGP Settings -->
+    <meta property="og:title" content="tabi nails tokyo | 茗荷谷の隠れ家ネイルサロン">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tabi-nails-tokyo.happytry.org/">
+    <meta property="og:image" content="https://tabi-nails-tokyo.happytry.org/img/ogp.jpg">
+    <meta property="og:site_name" content="tabi nails tokyo">
+    <meta property="og:description" content="茗荷谷で叶える、上品で美しい大人ネイル。駅チカで通いやすい、癒しの隠れ家ネイルサロン「tabi nails tokyo」です。">
+    <!-- Google Fonts: Noto Serif JP for elegant look, Noto Sans JP for readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                fontSize: {
+                    'xs': '12px',
+                    'sm': '14px',
+                    'base': '16px',
+                    'lg': '18px',
+                    'xl': '20px',
+                    '2xl': '24px',
+                    '3xl': '30px',
+                    '4xl': '36px',
+                    '5xl': '48px',
+                    '6xl': '60px',
+                },
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        theme: {
+                            beige: {
+                                100: '#F9F6F0', // Background
+                                200: '#E8DCC8', // Light accent
+                                300: '#D5C0A9', // Buttons / borders
+                                400: '#C29B7F', // Darker beige
+                            },
+                            gray: {
+                                400: '#7A6D68', // Darkened light text
+                                600: '#3E312B', // Darkened body text
+                                800: '#1C1310', // Darkened headings
+                            },
+                            white: '#FFFFFF',
+                        }
+                    },
+                    letterSpacing: {
+                        wider: '0.05em',
+                        widest: '0.1em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body class="font-sans antialiased text-theme-gray-600 font-light tracking-wide select-none"
+    oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+    <div class="global-fixed-bg"></div>
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-theme-beige-200"
+        id="header">
+        <div class="max-w-7xl mx-auto w-full h-16 md:h-20 flex justify-between items-center px-4 md:px-8">
+            <!-- Logo -->
+            <a href="/" class="flex items-center">
+                <span class="font-serif text-lg md:text-xl tracking-widest text-theme-gray-800 font-medium">tabi nails
+                    tokyo</span>
+            </a>
+
+            <!-- PC Nav -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm tracking-widest text-theme-gray-600 font-serif">
+                <a href="#about" class="hover:text-theme-beige-400 transition">About</a>
+                <a href="#features" class="hover:text-theme-beige-400 transition">Features</a>
+                <a href="#menu" class="hover:text-theme-beige-400 transition">Menu</a>
+                <a href="#gallery" class="hover:text-theme-beige-400 transition">Gallery</a>
+                <a href="#access" class="hover:text-theme-beige-400 transition">Access</a>
+                <a href="https://tabi-nails-tokyo.happytry.org/jump01.html" target="_blank"
+                    class="text-theme-gray-600 hover:text-theme-beige-400 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- SP Hamburger -->
+            <button id="hamburger-btn"
+                class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-[60]">
+                <span class="block w-6 h-[1px] bg-theme-gray-800 transition-transform duration-300"></span>
+                <span class="block w-6 h-[1px] bg-theme-gray-800 transition-opacity duration-300"></span>
+                <span class="block w-6 h-[1px] bg-theme-gray-800 transition-transform duration-300"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SP Menu -->
+    <div id="sp-menu"
+        class="fixed inset-0 bg-theme-beige-100 z-[55] transform translate-x-full transition-transform duration-300 flex flex-col pt-24 px-8 md:hidden">
+        <button id="sp-menu-close"
+            class="absolute top-4 right-4 flex items-center justify-center gap-2 text-xs font-sans tracking-widest text-theme-gray-600 border border-theme-gray-400 rounded-full px-4 py-2 hover:bg-white transition z-50">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            閉じる
+        </button>
+        <nav class="flex flex-col space-y-8 text-center text-lg font-serif text-theme-gray-800 overflow-y-auto pb-24">
+            <a href="#about" class="sp-nav-link hover:text-theme-beige-400">About</a>
+            <a href="#features" class="sp-nav-link hover:text-theme-beige-400">Features</a>
+            <a href="#menu" class="sp-nav-link hover:text-theme-beige-400">Menu</a>
+            <a href="#gallery" class="sp-nav-link hover:text-theme-beige-400">Gallery</a>
+            <a href="#access" class="sp-nav-link hover:text-theme-beige-400">Access</a>
+            <a href="https://tabi-nails-tokyo.happytry.org/jump01.html" target="_blank"
+                class="inline-flex justify-center items-center gap-2 mt-4 text-theme-gray-600">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                        clip-rule="evenodd" />
+                </svg>
+                Instagram
+            </a>
+
+        </nav>
+    </div>
+
+    <main>
+        <!-- First View (Type19 Style) -->
+        <section id="fv">
+            <!-- Top: copy -->
+            <div class="fv-top">
+                <!-- PC: absolute top-right / SP-TAB: inline above headline -->
+                <div class="fv-top-meta">
+                    <p class="fv-eyebrow">tabi nails tokyo</p>
+                    <p class="fv-sub">駅チカで通いやすい、<br>癒しの隠れ家ネイルサロン</p>
+                </div>
+
+                <h1 class="fv-headline">
+                    茗荷谷で叶える、<br>
+                    上品で美しい<em>大人ネイル</em>
+                </h1>
+
+                <div class="fv-top-bottom">
+                    <a href="https://tabi-nails-tokyo.happytry.org/jump02.html" target="_blank"
+                        class="fv-cta"><span>ご予約はこちら →</span></a>
+                </div>
+            </div>
+
+            <!-- Bottom: vertical scrolling image columns -->
+            <div class="fv-bottom">
+                <div class="fv-wave">
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,0 L0,45 Q200,90 400,55 Q600,18 800,60 Q1000,90 1200,48 Q1320,20 1440,55 L1440,0 Z"
+                            fill="#F9F6F0" />
+                    </svg>
+                    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,0 L0,60 Q180,20 380,65 Q580,90 780,42 Q980,10 1180,58 Q1340,80 1440,38 L1440,0 Z"
+                            fill="#F9F6F0" />
+                    </svg>
+                </div>
+
+                <div class="fv-cols">
+                    <!-- Column 1 -->
+                    <div class="v-col v-col-1 js-clone-scroll">
+                        <div class="v-card"><img src="img/fv01.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv04.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv02.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv05.jpg" loading="lazy" alt=""></div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="v-col v-col-2 js-clone-scroll">
+                        <div class="v-card"><img src="img/fv03.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv06.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv01.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv04.jpg" loading="lazy" alt=""></div>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="v-col v-col-3 js-clone-scroll">
+                        <div class="v-card"><img src="img/fv05.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv02.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv06.jpg" loading="lazy" alt=""></div>
+                        <div class="v-card"><img src="img/fv03.jpg" loading="lazy" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-28 parallax-bg overlay-light-beige-85">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 anim-fade-up">
+                    <img src="img/aboutpic.jpg" alt="Salon Vibe"
+                        class="w-full rounded-t-full rounded-b-2xl shadow-xl object-cover aspect-[4/5]">
+                </div>
+                <div class="w-full md:w-1/2 text-left anim-fade-up anim-delay-1">
+                    <span
+                        class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-4 block">About</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-theme-gray-800 mb-8 leading-tight">
+                        茗荷谷駅近くにある、<br>
+                        フォルムにこだわった<br class="hidden md:block">ネイルサロン
+                    </h2>
+                    <div class="space-y-6 text-sm md:text-base text-theme-gray-600 leading-loose">
+                        <p>
+                            シンプルネイルからデザインネイル、長さ出し、フットネイルまで幅広く対応しています。
+                        </p>
+                        <p>
+                            爪を長く伸ばせない方や、派手なネイルができない方にも、手元がきれいに見える上品なデザインをご提案。
+                        </p>
+                        <p>
+                            朝から夜遅くまで営業しているため、お仕事前後や家事・育児の合間にも通いやすいサロンです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section id="problems" class="py-20 md:py-28 bg-[#fafafa]">
+            <div class="max-w-4xl mx-auto px-6 text-center anim-fade-up">
+                <h2 class="text-2xl md:text-3xl font-serif text-theme-gray-800 mb-12 heading-underline">こんなお悩みありませんか？
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left">
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">仕事柄、派手なネイルができない</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">短い爪でもきれいに見せたい</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">自爪への負担が気になる</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">シンプルでも上品なネイルにしたい</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">仕事や家事でネイルに行く時間が<br class="md:hidden">取りにくい</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white shadow-sm p-4 rounded-lg">
+                        <svg class="w-5 h-5 text-theme-beige-400 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <p class="text-sm md:text-base">子ども連れでも行けるサロンを<br class="md:hidden">探している</p>
+                    </div>
+                </div>
+
+                <p class="mt-12 text-theme-gray-600 leading-relaxed font-serif text-base md:text-lg">
+                    tabi nails tokyo が、そのお悩みを解決し<br>
+                    理想の指先を叶えます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 md:py-28 bg-theme-beige-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span
+                        class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-2 block">Features</span>
+                    <h2 class="text-3xl font-serif text-theme-gray-800 heading-underline">当サロンの4つの特徴</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 anim-fade-up overflow-hidden flex flex-col">
+                        <div class="w-full aspect-[3/2] relative overflow-hidden">
+                            <img src="img/serpic01.jpg" alt="美しいフォルムにこだわる施術"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow">
+                            <div class="text-theme-beige-400 font-serif text-4xl opacity-50 mb-4">01</div>
+                            <h3
+                                class="text-xl font-serif text-theme-gray-800 mb-4 border-b border-theme-beige-200 pb-4">
+                                美しいフォルムに<br class="md:hidden">こだわる施術</h3>
+                            <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                爪の形や厚みを丁寧に整え、どの角度から見ても美しい仕上がりを目指します。シンプルなワンカラーも、上品で洗練された印象に仕上げます。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 anim-fade-up anim-delay-1 overflow-hidden flex flex-col">
+                        <div class="w-full aspect-[3/2] relative overflow-hidden">
+                            <img src="img/serpic02.jpg" alt="フィルイン対応・付替オフ無料"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow">
+                            <div class="text-theme-beige-400 font-serif text-4xl opacity-50 mb-4">02</div>
+                            <h3
+                                class="text-xl font-serif text-theme-gray-800 mb-4 border-b border-theme-beige-200 pb-4">
+                                フィルイン対応・<br class="md:hidden">付替オフ無料</h3>
+                            <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                全施術フィルイン対応で、自爪への負担を抑えながらネイルを楽しめます。ご新規様もリピーター様も付替オフ無料なので、続けて通いやすいのも魅力です。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 anim-fade-up overflow-hidden flex flex-col">
+                        <div class="w-full aspect-[3/2] relative overflow-hidden">
+                            <img src="img/serpic03.jpg" alt="朝から夜まで通いやすい駅チカサロン"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow">
+                            <div class="text-theme-beige-400 font-serif text-4xl opacity-50 mb-4">03</div>
+                            <h3
+                                class="text-xl font-serif text-theme-gray-800 mb-4 border-b border-theme-beige-200 pb-4">
+                                朝から夜まで<br class="md:hidden">通いやすい駅チカサロン</h3>
+                            <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                茗荷谷駅近くでアクセスしやすく、朝8:00から夜23:00まで対応。忙しい方でも、自分の予定に合わせてネイルを楽しめます。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-300 anim-fade-up anim-delay-1 overflow-hidden flex flex-col">
+                        <div class="w-full aspect-[3/2] relative overflow-hidden">
+                            <img src="img/serpic04.jpg" alt="お子様連れも歓迎の癒し空間"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow">
+                            <div class="text-theme-beige-400 font-serif text-4xl opacity-50 mb-4">04</div>
+                            <h3
+                                class="text-xl font-serif text-theme-gray-800 mb-4 border-b border-theme-beige-200 pb-4">
+                                お子様連れも歓迎の<br class="md:hidden">癒し空間</h3>
+                            <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                緑を感じる落ち着いた空間で、ゆったりと施術を受けられます。お子様連れでのご来店も歓迎しております。（※ご予約時にお知らせください）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 md:py-28 parallax-bg overlay-light-beige-85">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span
+                        class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-2 block">Menu</span>
+                    <h2 class="text-3xl font-serif text-theme-gray-800 heading-underline">おすすめメニュー</h2>
+                </div>
+
+                <!-- Recommended Item (Featured) -->
+                <div class="mb-20 anim-fade-up">
+                    <div
+                        class="flex flex-col md:flex-row bg-theme-beige-100 rounded-2xl overflow-hidden shadow-sm border border-theme-beige-200">
+                        <div class="w-full md:w-[45%]">
+                            <img src="img/menupic.jpg" alt="ワンカラー" class="w-full h-full object-cover min-h-[300px]">
+                        </div>
+                        <div class="w-full md:w-[55%] p-8 md:p-12 flex flex-col justify-center">
+                            <span
+                                class="text-theme-beige-400 font-serif text-xs md:text-sm tracking-widest uppercase mb-3 block">Recommendation</span>
+                            <h4
+                                class="font-serif text-xl md:text-2xl font-medium mb-4 text-theme-gray-800 leading-snug">
+                                ワンカラー / マグネット / <br class="md:hidden">ラメグラデ</h4>
+                            <div class="flex items-end gap-4 mb-6 pb-6 border-b border-theme-beige-200">
+                                <span class="text-3xl font-serif text-theme-gray-800">6,500<span
+                                        class="text-base font-sans ml-1">円</span></span>
+                                <span class="text-sm text-theme-gray-400 line-through mb-1">通常 7,000円</span>
+                                <span class="text-sm text-theme-gray-400 ml-auto mb-1">90分</span>
+                            </div>
+                            <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                お好きなカラーを2色まで選べる、ちゅるんと綺麗なワンカラーメニュー。マグネット・クリアベースのラメグラデも同料金でお選びいただけます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Menus Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                    <!-- Hand Menu -->
+                    <div class="anim-fade-up">
+                        <h3 class="text-2xl font-serif mb-8 text-theme-gray-800 border-b border-theme-beige-200 pb-4">
+                            Hand</h3>
+                        <div class="space-y-8">
+                            <!-- Item 2 -->
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-serif text-lg font-medium text-theme-gray-800">定額シンプル</h4>
+                                    <div class="text-right">
+                                        <span class="text-xl font-serif text-theme-gray-800">8,000<span
+                                                class="text-sm font-sans ml-1">円</span></span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-theme-gray-400 line-through mb-3">通常 8,500円</p>
+                                <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                    シンプルで上品な定額デザインメニューです。デザインサンプルの中からお好きなデザインをお選びいただけます。カラー変更も可能です。
+                                </p>
+                            </div>
+                            <!-- Item 3 -->
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-serif text-lg font-medium text-theme-gray-800">定額アート</h4>
+                                    <div class="text-right">
+                                        <span class="text-xl font-serif text-theme-gray-800">9,000<span
+                                                class="text-sm font-sans ml-1">円</span></span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-theme-gray-400 line-through mb-3">通常 9,500円</p>
+                                <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                    華やかさを楽しみたい方におすすめの定額アートメニューです。デザインサンプルの中からお好きなデザインをお選びいただけます。カラー変更も可能です。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foot Menu -->
+                    <div class="anim-fade-up anim-delay-1">
+                        <h3 class="text-2xl font-serif mb-8 text-theme-gray-800 border-b border-theme-beige-200 pb-4">
+                            Foot</h3>
+                        <div class="space-y-8">
+                            <!-- Item 1 -->
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-serif text-lg font-medium text-theme-gray-800">ワンカラー</h4>
+                                    <div class="text-right">
+                                        <span class="text-xl font-serif text-theme-gray-800">7,500<span
+                                                class="text-sm font-sans ml-1">円</span></span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-theme-gray-400 line-through mb-3">通常 8,000円</p>
+                                <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                    ちゅるんと綺麗な仕上がりのフットワンカラーメニューです。お好きなカラーを2色までお選びいただけます。マグネットネイルも同料金で対応可能です。
+                                </p>
+                            </div>
+                            <!-- Item 2 -->
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-serif text-lg font-medium text-theme-gray-800">親指アート定額</h4>
+                                    <div class="text-right">
+                                        <span class="text-xl font-serif text-theme-gray-800">8,500<span
+                                                class="text-sm font-sans ml-1">円</span></span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-theme-gray-400 line-through mb-3">通常 9,000円</p>
+                                <p class="text-sm md:text-base leading-relaxed text-theme-gray-600">
+                                    親指にアートを入れたい方におすすめのメニューです。サンプルからお選びいただき、親指以外はワンカラーとなります。マグネットも選択可能です。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16 anim-fade-up">
+                    <a href="https://tabi-nails-tokyo.happytry.org/jump02.html" target="_blank"
+                        class="inline-block bg-theme-beige-400 text-white px-8 py-3 rounded-full hover:bg-theme-gray-400 transition duration-300 text-sm tracking-wider font-serif">
+                        その他のメニュー・ご予約はこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Section -->
+        <section class="py-16 md:py-20 bg-[#fafafa]">
+            <div class="max-w-4xl mx-auto px-4 md:px-6">
+                <div
+                    class="bg-white border border-theme-gray-800 p-8 md:p-12 text-sm md:text-base text-theme-gray-600 leading-relaxed shadow-sm">
+                    <!-- Cancel -->
+                    <div class="anim-fade-up">
+                        <h3
+                            class="text-lg md:text-xl font-serif text-theme-gray-800 mb-6 flex items-center gap-4 whitespace-nowrap">
+                            キャンセル・変更について
+                            <span class="flex-grow h-[1px] bg-theme-gray-800"></span>
+                        </h3>
+                        <ul class="list-disc pl-5 space-y-4">
+                            <li>ご予約の変更・キャンセルは、前日の24時までにご連絡をお願いいたします。<br
+                                    class="hidden md:block">当日のキャンセルにつきましては、必ずお電話にてご連絡ください。</li>
+                            <li>当サロンは個人サロンのため、1日にご案内できる人数に限りがございます。<br
+                                    class="hidden md:block">度重なる変更や無断キャンセルは、他のお客様のご迷惑となる場合がございます。</li>
+                            <li>恐れ入りますが、状況によっては今後のご予約をお断りさせていただく場合がございます。あらかじめご了承ください。</li>
+                        </ul>
+                    </div>
+
+                    <!-- Guarantee -->
+                    <div class="anim-fade-up anim-delay-1 mt-12 md:mt-16">
+                        <h3
+                            class="text-lg md:text-xl font-serif text-theme-gray-800 mb-6 flex items-center gap-4 whitespace-nowrap">
+                            お直し保証について
+                            <span class="flex-grow h-[1px] bg-theme-gray-800"></span>
+                        </h3>
+                        <p class="mb-6">施術後7日以内に不具合があった場合、対象内容に限り無料でお直しいたします。</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                            <div>
+                                <p class="font-medium text-theme-gray-800 mb-3">【無料お直し対象】</p>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>ジェル、チップの浮き</li>
+                                    <li>ジェル、チップの剥がれ</li>
+                                    <li>パーツ取れ</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-medium text-theme-gray-800 mb-3">【無料保証の対象外】</p>
+                                <ul class="list-disc pl-5 space-y-2 text-sm md:text-base">
+                                    <li>ぶつけて欠けた場合</li>
+                                    <li>無理に剥がしてしまった場合</li>
+                                    <li>お客様都合による破損/変更</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="text-sm md:text-base border-t border-theme-gray-300 pt-4 mt-2">
+                            <span class="font-medium text-theme-gray-800">有料お直し（1本
+                                500円〜）：</span>施術日より7日以上経過している場合、お客様の過失による破損等。<br>
+                            ※長さ出しが必要な場合は追加料金が発生します。ご希望の場合は7日以内にお電話にてご連絡ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 md:py-28 bg-theme-beige-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span
+                        class="text-theme-gray-600 font-serif tracking-[0.2em] text-sm uppercase mb-2 block">Gallery</span>
+                    <h2 class="text-3xl font-serif text-theme-gray-800 heading-underline">デザインギャラリー</h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up">
+                        <img src="img/gallerypic01.jpg" alt="Gallery 1"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up anim-delay-1">
+                        <img src="img/gallerypic02.jpg" alt="Gallery 2"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up anim-delay-2">
+                        <img src="img/gallerypic03.jpg" alt="Gallery 3"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up">
+                        <img src="img/gallerypic04.jpg" alt="Gallery 4"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up anim-delay-1">
+                        <img src="img/gallerypic05.jpg" alt="Gallery 5"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="overflow-hidden rounded-lg aspect-square bg-theme-beige-100 anim-fade-up anim-delay-2">
+                        <img src="img/gallerypic06.jpg" alt="Gallery 6"
+                            class="w-full h-full object-cover js-modal-trigger cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 anim-fade-up">
+                    <p class="text-sm md:text-base text-theme-gray-600 mb-4">最新のデザインはInstagramをご覧ください。</p>
+                    <a href="https://tabi-nails-tokyo.happytry.org/jump01.html" target="_blank"
+                        class="inline-flex items-center gap-2 border border-theme-gray-400 text-theme-gray-600 px-6 py-3 rounded-full hover:bg-theme-gray-100 transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Instagramを見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Section -->
+        <section id="voice" class="py-20 md:py-28 parallax-bg overlay-light-beige-85">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span
+                        class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-2 block">Voice</span>
+                    <h2 class="text-3xl font-serif text-theme-gray-800 heading-underline">お客様の声</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm relative anim-fade-up flex flex-col">
+                        <div class="text-4xl font-serif text-theme-beige-200 absolute top-4 left-6">“</div>
+                        <div class="relative z-10 pt-4 flex-grow">
+                            <input type="checkbox" id="review-1" class="peer hidden">
+                            <p
+                                class="text-sm md:text-base leading-relaxed text-theme-gray-600 line-clamp-3 peer-checked:line-clamp-none transition-all duration-300">
+                                このサロンは今回で6回目です。<br>
+                                デザインに迷った時に、素敵な意見とおすすめをしてくださるので、デザインが決まっていないけどとりあえずネイル変えたい時に、何にも考えないですぐ行けるサロンだと思います。<br>
+                                また、持ち込みデザインも、持参デザイン以上の質と高級感で仕上がっていて、来たたび大満足させてくれるし、しかもその後ネイルがなんと4週間以降も健全で、自分が飽きてくるまでに長持ちするネイルができるネイルリストのサロンです。<br>
+                                センス、質、高級感および長持ち、以上全部同時にこだわる人にはぜひおすすめです。<br>
+                                私はいつも行く前に本サロンのインスタで予約して行っています。ご参考までに共有いたします。
+                            </p>
+                            <label for="review-1"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 inline-block peer-checked:hidden hover:text-theme-gray-400 transition">続きを読む</label>
+                            <label for="review-1"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 hidden peer-checked:inline-block hover:text-theme-gray-400 transition">閉じる</label>
+                        </div>
+                        <p class="text-xs font-medium text-theme-gray-800 mt-6 text-right">Svbinur Abduwali 様</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm relative anim-fade-up anim-delay-1 flex flex-col">
+                        <div class="text-4xl font-serif text-theme-beige-200 absolute top-4 left-6">“</div>
+                        <div class="relative z-10 pt-4 flex-grow">
+                            <input type="checkbox" id="review-2" class="peer hidden">
+                            <p
+                                class="text-sm md:text-base leading-relaxed text-theme-gray-600 line-clamp-3 peer-checked:line-clamp-none transition-all duration-300">
+                                2月17日にネイルしてもらいました。<br>
+                                まもなく1ヶ月経ちますが、キレイにキープできていて嬉しいです。<br><br>
+                                今回は爪を短くしないといけなくて、自爪に近い自然な感じで、とお願いしました。<br><br>
+                                今までは、せっかくやるんだから！と派手な色やデザインに惹かれていましたが、今回のナチュラルカラーに2本だけパーツを使ったデザインもとても気に入っています。<br>
+                                今まで何度かネイルサロンに通いましたが、こんなにセンスの良いサロンははじめてです。<br><br>
+                                細かいところが気になってしまう性格なのですが、そういうことも話しやすくて、親切に対応してくださいました。<br><br>
+                                ケアも含まれたプランなので、お得だと思いました。また行きたいです。
+                            </p>
+                            <label for="review-2"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 inline-block peer-checked:hidden hover:text-theme-gray-400 transition">続きを読む</label>
+                            <label for="review-2"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 hidden peer-checked:inline-block hover:text-theme-gray-400 transition">閉じる</label>
+                        </div>
+                        <p class="text-xs font-medium text-theme-gray-800 mt-6 text-right">TOMOE FURUKAWA 様</p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm relative anim-fade-up anim-delay-2 flex flex-col">
+                        <div class="text-4xl font-serif text-theme-beige-200 absolute top-4 left-6">“</div>
+                        <div class="relative z-10 pt-4 flex-grow">
+                            <input type="checkbox" id="review-3" class="peer hidden">
+                            <p
+                                class="text-sm md:text-base leading-relaxed text-theme-gray-600 line-clamp-3 peer-checked:line-clamp-none transition-all duration-300">
+                                先日3度目の施術をして頂きました。<br>
+                                ネイルケアの段階からとても丁寧に、個々の爪の形やライフスタイルに合わせてその都合相談しながら、きめ細やかな施術、丈夫な仕上がりに大満足しております。<br>
+                                またよろしくお願いいたします。
+                            </p>
+                            <label for="review-3"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 inline-block peer-checked:hidden hover:text-theme-gray-400 transition">続きを読む</label>
+                            <label for="review-3"
+                                class="text-xs text-theme-beige-400 cursor-pointer mt-2 hidden peer-checked:inline-block hover:text-theme-gray-400 transition">閉じる</label>
+                        </div>
+                        <p class="text-xs font-medium text-theme-gray-800 mt-6 text-right">椿彰子 様</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 anim-fade-up">
+                    <a href="https://tabi-nails-tokyo.happytry.org/jump03.html" target="_blank"
+                        class="inline-flex items-center gap-2 bg-white text-theme-gray-800 px-8 py-4 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 border border-theme-beige-200 text-sm font-medium tracking-widest">
+                        その他口コミはこちら
+                        <svg class="w-4 h-4 text-theme-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message & Staff -->
+        <section class="py-20 md:py-28 bg-[#fafafa]">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <!-- Image -->
+                    <div class="w-full md:w-[40%] anim-fade-up">
+                        <img src="img/messagepic.jpg" alt="Owner"
+                            class="w-full rounded-2xl shadow-lg object-cover aspect-[5/6] md:aspect-[3/4]">
+                    </div>
+                    <!-- Text -->
+                    <div class="w-full md:w-[60%] anim-fade-up anim-delay-1">
+                        <span
+                            class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-4 block">Message
+                            & Staff</span>
+                        <h2 class="text-2xl font-serif text-theme-gray-800 mb-6">
+                            指先がきれいになると、<br>
+                            ふとした瞬間の気分まで<br class="md:hidden">明るくなる
+                        </h2>
+                        <div class="space-y-4 text-sm md:text-base text-theme-gray-600 mb-8 leading-loose">
+                            <p>当サロンをご覧いただきありがとうございます。</p>
+                            <p>当サロンでは、見た目の美しさだけでなく、お客様がリラックスして過ごせる時間も大切にしています。シンプルなネイルも、少し華やかなデザインも、お客様のライフスタイルやご希望に合わせて丁寧にご提案いたします。
+                            </p>
+                            <p>茗荷谷でネイルサロンをお探しの方は、ぜひ一度お気軽にお越しください。</p>
+                        </div>
+
+                        <div class="bg-white shadow-sm p-6 rounded-xl border border-theme-beige-200">
+                            <h3 class="font-serif text-lg font-medium text-theme-gray-800 mb-2">Owner / ラジ</h3>
+                            <p class="text-xs text-theme-gray-400 mb-4">ネイリスト検定1級 / ジェルネイル検定上級 / ネイルサロン衛生管理士</p>
+                            <p class="text-sm md:text-base text-theme-gray-600 leading-relaxed">
+                                丁寧なカウンセリングと確かな技術で、お客様のライフスタイルに合うネイルをご提案します。商社勤務や海外駐在の経験も活かし、初めての方にも安心して過ごしていただける接客を大切にしています。<br>
+                                指先だけでなく、心までリフレッシュできる時間をお届けします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="py-20 md:py-28 bg-theme-beige-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span
+                        class="text-theme-beige-400 font-serif tracking-[0.2em] text-sm uppercase mb-2 block">Access</span>
+                    <h2 class="text-3xl font-serif text-theme-gray-800 heading-underline">サロン情報・アクセス</h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 bg-white p-4 md:p-10 rounded-2xl shadow-sm anim-fade-up">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-serif text-theme-gray-800 mb-6">tabi nails tokyo</h3>
+                        <table class="w-full text-sm md:text-base text-left text-theme-gray-600">
+                            <tbody class="divide-y divide-theme-beige-200 border-t border-theme-beige-200">
+                                <tr>
+                                    <th class="py-4 font-medium w-20 md:w-28 align-top">住所</th>
+                                    <td class="py-4">〒112-0012<br>東京都文京区大塚１丁目１−２１</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 font-medium w-20 md:w-28">電話番号</th>
+                                    <td class="py-4"><a href="tel:05054484899"
+                                            class="text-inherit hover:opacity-70 transition">050-5448-4899</a></td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 font-medium w-20 md:w-28">営業時間</th>
+                                    <td class="py-4">8：00－23：00</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 font-medium w-20 md:w-28">定休日</th>
+                                    <td class="py-4">不定休</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 font-medium w-20 md:w-28">支払い方法</th>
+                                    <td class="py-4">PayPay、その他現金</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-8">
+                            <a href="https://tabi-nails-tokyo.happytry.org/jump02.html" target="_blank"
+                                class="block w-full text-center bg-theme-gray-800 text-white py-3 rounded-md hover:bg-theme-beige-400 transition tracking-wider mb-3">
+                                Webから予約する
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full md:w-1/2 min-h-[300px] bg-theme-beige-200 rounded-lg overflow-hidden relative flex items-center justify-center">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.395139012692!2d139.7366194!3d35.71649949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f8cae0655%3A0xf8f7bc64687ced9c!2stabi%20nails%20tokyo!5e0!3m2!1sja!2sjp!4v1781687310844!5m2!1sja!2sjp"
+                            class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-theme-gray-800 text-white py-12 pb-28 md:pb-12 text-center text-sm font-light border-t-4 border-theme-beige-400">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-2xl tracking-widest mb-6">tabi nails tokyo</h2>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://tabi-nails-tokyo.happytry.org/jump01.html" target="_blank"
+                    class="hover:text-theme-beige-400 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <p class="tracking-widest text-theme-gray-400 text-xs">&copy; 2026 tabi nails tokyo All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SP Fixed CTA -->
+    <div
+        class="fixed bottom-0 left-0 w-full z-[55] p-3 bg-white/95 backdrop-blur-sm border-t border-theme-beige-200 md:hidden flex justify-center items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <a href="https://tabi-nails-tokyo.happytry.org/jump02.html" target="_blank"
+            class="flex items-center justify-center gap-2 bg-theme-beige-400 text-white w-full py-3.5 rounded-xl font-serif text-sm font-medium tracking-widest shadow-sm hover:bg-theme-gray-400 transition-colors duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            ご予約はこちら
+        </a>
+    </div>
+
+    <!-- Page Top Button -->
+    <button id="page-top"
+        class="fixed right-4 md:right-8 bottom-24 md:bottom-8 z-[60] bg-theme-beige-400/90 hover:bg-theme-gray-400 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex flex-col justify-center items-center shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 backdrop-blur-sm group">
+        <svg class="w-5 h-5 md:w-6 md:h-6 mb-0.5 group-hover:-translate-y-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+        <span class="text-[9px] md:text-[10px] font-sans tracking-wider mt-0.5">TOP</span>
+    </button>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal"
+        class="fixed inset-0 bg-theme-gray-800/95 z-[70] hidden flex-col items-center justify-center select-none backdrop-blur-sm">
+        <button id="modal-close"
+            class="absolute top-6 right-6 text-white text-4xl hover:text-theme-beige-400 transition z-[80]">&times;</button>
+        <div class="swiper modal-swiper w-full h-[80vh] flex items-center justify-center">
+            <div class="swiper-wrapper" id="modal-swiper-wrapper"></div>
+        </div>
+        <button
+            class="modal-prev-btn absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-[80] text-white text-5xl hover:text-theme-beige-400 transition">&#8249;</button>
+        <button
+            class="modal-next-btn absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-[80] text-white text-5xl hover:text-theme-beige-400 transition">&#8250;</button>
+        <div
+            class="swiper-pagination modal-pagination absolute bottom-10 text-white font-serif tracking-widest text-lg">
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./Js/main.js"></script>
+
+</body>
+
+</html>

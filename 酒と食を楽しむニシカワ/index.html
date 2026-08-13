@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>酒と食を楽しむニシカワ</title>
+
+  <!-- OGP & Twitter Card Tags -->
+  <meta property="og:title" content="酒と食を楽しむニシカワ">
+  <meta property="og:description" content="初めての方も、お気軽に。普段使いの一杯から、特別な一本まで。100年以上続く三重県伊賀市の町の酒屋です。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saketoshoku-nishikawa.happytry.org">
+  <meta property="og:image" content="https://saketoshoku-nishikawa.happytry.org/img/ogp.jpg">
+  <meta property="og:site_name" content="酒と食を楽しむニシカワ">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+
+    <!-- LEFT: Logo -->
+    <a href="#" class="hd-logo">
+      <div class="hd-logo-bar"></div>
+      <div class="hd-logo-text">
+        <span class="hd-logo-ja">酒と食を楽しむニシカワ</span>
+      </div>
+    </a>
+
+    <!-- CENTER: Nav -->
+    <nav class="hd-nav">
+      <a href="#concept" class="active">CONCEPT</a>
+      <a href="#menu">PRODUCTS</a>
+      <a href="#seasonal">MESSAGE</a>
+      <a href="#faq">FAQ</a>
+      <a href="#access">ACCESS</a>
+    </nav>
+
+    <!-- RIGHT: CTA buttons -->
+    <div class="hd-actions">
+      <a href="#reserve" class="hd-btn-reserve">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        お問い合わせ
+      </a>
+      <a href="https://www.instagram.com/osakenomisenishikawa/" target="_blank" class="hd-btn-insta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        Instagram
+      </a>
+    </div>
+
+    <!-- HAMBURGER: SP only -->
+    <button class="hd-hamburger" id="hdHamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="sp-menu-overlay" id="spMenuOverlay">
+    <div class="sp-menu-inner">
+      <nav class="sp-menu-nav">
+        <a href="#concept" class="sp-menu-link">CONCEPT</a>
+        <a href="#menu" class="sp-menu-link">PRODUCTS</a>
+        <a href="#seasonal" class="sp-menu-link">MESSAGE</a>
+        <a href="#faq" class="sp-menu-link">FAQ</a>
+        <a href="#access" class="sp-menu-link">ACCESS</a>
+      </nav>
+      <div class="sp-menu-actions">
+        <a href="#reserve" class="sp-menu-cta">お問い合わせ</a>
+        <a href="https://www.instagram.com/osakenomisenishikawa/" target="_blank" class="sp-menu-insta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FV -->
+  <div class="fv">
+    <!-- Petal decorations -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <!-- Main body: left text / [center area - cards overlay] / right text -->
+    <div class="fv-body">
+
+      <!-- SP用テキストラッパー (SP時: flex row) -->
+      <div class="fv-sp-text">
+
+        <!-- LEFT: vertical copy -->
+        <div class="fv-left-text">
+          <p class="fv-vertical-copy">
+            初めての方も、お気軽に。<br>
+            普段使いの一杯から、<br>特別な一本まで。<br>
+            100年以上続く町の酒屋。
+          </p>
+        </div>
+
+        <!-- CENTER: empty placeholder -->
+        <div class="fv-center-spacer" style="position:relative;height:100%;"></div>
+
+        <!-- RIGHT: catchcopy -->
+        <div class="fv-right-col">
+          <div class="fv-catchcopy-wrap">
+            <div class="fv-catch-border"></div>
+            <div class="fv-catch-lines">
+              <span class="fv-catch-line large">一杯を</span>
+              <span class="fv-catch-line medium">ぴったりの</span>
+              <span class="fv-catch-line large">食卓に、</span>
+              <span class="fv-catch-line medium">今日の</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.fv-sp-text -->
+
+    </div><!-- /.fv-body -->
+
+    <!-- CARDS LAYER -->
+    <div class="fv-cards-layer" id="fvCardsLayer">
+      <div class="fv-card pos-center" data-idx="0">
+        <img src="img/fv01.jpg" alt="和食の風景">
+      </div>
+      <div class="fv-card pos-topright" data-idx="1">
+        <img src="img/fv02.jpg" alt="旬の一皿">
+      </div>
+      <div class="fv-card pos-botleft" data-idx="2">
+        <img src="img/fv03.jpg" alt="季節の料理">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="3">
+        <img src="img/fv04.jpg" alt="炭火料理">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="4">
+        <img src="img/fv05.jpg" alt="食材">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="5">
+        <img src="img/fv06.jpg" alt="和食の美">
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="fv-dot-row" id="fvDots">
+      <div class="fv-sdot active"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+      <div class="fv-sdot"></div>
+    </div>
+  </div>
+
+  <!-- ANNOUNCE -->
+  <div class="announce">
+    🍶 季節限定や入荷数の少ない銘柄もございます　<br class="sp-only">
+    <a href="#menu">詳細はこちら →</a>
+  </div>
+
+  <!-- PROBLEM SECTION -->
+  <section id="problem" class="problem-section">
+    <div class="problem-inner">
+      <div class="reveal centered">
+        <span class="section-label">PROBLEM</span>
+        <h2 class="section-title">こんなお悩みありませんか？</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="problem-list reveal">
+        <ul>
+          <li>どのお酒を選べばいいのかわからない</li>
+          <li>料理に合うお酒を知りたい</li>
+          <li>贈り物に喜ばれるお酒を探している</li>
+          <li>季節限定や珍しいお酒を飲んでみたい</li>
+          <li>地元の美味しいお酒を知りたい</li>
+          <li>普段の晩酌を少し楽しみたい</li>
+        </ul>
+      </div>
+
+      <div class="problem-solution reveal">
+        <p class="solution-text">
+          <span class="solution-highlight">そんな方に、</span><br>
+          お好みやシーンに合わせた<br>
+          一本をご提案いたします。
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- CONCEPT -->
+  <section id="concept" class="concept">
+    <div class="concept-image">
+      <img src="img/aboutpic.jpg" alt="和食の風景" loading="lazy">
+    </div>
+    <div class="concept-text reveal">
+      <span class="section-label">CONCEPT</span>
+      <h2 class="section-title">食卓を豊かにするお酒を<br class="sp-only">届ける酒屋</h2>
+      <div class="divider"></div>
+      <blockquote class="concept-quote">
+        「酒と食を楽しむニシカワ」は、<br>三重県伊賀市で100年以上続く<br class="sp-only">町の酒屋です。
+      </blockquote>
+      <p class="section-desc">
+        日本酒・焼酎・ビールなど、全国各地から厳選したお酒を取り揃え、日々の晩酌から贈り物まで幅広くご提案しています。<br>
+        <br>
+        「今日のごはんに合う一本を見つけたい」<br>
+        「贈り物にぴったりのお酒を選びたい」<br>
+        <br>
+        そんなお客様の声に寄り添いながら、味の好みやシーンに合わせたお酒選びをお手伝いしています。<br>
+        初めての方でも気軽に立ち寄れる、地域に根ざした酒屋です。
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED PANELS -->
+  <section id="intro-menu">
+    <div class="panels">
+      <div class="panel panel-1">
+        <img src="img/serpic01.jpg" alt="全国から厳選した豊富なお酒" class="panel-bg" loading="lazy">
+        <div class="panel-content">
+          <span class="panel-tag">FEATURE 01</span>
+          <h3 class="panel-title">全国から厳選した<br class="sp-only">豊富なお酒</h3>
+          <p class="panel-sub">日本酒・焼酎・ビールなど、全国各地から厳選したお酒を豊富に取り揃えています。
+            季節限定酒や地元銘柄、普段はなかなか出会えない珍しいお酒もあり、その時々の一本をお楽しみいただけます。</p>
+        </div>
+      </div>
+      <div class="panel panel-2">
+        <img src="img/serpic02.jpg" alt="好みに合わせたお酒のご提案" class="panel-bg" loading="lazy">
+        <div class="panel-content">
+          <span class="panel-tag">FEATURE 02</span>
+          <h3 class="panel-title">好みに合わせた<br class="sp-only">お酒のご提案</h3>
+          <p class="panel-sub">「どのお酒を選べばいいかわからない」<br>
+            そんな方にも安心してお選びいただけるよう、味のタイプや料理との相性、予算などをお伺いしながらぴったりの一本をご提案します。</p>
+        </div>
+      </div>
+      <div class="panel panel-3">
+        <img src="img/serpic03.jpg" alt="お探しのお酒の取り寄せにも対応" class="panel-bg" loading="lazy">
+        <div class="panel-content">
+          <span class="panel-tag">FEATURE 03</span>
+          <h3 class="panel-title">お探しのお酒の<br class="sp-only">取り寄せにも対応</h3>
+          <p class="panel-sub">気になる銘柄や探しているお酒がある場合は、お気軽にご相談ください。
+            可能な限り取り寄せやご提案を行い、お客様のご要望にお応えしています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <div class="menu-inner">
+      <div class="centered reveal">
+        <div class="kamon">
+          <div class="kamon-line"></div>
+          <div class="kamon-symbol">◈</div>
+          <div class="kamon-line"></div>
+        </div>
+        <span class="section-label">PRODUCTS</span>
+        <h2 class="section-title" style="color:#fdfaf4">商品紹介</h2>
+        <div class="divider" style="margin:24px auto"></div>
+        <p class="section-desc" style="color:rgba(245,240,232,0.55);margin:0 auto">
+          可能な範囲でお取り寄せも承ります。<br>
+          出会えるはずのなかった一本とのご縁を、<br>つないでいきたいと考えています。
+        </p>
+      </div>
+
+      <div class="menu-grid reveal">
+        <div class="menu-item">
+          <span class="menu-num">01</span>
+          <div class="menu-image">
+            <img src="img/menu01.jpg" alt="春霞 懐石">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">大吟醸 芭蕉 仙聖</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">橋本酒造場の最高峰。華やかな香りと気品ある味わいが特徴。伊賀の偉人、松尾芭蕉の名を冠した逸品です。
+            </p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <span class="menu-num">02</span>
+          <div class="menu-image">
+            <img src="img/menu02.jpg" alt="旬菜 会席">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">宮の雪 極上本醸造</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">上質な原料米で丁寧に醸された本醸造酒。滑らかな喉越しと、料理を引き立てる穏やかな香りが魅力です。</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <span class="menu-num">03</span>
+          <div class="menu-image">
+            <img src="img/menu03.jpg" alt="昼懐石">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">純米吟醸 三重の寒梅</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">丸彦酒造が醸す希少な地酒。スッキリとした淡麗な飲み口の中に、米の旨味がしっかりと息づく逸品です。</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <span class="menu-num">04</span>
+          <div class="menu-image">
+            <img src="img/menu04.jpg" alt="単品料理">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">るみ子の酒</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">森喜酒造場の人気銘柄。漫画『夏子の酒』が縁で誕生。芳醇な旨味としっかりした酸があり、お燗も絶品。</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <span class="menu-num">05</span>
+          <div class="menu-image">
+            <img src="img/menu05.jpg" alt="特別会席">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">真帆（MAHO）</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">若戎酒造が手掛ける、モダンなラベルの純米大吟醸。華やかな香りと繊細な味わいは、贈り物にも最適です。</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <span class="menu-num">06</span>
+          <div class="menu-image">
+            <img src="img/menu06.jpg" alt="個室懐石">
+          </div>
+          <div class="menu-text">
+            <p class="menu-name">蔵出し原酒</p>
+            <span class="menu-name-en">日本酒 / 720ml</span>
+            <p class="menu-desc">搾りたての力強さをそのまま封じ込めた原酒。濃厚なコクと高いアルコール感があり、飲み応え抜群の一杯。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-more-wrap reveal">
+        <a href="https://sake-shoku-nishikawa.com/menu/" target="_blank" class="menu-more-btn">
+          その他商品はこちら
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASONAL -->
+  <section id="seasonal" class="seasonal">
+    <div class="seasonal-image">
+      <img src="img/messagepic.jpg" alt="旬の一皿" loading="lazy">
+    </div>
+    <div class="seasonal-text reveal">
+      <span class="section-label">MESSAGE</span>
+      <h2 class="section-title">一人ひとりに合う一本を</h2>
+      <div class="divider"></div>
+      <p class="seasonal-message-intro"
+        style="font-family:'Shippori Mincho',serif;font-size:20px;color:var(--red-accent);letter-spacing:0.15em;margin-bottom:16px">
+        酒と食を楽しむニシカワでは、<br>日々の食卓が少し楽しくなるような<br>お酒をご提案しています。
+      </p>
+      <p class="section-desc">
+        お酒は、料理や人との時間をより豊かにしてくれる存在です。<br>
+        だからこそ、お客様一人ひとりの好みやシーンに寄り添いながら、ぴったりの一本をお届けしたいと考えています。<br>
+        <br>
+        初めての方も、ぜひお気軽にお立ち寄りください。<br>
+        皆さまのご来店を心よりお待ちしております。
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section">
+    <div class="faq-inner">
+      <div class="reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-icon">Q</span>
+            <span class="faq-text">お酒に詳しくないのですが、相談できますか？</span>
+          </div>
+          <div class="faq-a">
+            <span class="faq-icon">A</span>
+            <div class="faq-text">
+              もちろんです。<br>
+              お好みの味や用途をお伺いしながら、お客様に合ったお酒をご提案いたします。<br>
+              初めての方でもお気軽にご相談ください。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-icon">Q</span>
+            <span class="faq-text">贈り物用のお酒を選ぶことはできますか？</span>
+          </div>
+          <div class="faq-a">
+            <span class="faq-icon">A</span>
+            <div class="faq-text">
+              はい、可能です。<br>
+              お祝い事や季節の贈り物など、用途やご予算に合わせておすすめのお酒をご案内いたします。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-icon">Q</span>
+            <span class="faq-text">季節限定のお酒はありますか？</span>
+          </div>
+          <div class="faq-a">
+            <span class="faq-icon">A</span>
+            <div class="faq-text">
+              季節ごとに楽しめる限定酒や入荷数の少ないお酒も取り扱っています。<br>
+              時期によって品揃えが変わるため、ぜひお気軽にお問い合わせください。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-icon">Q</span>
+            <span class="faq-text">地元のお酒も取り扱っていますか？</span>
+          </div>
+          <div class="faq-a">
+            <span class="faq-icon">A</span>
+            <div class="faq-text">
+              はい、地元の銘柄をはじめ、全国各地の地酒を取り揃えています。<br>
+              地域ならではのお酒もお楽しみいただけます。
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <span class="faq-icon">Q</span>
+            <span class="faq-text">探している銘柄があるのですが取り寄せできますか？</span>
+          </div>
+          <div class="faq-a">
+            <span class="faq-icon">A</span>
+            <div class="faq-text">
+              銘柄によっては取り寄せ可能な場合もございます。<br>
+              まずはお気軽にお問い合わせください。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="img/gallery01.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery02.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery03.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery04.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery05.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+    <!-- SP LOOP COPY -->
+    <div class="gallery-track sp-loop-track">
+      <div class="gallery-item">
+        <img src="img/gallery01.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery02.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery03.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery04.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery05.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCESS -->
+  <section id="access" class="access-section">
+    <div class="access-inner">
+      <div class="reveal">
+        <span class="section-label" style="color:var(--gold)">ACCESS</span>
+        <h2 class="section-title" style="color:#fdfaf4">店舗情報</h2>
+        <div class="divider"></div>
+        <div class="access-info">
+          <div class="access-row">
+            <span class="access-label">店名</span>
+            <span class="access-value">酒と食を楽しむニシカワ</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">住所</span>
+            <span class="access-value">〒518-1313 三重県伊賀市馬場９９７−２</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">電話</span>
+            <span class="access-value">050-5448-7529<br></span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">営業時間</span>
+            <span class="access-value">9:00～20:00</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">定休日</span>
+            <span class="access-value">不定休</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">駐車場</span>
+            <span class="access-value">あり</span>
+          </div>
+        </div>
+        <div class="access-links reveal">
+          <a href="https://sake-shoku-nishikawa.com/" target="_blank" class="access-link-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+            ホームページ
+          </a>
+          <a href="https://www.instagram.com/osakenomisenishikawa/" target="_blank"
+            class="access-link-btn access-link-insta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div class="map-container reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.20552602525!2d136.1772998!3d34.82592470000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600158313ba46353%3A0xa832723a6c5902e!2z44CSNTE4LTEzMTMg5LiJ6YeN55yM5LyK6LOA5biC6aas5aC077yZ77yZ77yX4oiS77yS!5e0!3m2!1sja!2sjp!4v1774947641651!5m2!1sja!2sjp"
+          width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div id="reserve" class="cta-band">
+    <div class="kamon">
+      <div class="kamon-line" style="background:var(--dark-brown)"></div>
+      <div class="kamon-symbol" style="border-color:var(--dark-brown);color:var(--dark-brown)">◈</div>
+      <div class="kamon-line" style="background:var(--dark-brown)"></div>
+    </div>
+    <h2 class="section-title">ご予約・お問い合わせ</h2>
+    <p>お問い合わせは「お電話」「Web」「LINE」の<br class="sp-only">いずれかにて承っております。<br>お好みのお酒のご相談など、どうぞお気軽に<br class="sp-only">ご連絡ください。
+    </p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px">
+      <a href="tel:050-5448-7529" class="btn-white">お電話でお問い合わせ</a>
+      <a href="https://sake-shoku-nishikawa.com/contact/" class="btn-outline">Webでお問い合わせ</a>
+      <a href="https://line.me/ti/p/s9uv5H_KdM" target="_blank" class="btn-line">LINEでお問い合わせ</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <span class="footer-logo">酒と食を楽しむニシカワ</span>
+          <p class="footer-tagline">
+            初めての方も、お気軽に。<br>
+            普段使いの一杯から、特別な一本まで。<br>
+            100年以上続く町の酒屋。
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>NAVIGATE</h4>
+          <a href="#concept">CONCEPT</a>
+          <a href="#menu">お品書き</a>
+          <a href="#seasonal">SEASONAL</a>
+          <a href="#faq">FAQ</a>
+          <a href="#access">ACCESS</a>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT</h4>
+          <a href="tel:050-5448-7529">お電話でお問い合わせ</a>
+          <a href="https://sake-shoku-nishikawa.com/contact/" target="_blank">Webでお問い合わせ</a>
+          <a href="https://line.me/ti/p/s9uv5H_KdM" target="_blank">LINEでお問い合わせ</a>
+          <a href="https://sake-shoku-nishikawa.com/" target="_blank">ホームページ</a>
+          <a href="https://www.instagram.com/osakenomisenishikawa/" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2026 酒と食を楽しむニシカワ All Rights Reserved.</p>
+        <p style="font-size:10px;letter-spacing:0.2em">お酒は二十歳になってから。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <a href="#" id="backToTop" class="back-to-top" aria-label="TOPへ戻る">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <!-- SP FIXED CTA -->
+  <div class="sp-fixed-cta">
+    <a href="tel:050-5448-7529" class="cta-tel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      <span>電話</span>
+    </a>
+    <a href="https://sake-shoku-nishikawa.com/contact/" class="cta-web">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>WEB</span>
+    </a>
+    <a href="https://line.me/ti/p/s9uv5H_KdM" target="_blank" class="cta-line">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M21 10.5c0-4.14-4.03-7.5-9-7.5s-9 3.36-9 7.5c0 3.72 2.72 6.87 6.46 7.42.27.06.63.19.72.44.08.23.03.6.01.76-.02.2-.12.75-.15.93-.05.28-.24.96.84.5 1.08-.45 5.86-3.46 7.97-5.88l.05-.06c1.37-1.55 2.1-3.3 2.1-4.11z" />
+      </svg>
+      <span>LINE</span>
+    </a>
+  </div>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/* Custom Styles */
+body {
+  color: #3a3333;
+  background-color: #f8f5f0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text Selection Color */
+::selection {
+  background-color: #7b5c8f;
+  color: #fff;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Wave Animation (FVの波を維持・色変更) */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 0;
+  min-height: 60px;
+}
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger-line {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-open .hamburger-line-1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-open .hamburger-line-2 {
+  opacity: 0;
+}
+
+.menu-open .hamburger-line-3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Parallax Background */
+.ios-parallax-container {
+  clip-path: inset(0);
+}
+
+.ios-parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* FV Slider Animation */
+.fv-slide {
+  opacity: 0;
+  animation: fvCrossfade 15s infinite ease-in-out, fvZoom 15s infinite linear;
+}
+
+.fv-slide.slide-1 {
+  animation-delay: 0s, 0s;
+}
+
+.fv-slide.slide-2 {
+  animation-delay: 5s, 5s;
+}
+
+.fv-slide.slide-3 {
+  animation-delay: 10s, 10s;
+}
+
+@keyframes fvCrossfade {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fvZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Spiritual Image Decoration */
+.mystic-frame {
+  position: relative;
+  border: 2px solid rgba(194, 163, 101, 0.4);
+  /* gold-accent */
+  box-shadow: 0 0 25px rgba(194, 163, 101, 0.15), 0 15px 35px rgba(74, 51, 90, 0.2);
+  /* mystic-purple */
+}
+
+.mystic-frame::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid rgba(194, 163, 101, 0.7);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 10;
+}

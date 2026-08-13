@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ライフスタイル | 武蔵村山市の水回りリフォーム</title>
+
+  <!-- OGP Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ライフスタイル | 武蔵村山市の水回りリフォーム">
+  <meta property="og:description" content="東京都武蔵村山市を中心に、水回りリフォームのご相談を承っております。お風呂・トイレ・キッチンなどのリフォームはお気軽にご相談ください。">
+  <meta property="og:url" content="https://life-style.happytry.fun/">
+  <meta property="og:image" content="https://life-style.happytry.fun/img/ogp.jpg">
+  <meta property="og:site_name" content="ライフスタイル">
+
+  <!-- フォントの読み込み: Noto Sans JP (ゴシック) & Noto Serif JP (明朝) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NJQQQJJ1EJ');
+  </script>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="#" class="header-logo"><img src="img/logo.png" alt="ライフスタイル"></a>
+
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="#about">私たちについて</a>
+        <a href="#service">リフォーム内容</a>
+        <a href="#features">特徴</a>
+        <a href="#price">料金について</a>
+        <a href="#works">施工事例</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+      <!-- お問い合わせボタンは維持 -->
+      <a href="https://life-style.happytry.fun/jump01.html" target="_blank" class="btn-header-contact">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        お問い合わせ
+      </a>
+    </div>
+
+    <!-- SP用ハンバーガーボタン -->
+    <button class="hamburger-btn sp-only" id="hamburgerBtn" aria-label="メニューを開く">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </header>
+
+  <!-- SP用ドロワーメニュー -->
+  <nav class="sp-nav" id="spNav">
+    <div class="sp-nav-header">
+      <button class="sp-nav-close" id="spNavCloseBtn" aria-label="メニューを閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="sp-nav-list">
+      <li><a href="#about">私たちについて</a></li>
+      <li><a href="#service">リフォーム内容</a></li>
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#price">料金について</a></li>
+      <li><a href="#works">施工事例</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+    <div style="margin-top: 40px;">
+      <a href="https://life-style.happytry.fun/jump01.html" target="_blank" class="btn-header-contact"
+        style="justify-content: center; padding: 15px;">WEBからお問い合わせ</a>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <section class="hero">
+    <div class="hero-visual">
+      <img src="img/fv01.jpg" alt="お風呂リフォーム" class="fv-slide">
+      <img src="img/fv02.jpg" alt="トイレリフォーム" class="fv-slide">
+      <img src="img/fv03.jpg" alt="キッチンリフォーム" class="fv-slide">
+    </div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title font-mincho">水回りが変わると、<br>毎日の暮らしがもっと快適に</h1>
+      <p class="hero-subtitle">武蔵村山市でお風呂・トイレ・キッチンのリフォームなら、<br class="pc-only">暮らしに合わせた住まいづくりのライフスタイルへ。</p>
+    </div>
+    <div class="hero-wave">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(253,251,247,0.8)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(253,251,247,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(240, 249, 255, 0.7)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--primary-pale)" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="troubles">
+    <div class="inner">
+      <div class="trouble-box reveal">
+        <h2 class="trouble-title font-mincho">こんなお悩みありませんか？</h2>
+        <ul class="trouble-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>お風呂が寒く、掃除もしにくい</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>トイレを清潔感のある空間にしたい</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>キッチンが使いにくく、収納も<br class="sp-only">足りない</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>水回り設備が古くなってきた</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>予算内でどこまでリフォーム<br class="sp-only">できるか知りたい</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>武蔵村山市周辺で相談しやすい<br class="sp-only">業者を探している</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section" style="background: var(--white);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">ABOUT</span>
+        <h2 class="sec-title font-mincho">武蔵村山市で<br class="sp-only">水回りリフォームを相談するなら</h2>
+      </div>
+      <div class="about-wrap reveal">
+        <div class="about-img">
+          <img src="img/aboutpic.jpg" alt="ライフスタイルについて">
+        </div>
+        <div class="about-content">
+          <p>
+            ライフスタイルは、東京都武蔵村山市を拠点に、住まいに関する工事を行うリフォーム会社です。<br><br>お風呂、トイレ、キッチンなどの水回りリフォームを中心に、毎日の使いやすさやお手入れのしやすさを考えたご提案を行っています。<br><br>水回りは、家族みんなが毎日使う大切な場所です。<br>古くなった設備の交換だけでなく、暮らし方やご予算、ご希望のデザインに合わせて、無理のないリフォームをご提案いたします。<br><br>代表は建築業界25年以上の経験があり、住まいのお困りごとを丁寧に伺いながら、安心して進められる施工を大切にしています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="section service-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">SERVICE</span>
+        <h2 class="sec-title font-mincho">リフォーム内容</h2>
+      </div>
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <img src="img/serpic01.jpg" alt="お風呂リフォーム" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-mincho">お風呂リフォーム</h3>
+            <p class="service-desc">
+              古くなった浴室の交換や、寒さ・汚れ・使いにくさが気になるお風呂のリフォームに対応しています。ゆっくりくつろげる浴室づくりや、お手入れしやすい設備選びもご相談いただけます。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic02.jpg" alt="トイレリフォーム" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-mincho">トイレリフォーム</h3>
+            <p class="service-desc">便器の交換、内装の張り替え、収納や手すりの設置など、トイレ空間を快適に整えます。毎日使う場所だからこそ、清潔感と使いやすさを大切にご提案します。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic03.jpg" alt="キッチンリフォーム" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-mincho">キッチンリフォーム</h3>
+            <p class="service-desc">キッチンの交換、収納の見直し、動線改善など、料理や片付けがしやすい空間づくりをサポートします。ご家族の暮らし方に合わせて、使いやすく気持ちの良いキッチンを目指します。
+            </p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic04.jpg" alt="洗面所・水回りまわりの工事" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-mincho">洗面所・水回りまわりの工事</h3>
+            <p class="service-desc">洗面台の交換や床・壁の内装、水回り周辺の小さな修繕にも対応しています。お風呂・トイレ・キッチンと合わせたリフォームもご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section" style="background: var(--bg-color);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">FEATURES</span>
+        <h2 class="sec-title font-mincho">当社の特徴</h2>
+      </div>
+      <div class="feature-list">
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <div class="feature-num">01</div>
+            <img src="img/featurespic01.jpg" alt="暮らし方に合わせたご提案">
+          </div>
+          <div class="feature-text">
+            <h4 class="font-mincho">暮らし方に合わせた水回りの<br class="sp-only">ご提案</h4>
+            <p>水回りの使い方やお困りごとは、ご家庭によって異なります。ライフスタイルでは、今どのような不便を感じているのか、どんな暮らしにしたいのかを丁寧に伺い、住まいに合った設備や施工方法をご提案します。</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <div class="feature-num">02</div>
+            <img src="img/featurespic02.jpg" alt="丁寧な施工">
+          </div>
+          <div class="feature-text">
+            <h4 class="font-mincho">25年以上の経験を活かした<br class="sp-only">丁寧な施工</h4>
+            <p>代表は建築業界で25年以上の経験があります。水回りリフォームでは、見た目だけでなく、配管や下地など見えない部分の確認も大切です。現場の状況を見極めながら、丁寧な施工を心がけています。</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <div class="feature-num">03</div>
+            <img src="img/featurespic03.jpg" alt="無理のないプラン">
+          </div>
+          <div class="feature-text">
+            <h4 class="font-mincho">予算に合わせて無理のない<br class="sp-only">プランをご案内</h4>
+            <p>リフォームは、使う設備や工事範囲によって費用が変わります。ご予算が決まっている場合も、優先順位を整理しながら、できる限りご希望に近づけるプランをご提案します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price" class="section" style="background: var(--white);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">PRICE</span>
+        <h2 class="sec-title font-mincho">料金について</h2>
+      </div>
+      <div class="price-cta-box reveal">
+        <div class="price-img">
+          <img src="img/menupic.jpg" alt="料金について">
+        </div>
+        <div class="price-content">
+          <h2 class="font-mincho"
+            style="font-size: 26px; color: var(--primary-dark); margin-bottom: 25px; font-weight: 900;">
+            まずはお気軽に<br class="sp-only">お問い合わせください</h2>
+          <p style="margin-bottom: 25px;">
+            水回りリフォームの費用は、設備の種類や工事範囲、住まいの状態によって異なります。<br>ライフスタイルでは、お客様のお悩みやご希望を丁寧に伺い、<br
+              class="pc-only">現地の状況を確認したうえで、必要な工事内容をご提案いたします。</p>
+
+          <div class="price-check-box">
+            <ul class="price-check-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>お風呂を新しくしたい</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>トイレだけ交換したい</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>キッチンの使いにくさを相談したい</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>予算内でできる内容を知りたい</li>
+            </ul>
+          </div>
+
+          <p class="price-message" style="font-weight: 700;">
+            そんなご相談も大歓迎です。<br>毎日使う水回りだからこそ、<br class="sp-only">無理のない内容で、暮らしに合った<br class="sp-only">リフォームをご案内いたします。</p>
+
+          <a href="https://life-style.happytry.fun/jump01.html" target="_blank" class="btn-contact">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            お問い合わせはこちら
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="section works-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">WORKS</span>
+        <h2 class="sec-title font-mincho">施工事例</h2>
+      </div>
+
+      <div class="works-list-new">
+        <!-- 事例 1 -->
+        <div class="work-card-new reveal">
+          <div class="work-flow-new">
+            <div class="work-img-box-new is-before">
+              <img src="img/workpic01.jpg" alt="お風呂リフォーム前">
+              <span class="work-badge-new before">Before</span>
+            </div>
+            <div class="work-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </div>
+            <div class="work-img-box-new">
+              <img src="img/workpic02.jpg" alt="お風呂リフォーム後">
+              <span class="work-badge-new after">After</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 事例 2 -->
+        <div class="work-card-new reveal">
+          <div class="work-flow-new">
+            <div class="work-img-box-new is-before">
+              <img src="img/workpic03.jpg" alt="トイレリフォーム前">
+              <span class="work-badge-new before">Before</span>
+            </div>
+            <div class="work-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </div>
+            <div class="work-img-box-new">
+              <img src="img/workpic04.jpg" alt="トイレリフォーム後">
+              <span class="work-badge-new after">After</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 事例 3 -->
+        <div class="work-card-new reveal">
+          <div class="work-flow-new">
+            <div class="work-img-box-new is-before">
+              <img src="img/workpic05.jpg" alt="キッチンリフォーム前">
+              <span class="work-badge-new before">Before</span>
+            </div>
+            <div class="work-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </div>
+            <div class="work-img-box-new">
+              <img src="img/workpic06.jpg" alt="キッチンリフォーム後">
+              <span class="work-badge-new after">After</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="section area-section">
+    <div class="inner">
+      <div class="area-box reveal">
+        <h2 class="font-mincho"
+          style="font-size: 26px; color: var(--primary-dark); margin-bottom: 25px; font-weight: 900;">武蔵村山市を中心に、<br
+            class="sp-only">多摩地域で対応
+        </h2>
+        <p style="margin-bottom: 20px;">ライフスタイルでは、東京都武蔵村山市を中心に、水回りリフォームのご相談を承っております。</p>
+
+        <div
+          style="background: var(--primary-pale); padding: 20px; border-radius: 20px; display: inline-block; margin-bottom: 25px;">
+          <b style="color: var(--primary-dark); display: block; margin-bottom: 10px;">主な対応エリア</b>
+          武蔵村山市 / 立川市 / 東大和市 / <br class="sp-only">東村山市 / 小平市<br>昭島市 / 福生市 / 羽村市 / 瑞穂町 / <br class="sp-only">多摩地域周辺
+        </div>
+
+        <p>その他のエリアも、内容によって対応できる場合がございます。<br>お住まいの地域が対応可能かどうかも、お気軽にお問い合わせください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="message" class="section" style="background: var(--white);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">MESSAGE</span>
+        <h2 class="sec-title font-mincho">ご挨拶</h2>
+      </div>
+      <div class="message-wrap reveal">
+        <div class="message-img">
+          <img src="img/messagepic.jpg" alt="代表メッセージ">
+        </div>
+        <div class="message-content">
+          <h3 class="font-mincho"
+            style="font-size: 26px; color: var(--primary-dark); margin-bottom: 25px; font-weight: 900;">毎日使う場所だからこそ、<br
+              class="sp-only">心地よく
+          </h3>
+          <p>
+            お風呂、トイレ、キッチンは、暮らしの快適さに大きく関わる場所です。<br>少しの使いにくさや古さを感じていても、毎日のことだからこそ、気づかないうちにストレスになっていることがあります。<br><br>ライフスタイルでは、お客様との対話を大切にしながら、住まいのお悩みや理想のイメージを丁寧に伺います。<br><br>武蔵村山市周辺で水回りリフォームをご検討中の方は、まずはお気軽にご相談ください。
+          </p>
+          <a href="https://life-style.happytry.fun/jump01.html" target="_blank" class="btn-contact">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            WEBからご相談・お問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section" style="background: var(--bg-color);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-gothic">FAQ</span>
+        <h2 class="sec-title font-mincho">よくある質問</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q">相談・プランニングは無料ですか？</div>
+          <div class="faq-a">相談・プランニングは無料です。まずは、お電話かメールにてお問い合わせください。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">リフォーム・リノベーションの工期はどれくらいですか？</div>
+          <div class="faq-a">リフォーム及びリノベーションの箇所・内容によって異なります。詳しくはお問い合わせの際にご確認ください。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">予算が決まっています。その範囲内でできますか？</div>
+          <div class="faq-a">ご予算に応じて最大限の内容でご提案をさせていただきます。また、ご予算によっては優先順位を決めたり、仕様変更をしたりして、最善のご提案をいたします。</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">近隣の方への挨拶はしていただけるのでしょうか？</div>
+          <div class="faq-a">音の大きな工事が発生する場合は必ず近隣へ挨拶回りをしております。その他にも懸念されるような工事が発生する場合は近隣への気配りを徹底しております。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="store" class="section" style="background: var(--primary-pale);">
+    <div class="inner">
+      <div class="store-container reveal">
+        <div class="store-info">
+          <h3 class="font-mincho"
+            style="font-size: 26px; color: var(--primary-dark); margin-bottom: 25px; font-weight: 900;">店舗情報</h3>
+          <table class="store-info-table">
+            <tbody>
+              <tr>
+                <th>店舗名</th>
+                <td>ライフスタイル</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>〒208-0035<br>東京都武蔵村山市中原<br>２丁目３１−１</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:050-5448-5152" style="color: inherit; text-decoration: none;">050-5448-5152</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>9:00～18:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>年中無休</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 30px;">
+            <a href="https://life-style.happytry.fun/jump02.html" target="_blank"
+              style="color: var(--primary-dark); font-weight: 900; text-decoration: none; border-bottom: 2px solid var(--primary-light); padding-bottom: 4px; transition: border-color 0.2s;">公式ホームページはこちら
+              →</a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.7696224230062!2d139.3623811!3d35.756466800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60192191deb8a1e7%3A0x493b9a7dec09d52f!2z44Op44Kk44OV44K544K_44Kk44Or!5e0!3m2!1sja!2sjp!4v1784607250567!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p style="font-size: 14px; letter-spacing: 0.1em;">&copy; ライフスタイル All Rights Reserved.</p>
+  </footer>
+
+  <!-- SP Sticky CTA -->
+  <div class="sp-sticky-cta sp-only">
+    <a href="https://life-style.happytry.fun/jump01.html" target="_blank" class="btn-contact-sp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>WEBでお問い合わせ</span>
+    </a>
+  </div>
+
+  <!-- Page Top Button -->
+  <a href="#" id="page-top" class="page-top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="image-modal-close">&times;</span>
+    <img id="imageModalImg" class="image-modal-content">
+  </div>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

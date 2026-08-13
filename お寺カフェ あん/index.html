@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お寺カフェ あん | 静けさに癒されるお寺カフェ</title>
+    <meta name="description"
+        content="山口県宇部市のお寺カフェ「あん」。肉魚・五辛を使わず、精進だしを活かした料理が心身を整えます。歴史ある建物的温もりと庭園の静寂に包まれ、日常を忘れ自分に還る「安らぎのひととき」をどうぞ。">
+
+    <!-- OGP -->
+    <meta property="og:title" content="お寺カフェ あん | 静けさに癒されるお寺カフェ">
+    <meta property="og:description"
+        content="山口県宇部市のお寺カフェ「あん」。肉魚・五辛を使わず、精進だしを活かした料理が心身を整えます。歴史ある建物的温もりと庭園の静寂に包まれ、日常を忘れ自分に還る「安らぎのひととき」をどうぞ。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otera-ann.happytry.org">
+    <meta property="og:image" content="https://otera-ann.happytry.org/img/ogp.jpg">
+    <meta property="og:site_name" content="お寺カフェ あん">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Config for Custom Font & Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-white': '#F9F6F0',     /* 背景: 温かみのある生成り・アイボリー */
+                        'brand-red': '#9D402F',       /* アクセント: 落ち着いたえんじ色・錆色 */
+                        'brand-purple': '#4A3E35',    /* サブテキスト: こげ茶 */
+                        'brand-gold': '#A68364',      /* 装飾: くすんだ金茶・木目 */
+                        'brand-gray': '#6B5D54',      /* グレーブラウン */
+                        'brand-charcoal': '#3E342F',  /* メインテキスト: 濃い茶色 */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body class="font-sans text-brand-gray bg-brand-white antialiased selection:bg-brand-red selection:text-white"
+    oncontextmenu="return false;">
+
+    <!-- ============================================
+       SITE HEADER
+    ============================================= -->
+    <header class="site-header">
+        <!-- LEFT: Logo -->
+        <a href="#" class="hd-logo">
+            <div class="hd-logo-bar"></div>
+            <div class="hd-logo-text">
+                <span class="hd-logo-ja">お寺カフェ あん</span>
+                <span class="hd-logo-en">TERA CAFE AN</span>
+            </div>
+        </a>
+
+        <!-- CENTER: Nav -->
+        <nav class="hd-nav">
+            <a href="#about" class="active">カフェの想い</a>
+            <a href="#service">こだわり</a>
+            <a href="#recommend">メニュー</a>
+            <a href="#message">ご挨拶</a>
+            <a href="#access">店舗情報</a>
+        </nav>
+
+        <!-- RIGHT: CTA buttons -->
+        <div class="hd-actions">
+            <a href="tel:05054489590" class="hd-btn-insta">
+                お電話
+            </a>
+            <a href="https://otera-ann.happytry.org/jump01.html" target="_blank" class="hd-btn-reserve">
+                Web予約
+            </a>
+        </div>
+
+        <!-- HAMBURGER: SP only -->
+        <button class="hd-hamburger" id="hdHamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="sp-menu-overlay" id="spMenuOverlay">
+        <div class="sp-menu-inner">
+            <nav class="flex flex-col gap-2 mb-10">
+                <a href="#about" class="sp-menu-link">カフェの想い</a>
+                <a href="#service" class="sp-menu-link">こだわり</a>
+                <a href="#recommend" class="sp-menu-link">メニュー</a>
+                <a href="#message" class="sp-menu-link">ご挨拶</a>
+                <a href="#access" class="sp-menu-link">店舗情報</a>
+            </nav>
+            <div class="flex flex-col gap-4 items-center">
+                <a href="tel:05054489590"
+                    class="w-full py-4 border-2 border-brand-red text-brand-red font-bold tracking-[0.15em] rounded-full text-sm">お電話でお問い合わせ</a>
+                <a href="https://otera-ann.happytry.org/jump01.html" target="_blank"
+                    class="w-full py-4 bg-brand-red text-white font-bold tracking-[0.15em] rounded-full text-sm">Web予約</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       FV (HERO) SECTION
+    ============================================= -->
+    <div class="fv">
+        <!-- Petal decorations -->
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+
+        <!-- Main body -->
+        <div class="fv-body">
+            <div class="fv-sp-text">
+                <!-- LEFT: vertical copy -->
+                <div class="fv-left-text">
+                    <p class="fv-vertical-copy">
+                        お寺カフェで整う精進料理。<br>
+                        日常の延長として<br class="md:hidden">ふらっと立ち寄れる、<br>
+                        あたたかみのある空間を
+                    </p>
+                </div>
+
+                <!-- CENTER: empty placeholder -->
+                <div class="fv-center-spacer" style="position:relative;height:100%;"></div>
+
+                <!-- RIGHT: catchcopy -->
+                <div class="fv-right-col">
+                    <div class="fv-catchcopy-wrap">
+                        <div class="fv-catch-border"></div>
+                        <div class="fv-catch-lines">
+                            <!-- 右から読むため逆順配置 -->
+                            <span class="fv-catch-line large">お寺カフェ</span>
+                            <span class="fv-catch-line medium">癒される</span>
+                            <span class="fv-catch-line large">静けさに</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARDS LAYER -->
+        <div class="fv-cards-layer" id="fvCardsLayer">
+            <div class="fv-card pos-center" data-idx="0">
+                <img src="img/fv01.jpg" alt="FV1">
+            </div>
+            <div class="fv-card pos-topright" data-idx="1">
+                <img src="img/fv02.jpg" alt="FV3">
+            </div>
+            <div class="fv-card pos-botleft" data-idx="2">
+                <img src="img/fv03.jpg" alt="FV4">
+            </div>
+            <div class="fv-card pos-hidden" data-idx="3">
+                <img src="img/fv04.jpg" alt="FV6">
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="fv-dot-row" id="fvDots">
+            <div class="fv-sdot active"></div>
+            <div class="fv-sdot"></div>
+            <div class="fv-sdot"></div>
+            <div class="fv-sdot"></div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       ABOUT (CONCEPT) SECTION
+    ============================================= -->
+    <section id="about" class="concept">
+        <div class="concept-image">
+            <img src="img/concept_main.jpg" alt="カフェの風景" loading="lazy">
+        </div>
+        <div class="concept-text reveal">
+            <div class="flex items-center gap-3 mb-4 text-brand-red">
+                <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                <span class="text-[10px] tracking-[0.4em] font-bold uppercase">About</span>
+            </div>
+            <h2 class="section-title">開かれたお寺で、<br>心と体を養うおもてなし</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+                お寺の落ち着いた空間の中で、<br class="hidden md:block">ゆったりとした時間を過ごせるカフェ。<br>
+                肉魚・五辛（ごしん）を使わず、<br class="hidden md:block">精進だしを活かした料理が心身を整えます。<br>
+                <br>
+                歴史ある建物の温もりと庭園の静寂に包まれ、<br class="hidden md:block">日常を忘れ自分に還る「安らぎのひととき」をどうぞ。
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- ============================================
+       PHASE 2: Service ~ Footer
+    ============================================= -->
+    <div class="layout-phase-2">
+
+        <!-- Problem Section -->
+        <section id="problem" class="break-out-full-width py-20 lg:py-32 relative bg-brand-gold/10">
+            <div
+                class="flex flex-col items-center justify-center mb-12 lg:mb-20 fade-in-up text-center relative z-10 w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Problem</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    こんな想いは<br class="md:hidden">ありませんか？
+                </h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto px-6 relative z-10">
+                <div
+                    class="bg-white p-8 lg:p-12 rounded-xl shadow-sm border border-brand-gold/20 relative mt-6 fade-in-up">
+                    <!-- Icon/Badge at the top center -->
+                    <div
+                        class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-red text-white flex items-center justify-center rounded-full text-xl border-4 border-brand-white shadow-sm font-serif">
+                        ?
+                    </div>
+
+                    <ul
+                        class="flex flex-col gap-6 text-sm lg:text-base text-brand-purple tracking-widest leading-loose font-medium mt-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-gold font-bold mt-1">✓</span>
+                            <span>毎日が慌ただしく、自分を<br class="md:hidden">リセットする時間が持てていない</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-gold font-bold mt-1">✓</span>
+                            <span>外食が多く、胃腸に<br class="md:hidden">優しいヘルシーな食事を求めている</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-gold font-bold mt-1">✓</span>
+                            <span>お寺に興味はあるが、<br class="md:hidden">敷居が高そうで入るきっかけがない</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-gold font-bold mt-1">✓</span>
+                            <span>都会や日常の雑音から離れ、<br class="md:hidden">静かな場所で考えを整理したい</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-gold font-bold mt-1">✓</span>
+                            <span>「美味しいもの」を食べたいが、<br class="md:hidden">健康や素材にもこだわりたい</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-16 fade-in-up delay-100">
+                    <p class="text-xl lg:text-2xl font-bold tracking-[0.15em] leading-loose text-brand-charcoal">
+                        <span class="text-sm text-brand-gold tracking-[0.25em] block mb-2">そんな方に、</span>
+                        癒される空間と食事が<br class="md:hidden">そっと寄り添います。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section (Commitment) -->
+        <section id="service" class="break-out-full-width py-20 lg:py-32 bg-white relative overflow-hidden">
+            <!-- Zen Mist Animation BG -->
+            <div class="zen-mist-container">
+                <svg class="zen-mist-svg" viewBox="0 0 2000 1000" preserveAspectRatio="none">
+                    <path d="M0,400 Q500,300 1000,400 T2000,400 V1000 H0 Z" fill="rgba(166, 131, 100, 0.12)" />
+                    <path d="M0,500 Q500,600 1000,500 T2000,500 V1000 H0 Z" fill="rgba(166, 131, 100, 0.08)" />
+                </svg>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6 relative z-10">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Commitment</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    こだわり
+                </h2>
+            </div>
+
+            <div class="flex flex-col gap-32 lg:gap-40 max-w-6xl mx-auto px-6 lg:px-0 relative z-10">
+                <!-- Service 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="img/service_space.jpg" alt="お寺ならではの落ち着いた空間"
+                            class="w-full h-full object-cover rounded-md shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm font-bold">POINT 01</span>
+                        <h3
+                            class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-bold leading-relaxed text-brand-charcoal">
+                            お寺ならではの<br>落ち着いた空間</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            お寺の静かな環境の中で、日常の喧騒を離れ、ゆったりとした時間をお過ごしいただけます。<br>自然と心が落ち着く空間は、観光の合間の休憩やリフレッシュにも最適です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="img/service_lunch.jpg" alt="管理栄養士の経歴を持つ住職の料理"
+                            class="w-full h-full object-cover rounded-md shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm font-bold">POINT 02</span>
+                        <h3
+                            class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-bold leading-relaxed text-brand-charcoal">
+                            管理栄養士の経歴を持つ<br>住職の料理</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            プロの視点で整えた献立は、優しくも確かな満足感。<br>精進料理が初めての方も、心まで満たされる「整う一皿」をどうぞ安心してお楽しみください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="img/service_sweets.jpg" alt="手作りにこだわった和の甘味"
+                            class="w-full h-full object-cover rounded-md shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-3 text-sm font-bold">POINT 03</span>
+                        <h3
+                            class="text-2xl lg:text-3xl mb-8 tracking-[0.2em] font-bold leading-relaxed text-brand-charcoal">
+                            手作りにこだわった<br>和の甘味</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            あんこをはじめとした和スイーツは手作りにこだわり、やさしい甘さで仕上げています。<br>食後のひとときやカフェ利用としても満足いただけるラインナップです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recommend Section -->
+        <section id="recommend"
+            class="break-out-full-width py-20 lg:py-40 relative text-brand-gray bg-brand-white overflow-hidden">
+            <!-- Falling Leaves Animation -->
+            <div class="falling-leaves-container">
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+                <div class="leaf leaf-4"></div>
+                <div class="leaf leaf-5"></div>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center relative z-10 w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Recommend</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    おすすめメニュー
+                </h2>
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto flex flex-col gap-24 px-8 lg:px-0">
+                <!-- Single Highlight Item -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center fade-in-up group">
+                    <div class="w-full lg:w-1/2 aspect-[4/3] overflow-hidden rounded-md shadow-sm">
+                        <img src="img/menu_lunch.jpg" alt="日曜限定ランチ"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                    <div
+                        class="w-full lg:w-1/2 bg-white p-10 lg:p-14 rounded-lg shadow-sm border border-brand-gold/20 relative -mt-16 lg:mt-0 lg:-ml-16 z-10">
+                        <h3
+                            class="text-2xl lg:text-3xl mb-4 tracking-widest font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+                            日曜限定ランチ</h3>
+                        <div
+                            class="flex flex-col sm:flex-row items-baseline gap-2 sm:gap-4 mb-6 border-b border-brand-gold/40 pb-4">
+                            <p class="text-3xl font-bold text-brand-red">1,500円</p>
+                            <span class="text-sm text-brand-gray/80">（10食限定・要予約）</span>
+                        </div>
+                        <p class="text-base opacity-90 leading-loose mb-2 text-brand-gray">
+                            精進料理をベースに、どなたでも気軽に楽しめるやさしい味わいのランチをご用意しています。
+                        </p>
+                        <p class="text-base opacity-90 leading-loose text-brand-gray">
+                            肉や魚を使わず、五辛を除いた植物性の食材を中心に仕上げた、心も身体もほっとする一膳です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Menu/Price Section -->
+        <section id="price" class="break-out-full-width py-20 lg:py-40 bg-brand-gold/10">
+            <div
+                class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Menu</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    メニュー
+                </h2>
+            </div>
+
+            <!-- Grid for Menus -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto px-6 lg:px-0">
+
+                <!-- Menu Item 1 -->
+                <div
+                    class="fade-in-up bg-white rounded-lg shadow-sm border border-brand-gold/20 flex flex-col h-full hover:border-brand-red/50 transition-colors overflow-hidden group">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="img/menu_curry.png" alt="特製 精進カレー"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
+                            <h4 class="font-bold text-lg tracking-wide text-brand-purple text-justify leading-snug">
+                                特製 精進カレー<br>
+                                <span
+                                    class="text-xs font-normal text-brand-gray tracking-wider mt-1 block">（サラダ付き）</span>
+                            </h4>
+                            <p class="text-brand-red font-bold text-xl whitespace-nowrap mt-1">500円</p>
+                        </div>
+                        <p class="text-sm text-brand-gray leading-loose text-justify flex-grow">
+                            ニンニク、ニラ、ネギ、玉ねぎ、らっきょうの五辛（ごしん）も除いた、植物性の食材のみを使用した本格精進カレー。<br>ワンコインで心もお腹も満たされる、滋味深い一皿をお楽しみください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div
+                    class="fade-in-up delay-100 bg-white rounded-lg shadow-sm border border-brand-gold/20 flex flex-col h-full hover:border-brand-red/50 transition-colors overflow-hidden group">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="img/menu_zenzai.jpg" alt="自家製あんこのぜんざい"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
+                            <h4 class="font-bold text-lg tracking-wide text-brand-purple leading-snug">
+                                自家製あんこのぜんざい
+                            </h4>
+                            <p class="text-brand-red font-bold text-xl whitespace-nowrap mt-1">500円</p>
+                        </div>
+                        <p class="text-sm text-brand-gray leading-loose text-justify flex-grow">
+                            店主が丁寧に炊き上げた「あん」は、心ほどける優しい甘み。<br>お寺の静寂に溶け込む、至福のデザートです。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div
+                    class="fade-in-up bg-white rounded-lg shadow-sm border border-brand-gold/20 flex flex-col h-full hover:border-brand-red/50 transition-colors overflow-hidden group">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="img/menu_matcha.jpg" alt="お抹茶と季節の和菓子セット"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
+                            <h4 class="font-bold text-lg tracking-wide text-brand-purple leading-snug">
+                                お抹茶と<br class="md:hidden">季節の和菓子セット
+                            </h4>
+                            <p class="text-brand-red font-bold text-xl whitespace-nowrap mt-1">500円</p>
+                        </div>
+                        <p class="text-sm text-brand-gray leading-loose text-justify flex-grow">
+                            本格的なお抹茶と、目にも美しい主菓子。<br>日常を忘れ、凛とした「和」の心に触れるひとときを。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div
+                    class="fade-in-up delay-100 bg-white rounded-lg shadow-sm border border-brand-gold/20 flex flex-col h-full hover:border-brand-red/50 transition-colors overflow-hidden group">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="img/menu_juice.jpg" alt="季節の自家製ジュース"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
+                            <h4 class="font-bold text-lg tracking-wide text-brand-purple leading-snug">
+                                季節の自家製ジュース
+                            </h4>
+                            <p class="text-brand-red font-bold text-xl whitespace-nowrap mt-1">400円〜</p>
+                        </div>
+                        <p class="text-sm text-brand-gray leading-loose text-justify flex-grow">
+                            旬の果実や素材を活かした、心身を爽やかに整える一杯。<br>精進カレーとの相性も抜群です。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="break-out-full-width py-24 bg-brand-charcoal text-brand-white">
+            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row gap-8 justify-center items-center text-center">
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">お電話でのご予約・お問い合わせ</p>
+                    <a href="tel:05054489590"
+                        class="block text-3xl lg:text-4xl font-bold tracking-widest hover:text-brand-gold transition-colors text-brand-white">050-5448-9590</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">Webからのお席予約</p>
+                    <a href="https://otera-ann.happytry.org/jump01.html" target="_blank"
+                        class="block w-full py-5 bg-brand-red hover:bg-brand-white hover:text-brand-red text-white text-lg font-bold tracking-[0.2em] transition-colors rounded-md">
+                        食べログ予約はこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Voice Section -->
+        <section id="voice" class="break-out-full-width py-20 lg:py-40 bg-brand-white overflow-hidden relative">
+            <!-- Falling Leaves Animation -->
+            <div class="falling-leaves-container">
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+                <div class="leaf leaf-4"></div>
+                <div class="leaf leaf-5"></div>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6 relative z-10">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Voice</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    お客様の声
+                </h2>
+            </div>
+
+            <div class="swiper voice-swiper pb-12 fade-in-up relative z-10">
+                <div class="swiper-wrapper lg:justify-center">
+                    <!-- Review 1: kasai -->
+                    <div class="swiper-slide h-auto max-w-md">
+                        <div
+                            class="voice-card bg-white p-6 lg:p-8 h-full flex flex-col rounded-xl shadow-sm border border-brand-gold/20">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold font-bold">
+                                    K</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-charcoal">kasai</h4>
+                                    <div class="text-brand-red text-xs">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="voice-content-wrap">
+                                <p class="voice-text text-sm leading-loose text-brand-gray text-justify">
+                                    精進カレーをたべました。野菜が丁寧に料理されていて素材の美味しさを味わえました。美味しかったです！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2: Motomichi -->
+                    <div class="swiper-slide h-auto max-w-md">
+                        <div
+                            class="voice-card bg-white p-6 lg:p-8 h-full flex flex-col rounded-xl shadow-sm border border-brand-gold/20">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold font-bold">
+                                    M</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-charcoal">Motomichi</h4>
+                                    <div class="text-brand-red text-xs">★★★★★</div>
+                                </div>
+                            </div>
+                            <div class="voice-content-wrap">
+                                <p class="voice-text text-sm leading-loose text-brand-gray text-justify">
+                                    管理栄養士さんのご住職が作られる、精進料理かつグルテンフリーのお寺カフェ、小鉢に沢山のお料理でした。グルテンフリーがめちゃくちゃ嬉しい！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination hidden if only 2 items on PC -->
+                <div class="swiper-pagination mt-8 lg:hidden"></div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message"
+            class="break-out-full-width py-24 lg:py-48 relative text-brand-charcoal overflow-hidden border-y border-brand-gold/20">
+            <!-- Background Decoration -->
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl z-0"></div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-red/5 rounded-full blur-3xl z-0"></div>
+
+            <div class="relative z-10">
+                <div
+                    class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                    <div class="flex items-center gap-3 mb-3 text-brand-red">
+                        <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                        <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Message</span>
+                        <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    </div>
+                    <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                        ご挨拶
+                    </h2>
+                </div>
+
+                <div class="max-w-3xl mx-auto px-6 text-left md:text-center fade-in-up text-brand-charcoal">
+                    <h3
+                        class="text-2xl lg:text-4xl font-bold mb-12 tracking-[0.2em] leading-relaxed text-brand-red text-left md:text-center">
+                        心ほどける、<br>やさしいひとときを
+                    </h3>
+                    <div
+                        class="space-y-8 text-base lg:text-lg leading-loose tracking-widest text-brand-purple font-medium">
+                        <p>
+                            お寺は本来、どなたでも立ち寄れる「安心（あんじん）」の場所。<br>
+                            忙しい手を少し休めて、美味しい精進料理と甘味で<br class="hidden md:block">自分を労わってあげませんか？
+                        </p>
+                        <p>
+                            お庭を眺め、ゆっくりと呼吸を整える。<br>
+                            そんな何気ないひとときが、明日への力になりますように。
+                        </p>
+                        <p>
+                            皆様のお越しを心よりお待ちしております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="break-out-full-width py-20 lg:py-40 bg-brand-gold/10">
+            <div
+                class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Access</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    店舗情報
+                </h2>
+            </div>
+
+            <div class="w-full px-6 lg:px-16 fade-in-up">
+                <div
+                    class="flex flex-col lg:flex-row gap-12 lg:gap-0 bg-white rounded-lg shadow-sm border border-brand-gold/20 overflow-hidden">
+                    <div class="w-full lg:w-1/2 space-y-10 p-8 lg:p-16">
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Cafe</p>
+                            <h3
+                                class="text-2xl font-bold tracking-widest border-b-2 pb-4 border-brand-gold/20 text-brand-charcoal">
+                                お寺カフェ あん
+                            </h3>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Address</p>
+                            <p class="text-base tracking-wider leading-loose font-medium text-brand-purple">
+                                〒755-0083<br>山口県宇部市南小羽山町２丁目１−６
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Tel</p>
+                            <p class="text-2xl font-bold tracking-widest text-brand-purple">
+                                <a href="tel:05054489590"
+                                    class="hover:text-brand-red transition-colors">050-5448-9590</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-8 sm:gap-16">
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Open</p>
+                                <p class="text-base tracking-wider leading-relaxed font-medium text-brand-purple">
+                                    水曜日 11:30 - 16:00<br>
+                                    日曜日 11:30 - 16:00
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Close
+                                </p>
+                                <p class="text-base tracking-wider font-medium text-brand-purple">
+                                    月・火・木・金・土曜日
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Payment</p>
+                            <p class="text-base tracking-wider font-medium text-brand-purple text-justify">現金のみ</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 h-[350px] lg:h-auto lg:min-h-[400px] flex bg-gray-100">
+                        <!-- Map Placeholder -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.663450284325!2d131.2580355!3d33.9754888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354381004e0ccd7d%3A0xb1bc316dff8265ca!2z44GK5a-644Kr44OV44KnIOOBguOCkw!5e0!3m2!1sja!2sjp!4v1776920462180!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- End of Phase 2 -->
+
+    <!-- Footer -->
+    <footer class="w-full bg-brand-charcoal text-brand-white pb-8 text-center pt-12">
+        <div class="mb-6 text-center">
+            <h1 class="text-xl font-bold tracking-widest mb-1 text-brand-white">お寺カフェ あん</h1>
+        </div>
+        <p class="text-xs tracking-widest text-brand-white/60">&copy; 2026 TERA CAFE AN. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SP Bottom Fixed CTA -->
+    <div id="spFixedCta"
+        class="fixed bottom-0 left-0 w-full z-[60] flex lg:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.05)] text-center transition-all duration-500">
+        <a href="tel:05054489590"
+            class="w-1/2 bg-brand-white py-4 text-brand-charcoal border-r border-brand-gold/20 flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest font-bold">お電話</span>
+            <span class="font-bold text-sm tracking-wide">050-5448-9590</span>
+        </a>
+        <a href="https://otera-ann.happytry.org/jump01.html" target="_blank"
+            class="w-1/2 bg-brand-red py-4 text-white flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest font-bold">お席を予約</span>
+            <span class="font-bold text-sm tracking-wide">Reserve</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop"
+        class="fixed bottom-24 right-5 lg:bottom-12 lg:right-12 z-50 w-12 h-12 border-2 border-brand-gold/50 bg-brand-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:bg-brand-red hover:text-white hover:border-brand-red rounded-full text-xl text-brand-purple shadow-sm">
+        ↑
+    </button>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] bg-brand-charcoal/95 hidden flex items-center justify-center p-4">
+        <button
+            class="absolute top-8 right-8 text-white text-4xl font-thin hover:rotate-90 transition-transform duration-500"
+            onclick="closeModal()">×</button>
+        <img id="modalImage" src="" alt="Expanded" class="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-md">
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="Js/script.js" defer></script>
+</body>
+
+</html>

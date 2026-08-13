@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十和田農産物販売合同会社 | 青森の恵みを、全国の食卓へ</title>
+    <meta name="description" content="青森県十和田市から、黒にんにく・乾燥野菜・乾燥きのこなど、素材のうまみを活かした食品をお届けします。身体にやさしい食を全国へ。">
+
+    <!-- OGP -->
+    <meta property="og:url" content="https://tonou.happytry.fun/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="十和田農産物販売合同会社 | 青森の恵みを、全国の食卓へ">
+    <meta property="og:description" content="青森県十和田市から、黒にんにく・乾燥野菜・乾燥きのこなど、素材のうまみを活かした食品をお届けします。身体にやさしい食を全国へ。">
+    <meta property="og:image" content="https://tonou.happytry.fun/img/ogp.jpg">
+    <meta property="og:site_name" content="十和田農産物販売合同会社">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tonouDark: '#2C3D2B',    /* 濃い緑 (テキスト) */
+                        tonouBeige: '#F9F6F0',   /* ベースの明るいベージュ */
+                        tonouGreen: '#6DA054',   /* メインの緑 */
+                        tonouAccent: '#D8C3A5',  /* アクセントの濃いめベージュ */
+                        tonouWhite: '#FFFFFF',   /* 白 */
+                        tonouRed: '#E07A5F',     /* アテンション用 */
+                    },
+                    fontFamily: {
+                        sans: ['Zen Maru Gothic', 'sans-serif'],
+                        serif: ['Noto Serif JP', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+</head>
+
+<body class="bg-tonouWhite text-tonouDark select-none" oncontextmenu="return false;" ondragstart="return false;">
+
+    <header class="site-header">
+        <ul class="nav-group left">
+            <li><a href="#about"><span class="nav-ja">私たちについて</span><span class="nav-en">About</span></a></li>
+            <li><a href="#service"><span class="nav-ja">事業内容</span><span class="nav-en">Service</span></a></li>
+            <li><a href="#features"><span class="nav-ja">こだわり</span><span class="nav-en">Features</span></a></li>
+        </ul>
+
+        <a href="#" class="header-logo">
+            <img src="img/logo.png" alt="十和田農産物販売合同会社" class="h-12 md:h-14 lg:h-16 w-auto object-contain">
+        </a>
+
+        <ul class="nav-group right">
+            <li><a href="#products"><span class="nav-ja">おすすめ商品</span><span class="nav-en">Products</span></a></li>
+            <li><a href="#flow"><span class="nav-ja">ご注文の流れ</span><span class="nav-en">Flow</span></a></li>
+            <li><a href="#message"><span class="nav-ja">メッセージ</span><span class="nav-en">Message</span></a></li>
+            <li><a href="#access"><span class="nav-ja">アクセス</span><span class="nav-en">Access</span></a></li>
+        </ul>
+
+        <!-- Mobile Burger -->
+        <div id="burger" class="lg:hidden flex items-center px-6 cursor-pointer">
+            <div class="space-y-1.5">
+                <span class="block w-6 h-1 rounded bg-tonouDark"></span>
+                <span class="block w-6 h-1 rounded bg-tonouDark"></span>
+                <span class="block w-6 h-1 rounded bg-tonouDark"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Drawer Menu -->
+    <div id="drawer"
+        class="fixed inset-0 z-[1000] translate-x-full transition-transform duration-500 flex flex-col items-center justify-center space-y-8">
+        <button id="close-drawer" class="absolute top-8 right-8 text-4xl font-black text-tonouDark">&times;</button>
+        <nav>
+            <ul class="flex flex-col items-center space-y-6">
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#flow">Flow</a></li>
+                <li><a href="#message">Message</a></li>
+                <li><a href="#access">Access</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="fv">
+        <!-- Floating Vegetables -->
+        <div class="floating-leaf" style="top: 20%; left: 5%;">
+            <img src="img/fvsvg01.svg" alt="" class="w-full h-full object-contain">
+        </div>
+        <div class="floating-leaf" style="bottom: 15%; left: 3%;">
+            <img src="img/fvsvg02.svg" alt="" class="w-full h-full object-contain">
+        </div>
+        <div class="floating-leaf" style="top: 15%; right: 4%;">
+            <img src="img/fvsvg03.svg" alt="" class="w-full h-full object-contain">
+        </div>
+
+        <div class="slide-counter-wrap">
+            <span class="counter-current" id="curNum">01</span>
+            <span class="counter-total">03</span>
+        </div>
+
+        <div class="fv-stage">
+            <div class="fv-stage-inner">
+                <div class="swiper fv-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- 農産物イメージ画像 -->
+                        <div class="swiper-slide">
+                            <img src="img/fv01.jpeg" alt="農産物 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/fv02.jpeg" alt="農産物 2" class="object-[55%_center] md:object-center">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/fv03.jpg" alt="農産物 3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fv-copy reveal reveal-up delay-500">
+                    <h2 class="copy-main">
+                        <span class="copy-main-text">
+                            青森の恵みを、全国の食卓へ
+                        </span>
+                    </h2>
+                    <p class="mt-4 md:mt-6 text-sm md:text-base lg:text-lg font-bold leading-loose text-white tracking-wide"
+                        style="text-shadow: 0 2px 8px rgba(44, 61, 43, 0.9), 0 0 4px rgba(44, 61, 43, 0.6);">
+                        黒にんにく・乾燥野菜・乾燥きのこなど、<br>
+                        素材のうまみを活かした食品をお届けします。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://tonou.happytry.fun/jump01.html" target="_blank" class="res-circle-btn hidden lg:flex">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-8 md:h-8">
+                <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+            </svg>
+            <span class="btn-ja">ショップ</span>
+        </a>
+    </section>
+
+    <div class="float-right">
+        <a href="tel:050-5448-7624" class="float-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            <span class="float-btn-text">電話注文</span>
+        </a>
+        <a href="https://tonou.happytry.fun/jump01.html" target="_blank" class="float-btn !bg-tonouAccent !text-tonouDark">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+            </svg>
+            <span class="float-btn-text">ショップ</span>
+        </a>
+    </div>
+
+    <main>
+        <section id="about" class="bg-tonouBeige px-6">
+            <div class="container mx-auto max-w-7xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                        <span>About Us</span>
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    </h2>
+                    <p class="text-lg md:text-xl font-black text-tonouDark mt-4">十和田農産物販売合同会社について</p>
+                </div>
+
+                <div class="asym-grid-60-40 flex flex-col-reverse gap-16 lg:grid items-center">
+                    <div class="space-y-8 lg:pr-10 reveal reveal-left delay-200">
+                        <h2 class="text-2xl md:text-3xl leading-tight font-black text-tonouGreen">
+                            青森県十和田市から、<br>
+                            身体にやさしい食をお届け
+                        </h2>
+                        <p class="leading-loose font-bold text-tonouDark">
+                            十和田農産物販売合同会社は、青森県十和田市にある農産物・加工食品の卸売販売会社です。<br><br>
+                            青森県産のにんにくを使用した黒にんにくをはじめ、乾燥野菜、乾燥きのこ、ごぼう茶、切り干し大根など、日々の食卓に取り入れやすい商品を取り扱っています。<br><br>
+                            地元の農産物や全国各地の特色ある食品を通して、生産者様・小売店様・消費者様をつなぎ、食の健康と地域の魅力を広げるお手伝いをしています。<br>
+                            一般のお客様はもちろん、小売店様のお取引相談も承っております。
+                        </p>
+                    </div>
+                    <div class="reveal reveal-right delay-400">
+                        <img src="img/aboutpic.jpg" alt="About Image" class="w-full   ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="container mx-auto px-6 max-w-7xl">
+            <div class="colmo-header reveal reveal-up">
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    <span>Service</span>
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                </h2>
+                <p class="text-lg md:text-xl font-black text-tonouDark mt-4">事業内容</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch w-full">
+                <!-- 01 -->
+                <div class="service-card reveal reveal-up delay-100">
+                    <div class="relative overflow-hidden mb-6 rounded-2xl shrink-0">
+                        <img src="img/serpic01.jpg" alt="卸売販売" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="space-y-3 flex-grow">
+                        <h4 class="text-lg font-black border-l-4 border-tonouGreen pl-4 text-tonouGreen">農産物・加工食品の卸売販売
+                        </h4>
+                        <p class="leading-loose font-bold text-tonouDark/90 pt-1">
+                            青森県産のにんにく、ごぼう、長芋をはじめ、地域の農産物や加工品を取り扱っています。<br>小売店様や事業者様に向けたお取引のご相談も承ります。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="service-card reveal reveal-up delay-200">
+                    <div class="relative overflow-hidden mb-6 rounded-2xl shrink-0">
+                        <img src="img/serpic02.jpg" alt="黒にんにく" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="space-y-3 flex-grow">
+                        <h4 class="text-lg font-black border-l-4 border-tonouGreen pl-4 text-tonouGreen">黒にんにくの販売</h4>
+                        <p class="leading-loose font-bold text-tonouDark/90 pt-1">
+                            青森県産にんにくを使用した熟成黒にんにくを販売しています。甘みのある味わいで、毎日の健康的な食生活に取り入れやすい商品です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="service-card reveal reveal-up delay-300">
+                    <div class="relative overflow-hidden mb-6 rounded-2xl shrink-0">
+                        <img src="img/serpic03.jpg" alt="乾燥野菜" class="w-full h-48 md:h-56 object-cover">
+                    </div>
+                    <div class="space-y-3 flex-grow">
+                        <h4 class="text-lg font-black border-l-4 border-tonouGreen pl-4 text-tonouGreen">乾燥野菜・乾燥きのこの販売
+                        </h4>
+                        <p class="leading-loose font-bold text-tonouDark/90 pt-1">
+                            乾燥ごぼう、切り干し大根、乾燥きのこなど、保存しやすく調理にも使いやすい商品を取り扱っています。味噌汁、炊き込みご飯などに。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="service-card reveal reveal-up delay-400">
+                    <div class="relative overflow-hidden mb-6 rounded-2xl shrink-0">
+                        <img src="img/serpic04.jpg" alt="加工品" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="space-y-3 flex-grow">
+                        <h4 class="text-lg font-black border-l-4 border-tonouGreen pl-4 text-tonouGreen">ごぼう茶・加工品の販売
+                        </h4>
+                        <p class="leading-loose font-bold text-tonouDark/90 pt-1">
+                            青森県産ごぼうを使用したごぼう茶や、地域の特色を活かした加工品をご用意。ご自宅用はもちろん、贈り物や店舗での販売商品としても。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="bg-tonouBeige px-6">
+            <div class="container mx-auto max-w-7xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                        <span>Features</span>
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    </h2>
+                    <p class="text-lg md:text-xl font-black text-tonouDark mt-4">私たちの3つのこだわり</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white rounded-3xl border-4 border-tonouAccent shadow-lg relative reveal reveal-up delay-100 overflow-hidden flex flex-col">
+                        <img src="img/featurespic01.jpg" alt="" class="w-full h-48 object-cover">
+                        <div class="p-8 relative flex-grow">
+                            <span
+                                class="absolute top-4 right-6 text-6xl font-black text-tonouAccent opacity-30">01</span>
+                            <h3 class="text-xl font-black text-tonouGreen mb-4 relative z-10">熟成・乾燥で<br>素材のうまみを引き出す</h3>
+                            <p class="font-bold leading-loose text-tonouDark relative z-10">
+                                食品を熟成・乾燥させることで、長期保存しやすくなり、素材本来のうまみや香りを楽しめる商品になります。手軽に調理へ取り入れやすく、毎日の食卓に無理なく使える食品づくりを大切にしています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl border-4 border-tonouAccent shadow-lg relative reveal reveal-up delay-200 overflow-hidden flex flex-col">
+                        <img src="img/featurespic02.jpg" alt="" class="w-full h-48 object-cover">
+                        <div class="p-8 relative flex-grow">
+                            <span
+                                class="absolute top-4 right-6 text-6xl font-black text-tonouAccent opacity-30">02</span>
+                            <h3 class="text-xl font-black text-tonouGreen mb-4 relative z-10">生産者と消費者を<br>つなぐ商品づくり</h3>
+                            <p class="font-bold leading-loose text-tonouDark relative z-10">
+                                地域の農産物や特色ある食品を通して、生産者様・小売店様・消費者様をつなぐことを大切にしています。地元の魅力ある食材を県内外へ広げ、より多くの方に青森の恵みを届けるお手伝いをしています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl border-4 border-tonouAccent shadow-lg relative reveal reveal-up delay-300 overflow-hidden flex flex-col">
+                        <img src="img/featurespic03.jpg" alt="" class="w-full h-48 object-cover">
+                        <div class="p-8 relative flex-grow">
+                            <span
+                                class="absolute top-4 right-6 text-6xl font-black text-tonouAccent opacity-30">03</span>
+                            <h3 class="text-xl font-black text-tonouGreen mb-4 relative z-10">身体にやさしい食材を<br>届けたいという想い
+                            </h3>
+                            <p class="font-bold leading-loose text-tonouDark relative z-10">
+                                毎日の食事に取り入れやすい、身体にやさしい食材をお届けすることを大切にしています。黒にんにくや乾燥野菜、ごぼう茶など、日々の食生活を楽しく支える商品を取り揃えています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="container mx-auto px-6 max-w-7xl">
+            <div class="colmo-header reveal reveal-up">
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    <span>Products</span>
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                </h2>
+                <p class="text-lg md:text-xl font-black text-tonouDark mt-4">おすすめ商品</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- 商品1 -->
+                <div
+                    class="bg-white p-6 rounded-2xl border-2 border-tonouBeige shadow-sm flex flex-col md:flex-row gap-6 items-center reveal reveal-up">
+                    <img src="img/menupic01.jpg" alt="黒にんにく"
+                        class="w-full md:w-48 h-48 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow space-y-3">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-2">
+                            <h4 class="text-xl font-black text-tonouGreen">青森県産熟成 黒にんにく</h4>
+                            <div class="text-2xl font-black text-tonouRed">¥1,296 <span
+                                    class="text-sm text-tonouDark">税込</span></div>
+                        </div>
+                        <p class="text-xs font-bold bg-tonouBeige inline-block px-3 py-1 rounded-full">内容量：150g</p>
+                        <p class="font-bold text-tonouDark/90">
+                            青森県産にんにくを専用機械でじっくり熟成・発酵させた黒にんにくです。熟成度合いによる味のバランスに着目し、苦みや酸味を抑え、自然な甘みを感じられる味わいが特徴。毎日の食生活に取り入れやすい商品です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 商品2 -->
+                <div
+                    class="bg-white p-6 rounded-2xl border-2 border-tonouBeige shadow-sm flex flex-col md:flex-row gap-6 items-center reveal reveal-up delay-100">
+                    <img src="img/menupic02.jpg" alt="十勝ごぼう"
+                        class="w-full md:w-48 h-48 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow space-y-3">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-2">
+                            <h4 class="text-xl font-black text-tonouGreen">乾燥焙煎 十勝ごぼう</h4>
+                            <div class="text-2xl font-black text-tonouRed">¥1,800 <span
+                                    class="text-sm text-tonouDark">税込</span></div>
+                        </div>
+                        <p class="text-xs font-bold bg-tonouBeige inline-block px-3 py-1 rounded-full">内容量：35g</p>
+                        <p class="font-bold text-tonouDark/90">
+                            十勝産ごぼうを使用した、香ばしい乾燥焙煎ごぼうです。炊き込みご飯やお味噌汁には水戻し不要。炒め物にはぬるま湯で戻して。戻し汁はごぼう茶としてもお楽しみいただけます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 商品3 -->
+                <div
+                    class="bg-white p-6 rounded-2xl border-2 border-tonouBeige shadow-sm flex flex-col md:flex-row gap-6 items-center reveal reveal-up delay-200">
+                    <img src="img/menupic03.jpg" alt="りんご玄米茶"
+                        class="w-full md:w-48 h-48 object-cover rounded-xl shrink-0">
+                    <div class="flex-grow space-y-3">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-2">
+                            <h4 class="text-xl font-black text-tonouGreen">りんご玄米茶</h4>
+                            <div class="text-2xl font-black text-tonouRed">¥571 <span
+                                    class="text-sm text-tonouDark">税込</span></div>
+                        </div>
+                        <p class="font-bold text-tonouDark/90">
+                            青森県産玄米をじっくり焙煎し、青森県産りんごを合わせたやさしい味わいのお茶です。玄米の香ばしさと、りんごのほのかな甘み・酸味が楽しめます。ノンカフェインで夏場はアイスでもおすすめです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal reveal-up">
+                <a href="https://tonou.happytry.fun/jump01.html" target="_blank"
+                    class="nui-btn !bg-tonouGreen !text-white !border-tonouGreen hover:!bg-tonouDark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="w-5 h-5 shrink-0">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="text-center md:text-left leading-snug">オンラインショップで<br
+                            class="block md:hidden">他の商品を見る</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="flow" class="bg-tonouBeige px-6">
+            <div class="container mx-auto max-w-7xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                        <span>Order Flow</span>
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    </h2>
+                    <p class="text-lg md:text-xl font-black text-tonouDark mt-4">ご注文の流れ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative mb-16">
+                    <div
+                        class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-tonouAccent -z-10 -translate-y-1/2">
+                    </div>
+
+                    <!-- Flow 1 -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center border-2 border-tonouAccent shadow-sm relative reveal reveal-up delay-100">
+                        <div
+                            class="w-10 h-10 bg-tonouGreen text-white font-black rounded-full flex items-center justify-center mx-auto -mt-10 mb-4  ">
+                            01</div>
+                        <div class="flex justify-center mb-3 text-tonouAccent">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="font-black text-tonouGreen mb-2">ご注文・お問合せ</h4>
+                        <p class="font-bold text-tonouDark text-left">一般のお客様はWEB・FAXより。お取引ご希望の企業様はお電話等でご連絡ください。</p>
+                    </div>
+                    <!-- Flow 2 -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center border-2 border-tonouAccent shadow-sm relative reveal reveal-up delay-200">
+                        <div
+                            class="w-10 h-10 bg-tonouGreen text-white font-black rounded-full flex items-center justify-center mx-auto -mt-10 mb-4  ">
+                            02</div>
+                        <div class="flex justify-center mb-3 text-tonouAccent">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="font-black text-tonouGreen mb-2">内容の確認</h4>
+                        <p class="font-bold text-tonouDark text-left">ご希望の商品内容を確認し、送料を含めた金額をご案内いたします。</p>
+                    </div>
+                    <!-- Flow 3 -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center border-2 border-tonouAccent shadow-sm relative reveal reveal-up delay-300">
+                        <div
+                            class="w-10 h-10 bg-tonouGreen text-white font-black rounded-full flex items-center justify-center mx-auto -mt-10 mb-4  ">
+                            03</div>
+                        <div class="flex justify-center mb-3 text-tonouAccent">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10">
+                                <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="10" x2="22" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h4 class="font-black text-tonouGreen mb-2">お振込み</h4>
+                        <p class="font-bold text-tonouDark text-left">金額確定後、指定の期日内にお振込みをお願いいたします。</p>
+                    </div>
+                    <!-- Flow 4 -->
+                    <div
+                        class="bg-white p-6 rounded-2xl text-center border-2 border-tonouAccent shadow-sm relative reveal reveal-up delay-400">
+                        <div
+                            class="w-10 h-10 bg-tonouGreen text-white font-black rounded-full flex items-center justify-center mx-auto -mt-10 mb-4  ">
+                            04</div>
+                        <div class="flex justify-center mb-3 text-tonouAccent">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h4 class="font-black text-tonouGreen mb-2">商品発送</h4>
+                        <p class="font-bold text-tonouDark text-left">ご入金確認後、できるだけ早く発送できるよう手配いたします。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-10 rounded-[32px]   reveal reveal-up">
+                    <h3 class="text-lg font-black text-tonouRed mb-4 flex items-center gap-2">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                        </svg>
+                        ご注文前にご確認ください
+                    </h3>
+                    <ul class="space-y-2 text-sm font-bold text-tonouDark list-disc pl-5">
+                        <li>送料・振込手数料はお客様負担となります。</li>
+                        <li>全国対応しておりますが、北海道・沖縄・離島は追加送料が発生する場合がございます。</li>
+                        <li>金額確定後、期日内にお振込みが確認できない場合は、自動キャンセルとなる場合がございます。</li>
+                        <li>商品の在庫状況や時期により、ご希望の商品をご用意できない場合がございます。</li>
+                        <li>小売店様や企業様のお取引については、お電話またはお問い合わせフォームより事前にご相談ください。</li>
+                    </ul>
+
+                    <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="https://tonou.happytry.fun/jump02.html"
+                            target="_blank"
+                            class="nui-btn !bg-tonouDark !text-white !border-tonouDark hover:!bg-tonouGreen">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            FAX注文用紙ダウンロード
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message" class="relative px-6">
+            <!-- Background Image & Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="img/messagebg.jpg" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-[#F9F6F0]/50"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto max-w-7xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                        <span>Message</span>
+                        <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    </h2>
+                    <p class="text-lg md:text-xl font-black text-tonouDark mt-4">私たちの想い</p>
+                </div>
+
+                <div
+                    class="bg-white/70 backdrop-blur-sm p-8 md:p-16 rounded-[32px] text-center w-full reveal reveal-up delay-200 border-2 border-white shadow-xl max-w-4xl mx-auto">
+                    <h3 class="text-[20px] md:text-3xl font-black text-tonouGreen mb-6 leading-relaxed">食の健康と地域の恵みを、<br
+                            class="block md:hidden">まっすぐに届けたい</h3>
+                    <p class="leading-loose font-bold text-tonouDark md:text-lg text-left md:text-center">
+                        十和田農産物販売合同会社では、<br class="hidden md:block">青森県十和田市を拠点に、地域の農産物や加工品を全国へお届けしています。<br>
+                        毎日の食卓に取り入れやすい商品を通して、<br class="hidden md:block">皆さまの健やかな食生活を支えたいと考えています。<br><br>
+                        店舗で取り扱う商品を検討されている小売店様も、まずはお気軽にご相談ください。<br>
+                        青森の恵みを、心を込めてお届けいたします。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="container mx-auto px-6 max-w-7xl reveal reveal-up">
+            <div class="colmo-header">
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl font-black text-tonouGreen flex items-center justify-center gap-3 tracking-widest uppercase">
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                    <span>Access</span>
+                    <img src="img/iconsvg.svg" alt="" class="icon-leaf object-contain">
+                </h2>
+                <p class="text-lg md:text-xl font-black text-tonouDark mt-4">店舗情報・アクセス</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                <div
+                    class="space-y-6 reveal reveal-left delay-200 flex flex-col bg-tonouBeige p-6 md:p-8 rounded-[32px]">
+                    <dl class="space-y-4 text-sm md:text-base text-tonouDark font-bold flex-grow">
+                        <div class="flex flex-col md:grid md:grid-cols-3 border-b border-dashed /50 pb-2">
+                            <dt class="font-black text-tonouGreen">店舗名</dt>
+                            <dd class="md:col-span-2">十和田農産物販売合同会社</dd>
+                        </div>
+                        <div class="flex flex-col md:grid md:grid-cols-3 border-b border-dashed /50 pb-2">
+                            <dt class="font-black text-tonouGreen">住所</dt>
+                            <dd class="md:col-span-2">〒034-0011<br>青森県十和田市稲生町１６−５１</dd>
+                        </div>
+                        <div class="flex flex-col md:grid md:grid-cols-3 border-b border-dashed /50 pb-2">
+                            <dt class="font-black text-tonouGreen">電話番号</dt>
+                            <dd class="md:col-span-2 text-lg font-black"><a href="tel:050-5448-7624"
+                                    class="text-tonouRed">050-5448-7624</a></dd>
+                        </div>
+                        <div class="flex flex-col md:grid md:grid-cols-3 border-b border-dashed /50 pb-2">
+                            <dt class="font-black text-tonouGreen">営業時間</dt>
+                            <dd class="md:col-span-2">9：00～17：00</dd>
+                        </div>
+                        <div class="flex flex-col md:grid md:grid-cols-3">
+                            <dt class="font-black text-tonouGreen">定休日</dt>
+                            <dd class="md:col-span-2">日曜日</dd>
+                        </div>
+                    </dl>
+
+                    <div class="pt-4 flex gap-4">
+                        <a href="https://tonou.happytry.fun/jump03.html" target="_blank"
+                            class="nui-btn flex-grow text-center !bg-tonouGreen !text-white !border-tonouGreen hover:!bg-tonouDark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 shrink-0">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                            公式サイト
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div
+                    class="w-full min-h-[350px] lg:h-auto reveal reveal-right delay-400 overflow-hidden rounded-[32px]   flex">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12114.67698766582!2d141.2139715!3d40.6151206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b424e8b0fffff%3A0x1f6c22b74d8f800f!2z5Y2B5ZKM55Sw6L6y55Sj54mp6LKp5aOy5ZCI5ZCM5Lya56S-!5e0!3m2!1sja!2sjp!4v1785300595173!5m2!1sja!2sjp"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin" class="w-full h-full flex-grow"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pt-12 pb-28 lg:pb-12 px-6 bg-tonouDark text-white mt-12">
+        <div class="container mx-auto max-w-7xl flex flex-col items-center gap-8">
+            <a href="#" class="font-black text-xl text-tonouBeige hover:text-tonouGreen transition">
+                十和田農産物販売合同会社
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-6 text-xs font-bold text-tonouBeige/80">
+                    <li><a href="#about" class="hover:text-white transition">ABOUT</a></li>
+                    <li><a href="#service" class="hover:text-white transition">SERVICE</a></li>
+                    <li><a href="#products" class="hover:text-white transition">PRODUCTS</a></li>
+                    <li><a href="#flow" class="hover:text-white transition">ORDER FLOW</a></li>
+                    <li><a href="#message" class="hover:text-white transition">MESSAGE</a></li>
+                    <li><a href="#access" class="hover:text-white transition">ACCESS</a></li>
+                </ul>
+            </nav>
+            <p class="text-[11px] opacity-70 tracking-widest uppercase font-bold">&copy; 2026 十和田農産物販売合同会社. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <div id="scrollTop"
+        class="fixed right-6 bottom-24 w-12 h-12 flex items-center justify-center text-white cursor-pointer opacity-0 invisible transition-all z-[999]">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </div>
+
+    <!-- Mobile Bottom CTA -->
+    <div class="bottom-cta lg:hidden">
+        <a href="tel:050-5448-7624" class="cta-tel">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            電話注文
+        </a>
+        <a href="https://tonou.happytry.fun/jump01.html" target="_blank" class="cta-web">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+            </svg>
+            ショップ
+        </a>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>小鳥と苺 Bistro｜ライブ感覚のフレンチレストラン</title>
+  <meta name="description" content="隠れ家のような空間で、シェフとの距離が近いライブ感覚のフレンチレストラン「小鳥と苺 Bistro」。旬の食材と厳選ワインで紡ぐ贅沢なひとときを。">
+  <meta property="og:title" content="小鳥と苺 Bistro｜ライブ感覚のフレンチレストラン">
+  <meta property="og:description" content="隠れ家のような空間で、シェフとの距離が近いライブ感覚のフレンチレストラン「小鳥と苺 Bistro」。旬の食材と厳選ワインで紡ぐ贅沢なひとときを。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://genkian-salon.happytry.org/img/ogp.jpg">
+  <meta property="og:url" content="https://genkian-salon.happytry.org"> <!-- URLが決定したら適宜修正してください -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=Cinzel:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TDLXB6D7WG');
+  </script>
+</head>
+
+<body>
+
+  <!-- ====================== SP全画面メニュー ====================== -->
+  <div id="sp-menu" role="dialog" aria-modal="true" aria-label="メニュー">
+    <button class="sp-menu-close" id="sp-menu-close" aria-label="メニューを閉じる">× 閉じる</button>
+    <nav>
+      <a href="#concept">Concept</a>
+      <a href="#service">Service</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#message">Message</a>
+      <a href="#reserve">Access</a>
+    </nav>
+    <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px;align-items:center;">
+      <a href="tel:050-5448-7532" class="btn-wine" style="font-size:.8rem;padding:12px 32px;">📞 050-5448-7532</a>
+      <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener" class="btn-outline-gold"
+        style="font-size:.75rem;padding:11px 28px;">Web予約</a>
+    </div>
+  </div>
+
+  <!-- ====================== HEADER ====================== -->
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="site-logo" aria-label="小鳥と苺 Bistro トップへ">
+        小鳥と苺 Bistro
+        <span>COTORI TO ICHIGO · Bistro</span>
+      </a>
+      <div class="header-actions">
+        <nav class="pc-nav" role="navigation" aria-label="メインナビゲーション">
+          <a href="#concept">Concept</a>
+          <a href="#service">Service</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#message">Message</a>
+          <a href="#reserve">Access</a>
+        </nav>
+        <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener"
+          class="btn-header-reserve" aria-label="Web予約">
+          <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"
+            style="vertical-align:middle;margin-right:4px;">
+            <path
+              d="M21 5h-18a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2v.5l-9 5.5-9-5.5V7h18zm-18 12V9.87l9 5.5 9-5.5V19H3z" />
+          </svg>
+          Web予約
+        </a>
+      </div>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ====================== FV ====================== -->
+    <section id="fv" aria-label="ファーストビュー">
+      <div class="fv-bg-slider" role="img" aria-label="小鳥と苺 Bistro アイキャッチ">
+        <div class="fv-bg-slide" style="background-image: url('img/fv01.jpeg');"></div>
+        <div class="fv-bg-slide" style="background-image: url('img/fv02.jpeg');"></div>
+        <div class="fv-bg-slide" style="background-image: url('img/fv03.jpeg');"></div>
+      </div>
+      <div class="fv-content">
+        <p class="fv-eyebrow">8-seat counter-style French restaurant</p>
+        <h1 class="fv-title">
+          <em>COTORI TO ICHIGO</em>
+        </h1>
+        <div class="fv-divider"></div>
+        <p class="fv-sub">
+          季節の恵みを味わう、<br class="pc-only">
+          蒲田の隠れ家ビストロ
+        </p>
+        <div class="fv-cta-row">
+          <a href="tel:050-5448-7532" class="btn-gold">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            電話予約
+          </a>
+          <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener"
+            class="btn-outline-gold">Web予約はこちら</a>
+        </div>
+      </div>
+      <div class="fv-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="fv-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ====================== CONCEPT ====================== -->
+    <section id="concept" aria-labelledby="concept-heading">
+      <div class="section-wrap">
+        <div class="concept-grid">
+          <div class="concept-image-wrap reveal-left">
+            <img src="img/about_image.jpeg" alt="Bistro Concept">
+          </div>
+          <div class="concept-text reveal-right">
+            <span class="section-label">Concept</span>
+            <h2 id="concept-heading">
+              蒲田駅西口に佇む小さな<br>フレンチビストロ
+            </h2>
+            <div class="accent-line accent-line-left"></div>
+            <p>
+              蒲田駅西口に佇む「小鳥と苺 Bistro」は、8席のカウンターで本格フレンチコースを楽しめる小さなビストロです。
+            </p>
+            <p>
+              店主・木村が国内外を巡る中で出会った、本当に良い素材だけを厳選。<br>
+              帯広・内海ファームの熟成牛や蝦夷鹿、フォアグラ、キャビア、トリュフなど、選び抜かれた食材を、フランス・イタリアの名店で培った技法で丁寧に仕立てています。
+            </p>
+            <p>
+              上質な料理と温かな空間が調和する、特別なひとときをお過ごしください。
+            </p>
+            <div class="policy-box">
+              <p>
+                キャンセルポリシー：<br>当日(連絡なし)100%、当日(連絡あり)50%、<br>1日前00:00〜50%のご負担をお願いしております。<br>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA BAND ====================== -->
+    <div class="cta-band">
+      <div class="cta-band-inner reveal">
+        <span class="section-label">Reservation</span>
+        <h2>ご予約・お問い合わせ</h2>
+        <p class="cta-hours">ビストロ 17:00-22:00 / バータイム 22:00-26:00<br>定休日：月曜日</p>
+        <div class="cta-buttons">
+          <div class="cta-tel-wrap">
+
+            <a href="tel:050-5448-7532" class="btn-tel" aria-label="電話予約">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+              </svg>
+              050-5448-7532
+            </a>
+          </div>
+          <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener"
+            class="btn-outline-gold">Web予約はこちら →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== SERVICE ====================== -->
+    <section id="service" aria-labelledby="service-heading" style="background-image: url('img/serback.jpeg');">
+      <div class="section-wrap">
+        <div style="text-align:center;margin-bottom:52px;" class="reveal">
+          <span class="section-label">Service</span>
+          <h2 id="service-heading" class="service-heading">こだわりの<br class="sp-only">食材とワイン</h2>
+          <p class="service-sub">
+            季節ごとに変わる、最高の素材だけを。
+          </p>
+          <div class="accent-line"></div>
+        </div>
+
+        <div class="service-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal">
+            <div class="service-card-img">
+              <img src="img/service_01.jpeg" alt="希少和牛">
+            </div>
+            <div class="service-card-body">
+              <div class="service-num">01</div>
+              <h3>厳選素材で仕立てる本格フレンチコース</h3>
+              <p>
+                季節ごとに移ろう旬の食材を主役にしたコースをご用意しています。<br>
+                熟成牛や蝦夷鹿をはじめとする上質な素材を、確かな技術で一皿一皿丁寧に仕上げ、素材本来の魅力を引き出します。<br>
+                贅沢でありながら、心地よく楽しめるフレンチをご堪能いただけます。
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card reveal" style="transition-delay:.12s">
+            <div class="service-card-img">
+              <img src="img/service_02.jpeg" alt="自然農法の旬野菜">
+            </div>
+            <div class="service-card-body">
+              <div class="service-num">02</div>
+              <h3>8席のカウンターで味わう臨場感</h3>
+              <p>
+                店内は8席のみのカウンター。<br>
+                料理が目の前で仕上がる音や香り、シェフとの自然な会話も、この店ならではの魅力です。<br>
+                落ち着いた空間の中で、料理と向き合う豊かな時間をお楽しみいただけます。
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal" style="transition-delay:.24s">
+            <div class="service-card-img">
+              <img src="img/service_03.jpg" alt="市場直送の鮮魚">
+            </div>
+            <div class="service-card-body">
+              <div class="service-num">03</div>
+              <h3>ソムリエが提案するワインペアリング</h3>
+              <p>
+                常駐するソムリエが、料理に合わせたワインをご提案します。<br>
+                クラシックからナチュラルまで幅広く取り揃え、料理の味わいをより深く引き立てる一杯をセレクト。<br>
+                料理とワインが重なり合う、上質なマリアージュをご体験いただけます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== MENU ====================== -->
+    <section id="menu" aria-labelledby="menu-heading">
+      <div class="section-wrap">
+        <div class="menu-grid">
+
+          <!-- 追従（Sticky）のためのラッパーを設置 -->
+          <div class="menu-image-wrapper reveal-left" style="min-width: 0;">
+            <div class="menu-image">
+              <div class="swiper menu-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/price_01.jpg" alt="Menu 1" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/price_02.jpg" alt="Menu 2" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/price_03.jpg" alt="Menu 3" loading="lazy"></div>
+                  <div class="swiper-slide"><img src="img/price_04.jpg" alt="Menu 4" loading="lazy"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="menu-content reveal-right">
+            <span class="section-label">Menu</span>
+            <h2 id="menu-heading">
+              小鳥と苺が紡ぐ、<br>
+              <em style="font-style:italic;color:var(--wine);">二つのコース</em>
+            </h2>
+            <div class="accent-line accent-line-left"></div>
+            <p>定番の味わいから、<br class="sp-only">旬の食材を贅沢に使ったスペシャリテまで。<br>大切な方との特別なひとときをお楽しみください。</p>
+
+            <p class="menu-note">※ 表示価格はすべて税込です。</p>
+
+            <!-- Classic Course -->
+            <div class="menu-card">
+              <div class="menu-card-badge">Classic</div>
+              <h3>クラシック 8品　小鳥コース</h3>
+              <p class="menu-card-subtitle">小鳥と苺の定番料理をお楽しみ頂けるコースです。</p>
+              <div class="menu-price">¥8,800<sub>（税込）</sub></div>
+              <div class="menu-tax">おひとり様</div>
+              <div class="menu-divider"></div>
+              <ul class="menu-course-list">
+                <li>シューグリエール</li>
+                <li>仔牛と野菜のコンソメ</li>
+                <li>季節の前菜 2品</li>
+                <li>お魚料理（ズワイ蟹と海老のパイ包み、アメリケーヌソース）</li>
+                <li>季節のフルーツピクルス仕立て</li>
+                <li>お肉料理（エゾ鹿フィレ肉のポワレ、ボルドレーズソース）</li>
+                <li>デザート</li>
+              </ul>
+            </div>
+
+            <!-- Specialite Course -->
+            <div class="menu-card">
+              <div class="menu-card-badge">Sp&eacute;cialit&eacute;</div>
+              <h3>スペシャリテ 8品　苺コース</h3>
+              <p class="menu-card-subtitle">旬の食材はもちろん、お魚料理とお肉料理もこだわりの食材を使ったワンランク上のコースです。</p>
+              <div class="menu-price">¥11,000<sub>（税込）</sub></div>
+              <div class="menu-tax">おひとり様</div>
+              <div class="menu-divider"></div>
+              <ul class="menu-course-list">
+                <li>シューグリエール</li>
+                <li>仔牛と野菜のコンソメ</li>
+                <li>自家製生ハム（鴨、エゾ鹿）、金目鯛のシャンパンと昆布のマリネ、キャビア</li>
+                <li>フォアグラのフランと自家製カヌレ、ラムとイチジクのソース</li>
+                <li>フランス産ホワイトアスパラのオランデーズソース</li>
+                <li>魚料理（天然平目と海老ムースのパイ包み　シャンパンソース、レモンの泡）</li>
+                <li>季節のフルーツピクルス仕立て</li>
+                <li>うずらのファルシ（詰め物）、モリーユ茸のソース、パースニップのフリット</li>
+                <li>デザート</li>
+              </ul>
+            </div>
+
+            <!-- Anniversary plate -->
+            <div class="menu-card"
+              style="border-top-color:var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.04) 0%,#fff 100%);">
+              <h3 style="color:var(--gold);">記念日デザートプレート</h3>
+              <p class="menu-card-subtitle">誕生日・記念日のお祝いに</p>
+              <div class="menu-price" style="font-size:clamp(1.2rem,2vw,1.7rem);">¥1,600<sub>（税込）</sub></div>
+              <div class="menu-divider"></div>
+              <p
+                style="font-size:clamp(.72rem,.95vw,.82rem);font-weight:300;line-height:2.2;letter-spacing:.07em;color:var(--text-mid);">
+                誕生日や記念日などのお祝いに、デザートプレートのご用意も可能です。<br>
+                ご希望のメッセージがある場合は、ご予約時にお知らせください。<br>
+                大切なひとときを、心を込めてお手伝いいたします。
+              </p>
+            </div>
+
+            <div class="menu-cta-wrap">
+              <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener"
+                class="btn-wine">Web予約はこちら →</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /section-wrap -->
+
+      <!-- MARQUEE -->
+      <div class="menu-marquee">
+        <div class="marquee-inner">
+          <span>COTORI TO ICHIGO</span>
+          <span>BISTRO DE KAMATA</span>
+          <span>2020</span>
+          <span>COTORI TO ICHIGO</span>
+          <span>BISTRO DE KAMATA</span>
+          <span>2020</span>
+          <span>COTORI TO ICHIGO</span>
+          <span>BISTRO DE KAMATA</span>
+          <span>2020</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== GALLERY ====================== -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="section-wrap">
+        <div class="gallery-heading-wrap reveal">
+          <span class="section-label">Gallery</span>
+          <h2 id="gallery-heading" class="gallery-heading">美食の記憶</h2>
+          <div class="accent-line"></div>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="img/gallery_01.jpg" alt="Cuisine">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery_02.jpg" alt="Wine">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery_03.jpg" alt="Viande">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery_04.jpg" alt="Légume">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery_05.jpg" alt="Dessert">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gallery_06.jpg" alt="Intérieur">
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="https://www.instagram.com/cotori_to_ichigo?igsh=YXg4Y2MwaDJtcWMy" target="_blank" rel="noopener"
+            class="btn-outline-gold"
+            style="padding: 14px 40px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Instagramを見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== MESSAGE / CHEF ====================== -->
+    <section id="message" aria-labelledby="message-heading">
+      <div class="message-bg" style="background-image: url('img/message_image.jpeg');"></div>
+      <div class="message-inner reveal">
+        <span class="section-label">Message</span>
+        <h2 id="message-heading">
+          素材と向き合い、<br>一皿を仕立てる
+        </h2>
+        <p>
+          小鳥と苺 Bistroでは、選び抜いた素材の魅力を大切にしながら、<br class="pc-only">肩ひじ張らずに本格フレンチを楽しんでいただける一皿を<br
+            class="pc-only">お届けしたいと考えています。<br><br>
+          イタリア・フランスのミシュラン店で修業を重ね、<br class="pc-only">そこで培った技術と感性を生かしながら、<br class="pc-only">季節の食材と丁寧に向き合っています。<br><br>
+          8席のカウンターで過ごす時間が、<br class="pc-only">皆さまにとって心に残るひとときになれば嬉しいです。<br>
+          ご来店を心よりお待ちしております。
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== RESERVE / CONTACT ====================== -->
+    <section id="reserve" aria-labelledby="reserve-heading">
+      <div class="section-wrap">
+        <div class="reveal" style="text-align:center;margin-bottom:clamp(40px,6vw,64px);">
+          <span class="section-label">Reservation &amp; Access</span>
+          <h2 id="reserve-heading"
+            style="font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;letter-spacing:.08em;">
+            ご予約・アクセス</h2>
+          <div class="accent-line"></div>
+        </div>
+        <div class="reserve-grid">
+          <!-- Info + Web Form -->
+          <div class="reveal-left">
+            <address style="font-style:normal;margin-bottom:28px;">
+              <p class="contact-info-label">住所</p>
+              <p class="contact-info-value">〒144-0051<br>東京都大田区西蒲田７丁目６４−６ 1階<br>JR蒲田西口</p>
+              <p class="contact-info-label">電話番号</p>
+              <p class="contact-info-value"><a href="tel:050-5448-7532">050-5448-7532</a></p>
+              <p class="contact-info-label">営業時間</p>
+              <p class="contact-info-value">
+                ビストロ(コース提供) 17:00-22:00<br>
+                バータイム 22:00-26:00
+              </p>
+              <p class="contact-info-label">定休日</p>
+              <p class="contact-info-value">月曜日</p>
+            </address>
+
+            <div class="web-reserve-form">
+              <h3>Web予約</h3>
+              <div class="form-policy">
+                キャンセルポリシーをご確認の上、ご予約ください。<br>
+                当日(連絡なし)100% / 当日(連絡あり)50% / 1日前00:00〜50%のご負担となります。<br>
+              </div>
+              <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener" class="form-submit"
+                style="display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;height:52px;">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M21 5h-18a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2v.5l-9 5.5-9-5.5V7h18zm-18 12V9.87l9 5.5 9-5.5V19H3z" />
+                </svg>
+                Web予約サイトへ
+              </a>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="reveal-right">
+            <div class="map-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.6691501180344!2d139.7134268!3d35.561872400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018614a23e4727b%3A0xd6ef56c76e8dfb1b!2z5bCP6bOl44Go6Iu6IEJpc3Rybw!5e0!3m2!1sja!2sjp!4v1775188493543!5m2!1sja!2sjp"
+                title="小鳥と苺 Bistro 地図" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div style="margin-top:32px;padding:24px;background:var(--wine-dark);">
+              <p
+                style="font-family:var(--font-heading);font-size:.58rem;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;">
+                Instagram</p>
+              <p style="font-size:.8rem;color:rgba(201,168,76,.6);line-height:2;letter-spacing:.08em;">
+                料理の様子・旬の食材・ワインセラーなど、<br>
+                日々の情報を発信しています。
+              </p>
+              <a href="https://www.instagram.com/cotori_to_ichigo?igsh=YXg4Y2MwaDJtcWMy" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--font-heading);font-size:.6rem;letter-spacing:.2em;color:var(--gold);text-decoration:none;text-transform:uppercase;border:1px solid rgba(201,168,76,.3);padding:9px 18px;transition:all .3s;"
+                onmouseover="this.style.background='rgba(201,168,76,.1)'"
+                onmouseout="this.style.background='transparent'">
+                @cotori_to_ichigo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="#" class="footer-logo">
+          小鳥と苺 Bistro
+          <small>COTORI TO ICHIGO · Bistro</small>
+        </a>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#concept">Concept</a>
+          <a href="#service">Service</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#message">Message</a>
+          <a href="#reserve">Access</a>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; 2026 小鳥と苺 Bistro. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== SP固定CTA ====================== -->
+  <div id="sp-fixed-cta" aria-label="スマートフォン固定CTA">
+    <a href="tel:050-5448-7532" class="cta-phone" aria-label="電話予約">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+      </svg>
+      電話予約
+    </a>
+    <a href="https://res-reserve.com/ja/restaurants/cotori" target="_blank" rel="noopener" class="cta-web"
+      aria-label="Web予約">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M21 5h-18a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2v.5l-9 5.5-9-5.5V7h18zm-18 12V9.87l9 5.5 9-5.5V19H3z" />
+      </svg>
+      Web予約
+    </a>
+  </div>
+
+  <!-- ====================== TOPへ戻る ====================== -->
+  <button id="scroll-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>占い鑑定士 雅 | あなたの人生に、迷いをほどく答えを</title>
+  <meta name="description" content="仕事・恋愛・人間関係・人生の選択まで。数秘術、四柱推命、タロットなど多彩な占術を用いて、あなたの心に寄り添う総合鑑定を行います。対面・電話鑑定対応。">
+
+  <!-- Google Fonts: 落ち着いた明朝体と視認性の高いゴシック体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'mystic-purple': '#7b5c8f',      // メインの紫（スピリチュアル感）
+            'mystic-purple-dark': '#4a335a', // 濃い紫
+            'sand-beige': '#f8f5f0',         // 背景ベージュ
+            'sand-beige-dark': '#eee9e0',    // 濃い背景ベージュ
+            'gold-accent': '#c2a365',        // アクセントのゴールド
+            'text-main': '#3a3333',
+            'line-green': '#06C755',
+          },
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TDLXB6D7WG');
+  </script>
+  <!-- OGP Meta Tags -->
+  <meta property="og:title" content="占い鑑定士 雅 | あなたの人生に、迷いをほどく答えを">
+  <meta property="og:description" content="仕事・恋愛・人間関係・人生の選択まで。数秘術、四柱推命、タロットなど多彩な占術を用いて、あなたの心に寄り添う総合鑑定を行います。対面・電話鑑定対応。">
+  <meta property="og:url" content="https://uranai-miyabi.happytry.org/">
+  <meta property="og:image" content="https://uranai-miyabi.happytry.org/img/ogp.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="占い鑑定士 雅">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="font-sans text-[14px] md:text-[16px] select-none" oncontextmenu="return false;"
+  onselectstart="return false;" ondragstart="return false;">
+
+  <!-- Header -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300 h-20 px-4 md:px-10 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="font-serif font-bold text-xl text-mystic-purple-dark tracking-wider">占い鑑定士 雅</span>
+    </a>
+
+    <!-- PC Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#about" class="text-sm font-medium hover:text-mystic-purple transition-colors">ABOUT</a>
+      <a href="#features" class="text-sm font-medium hover:text-mystic-purple transition-colors">FEATURES</a>
+      <a href="#service" class="text-sm font-medium hover:text-mystic-purple transition-colors">SERVICE</a>
+      <a href="#message" class="text-sm font-medium hover:text-mystic-purple transition-colors">MESSAGE</a>
+      <a href="#access" class="text-sm font-medium hover:text-mystic-purple transition-colors">ACCESS</a>
+    </nav>
+
+    <!-- PC Reserve Buttons -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:050-5795-3561"
+        class="bg-mystic-purple-dark text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:bg-mystic-purple hover:-translate-y-0.5 transition-all flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+          </path>
+        </svg>
+        050-5795-3561
+      </a>
+      <a href="https://uranai-miyabi.happytry.org/jump01.html" target="_blank" rel="noopener"
+        class="bg-line-green text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md hover:opacity-90 hover:-translate-y-0.5 transition-all flex items-center gap-1">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z" />
+        </svg>
+        LINE予約
+      </a>
+    </div>
+
+    <!-- SP Hamburger -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 z-[60]">
+      <span class="hamburger-line hamburger-line-1 w-6 h-0.5 bg-mystic-purple-dark block rounded"></span>
+      <span class="hamburger-line hamburger-line-2 w-6 h-0.5 bg-mystic-purple-dark block rounded"></span>
+      <span class="hamburger-line hamburger-line-3 w-6 h-0.5 bg-mystic-purple-dark block rounded"></span>
+    </button>
+  </header>
+
+  <!-- SP Drawer Menu -->
+  <div id="drawer-menu"
+    class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[70] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <button id="close-drawer-btn"
+      class="absolute top-4 right-4 w-12 h-12 flex flex-col justify-center items-center text-mystic-purple-dark hover:opacity-70 transition-opacity">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+      <span class="text-[10px] font-bold mt-0.5">閉じる</span>
+    </button>
+
+    <nav class="flex flex-col items-center gap-6 mb-10 text-lg font-serif">
+      <a href="#about" class="drawer-link text-mystic-purple-dark">ABOUT</a>
+      <a href="#features" class="drawer-link text-mystic-purple-dark">FEATURES</a>
+      <a href="#service" class="drawer-link text-mystic-purple-dark">SERVICE</a>
+      <a href="#message" class="drawer-link text-mystic-purple-dark">MESSAGE</a>
+      <a href="#access" class="drawer-link text-mystic-purple-dark">ACCESS</a>
+    </nav>
+    <div class="flex flex-col gap-4 w-64">
+      <a href="tel:050-5795-3561"
+        class="bg-mystic-purple-dark text-white py-3 rounded-full text-center font-bold shadow-md flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+          </path>
+        </svg>
+        電話予約
+      </a>
+      <a href="https://uranai-miyabi.happytry.org/jump01.html" target="_blank" rel="noopener"
+        class="bg-line-green text-white py-3 rounded-full text-center font-bold shadow-md flex items-center justify-center gap-2">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z" />
+        </svg>
+        LINE予約
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section
+    class="relative pt-20 flex flex-col md:justify-center md:items-start overflow-hidden bg-sand-beige md:h-screen md:min-h-[650px]">
+    <!-- Background Image (Crossfade Slider) -->
+    <div class="relative md:absolute md:inset-0 z-0 h-[45vh] md:h-full w-full overflow-hidden order-2 md:order-none">
+      <!-- スピリチュアルなイメージ画像プレースホルダ -->
+      <div class="absolute inset-0 w-full h-full fv-slide slide-1">
+        <img src="img/fv01.jpg" alt="占いイメージ1" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 w-full h-full fv-slide slide-2">
+        <img src="img/fv02.jpg" alt="占いイメージ2" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 w-full h-full fv-slide slide-3">
+        <img src="img/fv03.jpg" alt="占いイメージ3" class="w-full h-full object-cover">
+      </div>
+      <!-- Gradient Overlay -->
+      <div
+        class="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-sand-beige/95 via-sand-beige/50 to-transparent">
+      </div>
+      <div class="md:hidden absolute inset-0 z-10 bg-gradient-to-b from-sand-beige via-transparent to-sand-beige">
+      </div>
+    </div>
+
+    <div
+      class="relative z-20 px-6 py-10 md:py-0 md:px-10 lg:px-16 max-w-6xl w-full flex-grow flex flex-col justify-center order-1 md:order-none">
+      <span
+        class="inline-block bg-mystic-purple text-white px-4 py-1.5 rounded-full font-bold text-xs md:text-sm mb-6 shadow-sm w-fit tracking-wider">
+        多彩な占術による総合鑑定
+      </span>
+
+      <h1
+        class="text-[35px] md:text-5xl lg:text-6xl font-serif font-black text-mystic-purple-dark leading-tight mb-6 relative inline-block w-fit [text-shadow:0_4px_30px_rgba(255,255,255,0.8),0_0_10px_rgba(255,255,255,1)]">
+        あなたの人生に、<br>
+        <span class="whitespace-nowrap">迷いをほどく<span class="text-gold-accent">答え</span>を</span>
+      </h1>
+
+      <p
+        class="font-medium text-text-main bg-white/70 backdrop-blur-sm inline-block px-5 py-4 rounded-xl md:mb-10 leading-relaxed border border-white/60 w-fit shadow-sm">
+        仕事・恋愛・人間関係・人生の選択まで<br>
+        さまざまな占術を用いて、あなたの心に寄り添います。
+      </p>
+    </div>
+
+    <!-- Wave Divider (元の形を維持、色を紫・ベージュ系に変更) -->
+    <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(248, 245, 240, 0.7)" /> <!-- sand-beige -->
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(194, 163, 101, 0.4)" /> <!-- gold-accent -->
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(123, 92, 143, 0.3)" /> <!-- mystic-purple -->
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#f8f5f0" /> <!-- background -->
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TROUBLES -->
+  <section class="py-20 bg-sand-beige relative z-20 -mt-2">
+    <div class="max-w-4xl mx-auto px-5">
+      <div
+        class="bg-white rounded-3xl p-6 md:p-12 shadow-xl shadow-mystic-purple/5 border border-sand-beige-dark reveal">
+        <h2 class="text-xl md:text-2xl font-serif text-center text-mystic-purple-dark font-bold mb-8">こんなお悩みや迷いは<br
+            class="md:hidden">ありませんか？
+        </h2>
+        <ul class="space-y-4 max-w-lg mx-auto mb-10 text-text-main">
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-gold-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            自分に向いている仕事や<br class="md:hidden">転職の時期が知りたい
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-gold-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            恋愛や結婚、気になるお相手との<br class="md:hidden">相性が知りたい
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-gold-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            職場や家族など、<br class="md:hidden">複雑な人間関係で悩んでいる
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-gold-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            これから先の人生、<br class="md:hidden">どう進めばいいか<br class="md:hidden">漠然とした不安がある
+          </li>
+        </ul>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="tel:050-5795-3561"
+            class="flex-1 max-w-sm mx-auto w-full bg-mystic-purple-dark text-white py-4 rounded-full text-center font-bold text-lg shadow-lg shadow-mystic-purple/30 hover:bg-mystic-purple hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+              </path>
+            </svg>
+            お電話で予約・相談
+          </a>
+          <a href="https://uranai-miyabi.happytry.org/jump01.html" target="_blank" rel="noopener"
+            class="flex-1 max-w-sm mx-auto w-full bg-line-green text-white py-4 rounded-full text-center font-bold text-lg shadow-lg shadow-line-green/30 hover:opacity-90 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z" />
+            </svg>
+            LINEで予約・相談
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-sand-beige relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+      <div class="text-center mb-12 reveal">
+        <span class="text-gold-accent font-bold tracking-widest text-sm block mb-2">ABOUT</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-mystic-purple-dark relative inline-block font-bold">
+          あなたの「知りたい」に<br class="md:hidden">寄り添う鑑定士
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold-accent rounded-full"></div>
+        </h2>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 reveal">
+        <div class="w-full md:w-1/2 rounded-2xl overflow-hidden mystic-frame">
+          <img src="img/aboutpic.jpg" alt="鑑定の様子"
+            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="w-full md:w-1/2 space-y-6 leading-relaxed text-text-main">
+          <p>占い鑑定士 雅では、人生のさまざまなお悩みや迷いに対して、一人ひとりに合わせた鑑定を行っています。</p>
+          <p
+            class="font-serif font-bold text-mystic-purple-dark bg-white/50 p-4 rounded-lg border-l-4 border-gold-accent">
+            「自分に向いている仕事は？」<br>
+            「恋愛や結婚の相性は？」<br>
+            「これから先の人生はどう進めばいい？」
+          </p>
+          <p>そんな心の中の疑問や不安を、複数の占術を組み合わせながら丁寧に読み解いていきます。</p>
+          <p>悩みを解決するだけでなく、自分自身を知り、前向きな一歩を踏み出すためのお手伝いをいたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-20 bg-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold-accent font-bold tracking-widest text-sm block mb-2">FEATURES</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-mystic-purple-dark relative inline-block font-bold">
+          占い鑑定士 雅の4つの特徴
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold-accent rounded-full"></div>
+        </h2>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Feature 1 -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-8 bg-sand-beige/30 p-6 md:p-8 rounded-3xl shadow-sm border border-sand-beige-dark reveal">
+          <div class="w-full md:w-5/12 h-52 md:h-56 rounded-2xl overflow-hidden relative mystic-frame">
+            <img src="img/serpic01.jpg" alt="複数の占術を組み合わせた鑑定" class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur text-mystic-purple-dark rounded-full flex items-center justify-center font-serif font-bold text-xl shadow-md">
+              01</div>
+          </div>
+          <div class="w-full md:w-7/12">
+            <h3
+              class="text-xl md:text-2xl font-serif font-bold text-mystic-purple-dark mb-4 border-b border-mystic-purple/20 pb-2">
+              複数の占術を組み合わせた鑑定</h3>
+            <p class="text-text-main leading-relaxed">
+              一つの占術だけに頼らず、数秘術・四柱推命・タロット・スピリチュアル鑑定・姓名判断・手相などを組み合わせて総合的に鑑定します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center gap-8 bg-sand-beige/30 p-6 md:p-8 rounded-3xl shadow-sm border border-sand-beige-dark reveal">
+          <div class="w-full md:w-5/12 h-52 md:h-56 rounded-2xl overflow-hidden relative mystic-frame">
+            <img src="img/serpic02.jpg" alt="仕事・恋愛・人生相談まで幅広く対応" class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 md:right-auto md:left-4 w-12 h-12 bg-white/90 backdrop-blur text-mystic-purple-dark rounded-full flex items-center justify-center font-serif font-bold text-xl shadow-md">
+              02</div>
+          </div>
+          <div class="w-full md:w-7/12">
+            <h3
+              class="text-xl md:text-2xl font-serif font-bold text-mystic-purple-dark mb-4 border-b border-mystic-purple/20 pb-2">
+              仕事・恋愛・人生相談まで<br class="md:hidden">幅広く対応</h3>
+            <p class="text-text-main leading-relaxed">
+              転職や適職、恋愛や結婚、人間関係、将来への不安など、さまざまなお悩みに対応。<br>
+              人生の節目や迷いがある時にもご相談いただけます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-8 bg-sand-beige/30 p-6 md:p-8 rounded-3xl shadow-sm border border-sand-beige-dark reveal">
+          <div class="w-full md:w-5/12 h-52 md:h-56 rounded-2xl overflow-hidden relative mystic-frame">
+            <img src="img/serpic03.jpg" alt="対面・電話どちらでも相談可能" class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur text-mystic-purple-dark rounded-full flex items-center justify-center font-serif font-bold text-xl shadow-md">
+              03</div>
+          </div>
+          <div class="w-full md:w-7/12">
+            <h3
+              class="text-xl md:text-2xl font-serif font-bold text-mystic-purple-dark mb-4 border-b border-mystic-purple/20 pb-2">
+              対面・電話どちらでも相談可能</h3>
+            <p class="text-text-main leading-relaxed">
+              直接お会いしての鑑定はもちろん、電話鑑定にも対応。<br>
+              場所を問わず、ご都合に合わせてご利用いただけます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center gap-8 bg-sand-beige/30 p-6 md:p-8 rounded-3xl shadow-sm border border-sand-beige-dark reveal">
+          <div class="w-full md:w-5/12 h-52 md:h-56 rounded-2xl overflow-hidden relative mystic-frame">
+            <img src="img/serpic04.jpg" alt="前向きな一歩を後押しする鑑定" class="w-full h-full object-cover">
+            <div
+              class="absolute top-4 right-4 md:right-auto md:left-4 w-12 h-12 bg-white/90 backdrop-blur text-mystic-purple-dark rounded-full flex items-center justify-center font-serif font-bold text-xl shadow-md">
+              04</div>
+          </div>
+          <div class="w-full md:w-7/12">
+            <h3
+              class="text-xl md:text-2xl font-serif font-bold text-mystic-purple-dark mb-4 border-b border-mystic-purple/20 pb-2">
+              前向きな一歩を後押しする鑑定</h3>
+            <p class="text-text-main leading-relaxed">
+              ただ未来を占うだけではなく、ご自身の強みや可能性を見つけるためのサポートを大切にしています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE & PRICE -->
+  <section id="service" class="py-20 relative text-white" style="-webkit-clip-path: inset(0); clip-path: inset(0);">
+    <!-- iOSでの背景固定（パララックス）バグ対策 -->
+    <div class="fixed inset-0 w-full h-full bg-center bg-cover z-[-2]" style="background-image: url('img/menubg.jpg');">
+    </div>
+    <!-- 背景色のオーバーレイ（透明度調整） -->
+    <div class="absolute inset-0 bg-mystic-purple-dark/80 z-[-1]"></div>
+
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold-accent font-bold tracking-widest text-sm block mb-2">SERVICE & PRICE</span>
+        <h2 class="text-2xl md:text-3xl font-serif relative inline-block font-bold">
+          多彩な占術による総合鑑定
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold-accent rounded-full"></div>
+        </h2>
+      </div>
+
+      <div class="mb-16 text-left md:text-center max-w-3xl mx-auto reveal leading-relaxed">
+        <p class="mb-4">数秘術、四柱推命、タロット、<br class="hidden md:block">スピリチュアル鑑定、姓名判断、手相鑑定など、<br
+            class="hidden md:block">幅広い占術に対応しています。</p>
+        <p>お悩みの内容やご相談者様の状況に合わせて、最適な占術を組み合わせながら鑑定を行います。</p>
+      </div>
+
+      <!-- 料金表 -->
+      <div class="flex flex-col md:flex-row gap-8 justify-center">
+        <!-- 対面鑑定 -->
+        <div
+          class="w-full md:w-1/2 bg-white text-text-main rounded-2xl overflow-hidden reveal flex flex-col mystic-frame">
+          <div class="h-48 md:h-56 w-full overflow-hidden">
+            <img src="img/menupic01.jpg" alt="対面鑑定"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="bg-mystic-purple py-4 text-center">
+            <h3 class="text-xl font-serif font-bold text-white">対面鑑定</h3>
+          </div>
+          <div class="p-8 flex-grow">
+            <p class="text-sm text-gray-500 text-center mb-6">直接お会いしてじっくり<br class="md:hidden">ご相談いただけます。</p>
+            <ul class="space-y-4">
+              <li class="flex justify-between items-center border-b border-gray-200 pb-4">
+                <span class="font-bold text-lg">30分</span>
+                <span class="text-2xl font-bold text-mystic-purple-dark">5,000<span
+                    class="text-sm font-normal">円</span></span>
+              </li>
+              <li class="flex justify-between items-center border-b border-gray-200 pb-4">
+                <span class="font-bold text-lg">60分</span>
+                <span class="text-2xl font-bold text-mystic-purple-dark">10,000<span
+                    class="text-sm font-normal">円</span></span>
+              </li>
+              <li class="flex justify-between items-center pt-2">
+                <span class="text-gray-600">延長10分ごと</span>
+                <span class="font-bold text-gray-800">＋1,000円</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- お電話占い鑑定 -->
+        <div
+          class="w-full md:w-1/2 bg-white text-text-main rounded-2xl overflow-hidden reveal flex flex-col mystic-frame"
+          style="transition-delay: 100ms;">
+          <div class="h-48 md:h-56 w-full overflow-hidden">
+            <img src="img/menupic02.jpg" alt="お電話占い鑑定"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="bg-gold-accent py-4 text-center">
+            <h3 class="text-xl font-serif font-bold text-white">お電話占い鑑定</h3>
+          </div>
+          <div class="p-8 flex-grow">
+            <p class="text-sm text-gray-500 text-center mb-6">遠方の方、外出が難しい方にも<br class="md:hidden">おすすめです。</p>
+            <ul class="space-y-4">
+              <li class="flex justify-between items-center border-b border-gray-200 pb-4">
+                <span class="font-bold text-lg">30分</span>
+                <span class="text-2xl font-bold text-mystic-purple-dark">3,000<span
+                    class="text-sm font-normal">円</span></span>
+              </li>
+              <li class="flex justify-between items-center border-b border-gray-200 pb-4">
+                <span class="font-bold text-lg">60分</span>
+                <span class="text-2xl font-bold text-mystic-purple-dark">6,000<span
+                    class="text-sm font-normal">円</span></span>
+              </li>
+              <li class="flex justify-between items-center pt-2">
+                <span class="text-gray-600">延長10分ごと</span>
+                <span class="font-bold text-gray-800">＋1,000円</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section id="message" class="py-20 bg-sand-beige relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+
+      <!-- セクション見出し -->
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold-accent font-bold tracking-widest text-sm block mb-2">MESSAGE</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-mystic-purple-dark relative inline-block font-bold">
+          ご挨拶
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold-accent rounded-full"></div>
+        </h2>
+      </div>
+
+      <!-- オーバーラップデザインのレイアウト -->
+      <div class="relative flex flex-col items-center md:flex-row md:items-stretch reveal mt-8 md:mt-12">
+
+        <!-- テキストエリア (前面・左側に重なる) -->
+        <div
+          class="w-full md:w-7/12 bg-white p-6 md:p-12 rounded-[2rem] shadow-xl border border-sand-beige-dark z-20 relative md:-mr-16 order-2 md:order-1 mt-[-4rem] md:mt-0">
+
+          <h3 class="text-2xl md:text-3xl font-serif font-bold text-mystic-purple-dark mb-6 leading-normal text-center">
+            あなたの笑顔を<br class="md:hidden">取り戻すために
+          </h3>
+
+          <div class="space-y-6 leading-loose text-text-main font-sans text-left">
+            <p>人生には、自分だけでは答えが見つからない悩みや迷いが訪れることがあります。</p>
+            <p>そんな時こそ、一人で抱え込まずにご相談ください。</p>
+            <p>占い鑑定士 雅では、お客様一人ひとりの想いに寄り添いながら、少しでも前向きな気持ちになれるようお手伝いをしております。</p>
+            <p>あなたが自分らしく歩んでいくためのヒントや気づきをお届けできれば幸いです。</p>
+            <p class="text-xl text-mystic-purple-dark font-bold mt-10">皆様とのご縁を心よりお待ちしております。</p>
+
+            <!-- 署名 -->
+            <div class="flex items-center justify-end gap-4 pt-6">
+              <img src="img/staffpic.jpg" alt="占い鑑定士 雅"
+                class="w-16 h-16 rounded-full object-cover border-2 border-gold-accent/50 shadow-sm">
+              <span class="font-serif text-xl font-bold text-mystic-purple-dark tracking-widest">占い鑑定士 雅</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 画像エリア (背面・右側) -->
+        <div class="w-full md:w-6/12 z-10 order-1 md:order-2">
+          <div
+            class="rounded-[2rem] overflow-hidden w-full aspect-[4/3] md:aspect-auto md:h-full relative mystic-frame">
+            <img src="img/messagepic.jpg" alt="メッセージ"
+              class="absolute inset-0 w-full h-full object-cover md:object-[40%_center] hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS & INFO -->
+  <section id="access" class="py-20 bg-white border-t border-sand-beige-dark relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold-accent font-bold tracking-widest text-sm block mb-2">INFORMATION</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-mystic-purple-dark relative inline-block font-bold">
+          店舗情報・アクセス
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-gold-accent rounded-full"></div>
+        </h2>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10 reveal">
+        <!-- Info -->
+        <div class="w-full lg:w-5/12 bg-sand-beige p-6 md:p-8 rounded-2xl shadow-sm">
+          <h3 class="text-xl font-serif font-bold mb-6 text-mystic-purple-dark border-b border-mystic-purple/20 pb-4">
+            占い鑑定士 雅</h3>
+          <dl class="space-y-5 text-text-main">
+            <div>
+              <dt class="font-bold text-mystic-purple-dark mb-1 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                  </path>
+                </svg>
+                ご予約・お問い合わせ
+              </dt>
+              <dd class="pl-7"><a href="tel:050-5795-3561"
+                  class="text-xl font-bold hover:text-mystic-purple transition-colors">050-5795-3561</a></dd>
+            </div>
+
+            <div>
+              <dt class="font-bold text-mystic-purple-dark mb-1 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                出張・訪問対応エリア
+              </dt>
+              <dd class="pl-7 text-sm leading-relaxed text-gray-700">
+                茨城県古河市, 茨城県結城市, 茨城県下妻市, 茨城県常総市, 茨城県つくば市, 茨城県守谷市, 茨城県筑西市, 茨城県坂東市, 茨城県桜川市, 茨城県結城郡八千代町, 茨城県猿島郡境町
+              </dd>
+            </div>
+          </dl>
+
+          <!-- エキテンへのリンクボタン -->
+          <div class="mt-8 pt-6 border-t border-mystic-purple/10 text-center">
+            <p class="text-sm font-bold text-mystic-purple-dark mb-3">＼ 口コミも多数寄せられています ／</p>
+            <a href="https://uranai-miyabi.happytry.org/jump02.html" target="_blank" rel="noopener"
+              class="inline-block bg-[#f8b500] text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-[#e0a300] hover:-translate-y-1 transition-all">
+              エキテンで店舗情報を見る
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div
+          class="w-full lg:w-7/12 h-80 lg:h-auto rounded-2xl overflow-hidden shadow-sm border border-sand-beige-dark bg-gray-100 relative">
+          <!-- 読み込み中はグレー背景になるよう配置 -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103057.16450459206!2d139.8974438!3d36.1778347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65f01db24e2baeb7%3A0x2d5538e1a2377b3c!2z5Y2g44GE6ZGR5a6a5aOrIOmbhQ!5e0!3m2!1sja!2sjp!4v1781839743071!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA (SP Sticky) -->
+  <div class="md:hidden fixed bottom-0 left-0 w-full z-50 flex shadow-[0_-5px_15px_rgba(0,0,0,0.15)]">
+    <a href="tel:050-5795-3561"
+      class="flex-1 bg-mystic-purple-dark text-white py-4 text-center font-bold text-sm flex items-center justify-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
+      </svg>
+      電話予約
+    </a>
+    <a href="https://uranai-miyabi.happytry.org/jump01.html" target="_blank" rel="noopener"
+      class="flex-1 bg-line-green text-white py-4 text-center font-bold text-sm flex items-center justify-center gap-1 border-l border-white/20">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path
+          d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z" />
+      </svg>
+      LINE予約
+    </a>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top-btn"
+    class="fixed right-4 md:right-8 bottom-24 md:bottom-8 z-40 bg-white/90 backdrop-blur text-mystic-purple w-12 h-12 rounded-full flex items-center justify-center shadow-lg border border-mystic-purple/20 opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-mystic-purple hover:text-white group">
+    <svg class="w-6 h-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <footer class="bg-mystic-purple-dark py-8 text-center border-t border-mystic-purple pb-24 md:pb-8">
+    <p class="text-xs text-white/70">&copy; 占い鑑定士 雅 All Rights Reserved.</p>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="Js/main.js"></script>
+</body>
+
+</html>

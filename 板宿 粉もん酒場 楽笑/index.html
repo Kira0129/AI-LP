@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>板宿 粉もん酒場 楽笑 | お好み焼き・串かつ・鉄板焼き</title>
+
+  <meta name="description"
+    content="板宿駅から徒歩3分のお好み焼き居酒屋「楽笑」。お好み焼き、串かつ、鉄板焼きに加え、100種類以上の大人のドリンクバーや食べ飲み放題コースもご用意。宴会も家族ごはんもお任せください。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- OGP -->
+  <meta property="og:title" content="板宿 粉もん酒場 楽笑 | お好み焼き・串かつ・鉄板焼き">
+  <meta property="og:description"
+    content="板宿駅から徒歩3分のお好み焼き居酒屋「楽笑」。お好み焼き、串かつ、鉄板焼きに加え、100種類以上の大人のドリンクバーや食べ飲み放題コースもご用意。宴会も家族ごはんもお任せください。">
+  <meta property="og:url" content="https://rakusho-itayado.happytry.fun/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://rakusho-itayado.happytry.fun/img/ogp.jpg">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NJQQQJJ1EJ');
+  </script>
+</head>
+
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a href="#" class="hd-logo">
+      <img src="img/logo.jpg" alt="板宿 粉もん酒場 楽笑" class="hd-logo-img">
+    </a>
+
+    <nav class="hd-nav">
+      <a href="#about" class="active">ABOUT</a>
+      <a href="#features">FEATURES</a>
+      <a href="#menu">MENU</a>
+      <a href="#voice">VOICE</a>
+      <a href="#access">ACCESS</a>
+    </nav>
+
+    <div class="hd-actions">
+      <a href="tel:050-5448-7561" class="hd-btn-reserve tel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        050-5448-7561
+      </a>
+      <a href="https://rakusho-itayado.happytry.fun/jump01.html" target="_blank" class="hd-btn-reserve web">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        WEB予約
+      </a>
+    </div>
+
+    <!-- HAMBURGER: SP only -->
+    <button class="hd-hamburger" id="hdHamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="sp-menu-overlay" id="spMenuOverlay">
+    <div class="sp-menu-inner">
+      <nav class="sp-menu-nav">
+        <a href="#about" class="sp-menu-link">ABOUT</a>
+        <a href="#features" class="sp-menu-link">FEATURES</a>
+        <a href="#menu" class="sp-menu-link">MENU</a>
+        <a href="#voice" class="sp-menu-link">VOICE</a>
+        <a href="#access" class="sp-menu-link">ACCESS</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- FV -->
+  <div class="fv">
+
+
+    <div class="fv-body">
+      <div class="fv-sp-text">
+        <!-- LEFT (縦書きサブキャッチコピー) -->
+        <div class="fv-left-text">
+          <p class="fv-vertical-subcopy">
+            駅近で宴会にも<br class="pc-only">家族ごはんにも使いやすい、<br>
+            <span class="highlight">お好み焼き居酒屋</span>です。
+          </p>
+        </div>
+
+        <div class="fv-center-spacer" style="position:relative;height:100%;"></div>
+
+        <!-- RIGHT: catchcopy -->
+        <div class="fv-right-col">
+          <div class="fv-catchcopy-wrap">
+            <h1 class="fv-main-copy">
+              焼いて、飲んで、笑って。<br>
+              <span class="em">板宿のにぎやか粉もん酒場</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARDS LAYER -->
+    <div class="fv-cards-layer" id="fvCardsLayer">
+      <div class="fv-card pos-center" data-idx="0">
+        <img src="img/fv01.jpg" alt="お好み焼き">
+      </div>
+      <div class="fv-card pos-topright" data-idx="1">
+        <img src="img/fv02.jpg" alt="ドリンクバー">
+      </div>
+      <div class="fv-card pos-botleft" data-idx="2">
+        <img src="img/fv03.jpg" alt="鉄板焼き">
+      </div>
+      <div class="fv-card pos-hidden" data-idx="3">
+        <img src="img/fv04.jpg" alt="串かつ">
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="fv-dot-row">
+      <div class="fv-sdot active" data-idx="0"></div>
+      <div class="fv-sdot" data-idx="1"></div>
+      <div class="fv-sdot" data-idx="2"></div>
+      <div class="fv-sdot" data-idx="3"></div>
+    </div>
+  </div>
+
+  <!-- PC FV CTA -->
+  <div class="cta-band pc-only" style="margin-bottom: 0; padding: 40px 24px;">
+    <div class="kamon" style="margin-bottom: 16px;">
+      <div class="kamon-symbol" style="border-color:#fff; color:#fff; width:36px; height:36px; font-size:18px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+    </div>
+    <h2 class="section-title" style="color:var(--gold);">ご予約・お問い合わせ</h2>
+    <p>各種宴会からご家族でのお食事など、<br class="sp-only">お気軽にご連絡ください。</p>
+
+    <div class="cta-buttons" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="tel:050-5448-7561" class="btn-tel">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        050-5448-7561
+      </a>
+      <a href="https://rakusho-itayado.happytry.fun/jump01.html" target="_blank" class="btn-tel web"
+        style="background:var(--gold); color:var(--charcoal);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        WEB予約はこちら
+      </a>
+    </div>
+  </div>
+
+  <!-- PROBLEM SECTION -->
+  <section id="problem" class="problem-section">
+    <div class="problem-inner">
+      <div class="reveal centered">
+        <h2 class="section-title">こんな方におすすめ</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="problem-list reveal">
+        <ul>
+          <li>板宿駅近くで宴会できるお店を<br class="sp-only">探している方</li>
+          <li>お好み焼きや鉄板焼きを楽しみたい方</li>
+          <li>食べ飲み放題でお得に楽しみたい方</li>
+          <li>昼飲みや仕事帰りの一杯を<br class="sp-only">楽しみたい方</li>
+          <li>子ども連れで入りやすい居酒屋を<br class="sp-only">探している方</li>
+          <li>大人数で使える座敷や貸切のお店を<br class="sp-only">探している方</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-inner reveal">
+      <div class="about-frame">
+        <div class="about-frame-inner">
+          <div class="centered">
+            <span class="section-label">ABOUT</span>
+            <h2 class="section-title">板宿駅徒歩3分の<br class="sp-only">にぎやかな<br class="sp-only">お好み焼き居酒屋</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="about-content">
+            <div class="about-image">
+              <img src="img/aboutpic.jpg" alt="楽笑の店内風景" loading="lazy">
+            </div>
+            <div class="about-text">
+              <p class="about-lead">楽笑は、板宿駅から徒歩3分の場所<br class="sp-only">にあるお好み焼き居酒屋です。</p>
+              <p class="about-desc">
+                お好み焼きはもちろん、鉄板焼き、串かつ、もんじゃ焼き、一品料理まで幅広くご用意しています。<br><br>
+                店内にはテーブル席やお座敷を備え、少人数でのお食事から会社宴会、女子会、ご家族でのご利用まで幅広いシーンに対応しています。<br><br>
+                食べ飲み放題コースや100種類以上のドリンクを楽しめる大人のドリンクバーもあり、気軽にわいわい楽しめるお店です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features-section">
+    <div class="features-inner">
+      <div class="centered reveal">
+        <span class="section-label">FEATURES</span>
+        <h2 class="section-title">楽笑の4つの特徴</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="feature-list">
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <img src="img/featurespic01.jpg" alt="豊富なメニュー" loading="lazy">
+          </div>
+          <div class="feature-text">
+            <div class="feature-num">01</div>
+            <h3 class="feature-title">お好み焼きから串かつまで<br>豊富なメニュー</h3>
+            <p class="feature-desc">
+              昔ながらの薄焼きと、ふわっと仕上げた大阪焼きの2種類のお好み焼きをお楽しみいただけます。さらに、鉄板焼き、串かつ、もんじゃ焼き、酒肴、一品料理など、居酒屋としても満足できる豊富なメニューをご用意しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <img src="img/featurespic02.jpg" alt="大人のドリンクバー" loading="lazy">
+          </div>
+          <div class="feature-text">
+            <div class="feature-num">02</div>
+            <h3 class="feature-title">100種類以上が楽しめる<br>大人のドリンクバー</h3>
+            <p class="feature-desc">
+              生ビール、チューハイ、ハイボールなど、100種類以上のお酒を楽しめる大人のドリンクバーをご用意しています。お客様自身のお好きなタイミングや濃さで楽しめるため、待ち時間なく自由にお酒を味わえます。ソフトドリンクバーもあるため、お酒を飲まない方やお子様連れでも一緒に楽しめます。
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <img src="img/featurespic03.jpg" alt="食べ飲み放題コース" loading="lazy">
+          </div>
+          <div class="feature-text">
+            <div class="feature-num">03</div>
+            <h3 class="feature-title">宴会にぴったりな<br>食べ飲み放題コース</h3>
+            <p class="feature-desc">
+              80種類以上の料理が楽しめる食べ飲み放題コースをはじめ、ほぼ全品を楽しめるVIPコースや、ちりとり鍋コースもご用意しています。会社宴会、忘年会、懇親会、女子会、合コンなど、さまざまな集まりにおすすめです。</p>
+          </div>
+        </div>
+
+        <div class="feature-item reveal">
+          <div class="feature-img">
+            <img src="img/featurespic04.jpg" 広々空間" loading="lazy">
+          </div>
+          <div class="feature-text">
+            <div class="feature-num">04</div>
+            <h3 class="feature-title">座敷も貸切もできる<br>広々空間</h3>
+            <p class="feature-desc">
+              店内は全80席以上あり、カウンター席、仕切りのあるテーブル席、足を伸ばしてくつろげるお座敷をご用意しています。お座敷は人数に合わせてレイアウト変更も可能で、20名〜50名での貸切にも対応しています。キッズ用のイスや食器もあり、お子様連れの方も安心してご利用いただけます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION (COURSES) -->
+  <section id="menu" class="menu-section">
+    <div class="menu-inner">
+      <div class="centered reveal">
+        <span class="section-label">MENU</span>
+        <h2 class="section-title">おすすめコース</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="course-list reveal">
+        <!-- ライトコース -->
+        <div class="course-item">
+          <div class="course-img">
+            <img src="img/menupic01.jpg" alt="食べ飲み放題ライトコース" loading="lazy">
+          </div>
+          <div class="course-content">
+            <div class="course-header">
+              <h3 class="course-name">食べ飲み放題<br class="sp-only">ライトコース</h3>
+              <p class="course-price">4,190円 <span>税別</span></p>
+            </div>
+            <span class="course-time">時間：90分制</span>
+            <p class="course-desc">
+              楽笑の人気メニュー80品以上が食べ放題。<br>アルコールドリンクバー付きのお得な食べ飲み放題コースです。<br><br>
+              生ビールをはじめ、チューハイ、ハイボール、焼酎、ワイン、カクテルなどが飲み放題。気軽な飲み会や少人数でのお食事にもおすすめです。
+            </p>
+            <p class="course-note">※お席のお時間は、ドリンクバー終了後30分までとなります。</p>
+          </div>
+        </div>
+
+        <!-- ベーシックコース -->
+        <div class="course-item">
+          <div class="course-img">
+            <img src="img/menupic02.jpg" alt="食べ飲み放題ベーシックコース" loading="lazy">
+          </div>
+          <div class="course-content">
+            <div class="course-header">
+              <h3 class="course-name">食べ飲み放題<br class="sp-only">ベーシックコース</h3>
+              <p class="course-price">4,790円 <span>税別</span></p>
+            </div>
+            <span class="course-time">時間：120分制</span>
+            <p class="course-desc">
+              楽笑の人気メニュー120品以上が食べ放題。<br>しっかり食べて飲みたい方におすすめの食べ飲み放題コースです。<br><br>
+              生ビール、チューハイ、ハイボール、焼酎、ワイン、カクテルなど、豊富なドリンクをアルコールドリンクバーでお楽しみいただけます。各種宴会や女子会、友人同士の飲み会にもぴったりです。
+            </p>
+            <p class="course-note">※お席のお時間は、ドリンクバー終了後30分までとなります。</p>
+          </div>
+        </div>
+
+        <!-- VIPコース -->
+        <div class="course-item">
+          <div class="course-img">
+            <img src="img/menupic03.jpg" alt="食べ飲み放題VIPコース" loading="lazy">
+          </div>
+          <div class="course-content">
+            <div class="course-header">
+              <h3 class="course-name">食べ飲み放題<br class="sp-only">VIPコース</h3>
+              <p class="course-price">5,390円 <span>税別</span></p>
+            </div>
+            <span class="course-time">時間：120分制</span>
+            <p class="course-desc">
+              楽笑の人気メニュー全240種類以上が食べ放題。<br>お好み焼き、鉄板焼き、もんじゃ焼き、串カツ、そば焼き、モダン焼き、一品料理まで幅広く楽しめる、楽笑の最上級コースです。<br><br>
+              生ビールをはじめとしたアルコールドリンクバーも楽しめる、満足度の高い食べ飲み放題コースです。たくさん食べたい方や、特別な宴会にもおすすめです。
+            </p>
+            <p class="course-note">※お席のお時間は、ドリンクバー終了後30分までとなります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="party-info reveal">
+        <h3>宴会利用について</h3>
+        <p>お座敷は40名様以上のご利用も可能です。<br>人数やご利用シーンに合わせて、宴会・飲み会・お集まりにもご利用いただけます。</p>
+        <a href="https://rakusho-itayado.happytry.fun/jump02.html" target="_blank" class="btn-outline">その他メニューはこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE SECTION -->
+  <section id="voice" class="voice-section">
+    <div class="voice-inner">
+      <div class="centered reveal">
+        <span class="section-label">VOICE</span>
+        <h2 class="section-title">お客様の声</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="voice-list reveal">
+        <div class="voice-card">
+          <div class="voice-name">友井めぐみ 様</div>
+          <div class="voice-text">
+            最近よく利用させて頂いてます✨✨<br>
+            お店の雰囲気も良く、アットホームで入りやすいです！<br>
+            最初はお店のかたがもんじゃ焼きを焼いてくれていましたが、焼き方を教えてくれて最近では子どもがチャレンジして焼いてくれるようになりました😋<br>
+            お好み焼き、鉄板焼き、串カツ、一品までメニューも充実していました！<br>
+            アルコールドリンクバーがあり、他のお客さんが楽しそうにしてるとこをよく見ます🥹🥹<br>
+            次は女子会で食べ飲み放題もやってみたい🩷
+          </div>
+          <button class="voice-toggle" style="display:none;">もっと見る</button>
+        </div>
+
+        <div class="voice-card">
+          <div class="voice-name">kenji nakamatsu 様</div>
+          <div class="voice-text">
+            地元の関西(神戸風)のお好み焼きで1番好きです。<br>
+            お気に入りは豚モダン<br>
+            外側がややカリッとして麺はモチモチ<br>
+            お店の雰囲気や店長さんはじめ従業員の方々とても良い感じのお店です。
+          </div>
+          <button class="voice-toggle" style="display:none;">もっと見る</button>
+        </div>
+
+        <div class="voice-card">
+          <div class="voice-name">u y 様</div>
+          <div class="voice-text">
+            女子会でよく利用させていただいてます！<br>
+            食べ飲み放題のフードもドリンクメニューも豊富でドリンクは自分でいれるスタイルなんですがとてもたくさん種類があるので何飲もうかワクワクします。<br>
+            フードも沢山あるので食べすぎてしまいます！<br>
+            スタッフの方もとても気さくで接客も気持ちがいいです！<br>
+            また利用させていただきます^_^
+          </div>
+          <button class="voice-toggle" style="display:none;">もっと見る</button>
+        </div>
+      </div>
+      <div class="voice-btn-wrap" style="text-align: center; margin-top: 40px;">
+        <a href="https://rakusho-itayado.happytry.fun/jump03.html" target="_blank" class="btn-outline">その他口コミはこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE SECTION -->
+  <section id="message" class="message-section">
+    <div class="message-inner reveal">
+      <div class="message-content">
+        <div class="message-image">
+          <img src="img/messagepic.png" alt="笑顔" loading="lazy">
+        </div>
+        <div class="message-text">
+          <span class="section-label">MESSAGE</span>
+          <h2 class="section-title">みんなで笑って、<br>お腹いっぱい楽しめるお店へ</h2>
+          <div class="divider" style="margin-left: 0;"></div>
+          <p class="section-desc">
+            楽笑は、お好み焼き屋でありながら、居酒屋のように幅広い料理とドリンクを楽しめるお店です。<br><br>
+            友人との飲み会、会社の宴会、ご家族でのお食事、仕事帰りの一杯まで、どんなシーンでも気軽に使っていただける空間を大切にしています。<br><br>
+            お好み焼き、串かつ、鉄板焼き、もんじゃ焼き、ちりとり鍋。<br>
+            食べたいものを選びながら、楽しい時間をお過ごしください。<br><br>
+            板宿で宴会や食事のお店をお探しの方は、ぜひ楽笑へお越しください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div id="reserve" class="cta-band">
+    <div class="kamon" style="margin-bottom: 16px;">
+      <div class="kamon-symbol" style="border-color:#fff; color:#fff; width:36px; height:36px; font-size:18px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+    </div>
+    <h2 class="section-title" style="color:var(--gold);">ご予約・お問い合わせ</h2>
+    <p>宴会やご家族でのお食事など、<br class="sp-only">お気軽にご予約ください。</p>
+
+    <div class="cta-buttons" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="tel:050-5448-7561" class="btn-tel">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        050-5448-7561
+      </a>
+      <a href="https://rakusho-itayado.happytry.fun/jump01.html" target="_blank" class="btn-tel web"
+        style="background:var(--gold); color:var(--charcoal);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        WEB予約はこちら
+      </a>
+    </div>
+  </div>
+
+  <!-- ACCESS -->
+  <section id="access" class="access-section">
+    <div class="access-inner">
+      <div class="reveal">
+        <span class="section-label">ACCESS</span>
+        <h2 class="section-title">店舗情報</h2>
+        <div class="divider"></div>
+        <div class="access-info">
+          <div class="access-row">
+            <span class="access-label">店舗名</span>
+            <span class="access-value">板宿 粉もん酒場 楽笑</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">住所</span>
+            <span class="access-value">〒654-0024<br>兵庫県神戸市須磨区大田町２丁目２−３</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">電話</span>
+            <span class="access-value" style="font-size:20px; font-weight:bold; color:var(--dark-brown);"><a
+                href="tel:050-5448-7561" style="color:inherit; text-decoration:none;">050-5448-7561</a></span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">営業時間</span>
+            <span class="access-value">
+              [火〜金・土]<br>17:30 〜 24:00 (L.O. 23:30)<br>
+              [日]<br>17:30 〜 23:00 (L.O. 22:30)
+            </span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">定休日</span>
+            <span class="access-value">月曜日<br><small>※月曜が祝日の場合は火曜日定休</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="access-map-wrapper">
+        <div class="map-container reveal">
+          <!-- Google Maps iframe -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.8690809460954!2d135.13695990000002!3d34.6580091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000859d89683699%3A0x1eaa4cd7a0a4b5b5!2z5p2_5a6_IOeyieOCguOCk-mFkuWgtCDmpb3nrJE!5e0!3m2!1sja!2sjp!4v1783676191402!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="sns-links">
+          <a href="https://rakusho-itayado.happytry.fun/jump04.html" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <a href="https://rakusho-itayado.happytry.fun/jump05.html" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+            </svg>
+          </a>
+          <a href="https://rakusho-itayado.happytry.fun/jump06.html" target="_blank" aria-label="TikTok">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo"><img src="img/logo.jpg" alt="板宿 粉もん酒場 楽笑" class="footer-logo-img"></span>
+    <p class="footer-tagline">
+      〒654-0024 兵庫県神戸市須磨区大田町２丁目２−３<br>
+      TEL：050-5448-7561
+    </p>
+    <div class="footer-bottom">
+      <p>Copyright © 板宿 粉もん酒場 楽笑 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SP FIXED CTA (Phone & Web) -->
+  <div class="sp-fixed-cta">
+    <a href="tel:050-5448-7561" class="tel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      電話予約
+    </a>
+    <a href="https://rakusho-itayado.happytry.fun/jump01.html" target="_blank" class="web">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      WEB予約
+    </a>
+  </div>
+
+  <!-- PAGE TOP BUTTON -->
+  <button id="pageTopBtn" class="page-top-btn" aria-label="ページトップへ戻る">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

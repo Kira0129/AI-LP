@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイデザインアカラアイラッシュ | 太陽のように明るく照らすアイサロン</title>
+    <meta name="description" content="アイデザインアカラアイラッシュは、太陽のように明るく照らすアイサロンです。いつまでも綺麗でいたい願いを叶えるアイデザインをご提供いたします。">
+
+    <!-- OGP Settings -->
+    <meta property="og:title" content="アイデザインアカラアイラッシュ | 太陽のように明るく照らすアイサロン">
+    <meta property="og:description" content="アイデザインアカラアイラッシュは、太陽のように明るく照らすアイサロンです。いつまでも綺麗でいたい願いを叶えるアイデザインをご提供いたします。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akara-eyelash.happytry.org">
+    <meta property="og:image" content="https://akara-eyelash.happytry.org/img/ogp.jpg">
+    <meta property="og:site_name" content="アイデザインアカラアイラッシュ">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card Settings -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="アイデザインアカラアイラッシュ | 太陽のように明るく照らすアイサロン">
+    <meta name="twitter:description" content="アイデザインアカラアイラッシュは、太陽のように明るく照らすアイサロンです。いつまでも綺麗でいたい願いを叶えるアイデザインをご提供いたします。">
+    <meta name="twitter:image" content="https://akara-eyelash.happytry.org/img/ogp.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        theme: {
+                            gold: '#E6A13C', // 太陽をイメージした暖かみのあるゴールドに変更
+                            silver: '#E5E4E2',
+                            dark: '#2A231F', // 少し暖かみのあるダークブラウンに調整
+                            light: '#FFFFFF',
+                            btn: '#C88A2E' // ボタン用ホバーカラー
+                        }
+                    },
+                    letterSpacing: {
+                        wider: '0.05em',
+                        widest: '0.1em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="font-sans text-gray-800 tracking-wider text-sm md:text-base min-h-screen relative anti-copy"
+    oncontextmenu="return false;">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 left-0 z-50 transition-all duration-300" id="header">
+        <div class="w-full h-16 md:h-20 flex justify-between items-stretch pl-4 md:pl-8">
+
+            <!-- Logo / Shop Name -->
+            <a href="/" class="self-center flex items-center drop-shadow-md hover:opacity-80 transition shrink-0">
+                <!-- 画像ロゴがある場合はこちらを使用 -->
+                <!-- <img src="img/logo.png" alt="アイデザインアカラアイラッシュ Logo" class="h-10 w-auto object-contain"> -->
+                <span
+                    class="text-white font-serif text-sm sm:text-base md:text-lg lg:text-xl tracking-widest font-bold leading-tight whitespace-nowrap">アイデザインアカラアイラッシュ</span>
+            </a>
+
+            <!-- PC Navigation -->
+            <nav
+                class="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 text-white font-medium text-xs lg:text-sm xl:text-base tracking-widest ml-auto drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                <a href="#about" class="hover:text-theme-gold transition whitespace-nowrap">About</a>
+                <a href="#service" class="hover:text-theme-gold transition whitespace-nowrap">Service</a>
+                <a href="#menu" class="hover:text-theme-gold transition whitespace-nowrap">Menu</a>
+                <a href="#gallery" class="hover:text-theme-gold transition whitespace-nowrap">Gallery</a>
+                <a href="#message" class="hover:text-theme-gold transition whitespace-nowrap">Message</a>
+                <a href="#contact" class="hover:text-theme-gold transition whitespace-nowrap">Access</a>
+                <a href="mailto:ogura.megumi1031@icloud.com"
+                    class="bg-theme-gold text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full hover:bg-theme-btn transition ml-2 lg:ml-6 tracking-widest text-xs lg:text-sm shadow-md whitespace-nowrap">ご予約・お問い合わせ</a>
+            </nav>
+
+            <!-- SP Hamburger Button -->
+            <button id="hamburger-btn"
+                class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none z-[60] self-center mr-4">
+                <span
+                    class="block w-6 h-0.5 bg-white transition-transform duration-300 origin-center drop-shadow-md"></span>
+                <span class="block w-6 h-0.5 bg-white transition-opacity duration-300 drop-shadow-md"></span>
+                <span
+                    class="block w-6 h-0.5 bg-white transition-transform duration-300 origin-center drop-shadow-md"></span>
+            </button>
+        </div>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-TDLXB6D7WG');
+        </script>
+
+    </header>
+
+    <!-- SP Fullscreen Menu -->
+    <div id="sp-menu"
+        class="fixed inset-0 bg-white/90 backdrop-blur-lg z-[55] transform translate-x-full transition-transform duration-300 flex flex-col pt-24 px-6 md:hidden">
+        <div class="flex justify-end mb-8">
+            <button id="close-menu-btn" class="text-lg flex items-center gap-2 hover:text-theme-gold">
+                <span class="text-3xl text-gray-800">&times;</span>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-8 text-center text-xl">
+            <a href="#about" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">About</a>
+            <a href="#service" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">Service</a>
+            <a href="#menu" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">Menu</a>
+            <a href="#gallery" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">Gallery</a>
+            <a href="#message" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">Message</a>
+            <a href="#contact" class="sp-nav-link text-gray-800 hover:text-theme-gold transition">Access</a>
+
+            <a href="mailto:ogura.megumi1031@icloud.com"
+                class="bg-theme-gold text-white px-8 py-4 rounded shadow mx-auto mt-4 inline-flex flex-col items-center justify-center w-full max-w-[300px]">
+                <span class="text-sm mb-1">ご予約・お問い合わせ</span>
+                <span class="text-base font-serif">ogura.megumi1031@icloud.com</span>
+            </a>
+        </nav>
+    </div>
+
+    <main class="w-full overflow-hidden">
+
+        <!-- FV -->
+        <section
+            class="fv-section relative outline-none w-full h-screen flex flex-col items-center justify-center pt-16 md:pt-20">
+            <!-- Background Image (PC) -->
+            <div class="hidden md:block absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-black/40 mix-blend-multiply"
+                style="background-image: url('img/fvbg.png');"></div>
+            <!-- Background Image (SP) -->
+            <div class="block md:hidden absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-black/40 mix-blend-multiply"
+                style="background-image: url('img/spfvbg.png');"></div>
+
+            <div class="absolute inset-0 z-[5] bg-theme-dark/20"></div>
+
+            <!-- Carousel -->
+            <div class="swiper fv-swiper w-full relative z-10 pointer-events-none" style="height: 65%;">
+                <div class="swiper-wrapper w-full h-full">
+                    <!-- マツエクのイメージ画像（プレースホルダー） -->
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic01.jpg" alt="Eyelash Image 1"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic02.png" alt="Eyelash Image 2"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic03.jpg" alt="Eyelash Image 3"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic04.png" alt="Eyelash Image 4"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic05.jpg" alt="Eyelash Image 5"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic06.png" alt="Eyelash Image 6"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic01.jpg" alt="Eyelash Image 1"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic02.png" alt="Eyelash Image 2"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic03.jpg" alt="Eyelash Image 3"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic04.png" alt="Eyelash Image 4"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic05.jpg" alt="Eyelash Image 5"
+                            class="w-full h-full object-cover rounded-md shadow-2xl">
+                    </div>
+                    <div
+                        class="swiper-slide w-[60vw] md:w-[45vw] max-w-[550px] h-[65%] md:h-full flex items-center justify-center self-center">
+                        <img src="img/fvpic06.png" alt="Eyelash Image 6"
+                            class="w-full h-full md:h-[70%] object-contain drop-shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div
+                class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center text-white tracking-widest text-sm drop-shadow-md">
+                <span class="mb-2">scroll</span>
+                <svg class="w-6 h-6 animate-bounce text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- CTA Area -->
+        <section class="w-full relative py-12 md:py-16 overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-theme-dark/80 backdrop-blur-sm"></div>
+            <!-- Shimmer -->
+            <div class="absolute inset-0 z-[1]"
+                style="background: linear-gradient(105deg, transparent 40%, rgba(230,161,60,0.06) 45%, rgba(230,161,60,0.12) 50%, rgba(230,161,60,0.06) 55%, transparent 60%); background-size: 200% 100%; animation: shimmer 6s ease-in-out infinite;">
+            </div>
+
+            <div class="relative z-20 max-w-5xl mx-auto px-4 flex justify-center items-center">
+                <a href="mailto:ogura.megumi1031@icloud.com"
+                    class="w-full md:w-2/3 flex flex-col items-center justify-center py-6 md:py-8 bg-theme-gold/90 backdrop-blur-sm text-white hover:bg-theme-btn transition shadow-[0_4px_20px_rgba(230,161,60,0.4)] group rounded-sm border border-white/20">
+                    <span
+                        class="font-bold text-sm md:text-base tracking-widest mb-2 opacity-90 drop-shadow-sm">ご予約・お問い合わせはこちら</span>
+                    <span
+                        class="flex items-center gap-3 text-lg sm:text-xl md:text-3xl font-serif drop-shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 md:w-8 md:h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                        ogura.megumi1031@icloud.com
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about"
+            class="w-full relative overflow-hidden flex flex-col items-center py-16 md:py-24 px-3 md:px-8">
+
+            <!-- Decorative Section Title -->
+            <div class="text-center mb-16 md:mb-24 anim-fade-up w-full relative">
+                <div
+                    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light whitespace-nowrap">
+                    ABOUT
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <span
+                        class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">About
+                        the Salon</span>
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-serif tracking-[0.1em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                        <span
+                            class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        ABOUT
+                        <span
+                            class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <div
+                class="max-w-6xl w-full flex flex-col lg:flex-row gap-8 lg:gap-4 items-center relative z-10 px-3 md:px-0 mt-8 md:mt-0">
+
+                <!-- Left Column (Text) -->
+                <div class="w-full lg:w-[50%] flex flex-col relative z-30 pt-4 lg:pt-10 anim-fade-right">
+                    <div
+                        class="bg-white/80 backdrop-blur-md p-8 md:p-12 lg:p-14 w-full shadow-2xl border border-theme-gold/20 rounded-xl relative overflow-hidden">
+                        <!-- Decorative glow -->
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-theme-gold/20 rounded-full blur-2xl pointer-events-none">
+                        </div>
+
+                        <div class="mb-8 w-full">
+                            <span class="w-12 h-[2px] bg-theme-gold block mb-4"></span>
+                            <h3
+                                class="text-xl md:text-2xl font-bold mb-2 text-[#4A3B31] leading-relaxed tracking-widest">
+                                太陽のように明るく<br>照らすアイサロン
+                            </h3>
+                        </div>
+
+                        <div
+                            class="space-y-6 text-sm md:text-base font-medium tracking-wide leading-relaxed text-[#4A3B31]">
+                            <p>当店は、人すべてに無くてはならない存在を目指すアイサロンです。</p>
+                            <p>ハワイ語で太陽や笑顔を意味する「akala」を店名に掲げました。</p>
+                            <p>太陽が自ら光り輝き、周りを分け隔てなく明るく照らすように、当店も皆様を明るく照らす存在でありたいと願っております。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Images) -->
+                <div
+                    class="w-full lg:w-[50%] relative z-10 mt-12 md:mt-16 lg:mt-0 min-h-[400px] sm:min-h-[500px] flex items-center justify-center anim-fade-left">
+
+                    <div
+                        class="absolute right-[5%] top-[0%] w-[65%] md:w-[60%] z-10 shadow-2xl group overflow-hidden rounded-sm border-[3px] border-white">
+                        <img src="img/aboutpic01.jpeg" alt="About akala"
+                            class="w-full h-auto object-cover aspect-[3/4] transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+
+                    <div
+                        class="absolute left-[5%] bottom-[10%] w-[60%] md:w-[55%] z-20 shadow-[0_15px_40px_rgba(0,0,0,0.3)] group overflow-hidden rounded-sm border-[3px] border-white">
+                        <img src="img/aboutpic02.jpg" alt="Eyelash Art"
+                            class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="py-16 md:py-24 bg-theme-gold/5">
+            <div class="max-w-7xl mx-auto px-3 md:px-4">
+                <!-- Decorative Section Title -->
+                <div class="text-center mb-16 md:mb-24 anim-fade-up w-full relative">
+                    <div
+                        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light px-4 whitespace-nowrap">
+                        SERVICE
+                    </div>
+
+                    <div class="relative z-10 flex flex-col items-center">
+                        <span
+                            class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">Our
+                            Services</span>
+                        <h2
+                            class="text-3xl md:text-5xl font-serif tracking-[0.2em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                            <span
+                                class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                            SERVICE
+                            <span
+                                class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mt-16 relative z-10 px-3 md:px-0">
+
+                    <!-- Service 1 -->
+                    <div class="relative group anim-fade-up anim-delay-1 h-full mt-6 md:mt-0">
+                        <div
+                            class="bg-white flex flex-col h-full shadow-lg border border-theme-gold/10 rounded-xl overflow-hidden relative z-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="relative overflow-hidden h-[240px] shrink-0">
+                                <img src="img/serpic01.jpg" alt="ご要望に応えるアイデザイン"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            </div>
+                            <div class="p-8 flex-1 flex flex-col items-start text-left">
+                                <span
+                                    class="text-theme-gold font-serif font-bold tracking-widest text-sm mb-2 block">Point.1</span>
+                                <h3
+                                    class="text-lg lg:text-xl font-bold mb-5 text-[#4A3B31] border-b-2 border-theme-gold/50 pb-3 inline-block">
+                                    ご要望に応える<br>アイデザイン</h3>
+                                <div class="flex items-start gap-3">
+                                    <span
+                                        class="w-2.5 h-2.5 rotate-45 bg-theme-gold shrink-0 mt-1.5 block shadow-sm"></span>
+                                    <p class="text-sm md:text-base text-[#5A4B41] leading-relaxed tracking-wide">
+                                        「いつまでも綺麗でいたい」というお客様の心からのご要望にしっかりと寄り添い、その願いに応えるためのアイデザインをご提供いたします。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="relative group anim-fade-up anim-delay-2 h-full mt-6 md:mt-0">
+                        <div
+                            class="bg-white flex flex-col h-full shadow-lg border border-theme-gold/10 rounded-xl overflow-hidden relative z-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="relative overflow-hidden h-[240px] shrink-0">
+                                <img src="img/serpic02.jpg" alt="太陽のように明るく輝く笑顔へ"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            </div>
+                            <div class="p-8 flex-1 flex flex-col items-start text-left">
+                                <span
+                                    class="text-theme-gold font-serif font-bold tracking-widest text-sm mb-2 block">Point.2</span>
+                                <h3
+                                    class="text-lg lg:text-xl font-bold mb-5 text-[#4A3B31] border-b-2 border-theme-gold/50 pb-3 inline-block">
+                                    太陽のように<br>明るく輝く笑顔へ</h3>
+                                <div class="flex items-start gap-3">
+                                    <span
+                                        class="w-2.5 h-2.5 rotate-45 bg-theme-gold shrink-0 mt-1.5 block shadow-sm"></span>
+                                    <p class="text-sm md:text-base text-[#5A4B41] leading-relaxed tracking-wide">
+                                        akalaが意味する太陽と笑顔のように、ご来店いただいたお客様が自然と笑顔になり、明るく輝けるようなサービスを心掛けております。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="relative group anim-fade-up anim-delay-3 h-full mt-6 md:mt-0">
+                        <div
+                            class="bg-white flex flex-col h-full shadow-lg border border-theme-gold/10 rounded-xl overflow-hidden relative z-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="relative overflow-hidden h-[240px] shrink-0">
+                                <img src="img/serpic03.jpg" alt="長年足を運んでしまう暖かい空間"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            </div>
+                            <div class="p-8 flex-1 flex flex-col items-start text-left">
+                                <span
+                                    class="text-theme-gold font-serif font-bold tracking-widest text-sm mb-2 block">Point.3</span>
+                                <h3
+                                    class="text-lg lg:text-xl font-bold mb-5 text-[#4A3B31] border-b-2 border-theme-gold/50 pb-3 inline-block">
+                                    長年足を運んでしまう<br>暖かい空間</h3>
+                                <div class="flex items-start gap-3">
+                                    <span
+                                        class="w-2.5 h-2.5 rotate-45 bg-theme-gold shrink-0 mt-1.5 block shadow-sm"></span>
+                                    <p class="text-sm md:text-base text-[#5A4B41] leading-relaxed tracking-wide">
+                                        多くのお客様と月日を共に歩んでいけるよう、いつまでも居心地良く、長年足を運んでしまうような暖かいアイサロンの環境を整えております。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu / Guide -->
+        <section id="menu" class="relative py-16 md:py-24 px-3 md:px-8 bg-white shadow-sm">
+            <!-- Decorative Section Title -->
+            <div class="text-center mb-16 md:mb-24 anim-fade-up w-full relative">
+                <div
+                    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light px-4 whitespace-nowrap">
+                    MENU
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <span
+                        class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">Menu
+                        Guide</span>
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-serif tracking-[0.1em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                        <span
+                            class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        ご要望に応えるメニューの<br class="md:hidden">ご案内
+                        <span
+                            class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center relative z-10">
+                <!-- Text Column -->
+                <div
+                    class="w-[95%] sm:w-[90%] md:w-[50%] flex flex-col relative z-20 anim-fade-right mt-[-4rem] md:mt-0 md:-mr-12 mx-auto md:mx-0">
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 md:p-12 lg:p-14 shadow-2xl border border-gray-100 rounded-sm">
+                        <div class="space-y-6 md:space-y-8">
+                            <p class="text-sm md:text-base text-[#5A4B41] font-medium tracking-wide leading-[2.2]">
+                                いつまでも綺麗でいたい願いを叶えるための<br class="hidden md:inline">アイデザインをご用意してお待ちしております。
+                            </p>
+                            <p class="text-sm md:text-base text-[#5A4B41] font-medium tracking-wide leading-[2.2]">
+                                太陽のように明るく暖かい空間で、<br class="hidden md:inline">皆様の笑顔を引き出すお手伝いをいたします。
+                            </p>
+
+                            <div class="pt-6 flex flex-col items-center text-center">
+                                <p class="text-theme-gold font-bold tracking-widest mb-4 text-sm md:text-base">
+                                    まずはご予約・お問い合わせください。</p>
+                                <a href="mailto:ogura.megumi1031@icloud.com"
+                                    class="inline-flex items-center gap-2 bg-theme-gold text-white px-6 py-4 rounded-full shadow-lg hover:bg-theme-btn transition duration-300 transform hover:-translate-y-1 text-sm md:text-base">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                    </svg>
+                                    <span class="font-serif tracking-wider">ogura.megumi1031@icloud.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="w-full md:w-[60%] relative z-10 anim-fade-left">
+                    <div class="relative overflow-hidden group shadow-xl rounded-sm">
+                        <!-- 装飾用の枠 -->
+                        <div class="absolute inset-4 border border-white/40 z-20 pointer-events-none opacity-80"></div>
+                        <img src="img/menupic.jpg" alt="Menu Design"
+                            class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-[1.5s] ease-out group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-16 md:py-24 px-4 max-w-6xl mx-auto">
+            <!-- Decorative Section Title -->
+            <div class="text-center mb-16 md:mb-24 anim-fade-up w-full relative">
+                <div
+                    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light px-4 whitespace-nowrap">
+                    GALLERY
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <span
+                        class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">Our
+                        Works</span>
+                    <h2
+                        class="text-3xl md:text-5xl font-serif tracking-[0.2em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                        <span
+                            class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        GALLERY
+                        <span
+                            class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Grid Layout (PC: 3 columns, SP: 2 columns) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 relative z-10">
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic01.jpg" alt="Gallery 1"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic02.jpg" alt="Gallery 2"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic03.jpg" alt="Gallery 3"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic04.jpg" alt="Gallery 4"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic05.jpg" alt="Gallery 5"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-white">
+                    <img src="img/gallerypic06.jpg" alt="Gallery 6"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 hover:scale-105 transition-all duration-500 js-modal-trigger">
+                </div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="relative py-16 md:py-24 bg-theme-gold/5">
+            <div class="max-w-7xl mx-auto px-3 md:px-4 lg:px-8">
+                <!-- Decorative Section Title -->
+                <div class="text-center mb-16 md:mb-24 anim-fade-up w-full relative">
+                    <div
+                        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light px-4 whitespace-nowrap">
+                        MESSAGE
+                    </div>
+
+                    <div class="relative z-10 flex flex-col items-center">
+                        <span
+                            class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">Designer
+                            Message</span>
+                        <h2
+                            class="text-3xl md:text-5xl font-serif tracking-[0.2em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                            <span
+                                class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                            MESSAGE
+                            <span
+                                class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center relative z-10 w-full mb-10">
+
+                    <!-- Image Column -->
+                    <div class="w-[90%] md:w-[45%] lg:w-[45%] relative z-10 anim-fade-right mx-auto md:mx-0 order-1">
+                        <div
+                            class="absolute -top-4 -left-4 w-full h-full border-2 border-theme-gold/40 z-[-1] hidden md:block">
+                        </div>
+
+                        <div class="relative overflow-hidden group shadow-xl rounded-sm">
+                            <img src="img/messagepic.jpg" alt="Eye Designer MEGUMI"
+                                class="w-full h-auto object-cover aspect-[15/16] transition-transform duration-[1.5s] ease-out group-hover:scale-105">
+                        </div>
+                    </div>
+
+                    <!-- Text Column -->
+                    <div
+                        class="w-[95%] sm:w-[90%] md:w-[60%] lg:w-[55%] flex flex-col anim-fade-left anim-delay-2 relative z-20 md:-ml-10 lg:-ml-16 mt-[-3rem] md:mt-12 mx-auto order-2">
+
+                        <div
+                            class="bg-white/95 backdrop-blur-md border border-gray-100 p-8 md:p-12 lg:p-14 shadow-2xl rounded-sm relative">
+
+                            <div class="relative z-10">
+                                <div class="mb-8 w-full">
+                                    <span class="w-12 h-[2px] bg-theme-gold block mb-4"></span>
+                                    <h3
+                                        class="text-xl md:text-2xl font-bold mb-2 text-[#4A3B31] leading-relaxed tracking-widest">
+                                        綺麗でいたい<br class="md:hidden">ご要望に応えるために
+                                    </h3>
+                                </div>
+
+                                <div class="space-y-6 text-sm md:text-base text-[#5A4B41]">
+                                    <p class="leading-[2.2] tracking-wide">
+                                        本日は数あるサロンの中から当店ページをご覧いただきありがとうございます。
+                                    </p>
+                                    <p class="leading-[2.2] tracking-wide">
+                                        太陽のように明るく「いつまでも綺麗でいたい」という皆様のご要望にお応えしたいという想いから当サロンは誕生いたしました。
+                                    </p>
+                                    <p class="leading-[2.2] tracking-wide">
+                                        多くのお客様と月日を共にできる暖かいサロンを目指してまいります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Access -->
+        <section id="contact" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+            <!-- Decorative Section Title -->
+            <div class="text-center mb-16 md:mb-20 anim-fade-up w-full relative">
+                <div
+                    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-7xl md:text-[9rem] font-serif text-theme-gold/10 select-none pointer-events-none tracking-widest z-0 drop-shadow-sm w-full font-light px-4 whitespace-nowrap">
+                    ACCESS
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <span
+                        class="text-theme-gold text-sm md:text-base tracking-[0.3em] font-serif uppercase inline-block mb-4 font-bold bg-theme-dark/80 text-white backdrop-blur-md px-5 py-1.5 rounded-full border border-theme-gold/30 shadow-md">Salon
+                        Info</span>
+                    <h2
+                        class="text-3xl md:text-5xl font-serif tracking-[0.2em] text-[#5A4B41] relative inline-block px-12 md:px-16 py-2 drop-shadow-sm">
+                        <span
+                            class="absolute left-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                        ACCESS
+                        <span
+                            class="absolute right-0 top-1/2 w-8 md:w-12 h-px bg-theme-gold transform -translate-y-1/2"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Shop Info & Map (2カラムレイアウト) -->
+            <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-stretch anim-fade-up">
+
+                <!-- Shop Info Card -->
+                <div
+                    class="w-full md:w-1/2 bg-white border border-gray-200 p-8 lg:p-10 rounded-xl shadow-xl relative overflow-hidden flex flex-col justify-center">
+
+                    <div class="absolute top-0 left-0 w-full h-2 bg-theme-gold"></div>
+
+                    <h3
+                        class="text-xl md:text-2xl font-serif font-bold text-center text-[#4A3B31] mb-8 tracking-widest">
+                        アイデザイン<br class="md:hidden">アカラアイラッシュ
+                    </h3>
+
+                    <table class="w-full text-left text-sm md:text-base border-none mx-auto">
+                        <tbody class="space-y-6 block">
+                            <tr
+                                class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 border-b border-gray-100 pb-4">
+                                <th class="font-bold text-theme-gold tracking-widest whitespace-nowrap w-24">
+                                    住所
+                                </th>
+                                <td class="text-[#5A4B41] leading-relaxed">
+                                    〒961-8052<br>
+                                    福島県西白河郡西郷村道南東10<br>
+                                    <span class="text-xs text-gray-500 mt-2 block">※ご予約完了後に詳細をお送りいたします。</span>
+                                </td>
+                            </tr>
+                            <tr
+                                class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 border-b border-gray-100 pb-4">
+                                <th class="font-bold text-theme-gold tracking-widest whitespace-nowrap w-24">
+                                    営業時間
+                                </th>
+                                <td class="text-[#5A4B41] leading-relaxed">
+                                    9:00〜17:00
+                                </td>
+                            </tr>
+                            <tr class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 pb-2">
+                                <th class="font-bold text-theme-gold tracking-widest whitespace-nowrap w-24">
+                                    定休日
+                                </th>
+                                <td class="text-[#5A4B41]">
+                                    土曜日・日曜日
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mt-10 text-center">
+                        <a href="mailto:ogura.megumi1031@icloud.com"
+                            class="inline-flex items-center gap-2 text-theme-gold hover:text-theme-btn transition font-bold tracking-widest border-b border-theme-gold pb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            ご予約・お問い合わせはこちら
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div
+                    class="w-full md:w-1/2 bg-[#B3B3B3] rounded-xl shadow-xl overflow-hidden relative min-h-[300px] md:min-h-[400px] flex items-center justify-center border border-gray-200">
+                    <div class="absolute inset-0 flex items-center justify-center z-0">
+                        <span class="text-[#5A4B41] font-bold text-2xl md:text-3xl tracking-widest">MAP準備中</span>
+                    </div>
+                    <!-- 地図画像を配置する場合は以下のsrc="ここ"を変更してください。画像が未設定の場合は背景の「MAP準備中」が表示されます。 -->
+                    <img src="" alt="MAP" class="absolute inset-0 w-full h-full object-cover z-10"
+                        onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-theme-dark text-theme-gold/60 py-8 text-center text-xs md:text-sm mb-16 md:mb-0 border-t border-theme-gold/20">
+        <p class="tracking-widest">&copy; 2026 akala All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fixed Bottom CTA (SP Only) -->
+    <div id="sp-bottom-cta"
+        class="fixed bottom-0 left-0 w-full z-40 flex shadow-[0_-2px_10px_rgba(0,0,0,0.1)] md:hidden transform translate-y-full transition-transform duration-300">
+        <a href="mailto:ogura.megumi1031@icloud.com"
+            class="flex-1 bg-theme-gold text-white font-bold text-center py-4 text-sm flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            メールで予約・お問い合わせ
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top"
+        class="fixed bottom-24 md:bottom-10 right-4 md:right-10 w-12 h-12 bg-gray-800 text-white flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50 hover:bg-theme-gold shadow-lg rounded-full"
+        aria-label="Top">
+        <span class="border-t-2 border-l-2 border-white w-3 h-3 transform rotate-45 mt-2"></span>
+    </button>
+
+    <!-- Modal for Gallery (Slider Popup) -->
+    <div id="gallery-modal"
+        class="fixed inset-0 bg-black/95 z-[70] hidden flex-col items-center justify-center select-none">
+        <button id="modal-close"
+            class="absolute top-6 right-6 text-white text-5xl hover:text-theme-gold transition z-[80] leading-none">&times;</button>
+
+        <div class="swiper modal-swiper w-full h-full flex items-center justify-center">
+            <div class="swiper-wrapper" id="modal-swiper-wrapper">
+                <!-- JS Populated -->
+            </div>
+        </div>
+
+        <button
+            class="modal-prev-btn fixed left-4 md:left-10 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 md:w-16 md:h-16 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center transition-all duration-300 cursor-pointer border border-white/20 hover:border-theme-gold"
+            style="font-size:0;"><span
+                style="font-size:2.5rem;line-height:1;display:block;margin-top:-2px;">&#8249;</span></button>
+        <button
+            class="modal-next-btn fixed right-4 md:right-10 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 md:w-16 md:h-16 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center transition-all duration-300 cursor-pointer border border-white/20 hover:border-theme-gold"
+            style="font-size:0;"><span
+                style="font-size:2.5rem;line-height:1;display:block;margin-top:-2px;">&#8250;</span></button>
+
+        <div class="swiper-pagination modal-pagination !bottom-10 !text-white !z-[200]"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="Js/main.js"></script>
+</body>
+
+</html>

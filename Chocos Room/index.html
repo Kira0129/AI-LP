@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Choco's Room｜リラクゼーションサロン</title>
+  <meta name="description" content="オイルマッサージ・よもぎ蒸し・ハーブ蒸しで、忙しい毎日にやさしい癒しをお届けします。">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Choco's Room｜リラクゼーションサロン">
+  <meta property="og:description" content="オイルマッサージ・よもぎ蒸し・ハーブ蒸しで、忙しい毎日にやさしい癒しをお届けします。">
+  <meta property="og:site_name" content="Choco's Room">
+  <meta property="og:url" content="https://chocos-room.happytry.fun/">
+  <meta property="og:image" content="https://chocos-room.happytry.fun/img/ogp.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NJQQQJJ1EJ');
+  </script>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="#" aria-label="Choco's Room トップへ戻る">
+          <h1><span class="header-logo-text">Choco's Room</span></h1>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="#about">About</a>
+        <a href="#service">Service</a>
+        <a href="#feature">Feature</a>
+        <a href="#price">Price</a>
+        <a href="#message">Message</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:05054487252" class="btn-tel">
+          <i class="fa-solid fa-phone"></i> 050-5448-7252
+        </a>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- OVERLAY MENU -->
+  <div id="nav-overlay" role="dialog">
+    <button class="overlay-close" id="overlay-close-btn">閉じる</button>
+    <nav class="overlay-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="#message">Message</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="overlay-sns">
+        <a href="tel:05054487252" class="btn-tel">
+          <i class="fa-solid fa-phone"></i> 電話でお問い合わせ
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- FIRST VIEW -->
+    <section id="fv">
+      <!-- Background Slider -->
+      <div class="fv-bg-slider">
+        <div class="fv-slide slide-1">
+          <img src="img/fv01.jpg" alt="リラクゼーションイメージ1">
+        </div>
+        <div class="fv-slide slide-2">
+          <img src="img/fv02.jpg" alt="リラクゼーションイメージ2">
+        </div>
+        <div class="fv-slide slide-3">
+          <img src="img/fv03.jpg" alt="リラクゼーションイメージ3">
+        </div>
+        <div class="fv-overlay-pc"></div>
+        <div class="fv-overlay-sp"></div>
+      </div>
+
+      <div class="fv-content">
+        <div class="fv-text-box reveal">
+          <span class="fv-catch-en">Relaxation Salon</span>
+          <h2 class="fv-main-catch">
+            <span class="fv-catch-small">香りと温もりに包まれる、</span>
+            <span class="fv-catch-em">心ほどける</span><br>
+            リラクゼーション時間
+          </h2>
+          <p class="fv-main-catch-sub">
+            オイルマッサージ・よもぎ蒸し・ハーブ蒸しで、<br>
+            忙しい毎日にやさしい癒しをお届けします。
+          </p>
+        </div>
+      </div>
+
+      <!-- Wave Divider -->
+      <div class="fv-wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(230, 240, 227, 0.7)" /> <!-- 薄緑 -->
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(224, 242, 247, 0.6)" /> <!-- 水色 -->
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(251, 250, 246, 0.5)" /> <!-- ベージュ -->
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" /> <!-- 次セクション背景色 -->
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- FOR YOU (TROUBLE) -->
+    <section id="trouble" class="bg-watercolor-blue">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Trouble">
+          <h2 class="section-heading-en">TROUBLE</h2>
+          <span class="section-heading-ja">こんなお悩みありませんか</span>
+        </div>
+        <div class="trouble-grid reveal">
+          <div class="trouble-image blob-shape">
+            <img src="img/worrypic.jpg" alt="悩みを抱える様子">
+          </div>
+          <div class="trouble-text">
+            <h3 class="trouble-catch">毎日頑張るあなたへ</h3>
+            <ul class="trouble-list">
+              <li>毎日の疲れをゆっくり癒したい</li>
+              <li>肩や背中の重だるさが気になる</li>
+              <li>身体の冷えが気になる</li>
+              <li>よもぎ蒸しやハーブ蒸しを試してみたい</li>
+              <li>香りに包まれてリラックスしたい</li>
+              <li>自宅で美容やケアを受けたい</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-parallax-bg">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="About">
+          <h2 class="section-heading-en">ABOUT</h2>
+          <span class="section-heading-ja">サロンについて</span>
+        </div>
+        <div class="about-grid three-col">
+          <div class="about-img-1 blob-top-left reveal">
+            <img src="img/aboutpic01.jpg" alt="アロマと癒しの空間">
+          </div>
+          <div class="about-text reveal delay-100">
+            <h3 class="about-ja-title">心と身体をゆるめる<br>リラクゼーションサロン</h3>
+            <div class="about-body">
+              <p>当サロンでは、オイルマッサージを中心に、よもぎ蒸しやローズラベンダーを使用したハーブ蒸しをご提供しています。</p>
+              <p>日々の疲れを感じている方、身体の冷えや重だるさが気になる方、自分自身をゆっくりいたわる時間がほしい方に向けて、心地よく過ごせる癒しの空間を大切にしています。</p>
+              <p>また、サロンでの施術だけでなく、訪問美容にも対応しています。<br>外出が難しい方や、ご自宅でリラックスしながらケアを受けたい方もお気軽にご相談ください。</p>
+            </div>
+          </div>
+          <div class="about-img-2 blob-bottom-right reveal delay-200">
+            <img src="img/aboutpic02.jpg" alt="リラックスした時間">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service" class="bg-watercolor-blue">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Service">
+          <h2 class="section-heading-en">SERVICE</h2>
+          <span class="section-heading-ja">サービス内容</span>
+        </div>
+        <div class="service-wrapper">
+          <!-- Menu 1 -->
+          <div class="service-item reveal">
+            <div class="service-item-icon">
+              <img src="img/serpic01.svg" alt="オイルマッサージ" style="width: 50px; height: auto;">
+            </div>
+            <div class="service-item-text">
+              <h3 class="service-item-title">オイルマッサージ</h3>
+              <p class="service-item-desc">オイルを使用し、身体をやさしくほぐしていくリラクゼーションメニューです。疲れがたまりやすい首・肩・背中・脚など、お身体の状態に合わせて丁寧にケアします。
+              </p>
+            </div>
+          </div>
+          <!-- Menu 2 -->
+          <div class="service-item reveal delay-100">
+            <div class="service-item-icon">
+              <img src="img/serpic02.svg" alt="よもぎ蒸し" style="width: 50px; height: auto;">
+            </div>
+            <div class="service-item-text">
+              <h3 class="service-item-title">よもぎ蒸し</h3>
+              <p class="service-item-desc">
+                よもぎの蒸気に包まれながら、身体をじんわり温めるメニューです。冷えが気になる方、リラックスしたい方、身体を内側から温める時間を取り入れたい方におすすめです。</p>
+            </div>
+          </div>
+          <!-- Menu 3 -->
+          <div class="service-item reveal delay-200">
+            <div class="service-item-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="service-item-text">
+              <h3 class="service-item-title">ローズラベンダーハーブ蒸し</h3>
+              <p class="service-item-desc">ローズラベンダーを使用した、香りも楽しめるハーブ蒸しです。やさしい香りに包まれながら、心までゆるむような癒しの時間をお過ごしいただけます。</p>
+            </div>
+          </div>
+          <!-- Menu 4 -->
+          <div class="service-item reveal">
+            <div class="service-item-icon">
+              <i class="fa-solid fa-house-chimney-medical"></i>
+            </div>
+            <div class="service-item-text">
+              <h3 class="service-item-title">訪問美容</h3>
+              <p class="service-item-desc">ご自宅や施設などへ訪問し、美容やリラクゼーションのケアを行います。外出が難しい方や、慣れた場所で施術を受けたい方にも安心してご利用いただけます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section id="feature" class="bg-parallax-bg">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Feature">
+          <h2 class="section-heading-en">FEATURE</h2>
+          <span class="section-heading-ja">サロンの特徴</span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-card-image">
+              <img src="img/featurepic01.jpg" alt="オイルマッサージ">
+            </div>
+            <div class="feature-card-num">01</div>
+            <h3 class="feature-card-title">オイルマッサージで<br>深いリラックス時間</h3>
+            <p class="feature-card-body">手の温もりとオイルの心地よさで、日々の疲れをやさしくほぐします。<br>お身体の状態やお悩みに合わせて、無理のない施術を心がけています。</p>
+          </article>
+          <article class="feature-card reveal delay-100">
+            <div class="feature-card-image">
+              <img src="img/featurepic02.jpg" alt="よもぎ蒸し・ハーブ蒸し">
+            </div>
+            <div class="feature-card-num">02</div>
+            <h3 class="feature-card-title">よもぎ蒸し・ハーブ蒸しで<br>温活ケア</h3>
+            <p class="feature-card-body">
+              よもぎ蒸しやローズラベンダーのハーブ蒸しを通して、身体をじんわり温める時間をご提供します。<br>香りと温もりに包まれながら、リラックスしたい方におすすめです。
+            </p>
+          </article>
+          <article class="feature-card reveal delay-200">
+            <div class="feature-card-image">
+              <img src="img/featurepic03.jpg" alt="訪問美容">
+            </div>
+            <div class="feature-card-num">03</div>
+            <h3 class="feature-card-title">ご自宅でも安心の<br>訪問美容にも対応</h3>
+            <p class="feature-card-body">
+              サロンに通うことが難しい方にも、美容や癒しの時間を届けられるよう訪問美容に対応しています。<br>ご自宅でゆっくりケアを受けたい方も、まずはお気軽にご相談ください。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section id="price" class="bg-watercolor-blue">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Price">
+          <h2 class="section-heading-en">PRICE</h2>
+          <span class="section-heading-ja">料金のご案内</span>
+        </div>
+        <div class="price-layout reveal">
+          <div class="price-slider-area">
+            <div class="price-slide slide-1">
+              <img src="img/menupic01.jpg" alt="料金イメージ1">
+            </div>
+            <div class="price-slide slide-2">
+              <img src="img/menupic02.jpg" alt="料金イメージ2">
+            </div>
+            <div class="price-slide slide-3">
+              <img src="img/menupic03.jpg" alt="料金イメージ3">
+            </div>
+            <!-- スライダーの現在位置を示すドット -->
+            <div class="price-slider-dots">
+              <span class="price-dot dot-1"></span>
+              <span class="price-dot dot-2"></span>
+              <span class="price-dot dot-3"></span>
+            </div>
+          </div>
+          <div class="price-text-area">
+            <h3 class="price-title">メニューや内容に合わせて<br>ご案内いたします</h3>
+            <div class="price-text">
+              <p>施術内容やご希望のメニューによって料金は異なります。</p>
+              <p style="margin-top: 16px;">オイルマッサージ、よもぎ蒸し、ハーブ蒸し、訪問美容など、気になるメニューがございましたらお気軽にお問い合わせください。</p>
+              <p style="margin-top: 16px;">お身体の状態やご希望を伺いながら、今のあなたに合ったメニューをご案内いたします。</p>
+            </div>
+            <div style="margin-top: 32px; text-align: center;">
+              <a href="tel:05054487252" class="btn-tel">
+                <i class="fa-solid fa-phone"></i> お電話で相談する
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section id="message" class="bg-parallax-bg">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Message">
+          <h2 class="section-heading-en">MESSAGE</h2>
+          <span class="section-heading-ja">想い</span>
+        </div>
+        <div class="about-grid reverse-layout">
+          <div class="about-text reveal">
+            <h3 class="about-ja-title">自分をいたわる時間を、<br>もっと身近に</h3>
+            <div class="about-body">
+              <p>忙しい毎日の中で、自分の身体や心を後回しにしてしまうことはありませんか。</p>
+              <p>当サロンでは、オイルマッサージの心地よさ、よもぎ蒸しやハーブ蒸しの温もり、香りに包まれる癒しの時間を大切にしています。</p>
+              <p>サロンでゆっくり過ごしたい方も、ご自宅でケアを受けたい方も、無理なく自分を整える時間をお届けします。</p>
+              <p>日々の疲れを感じた時は、ぜひお気軽にご相談ください。</p>
+            </div>
+          </div>
+          <div class="about-image blob-shape reveal delay-200">
+            <img src="img/messagepic.jpg" alt="リラックスした時間">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <div class="cta-band">
+      <div class="reveal">
+        <h2 class="cta-title"><span>ご予約</span>・ご相談<br class="sp-br">お待ちしております</h2>
+        <p class="cta-sub">ご予約・お問い合わせはお電話にて承ります。<br class="sp-br">お気軽にご連絡ください。</p>
+        <a href="tel:05054487252" class="cta-tel"><i class="fa-solid fa-phone" style="font-size: 0.8em;"></i>
+          050-5448-7252</a><br>
+        <span class="cta-note">お気軽にお電話ください</span>
+      </div>
+    </div>
+
+    <!-- CONTACT / ACCESS -->
+    <section id="contact" class="bg-watercolor-green">
+      <div class="section-inner">
+        <div class="section-heading reveal" data-en="Contact">
+          <h2 class="section-heading-en">ACCESS</h2>
+          <span class="section-heading-ja">アクセス・お問い合わせ</span>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-store-name">Choco's Room</p>
+            <table class="contact-table">
+              <tbody>
+                <tr>
+                  <th>店舗名</th>
+                  <td>Choco's Room</td>
+                </tr>
+                <tr>
+                  <th>住所</th>
+                  <td>〒822-0032<br>福岡県直方市下新入323-1<br>ビレッジハウス直方2-102</td>
+                </tr>
+                <tr>
+                  <th>電話番号</th>
+                  <td><a href="tel:05054487252"
+                      style="color: var(--color-blue-dark); font-weight: 500; text-decoration: none;">050-5448-7252</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>営業時間</th>
+                  <td>詳しくはお問い合わせください</td>
+                </tr>
+                <tr>
+                  <th>定休日</th>
+                  <td>詳しくはお問い合わせください</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="contact-map reveal delay-100">
+            <!-- アクセスマップ画像 -->
+            <img src="img/mapic.png" alt="アクセスマップ" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <p class="footer-logo">Choco's Room</p>
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#service">Service</a>
+      <a href="#feature">Feature</a>
+      <a href="#price">Price</a>
+      <a href="#message">Message</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-copy">
+      <small>&copy; 2026 Choco's Room. All Rights Reserved.</small>
+    </p>
+  </footer>
+
+  <!-- SP STICKY CTA (電話のみ) -->
+  <div id="sp-sticky-cta">
+    <a href="tel:05054487252">
+      <i class="fa-solid fa-phone"></i> お電話でご予約・ご相談
+    </a>
+  </div>
+
+  <button id="scroll-top" aria-label="ページトップへ戻る">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JS -->
+  <script src="Js/script.js"></script>
+</body>
+
+</html>

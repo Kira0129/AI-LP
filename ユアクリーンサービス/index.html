@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ユアクリーンサービス | 暮らしをより良く快適にするハウスクリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=Quicksand:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- OGP -->
+  <meta property="og:site_name" content="ユアクリーンサービス" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ユアクリーンサービス | 邑楽町のハウスクリーニング" />
+  <meta property="og:description" content="邑楽町を中心に、エアコン・水回り・入居前清掃まで対応。頑固な汚れもプロの技術で丁寧にクリーニングします。" />
+  <meta property="og:image" content="https://your-clean.happytry.org/img/ogp.jpg" />
+  <meta property="og:url" content="https://your-clean.happytry.org/" />
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TDLXB6D7WG');
+  </script>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+  <header class="site-header">
+    <a href="#" class="header-logo">
+      <img src="img/logo.jpg" alt="ユアクリーンサービス" style="max-height: 50px; width: auto;">
+    </a>
+
+    <nav class="header-nav">
+      <a href="#about">当社について</a>
+      <a href="#service">サービス・料金</a>
+      <a href="#works">施工事例</a>
+      <a href="#area">対応エリア</a>
+      <a href="#flow">ご依頼の流れ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://your-clean.happytry.org/jump01.html" target="_blank" class="btn-header-cta font-rounded">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        お問い合わせ
+      </a>
+      <a href="https://your-clean.happytry.org/jump02.html" target="_blank" class="btn-header-reserve font-rounded">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        WEB予約 </a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger-btn sp-only" id="hamburgerBtn" aria-label="メニューを開く">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="sp-nav" id="spNav">
+      <ul class="sp-nav-list">
+        <li><a href="#about">当社について</a></li>
+        <li><a href="#service">サービス・料金</a></li>
+        <li><a href="#works">施工事例</a></li>
+        <li><a href="#area">対応エリア</a></li>
+        <li><a href="#flow">ご依頼の流れ</a></li>
+      </ul>
+      <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 10px;">
+        <a href="tel:05054487447"
+          style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: var(--primary); color: white; border-radius: 30px; text-decoration: none; font-weight: 700;">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          050-5448-7447
+        </a>
+        <a href="https://your-clean.happytry.org/jump01.html" target="_blank"
+          style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: var(--accent); color: white; border-radius: 30px; text-decoration: none; font-weight: 700;">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          お問い合わせ
+        </a>
+        <a href="https://your-clean.happytry.org/jump02.html" target="_blank"
+          style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: var(--secondary); color: white; border-radius: 30px; text-decoration: none; font-weight: 700;">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          WEB予約 </a>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-visual">
+      <!-- スライド3枚のFV画像 -->
+      <img src="img/fv01.jpg" alt="クリーンなリビング空間" class="fv-slide">
+      <img src="img/fv02.jpg" alt="清掃されたキッチン" class="fv-slide">
+      <img src="img/fv03.jpg" alt="ピカピカのバスルーム" class="fv-slide">
+    </div>
+    <div class="hero-content reveal">
+      <span class="hero-badge font-rounded">エアコン・水回り・入居前清掃</span>
+      <h1 class="hero-title font-rounded">プロの清掃で、<br>暮らしにもっと<br class="sp-only"><span class="highlight">清潔と快適</span>を
+      </h1>
+      <p class="hero-subtitle font-rounded">邑楽町を中心に、頑固な汚れを<br class="sp-only">プロの技術で丁寧にクリーニングします。</p>
+
+      <div class="hero-points">
+        <div class="hero-point">
+          <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          高品質・<br class="sp-only">低価格
+        </div>
+        <div class="hero-point">
+          <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          出張費なしで<br class="sp-only">対応
+        </div>
+        <div class="hero-point">
+          <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          年中無休<br class="sp-only">(8時〜20時)
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(250,250,250,0.7)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(250,250,250,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(225, 245, 254, 0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--secondary-light)" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="troubles">
+    <div class="inner">
+      <div class="trouble-box reveal">
+        <h2 class="trouble-title font-rounded">こんなお悩みありませんか？</h2>
+        <ul class="trouble-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>エアコンのニオイ・汚れが気になる</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>お風呂の水垢・カビが落ちない</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>換気扇・キッチンの油汚れに困っている</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>トイレをきれいにしたい</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>入居前・引っ越し前後の清掃を頼みたい</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>忙しくて掃除する時間がない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner reveal">
+    <span class="cta-banner-label font-rounded">お見積り無料・年中無休</span>
+    <h2 class="font-rounded">お家の汚れでお困りの際、<br class="sp-only">お気軽にご相談ください！</h2>
+
+    <div class="cta-btn-wrap">
+      <a href="tel:05054487447" class="btn-cta btn-tel">
+        <span class="btn-cta-main font-en">
+          <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          050-5448-7447
+        </span>
+        <span class="btn-cta-note font-rounded">営業時間 8:00〜20:00 (年中無休)</span>
+      </a>
+      <a href="https://your-clean.happytry.org/jump01.html" target="_blank" class="btn-cta btn-mail">
+        <span class="btn-cta-main font-rounded">
+          <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          お問い合わせ
+        </span>
+        <span class="btn-cta-note font-rounded">WEBから24時間受付中</span>
+      </a>
+      <a href="https://your-clean.happytry.org/jump02.html" target="_blank" class="btn-cta btn-reserve">
+        <span class="btn-cta-main font-rounded">
+          <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          予約フォーム
+        </span>
+        <span class="btn-cta-note font-rounded">空き状況の確認・ご予約</span>
+      </a>
+    </div>
+  </div>
+
+  <section id="about" class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">ABOUT</span>
+        <h2 class="sec-title font-rounded">暮らしをより良く快適にする<br class="sp-only">ハウスクリーニング</h2>
+      </div>
+
+      <div class="about-wrap reveal">
+        <div class="about-img">
+          <img src="img/aboutpic.jpg" alt="清掃のプロと快適な暮らし">
+        </div>
+        <div class="about-content">
+          <h3 class="about-lead font-rounded">邑楽町を拠点とした<br class="sp-only">ハウスクリーニング専門店です</h3>
+          <p class="about-text">
+            ユアクリーンサービスは、群馬県邑楽郡邑楽町を拠点に、ハウスクリーニングを行う専門店です。<br><br>
+            エアコン・換気扇・お風呂・キッチンなど、ご家庭では落としにくい頑固な汚れに対応。<br>
+            邑楽町を中心に、群馬県・栃木県・埼玉県の一部エリアまで出張対応しております。<br>
+            プロの技術で、皆様の清掃で快適な空間づくりをサポートいたします。 </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section features-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">FEATURES</span>
+        <h2 class="sec-title font-rounded">ユアクリーンサービスの特徴</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-img-wrap">
+            <img src="img/featurepic01.jpg" alt="高品質・低価格のハウスクリーニング">
+            <div class="feature-num">1</div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title font-rounded">高品質・低価格の<br>ハウスクリーニング</h3>
+            <p class="feature-desc">専用の道具と技術で、普段のお掃除では落としにくい汚れを丁寧に清掃。「高品質低価格」でお客様に選ばれるサービスを提供しております。</p>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-img-wrap">
+            <img src="img/featurepic02.jpg" alt="出張費なしで相談ください">
+            <div class="feature-num">2</div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title font-rounded">出張費なしで<br>相談ください</h3>
+            <p class="feature-desc">対応エリア内であれば出張費なしで対応。邑楽町を中心に、太田市・館林市・伊勢崎市・足利市・佐野市・熊谷市などにもお伺いします。</p>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-img-wrap">
+            <img src="img/featurepic03.jpg" alt="年中無休で予定に合わせやすい">
+            <div class="feature-num">3</div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title font-rounded">年中無休で<br>予定に合わせやすい</h3>
+            <p class="feature-desc">営業時間は8:00〜20:00、土日祝日も休まず年中無休で営業しております。お仕事などで忙しいお客様の予定に合わせてご相談ください体制です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">SERVICE</span>
+        <h2 class="sec-title font-rounded">お家の気になる汚れを、<br class="sp-only">場所ごとに丁寧に清掃</h2>
+        <p style="margin-top:20px; font-weight:700; color:var(--text-muted);">ご家庭の部門はもちろん、<br
+            class="sp-only">大家様・工務店様・不動産会社様向けの<br class="sp-only">清掃にも対応可能です。</p>
+      </div>
+
+      <div class="service-grid" style="margin-bottom: 60px;">
+        <div class="service-card reveal">
+          <img src="img/serpic01.jpg" alt="エアコンクリーニング" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-rounded">エアコンクリーニング</h3>
+            <p class="service-desc">内部に溜まったホコリ・カビを高圧洗浄で徹底的に除去。ニオイを解消し、冷暖房の効きをアップさせます。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic02.jpeg" alt="水回り清掃（お風呂・トイレ・鏡など）" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-rounded">水回り清掃</h3>
+            <p class="service-desc">お風呂の頑固な水垢・カビ、トイレの尿石、鏡のウロコ汚れなど、専用洗剤と技術でピカピカに仕上げます。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic03.jpg" alt="キッチン・換気扇清掃" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-rounded">キッチン・換気扇</h3>
+            <p class="service-desc">ベトベトの油汚れがこびりついた換気扇・ガスコンロ・キッチンを分解洗浄し、見違えるほど綺麗になります。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="img/serpic04.jpg" alt="入居前清掃・その他" class="service-img">
+          <div class="service-content">
+            <h3 class="service-name font-rounded">入居前清掃・その他</h3>
+            <p class="service-desc">ガラス・サッシ等の清掃、床のワックス掛け、引越し前後の入居前清掃など、お家まるごとのクリーニングにも幅広く対応。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Section -->
+  <section id="price" class="section price-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">PRICE</span>
+        <h2 class="sec-title font-rounded">料金のご案内</h2>
+      </div>
+
+      <div class="price-grid">
+        <!-- 上部の画像スライダー -->
+        <div class="price-image-wrapper reveal">
+          <div class="price-image-slider">
+            <div class="price-slider-container">
+              <div class="price-slide-track" id="priceSliderTrack">
+                <div class="price-slide"><img src="img/menupic01.jpg" alt="エアコンクリーニング"></div>
+                <div class="price-slide"><img src="img/menupic02.jpg" alt="お風呂清掃"></div>
+                <div class="price-slide"><img src="img/menupic03.jpg" alt="キッチン清掃"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 下部の料金リスト -->
+        <div class="price-content reveal">
+          <ul class="price-list-simple">
+            <li class="price-list-item">
+              <span class="price-list-name">エアコンクリーニング</span>
+              <span class="price-list-val">11,000<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">お風呂</span>
+              <span class="price-list-val">11,000<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">換気扇</span>
+              <span class="price-list-val">11,000<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">システムキッチン</span>
+              <span class="price-list-val">11,000<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">トイレ</span>
+              <span class="price-list-val">9,900<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">ガラス・サッシ</span>
+              <span class="price-list-val">1,500<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">床のワックス</span>
+              <span class="price-list-val">1,100<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">鏡クリーニング</span>
+              <span class="price-list-val">1,100<span class="price-val-small">〜</span></span>
+            </li>
+            <li class="price-list-item">
+              <span class="price-list-name">入居前清掃</span>
+              <span class="price-list-val">19,800<span class="price-val-small">〜／坪</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="price-note reveal">※料金は汚れの状態や作業内容により<br class="sp-only">異なる場合があります（税込表記）。詳しい料金プラン・オプションにつきましては、<br
+          class="sp-only">詳細ページをご覧ください。</p>
+
+      <div style="text-align: center;" class="reveal">
+        <a href="https://your-clean.happytry.org/jump03.html" target="_blank"
+          style="display:inline-block; padding:15px 40px; background:var(--white); color:var(--primary-dark); font-weight:700; border-radius:30px; text-decoration:none; border:2px solid var(--primary); transition:all 0.3s;">詳しい料金を見る
+          →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="section works-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">WORKS</span>
+        <h2 class="sec-title font-rounded">施工事例</h2>
+        <p style="margin-top:15px; font-size:14px; color:var(--text-muted); font-weight:700;">※画像をクリックすると拡大表示されます</p>
+      </div>
+
+      <div class="works-grid">
+        <!-- 事例 -->
+        <div class="work-card reveal">
+          <h3 class="work-title font-rounded">床のワックスがけ</h3>
+          <div class="work-imgs">
+            <div class="work-img-box is-before">
+              <span class="work-badge badge-before">BEFORE</span>
+              <img src="img/workpic01.jpg" alt="床清掃前" class="clickable-img">
+            </div>
+            <div class="work-img-box">
+              <span class="work-badge badge-after">AFTER</span>
+              <img src="img/workpic02.jpg" alt="床清掃後" class="clickable-img">
+            </div>
+          </div>
+          <p class="work-desc">長年の使用でツヤがなくなり、細かい傷・汚れが目立っていたフローリングを丁寧に洗浄し、古いワックスを剥離した後に新しいワックスを層塗布。新築のような輝きを取り戻しました。</p>
+        </div>
+
+        <!-- 事例 -->
+        <div class="work-card reveal">
+          <h3 class="work-title font-rounded">トイレクリーニング</h3>
+          <div class="work-imgs">
+            <div class="work-img-box is-before">
+              <span class="work-badge badge-before">BEFORE</span>
+              <img src="img/workpic03.jpg" alt="トイレ 清掃前" class="clickable-img">
+            </div>
+            <div class="work-img-box">
+              <span class="work-badge badge-after">AFTER</span>
+              <img src="img/workpic04.jpg" alt="トイレ 清掃後" class="clickable-img">
+            </div>
+          </div>
+          <p class="work-desc">便器の内側にこびりついた頑固な黒ずみ・尿石による黄ばみ・ニオイにお悩みでした。専用の酸性洗剤とプロの研磨技術で、便器を傷つけることなくピカピカに仕上げました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">AREA</span>
+        <h2 class="sec-title font-rounded">対応エリア</h2>
+      </div>
+
+      <div class="area-box reveal">
+        <p class="area-desc">邑楽町を中心に、群馬・栃木・埼玉の<br class="sp-only">幅広いエリアに出張費なしで対応！</p>
+
+        <div class="area-group">
+          <div class="area-pref">
+            <span class="area-pref-title">群馬県</span>
+            <ul class="area-pref-list">
+              <li>邑楽町</li>
+              <li>太田市</li>
+              <li>館林市</li>
+              <li>伊勢崎市</li>
+              <li>大泉町</li>
+              <li>千代田町</li>
+              <li>明和町</li>
+              <li>板倉町</li>
+            </ul>
+          </div>
+          <div class="area-pref">
+            <span class="area-pref-title">栃木県</span>
+            <ul class="area-pref-list">
+              <li>足利市</li>
+              <li>佐野市</li>
+            </ul>
+          </div>
+          <div class="area-pref">
+            <span class="area-pref-title">埼玉県</span>
+            <ul class="area-pref-list">
+              <li>熊谷市</li>
+              <li>羽生市</li>
+              <li>行田市</li>
+              <li>深谷市</li>
+              <li>本庄市</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="area-footer">上記以外のエリアにも出張致します！<br>お気軽にお問い合わせください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="section" style="background:var(--white);">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">FLOW</span>
+        <h2 class="sec-title font-rounded">ご依頼の流れ</h2>
+      </div>
+
+      <div class="flow-steps">
+        <div class="flow-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4 class="font-rounded">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              お問い合わせ
+            </h4>
+            <p>お電話、お問い合わせフォーム、またはWEB予約より、清掃したいお悩みをご相談ください。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4 class="font-rounded">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              内容確認・お見積もり
+            </h4>
+            <p>汚れの状態や作業内容を確認し、料金をご案内します。お見積もりは無料です。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4 class="font-rounded">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              日程調整
+            </h4>
+            <p>お客様のご希望の日時を伺い作業日を調整します。土日祝日も対応可能です。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4 class="font-rounded">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              クリーニング作業
+            </h4>
+            <p>当日、専用の洗剤とプロの道具を使用し、気になる汚れを丁寧に清掃・洗浄します。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h4 class="font-rounded">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              仕上がり確認
+            </h4>
+            <p>作業終了後、お客様に仕上がりをご確認いただき、問題がなければ完了・お支払いとなります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section message-section">
+    <div class="inner">
+      <div class="msg-wrap reveal">
+        <div class="msg-img">
+          <img src="img/messagepic.jpg" alt="ピカピカになった空間">
+        </div>
+        <div class="msg-content">
+          <h2 class="msg-title font-rounded">きれいな暮らしを、<br>プロの技術で応援します</h2>
+          <p class="msg-text">
+            毎日使う家だからこそ、清掃で快適な空間を保つことは大切です。<br><br>
+            ユアクリーンサービスでは、忙しくて掃除の時間が取れない方や、プロでないと落とせない汚れにお悩みの方へ、プロのハウスクリーニングをご提供しています。<br><br>
+            お見積もりは無料です。<br>お家の汚れでお困りの際は、どんな些細なことでもお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <div class="store-container reveal">
+        <div class="store-info">
+          <h3 style="font-size: 22px; color: var(--primary-dark); margin-bottom: 20px; font-weight: 900;">店舗情報</h3>
+          <table class="store-info-table">
+            <tbody>
+              <tr>
+                <th>店舗名</th>
+                <td>ユアクリーンサービス</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>〒370-0615<br>群馬県邑楽郡邑楽町<br>篠塚９８−６</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:05054487447"
+                    style="color:var(--text-main); font-weight:700; text-decoration:none;">050-5448-7447</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>8:00～20:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>年中無休</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="sns-links">
+            <a href="https://your-clean.happytry.org/jump04.html" target="_blank" class="btn-sns insta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://your-clean.happytry.org/jump05.html" target="_blank" class="btn-sns fb">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.256545669594!2d139.44483019999998!3d36.2332615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f27a267d4b88d%3A0x82ebbf025735ad83!2z44Om44Ki44Kv44Oq44O844Oz44K144O844OT44K5!5e0!3m2!1sja!2sjp!4v1780386016256!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner" style="margin: 0 5% 60px;">
+    <h2 class="font-rounded">お見積もり・ご相談は無料です、<br class="sp-only">お気軽にご連絡ください</h2>
+    <div class="cta-btn-wrap">
+      <a href="tel:05054487447" class="btn-cta btn-tel">
+        <span class="btn-cta-main font-en">
+          <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          050-5448-7447
+        </span>
+        <span class="btn-cta-note font-rounded">営業時間 8:00〜20:00 (年中無休)</span>
+      </a>
+      <a href="https://your-clean.happytry.org/jump01.html" target="_blank" class="btn-cta btn-mail">
+        <span class="btn-cta-main font-rounded">
+          <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          お問い合わせ
+        </span>
+        <span class="btn-cta-note font-rounded">WEBフォームから24時間受付中</span>
+      </a>
+      <a href="https://your-clean.happytry.org/jump02.html" target="_blank" class="btn-cta btn-reserve">
+        <span class="btn-cta-main font-rounded">
+          <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          WEB予約する
+        </span>
+        <span class="btn-cta-note font-rounded">空き状況の確認・ご予約</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <div style="margin-bottom: 15px;">
+          <img src="img/logo.jpg" alt="ユアクリーンサービス" style="max-height: 50px; width: auto;">
+        </div>
+        <p>〒370-0615 群馬県邑楽郡邑楽町篠塚９８−６</p>
+        <p>対応エリア：群馬県・栃木県・埼玉県の一部エリア</p>
+      </div>
+
+      <div style="text-align: right;">
+        <a href="https://your-clean.happytry.org/jump01.html" target="_blank"
+          style="color:white; text-decoration:none; margin-right: 15px;">お問い合わせ</a>
+        <a href="https://your-clean.happytry.org/jump03.html" target="_blank"
+          style="color:white; text-decoration:none;">料金詳細</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; ユアクリーンサービス All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SP STICKY CTA -->
+  <div class="sp-sticky-cta sp-only">
+    <a href="tel:05054487447" class="cta-item btn-tel">
+      <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      <span>電話</span>
+    </a>
+    <a href="https://your-clean.happytry.org/jump01.html" target="_blank" class="cta-item btn-mail">
+      <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>問合せ</span>
+    </a>
+    <a href="https://your-clean.happytry.org/jump02.html" target="_blank" class="cta-item btn-reserve">
+      <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>予約</span>
+    </a>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <a href="#" id="backToTop" class="back-to-top">
+    <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="img-modal">
+    <span class="img-modal-close" id="modalCloseBtn">&times;</span>
+    <img class="img-modal-content" id="expandedImg">
+  </div>
+
+  <script src="Js/script.js"></script>
+
+  <!-- 画像保存禁止 -->
+  <script>
+    document.addEventListener('dragstart', function (e) {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+    document.addEventListener('contextmenu', function (e) {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+  </script>
+</body>
+
+</html>

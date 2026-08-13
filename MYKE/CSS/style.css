@@ -1,0 +1,123 @@
+body {
+    background-color: #F5F2EB;
+    color: #4A4A4A;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version */
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* アンティークな枠線装飾 */
+.antique-border {
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+}
+.antique-border::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    border: 1px solid #1B2A47;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* モダンな点線リーダー (メニュー用) */
+.menu-leader {
+    flex-grow: 1;
+    border-bottom: 1px dotted #8C8C8C;
+    margin: 0 1rem;
+    position: relative;
+    top: -6px;
+}
+
+/* セクション見出しの装飾 */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.section-title-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1B2A47;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+.section-title-ja {
+    font-size: 0.875rem;
+    color: #8C8C8C;
+    letter-spacing: 0.1em;
+}
+.section-title-line {
+    width: 40px;
+    height: 1px;
+    background-color: #1B2A47;
+    margin-top: 1rem;
+    opacity: 0.5;
+}
+
+/* アニメーション用クラス */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ハンバーガーメニュー */
+.hamburger span {
+    transition: all 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* FVスライダーアニメーション */
+.fv-slide {
+    opacity: 0;
+    animation: fvSlideFade 15s infinite;
+}
+@keyframes fvSlideFade {
+    0%   { opacity: 0; transform: scale(1); }
+    10%  { opacity: 1; transform: scale(1.02); }
+    33%  { opacity: 1; transform: scale(1.05); }
+    43%  { opacity: 0; transform: scale(1.06); }
+    100% { opacity: 0; transform: scale(1.06); }
+}
+
+/* スクロール線アニメーション */
+@keyframes scrollLine {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+
+/* メニュースライダーアニメーション */
+@keyframes menuSlider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

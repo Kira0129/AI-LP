@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ナトゥーラ一宮 | 髪質改善・美髪ストレート特化サロン</title>
+    <meta name="description" content="ナトゥーラ一宮は、一人ひとりの髪質やお悩みに寄り添う髪質改善・美髪ストレートに特化したサロンです。繰り返すほど美しく、理想のツヤ髪へ。">
+    <!-- Favicon -->
+    <link rel="icon" href="https://natura-ichinomiya.happytry.fun/img/favicon.jpg">
+    <link rel="apple-touch-icon" href="https://natura-ichinomiya.happytry.fun/img/favicon.jpg">
+
+    <!-- OGP -->
+    <meta property="og:url" content="https://natura-ichinomiya.happytry.fun">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ナトゥーラ一宮 | 髪質改善・美髪ストレート特化サロン">
+    <meta property="og:description" content="ナトゥーラ一宮は、一人ひとりの髪質やお悩みに寄り添う髪質改善・美髪ストレートに特化したサロンです。繰り返すほど美しく、理想のツヤ髪へ。">
+    <meta property="og:site_name" content="ナトゥーラ一宮">
+    <meta property="og:image" content="https://natura-ichinomiya.happytry.fun/img/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        naturaBrown: '#4A3B32',
+                        naturaBeige: '#F9F8F6',
+                        naturaGold: '#C5A880',
+                        naturaLightGold: '#E8DCC4',
+                        naturaWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Noto Serif JP', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
+</head>
+
+<body class="bg-naturaBeige select-none">
+
+    <!-- Header -->
+    <header class="site-header">
+        <ul class="nav-group left text-naturaBrown">
+            <li><a href="#about"><span class="nav-ja">コンセプト</span><span class="nav-en">About</span></a></li>
+            <li><a href="#service"><span class="nav-ja">サービス</span><span class="nav-en">Service</span></a></li>
+            <li><a href="#feature"><span class="nav-ja">こだわり</span><span class="nav-en">Feature</span></a></li>
+        </ul>
+        <a href="#" class="header-logo flex items-center justify-center">
+            <img src="img/logo.png" alt="Natura." class="h-[60px] md:h-[75px] object-contain mix-blend-multiply">
+        </a>
+        <ul class="nav-group right text-naturaBrown">
+            <li><a href="#menu"><span class="nav-ja">メニュー</span><span class="nav-en">Menu</span></a></li>
+            <li><a href="#voice"><span class="nav-ja">お客様の声</span><span class="nav-en">Voice</span></a></li>
+            <li><a href="#access"><span class="nav-ja">アクセス</span><span class="nav-en">Access</span></a></li>
+        </ul>
+        <!-- Mobile Burger -->
+        <div id="burger" class="lg:hidden flex items-center px-6 cursor-pointer">
+            <div class="space-y-1.5">
+                <span class="block w-6 h-px bg-naturaBrown"></span>
+                <span class="block w-6 h-px bg-naturaBrown"></span>
+                <span class="block w-6 h-px bg-naturaBrown"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div id="drawer">
+        <button id="close-drawer" class="absolute top-8 right-8 text-4xl font-light text-naturaBrown">&times;</button>
+        <nav>
+            <ul class="flex flex-col items-center space-y-8">
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#feature">Feature</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#voice">Voice</a></li>
+                <li><a href="#access">Access</a></li>
+            </ul>
+            <div class="mt-10 flex justify-center">
+                <a href="https://natura-ichinomiya.happytry.fun/jump01.html" target="_blank"
+                    class="natura-btn !px-10 !bg-naturaBrown !text-white">WEB予約はこちら</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- First View -->
+    <section class="fv">
+        <div class="slide-counter-wrap">
+            <span class="counter-current" id="curNum">01</span>
+            <span class="counter-total">03</span>
+        </div>
+        <div class="fv-stage">
+            <div class="fv-stage-inner">
+                <div class="swiper fv-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- 高級感のあるサロン・髪質の画像 -->
+                        <div class="swiper-slide">
+                            <img src="img/fv01.jpg" alt="理想のツヤ髪">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/fv02.jpg" alt="落ち着いた空間">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/fv03.jpg" alt="癒しのケア">
+                        </div>
+                    </div>
+                </div>
+                <div class="fv-copy reveal reveal-up delay-300">
+                    <div class="fv-badges">
+                        <span>マンツーマン施術</span>
+                        <span>Aujua正規取扱店</span>
+                        <span>一人ひとりに合わせたオーダーメイド</span>
+                    </div>
+                    <h2 class="copy-main">繰り返すほど美しく、<br>理想のツヤ髪へ</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reservation URL -->
+        <a href="https://natura-ichinomiya.happytry.fun/jump01.html" class="res-circle-btn hidden lg:flex">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" width="30" height="30">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span class="btn-ja">WEB予約</span>
+        </a>
+    </section>
+
+    <!-- Float Buttons PC -->
+    <div class="float-right hidden lg:flex">
+        <a href="https://natura-ichinomiya.happytry.fun/jump01.html"
+            class="float-btn !bg-naturaAccent !border-naturaAccent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <span class="float-btn-text">WEB予約</span>
+        </a>
+        <a href="https://natura-ichinomiya.happytry.fun/jump02.html" target="_blank" class="float-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            <span class="float-btn-text">Instagram</span>
+        </a>
+    </div>
+
+    <main>
+        <!-- TV (お悩み) -->
+        <section id="tv" class="px-6 relative z-20 overflow-hidden">
+            <!-- 背景画像 -->
+            <div class="absolute inset-0 bg-fixed bg-center bg-cover bg-recommend -z-10">
+            </div>
+            <!-- 背景色オーバーレイ -->
+            <div class="absolute inset-0 bg-naturaBrown/70 backdrop-blur-[2px] -z-10"></div>
+            <div class="container mx-auto max-w-5xl reveal reveal-up relative z-10">
+                <div
+                    class="flex flex-col md:flex-row gap-10 bg-naturaWhite/85 md:bg-naturaWhite p-4 md:p-12 shadow-[0_15px_40px_rgba(74,59,50,0.05)] border border-naturaGold/20 items-center">
+                    <div class="w-full md:w-1/2 reveal reveal-left delay-200">
+                        <img src="img/worrypic.jpg" alt="お悩みイメージ" class="w-full object-cover filter grayscale-[20%]">
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-8 reveal reveal-right delay-400">
+                        <h2 class="text-[20px] md:text-3xl font-serif text-naturaBrown">こんなお悩みありませんか？</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>朝のアイロンに時間がかかる</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>湿気で髪が広がり、まとまらない</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>カラーを繰り返して髪が傷んでいる</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>ツヤがなくパサついて見える</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>自分に合う髪質改善が分からない</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-naturaGold shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path class="animate-check" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>美容室では落ち着いてゆっくり<br class="md:hidden">過ごしたい</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="px-6 bg-naturaWhite">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">About</span>
+                    <h2>サロンについて</h2>
+                </div>
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
+                    <div class="w-full lg:w-1/2 reveal reveal-right delay-200">
+                        <div class="img-elegant-wrap">
+                            <img src="img/aboutpic.jpg" alt="ナトゥーラ一宮のコンセプト"
+                                class="w-full h-[250px] md:h-[450px] object-cover">
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8 reveal reveal-left delay-400">
+                        <h3 class="text-[25px] md:text-4xl font-serif leading-tight">毎日がもっと楽になる<br>美しいツヤ髪を叶えます</h3>
+                        <p class="leading-loose text-naturaBrown/90">
+                            ナトゥーラ一宮は、一人ひとりの髪質やお悩みに寄り添う髪質改善・美髪ストレートに特化したサロンです。<br><br>
+                            マンツーマン施術だからこそ、カウンセリングから仕上げまで丁寧に担当し、お客様に最適な施術をご提案します。<br><br>
+                            Aujuaトリートメントや髪質改善カラー、頭浸浴など、髪と頭皮をいたわるメニューも充実。落ち着いた空間で、毎日がもっと楽になる美しいツヤ髪を叶えます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service -->
+        <section id="service" class="px-6 bg-naturaBeige">
+            <div class="container mx-auto max-w-6xl">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">Service</span>
+                    <h2>サービス</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <!-- Service 01 -->
+                    <div class="service-card p-4 md:p-6 reveal reveal-up delay-100">
+                        <div class="relative overflow-hidden mb-8 h-64">
+                            <img src="img/serpic01.jpg" alt="髪質改善・美髪ストレート" class="w-full h-full object-cover">
+                            <span class="service-number">01</span>
+                        </div>
+                        <h4 class="text-xl font-serif mb-4 border-l-2 border-naturaGold pl-3">髪質改善・<br>美髪ストレート</h4>
+                        <p class="leading-loose text-naturaBrown/80">
+                            髪質やダメージレベルを見極め、一人ひとりに合わせた髪質改善・美髪ストレートをご提案。自然なツヤと柔らかな質感で、毎日のお手入れが楽になる美しい髪へ導きます。
+                        </p>
+                    </div>
+
+                    <!-- Service 02 -->
+                    <div class="service-card p-4 md:p-6 md:mt-16 reveal reveal-up delay-200">
+                        <div class="relative overflow-hidden mb-8 h-64">
+                            <img src="img/serpic02.jpg" alt="マンツーマン施術" class="w-full h-full object-cover">
+                            <span class="service-number">02</span>
+                        </div>
+                        <h4 class="text-xl font-serif mb-4 border-l-2 border-naturaGold pl-3">マンツーマン施術</h4>
+                        <p class="leading-loose text-naturaBrown/80">
+                            カウンセリングから仕上げまで一人のスタイリストが担当。髪のお悩みや理想のスタイルを丁寧にお伺いし、お客様に最適な施術をご提案します。落ち着いた空間でゆったりとお過ごしいただけます。
+                        </p>
+                    </div>
+
+                    <!-- Service 03 -->
+                    <div class="service-card p-4 md:p-6 md:mt-32 reveal reveal-up delay-300">
+                        <div class="relative overflow-hidden mb-8 h-64">
+                            <img src="img/serpic03.jpg" alt="Aujua・頭浸浴で美髪ケア" class="w-full h-full object-cover">
+                            <span class="service-number">03</span>
+                        </div>
+                        <h4 class="text-xl font-serif mb-4 border-l-2 border-naturaGold pl-3">Aujua・頭浸浴で<br>美髪ケア</h4>
+                        <p class="leading-loose text-naturaBrown/80">
+                            Aujuaトリートメントや頭浸浴など、髪と頭皮を健やかに保つケアメニューをご用意。カラーやストレートと組み合わせることで、ツヤ・まとまり・手触りの違いを実感していただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature (こだわり) -->
+        <section id="feature" class="px-6 bg-naturaWhite">
+            <div class="container mx-auto max-w-6xl">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">Feature</span>
+                    <h2>当店のこだわり</h2>
+                </div>
+
+                <div class="space-y-24 md:space-y-32">
+                    <!-- Feature 01 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 reveal reveal-up">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute -inset-4 bg-naturaBeige z-0 hidden md:block"></div>
+                            <img src="img/featurepic01.jpg" alt="髪や頭皮に優しい薬剤"
+                                class="w-full aspect-[4/3] object-cover relative z-10 shadow-lg border border-naturaGold/20">
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <div class="flex items-end gap-4 border-b border-naturaGold/30 pb-4">
+                                <span class="text-naturaGold font-serif text-4xl md:text-5xl leading-none">01</span>
+                                <h3 class="text-xl md:text-2xl font-serif">髪や頭皮に<br class="md:hidden">優しい薬剤</h3>
+                            </div>
+                            <p class="leading-loose text-naturaBrown/90">
+                                髪への負担をできる限り抑えた薬剤を厳選。一人ひとりの髪質やダメージレベルに合わせて施術することで、ツヤ・手触り・まとまりの良い仕上がりを目指します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 02 -->
+                    <div
+                        class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 reveal reveal-up delay-100">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute -inset-4 bg-naturaLightGold/30 z-0 hidden md:block"></div>
+                            <img src="img/featurepic02.jpg" alt="丁寧なカウンセリング"
+                                class="w-full aspect-[4/3] object-cover relative z-10 shadow-lg border border-naturaGold/20">
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <div class="flex items-end gap-4 border-b border-naturaGold/30 pb-4">
+                                <span class="text-naturaGold font-serif text-4xl md:text-5xl leading-none">02</span>
+                                <h3 class="text-xl md:text-2xl font-serif">丁寧な<br class="md:hidden">カウンセリング</h3>
+                            </div>
+                            <p class="leading-loose text-naturaBrown/90">
+                                お客様のお悩みや理想のスタイルをしっかりお伺いし、ライフスタイルまで考えたご提案をいたします。初めての方でも安心してお任せいただけるよう、分かりやすく丁寧にご説明します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 03 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 reveal reveal-up delay-200">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute -inset-4 bg-naturaBeige z-0 hidden md:block"></div>
+                            <img src="img/featurepic03.jpg" alt="リラックスできる癒しの空間"
+                                class="w-full aspect-[4/3] object-cover relative z-10 shadow-lg border border-naturaGold/20">
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <div class="flex items-end gap-4 border-b border-naturaGold/30 pb-4">
+                                <span class="text-naturaGold font-serif text-4xl md:text-5xl leading-none">03</span>
+                                <h3 class="text-xl md:text-2xl font-serif">リラックスできる<br class="md:hidden">癒しの空間</h3>
+                            </div>
+                            <p class="leading-loose text-naturaBrown/90">
+                                落ち着いた店内で、日常を忘れてゆったり過ごせる空間づくりを大切にしています。頭浸浴やヘッドスパで心身ともにリフレッシュしながら、美しい髪へ導きます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommend Menu (Image & Text Layout) -->
+        <section class="relative w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-fixed bg-center bg-cover bg-recommend">
+            </div>
+            <div class="absolute inset-0 bg-naturaBrown/70 backdrop-blur-[2px]"></div>
+
+            <div class="relative z-10 w-full max-w-5xl px-6">
+                <div class="text-center mb-12 reveal reveal-up">
+                    <span class="block text-[11px] tracking-[0.2em] text-naturaLightGold uppercase mb-2">Recommend
+                        Menu</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-white">おすすめメニュー</h2>
+                </div>
+
+                <div
+                    class="bg-naturaWhite/85 md:bg-naturaWhite/95 border border-naturaGold/30 overflow-hidden flex flex-col md:flex-row shadow-2xl reveal reveal-up delay-200">
+                    <!-- Video Area -->
+                    <div class="w-full md:w-1/2 overflow-hidden relative bg-black">
+                        <video src="movie/recommend.mp4" autoplay loop muted playsinline
+                            class="w-full h-auto md:h-full md:absolute md:inset-0 object-cover hover:scale-105 transition duration-1000"></video>
+                    </div>
+                    <!-- Text Area -->
+                    <div class="w-full md:w-1/2 p-4 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left">
+                        <span class="inline-block bg-naturaGold text-white text-xs px-4 py-1 mb-6 tracking-widest">ご新規様
+                            人気 No.1</span>
+                        <h3 class="text-xl md:text-2xl font-serif leading-relaxed mb-6">カット ＋ 美髪ストレート ＋ <br
+                                class="md:hidden">Aujua 4stepトリートメント</h3>
+                        <p class="text-3xl md:text-4xl font-serif text-naturaBrown mb-6">17,500円<span
+                                class="text-lg">〜</span></p>
+                        <p class="leading-loose text-naturaBrown/90 mb-10">
+                            クセや広がりを自然に整え、ダメージを抑えながらツヤとまとまりのある美髪へ。<br>毎朝のお手入れが楽になる人気No.1メニューです。
+                        </p>
+                        <a href="https://natura-ichinomiya.happytry.fun/jump03.html"
+                            class="natura-btn gold bg-white w-full text-center hover:!bg-naturaGold hover:!text-white transition-all">予約する</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu List -->
+        <section id="menu" class="px-6 bg-naturaBeige">
+            <div class="container mx-auto max-w-4xl">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">Price List</span>
+                    <h2>メニュー</h2>
+                </div>
+
+                <div class="bg-naturaWhite p-8 md:p-12 shadow-sm border border-naturaBeige">
+                    <ul class="space-y-8">
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-100">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ カラー ＋ Aujua4stepTR</span>
+                            <span class="font-serif text-lg self-end md:self-auto">12,100円</span>
+                        </li>
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-100">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ カラー ＋ <br
+                                    class="md:hidden">髪質改善Aujuaトリートメント</span>
+                            <span class="font-serif text-lg self-end md:self-auto">14,500円</span>
+                        </li>
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-200">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ カラー ＋ Aujuaアロマスパ <br class="md:hidden">＋
+                                AujuaクイックTR</span>
+                            <span class="font-serif text-lg self-end md:self-auto">15,950円</span>
+                        </li>
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-200">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ Aujuaトリートメント</span>
+                            <span class="font-serif text-lg self-end md:self-auto">7,700円</span>
+                        </li>
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-300">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ Aujuaアロマヘッドスパ</span>
+                            <span class="font-serif text-lg self-end md:self-auto">9,250円</span>
+                        </li>
+                        <li
+                            class="flex flex-col md:flex-row md:items-end justify-between border-b border-dashed border-naturaGold/30 pb-4 reveal reveal-up delay-300">
+                            <span class="font-medium mb-2 md:mb-0">カット ＋ 頭浸浴</span>
+                            <span class="font-serif text-lg self-end md:self-auto">6,650円</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-center mt-12 reveal reveal-up">
+                        <a href="https://natura-ichinomiya.happytry.fun/jump03.html"
+                            class="natura-btn !py-[16px] !px-[45px] md:!py-[18px] md:!px-[60px]">その他メニューはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="px-6 bg-naturaWhite">
+            <div class="container mx-auto max-w-5xl">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">Gallery</span>
+                    <h2>ギャラリー</h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 reveal reveal-up delay-100">
+                    <!-- Image 1 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic01.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic02.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic03.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic04.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic05.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="aspect-square overflow-hidden group shadow-sm border border-naturaGold/20">
+                        <img src="img/gallerypic06.jpg" alt="ギャラリー"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 md:mt-16 reveal reveal-up delay-200">
+                    <a href="https://natura-ichinomiya.happytry.fun/jump02.html" target="_blank"
+                        class="natura-btn gold !inline-flex gap-3 items-center">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        <span>Instagramを見る</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice (Swiper) -->
+        <section id="voice" class="bg-naturaBeige px-6 overflow-hidden">
+            <div class="container mx-auto max-w-5xl">
+                <div class="section-header reveal reveal-up">
+                    <span class="sub">Customer Review</span>
+                    <h2>お客様の声</h2>
+                </div>
+
+                <div class="swiper voice-swiper pb-16 reveal reveal-up delay-200">
+                    <div class="swiper-wrapper">
+                        <!-- Voice 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-naturaWhite p-8 md:p-10 h-full border border-naturaGold/20 flex flex-col">
+                                <div class="text-naturaGold text-lg mb-4 tracking-widest">★★★★★</div>
+                                <div class="voice-text-wrap mb-6 flex-1">
+                                    <p class="leading-loose voice-text line-clamp-5">
+                                        初めて利用させて頂きました。<br>担当の人は、とても気さくで、落ち着いた時間を過ごせました。ヘッドスパを初めて体験しましたが、とても気持ちよく、スッキリしました。カットも大変満足です。リピートします。
+                                    </p>
+                                    <button
+                                        class="voice-read-more text-naturaGold text-xs mt-2 hidden hover:opacity-70 transition w-full text-left">続きを読む</button>
+                                </div>
+                                <p class="text-xs text-right font-serif opacity-70 mt-auto">ぷりんプリン</p>
+                            </div>
+                        </div>
+                        <!-- Voice 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-naturaWhite p-8 md:p-10 h-full border border-naturaGold/20 flex flex-col">
+                                <div class="text-naturaGold text-lg mb-4 tracking-widest">★★★★★</div>
+                                <div class="voice-text-wrap mb-6 flex-1">
+                                    <p class="leading-loose voice-text line-clamp-5">
+                                        店内とてもリラックスできる雰囲気です。丁寧で親切な接客、カウンセリングも丁寧にしてくれて安心します。施術も大満足です。<br>少し遠くても通いたいと思える美容室です。
+                                    </p>
+                                    <button
+                                        class="voice-read-more text-naturaGold text-xs mt-2 hidden hover:opacity-70 transition w-full text-left">続きを読む</button>
+                                </div>
+                                <p class="text-xs text-right font-serif opacity-70 mt-auto">もっちゃん</p>
+                            </div>
+                        </div>
+                        <!-- Voice 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-naturaWhite p-8 md:p-10 h-full border border-naturaGold/20 flex flex-col">
+                                <div class="text-naturaGold text-lg mb-4 tracking-widest">★★★★★</div>
+                                <div class="voice-text-wrap mb-6 flex-1">
+                                    <p class="leading-loose voice-text line-clamp-5">
+                                        2回お世話になりました。<br>1回目から2回目は1ヶ月の間隔で行きましたが、その間隔、短すぎですかね？<br>かなり大事な家族行事があったので、お世話になりました。<br>大変良い髪型にしていただきました。2回でしたが、ありがとうございました。
+                                    </p>
+                                    <button
+                                        class="voice-read-more text-naturaGold text-xs mt-2 hidden hover:opacity-70 transition w-full text-left">続きを読む</button>
+                                </div>
+                                <p class="text-xs text-right font-serif opacity-70 mt-auto">しましまおかる</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination !bottom-2"></div>
+                </div>
+
+                <div class="text-center mt-12 md:mt-16 reveal reveal-up delay-300">
+                    <a href="https://natura-ichinomiya.happytry.fun/jump04.html" target="_blank"
+                        class="natura-btn gold !inline-flex gap-3 items-center">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path
+                                d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0 5.61 0 .096 5.385.096 12s5.514 12 12.144 12c7.009 0 11.663-4.93 11.663-11.854 0-.793-.1-1.391-.219-1.861H12.24z" />
+                        </svg>
+                        <span>その他口コミはこちら</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section id="message" class="px-6 relative overflow-hidden z-0">
+            <!-- 背景画像 -->
+            <div class="absolute inset-0 bg-fixed bg-center bg-cover bg-recommend -z-10">
+            </div>
+            <!-- 背景色オーバーレイ -->
+            <div class="absolute inset-0 bg-naturaBrown/70 backdrop-blur-[2px] -z-10"></div>
+            <div class="container mx-auto max-w-5xl reveal reveal-up relative z-10">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-10 md:gap-16 bg-naturaBeige/85 md:bg-naturaBeige p-6 md:p-16 border-t-4 border-naturaGold shadow-sm">
+                    <div
+                        class="w-48 h-48 md:w-64 md:h-64 shrink-0 rounded-full overflow-hidden border-4 border-naturaBeige reveal reveal-right delay-200">
+                        <!-- 代表イメージダミー -->
+                        <img src="img/messagepic.jpg" alt="能又浩斗 代表" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-6 reveal reveal-left delay-400 text-left">
+                        <h3 class="text-[25px] font-serif">「毎朝、鏡を見るのが<br class="md:hidden">楽しみになる髪を。」</h3>
+                        <p class="leading-loose text-naturaBrown/90">
+                            ナトゥーラ一宮では、一人ひとりのお悩みに寄り添い、髪質やライフスタイルに合わせた施術をご提案しています。<br>
+                            髪質改善や美髪ストレートを通して、お客様が毎日をもっと快適に、自信を持って過ごせるようサポートいたします。<br>
+                            初めての方も安心してご相談ください。
+                        </p>
+                        <div class="pt-4 border-t border-naturaGold/30 inline-block">
+                            <p class="text-xs tracking-widest mb-1 text-naturaGold">年間1000人の悩みを解決する美髪職人</p>
+                            <p class="font-serif text-lg">代表 <span class="text-2xl ml-2">能又浩斗</span> <span
+                                    class="text-sm ml-2 opacity-60">歴6年</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access -->
+        <section id="access" class="bg-naturaLightGold/20 px-6">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="section-header">
+                    <span class="sub">Access</span>
+                    <h2>アクセス</h2>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 bg-naturaWhite p-6 md:p-10 shadow-sm">
+                    <div class="w-full lg:w-5/12 space-y-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif mb-2">ナトゥーラ 一宮店</h3>
+                        <dl class="space-y-6">
+                            <div class="flex border-b border-naturaBeige pb-4">
+                                <dt class="w-24 font-bold text-naturaGold">住所</dt>
+                                <dd class="flex-1">〒491-0827<br>愛知県一宮市三ツ井１丁目１２−８</dd>
+                            </div>
+                            <div class="flex border-b border-naturaBeige pb-4">
+                                <dt class="w-24 font-bold text-naturaGold">電話番号</dt>
+                                <dd class="flex-1"><a href="tel:050-5448-4810"
+                                        class="hover:text-naturaAccent">050-5448-4810</a></dd>
+                            </div>
+                            <div class="flex border-b border-naturaBeige pb-4">
+                                <dt class="w-24 font-bold text-naturaGold">営業時間</dt>
+                                <dd class="flex-1">9:00〜21:00</dd>
+                            </div>
+                            <div class="flex border-b border-naturaBeige pb-4">
+                                <dt class="w-24 font-bold text-naturaGold">定休日</dt>
+                                <dd class="flex-1">なし</dd>
+                            </div>
+                        </dl>
+                        <div class="flex items-center gap-6 pt-4">
+                            <a href="https://natura-ichinomiya.happytry.fun/jump02.html" target="_blank"
+                                class="flex items-center gap-2 hover:opacity-70 transition">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                                    class="text-naturaBrown">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                                <span class="text-sm">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-7/12 h-[350px] md:h-[450px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.032749580448!2d136.8363432!3d35.280311999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030b8d1328638d%3A0xee308535dd052287!2z44OK44OI44Kl44O844OpIOS4gOWuruW6lw!5e0!3m2!1sja!2sjp!4v1784685010694!5m2!1sja!2sjp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 px-6 bg-naturaBrown text-naturaWhite">
+        <div class="container mx-auto max-w-6xl flex flex-col items-center gap-10">
+            <h2 class="font-serif text-3xl tracking-[0.2em]">Natura 一宮</h2>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-8 md:gap-12 text-[10px] tracking-[0.2em] uppercase">
+                    <li><a href="#about" class="hover:text-naturaGold transition">About</a></li>
+                    <li><a href="#service" class="hover:text-naturaGold transition">Service</a></li>
+                    <li><a href="#feature" class="hover:text-naturaGold transition">Feature</a></li>
+                    <li><a href="#menu" class="hover:text-naturaGold transition">Menu</a></li>
+                    <li><a href="#access" class="hover:text-naturaGold transition">Access</a></li>
+                </ul>
+            </nav>
+            <p class="text-[10px] opacity-50 tracking-widest">&copy; 2026 Natura Ichinomiya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom CTA -->
+    <div class="bottom-cta lg:hidden">
+        <a href="tel:05054484810" class="cta-tel">TEL予約</a>
+        <a href="https://natura-ichinomiya.happytry.fun/jump01.html" class="cta-web">WEB予約</a>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="TOPへ戻る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

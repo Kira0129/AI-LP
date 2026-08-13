@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同会社1st.運送 - 都内の軽貨物配送パートナー</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- External JS (Tailwind Config) -->
+    <script src="Js/script.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- OGP -->
+    <meta property="og:title" content="合同会社1st.運送 - 都内の軽貨物配送パートナー" />
+    <meta property="og:description" content="東京都中央区日本橋を拠点に、都内を中心とした軽貨物配送サービスを行っています。急な配送やスポット対応、定期配送まで柔軟に対応いたします。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://1st-transport.happytry.org" />
+    <meta property="og:image" content="https://1st-transport.happytry.org/img/ogp.jpg" />
+    <meta property="og:site_name" content="合同会社1st.運送" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="合同会社1st.運送 - 都内の軽貨物配送パートナー" />
+    <meta name="twitter:description" content="東京都中央区日本橋を拠点に、都内を中心とした軽貨物配送サービスを行っています。" />
+    <meta name="twitter:image" content="https://1st-transport.happytry.org/img/ogp.jpg" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDLXB6D7WG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDLXB6D7WG');
+    </script>
+
+</head>
+
+<body class="font-sans text-dark bg-white antialiased text-[14px] md:text-[16px] overflow-x-hidden w-full">
+
+    <!-- Header (Sticky) -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-xl font-bold text-primary">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>合同会社1st.運送</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#about" class="font-medium hover:text-primary transition">会社概要</a>
+                <a href="#service" class="font-medium hover:text-primary transition">サービス</a>
+                <a href="#features" class="font-medium hover:text-primary transition">特徴</a>
+                <a href="#faq" class="font-medium hover:text-primary transition">よくある質問</a>
+                <a href="tel:05054488107"
+                    class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-primary-hover hover:-translate-y-0.5 transition duration-200">
+                    <i class="fa-solid fa-phone mr-2"></i>050-5448-8107
+                </a>
+            </div>
+            <!-- Hamburger Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark focus:outline-none z-50">
+                <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-40 translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <a href="#about" class="text-2xl font-bold text-dark hover:text-primary transition menu-link">会社概要</a>
+        <a href="#service" class="text-2xl font-bold text-dark hover:text-primary transition menu-link">サービス</a>
+        <a href="#features" class="text-2xl font-bold text-dark hover:text-primary transition menu-link">特徴</a>
+        <a href="#faq" class="text-2xl font-bold text-dark hover:text-primary transition menu-link">よくある質問</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-diagonal">
+            <img src="img/fv01.jpg" alt="Hero 1" class="hero-slider-img slide-bg-1">
+            <img src="img/fv02.jpg" alt="Hero 2" class="hero-slider-img slide-bg-2">
+            <img src="img/fv03.jpg" alt="Hero 3" class="hero-slider-img slide-bg-3">
+        </div>
+        <div class="hero-accent-line"></div>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <span
+                class="inline-block py-1.5 px-4 rounded-full bg-primary-light text-primary font-bold shadow-sm mb-6 border border-primary/20">
+                東京都内・中央区日本橋拠点
+            </span>
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight mb-6 text-dark drop-shadow-sm">
+                都内配送を支える、<br>
+                <span class="text-primary">身近な運送</span>パートナー
+            </h1>
+            <p class="text-gray-600 mb-10 max-w-xl font-medium leading-relaxed">
+                急な配送やスポット対応,定期配送まで。<br>小回りの利く軽貨物配送で、<br class="md:hidden">お客様のニーズに柔軟にお応えします。
+            </p>
+
+            <div class="hidden md:flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="tel:05054488107"
+                    class="group bg-primary text-white text-lg md:text-xl px-10 py-5 rounded-full font-bold shadow-[0_8px_20px_rgba(225,29,72,0.3)] hover:bg-primary-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-fit">
+                    <i class="fa-solid fa-phone-volume text-2xl animate-pulse"></i>
+                    <span>050-5448-8107</span>
+                </a>
+            </div>
+            <p class="hidden md:block mt-4 text-gray-500 font-bold tracking-wider">受付時間: 8:00～18:00（時間外も受付可）</p>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            SCROLL DOWN
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">こんな<span class="text-primary">お悩み</span>ありませんか？</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-primary-light/40 rounded-3xl p-6 md:p-12 border border-primary-light max-w-5xl mx-auto"
+                data-aos="fade-up" data-aos-delay="200">
+                <ul class="grid md:grid-cols-2 gap-3 md:gap-6 mb-8">
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">配送を任せられる信頼できる業者を<br class="md:hidden">探している</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">急な配送やスポット対応に<br class="md:hidden">困っている</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">柔軟に対応してくれる運送会社を<br class="md:hidden">探している</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">都内でスムーズに配送してくれる<br class="md:hidden">業者が見つからない</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="700">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">継続して依頼できるパートナーを<br class="md:hidden">探している</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-white px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-sm"
+                        data-aos="fade-up" data-aos-delay="800">
+                        <i class="fa-solid fa-circle-check text-primary text-xl shrink-0"></i>
+                        <span class="font-medium text-gray-700">コストと品質のバランスが良い業者<br class="md:hidden">に任せたい</span>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <p class="font-bold text-primary mb-2">ひとつでも当てはまる方は、<br class="md:hidden">ぜひご相談ください。</p>
+                    <p class="text-gray-600">お客様のご要望に合わせて、<br class="md:hidden">最適な配送プランをご提案いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 pattern-bg bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase">About Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">会社概要</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-primary"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="w-full md:w-1/2" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                        <img src="img/aboutpic.jpg" alt="会社概要イメージ" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="600">
+                    <h3 class="text-2xl font-bold mb-6 text-dark leading-tight">都内配送を支える、<br><span
+                            class="text-primary">身近な運送パートナー</span></h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        合同会社1st.運送は、東京都中央区日本橋兜町を拠点に、都内を中心とした軽貨物配送サービスを行っています。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        個人宅への宅配から企業様の配送依頼まで、お客様のニーズに合わせて柔軟に対応。大切なお荷物を、安心・確実にお届けいたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase">Service</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">軽貨物配送を中心に<br class="md:hidden">幅広く対応</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 font-medium">小回りの利く軽貨物配送だからこそ、細やかな対応とスピード感のある配送を実現しています。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-primary-light hover:shadow-lg transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-white text-primary flex items-center justify-center text-3xl shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">個人宅向け宅配業務</h3>
+                    <p class="text-gray-600 leading-relaxed">大切なお荷物を、個人のお客様の元へ確実・丁寧にお届けします。再配達や細かなご要望にも柔軟に対応いたします。</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-primary-light hover:shadow-lg transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-white text-primary flex items-center justify-center text-3xl shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">企業向け配送サービス</h3>
+                    <p class="text-gray-600 leading-relaxed">オフィス間の書類移動や、店舗への納品など、企業様のビジネスをサポートします。定期的な集荷・配達もお任せください。
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-primary-light hover:shadow-lg transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-white text-primary flex items-center justify-center text-3xl shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">スポット配送・定期配送</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        「今すぐ」という急ぎのご依頼から、決まった日時のルート配送まで、お客様のご都合に合わせた最適な配送プランをご提案します。</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-primary-light hover:shadow-lg transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-white text-primary flex items-center justify-center text-3xl shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">都内エリアを中心とした<br class="md:hidden">迅速対応</h3>
+                    <p class="text-gray-600 leading-relaxed">日本橋を拠点に、都内の複雑な交通事情にも精通したドライバーが、安全かつスピーディーに目的地まで駆けつけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase">Features</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">当社の<span class="text-primary">3つ</span>の特徴</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-20">
+                <!-- Feature 01 -->
+                <div class="flex flex-col md:flex-row items-center gap-10" data-aos="fade-right">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-video md:aspect-[4/3]">
+                            <img src="img/featurepic01.jpg" alt="都内中心のスムーズな配送" class="w-full h-full object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white font-black text-2xl px-4 py-2 rounded-xl shadow-md">
+                                01</div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">都内中心の<br><span
+                                class="text-primary">スムーズな配送</span></h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            日本橋を拠点に、都内エリアを中心とした配送に対応。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            小回りの利く軽貨物配送で、渋滞しやすい都内の道路事情にも柔軟に対応し、スピーディーかつ確実にお届けします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 02 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10" data-aos="fade-left">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-video md:aspect-[4/3]">
+                            <img src="img/featurepic02.jpg" alt="急なご依頼にも柔軟に対応" class="w-full h-full object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white font-black text-2xl px-4 py-2 rounded-xl shadow-md">
+                                02</div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">急なご依頼にも<br><span
+                                class="text-primary">柔軟に対応</span></h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            スポット配送や定期配送など、お客様のご要望に合わせた最適な配送プランをご提案いたします。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            「急に荷物を送らなければならなくなった」といった急な配送トラブルにも、可能な限り迅速に対応いたします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="flex flex-col md:flex-row items-center gap-10" data-aos="fade-right">
+                    <div class="w-full md:w-1/2">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-video md:aspect-[4/3]">
+                            <img src="img/featurepic03.jpg" alt="安心して任せられる配送品質" class="w-full h-full object-cover">
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white font-black text-2xl px-4 py-2 rounded-xl shadow-md">
+                                03</div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">安心して任せられる<br><span
+                                class="text-primary">配送品質</span></h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            一件一件の配送に責任を持ち、お荷物を傷つけないよう丁寧で確実な対応を心がけています。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            単なる運び屋ではなく、接客品質にもこだわり、継続的に依頼できる配送パートナーをお探しの方にもおすすめです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 relative overflow-hidden bg-primary text-white">
+        <!-- SVG Animation Background -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-30">
+            <!-- 道路の線 -->
+            <div class="absolute bottom-12 w-full h-[1px] bg-white/30"></div>
+            <div class="absolute bottom-12 w-full h-[2px] anim-road"></div>
+
+            <!-- 走る軽バンSVG -->
+            <div class="absolute bottom-[48px] left-0 w-full h-20 md:h-24">
+                <svg class="anim-truck h-full w-auto drop-shadow-md" viewBox="0 0 120 60" fill="none" stroke="white"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- スピード線（風切り） -->
+                    <g opacity="0.6">
+                        <line x1="5" y1="20" x2="-15" y2="20">
+                            <animate attributeName="x2" values="5;-15;5" dur="0.5s" repeatCount="indefinite" />
+                        </line>
+                        <line x1="10" y1="35" x2="-5" y2="35">
+                            <animate attributeName="x2" values="10;-10;10" dur="0.7s" repeatCount="indefinite" />
+                        </line>
+                    </g>
+
+                    <!-- ボディ（荷台） -->
+                    <path d="M20,45 L20,12 C20,10 22,8 25,8 L65,8 C67,8 69,10 69,12 L69,45 Z"
+                        fill="rgba(255,255,255,0.15)" />
+                    <!-- 運転席 -->
+                    <path d="M69,20 L85,20 C90,20 93,23 95,28 L100,30 C103,31 105,33 105,36 L105,45 L69,45 Z"
+                        fill="rgba(255,255,255,0.15)" />
+                    <!-- 窓 -->
+                    <path d="M73,22 L83,22 C86,22 88,24 90,27 L93,30 L73,30 Z" fill="rgba(255,255,255,0.3)" />
+                    <line x1="83" y1="22" x2="83" y2="30" />
+                    <!-- ドアのライン -->
+                    <line x1="73" y1="30" x2="73" y2="45" opacity="0.5" />
+
+                    <!-- ライト -->
+                    <path d="M105,36 L108,36" stroke="white" stroke-width="3" />
+                    <path d="M20,36 L17,36" stroke="rgba(255,255,255,0.5)" stroke-width="3" />
+
+                    <!-- 荷台のライン -->
+                    <line x1="20" y1="30" x2="69" y2="30" opacity="0.4" />
+
+                    <!-- タイヤ左 -->
+                    <g>
+                        <circle cx="35" cy="45" r="8" fill="bg-primary" stroke="white" />
+                        <circle cx="35" cy="45" r="2.5" fill="white" />
+                        <line x1="35" y1="37" x2="35" y2="53" />
+                        <line x1="27" y1="45" x2="43" y2="45" />
+                        <animateTransform attributeName="transform" type="rotate" from="0 35 45" to="360 35 45"
+                            dur="0.6s" repeatCount="indefinite" />
+                    </g>
+                    <!-- タイヤ右 -->
+                    <g>
+                        <circle cx="85" cy="45" r="8" fill="bg-primary" stroke="white" />
+                        <circle cx="85" cy="45" r="2.5" fill="white" />
+                        <line x1="85" y1="37" x2="85" y2="53" />
+                        <line x1="77" y1="45" x2="93" y2="45" />
+                        <animateTransform attributeName="transform" type="rotate" from="0 85 45" to="360 85 45"
+                            dur="0.6s" repeatCount="indefinite" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container relative z-10 mx-auto px-4 max-w-4xl text-center" data-aos="zoom-in">
+            <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white text-primary mb-6 text-2xl shadow-lg">
+                <i class="fa-solid fa-yen-sign"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">料金について</h2>
+            <p class="leading-relaxed mb-10 font-medium text-[16px] md:text-lg text-left md:text-center drop-shadow-md">
+                料金は配送内容や距離、荷物の種類によって異なります。<br class="hidden md:block">
+                お客様に最適なプランをご案内いたしますので、<br class="hidden md:block">詳しいお見積りにつきましてはお気軽にお問い合わせください。
+            </p>
+            <a href="https://1st-transport.happytry.org/jump03.html"
+                class="inline-flex items-center gap-3 bg-white text-primary text-lg px-8 md:px-10 py-5 rounded-full font-bold shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300">
+                <span>無料お見積り・ご相談はこちら</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                <!-- Text Area -->
+                <div class="w-full lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
+                    <span class="text-primary font-bold tracking-widest uppercase mb-2 block">Message</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">お客様の大切なお荷物を、<br>確実にお届けするために</h2>
+
+                    <div class="bg-gray-50 p-[1.3rem] md:p-10 rounded-3xl shadow-sm relative border border-gray-100">
+                        <i class="fa-solid fa-quote-left absolute top-6 left-6 text-4xl text-primary-light"></i>
+                        <div class="relative z-10 space-y-6 text-gray-700 font-medium leading-relaxed pl-4 pt-4">
+                            <p>
+                                私たちは、単に荷物を運ぶだけではなく、<br class="hidden md:block">
+                                <strong class="text-primary">「信頼を運ぶ仕事」</strong>であると考えています。
+                            </p>
+                            <p>
+                                一件一件の配送に責任を持ち、<br class="hidden md:block">
+                                丁寧で確実な対応を心がけています。
+                            </p>
+                            <p>
+                                企業様・個人様問わず、<br class="hidden md:block">
+                                安心して任せていただける配送パートナーとして、<br class="hidden md:block">
+                                これからもサービス向上に努めてまいります。
+                            </p>
+                            <p class="pt-6 border-t border-gray-200 font-bold text-gray-900 mt-8">
+                                配送に関するご相談がございましたら、<br>
+                                ぜひお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Area -->
+                <div class="w-full lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
+                    <div
+                        class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] lg:aspect-square bg-gray-100">
+                        <img src="img/messagepic01.jpg" alt="Message 1"
+                            class="absolute inset-0 w-full h-full object-cover slide-bg-1">
+                        <img src="img/messagepic02.jpg" alt="Message 2"
+                            class="absolute inset-0 w-full h-full object-cover slide-bg-2">
+                        <img src="img/messagepic03.jpg" alt="Message 3"
+                            class="absolute inset-0 w-full h-full object-cover slide-bg-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">よくある質問</h2>
+                <div class="w-16 h-1.5 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex gap-4">
+                        <div class="text-primary font-black text-xl shrink-0">Q.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">対応エリアはどこですか？</h3>
+                            <div class="flex gap-4 mt-2">
+                                <div class="text-gray-400 font-black text-xl shrink-0">A.</div>
+                                <p class="text-gray-600">東京都内を中心に対応しております。<br>その他エリアについてもお気軽にご相談ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex gap-4">
+                        <div class="text-primary font-black text-xl shrink-0">Q.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">どのような配送に対応していますか？</h3>
+                            <div class="flex gap-4 mt-2">
+                                <div class="text-gray-400 font-black text-xl shrink-0">A.</div>
+                                <p class="text-gray-600">個人宅向けの宅配から、企業様の定期配送・スポット配送まで幅広く対応しております。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="flex gap-4">
+                        <div class="text-primary font-black text-xl shrink-0">Q.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">急ぎの依頼も可能ですか？</h3>
+                            <div class="flex gap-4 mt-2">
+                                <div class="text-gray-400 font-black text-xl shrink-0">A.</div>
+                                <p class="text-gray-600">状況により対応可能です。<br>まずはお気軽にお問い合わせください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="flex gap-4">
+                        <div class="text-primary font-black text-xl shrink-0">Q.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">定期的な依頼もできますか？</h3>
+                            <div class="flex gap-4 mt-2">
+                                <div class="text-gray-400 font-black text-xl shrink-0">A.</div>
+                                <p class="text-gray-600">はい、可能です。<br>継続的な配送にも対応しておりますのでご相談ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div class="flex gap-4">
+                        <div class="text-primary font-black text-xl shrink-0">Q.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">見積りは可能ですか？</h3>
+                            <div class="flex gap-4 mt-2">
+                                <div class="text-gray-400 font-black text-xl shrink-0">A.</div>
+                                <p class="text-gray-600">はい、可能です。<br>配送内容に応じてお見積りをご案内いたします。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruit Section -->
+    <section class="py-16 bg-primary-light/30 border-y border-primary-light" data-aos="fade-up">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">
+                <i class="fa-solid fa-users text-primary mr-2"></i>求人情報
+            </h2>
+            <p class="font-medium mb-6 text-gray-700">
+                一緒に働くスタッフを募集しています。<br>
+                未経験の方も歓迎しておりますので、<br class="md:hidden">詳細は下記よりご確認ください。
+            </p>
+            <a href="https://1st-transport.happytry.org/jump01.html" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-dark text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-gray-800 transition">
+                <span>採用情報を見る</span>
+                <i class="fa-solid fa-external-link-alt text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Footer / Contact Information -->
+    <footer id="contact" class="bg-dark text-gray-300 py-12 pb-24 md:pb-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center mb-10">
+
+                <!-- Company Info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6">合同会社１ｓｔ.運送</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 w-5 text-center"></i>
+                            <span>〒103-0026<br>東京都中央区日本橋兜町１７−１<br>日本橋ロイヤルプラザ 706</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock w-5 text-center"></i>
+                            <span>営業時間: 8:00～18:00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-regular fa-calendar-xmark w-5 text-center"></i>
+                            <span>定休日: なし</span>
+                        </li>
+                        <li class="flex items-center gap-3 pt-2">
+                            <i class="fa-brands fa-instagram w-5 text-center text-xl text-white"></i>
+                            <a href="https://1st-transport.happytry.org/jump02.html" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-primary transition font-bold">
+                                公式Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="bg-gray-800 p-8 rounded-3xl text-center border border-gray-700">
+                    <p class="text-white font-bold mb-4">お急ぎの方も、まずはご相談ください</p>
+                    <a href="tel:05054488107"
+                        class="block w-full bg-primary text-white text-2xl py-4 rounded-xl font-bold shadow-lg hover:bg-primary-hover transition mb-4">
+                        <i class="fa-solid fa-phone mr-2"></i>050-5448-8107
+                    </a>
+                    <p class="text-gray-400">時間外でも受付可能です</p>
+                </div>
+
+            </div>
+
+            <!-- Google Map -->
+            <div class="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-700">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6481.818927921228!2d139.7743479!3d35.6792312!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601887908d5b16cd%3A0xa416ff47053305ff!2z5ZCI5ZCM5Lya56S-77yR772T772ULumBi-mAgQ!5e0!3m2!1sja!2sjp!4v1778487809810!5m2!1sja!2sjp"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-500">
+                &copy; 1st.Transport LLC. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SP Fixed CTA -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full z-[60] bg-white/95 backdrop-blur-sm border-t border-gray-100 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] p-3 safe-area-bottom">
+        <a href="tel:05054488107"
+            class="flex items-center justify-center gap-3 bg-primary text-white py-4 rounded-2xl font-black text-lg shadow-[0_8px_20px_rgba(225,29,72,0.3)] active:scale-95 transition-all">
+            <i class="fa-solid fa-phone-volume text-xl animate-pulse"></i>
+            <span>050-5448-8107 に電話する</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-24 md:bottom-6 right-6 z-50 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary-hover hover:-translate-y-1 focus:outline-none">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+
+        // 右クリック禁止
+        document.oncontextmenu = function () { return false; };
+        // ドラッグ禁止
+        document.ondragstart = function () { return false; };
+    </script>
+</body>
+
+</html>

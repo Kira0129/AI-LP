@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* Reset & Base */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+
+/* Vertical Writing */
+.writing-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #A62626; }
+
+/* Layout Phases (PC Only) */
+@media (min-width: 1024px) {
+    .layout-phase-1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+    }
+    .sticky-sidebar {
+        width: 35%;
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+        z-index: 50;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 4rem 2rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .scroll-content-area {
+        width: 65%;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .layout-phase-2 {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 4rem;
+        position: relative;
+        z-index: 20;
+        background-color: #FFFFFF;
+    }
+    .break-out-full-width {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        width: 100vw;
+        max-width: 100vw;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+/* Global resets */
+img {
+    -webkit-user-drag: none;
+}
+section { padding-top: 5rem; padding-bottom: 5rem; }
+@media (min-width: 768px) {
+    section { padding-top: 10rem; padding-bottom: 10rem; }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 30px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.fade-in-up {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.fade-in-valid {
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes kenburns {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.1); }
+}
+.animate-kenburns {
+    animation: kenburns 10s ease-out infinite alternate;
+}
+
+/* Mobile Nav Animation */
+#hamburger-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+#hamburger-btn.active span:nth-child(2) { opacity: 0; }
+#hamburger-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+::selection { background: #A62626; color: #fff; }
+
+#fv {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+@media (min-width: 1024px) {
+    #fv { aspect-ratio: auto; height: 100vh; height: 100dvh; }
+}
+
+/* Japanese Pattern Background (Casual Dark) */
+.bg-japanese-pattern {
+    background-color: #F9F6F0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c-5.523 0-10-4.477-10-10S14.477 0 20 0s10 4.477 10 10-4.477 10-10 10zm0 20c-5.523 0-10-4.477-10-10S14.477 20 20 20s10 4.477 10 10-4.477 10-10 10zM0 20C0 14.477 4.477 10 10 10s10 4.477 10 10-4.477 10-10 10S0 25.523 0 20zm40 0c0-5.523-4.477-10-10-10S20 14.477 20 20s4.477 10 10 10 10-4.477 10-10z' fill='%232C1A12' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.bg-dark-pattern {
+    background-color: #1A1A1A;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c-5.523 0-10-4.477-10-10S14.477 0 20 0s10 4.477 10 10-4.477 10-10 10zm0 20c-5.523 0-10-4.477-10-10S14.477 20 20 20s10 4.477 10 10-4.477 10-10 10zM0 20C0 14.477 4.477 10 10 10s10 4.477 10 10-4.477 10-10 10S0 25.523 0 20zm40 0c0-5.523-4.477-10-10-10S20 14.477 20 20s4.477 10 10 10 10-4.477 10-10z' fill='%23FFFFFF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}

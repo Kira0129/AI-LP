@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 170.1 170.1">
+  <!-- Generator: Adobe Illustrator 29.8.7, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: #f9b700;
+        stroke-width: 1.2px;
+      }
+
+      .st0, .st1, .st2 {
+        fill: none;
+      }
+
+      .st0, .st1, .st3 {
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        stroke: #dfba33;
+      }
+
+      .st1, .st3 {
+        stroke-width: 1.4px;
+      }
+
+      .st4 {
+        fill: #fff;
+      }
+
+      .st5 {
+        mask: url(#mask);
+      }
+
+      .st6 {
+        fill: url(#_名称未設定グラデーション_421);
+      }
+
+      .st7 {
+        fill: url(#_名称未設定グラデーション_14);
+      }
+
+      .st3 {
+        fill: url(#_名称未設定グラデーション_11);
+        stroke: url(#_名称未設定グラデーション_101);
+      }
+
+      .st8 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st9 {
+        fill: url(#_名称未設定グラデーション_42);
+      }
+
+      .st10 {
+        fill: url(#_名称未設定グラデーション_3);
+      }
+
+      .st11 {
+        fill: url(#_名称未設定グラデーション_10);
+      }
+
+      .st12 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_42" data-name="名称未設定グラデーション 42" x1="-51.5" y1="308.8" x2="1" y2="256.3" gradientTransform="translate(201.1 -115.9) rotate(25)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005bac"/>
+      <stop offset=".3" stop-color="#0081cc"/>
+      <stop offset="1" stop-color="#005bac"/>
+    </linearGradient>
+    <clipPath id="clippath">
+      <polygon class="st2" points="59 168.9 47.7 153.3 28.5 154.7 58.6 90.1 89.1 104.3 59 168.9"/>
+    </clipPath>
+    <linearGradient id="_名称未設定グラデーション_421" data-name="名称未設定グラデーション 42" x1="476.8" y1="62.5" x2="529.3" y2="10" gradientTransform="translate(551.8 -115.9) rotate(155) scale(1 -1)" xlink:href="#_名称未設定グラデーション_42"/>
+    <clipPath id="clippath-1">
+      <polygon class="st2" points="111.1 168.9 122.4 153.3 141.6 154.7 111.4 90.1 80.9 104.3 111.1 168.9"/>
+    </clipPath>
+    <linearGradient id="_名称未設定グラデーション_3" data-name="名称未設定グラデーション 3" x1="35.8" y1="27" x2="134.2" y2="125.4" gradientTransform="translate(78.8 -37.8) rotate(45)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e8d84b"/>
+      <stop offset="1" stop-color="#daa726"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_10" data-name="名称未設定グラデーション 10" x1="40.6" y1="31.7" x2="129.5" y2="120.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#daa726"/>
+      <stop offset=".3" stop-color="#e8d74a"/>
+      <stop offset=".7" stop-color="#fff347"/>
+      <stop offset="1" stop-color="#e8d84b"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_11" data-name="名称未設定グラデーション 11" x1="44.3" y1="35.5" x2="125.7" y2="116.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e8d84b"/>
+      <stop offset=".3" stop-color="#fff347"/>
+      <stop offset=".7" stop-color="#e8d74a"/>
+      <stop offset="1" stop-color="#daa726"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_101" data-name="名称未設定グラデーション 10" x1="26.8" y1="76.2" x2="143.3" y2="76.2" xlink:href="#_名称未設定グラデーション_10"/>
+    <linearGradient id="_名称未設定グラデーション_14" data-name="名称未設定グラデーション 14" x1="65.7" y1="38.8" x2="75.9" y2="58.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cbcbcc"/>
+      <stop offset=".3" stop-color="#949090"/>
+      <stop offset=".6" stop-color="#57504e"/>
+      <stop offset=".9" stop-color="#312724"/>
+      <stop offset="1" stop-color="#231815"/>
+    </linearGradient>
+    <mask id="mask" x="30.2" y="21.3" width="103.1" height="73.4" maskUnits="userSpaceOnUse">
+      <path class="st7" d="M78.8,59.5c18.8-8.2,37.9-11.1,54.5-9.5-9.3-17.1-27.4-28.8-48.2-28.8-30.2,0-54.9,24.6-54.9,54.9s1.1,12.7,3.2,18.5c10-13.9,25.8-26.6,45.4-35.1Z"/>
+    </mask>
+  </defs>
+  <g>
+    <polygon class="st9" points="59 168.9 47.7 153.3 28.5 154.7 58.6 90.1 89.1 104.3 59 168.9"/>
+    <g class="st12">
+      <line class="st0" x1="87" y1="98" x2="54.8" y2="167"/>
+      <line class="st0" x1="32.6" y1="156.7" x2="64.8" y2="87.7"/>
+    </g>
+    <polygon class="st6" points="111.1 168.9 122.4 153.3 141.6 154.7 111.4 90.1 80.9 104.3 111.1 168.9"/>
+    <g class="st8">
+      <line class="st0" x1="83.1" y1="98" x2="115.2" y2="167"/>
+      <line class="st0" x1="137.4" y1="156.7" x2="105.3" y2="87.7"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <circle class="st10" cx="85" cy="76.2" r="69.6" transform="translate(-28.9 82.4) rotate(-45)"/>
+      <path class="st11" d="M85,139c-34.7,0-62.9-28.2-62.9-62.9S50.4,13.3,85,13.3s62.9,28.2,62.9,62.9-28.2,62.9-62.9,62.9Z"/>
+      <path class="st3" d="M85,133.7c-31.7,0-57.6-25.8-57.6-57.6s25.8-57.6,57.6-57.6,57.6,25.8,57.6,57.6-25.8,57.6-57.6,57.6Z"/>
+      <g>
+        <line class="st1" x1="85" y1="13.3" x2="85" y2="9.2"/>
+        <line class="st1" x1="81.1" y1="13.4" x2="80.8" y2="9.3"/>
+        <line class="st1" x1="77.2" y1="13.8" x2="76.6" y2="9.7"/>
+        <line class="st1" x1="73.3" y1="14.4" x2="72.5" y2="10.3"/>
+        <line class="st1" x1="69.4" y1="15.3" x2="68.4" y2="11.3"/>
+        <line class="st1" x1="65.6" y1="16.4" x2="64.3" y2="12.4"/>
+        <line class="st1" x1="61.9" y1="17.7" x2="60.4" y2="13.9"/>
+        <line class="st1" x1="58.3" y1="19.3" x2="56.5" y2="15.5"/>
+        <line class="st1" x1="54.7" y1="21.1" x2="52.8" y2="17.4"/>
+        <line class="st1" x1="51.3" y1="23.1" x2="49.1" y2="19.6"/>
+        <line class="st1" x1="48.1" y1="25.3" x2="45.7" y2="22"/>
+        <line class="st1" x1="45" y1="27.7" x2="42.3" y2="24.5"/>
+        <line class="st1" x1="42" y1="30.3" x2="39.2" y2="27.3"/>
+        <line class="st1" x1="39.2" y1="33.1" x2="36.2" y2="30.3"/>
+        <line class="st1" x1="36.6" y1="36.1" x2="33.4" y2="33.4"/>
+        <line class="st1" x1="34.2" y1="39.2" x2="30.8" y2="36.8"/>
+        <line class="st1" x1="31.9" y1="42.5" x2="28.5" y2="40.3"/>
+        <line class="st1" x1="29.9" y1="45.9" x2="26.3" y2="43.9"/>
+        <line class="st1" x1="28.1" y1="49.4" x2="24.4" y2="47.6"/>
+        <line class="st1" x1="26.6" y1="53" x2="22.7" y2="51.5"/>
+        <line class="st1" x1="25.2" y1="56.7" x2="21.3" y2="55.5"/>
+        <line class="st1" x1="24.1" y1="60.5" x2="20.1" y2="59.5"/>
+        <line class="st1" x1="23.3" y1="64.4" x2="19.2" y2="63.6"/>
+        <line class="st1" x1="22.7" y1="68.3" x2="18.6" y2="67.8"/>
+        <line class="st1" x1="22.3" y1="72.2" x2="18.2" y2="72"/>
+        <line class="st1" x1="22.2" y1="76.2" x2="18" y2="76.2"/>
+        <line class="st1" x1="22.3" y1="80.1" x2="18.2" y2="80.4"/>
+        <line class="st1" x1="22.7" y1="84" x2="18.6" y2="84.6"/>
+        <line class="st1" x1="23.3" y1="87.9" x2="19.2" y2="88.7"/>
+        <line class="st1" x1="24.1" y1="91.8" x2="20.1" y2="92.8"/>
+        <line class="st1" x1="25.2" y1="95.6" x2="21.3" y2="96.9"/>
+        <line class="st1" x1="26.6" y1="99.3" x2="22.7" y2="100.8"/>
+        <line class="st1" x1="28.1" y1="102.9" x2="24.4" y2="104.7"/>
+        <line class="st1" x1="29.9" y1="106.5" x2="26.3" y2="108.4"/>
+        <line class="st1" x1="31.9" y1="109.9" x2="28.5" y2="112.1"/>
+        <line class="st1" x1="34.2" y1="113.1" x2="30.8" y2="115.5"/>
+        <line class="st1" x1="36.6" y1="116.2" x2="33.4" y2="118.9"/>
+        <line class="st1" x1="39.2" y1="119.2" x2="36.2" y2="122"/>
+        <line class="st1" x1="42" y1="122" x2="39.2" y2="125"/>
+        <line class="st1" x1="45" y1="124.6" x2="42.3" y2="127.8"/>
+        <line class="st1" x1="48.1" y1="127" x2="45.7" y2="130.4"/>
+        <line class="st1" x1="51.3" y1="129.3" x2="49.1" y2="132.7"/>
+        <line class="st1" x1="54.7" y1="131.3" x2="52.8" y2="134.9"/>
+        <line class="st1" x1="58.3" y1="133.1" x2="56.5" y2="136.8"/>
+        <line class="st1" x1="61.9" y1="134.6" x2="60.4" y2="138.5"/>
+        <line class="st1" x1="65.6" y1="136" x2="64.3" y2="139.9"/>
+        <line class="st1" x1="69.4" y1="137.1" x2="68.4" y2="141.1"/>
+        <line class="st1" x1="73.3" y1="137.9" x2="72.5" y2="142"/>
+        <line class="st1" x1="77.2" y1="138.5" x2="76.6" y2="142.6"/>
+        <line class="st1" x1="81.1" y1="138.9" x2="80.8" y2="143"/>
+        <line class="st1" x1="85" y1="139" x2="85" y2="143.2"/>
+        <line class="st1" x1="89" y1="138.9" x2="89.2" y2="143"/>
+        <line class="st1" x1="92.9" y1="138.5" x2="93.4" y2="142.6"/>
+        <line class="st1" x1="96.8" y1="137.9" x2="97.6" y2="142"/>
+        <line class="st1" x1="100.7" y1="137.1" x2="101.7" y2="141.1"/>
+        <line class="st1" x1="104.5" y1="136" x2="105.7" y2="139.9"/>
+        <line class="st1" x1="108.2" y1="134.6" x2="109.7" y2="138.5"/>
+        <line class="st1" x1="111.8" y1="133.1" x2="113.6" y2="136.8"/>
+        <line class="st1" x1="115.3" y1="131.3" x2="117.3" y2="134.9"/>
+        <line class="st1" x1="118.7" y1="129.3" x2="120.9" y2="132.7"/>
+        <line class="st1" x1="122" y1="127" x2="124.4" y2="130.4"/>
+        <line class="st1" x1="125.1" y1="124.6" x2="127.8" y2="127.8"/>
+        <line class="st1" x1="128.1" y1="122" x2="130.9" y2="125"/>
+        <line class="st1" x1="130.9" y1="119.2" x2="133.9" y2="122"/>
+        <line class="st1" x1="133.5" y1="116.2" x2="136.7" y2="118.9"/>
+        <line class="st1" x1="135.9" y1="113.1" x2="139.2" y2="115.5"/>
+        <line class="st1" x1="138.1" y1="109.9" x2="141.6" y2="112.1"/>
+        <line class="st1" x1="140.1" y1="106.5" x2="143.8" y2="108.4"/>
+        <line class="st1" x1="141.9" y1="102.9" x2="145.7" y2="104.7"/>
+        <line class="st1" x1="143.5" y1="99.3" x2="147.3" y2="100.8"/>
+        <line class="st1" x1="144.8" y1="95.6" x2="148.8" y2="96.9"/>
+        <line class="st1" x1="145.9" y1="91.8" x2="149.9" y2="92.8"/>
+        <line class="st1" x1="146.8" y1="87.9" x2="150.9" y2="88.7"/>
+        <line class="st1" x1="147.4" y1="84" x2="151.5" y2="84.6"/>
+        <line class="st1" x1="147.8" y1="80.1" x2="151.9" y2="80.4"/>
+        <line class="st1" x1="147.9" y1="76.2" x2="152" y2="76.2"/>
+        <line class="st1" x1="147.8" y1="72.2" x2="151.9" y2="72"/>
+        <line class="st1" x1="147.4" y1="68.3" x2="151.5" y2="67.8"/>
+        <line class="st1" x1="146.8" y1="64.4" x2="150.9" y2="63.6"/>
+        <line class="st1" x1="145.9" y1="60.5" x2="149.9" y2="59.5"/>
+        <line class="st1" x1="144.8" y1="56.7" x2="148.8" y2="55.5"/>
+        <line class="st1" x1="143.5" y1="53" x2="147.3" y2="51.5"/>
+        <line class="st1" x1="141.9" y1="49.4" x2="145.7" y2="47.6"/>
+        <line class="st1" x1="140.1" y1="45.9" x2="143.8" y2="43.9"/>
+        <line class="st1" x1="138.1" y1="42.5" x2="141.6" y2="40.3"/>
+        <line class="st1" x1="135.9" y1="39.2" x2="139.2" y2="36.8"/>
+        <line class="st1" x1="133.5" y1="36.1" x2="136.7" y2="33.4"/>
+        <line class="st1" x1="130.9" y1="33.1" x2="133.9" y2="30.3"/>
+        <line class="st1" x1="128.1" y1="30.3" x2="130.9" y2="27.3"/>
+        <line class="st1" x1="125.1" y1="27.7" x2="127.8" y2="24.5"/>
+        <line class="st1" x1="122" y1="25.3" x2="124.4" y2="22"/>
+        <line class="st1" x1="118.7" y1="23.1" x2="120.9" y2="19.6"/>
+        <line class="st1" x1="115.3" y1="21.1" x2="117.3" y2="17.4"/>
+        <line class="st1" x1="111.8" y1="19.3" x2="113.6" y2="15.5"/>
+        <line class="st1" x1="108.2" y1="17.7" x2="109.7" y2="13.9"/>
+        <line class="st1" x1="104.5" y1="16.4" x2="105.7" y2="12.4"/>
+        <line class="st1" x1="100.7" y1="15.3" x2="101.7" y2="11.3"/>
+        <line class="st1" x1="96.8" y1="14.4" x2="97.6" y2="10.3"/>
+        <line class="st1" x1="92.9" y1="13.8" x2="93.4" y2="9.7"/>
+        <line class="st1" x1="89" y1="13.4" x2="89.2" y2="9.3"/>
+      </g>
+    </g>
+    <g class="st5">
+      <path class="st4" d="M78.8,59.5c18.8-8.2,37.9-11.1,54.5-9.5-9.3-17.1-27.4-28.8-48.2-28.8-30.2,0-54.9,24.6-54.9,54.9s1.1,12.7,3.2,18.5c10-13.9,25.8-26.6,45.4-35.1Z"/>
+    </g>
+  </g>
+</svg>

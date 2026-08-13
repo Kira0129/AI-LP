@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Global Settings */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+    background: #C5A059 !important;
+    /* brand-gold */
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #C5A059 !important;
+}
+
+/* FV Fade Transition Smoothness */
+.swiper-slide {
+    transition-timing-function: linear;
+}
+
+/* Dotted Border for Price List */
+.dott-border {
+    border-bottom: 2px dotted #DEB887;
+    /* Light brown/gold */
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Hover Effects for Images */
+.gallery-img {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    pointer-events: auto;
+    /* Allow clicking on gallery images */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Utility for Heading Text Stroke if needed */
+.text-stroke {
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent image dragging */
+img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* FV responsive adjustments (SP) */
+@media (max-width: 767px) {
+    #fv {
+        height: auto;
+    }
+
+    #fv .fv-swiper,
+    #fv .fv-swiper .swiper-wrapper,
+    #fv .fv-swiper .swiper-slide {
+        height: auto;
+    }
+
+    #fv img {
+        width: 100%;
+        height: auto !important;
+        display: block;
+    }
+}
