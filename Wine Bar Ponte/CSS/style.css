@@ -132,11 +132,19 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
   margin-bottom: 40px; line-height: 2; font-weight: 300;
 }
 .fv-logo {
-  font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 6vw, 80px);
-  font-weight: 300; color: var(--brown-dark); letter-spacing: 0.15em;
-  margin-bottom: 48px; line-height: 1.2;
+  margin-bottom: 48px;
+  max-width: 280px;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(15px);
 }
-.fv-logo .char { transition-delay: calc(0.06s * var(--char-index)); }
+.fv-logo.is-active {
+  transform: translateY(0);
+}
+.fv-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .fv-read-more { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: auto; }
 .fv-read-more-line { width: 1px; height: 0; background-color: var(--brown-light); }

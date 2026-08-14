@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // サブコピーは一文字ずつではなく、フェードインさせるため分割しない
   // splitTextToChars(fvElements.sub); 
   
-  splitTextToChars(fvElements.logo);
+  // splitTextToChars(fvElements.logo);
 
   const startFVAnimation = () => {
     if (fvElements.catch) fvElements.catch.classList.add('is-active');
