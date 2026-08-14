@@ -143,3 +143,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// TOPへ戻るボタンの制御
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        // 300px以上スクロールしたらボタンを表示
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            backToTopBtn.classList.add('opacity-100');
+        } else {
+            // それ以外は非表示
+            backToTopBtn.classList.remove('opacity-100');
+            backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
