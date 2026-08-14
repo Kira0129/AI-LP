@@ -143,4 +143,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // iOS対応 JSパララックス (背景画像)
+  const parallaxBgElements = document.querySelectorAll('.parallax-bg');
+  if (parallaxBgElements.length > 0) {
+    window.addEventListener('scroll', () => {
+      let scrollY = window.pageYOffset;
+      parallaxBgElements.forEach(el => {
+        const speed = el.dataset.speed || 0.2;
+        const parent = el.parentElement.parentElement; // parentElement は div.absolute... になるため、その上の section を取得
+        if (!parent) return;
+        const rect = parent.getBoundingClientRect();
+        
+        // セクションが画面内にあるか判定
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          // 要素の画面上の位置に応じたY移動量
+          // 画面中央付近で0になるように調整
+          const yPos = (rect.top - (window.innerHeight - rect.height) / 2) * speed;
+          el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+        }
+      });
+    });
+  }
 });
