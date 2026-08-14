@@ -94,29 +94,32 @@
                     <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-6">白龍</h2>
                 </div>
 
-                <!-- サブキャッチ＆メインキャッチ（縦書き、小さく、右寄せ） -->
-                <div class="flex space-x-6 md:space-x-12 md:absolute md:top-1/4 md:right-10">
-                    <div class="vertical-text text-white text-xs md:text-xs leading-[2.5] tracking-[0.2em] font-light fade-in"
-                        style="transition-delay: 300ms;">
-                        <p>風情ある二階堂の庭を眺めながら、</p>
-                        <p>旬の食材を生かした</p>
-                        <p>月替わりのコース料理をご堪能ください。</p>
+                <!-- サブキャッチ＆メインキャッチ（縦書き、小さく、右寄せ）とスクロール線 -->
+                <div class="flex flex-col items-center md:absolute md:top-[15%] lg:top-[20%] md:right-12 lg:right-24">
+                    <div class="flex space-x-6 md:space-x-12 mb-10 md:mb-16">
+                        <div class="vertical-text text-white text-xs md:text-xs leading-[2.5] tracking-[0.2em] font-light fade-in"
+                            style="transition-delay: 300ms;">
+                            <p>風情ある二階堂の庭を眺めながら、</p>
+                            <p>旬の食材を生かした</p>
+                            <p>月替わりのコース料理をご堪能ください。</p>
+                        </div>
+
+                        <div
+                            class="vertical-text text-white text-lg md:text-xl lg:text-2xl leading-[2.5] tracking-[0.4em] font-light fade-in">
+                            <p>古都鎌倉の静寂の中で、</p>
+                            <p>　　　四季を味わう日本料理</p>
+                        </div>
                     </div>
 
-                    <div
-                        class="vertical-text text-white text-lg md:text-xl lg:text-2xl leading-[2.5] tracking-[0.4em] font-light fade-in">
-                        <p>古都鎌倉の静寂の中で、</p>
-                        <p>　　　四季を味わう日本料理</p>
+                    <!-- スクロールダウン（キャッチコピーの下で視線を誘導） -->
+                    <div class="flex flex-col items-center fade-in" style="transition-delay: 800ms;">
+                        <div class="w-px h-20 md:h-28 bg-white bg-opacity-20 relative overflow-hidden">
+                            <div class="w-full h-full bg-white absolute top-0 left-0 animate-[scroll-down_2.5s_ease-in-out_infinite]">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- スクロールダウン（線のみで上品に表現） -->
-        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-            <div class="w-px h-24 md:h-32 bg-white bg-opacity-20 relative overflow-hidden">
-                <div class="w-full h-full bg-white absolute top-0 left-0 animate-[scroll-down_2.5s_ease-in-out_infinite]">
-                </div>
             </div>
         </div>
     </section>
