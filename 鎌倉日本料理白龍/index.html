@@ -324,68 +324,82 @@
 
         <!-- VOICE セクション -->
         <section id="voice" class="bg-[var(--section-bg-alt)] py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-2xl md:text-3xl section-title fade-in">お客様の声<span>VOICE</span></h2>
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-2xl md:text-3xl section-title fade-in mb-16">お客様の声<span>VOICE</span></h2>
                 
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Review 1 -->
-                    <div class="bg-white p-8 shadow-sm border border-gray-100 fade-in flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <div class="text-[var(--gold-accent)] tracking-widest text-lg">★★★★★</div>
-                        </div>
-                        <h4 class="font-bold text-[var(--text-main)] text-base mb-6 border-b border-[#e2d5c8] pb-4">高橋薫 様</h4>
-                        <div class="relative flex-grow flex flex-col">
-                            <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                <p>法事にて初めて利用させて頂きました。<br>
-                                コース料理になっていますが、どの料理も美味しかったです。<br>
-                                普段使い出来る金額ではないですが、美味しい料理は勿論、落ち着いた雰囲気、丁寧な接客で、行事などの際にはお薦めのお店でした。<br>
-                                ご馳走様でした。</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    
+                    <!-- 左カラム：スティッキー画像 (PC表示のみ) -->
+                    <div class="w-full relative fade-in hidden lg:block h-full">
+                        <div class="sticky top-32 w-full">
+                            <div class="aspect-[3/4] overflow-hidden shadow-sm border border-gray-200">
+                                <img src="https://images.unsplash.com/photo-1616075677933-4f51e04dbb2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本料理のイメージ" class="w-full h-full object-cover">
                             </div>
-                            <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                続きを読む
-                            </button>
                         </div>
                     </div>
 
-                    <!-- Review 2 -->
-                    <div class="bg-white p-8 shadow-sm border border-gray-100 fade-in flex flex-col h-full" style="transition-delay: 150ms;">
-                        <div class="flex items-center mb-4">
-                            <div class="text-[var(--gold-accent)] tracking-widest text-lg">★★★★★</div>
-                        </div>
-                        <h4 class="font-bold text-[var(--text-main)] text-base mb-6 border-b border-[#e2d5c8] pb-4">ふさふさほびっと。 様</h4>
-                        <div class="relative flex-grow flex flex-col">
-                            <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                <p>鎌倉にある和食料理店。<br>
-                                ミシュランの星を獲得した事があるよう。<br><br>
-                                鎌倉の中の方にあるため道路は狭く水路もあり大型の車だと冗談じゃなく脱輪する恐れあり。<br>
-                                普段運転しない方は無理して車では行かない方が良さそう。<br><br>
-                                決して大きなお店ではないが、落ち着きのある趣で庭に面した部分は大きな窓ガラスを使用して開放感を出している。カウンター、テーブル、個室。<br><br>
-                                料理はどれも見た目から味まで洗練されていて気持ちよく箸をすすめる事ができる。お酒もこだわり選び抜いた物。<br><br>
-                                特に蕎麦は板長が工夫を凝らしながら打ったものでとても美味。<br><br>
-                                是非また足を運んで舌鼓を打ちたい。</p>
+                    <!-- 右カラム：口コミコンテンツ -->
+                    <div class="w-full space-y-8 fade-in flex flex-col">
+                        
+                        <!-- Review 1 -->
+                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
+                            <h3 class="font-bold text-[var(--text-main)] text-lg mb-6 flex justify-between items-center">
+                                高橋薫 様
+                                <span class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
+                            </h3>
+                            <div class="relative">
+                                <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
+                                    <p>法事にて初めて利用させて頂きました。<br>
+                                    コース料理になっていますが、どの料理も美味しかったです。<br>
+                                    普段使い出来る金額ではないですが、美味しい料理は勿論、落ち着いた雰囲気、丁寧な接客で、行事などの際にはお薦めのお店でした。<br>
+                                    ご馳走様でした。</p>
+                                </div>
+                                <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
+                                    続きを読む
+                                </button>
                             </div>
-                            <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                続きを読む
-                            </button>
                         </div>
-                    </div>
 
-                    <!-- Review 3 -->
-                    <div class="bg-white p-8 shadow-sm border border-gray-100 fade-in flex flex-col h-full" style="transition-delay: 300ms;">
-                        <div class="flex items-center mb-4">
-                            <div class="text-[var(--gold-accent)] tracking-widest text-lg">★★★★★</div>
-                        </div>
-                        <h4 class="font-bold text-[var(--text-main)] text-base mb-6 border-b border-[#e2d5c8] pb-4">ゾウ 様</h4>
-                        <div class="relative flex-grow flex flex-col">
-                            <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                <p>お料理は細かな工夫と丁寧な仕事に毎回感動させられます。<br><br>
-                                一回海老のアレルギーと話したら以来ずっと克服した今もお料理の海老は大丈夫か聞いて下さいます。そのくらいお客様の事をしっかり記憶していてくださいます。<br><br>
-                                また来年、楽しみにして伺います。<br>
-                                ごちそうさまでした。</p>
+                        <!-- Review 2 -->
+                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
+                            <h3 class="font-bold text-[var(--text-main)] text-lg mb-6 flex justify-between items-center">
+                                ふさふさほびっと。 様
+                                <span class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
+                            </h3>
+                            <div class="relative">
+                                <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
+                                    <p>鎌倉にある和食料理店。<br>
+                                    ミシュランの星を獲得した事があるよう。<br><br>
+                                    鎌倉の中の方にあるため道路は狭く水路もあり大型の車だと冗談じゃなく脱輪する恐れあり。<br>
+                                    普段運転しない方は無理して車では行かない方が良さそう。<br><br>
+                                    決して大きなお店ではないが、落ち着きのある趣で庭に面した部分は大きな窓ガラスを使用して開放感を出している。カウンター、テーブル、個室。<br><br>
+                                    料理はどれも見た目から味まで洗練されていて気持ちよく箸をすすめる事ができる。お酒もこだわり選び抜いた物。<br><br>
+                                    特に蕎麦は板長が工夫を凝らしながら打ったものでとても美味。<br><br>
+                                    是非また足を運んで舌鼓を打ちたい。</p>
+                                </div>
+                                <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
+                                    続きを読む
+                                </button>
                             </div>
-                            <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                続きを読む
-                            </button>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
+                            <h3 class="font-bold text-[var(--text-main)] text-lg mb-6 flex justify-between items-center">
+                                ゾウ 様
+                                <span class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
+                            </h3>
+                            <div class="relative">
+                                <div class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
+                                    <p>お料理は細かな工夫と丁寧な仕事に毎回感動させられます。<br><br>
+                                    一回海老のアレルギーと話したら以来ずっと克服した今もお料理の海老は大丈夫か聞いて下さいます。そのくらいお客様の事をしっかり記憶していてくださいます。<br><br>
+                                    また来年、楽しみにして伺います。<br>
+                                    ごちそうさまでした。</p>
+                                </div>
+                                <button class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
+                                    続きを読む
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
