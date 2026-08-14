@@ -182,7 +182,7 @@ section { padding: 120px 56px; }
   color: var(--brown-light); margin-bottom: 20px;
 }
 .h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: clamp(36px, 5vw, 54px);
   font-weight: 300; letter-spacing: 0.05em; line-height: 1.2;
   color: var(--brown-dark);
@@ -316,7 +316,7 @@ section { padding: 120px 56px; }
 
 .menu-category { margin-bottom: 64px; }
 .menu-cat-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 32px; color: var(--brown-dark);
   border-bottom: 1px solid var(--brown-light);
   padding-bottom: 16px; margin-bottom: 32px;
