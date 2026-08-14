@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   background: var(--white);
   color: var(--brown-dark);
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
@@ -123,7 +123,7 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
 }
 
 .fv-catch {
-  font-family: 'Noto Serif JP', serif; font-size: clamp(26px, 3vw, 40px); font-weight: 300;
+  font-family: 'Noto Sans JP', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 300;
   line-height: 1.6; color: var(--brown-dark); letter-spacing: 0.1em; margin-bottom: 24px;
 }
 .fv-catch-line { display: block; }
@@ -188,7 +188,7 @@ section { padding: 120px 56px; }
   color: var(--brown-dark);
 }
 .h2-jp {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 300; letter-spacing: 0.1em; line-height: 1.4;
   margin-top: 8px;
@@ -323,7 +323,7 @@ section { padding: 120px 56px; }
   display: flex; flex-direction: column; gap: 8px;
 }
 .menu-cat-title span {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 16px; font-weight: 300; letter-spacing: 0.1em; color: var(--gray);
 }
 
