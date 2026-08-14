@@ -129,16 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof Swiper !== 'undefined') {
         new Swiper('.voice-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
             loop: true,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
+            speed: 5000,
             autoplay: {
-                delay: 3000,
+                delay: 0,
                 disableOnInteraction: false,
             },
-            speed: 1500,
+            breakpoints: {
+                768: { slidesPerView: 1.2, spaceBetween: 32 }
+            }
         });
     }
 });
