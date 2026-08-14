@@ -151,12 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// TOPへ戻るボタンの制御
+// TOPへ戻るボタンと追従CTAの制御
 const backToTopBtn = document.getElementById('back-to-top');
+const spFloatingCta = document.getElementById('sp-floating-cta');
 
-if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-        // 300px以上スクロールしたらボタンを表示
+window.addEventListener('scroll', () => {
+    // 300px以上スクロールしたらTOPへ戻るボタンを表示
+    if (backToTopBtn) {
         if (window.scrollY > 300) {
             backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
             backToTopBtn.classList.add('opacity-100');
@@ -165,8 +166,21 @@ if (backToTopBtn) {
             backToTopBtn.classList.remove('opacity-100');
             backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
         }
-    });
+    }
 
+    // FV（画面の高さの半分程度）を過ぎたらSP用追従CTAを表示
+    if (spFloatingCta) {
+        if (window.scrollY > window.innerHeight * 0.5) {
+            spFloatingCta.classList.remove('opacity-0', 'pointer-events-none');
+            spFloatingCta.classList.add('opacity-100', 'pointer-events-auto');
+        } else {
+            spFloatingCta.classList.remove('opacity-100', 'pointer-events-auto');
+            spFloatingCta.classList.add('opacity-0', 'pointer-events-none');
+        }
+    }
+});
+
+if (backToTopBtn) {
     backToTopBtn.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({
