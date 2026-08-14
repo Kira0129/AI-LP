@@ -247,26 +247,27 @@
                 </div>
             </div>
 
-            <!-- 画像エリア -->
-            <div class="relative w-full max-w-4xl mx-auto pt-4 pb-[15%] md:pb-[10%] mb-16 lg:mb-24">
+            <!-- 画像エリア（重ならない配置） -->
+            <div class="w-full max-w-4xl mx-auto mb-16 lg:mb-24 flex flex-col gap-12 md:gap-16 pt-4">
                 <!-- Image 1: Top Left -->
-                <div class="w-[70%] md:w-[50%] z-10 fade-in shadow-md relative">
+                <div class="w-[85%] md:w-[55%] fade-in shadow-sm">
                     <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真1" class="w-full aspect-[4/3] object-cover rounded-sm">
                 </div>
                 
-                <!-- Image 2: Middle Right, overlapping 1 -->
-                <div class="w-[80%] md:w-[65%] z-20 fade-in shadow-lg relative -mt-[20%] md:-mt-[25%] ml-auto" style="transition-delay: 150ms;">
+                <!-- Image 2: Middle Right -->
+                <div class="w-[90%] md:w-[70%] fade-in shadow-sm ml-auto" style="transition-delay: 150ms;">
                     <img src="https://images.unsplash.com/photo-1580828369066-5e58bd83a31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="料理写真2" class="w-full aspect-[16/9] md:aspect-[2/1] object-cover rounded-sm">
                 </div>
                 
-                <!-- Image 3: Bottom Left, overlapping 2 -->
-                <div class="w-[55%] md:w-[45%] z-30 fade-in shadow-md relative -mt-[15%] md:-mt-[20%] ml-[5%] md:ml-[10%]" style="transition-delay: 300ms;">
-                    <img src="https://images.unsplash.com/photo-1563821010373-3e117cc888fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真3" class="w-full aspect-square object-cover rounded-sm">
-                </div>
+                <!-- Image 3 & Horizontal Catchcopy -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 relative fade-in" style="transition-delay: 300ms;">
+                    <!-- Image 3: Bottom Left -->
+                    <div class="w-[75%] md:w-[45%] shadow-sm ml-[5%] md:ml-[10%]">
+                        <img src="https://images.unsplash.com/photo-1563821010373-3e117cc888fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真3" class="w-full aspect-square object-cover rounded-sm">
+                    </div>
 
-                <!-- Horizontal Catchcopy: Bottom Right -->
-                <div class="absolute bottom-0 right-0 md:right-[5%] z-30 fade-in" style="transition-delay: 450ms;">
-                    <div class="text-[var(--text-main)] font-serif leading-loose tracking-[0.2em] text-xs md:text-sm border-l border-[var(--gold-accent)] pl-4 md:pl-6 bg-white bg-opacity-80 md:bg-transparent p-4 md:p-0">
+                    <!-- Horizontal Catchcopy: Bottom Right -->
+                    <div class="text-[var(--text-main)] font-serif leading-loose tracking-[0.2em] text-xs md:text-sm border-l border-[var(--gold-accent)] pl-4 md:pl-6 ml-auto mr-4 md:mr-[5%] md:mb-8">
                         <p>厳選された旬の食材。</p>
                         <p>伝統と技が織りなす、</p>
                         <p>至福の味わいをご堪能ください。</p>
