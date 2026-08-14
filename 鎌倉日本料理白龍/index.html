@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鎌倉 日本料理 白龍 | 古都鎌倉の静寂の中で、四季を味わう日本料理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold tracking-widest text-white transition-colors duration-500" id="header-logo">
+                <a href="#">白龍</a>
+            </h1>
+            
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8 text-white transition-colors duration-500" id="header-nav">
+                    <li><a href="#about" class="hover:text-[var(--gold-accent)] transition-colors">想い</a></li>
+                    <li><a href="#kodawari" class="hover:text-[var(--gold-accent)] transition-colors">こだわり</a></li>
+                    <li><a href="#menu" class="hover:text-[var(--gold-accent)] transition-colors">お品書き</a></li>
+                    <li><a href="#voice" class="hover:text-[var(--gold-accent)] transition-colors">お客様の声</a></li>
+                    <li><a href="#info" class="hover:text-[var(--gold-accent)] transition-colors">店舗情報</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:0467-25-2395" class="hidden md:flex items-center border border-white text-white px-6 py-2 hover:bg-white hover:text-black transition-colors duration-300" id="header-btn">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                ご予約: 0467-25-2395
+            </a>
+
+            <!-- SP用ハンバーガーメニューボタン -->
+            <button class="md:hidden text-white z-50 relative" id="mobile-menu-btn" aria-label="Menu">
+                <svg class="w-8 h-8 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- SP用メニューパネル -->
+        <div class="fixed inset-0 bg-black bg-opacity-95 z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center" id="mobile-menu">
+            <ul class="flex flex-col space-y-8 text-white text-xl text-center">
+                <li><a href="#about" class="mobile-link">想い</a></li>
+                <li><a href="#kodawari" class="mobile-link">こだわり</a></li>
+                <li><a href="#menu" class="mobile-link">お品書き</a></li>
+                <li><a href="#voice" class="mobile-link">お客様の声</a></li>
+                <li><a href="#info" class="mobile-link">店舗情報</a></li>
+                <li class="mt-8">
+                    <a href="tel:0467-25-2395" class="mobile-link text-[var(--gold-accent)] border border-[var(--gold-accent)] px-8 py-3 rounded-sm block">
+                        ご予約: 0467-25-2395
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- 背景画像 (鎌倉の和風な雰囲気) -->
+        <img src="img/4.jpg" alt="庭園が見える店内の様子" class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy">
+        
+        <!-- オーバーレイ -->
+        <div class="absolute inset-0 fv-overlay z-10"></div>
+
+        <!-- コンテンツ -->
+        <div class="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 pt-20">
+            
+            <div class="flex flex-col-reverse md:flex-row items-center md:items-start justify-center h-full w-full max-w-5xl mx-auto relative">
+                
+                <!-- 店名 (左下配置へ変更、小さく) -->
+                <div class="md:absolute md:bottom-10 md:left-10 text-center md:text-left fade-in mt-12 md:mt-0" style="transition-delay: 500ms;">
+                    <p class="text-white tracking-[0.3em] mb-2 font-light text-xs md:text-sm">鎌倉 日本料理</p>
+                    <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-6">白龍</h2>
+                </div>
+
+                <!-- サブキャッチ＆メインキャッチ（縦書き、小さく、右寄せ） -->
+                <div class="flex space-x-6 md:space-x-12 md:absolute md:top-1/4 md:right-10">
+                    <div class="vertical-text text-white text-xs md:text-xs leading-[2.5] tracking-[0.2em] font-light fade-in" style="transition-delay: 300ms;">
+                        <p>風情ある二階堂の庭を眺めながら、</p>
+                        <p>旬の食材を生かした</p>
+                        <p>月替わりのコース料理をご堪能ください。</p>
+                    </div>
+
+                    <div class="vertical-text text-white text-lg md:text-xl lg:text-2xl leading-[2.5] tracking-[0.4em] font-light fade-in">
+                        <p>古都鎌倉の静寂の中で、</p>
+                        <p>　　　四季を味わう日本料理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- スクロールダウン -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+            <span class="text-white text-xs tracking-widest mb-2 font-light vertical-text h-16">SCROLL</span>
+            <div class="w-px h-12 bg-white bg-opacity-30 relative overflow-hidden">
+                <div class="w-full h-full bg-white absolute top-0 left-0 animate-[scroll-down_2s_ease-in-out_infinite]"></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-16 md:py-24">
+        
+        <section class="container mx-auto px-6 mb-24">
+            <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-gray-100 fade-in">
+                <h3 class="text-center text-xl md:text-2xl text-[var(--gold-accent)] mb-8 tracking-widest">こんな方におすすめ</h3>
+                <ul class="space-y-4 text-center">
+                    <li class="flex items-center justify-center">
+                        <span class="text-[var(--gold-accent)] mr-3">❖</span>
+                        非日常の空間で食事を楽しみたい方
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <span class="text-[var(--gold-accent)] mr-3">❖</span>
+                        旬の日本料理をゆっくり味わいたい方
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <span class="text-[var(--gold-accent)] mr-3">❖</span>
+                        記念日や会食のお店をお探しの方
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <span class="text-[var(--gold-accent)] mr-3">❖</span>
+                        鎌倉らしい落ち着いた時間を過ごしたい方
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="about" class="container mx-auto px-6 py-16">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <div class="w-full md:w-1/2 relative fade-in">
+                    <img src="img/1.jpg" alt="落ち着いたカウンター席" class="w-full h-auto shadow-lg object-cover" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2 fade-in">
+                    <h2 class="text-2xl md:text-3xl text-[var(--gold-accent)] mb-8 tracking-widest font-semibold">季節の移ろいを、<br class="md:hidden">五感で楽しむ</h2>
+                    <div class="space-y-6 text-gray-700 leading-loose">
+                        <p>
+                            古都鎌倉の風情が残る二階堂に佇む、完全予約制の日本料理店です。
+                        </p>
+                        <p>
+                            春は山菜や鯛、夏は鱧や鰻、秋はきのこや新米、冬は河豚やすっぽんなど、旬の味覚を取り入れたコースをご用意しています。
+                        </p>
+                        <p>
+                            メニューは月に一度変わり、訪れるたびに新しい季節の味わいをお楽しみいただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kodawari" class="py-24 bg-white mt-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl md:text-3xl section-title fade-in">こだわり<span>OUR COMMITMENT</span></h2>
+                
+                <div class="space-y-20 max-w-5xl mx-auto">
+                    <!-- こだわり 01 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <span class="text-[var(--gold-accent)] text-lg font-bold tracking-widest block mb-2">01</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-wider">旬を映す、月替わりのコース</h3>
+                            <p class="text-gray-700 leading-loose">
+                                春は山菜や鯛、夏は鱧や鰻、秋はきのこや新米、冬は河豚やすっぽんなど、その時季ならではの食材を取り入れています。<br>
+                                コース内容は月に一度変わり、訪れるたびに新しい季節の味わいをお楽しみいただけます。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2">
+                            <img src="https://images.unsplash.com/photo-1542289658-95848bbdb978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="月替わりのコース料理" class="w-full h-64 object-cover rounded-sm shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- こだわり 02 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 fade-in">
+                        <div class="w-full md:w-1/2">
+                            <img src="https://images.unsplash.com/photo-1616075677933-4f51e04dbb2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="丁寧な日本料理" class="w-full h-64 object-cover rounded-sm shadow-sm">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="text-[var(--gold-accent)] text-lg font-bold tracking-widest block mb-2">02</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-wider">素材を生かす、丁寧な日本料理</h3>
+                            <p class="text-gray-700 leading-loose">
+                                食材本来の味や香りを大切にし、出汁や火入れ、盛り付けまで一つひとつ丁寧に仕上げています。<br>
+                                味わいはもちろん、器や彩り、香りまで、五感で楽しめる日本料理をご提供いたします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- こだわり 03 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <span class="text-[var(--gold-accent)] text-lg font-bold tracking-widest block mb-2">03</span>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-wider">庭を眺めて過ごす、静かな空間</h3>
+                            <p class="text-[var(--text-main)] leading-loose">
+                                古都鎌倉の風情が残る二階堂で、庭を眺めながらゆっくりとお食事をお楽しみいただけます。<br>
+                                カウンター席、テーブル席、個室をご用意しており、記念日や会食、ご家族でのお祝いにもご利用いただけます。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2">
+                            <img src="img/4.jpg" alt="庭を眺めるテーブル席" class="w-full h-64 object-cover rounded-sm shadow-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="container mx-auto px-6 py-24">
+            <h2 class="text-2xl md:text-3xl section-title fade-in">お品書き<span>MENU</span></h2>
+            
+            <div class="max-w-4xl mx-auto mb-16">
+                <!-- おすすめ 13,200円 -->
+                <div class="flex flex-col md:flex-row items-center border-b border-gray-300 py-8 fade-in relative">
+                    <div class="absolute -top-3 left-4 bg-[var(--gold-accent)] text-white px-3 py-1 text-xs tracking-widest z-10">
+                        おすすめ
+                    </div>
+                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
+                        <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="13,200円コースのイメージ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-[var(--text-main)]">13,200円コース</h3>
+                            <span class="text-sm text-[var(--text-main)] opacity-70">記念日・ご会食に</span>
+                        </div>
+                        <p class="text-[var(--text-main)] text-sm leading-loose">
+                            厳選した旬の食材を使用した、記念日や会食にもおすすめの月替わりコースです。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8,000円 -->
+                <div class="flex flex-col md:flex-row items-center border-b border-gray-300 py-8 fade-in" style="transition-delay: 150ms;">
+                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
+                        <img src="https://images.unsplash.com/photo-1580828369066-5e58bd83a31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="8,000円コースのイメージ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-[var(--text-main)]">8,000円コース</h3>
+                            <span class="text-sm text-[var(--text-main)] opacity-70">お気軽な日本料理</span>
+                        </div>
+                        <p class="text-[var(--text-main)] text-sm leading-loose">
+                            旬の食材を生かした日本料理を、気軽にお楽しみいただけるコースです。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特別コース -->
+                <div class="flex flex-col md:flex-row items-center py-8 fade-in" style="transition-delay: 300ms;">
+                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
+                        <img src="https://images.unsplash.com/photo-1563821010373-3e117cc888fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="特別コースのイメージ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-center">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-[var(--text-main)]">特別コース</h3>
+                            <span class="text-sm text-[var(--text-main)] opacity-70">ご予算に合わせて</span>
+                        </div>
+                        <p class="text-[var(--text-main)] text-sm leading-loose">
+                            お料理の内容やご予算に合わせてご用意いたします。<br>
+                            ※ご来店日の4日前までにご相談ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 料金注記 & ご予約前の注意事項 -->
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 fade-in">
+                <div class="w-full md:w-1/2 bg-[var(--section-bg-alt)] p-6 rounded-sm text-center flex flex-col justify-center">
+                    <p class="font-bold text-base mb-4 text-[var(--text-main)] border-b border-[#d8cdb8] pb-2 inline-block mx-auto">サービス料について</p>
+                    <p class="text-[var(--text-main)] text-sm mb-1">【昼】税・サービス料込み</p>
+                    <p class="text-[var(--text-main)] text-sm">【夜】税込み、別途サービス料10％</p>
+                </div>
+
+                <div class="w-full md:w-1/2 bg-[var(--section-bg-alt)] p-6 rounded-sm">
+                    <h4 class="font-bold text-base mb-3 text-center text-[var(--text-main)] border-b border-[#d8cdb8] pb-2 inline-block mx-auto w-full">ご予約前の注意事項</h4>
+                    <ul class="list-disc list-outside ml-4 text-[var(--text-main)] space-y-1 text-xs">
+                        <li>アレルギーや苦手な食材は予約時にお伝えください。</li>
+                        <li>仕入れ状況により、料理内容が変更になる場合があります。</li>
+                        <li>駐車場をご利用の方は、予約時に必ずお申し付けください。</li>
+                        <li>夜のみ、コース料金とは別にサービス料10％を頂戴いたします。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="container mx-auto px-6 py-24">
+            
+            <!-- ご挨拶 -->
+            <div class="max-w-3xl mx-auto text-center mb-24 fade-in">
+                <h2 class="text-2xl md:text-3xl text-[var(--gold-accent)] mb-8 tracking-widest">食を通じて、心安らぐひとときを</h2>
+                <p class="text-[var(--text-main)] leading-loose mb-6">
+                    人と人とのご縁を大切にし、<br class="hidden md:block">料理を通じてお客様の心を癒せるよう、日々精進しております。
+                </p>
+                <p class="text-[var(--text-main)] leading-loose">
+                    鎌倉の静かな空間で、<br class="hidden md:block">季節の料理と大切な方との時間をお楽しみください。
+                </p>
+                <p class="mt-8 text-lg tracking-widest font-bold text-[var(--text-main)]">鎌倉 日本料理 白龍</p>
+            </div>
+
+            <!-- 店舗情報詳細 -->
+            <h2 class="text-2xl md:text-3xl section-title fade-in">店舗情報<span>INFORMATION</span></h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto bg-white p-8 md:p-12 border border-gray-100 shadow-sm fade-in">
+                <!-- テキスト情報 -->
+                <div class="w-full lg:w-1/2">
+                    <table class="w-full text-sm text-[var(--text-main)] border-collapse">
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24">店舗名</th>
+                                <td class="py-4 font-bold text-base">鎌倉 日本料理 白龍</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24 align-top">住所</th>
+                                <td class="py-4">
+                                    〒248-0002<br>
+                                    神奈川県鎌倉市二階堂３４０−２
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24 align-top">ご予約</th>
+                                <td class="py-4">
+                                    <span class="text-lg font-bold text-[var(--gold-accent)]">0467-25-2395</span><br>
+                                    <span class="text-xs opacity-70">※前日までの完全予約制<br>※特別コースは4日前までの予約制</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24 align-top">営業時間</th>
+                                <td class="py-4">
+                                    昼：11:30～13:30<br>
+                                    夜：17:30～19:30
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24">定休日</th>
+                                <td class="py-4">月曜日</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24 align-top">アクセス</th>
+                                <td class="py-4">
+                                    鎌倉駅5番乗り場から「大塔宮行き」バスに乗車<br>
+                                    「大塔宮」バス停から徒歩約5分
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th class="py-4 text-left font-normal opacity-70 w-24">駐車場</th>
+                                <td class="py-4">2台 <span class="text-xs opacity-70">※予約時にお申し出ください</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mt-8">
+                        <a href="https://www.instagram.com/kamakura_hakuryu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-[var(--text-main)] hover:text-[var(--gold-accent)] transition-colors">
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Instagramを見る
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="w-full lg:w-1/2 min-h-[300px]">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=神奈川県鎌倉市二階堂３４０−２&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[var(--dark-bg)] text-white text-center">
+            <div class="container mx-auto px-6 fade-in">
+                <h2 class="text-2xl md:text-3xl text-[var(--gold-accent)] mb-4 tracking-widest">ご予約・お問い合わせ</h2>
+                <p class="mb-10 text-gray-300 text-sm md:text-base leading-loose max-w-2xl mx-auto">
+                    当店は前日までの完全予約制となっております。<br>
+                    ご予約はお電話にて承ります。
+                </p>
+                
+                <a href="tel:0467-25-2395" class="inline-flex items-center px-12 py-5 bg-[var(--gold-accent)] text-white text-xl md:text-2xl hover:opacity-90 transition-opacity duration-300 rounded-sm shadow-lg">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    0467-25-2395
+                </a>
+                <p class="mt-4 text-xs text-gray-400">受付時間: 営業時間内にご連絡ください</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-gray-500 py-12">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <h2 class="text-xl font-bold tracking-widest text-white mb-2">鎌倉 日本料理 白龍</h2>
+            <div class="text-center mt-8 text-xs">
+                &copy; Kamakura Hakuryu. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="Js/main.js"></script>
+</body>
+</html>

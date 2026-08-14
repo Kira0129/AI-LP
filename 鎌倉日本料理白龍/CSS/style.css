@@ -1,0 +1,89 @@
+:root {
+    /* お店の写真に合わせた温かみのある色調に変更 */
+    --primary-bg: #f4eee9; /* 障子や壁紙のような温かいベージュ系 */
+    --text-main: #3a2e26;  /* 墨色より少しブラウンがかった深い色 */
+    --gold-accent: #9a6b46; /* 木目のような深みのある赤茶色 */
+    --dark-bg: #2c241b;    /* 暗い背景も温かみを持たせる */
+    --section-bg-alt: #ece5df; /* 交互のセクション用背景色 */
+}
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+    letter-spacing: 0.1em;
+    /* SP用の基本フォントサイズ */
+    font-size: 14px; 
+    line-height: 2;
+}
+
+/* PC用の基本フォントサイズ */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* 縦書きのユーティリティクラス */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* アニメーション用クラス */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FVのオーバーレイグラデーション */
+.fv-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.6) 100%
+    );
+}
+
+/* セクションタイトル装飾 */
+.section-title {
+    color: var(--gold-accent);
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+}
+.section-title span {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gold-accent);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes scroll-down {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
