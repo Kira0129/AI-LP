@@ -230,94 +230,116 @@
             </div>
         </section>
 
-        <section id="menu" class="container mx-auto px-6 py-24">
-            <h2 class="text-2xl md:text-3xl section-title fade-in">お品書き<span>MENU</span></h2>
-
-            <div class="max-w-4xl mx-auto mb-16">
-                <!-- おすすめ 13,200円 -->
-                <div class="flex flex-col md:flex-row items-center border-b border-gray-300 py-8 fade-in relative">
-                    <div
-                        class="absolute -top-3 left-4 bg-[var(--gold-accent)] text-white px-3 py-1 text-xs tracking-widest z-10">
-                        おすすめ
-                    </div>
-                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
-                        <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="13,200円コースのイメージ"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            loading="lazy">
-                    </div>
-                    <div class="w-full md:w-2/3 flex flex-col justify-center">
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-[var(--text-main)]">13,200円コース</h3>
-                            <span class="text-sm text-[var(--text-main)] opacity-70">記念日・ご会食に</span>
-                        </div>
-                        <p class="text-[var(--text-main)] text-sm leading-loose">
-                            厳選した旬の食材を使用した、記念日や会食にもおすすめの月替わりコースです。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 8,000円 -->
-                <div class="flex flex-col md:flex-row items-center border-b border-gray-300 py-8 fade-in"
-                    style="transition-delay: 150ms;">
-                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
-                        <img src="https://images.unsplash.com/photo-1580828369066-5e58bd83a31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="8,000円コースのイメージ"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            loading="lazy">
-                    </div>
-                    <div class="w-full md:w-2/3 flex flex-col justify-center">
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-[var(--text-main)]">8,000円コース</h3>
-                            <span class="text-sm text-[var(--text-main)] opacity-70">お気軽な日本料理</span>
-                        </div>
-                        <p class="text-[var(--text-main)] text-sm leading-loose">
-                            旬の食材を生かした日本料理を、気軽にお楽しみいただけるコースです。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 特別コース -->
-                <div class="flex flex-col md:flex-row items-center py-8 fade-in" style="transition-delay: 300ms;">
-                    <div class="w-full md:w-1/3 h-40 overflow-hidden mb-6 md:mb-0 md:mr-8">
-                        <img src="https://images.unsplash.com/photo-1563821010373-3e117cc888fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="特別コースのイメージ"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                            loading="lazy">
-                    </div>
-                    <div class="w-full md:w-2/3 flex flex-col justify-center">
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="text-xl font-bold text-[var(--text-main)]">特別コース</h3>
-                            <span class="text-sm text-[var(--text-main)] opacity-70">ご予算に合わせて</span>
-                        </div>
-                        <p class="text-[var(--text-main)] text-sm leading-loose">
-                            お料理の内容やご予算に合わせてご用意いたします。<br>
-                            ※ご来店日の4日前までにご相談ください。
-                        </p>
+        <section id="menu" class="container mx-auto px-6 py-24 relative overflow-hidden">
+            
+            <!-- 上部：縦書きタイトルとキャッチコピー -->
+            <div class="max-w-5xl mx-auto flex justify-end mb-16 md:mb-24 relative z-10 fade-in">
+                <div class="flex flex-row-reverse gap-6 md:gap-10" style="writing-mode: vertical-rl;">
+                    <h2 class="text-3xl md:text-4xl font-serif tracking-[0.3em] text-[var(--text-main)]">
+                        お品書き<span class="block text-sm tracking-widest text-[var(--gold-accent)] mt-6 font-sans" style="writing-mode: horizontal-tb;">MENU</span>
+                    </h2>
+                    <div class="text-[var(--text-main)] leading-[2.5] tracking-widest text-sm md:text-base font-serif" style="transition-delay: 200ms;">
+                        <p>四季折々の恵みを、</p>
+                        <p>一皿ごとに真心を込めて。</p>
+                        <p>鎌倉の地で味わう、</p>
+                        <p>記憶に残る日本料理の数々。</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 料金注記 & ご予約前の注意事項 -->
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 fade-in">
-                <div
-                    class="w-full md:w-1/2 bg-[var(--section-bg-alt)] p-6 rounded-sm text-center flex flex-col justify-center">
-                    <p
-                        class="font-bold text-base mb-4 text-[var(--text-main)] border-b border-[#d8cdb8] pb-2 inline-block mx-auto">
-                        サービス料について</p>
-                    <p class="text-[var(--text-main)] text-sm mb-1">【昼】税・サービス料込み</p>
-                    <p class="text-[var(--text-main)] text-sm">【夜】税込み、別途サービス料10％</p>
+            <!-- 画像エリア -->
+            <div class="relative w-full max-w-4xl mx-auto pt-4 pb-[15%] md:pb-[10%] mb-16 lg:mb-24">
+                <!-- Image 1: Top Left -->
+                <div class="w-[70%] md:w-[50%] z-10 fade-in shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真1" class="w-full aspect-[4/3] object-cover rounded-sm">
+                </div>
+                
+                <!-- Image 2: Middle Right, overlapping 1 -->
+                <div class="w-[80%] md:w-[65%] z-20 fade-in shadow-lg relative -mt-[20%] md:-mt-[25%] ml-auto" style="transition-delay: 150ms;">
+                    <img src="https://images.unsplash.com/photo-1580828369066-5e58bd83a31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="料理写真2" class="w-full aspect-[16/9] md:aspect-[2/1] object-cover rounded-sm">
+                </div>
+                
+                <!-- Image 3: Bottom Left, overlapping 2 -->
+                <div class="w-[55%] md:w-[45%] z-30 fade-in shadow-md relative -mt-[15%] md:-mt-[20%] ml-[5%] md:ml-[10%]" style="transition-delay: 300ms;">
+                    <img src="https://images.unsplash.com/photo-1563821010373-3e117cc888fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真3" class="w-full aspect-square object-cover rounded-sm">
                 </div>
 
-                <div class="w-full md:w-1/2 bg-[var(--section-bg-alt)] p-6 rounded-sm">
-                    <h4
-                        class="font-bold text-base mb-3 text-center text-[var(--text-main)] border-b border-[#d8cdb8] pb-2 inline-block mx-auto w-full">
-                        ご予約前の注意事項</h4>
-                    <ul class="list-disc list-outside ml-4 text-[var(--text-main)] space-y-1 text-xs">
+                <!-- Horizontal Catchcopy: Bottom Right -->
+                <div class="absolute bottom-0 right-0 md:right-[5%] z-30 fade-in" style="transition-delay: 450ms;">
+                    <div class="text-[var(--text-main)] font-serif leading-loose tracking-[0.2em] text-xs md:text-sm border-l border-[var(--gold-accent)] pl-4 md:pl-6 bg-white bg-opacity-80 md:bg-transparent p-4 md:p-0">
+                        <p>厳選された旬の食材。</p>
+                        <p>伝統と技が織りなす、</p>
+                        <p>至福の味わいをご堪能ください。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- コースメニュー -->
+            <div class="max-w-4xl mx-auto bg-white border border-[#e2d5c8] p-8 md:p-12 shadow-sm relative z-10 fade-in mb-10">
+                <h3 class="text-center text-xl md:text-2xl font-serif text-[var(--text-main)] tracking-widest mb-10 border-b border-[#e2d5c8] pb-4 inline-block w-full">
+                    コースMENU
+                </h3>
+                
+                <div class="space-y-8">
+                    <!-- Course 1 -->
+                    <div class="flex items-start">
+                        <div class="text-[var(--gold-accent)] font-serif text-2xl md:text-3xl mr-4 md:mr-6 mt-[-4px]">①</div>
+                        <div class="flex-grow border-b border-gray-100 pb-6">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">13,200円コース</h4>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">記念日・ご会食に</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                厳選した旬の食材を使用した、記念日や会食にもおすすめの月替わりコースです。全8品〜9品。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="flex items-start">
+                        <div class="text-[var(--gold-accent)] font-serif text-2xl md:text-3xl mr-4 md:mr-6 mt-[-4px]">②</div>
+                        <div class="flex-grow border-b border-gray-100 pb-6">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">8,000円コース</h4>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">お気軽な日本料理</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                旬の食材を生かした日本料理を、気軽にお楽しみいただけるコースです。全7品。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 3 -->
+                    <div class="flex items-start">
+                        <div class="text-[var(--gold-accent)] font-serif text-2xl md:text-3xl mr-4 md:mr-6 mt-[-4px]">③</div>
+                        <div class="flex-grow pb-2">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">特別コース</h4>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">ご予算に合わせて</span>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                お料理の内容やご予算に合わせてご用意いたします。<br>
+                                ※ご来店日の4日前までにご相談ください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- サービス料・注意事項 -->
+            <div class="max-w-4xl mx-auto space-y-8 fade-in">
+                <p class="text-[var(--text-main)] text-sm text-center tracking-widest font-medium">
+                    ※夜のみ、コース料金とは別にサービス料10％を頂戴いたします。
+                </p>
+                
+                <div class="bg-[var(--section-bg-alt)] p-8 md:p-10 rounded-sm border border-[#e2d5c8]">
+                    <h4 class="font-bold text-sm mb-6 text-center text-[var(--text-main)] tracking-widest border-b border-[#e2d5c8] pb-3 inline-block mx-auto w-full">
+                        ご予約前の注意事項
+                    </h4>
+                    <ul class="list-disc list-inside md:list-outside md:ml-4 text-[var(--text-main)] space-y-3 text-xs leading-loose">
                         <li>アレルギーや苦手な食材は予約時にお伝えください。</li>
                         <li>仕入れ状況により、料理内容が変更になる場合があります。</li>
                         <li>駐車場をご利用の方は、予約時に必ずお申し付けください。</li>
-                        <li>夜のみ、コース料金とは別にサービス料10％を頂戴いたします。</li>
                     </ul>
                 </div>
             </div>
