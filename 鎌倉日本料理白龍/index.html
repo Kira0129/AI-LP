@@ -232,11 +232,17 @@
 
         <section id="menu" class="container mx-auto px-6 py-24 relative overflow-hidden">
             
-            <!-- 上部：縦書きタイトルとキャッチコピー -->
-            <div class="max-w-5xl mx-auto flex justify-end mb-16 md:mb-24 relative z-10 fade-in">
-                <div class="flex flex-row-reverse gap-6 md:gap-10" style="writing-mode: vertical-rl;">
+            <!-- 上部画像（1枚目）と縦書きタイトル・キャッチコピー -->
+            <div class="w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-12 md:mb-16 pt-4 relative z-10">
+                <!-- Image 1: Left -->
+                <div class="w-[85%] md:w-[55%] shadow-sm fade-in order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真1" class="w-full aspect-[4/3] object-cover rounded-sm">
+                </div>
+                
+                <!-- 縦書きタイトルとキャッチコピー: Right -->
+                <div class="flex flex-row-reverse gap-6 md:gap-10 pr-6 md:pr-0 order-1 md:order-2 ml-auto fade-in" style="writing-mode: vertical-rl;">
                     <h2 class="text-3xl md:text-4xl font-serif tracking-[0.3em] text-[var(--text-main)]">
-                        お品書き<span class="block text-sm tracking-widest text-[var(--gold-accent)] mt-6 font-sans" style="writing-mode: horizontal-tb;">MENU</span>
+                        お品書き<span class="block text-sm tracking-widest text-[var(--gold-accent)] mt-6 font-sans uppercase" style="text-orientation: upright;">MENU</span>
                     </h2>
                     <div class="text-[var(--text-main)] leading-[2.5] tracking-widest text-sm md:text-base font-serif" style="transition-delay: 200ms;">
                         <p>四季折々の恵みを、</p>
@@ -247,12 +253,8 @@
                 </div>
             </div>
 
-            <!-- 画像エリア（重ならない配置） -->
-            <div class="w-full max-w-4xl mx-auto mb-16 lg:mb-24 flex flex-col gap-12 md:gap-16 pt-4">
-                <!-- Image 1: Top Left -->
-                <div class="w-[85%] md:w-[55%] fade-in shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1627581577457-3f82025cc401?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="料理写真1" class="w-full aspect-[4/3] object-cover rounded-sm">
-                </div>
+            <!-- 画像エリア（2枚目以降） -->
+            <div class="w-full max-w-4xl mx-auto mb-16 lg:mb-24 flex flex-col gap-12 md:gap-16">
                 
                 <!-- Image 2: Middle Right -->
                 <div class="w-[90%] md:w-[70%] fade-in shadow-sm ml-auto" style="transition-delay: 150ms;">
