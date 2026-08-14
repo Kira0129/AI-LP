@@ -291,58 +291,71 @@
 
             <!-- コースメニュー -->
             <div
-                class="max-w-4xl mx-auto bg-white border border-[#e2d5c8] p-8 md:p-12 shadow-sm relative z-10 fade-in mb-10">
-                <h3
-                    class="text-center text-xl md:text-2xl font-serif text-[var(--text-main)] tracking-[0.4em] mb-10 border-b border-[#e2d5c8] pb-4 inline-block w-full">
-                    御献立
-                </h3>
+                class="max-w-4xl mx-auto bg-white border border-[#e2d5c8] p-8 md:p-16 shadow-sm relative z-10 fade-in mb-10">
+                
+                <!-- 和の装飾（四隅のあしらい） -->
+                <div class="absolute top-0 left-0 w-10 h-10 border-t border-l border-[var(--gold-accent)] m-3 opacity-50"></div>
+                <div class="absolute top-0 right-0 w-10 h-10 border-t border-r border-[var(--gold-accent)] m-3 opacity-50"></div>
+                <div class="absolute bottom-0 left-0 w-10 h-10 border-b border-l border-[var(--gold-accent)] m-3 opacity-50"></div>
+                <div class="absolute bottom-0 right-0 w-10 h-10 border-b border-r border-[var(--gold-accent)] m-3 opacity-50"></div>
 
-                <div class="space-y-8">
+                <div class="text-center mb-12">
+                    <span class="text-[var(--gold-accent)] text-2xl opacity-50 block mb-4">❖</span>
+                    <h3 class="text-xl md:text-2xl font-serif text-[var(--text-main)] tracking-[0.5em] inline-block ml-[0.5em]">
+                        御献立
+                    </h3>
+                </div>
+
+                <div class="space-y-10 px-2 md:px-8">
                     <!-- Course 1 -->
                     <div class="flex items-start">
-
-                        <div class="flex-grow border-b border-gray-100 pb-6">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">
-                                    13,200円コース</h4>
-                                <span
-                                    class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">記念日・ご会食に</span>
+                        <div class="flex-grow border-b border-[#e2d5c8] pb-8 relative">
+                            <!-- 和風のポイントアイコン（PC表示時左側） -->
+                            <div class="absolute left-[-2.5rem] top-1 hidden md:block text-[var(--gold-accent)] opacity-60 text-lg">❖</div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4 gap-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider flex items-center font-serif">
+                                    <span class="md:hidden text-[var(--gold-accent)] opacity-60 mr-2 text-lg">❖</span>
+                                    壱万参千弐百円 コース
+                                </h4>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] px-3 py-1 border border-[#e2d5c8] bg-[var(--section-bg-alt)] inline-block w-fit">記念日・ご会食に</span>
                             </div>
-                            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-                                厳選した旬の食材を使用した、記念日や会食にもおすすめの月替わりコースです。全8品〜9品。
+                            <p class="text-gray-600 text-sm md:text-base leading-loose">
+                                厳選した旬の食材を使用した、記念日や会食にもおすすめの月替わりコースです。<br class="hidden md:block">全八品〜九品。
                             </p>
                         </div>
                     </div>
 
                     <!-- Course 2 -->
                     <div class="flex items-start">
-
-                        <div class="flex-grow border-b border-gray-100 pb-6">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">
-                                    8,000円コース</h4>
-                                <span
-                                    class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">お気軽な日本料理</span>
+                        <div class="flex-grow border-b border-[#e2d5c8] pb-8 relative">
+                            <div class="absolute left-[-2.5rem] top-1 hidden md:block text-[var(--gold-accent)] opacity-60 text-lg">❖</div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4 gap-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider flex items-center font-serif">
+                                    <span class="md:hidden text-[var(--gold-accent)] opacity-60 mr-2 text-lg">❖</span>
+                                    八千円 コース
+                                </h4>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] px-3 py-1 border border-[#e2d5c8] bg-[var(--section-bg-alt)] inline-block w-fit">お気軽な日本料理</span>
                             </div>
-                            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-                                旬の食材を生かした日本料理を、気軽にお楽しみいただけるコースです。全7品。
+                            <p class="text-gray-600 text-sm md:text-base leading-loose">
+                                旬の食材を生かした日本料理を、気軽にお楽しみいただけるコースです。<br class="hidden md:block">全七品。
                             </p>
                         </div>
                     </div>
 
                     <!-- Course 3 -->
                     <div class="flex items-start">
-
-                        <div class="flex-grow pb-2">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider">特別コース
+                        <div class="flex-grow pb-4 relative">
+                            <div class="absolute left-[-2.5rem] top-1 hidden md:block text-[var(--gold-accent)] opacity-60 text-lg">❖</div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-4 gap-3">
+                                <h4 class="text-lg md:text-xl font-bold text-[var(--text-main)] tracking-wider flex items-center font-serif">
+                                    <span class="md:hidden text-[var(--gold-accent)] opacity-60 mr-2 text-lg">❖</span>
+                                    特別コース
                                 </h4>
-                                <span
-                                    class="text-xs tracking-widest text-[var(--gold-accent)] mt-1 md:mt-0">ご予算に合わせて</span>
+                                <span class="text-xs tracking-widest text-[var(--gold-accent)] px-3 py-1 border border-[#e2d5c8] bg-[var(--section-bg-alt)] inline-block w-fit">ご予算に合わせて</span>
                             </div>
-                            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                            <p class="text-gray-600 text-sm md:text-base leading-loose">
                                 お料理の内容やご予算に合わせてご用意いたします。<br>
-                                ※ご来店日の4日前までにご相談ください。
+                                ※ご来店日の四日前までにご相談ください。
                             </p>
                         </div>
                     </div>
