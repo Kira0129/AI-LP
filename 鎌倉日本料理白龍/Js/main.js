@@ -100,3 +100,27 @@ window.addEventListener('load', () => {
     const fvElements = document.querySelectorAll('section:first-of-type .fade-in');
     fvElements.forEach(el => el.classList.add('appear'));
 });
+
+// VOICEセクションの続きを読むトグル
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    
+    readMoreBtns.forEach(btn => {
+        // コンテンツが3行未満の場合はボタンを非表示にする処理
+        const content = btn.previousElementSibling;
+        // scrollHeightが3行分より大きいかチェックするなどの詳細制御も可能ですが、
+        // 今回の口コミは長いためデフォルトで表示しておきクリックで切り替えます
+        
+        btn.addEventListener('click', function() {
+            if (content.classList.contains('line-clamp-3')) {
+                // 開く
+                content.classList.remove('line-clamp-3');
+                this.innerText = '閉じる';
+            } else {
+                // 閉じる
+                content.classList.add('line-clamp-3');
+                this.innerText = '続きを読む';
+            }
+        });
+    });
+});
