@@ -280,20 +280,36 @@
             </div>
         </section>
 
-        <section id="info" class="container mx-auto px-6 py-24">
+        <!-- MESSAGE セクション (パララックス) -->
+        <section id="message" class="relative py-32 md:py-48 bg-fixed bg-center bg-cover flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <!-- 高級感のある和風ダークオーバーレイ -->
+            <div class="absolute inset-0 bg-[#1a1410] bg-opacity-80"></div>
             
-            <!-- ご挨拶 -->
-            <div class="max-w-3xl mx-auto text-center mb-24 fade-in">
-                <h2 class="text-2xl md:text-3xl text-[var(--gold-accent)] mb-8 tracking-widest">食を通じて、心安らぐひとときを</h2>
-                <p class="text-[var(--text-main)] leading-loose mb-6">
-                    人と人とのご縁を大切にし、<br class="hidden md:block">料理を通じてお客様の心を癒せるよう、日々精進しております。
-                </p>
-                <p class="text-[var(--text-main)] leading-loose">
-                    鎌倉の静かな空間で、<br class="hidden md:block">季節の料理と大切な方との時間をお楽しみください。
-                </p>
-                <p class="mt-8 text-lg tracking-widest font-bold text-[var(--text-main)]">鎌倉 日本料理 白龍</p>
+            <div class="relative z-10 container mx-auto px-6 text-center fade-in">
+                <h2 class="text-2xl md:text-4xl text-[var(--gold-accent)] mb-12 tracking-[0.2em] font-serif">
+                    食を通じて、<br class="md:hidden">心安らぐひとときを
+                </h2>
+                
+                <div class="space-y-10 text-gray-200 leading-[2.5] tracking-[0.2em] font-light text-sm md:text-base">
+                    <p>
+                        人と人とのご縁を大切にし、<br>
+                        料理を通じてお客様の心を癒せるよう、<br class="md:hidden">日々精進しております。
+                    </p>
+                    <p>
+                        鎌倉の静かな空間で、<br>
+                        季節の料理と大切な方との時間を<br class="md:hidden">お楽しみください。
+                    </p>
+                </div>
+                
+                <div class="mt-16">
+                    <p class="text-lg md:text-xl tracking-[0.4em] font-bold text-[var(--gold-accent)]">
+                        鎌倉 日本料理 白龍
+                    </p>
+                </div>
             </div>
+        </section>
 
+        <section id="info" class="container mx-auto px-6 py-24">
             <!-- 店舗情報詳細 -->
             <h2 class="text-2xl md:text-3xl section-title fade-in">店舗情報<span>INFORMATION</span></h2>
             
