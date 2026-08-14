@@ -270,9 +270,13 @@
             </div>
         </section>
 
-        <section id="menu" class="container mx-auto px-6 py-24 md:py-32 relative overflow-hidden">
+        <section id="menu" class="relative py-24 md:py-32 overflow-hidden bg-cover bg-center" style="background-image: url('img/menubg.jpg');">
+            <!-- コンテンツの可読性を上げるための薄いオーバーレイ -->
+            <div class="absolute inset-0 bg-[var(--section-bg-alt)] bg-opacity-80"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
 
-            <!-- 上部画像（1枚目）と縦書きタイトル・キャッチコピー -->
+                <!-- 上部画像（1枚目）と縦書きタイトル・キャッチコピー -->
             <div
                 class="w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-12 md:mb-16 pt-4 relative z-10">
                 <!-- Image 1: Left -->
@@ -419,6 +423,7 @@
                         <li>駐車場をご利用の方は、予約時に必ずお申し付けください。</li>
                     </ul>
                 </div>
+            </div>
             </div>
         </section>
 
