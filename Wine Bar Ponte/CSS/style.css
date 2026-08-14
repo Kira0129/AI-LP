@@ -133,7 +133,7 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
 }
 .fv-logo {
   margin-bottom: 48px;
-  max-width: 380px;
+  max-width: 280px;
   transition: opacity 1s ease, transform 1s ease;
   transform: translateY(15px);
 }
