@@ -5,7 +5,6 @@ const headerNav = document.getElementById('header-nav');
 const headerBtn = document.getElementById('header-btn');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenuBtnIcon = mobileMenuBtn.querySelector('svg');
-const headerLogoPrefix = document.getElementById('header-logo-prefix');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -24,12 +23,6 @@ window.addEventListener('scroll', () => {
         
         mobileMenuBtn.classList.remove('text-white');
         mobileMenuBtn.classList.add('text-[var(--text-main)]');
-
-        if (headerLogoPrefix) {
-            headerLogoPrefix.style.maxWidth = '0';
-            headerLogoPrefix.style.opacity = '0';
-            headerLogoPrefix.style.marginRight = '0';
-        }
     } else {
         // トップ時：透明背景、白文字
         header.classList.remove('bg-white', 'shadow-md');
@@ -43,12 +36,6 @@ window.addEventListener('scroll', () => {
 
         headerBtn.classList.add('border-white', 'text-white', 'hover:bg-white', 'hover:text-black');
         headerBtn.classList.remove('border-[var(--text-main)]', 'text-[var(--text-main)]', 'hover:bg-[var(--text-main)]', 'hover:text-white');
-
-        if (headerLogoPrefix) {
-            headerLogoPrefix.style.maxWidth = '120px';
-            headerLogoPrefix.style.opacity = '1';
-            headerLogoPrefix.style.marginRight = '0.5rem';
-        }
 
         // モバイルメニューが開いていない時だけ白にする
         if (!mobileMenu.classList.contains('translate-x-0')) {
