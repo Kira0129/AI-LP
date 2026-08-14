@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body class="antialiased">
@@ -329,11 +330,17 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     
-                    <!-- 左カラム：スティッキー画像 (PC表示のみ) -->
+                    <!-- 左カラム：スティッキースライダー (PC表示のみ) -->
                     <div class="w-full relative fade-in hidden lg:block h-full">
                         <div class="sticky top-32 w-full">
-                            <div class="aspect-[3/4] overflow-hidden shadow-sm border border-gray-200">
-                                <img src="https://images.unsplash.com/photo-1616075677933-4f51e04dbb2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本料理のイメージ" class="w-full h-full object-cover">
+                            <div class="aspect-[3/4] overflow-hidden shadow-sm border border-gray-200 bg-[var(--gray-dark)]">
+                                <div class="swiper voice-slider w-full h-full">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1616075677933-4f51e04dbb2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本料理のイメージ 1" class="w-full h-full object-cover"></div>
+                                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1542289658-95848bbdb978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本料理のイメージ 2" class="w-full h-full object-cover"></div>
+                                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1580828369066-5e58bd83a31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本料理のイメージ 3" class="w-full h-full object-cover"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -544,6 +551,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="Js/main.js"></script>
 </body>
 

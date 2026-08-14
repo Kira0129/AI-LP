@@ -124,3 +124,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// VOICEセクションのスライダー初期化
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.voice-slider', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 1500,
+        });
+    }
+});
