@@ -282,15 +282,15 @@
 
         <!-- MESSAGE セクション (パララックス) -->
         <section id="message" class="relative py-32 md:py-48 bg-fixed bg-center bg-cover flex items-center justify-center" style="background-image: url('img/messagebg.jpg');">
-            <!-- 高級感のある和風ダークオーバーレイ（少し明るめに調整） -->
-            <div class="absolute inset-0 bg-[#1a1410] bg-opacity-40"></div>
+            <!-- 明るい背景に合うように、白いベールを薄く重ねて視認性を確保 -->
+            <div class="absolute inset-0 bg-[#f4eee9] bg-opacity-40"></div>
             
-            <div class="relative z-10 container mx-auto px-6 text-center fade-in drop-shadow-lg">
-                <h2 class="text-2xl md:text-4xl text-[var(--gold-accent)] mb-12 tracking-[0.2em] font-serif">
+            <div class="relative z-10 container mx-auto px-6 text-center fade-in" style="text-shadow: 0 0 15px rgba(255,255,255,0.9);">
+                <h2 class="text-2xl md:text-4xl text-[var(--text-main)] mb-12 tracking-[0.2em] font-serif font-bold">
                     食を通じて、<br class="md:hidden">心安らぐひとときを
                 </h2>
                 
-                <div class="space-y-10 text-gray-200 leading-[2.5] tracking-[0.2em] font-light text-sm md:text-base">
+                <div class="space-y-10 text-[var(--text-main)] leading-[2.5] tracking-[0.2em] font-medium text-sm md:text-base">
                     <p>
                         人と人とのご縁を大切にし、<br>
                         料理を通じてお客様の心を癒せるよう、<br class="md:hidden">日々精進しております。
@@ -302,7 +302,7 @@
                 </div>
                 
                 <div class="mt-16">
-                    <p class="text-lg md:text-xl tracking-[0.4em] font-bold text-[var(--gold-accent)]">
+                    <p class="text-lg md:text-xl tracking-[0.4em] font-bold text-[var(--text-main)]">
                         鎌倉 日本料理 白龍
                     </p>
                 </div>
