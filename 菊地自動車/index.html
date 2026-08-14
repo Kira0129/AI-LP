@@ -247,8 +247,11 @@
     </div>
   </section>
 
-  <section class="py-16 md:py-24 relative bg-fixed bg-[55%_center] md:bg-center bg-cover bg-no-repeat"
-    style="background-image: url('img/worrybg.jpg');">
+  <section class="py-16 md:py-24 relative">
+    <!-- iOS対応パララックス背景 -->
+    <div class="absolute inset-0 z-0 [clip:rect(0,auto,auto,0)]">
+      <div class="fixed inset-0 bg-[55%_center] md:bg-center bg-cover bg-no-repeat" style="background-image: url('img/worrybg.jpg');"></div>
+    </div>
     <!-- 背景オーバーレイ -->
     <div class="absolute inset-0 bg-[#204bad]/70 z-0"></div>
 
@@ -556,8 +559,11 @@
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" class="py-16 md:py-24 relative overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat"
-    style="background-image: url('img/menubg.jpg');">
+  <section id="pricing" class="py-16 md:py-24 relative overflow-hidden">
+    <!-- iOS対応パララックス背景 -->
+    <div class="absolute inset-0 z-0 [clip:rect(0,auto,auto,0)]">
+      <div class="fixed inset-0 bg-center bg-cover bg-no-repeat" style="background-image: url('img/menubg.jpg');"></div>
+    </div>
     <!-- Overlay -->
     <div class="absolute inset-0 bg-[#0056b3]/85 z-0"></div>
 
