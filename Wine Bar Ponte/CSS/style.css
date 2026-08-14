@@ -204,7 +204,7 @@ section { padding: 120px 56px; }
    RECOMMEND (こんな方におすすめ)
    ========================================================================== */
 .recommend {
-  background: var(--bg-offwhite);
+  background: var(--white);
   position: relative;
 }
 .recommend-wrap {
@@ -217,7 +217,7 @@ section { padding: 120px 56px; }
   gap: 24px; text-align: left;
 }
 .recommend-item {
-  background: var(--white);
+  background: var(--bg-offwhite);
   padding: 24px 32px;
   border: 1px solid rgba(0,0,0,0.04);
   display: flex; align-items: flex-start; gap: 16px;
@@ -239,7 +239,7 @@ section { padding: 120px 56px; }
 /* ==========================================================================
    ABOUT
    ========================================================================== */
-.about { background: var(--white); }
+.about { background: var(--bg-offwhite); }
 .about-wrap {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
