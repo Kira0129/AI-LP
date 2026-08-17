@@ -682,10 +682,10 @@ footer {
   .nav-links a { font-size: 16px; color: var(--brown-dark); }
   
   /* FV Mobile Adjustment */
-  .fv-section { padding: 80px 0 40px; }
+  .fv-section { padding: 35px 0 20px; }
   .fv-container { display: flex; flex-direction: column; gap: 0; padding: 0 24px; }
   .fv-left, .fv-left-content { display: contents; }
-  .fv-decorations { display: block; position: absolute; top: 80px; left: 0; right: 0; height: 160px; pointer-events: none; z-index: 0; }
+  .fv-decorations { display: block; position: absolute; top: 35px; left: 0; right: 0; height: 160px; pointer-events: none; z-index: 0; }
   .fv-deco-01 { top: -10px; right: 5%; width: 70px !important; }
   .fv-deco-02 { top: 40px; left: -5%; bottom: auto; width: 120px !important; }
   .fv-logo { order: 1; width: 200px; margin: 0 auto 32px; position: relative; z-index: 2; }
