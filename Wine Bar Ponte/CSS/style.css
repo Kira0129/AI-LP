@@ -196,8 +196,13 @@ section { padding: 120px 56px; }
 .rule { width: 40px; height: 1px; background: var(--brown-light); margin: 32px 0; }
 .rule-center { margin: 32px auto; }
 .body-text {
-  font-size: 15px; line-height: 2.2; color: var(--gray-dark);
+  font-size: 16px; line-height: 2.2; color: var(--gray-dark);
   font-weight: normal; letter-spacing: 0.06em;
+}
+@media (max-width: 900px) {
+  .body-text {
+    font-size: 14px;
+  }
 }
 
 /* ==========================================================================
