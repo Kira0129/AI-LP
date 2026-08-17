@@ -710,7 +710,7 @@ footer {
   .menu-image-wrapper { order: -1; margin-bottom: 24px; height: auto; }
   .menu-image { position: relative; top: 0; width: calc(100% + 48px); margin-left: -24px; aspect-ratio: auto; }
   .menu-swiper .swiper-slide { aspect-ratio: 4/3; }
-  .menu-img-4 { object-position: 65% center; }
+  .menu-img-4 { object-position: 70% center; }
   
   .menu-note, .menu-card-subtitle, .menu-item-name { font-size: 14px; }
   .menu-card { padding: 32px 20px 30px; }
