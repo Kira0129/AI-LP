@@ -469,7 +469,7 @@ section {
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.2;
-  color: var(--brown-dark);
+  color: #5D4534;
 }
 
 .h2-jp {
@@ -479,6 +479,7 @@ section {
   letter-spacing: 2px;
   line-height: 1.4;
   margin-top: 8px;
+  color: #5D4534;
 }
 
 .rule {
