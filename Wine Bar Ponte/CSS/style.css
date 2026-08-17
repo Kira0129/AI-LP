@@ -496,6 +496,35 @@ footer {
 
 .sp-only { display: none !important; }
 
+/* Page Top Button */
+.page-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: var(--brown-dark);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.page-top-btn:hover {
+  transform: translateY(-3px);
+  background: var(--brown-light);
+}
+.page-top-btn.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ==========================================================================
    Responsive (Mobile)
    ========================================================================== */
@@ -562,5 +591,12 @@ footer {
   }
   .sp-cta-tel { background: var(--brown-dark); color: var(--white); }
   .sp-cta-web { background: var(--tabelog); color: var(--white); }
+
+  .page-top-btn {
+    bottom: 80px; /* Above SP CTA */
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
 }
 @media (min-width: 901px) { .sp-cta { display: none; } }

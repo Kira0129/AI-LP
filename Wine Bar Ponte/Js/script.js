@@ -102,6 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start animation shortly after load
   setTimeout(startFVAnimation, 100);
 
+  // Page Top Button Visibility
+  const pageTopBtn = document.getElementById('pageTopBtn');
+  if (pageTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        pageTopBtn.classList.add('is-show');
+      } else {
+        pageTopBtn.classList.remove('is-show');
+      }
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
