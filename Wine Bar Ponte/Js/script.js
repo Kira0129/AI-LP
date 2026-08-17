@@ -120,6 +120,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Customer Voice Read More Toggle
+  const voiceCards = document.querySelectorAll('.voice-card');
+  voiceCards.forEach(card => {
+    const text = card.querySelector('.voice-text');
+    const btn = card.querySelector('.voice-more-btn');
+    
+    // 3行以上あるか判定
+    if (text && btn) {
+      if (text.scrollHeight > text.offsetHeight) {
+        btn.style.display = 'inline-flex';
+      }
+
+      btn.addEventListener('click', () => {
+        card.classList.toggle('is-expanded');
+        btn.textContent = card.classList.contains('is-expanded') ? 'Close' : 'Read More';
+      });
+    }
+  });
+
   // Page Top Button Visibility
   const pageTopBtn = document.getElementById('pageTopBtn');
   if (pageTopBtn) {

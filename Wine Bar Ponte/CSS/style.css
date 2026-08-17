@@ -440,28 +440,80 @@ section { padding: 120px 56px; }
   gap: 32px; margin-top: 64px; text-align: left;
 }
 .voice-card {
-  background: var(--white); padding: 40px 32px;
+  background: var(--white); padding: 40px 32px 16px;
   border-top: 2px solid var(--brown-light);
   position: relative;
   box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.voice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 .voice-mark {
   font-family: 'Cormorant Garamond', serif;
   font-size: 64px; font-weight: 300; color: rgba(166, 138, 117, 0.2);
   line-height: 1; position: absolute; top: 20px; right: 24px;
 }
+.voice-attr {
+  font-size: 16px; color: var(--brown-dark); font-weight: bold;
+  margin-bottom: 8px;
+}
+.voice-stars {
+  color: #D4AF37; font-size: 16px; letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
 .voice-text {
   font-size: 16px; line-height: 2.2; color: var(--brown-mid);
-  margin-bottom: 24px; font-weight: normal;
+  margin-bottom: 0; font-weight: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+}
+.voice-card.is-expanded .voice-text {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.voice-text-wrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+.voice-card:not(.is-expanded) .voice-text-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40px;
+  background: linear-gradient(transparent, var(--white));
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.voice-card.is-expanded .voice-text-wrap::after {
+  opacity: 0;
+}
+.voice-more-btn {
+  display: none;
+  background: none; border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 0.15em; color: var(--brown-dark);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+  align-items: center; gap: 8px;
+}
+.voice-more-btn::after {
+  content: '+';
+  font-size: 16px;
+}
+.voice-card.is-expanded .voice-more-btn::after {
+  content: '−';
 }
 @media (max-width: 900px) {
   .voice-text {
     font-size: 14px;
   }
-}
-.voice-attr {
-  font-size: 12px; color: var(--gray); letter-spacing: 0.1em;
-  border-top: 1px solid #eee; padding-top: 16px;
 }
 
 /* ==========================================================================
