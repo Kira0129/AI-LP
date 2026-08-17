@@ -414,7 +414,7 @@ section { padding: 120px 56px; }
 /* その他メニュー (List) */
 .menu-other-section { margin-bottom: 32px; }
 .menu-other-col-title {
-  font-size: 16px; font-weight: 400; letter-spacing: 0.08em;
+  font-size: 16px; font-weight: bold; letter-spacing: 0.08em;
   color: var(--brown-dark); margin-bottom: 16px;
   padding-bottom: 8px; border-bottom: 1px solid #eaeaea;
 }
