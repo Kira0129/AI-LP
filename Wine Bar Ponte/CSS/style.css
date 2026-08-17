@@ -696,6 +696,7 @@ footer {
   .fv-image-grid { min-height: 400px; gap: 8px; grid-template-rows: 120px 220px 140px; }
   
   .about-wrap { display: flex; flex-direction: column; gap: 48px; }
+  .about .h2 { font-size: 20px; }
   .info-wrap { grid-template-columns: 1fr; gap: 48px; }
   .about-visual { height: 360px; width: 100%; }
   
