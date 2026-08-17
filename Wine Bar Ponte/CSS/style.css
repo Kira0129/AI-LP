@@ -230,7 +230,7 @@ section { padding: 120px 56px; }
   margin-top: 4px;
 }
 .recommend-item span {
-  font-size: 15px; line-height: 1.8; color: var(--brown-dark); font-weight: 300;
+  font-size: 16px; line-height: 1.8; color: var(--brown-dark); font-weight: normal;
 }
 .recommend-footer {
   margin-top: 56px;
@@ -574,6 +574,7 @@ footer {
   .menu-image-wrapper { order: -1; margin-bottom: 24px; }
   .menu-image { position: relative; top: 0; aspect-ratio: 16/9; }
   
+  .recommend-item span { font-size: 14px; }
   .voice-grid, .reserve-cards { grid-template-columns: 1fr; gap: 24px; }
   
   .message { padding: 100px 24px; }
