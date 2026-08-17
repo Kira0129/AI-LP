@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Disable right-click and drag on images
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+  document.addEventListener('dragstart', (e) => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+
   // Mobile Menu Toggle
   const nav = document.querySelector('nav');
   const menuBtn = document.querySelector('.menu-btn');
