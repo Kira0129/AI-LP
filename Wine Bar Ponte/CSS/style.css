@@ -206,10 +206,21 @@ section { padding: 120px 56px; }
    RECOMMEND (こんな方におすすめ)
    ========================================================================== */
 .recommend {
-  background: var(--white);
   position: relative;
+  background-image: url('../img/worrybg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.recommend::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
 }
 .recommend-wrap {
+  position: relative;
+  z-index: 2;
   max-width: 900px; margin: 0 auto;
   text-align: center;
 }
