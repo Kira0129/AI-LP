@@ -678,10 +678,10 @@ footer {
   .fv-container { display: flex; flex-direction: column; gap: 0; padding: 0 24px; }
   .fv-left, .fv-left-content { display: contents; }
   .fv-logo { order: 1; width: 200px; margin: 0 auto 32px; }
-  .fv-right { order: 2; min-height: 400px; width: 100%; margin-left: 0; margin-bottom: 32px; }
-  .fv-catch { order: 3; font-size: clamp(24px, 6vw, 32px); margin-bottom: 16px; }
-  .fv-sub { order: 4; margin-bottom: 32px; }
-  .fv-read-more { order: 5; align-items: flex-start; }
+  .fv-read-more { order: 2; align-items: center; margin: 0 auto 32px; }
+  .fv-right { order: 3; min-height: 400px; width: 100%; margin-left: 0; margin-bottom: 32px; }
+  .fv-catch { order: 4; font-size: clamp(24px, 6vw, 32px); margin-bottom: 16px; }
+  .fv-sub { order: 5; margin-bottom: 32px; }
   .fv-image-grid { min-height: 400px; gap: 8px; grid-template-rows: 120px 220px 140px; }
   .fv-decorations { display: none; }
   
