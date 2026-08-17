@@ -382,7 +382,7 @@ section { padding: 120px 56px; }
 }
 .voice-text {
   font-size: 16px; line-height: 2.2; color: var(--brown-mid);
-  margin-bottom: 24px; font-weight: 300;
+  margin-bottom: 24px; font-weight: normal;
 }
 @media (max-width: 900px) {
   .voice-text {
