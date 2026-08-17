@@ -679,7 +679,7 @@ footer {
   .fv-left { min-height: auto; justify-content: flex-start; padding-left: 0; }
   .fv-left-content { max-width: 100%; text-align: left; }
   .fv-catch { font-size: clamp(24px, 6vw, 32px); }
-  .fv-logo { font-size: clamp(40px, 10vw, 56px); margin-bottom: 32px; }
+  .fv-logo { width: 200px; margin: 0 auto 32px; }
   .fv-read-more { align-items: flex-start; }
   .fv-right { min-height: 400px; width: 100%; margin-left: 0; }
   .fv-image-grid { min-height: 400px; gap: 8px; grid-template-rows: 120px 220px 140px; }
