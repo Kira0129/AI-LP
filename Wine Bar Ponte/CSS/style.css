@@ -38,11 +38,8 @@ nav {
   border-bottom: 1px solid rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px; font-weight: 400; letter-spacing: 0.1em;
-  color: var(--brown-dark); text-decoration: none;
-}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 40px; width: auto; display: block; }
 .nav-right { display: flex; align-items: center; gap: 40px; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
@@ -484,7 +481,7 @@ footer {
   background: var(--brown-dark); color: var(--white);
   padding: 40px 56px; display: flex; justify-content: space-between; align-items: center;
 }
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; }
+.footer-logo img { height: 40px; width: auto; display: block; }
 .footer-copy { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); }
 
 /* ==========================================================================
