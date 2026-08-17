@@ -124,7 +124,7 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
 
 .fv-catch {
   font-family: 'Noto Sans JP', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700;
-  line-height: 1.6; color: var(--brown-dark); letter-spacing: 0.1em; margin-bottom: 24px;
+  line-height: 1.6; color: var(--brown-dark); letter-spacing: 0.15em; margin-bottom: 24px;
 }
 .fv-catch-line { display: block; }
 .fv-sub {
@@ -184,13 +184,13 @@ section { padding: 120px 56px; }
 .h2 {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 30px;
-  font-weight: 700; letter-spacing: 0.05em; line-height: 1.2;
+  font-weight: 700; letter-spacing: 0.15em; line-height: 1.2;
   color: var(--brown-dark);
 }
 .h2-jp {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 30px;
-  font-weight: 700; letter-spacing: 0.1em; line-height: 1.4;
+  font-weight: 700; letter-spacing: 0.15em; line-height: 1.4;
   margin-top: 8px;
 }
 .rule { width: 40px; height: 1px; background: var(--brown-light); margin: 32px 0; }
@@ -298,7 +298,7 @@ section { padding: 120px 56px; }
   display: block; letter-spacing: 0.1em;
 }
 .ft-heading {
-  font-size: clamp(22px, 3vw, 28px); font-weight: 400; letter-spacing: 0.08em;
+  font-size: clamp(22px, 3vw, 28px); font-weight: 400; letter-spacing: 0.15em;
   color: var(--brown-dark); margin-bottom: 24px; line-height: 1.5;
 }
 @media (min-width: 901px) {
@@ -334,7 +334,7 @@ section { padding: 120px 56px; }
 }
 .menu-cat-title span {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px; font-weight: 300; letter-spacing: 0.1em; color: var(--gray);
+  font-size: 16px; font-weight: 300; letter-spacing: 0.15em; color: var(--gray);
 }
 
 /* Menu Intro Text */
