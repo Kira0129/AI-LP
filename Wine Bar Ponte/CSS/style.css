@@ -686,7 +686,8 @@ footer {
   .fv-deco-01 { width: 80px; top: 0; right: 5%; }
   .fv-deco-02 { width: 150px; bottom: 0; left: -10%; }
   
-  .about-wrap, .info-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .about-wrap { display: flex; flex-direction: column-reverse; gap: 48px; }
+  .info-wrap { grid-template-columns: 1fr; gap: 48px; }
   .about-visual { height: 360px; }
   
   .feature-list { gap: 80px; }
