@@ -452,13 +452,19 @@ section { padding: 120px 56px; }
 }
 .info-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
 .info-table th {
-  text-align: left; font-weight: 400; font-size: 13px; color: var(--gray);
+  text-align: left; font-weight: 400; font-size: 16px; color: var(--gray);
   padding: 20px 0; border-bottom: 1px solid #e0e0e0;
   width: 100px; vertical-align: top; letter-spacing: 0.1em;
 }
 .info-table td {
-  padding: 20px 0; font-size: 14px; font-weight: 300; color: var(--brown-dark);
+  padding: 20px 0; font-size: 16px; font-weight: 300; color: var(--brown-dark);
   border-bottom: 1px solid #e0e0e0; line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .info-table th,
+  .info-table td {
+    font-size: 14px;
+  }
 }
 .info-map {
   width: 100%; height: 400px; background: #ddd; margin-top: 8px;
