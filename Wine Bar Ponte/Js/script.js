@@ -102,6 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start animation shortly after load
   setTimeout(startFVAnimation, 100);
 
+  // Menu Swiper
+  const menuSwiper = new Swiper('.menu-swiper', {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 1500,
+  });
+
   // Page Top Button Visibility
   const pageTopBtn = document.getElementById('pageTopBtn');
   if (pageTopBtn) {
