@@ -104,13 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Menu Swiper
   const menuSwiper = new Swiper('.menu-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
     loop: true,
-    effect: 'fade',
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+    speed: 5000,
+    autoplay: { 
+      delay: 0, 
+      disableOnInteraction: false 
     },
-    speed: 1500,
+    breakpoints: {
+      768: { 
+        slidesPerView: 1.5, 
+        spaceBetween: 32 
+      }
+    }
   });
 
   // Page Top Button Visibility
