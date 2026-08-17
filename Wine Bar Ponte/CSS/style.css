@@ -714,6 +714,7 @@ footer {
   .menu-note, .menu-card-subtitle, .menu-item-name { font-size: 14px; }
   .menu-card { padding: 32px 20px 30px; }
   
+  .recommend { background-position: 40% center !important; }
   .recommend-item { padding: 10px 10px; }
   .recommend-item span { font-size: 14px; }
   .voice-grid, .reserve-cards { grid-template-columns: 1fr; gap: 24px; }
