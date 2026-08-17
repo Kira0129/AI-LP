@@ -123,7 +123,7 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
 }
 
 .fv-catch {
-  font-family: 'Noto Sans JP', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 300;
+  font-family: 'Noto Sans JP', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700;
   line-height: 1.6; color: var(--brown-dark); letter-spacing: 0.1em; margin-bottom: 24px;
 }
 .fv-catch-line { display: block; }
