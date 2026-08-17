@@ -265,7 +265,7 @@ section { padding: 120px 56px; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 .about-img-main {
-  width: 75%; height: 80%;
+  width: 75%; height: 70%;
   top: 0; left: 0;
   z-index: 1;
 }
