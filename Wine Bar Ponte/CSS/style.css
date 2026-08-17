@@ -37,6 +37,14 @@ nav {
   background: rgba(255, 255, 255, 0.98);
   border-bottom: 1px solid rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+nav.is-scrolled {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 40px; width: auto; display: block; }
@@ -677,13 +685,15 @@ footer {
   .fv-section { padding: 80px 0 40px; }
   .fv-container { display: flex; flex-direction: column; gap: 0; padding: 0 24px; }
   .fv-left, .fv-left-content { display: contents; }
-  .fv-logo { order: 1; width: 200px; margin: 0 auto 32px; }
+  .fv-decorations { display: block; position: absolute; top: 80px; left: 0; right: 0; height: 160px; pointer-events: none; z-index: 0; }
+  .fv-deco-01 { top: -10px; right: 5%; width: 70px !important; }
+  .fv-deco-02 { top: 40px; left: -5%; bottom: auto; width: 120px !important; }
+  .fv-logo { order: 1; width: 200px; margin: 0 auto 32px; position: relative; z-index: 2; }
   .fv-read-more { order: 2; align-items: center; margin: 0 auto 32px; }
   .fv-right { order: 3; min-height: 400px; width: 100%; margin-left: 0; margin-bottom: 32px; }
   .fv-catch { order: 4; font-size: clamp(24px, 6vw, 32px); margin-bottom: 16px; }
   .fv-sub { order: 5; margin-bottom: 32px; }
   .fv-image-grid { min-height: 400px; gap: 8px; grid-template-rows: 120px 220px 140px; }
-  .fv-decorations { display: none; }
   
   .about-wrap { display: flex; flex-direction: column-reverse; gap: 48px; }
   .info-wrap { grid-template-columns: 1fr; gap: 48px; }

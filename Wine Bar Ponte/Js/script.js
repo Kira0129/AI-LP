@@ -139,17 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Page Top Button Visibility
+  // Header and Page Top Button Visibility
   const pageTopBtn = document.getElementById('pageTopBtn');
-  if (pageTopBtn) {
-    window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      nav.classList.add('is-scrolled');
+    } else {
+      nav.classList.remove('is-scrolled');
+    }
+
+    if (pageTopBtn) {
       if (window.scrollY > 300) {
         pageTopBtn.classList.add('is-show');
       } else {
         pageTopBtn.classList.remove('is-show');
       }
-    });
-  }
+    }
+  });
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
