@@ -45,7 +45,7 @@ body {
    ========================================================================== */
 nav {
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   z-index: 200;
@@ -59,13 +59,12 @@ nav {
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-100%);
 }
 
 nav.is-scrolled {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  top: 0;
 }
 
 .nav-logo {
@@ -140,20 +139,28 @@ nav.is-scrolled {
   background: var(--brown-dark);
   position: absolute;
   left: 0;
-  transition: transform 0.3s, top 0.3s, background 0.3s;
+  transition: transform 0.3s, top 0.3s, opacity 0.3s, background 0.3s;
 }
 
 .menu-btn span:first-child {
-  top: 6px;
+  top: 5px;
+}
+
+.menu-btn span:nth-child(2) {
+  top: 11px;
 }
 
 .menu-btn span:last-child {
-  top: 16px;
+  top: 17px;
 }
 
 nav.is-open .menu-btn span:first-child {
   transform: rotate(45deg);
   top: 11px;
+}
+
+nav.is-open .menu-btn span:nth-child(2) {
+  opacity: 0;
 }
 
 nav.is-open .menu-btn span:last-child {
