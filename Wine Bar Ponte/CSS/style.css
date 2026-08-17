@@ -706,7 +706,7 @@ footer {
   .voice-grid, .reserve-cards { grid-template-columns: 1fr; gap: 24px; }
   
   .message { padding: 100px 24px; }
-  .message-bg { background-position: 15% center !important; }
+  .message-bg { background-position: 35% center !important; }
   .message .body-text { font-size: 14px; }
   footer { flex-direction: column; gap: 16px; padding: 32px 24px; text-align: center; }
   
