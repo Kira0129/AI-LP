@@ -4,16 +4,16 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  /* Color Palette: White, Gray, Brown */
-  --brown-dark: #2C241E;   /* 黒に近い焦げ茶（テキスト基本色） */
-  --brown-mid: #5C4B41;    /* ミディアムブラウン */
-  --brown-light: #A68A75;  /* アクセントカラー（ゴールド・モカ系） */
-  --gray-dark: #666666;
-  --gray: #888888;
-  --gray-light: #C4C4C4;
-  --bg-offwhite: #FAF9F8;  /* 暖かみのあるオフホワイト */
+  /* Color Palette: White, Gray, Brown (Elegant & Stylish) */
+  --brown-dark: #2B2A29;   /* 深みのあるチャコールブラウン（テキスト基本色） */
+  --brown-mid: #7A726E;    /* 洗練されたトープ（くすみブラウン） */
+  --brown-light: #B4A9A2;  /* エレガントなグレージュ（アクセント） */
+  --gray-dark: #555555;
+  --gray: #8A8A8A;
+  --gray-light: #D9D9D9;
+  --bg-offwhite: #F8F7F6;  /* 非常に上品な微温白色 */
   --white: #FFFFFF;
-  --tabelog: #c9712a;      /* 食べログ風カラー（少し落ち着かせた色） */
+  --tabelog: #c9712a;      /* 食べログブランドカラー（維持） */
 }
 
 html { scroll-behavior: smooth; overflow-x: clip; }
