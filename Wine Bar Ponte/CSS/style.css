@@ -332,52 +332,96 @@ section { padding: 120px 56px; }
    ========================================================================== */
 .menu { background: var(--white); }
 .menu-wrap { max-width: 1100px; margin: 0 auto; }
-.menu-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 6vw, 80px); margin-top: 64px;
+.menu-header { margin-bottom: 48px; }
+.menu .h2 { color: var(--brown-dark); margin-bottom: 0; }
+.menu-note {
+  font-size: 12px; color: var(--gray); margin-top: 16px;
+  line-height: 1.6;
 }
-/* Sticky Image for Menu */
-.menu-image-wrapper { position: relative; width: 100%; height: 100%; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+/* Sticky Image Slider */
+.menu-image-wrapper {
+  position: relative; width: 100%; height: 100%; min-width: 0;
+}
 .menu-image {
   position: sticky; top: 120px; width: 100%; aspect-ratio: 3/4;
-  overflow: hidden;
+  z-index: 10; overflow: hidden;
 }
-.menu-image img { width: 100%; height: 100%; object-fit: cover; }
+.menu-swiper { width: 100%; height: 100%; }
+.menu-swiper .swiper-slide img {
+  width: 100%; height: 100%; object-fit: cover;
+}
 
+/* Menu Content */
 .menu-category { margin-bottom: 64px; }
-.menu-cat-title {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 32px; color: var(--brown-dark);
-  border-bottom: 1px solid var(--brown-light);
-  padding-bottom: 16px; margin-bottom: 32px;
-  display: flex; flex-direction: column; gap: 8px;
+.menu-category:last-child { margin-bottom: 0; }
+.menu-cat-title-en {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; color: var(--gray);
+  margin-bottom: 8px; text-transform: uppercase;
 }
-.menu-cat-title span {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px; font-weight: 300; letter-spacing: 2px; color: var(--gray);
-}
-
-/* Menu Intro Text */
-.menu-intro {
-  font-size: 14px; line-height: 2; color: var(--gray-dark);
-  margin-bottom: 32px; font-weight: 300;
+.menu-cat-title-jp {
+  font-size: 28px; font-weight: 400; letter-spacing: 0.08em;
+  color: var(--brown-dark); margin-bottom: 24px;
 }
 
-/* Menu Items */
-.menu-list { display: flex; flex-direction: column; gap: 20px; }
-.menu-item { display: flex; justify-content: space-between; align-items: flex-end; }
-.menu-item-name { font-size: 15px; color: var(--brown-dark); font-weight: 400; }
+/* おすすめメニュー (Cards) */
+.menu-card {
+  background: var(--bg-offwhite);
+  border-top: 2px solid var(--brown-dark);
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 32px 30px 30px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+.menu-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+.menu-card-badge {
+  position: absolute; top: -1px; right: 24px;
+  background: var(--brown-dark); color: var(--white);
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.22em;
+  padding: 5px 14px; text-transform: uppercase;
+}
+.menu-card-title {
+  font-size: 18px; font-weight: 400; letter-spacing: 0.06em;
+  color: var(--brown-dark); margin-bottom: 8px;
+}
+.menu-card-subtitle {
+  font-size: 13px; color: var(--gray-dark); letter-spacing: 0.06em;
+  margin-bottom: 18px; line-height: 1.8;
+}
+.menu-price {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px; font-weight: 400; color: var(--brown-dark);
+  letter-spacing: 0.02em; margin-bottom: 4px;
+}
+
+/* その他メニュー (List) */
+.menu-other-section { margin-bottom: 32px; }
+.menu-other-col-title {
+  font-size: 16px; font-weight: 400; letter-spacing: 0.08em;
+  color: var(--brown-dark); margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 1px solid #eaeaea;
+}
+.menu-list { display: flex; flex-direction: column; gap: 16px; }
+.menu-item { display: flex; justify-content: space-between; align-items: baseline; }
+.menu-item-name { font-size: 15px; color: var(--brown-dark); font-weight: normal; }
 .menu-item-dots {
   flex: 1; border-bottom: 1px dotted #ccc;
-  margin: 0 16px; position: relative; top: -6px;
+  margin: 0 16px; position: relative; top: -4px;
 }
 .menu-item-price {
   font-family: 'Space Mono', monospace;
-  font-size: 16px; font-weight: 400; color: var(--brown-dark);
-}
-.menu-note {
-  font-size: 12px; color: var(--gray); margin-top: 24px;
-  line-height: 1.6;
+  font-size: 18px; font-weight: 400; color: var(--brown-dark);
 }
 
 /* ==========================================================================
