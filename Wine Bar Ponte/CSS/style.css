@@ -413,7 +413,7 @@ section { padding: 120px 56px; }
 .message-bg {
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
-  opacity: 0.2; mix-blend-mode: multiply;
+  opacity: 0.4;
 }
 .message-inner {
   position: relative; z-index: 2;
