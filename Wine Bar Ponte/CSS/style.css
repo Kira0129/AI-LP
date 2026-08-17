@@ -381,8 +381,13 @@ section { padding: 120px 56px; }
   line-height: 1; position: absolute; top: 20px; right: 24px;
 }
 .voice-text {
-  font-size: 14px; line-height: 2.2; color: var(--brown-mid);
+  font-size: 16px; line-height: 2.2; color: var(--brown-mid);
   margin-bottom: 24px; font-weight: 300;
+}
+@media (max-width: 900px) {
+  .voice-text {
+    font-size: 14px;
+  }
 }
 .voice-attr {
   font-size: 12px; color: var(--gray); letter-spacing: 0.1em;
