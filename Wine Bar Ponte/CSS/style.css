@@ -675,7 +675,7 @@ footer {
   
   /* FV Mobile Adjustment */
   .fv-section { padding: 80px 0 40px; }
-  .fv-container { grid-template-columns: 1fr; gap: 40px; padding: 0 24px; }
+  .fv-container { display: flex; flex-direction: column-reverse; gap: 40px; padding: 0 24px; }
   .fv-left { min-height: auto; justify-content: flex-start; padding-left: 0; }
   .fv-left-content { max-width: 100%; text-align: left; }
   .fv-catch { font-size: clamp(24px, 6vw, 32px); }
