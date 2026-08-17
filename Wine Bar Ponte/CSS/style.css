@@ -688,7 +688,7 @@ footer {
   
   .about-wrap { display: flex; flex-direction: column-reverse; gap: 48px; }
   .info-wrap { grid-template-columns: 1fr; gap: 48px; }
-  .about-visual { height: 360px; }
+  .about-visual { height: 360px; width: 100%; }
   
   .feature-list { gap: 80px; }
   .ft-item, .ft-item:nth-child(even) { flex-direction: column; gap: 32px; }
