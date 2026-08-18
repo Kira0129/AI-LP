@@ -864,7 +864,7 @@ section h2::before {
 
 .special-menu-img {
     flex: 1;
-    min-height: 300px;
+    min-height: auto;
 }
 
 .special-menu-img img {
