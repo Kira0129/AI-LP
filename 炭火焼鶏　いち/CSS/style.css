@@ -517,7 +517,7 @@ header.scrolled {
 .fv-badge {
     position: absolute;
     top: 50%;
-    right: -10%;
+    right: 5%;
     transform: translateY(-50%);
     z-index: 50;
     width: 90vw;
@@ -1127,49 +1127,38 @@ section h2::before {
 }
 
 /* =========================================
-   RESERVATION (電話のみ)
+   RESERVATION (髮ｻ隧ｱ縺ｮ縺ｿ)
 ========================================= */
 .reservation {
     text-align: center;
-    padding: 3rem 0;
+    padding: 6rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .reservation-card {
     background: #fff;
-    padding: 1.5rem 2.5rem;
+    padding: 4rem 2rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    max-width: 700px;
-    margin: 1.5rem auto 0;
-}
-
-.res-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto 0;
 }
 
 .reservation-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
     color: var(--red);
 }
 
 .reservation-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-dark);
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     font-weight: bold;
-    white-space: nowrap;
-}
-
-.res-right {
-    text-align: right;
 }
 
 .res-tel a {
@@ -1368,13 +1357,7 @@ footer {
     }
 
     .reservation-card {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        gap: 1rem;
-    }
-
-    .res-right {
-        text-align: center;
+        padding: 2.5rem 1rem;
     }
 }
 
@@ -1516,7 +1499,7 @@ footer {
     transform: scale(0.95);
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     object-fit: contain;
 }
 
