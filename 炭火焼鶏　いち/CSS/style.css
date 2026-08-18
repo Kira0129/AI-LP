@@ -654,7 +654,6 @@ section h2::before {
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 8rem 0;
     color: var(--text);
     overflow: hidden;
 }
@@ -1006,7 +1005,6 @@ section h2::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 8rem 0;
     color: var(--text);
 }
 
@@ -1131,7 +1129,6 @@ section h2::before {
 ========================================= */
 .reservation {
     text-align: center;
-    padding: 6rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -1290,7 +1287,6 @@ footer {
     }
 
     .about-concept {
-        padding: 6rem 0;
     }
 
     .about-text-area {
