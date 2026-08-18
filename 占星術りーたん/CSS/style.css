@@ -114,6 +114,13 @@ a {
     padding-right: 2rem;
 }
 
+@media (max-width: 767px) {
+    .container-custom {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
 /* Animations */
 .js-fade {
     opacity: 0;
