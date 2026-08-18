@@ -1017,6 +1017,12 @@ section h2::before {
     color: var(--text);
 }
 
+@media (max-width: 768px) {
+    .greeting {
+        background-attachment: scroll;
+    }
+}
+
 .greeting-content {
     max-width: 800px;
     margin: 0 auto;
@@ -1335,8 +1341,7 @@ footer {
         white-space: normal;
     }
 
-    .about-concept {
-    }
+    .about-concept {}
 
     .about-text-area {
         padding: 2rem;
