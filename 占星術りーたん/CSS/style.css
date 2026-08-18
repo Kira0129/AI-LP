@@ -118,8 +118,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s cubic-bezier(0.4, 0,
 
 .fv__text-area::before {
     content: ''; position: absolute; inset: 0;
-    background: url('../img/star.svg') repeat center center;
-    background-size: 800px auto;
+    background: url('../img/star.svg') no-repeat center center;
+    background-size: cover;
     opacity: 0.45;
     mix-blend-mode: screen;
     pointer-events: none;
