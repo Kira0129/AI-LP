@@ -659,7 +659,7 @@ a {
 .message-layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 0rem;
     align-items: center;
 }
 
