@@ -352,6 +352,12 @@ a {
     padding: 120px 0;
 }
 
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
 /* 共通ボタン */
 .btn-elegant {
     display: inline-flex;
