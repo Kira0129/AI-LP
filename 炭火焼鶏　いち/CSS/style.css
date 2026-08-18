@@ -268,7 +268,6 @@ header.scrolled {
 .hero {
     height: 100vh;
     background-color: var(--black);
-    background-image: url('https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -563,8 +562,6 @@ section h2::before {
     padding: 8rem 0;
     color: var(--text);
     overflow: hidden;
-    /* 動画がない場合は背景画像を設定 */
-    background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=2070&auto=format&fit=crop');
 }
 
 .about-concept::before {
@@ -894,7 +891,6 @@ section h2::before {
 ========================================= */
 .greeting {
     text-align: center;
-    background-image: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1934&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
