@@ -1325,6 +1325,10 @@ footer {
         display: block !important;
     }
 
+    .fv-badge {
+        width: 100vw;
+    }
+
     .fv-social-scroll {
         display: flex !important;
         left: 15px;
