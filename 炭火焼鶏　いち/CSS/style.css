@@ -553,7 +553,7 @@ section h2 {
     font-size: 48px;
     margin-bottom: 0.5rem;
     color: var(--text);
-    letter-spacing: 0.15em;
+    letter-spacing: 2px;
     font-weight: normal;
     position: relative;
     display: inline-block;
