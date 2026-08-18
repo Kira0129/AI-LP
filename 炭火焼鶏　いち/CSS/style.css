@@ -1162,22 +1162,31 @@ footer {
     .recommended-list { grid-template-columns: 1fr; }
     .recommended-list li { white-space: normal; }
     
-    .about-concept { padding: 5rem 0; }
+    .about-concept { padding: 6rem 0; }
     .about-text-area { 
-        padding: 1rem;
+        padding: 2rem;
+        margin-top: 1rem;
         flex-direction: column; 
         align-items: center;
-        gap: 2.5rem;
+        gap: 3rem;
     }
     .about-top-wrap { 
+        display: flex;
         flex-direction: row-reverse; 
-        gap: 15px; 
+        gap: 20px; 
+        justify-content: center;
         width: 100%;
     }
-    .about-col-left { width: 100%; }
-    .about-catch { font-size: 32px; gap: 10px; }
-    .about-desc { font-size: 14px; line-height: 2.2; margin-right: 0; }
-    .about-desc p { margin-left: 15px; }
+    .about-col-right, .about-col-center { width: auto; }
+    .about-col-left { 
+        display: flex; 
+        justify-content: center;
+        width: 100%;
+    }
+    .about-label { font-size: 18px; padding: 15px 5px; }
+    .about-catch { font-size: 38px; gap: 10px; }
+    .about-desc { font-size: 15px; line-height: 2.2; margin-right: 0; }
+    .about-desc p { margin-left: 20px; }
     
     .special-menu-card { flex-direction: column; }
     .special-menu-info { padding: 1.5rem; }
