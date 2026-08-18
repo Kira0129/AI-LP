@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占星術りーたん | 星を通して、本当の自分を知る時間</title>
+    <meta name="description" content="石川県野々市市。ホロスコープから、あなたらしさや才能、これからの一歩を読み解く対面鑑定。">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (FontAwesome for SNS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header class="header" id="js-header">
+        <div class="header__container">
+            <a href="#" class="header__logo">占星術りーたん</a>
+            
+            <nav class="header__nav pc-only">
+                <ul class="flex gap-6 items-center text-[13px] tracking-widest text-[var(--clr-dark)] mr-4">
+                    <li><a href="#about" class="hover:text-[var(--clr-main)] transition-colors">ABOUT</a></li>
+                    <li><a href="#horoscope" class="hover:text-[var(--clr-main)] transition-colors">HOROSCOPE</a></li>
+                    <li><a href="#features" class="hover:text-[var(--clr-main)] transition-colors">FEATURES</a></li>
+                    <li><a href="#menu" class="hover:text-[var(--clr-main)] transition-colors">MENU</a></li>
+                    <li><a href="#cta" class="hover:text-[var(--clr-main)] transition-colors">ACCESS</a></li>
+                </ul>
+                <a href="#cta" class="header__reserve-btn">ご予約・お問い合わせ</a>
+            </nav>
+            
+            <!-- Mobile Menu Toggle (Simplified for demo) -->
+            <a href="#cta" class="header__reserve-btn sp-only">ご予約</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="fv" id="fv">
+            <div class="fv__text-area js-blur-reveal" style="transition-delay: 0.2s;">
+                <h1 class="fv__catch">星を知れば、<br class="sp-only">自分がもっとわかる</h1>
+                <p class="fv__sub">ホロスコープから、あなたらしさや才能、<br class="pc-only">これからの一歩を読み解きます。</p>
+            </div>
+            <div class="fv__img-area js-blur-reveal" style="transition-delay: 0.5s;">
+                <div class="fv__slideshow" id="js-fv-slideshow">
+                    <!-- 紫系や星、癒やしを感じる画像 -->
+                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80" class="is-active" alt="星空とクリスタル">
+                    <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80" alt="タロットとキャンドル">
+                </div>
+                <div class="fv__scroll">
+                    <span class="fv__scroll-text">Scroll</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="struggle section-padding" id="struggle">
+            <div class="container-custom">
+                <div class="struggle-box js-fade">
+                    <div class="text-center mb-6">
+                        <h2 class="text-xl md:text-2xl text-[var(--clr-dark)] tracking-widest">こんなお悩みありませんか？</h2>
+                    </div>
+                    <ul class="struggle-list">
+                        <li>このまま頑張り続けていいのか分からない</li>
+                        <li>一生懸命なのに、なぜか思うようにいかない</li>
+                        <li>自分の才能や本当の強みを知りたい</li>
+                        <li>恋愛や人間関係で同じ悩みを繰り返している</li>
+                        <li>子どもの個性や才能、接し方に悩んでいる</li>
+                        <li>仕事や転職、これからの生き方に迷っている</li>
+                    </ul>
+                    <p class="text-center mt-8 text-[var(--clr-main)] font-medium text-lg tracking-widest leading-loose">
+                        答えが見つからないときこそ、<br class="sp-only">自分自身を知ることから始めてみませんか。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="about">
+            <div class="container-custom">
+                <!-- CONCEPT / ABOUT AREA (Cafe & Bal Roast style) -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 js-fade">
+                    <!-- Left Column: Vertical Headline (Desktop) / Horizontal (Mobile) -->
+                    <div class="hidden md:block text-[var(--clr-dark)] text-[32px] font-bold"
+                        style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.3em; font-family: var(--ff-jp-main); line-height: 2;">
+                        星を通して、<br>本当の自分を知る時間
+                    </div>
+                    <!-- Mobile only Headline -->
+                    <div class="md:hidden text-center text-[var(--clr-dark)] text-[22px] font-bold mb-6"
+                        style="font-family: var(--ff-jp-main); letter-spacing: 0.15em; line-height: 1.6;">
+                        星を通して、<br>本当の自分を知る時間
+                    </div>
+
+                    <!-- Right Column: Paragraph Text -->
+                    <div class="text-left text-[var(--clr-text)] text-[15px] leading-[2.2] tracking-wide font-normal max-w-xl"
+                        style="font-family: var(--ff-jp-main);">
+                        <p class="mb-6">
+                            ホロスコープは、生まれた瞬間の星の配置を読み解き、その人が持つ個性や才能、考え方の傾向などを知るためのものです。
+                        </p>
+                        <p class="mb-6">
+                            自分では短所だと思っていた部分も、見方を変えれば大切な個性や才能かもしれません。<br class="hidden md:block">
+                            鑑定では「○○座だから」と一つの星座だけで判断するのではなく、さまざまな星の配置を丁寧に読み解きます。
+                        </p>
+                        <p>
+                            自分自身はもちろん、お子さまやパートナーとの違いを知ることで、<br class="hidden md:block">
+                            これまでとは少し違った視点から人生や人間関係を見つめられるようお手伝いします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT IMAGE GRID (3 Column Full-Width Style) -->
+            <div class="w-full overflow-hidden js-fade mt-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
+                    <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80" alt="ホロスコープ"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80" alt="キャンドルとカード"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80" alt="星空とクリスタル"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white" id="horoscope">
+            <div class="container-custom">
+                <div class="section-title-wrap js-fade">
+                    <h2 class="section-title-en">Horoscope</h2>
+                    <span class="section-title-ja">生まれた瞬間の星から、自分を知る</span>
+                </div>
+                
+                <div class="text-center js-fade max-w-3xl mx-auto mb-12">
+                    <p>
+                        ホロスコープとは、生まれた日時や場所をもとに、その瞬間の星の配置を表したものです。<br>
+                        そこから、生まれ持った個性や才能、考え方の傾向、人との関わり方などを読み解き、自分自身や大切な人をより深く理解するためのヒントとして活用します。
+                    </p>
+                </div>
+
+                <div class="horoscope-grid">
+                    <div class="h-card js-fade">
+                        <h3 class="h-card__title">自分自身・才能</h3>
+                        <p class="text-sm opacity-80 leading-loose">
+                            生まれ持った個性、得意なこと、苦手なことなどを読み解きます。「自分らしさが分からない」「もっと自分の強みを活かしたい」という方に、これからの生き方を考えるヒントをお伝えします。
+                        </p>
+                    </div>
+                    <div class="h-card js-fade" style="transition-delay: 0.1s;">
+                        <h3 class="h-card__title">子育て・親子関係</h3>
+                        <p class="text-sm opacity-80 leading-loose">
+                            お子さまが生まれ持つ個性や才能を読み解き、その子らしさを尊重した関わり方や声かけを一緒に考えます。「どうして分かり合えないの？」と感じていた親子の違いを知るきっかけにも。
+                        </p>
+                    </div>
+                    <div class="h-card js-fade">
+                        <h3 class="h-card__title">恋愛・夫婦・人間関係</h3>
+                        <p class="text-sm opacity-80 leading-loose">
+                            恋愛、夫婦、家族、職場など、人との関係に悩んでいる方へ。自分と相手、それぞれの性質や価値観を読み解きながら、関係性を見つめ直すヒントを探します。
+                        </p>
+                    </div>
+                    <div class="h-card js-fade" style="transition-delay: 0.1s;">
+                        <h3 class="h-card__title">仕事・これからの人生</h3>
+                        <p class="text-sm opacity-80 leading-loose">
+                            転職、働き方、今後の方向性など、「このままでいいのかな」と迷っている方へ。生まれ持った資質を確認しながら、自分らしく進むための次の一歩を一緒に考えます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="features">
+            <div class="container-custom">
+                <div class="section-title-wrap js-fade">
+                    <h2 class="section-title-en">Features</h2>
+                    <span class="section-title-ja">4つの特徴</span>
+                </div>
+
+                <div class="features-list">
+                    <!-- Feature 1 -->
+                    <div class="feature-item js-fade">
+                        <div class="feature-item__img">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80" alt="当てるだけで終わらない">
+                        </div>
+                        <div class="feature-item__content">
+                            <div class="feature-num">01</div>
+                            <h3 class="feature-title">「当てる」だけで終わらない星読み</h3>
+                            <p class="opacity-80 leading-loose">
+                                運勢や結果を伝えて終わるのではなく、「では、これから何ができるのか」まで一緒に考えます。<br>
+                                ホロスコープを、未来を決めつけるものではなく、自分らしく生きるためのヒントとしてお伝えします。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-item js-fade">
+                        <div class="feature-item__img">
+                            <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?auto=format&fit=crop&q=80" alt="丁寧に読み解く">
+                        </div>
+                        <div class="feature-item__content">
+                            <div class="feature-num">02</div>
+                            <h3 class="feature-title">一人ひとりを丁寧に読み解く</h3>
+                            <p class="opacity-80 leading-loose">
+                                「○○座だからこんな人」と簡単に決めつけるのではなく、生まれた瞬間のさまざまな星の配置を細やかに読み解きます。<br>
+                                才能や性格だけでなく、恋愛・夫婦関係・仕事・人間関係など、さまざまなお悩みをご相談いただけます。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-item js-fade">
+                        <div class="feature-item__img">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80" alt="親子それぞれの個性">
+                        </div>
+                        <div class="feature-item__content">
+                            <div class="feature-num">03</div>
+                            <h3 class="feature-title">親子それぞれの個性を知る鑑定</h3>
+                            <p class="opacity-80 leading-loose">
+                                お子さまにも、その子だけの個性や価値観があります。<br>
+                                ホロスコープから親子それぞれの違いを知ることで、「なぜこうなるの？」という戸惑いを、理解するための新しい視点へとつなげます。ブログでも、子どもには「その子だけの星」があり、親の価値観だけで決めつけないことを大切にされています。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-item js-fade">
+                        <div class="feature-item__img">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&q=80" alt="実体験による寄り添い">
+                        </div>
+                        <div class="feature-item__content">
+                            <div class="feature-num">04</div>
+                            <h3 class="feature-title">実体験があるからこその寄り添い</h3>
+                            <p class="opacity-80 leading-loose">
+                                障害児育児、きょうだい児育児、県外でのワンオペ育児など、自身もさまざまな悩みや葛藤を経験してきました。<br>
+                                ただ「大丈夫」と励ますだけではなく、その気持ちに寄り添いながら、「これからどうするか」を一緒に見つけていくことを大切にしています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding menu-bg" id="menu">
+            <div class="container-custom">
+                <div class="section-title-wrap js-fade">
+                    <h2 class="section-title-en">Menu</h2>
+                    <span class="section-title-ja">鑑定料金</span>
+                </div>
+
+                <div class="menu-box js-fade">
+                    <div class="menu-box__header">
+                        <h3 class="menu-name">ホロスコープ鑑定</h3>
+                        <span class="menu-price">12,000<span class="text-sm">円</span></span>
+                    </div>
+                    <p class="leading-loose opacity-90 mb-6">
+                        60〜90分を目安に、あなたの生まれ持った才能や個性、恋愛・人間関係・仕事・子育てなどのお悩みを、ホロスコープから丁寧に読み解きます。
+                    </p>
+                    <p class="text-sm text-[var(--clr-accent)] mb-2">※石川県内（金沢・野々市・白山）のカフェにて、対面鑑定を行っています。</p>
+                    <p class="text-sm text-[var(--clr-accent)]">※追加料金はございませんので、安心してご相談ください。</p>
+                    
+                    <div class="menu-note">
+                        ※複数のご相談内容がある場合は、事前にお知らせください。内容によっては、時間内にすべてお伝えできない場合がございます。
+                    </div>
+                </div>
+
+                <div class="menu-box js-fade">
+                    <div class="menu-box__header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+                        <h3 class="menu-name">星空のお守りスプレー</h3>
+                        <span class="menu-price">3,500<span class="text-sm">円</span></span>
+                    </div>
+                    <p class="leading-loose opacity-90 mt-4">
+                        毎日にそっと寄り添う「星空のお守りスプレー」をご用意しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-sec" id="message">
+            <div class="container-custom">
+                <div class="message-content js-fade">
+                    <div class="section-title-en" style="color: #fff; margin-bottom: 3rem;">Message</div>
+                    <div class="message-text">
+                        私が子育てで折れそうになっていたとき、<br>
+                        頼れる場所がありませんでした。<br><br>
+                        寄り添って、じっくり話を聞いてくれる人もいなくて——<br>
+                        心のどこかで、ずっと満たされない思いを抱えていました。<br><br>
+                        だからこそ、<br>
+                        同じように苦労を経験してきた「厚みのある人」が、<br>
+                        ちゃんとその人の話を聞き、<br>
+                        その人自身の幸せに寄り添える場所を作りたかったんです。
+                    </div>
+                    <div class="font-[Italiana] text-xl tracking-[0.2em] opacity-80">Ritan</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white" id="cta">
+            <div class="container-custom">
+                <div class="section-title-wrap js-fade">
+                    <h2 class="section-title-en">Contact & Access</h2>
+                    <span class="section-title-ja">ご予約・店舗情報</span>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center js-fade mb-12">
+                    <p class="mb-4">鑑定のご予約・お問い合わせは、公式LINEまたはお電話にて承ります。</p>
+                </div>
+                <div class="cta-grid js-fade mb-20">
+                    <div class="cta-card">
+                        <i class="fa-brands fa-line cta-icon" style="color: #06C755;"></i>
+                        <h3 class="text-lg mb-4 tracking-widest">公式LINE</h3>
+                        <p class="text-sm opacity-70 mb-6">24時間受付。お気軽にご連絡ください。</p>
+                        <a href="https://lin.ee/nB6JVDE" target="_blank" class="btn-elegant btn-line">LINEで予約する</a>
+                    </div>
+                    <div class="cta-card">
+                        <i class="fa-solid fa-phone cta-icon"></i>
+                        <h3 class="text-lg mb-4 tracking-widest">お電話</h3>
+                        <p class="text-sm opacity-70 mb-6">営業時間内（11:00〜15:00）に対応いたします。</p>
+                        <a href="tel:05054487635" class="text-3xl font-[Italiana] tracking-widest text-[var(--clr-dark)] hover:text-[var(--clr-main)] transition-colors">050-5448-7635</a>
+                    </div>
+                </div>
+
+                <!-- Access -->
+                <div class="shop-info js-fade">
+                    <div class="shop-detail">
+                        <h3 class="text-xl tracking-widest mb-6">店舗情報</h3>
+                        <dl>
+                            <dt>店舗名</dt>
+                            <dd>占星術りーたん</dd>
+                            <dt>住所</dt>
+                            <dd>〒921-8845<br>石川県野々市市</dd>
+                            <dt>営業時間</dt>
+                            <dd>11:00〜15:00</dd>
+                            <dt>定休日</dt>
+                            <dd>月・日・不定休</dd>
+                        </dl>
+                        <div class="mt-8 flex gap-4">
+                            <a href="https://ameblo.jp/kogurerie0217/" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-solid fa-pen-nib"></i></a>
+                            <a href="https://www.instagram.com/jippii0217" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://ritan.shopselect.net/" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-solid fa-store"></i></a>
+                        </div>
+                    </div>
+                    <div class="shop-map bg-gray-100">
+                        <!-- 野々市市のMAP -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102573.57143977543!2d136.529241940986!3d36.5168051659972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff834a362f74bfd%3A0x6b095fb8bc414902!2z55-z5bed55yM6YeO44CF5biC!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-custom">
+            <div class="footer__sns">
+                <a href="https://ameblo.jp/kogurerie0217/" target="_blank"><i class="fa-solid fa-pen-nib"></i></a>
+                <a href="https://www.instagram.com/jippii0217" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://ritan.shopselect.net/" target="_blank"><i class="fa-solid fa-store"></i></a>
+            </div>
+            <p class="footer__copy">&copy; 2026 占星術りーたん. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="Js/script.js"></script>
+</body>
+</html>
