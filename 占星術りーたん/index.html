@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>占星術りーたん | 星を通して、本当の自分を知る時間</title>
     <meta name="description" content="石川県野々市市。ホロスコープから、あなたらしさや才能、これからの一歩を読み解く対面鑑定。">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
     <!-- Icons (FontAwesome for SNS) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
 
     <header class="header" id="js-header">
         <div class="header__container">
             <a href="#" class="header__logo">占星術りーたん</a>
-            
+
             <nav class="header__nav pc-only">
                 <ul class="flex gap-6 items-center text-[13px] tracking-widest text-[var(--clr-dark)] mr-4">
                     <li><a href="#about" class="hover:text-[var(--clr-main)] transition-colors">ABOUT</a></li>
@@ -34,7 +38,7 @@
                 </ul>
                 <a href="#cta" class="header__reserve-btn">ご予約・お問い合わせ</a>
             </nav>
-            
+
             <!-- Mobile Menu Toggle (Simplified for demo) -->
             <a href="#cta" class="header__reserve-btn sp-only">ご予約</a>
         </div>
@@ -49,8 +53,10 @@
             <div class="fv__img-area js-blur-reveal" style="transition-delay: 0.5s;">
                 <div class="fv__slideshow" id="js-fv-slideshow">
                     <!-- 紫系や星、癒やしを感じる画像 -->
-                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80" class="is-active" alt="星空とクリスタル">
-                    <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80" alt="タロットとキャンドル">
+                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80"
+                        class="is-active" alt="星空とクリスタル">
+                    <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80"
+                        alt="タロットとキャンドル">
                 </div>
                 <div class="fv__scroll">
                     <span class="fv__scroll-text">Scroll</span>
@@ -116,15 +122,18 @@
             <div class="w-full overflow-hidden js-fade mt-16">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
                     <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80" alt="ホロスコープ"
+                        <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80"
+                            alt="ホロスコープ"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80" alt="キャンドルとカード"
+                        <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80"
+                            alt="キャンドルとカード"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="aspect-[16/10] md:aspect-[4/3] overflow-hidden relative bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80" alt="星空とクリスタル"
+                        <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80"
+                            alt="星空とクリスタル"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -137,7 +146,7 @@
                     <h2 class="section-title-en">Horoscope</h2>
                     <span class="section-title-ja">生まれた瞬間の星から、自分を知る</span>
                 </div>
-                
+
                 <div class="text-center js-fade max-w-3xl mx-auto mb-12">
                     <p>
                         ホロスコープとは、生まれた日時や場所をもとに、その瞬間の星の配置を表したものです。<br>
@@ -147,26 +156,26 @@
 
                 <div class="horoscope-grid">
                     <div class="h-card js-fade">
-                        <h3 class="h-card__title"><i class="fa-solid fa-star text-[var(--clr-main)] mr-2"></i>自分自身・才能</h3>
-                        <p class="text-sm opacity-80 leading-loose">
+                        <h3 class="h-card__title">自分自身・才能</h3>
+                        <p class="opacity-80 leading-loose">
                             生まれ持った個性、得意なこと、苦手なことなどを読み解きます。「自分らしさが分からない」「もっと自分の強みを活かしたい」という方に、これからの生き方を考えるヒントをお伝えします。
                         </p>
                     </div>
                     <div class="h-card js-fade" style="transition-delay: 0.1s;">
-                        <h3 class="h-card__title"><i class="fa-solid fa-child-reaching text-[var(--clr-main)] mr-2"></i>子育て・親子関係</h3>
-                        <p class="text-sm opacity-80 leading-loose">
+                        <h3 class="h-card__title">子育て・親子関係</h3>
+                        <p class="opacity-80 leading-loose">
                             お子さまが生まれ持つ個性や才能を読み解き、その子らしさを尊重した関わり方や声かけを一緒に考えます。「どうして分かり合えないの？」と感じていた親子の違いを知るきっかけにも。
                         </p>
                     </div>
                     <div class="h-card js-fade">
-                        <h3 class="h-card__title"><i class="fa-solid fa-heart text-[var(--clr-main)] mr-2"></i>恋愛・夫婦・人間関係</h3>
-                        <p class="text-sm opacity-80 leading-loose">
+                        <h3 class="h-card__title">恋愛・夫婦・人間関係</h3>
+                        <p class="opacity-80 leading-loose">
                             恋愛、夫婦、家族、職場など、人との関係に悩んでいる方へ。自分と相手、それぞれの性質や価値観を読み解きながら、関係性を見つめ直すヒントを探します。
                         </p>
                     </div>
                     <div class="h-card js-fade" style="transition-delay: 0.1s;">
-                        <h3 class="h-card__title"><i class="fa-solid fa-compass text-[var(--clr-main)] mr-2"></i>仕事・これからの人生</h3>
-                        <p class="text-sm opacity-80 leading-loose">
+                        <h3 class="h-card__title">仕事・これからの人生</h3>
+                        <p class="opacity-80 leading-loose">
                             転職、働き方、今後の方向性など、「このままでいいのかな」と迷っている方へ。生まれ持った資質を確認しながら、自分らしく進むための次の一歩を一緒に考えます。
                         </p>
                     </div>
@@ -185,7 +194,8 @@
                     <!-- Feature 1 -->
                     <div class="feature-item js-fade">
                         <div class="feature-item__img">
-                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80" alt="当てるだけで終わらない">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80"
+                                alt="当てるだけで終わらない">
                         </div>
                         <div class="feature-item__content">
                             <div class="feature-num">01</div>
@@ -199,7 +209,8 @@
                     <!-- Feature 2 -->
                     <div class="feature-item js-fade">
                         <div class="feature-item__img">
-                            <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?auto=format&fit=crop&q=80" alt="丁寧に読み解く">
+                            <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?auto=format&fit=crop&q=80"
+                                alt="丁寧に読み解く">
                         </div>
                         <div class="feature-item__content">
                             <div class="feature-num">02</div>
@@ -213,7 +224,8 @@
                     <!-- Feature 3 -->
                     <div class="feature-item js-fade">
                         <div class="feature-item__img">
-                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80" alt="親子それぞれの個性">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80"
+                                alt="親子それぞれの個性">
                         </div>
                         <div class="feature-item__content">
                             <div class="feature-num">03</div>
@@ -227,7 +239,8 @@
                     <!-- Feature 4 -->
                     <div class="feature-item js-fade">
                         <div class="feature-item__img">
-                            <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&q=80" alt="実体験による寄り添い">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&q=80"
+                                alt="実体験による寄り添い">
                         </div>
                         <div class="feature-item__content">
                             <div class="feature-num">04</div>
@@ -259,7 +272,7 @@
                     </p>
                     <p class="text-sm text-[var(--clr-accent)] mb-2">※石川県内（金沢・野々市・白山）のカフェにて、対面鑑定を行っています。</p>
                     <p class="text-sm text-[var(--clr-accent)]">※追加料金はございませんので、安心してご相談ください。</p>
-                    
+
                     <div class="menu-note">
                         ※複数のご相談内容がある場合は、事前にお知らせください。内容によっては、時間内にすべてお伝えできない場合がございます。
                     </div>
@@ -318,7 +331,8 @@
                         <i class="fa-solid fa-phone cta-icon"></i>
                         <h3 class="text-lg mb-4 tracking-widest">お電話</h3>
                         <p class="text-sm opacity-70 mb-6">営業時間内（11:00〜15:00）に対応いたします。</p>
-                        <a href="tel:05054487635" class="text-3xl font-[Italiana] tracking-widest text-[var(--clr-dark)] hover:text-[var(--clr-main)] transition-colors">050-5448-7635</a>
+                        <a href="tel:05054487635"
+                            class="text-3xl font-[Italiana] tracking-widest text-[var(--clr-dark)] hover:text-[var(--clr-main)] transition-colors">050-5448-7635</a>
                     </div>
                 </div>
 
@@ -337,15 +351,25 @@
                             <dd>月・日・不定休</dd>
                         </dl>
                         <div class="mt-8 flex gap-4">
-                            <a href="https://ameblo.jp/kogurerie0217/" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-solid fa-pen-nib"></i></a>
-                            <a href="https://www.instagram.com/jippii0217" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://ritan.shopselect.net/" target="_blank" class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i class="fa-solid fa-store"></i></a>
+                            <a href="https://ameblo.jp/kogurerie0217/" target="_blank"
+                                class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i
+                                    class="fa-solid fa-pen-nib"></i></a>
+                            <a href="https://www.instagram.com/jippii0217" target="_blank"
+                                class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank"
+                                class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://ritan.shopselect.net/" target="_blank"
+                                class="text-[var(--clr-main)] hover:text-[var(--clr-dark)] text-xl"><i
+                                    class="fa-solid fa-store"></i></a>
                         </div>
                     </div>
                     <div class="shop-map bg-gray-100">
                         <!-- 野々市市のMAP -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102573.57143977543!2d136.529241940986!3d36.5168051659972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff834a362f74bfd%3A0x6b095fb8bc414902!2z55-z5bed55yM6YeO44CF5biC!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102573.57143977543!2d136.529241940986!3d36.5168051659972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff834a362f74bfd%3A0x6b095fb8bc414902!2z55-z5bed55yM6YeO44CF5biC!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -356,8 +380,10 @@
         <div class="container-custom">
             <div class="footer__sns">
                 <a href="https://ameblo.jp/kogurerie0217/" target="_blank"><i class="fa-solid fa-pen-nib"></i></a>
-                <a href="https://www.instagram.com/jippii0217" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/jippii0217" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCn-5wt6_1nEBfmcFtfywtCg" target="_blank"><i
+                        class="fa-brands fa-youtube"></i></a>
                 <a href="https://ritan.shopselect.net/" target="_blank"><i class="fa-solid fa-store"></i></a>
             </div>
             <p class="footer__copy">&copy; 2026 占星術りーたん. All Rights Reserved.</p>
@@ -367,4 +393,5 @@
     <!-- External JS -->
     <script src="Js/script.js"></script>
 </body>
+
 </html>
