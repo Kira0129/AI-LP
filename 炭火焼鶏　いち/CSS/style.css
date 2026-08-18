@@ -459,25 +459,26 @@ header.scrolled {
 /* FV Badge */
 .fv-badge {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    z-index: 120;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    z-index: 50;
+    width: 90vw;
+    opacity: 1;
+    pointer-events: none;
 }
 
 .fv-badge img {
-    max-width: 250px;
+    width: 100%;
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .fv-badge {
-        bottom: auto;
-        top: 20px;
-        right: 20px;
-    }
-    .fv-badge img {
-        max-width: 120px;
-    }
+.pc-badge {
+    display: block;
+}
+
+.sp-badge {
+    display: none;
 }
 
 
@@ -1147,7 +1148,7 @@ footer {
         background-attachment: scroll !important;
         background-position: center !important;
     }
-    .fv-nav-left, .hero-title-vertical, .hero-highlights { display: none !important; }
+    .fv-nav-left, .hero-title-vertical, .hero-highlights, .fv-badge { display: none !important; }
     .fv-social-scroll {
         display: flex !important;
         left: 15px;
