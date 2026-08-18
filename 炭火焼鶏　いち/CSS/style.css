@@ -1255,6 +1255,10 @@ footer {
         padding: 0 1rem;
     }
 
+    .contact-info {
+        padding: 1.5rem;
+    }
+
     .about-desc p,
     .recommended-list li,
     .contact-item p,
