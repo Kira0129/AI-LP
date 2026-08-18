@@ -1,0 +1,1 @@
+const fs = require('fs'); let css = fs.readFileSync('’Y‰ÎÄŒ{@‚¢‚¿/CSS/style.css', 'utf8'); css = css.replace(/font-size:\s*([0-9.]+)rem;/g, (match, p1) => { const px = Math.round(parseFloat(p1) * 16); return \ont-size: \px;\; }); fs.writeFileSync('’Y‰ÎÄŒ{@‚¢‚¿/CSS/style.css', css);
