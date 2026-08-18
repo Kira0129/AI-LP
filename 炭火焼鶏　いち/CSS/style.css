@@ -1309,6 +1309,7 @@ footer {
     .hero {
         background-attachment: scroll !important;
         background-position: center !important;
+        height: 90vh;
     }
 
     .fv-nav-left,
