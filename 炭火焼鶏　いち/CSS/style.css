@@ -471,13 +471,13 @@ header.scrolled {
 }
 
 .highlight-item {
-    color: var(--red);
+    color: white;
     padding: 0.4rem 1.2rem;
     font-size: 1.1rem;
     letter-spacing: 0.1em;
     font-weight: normal;
-    background: var(--dark-gray);
-    border: 1px solid var(--red);
+    background: var(--red);
+    border: none;
     opacity: 0;
     transform: translateY(30px);
     font-family: 'Noto Sans JP', sans-serif;
