@@ -1127,38 +1127,49 @@ section h2::before {
 }
 
 /* =========================================
-   RESERVATION (髮ｻ隧ｱ縺ｮ縺ｿ)
+   RESERVATION (電話のみ)
 ========================================= */
 .reservation {
     text-align: center;
-    padding: 6rem 0;
+    padding: 3rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .reservation-card {
     background: #fff;
-    padding: 4rem 2rem;
+    padding: 1.5rem 2.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    max-width: 600px;
-    margin: 2rem auto 0;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+}
+
+.res-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .reservation-icon {
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: var(--red);
 }
 
 .reservation-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-weight: bold;
+    white-space: nowrap;
+}
+
+.res-right {
+    text-align: right;
 }
 
 .res-tel a {
@@ -1357,7 +1368,13 @@ footer {
     }
 
     .reservation-card {
-        padding: 2.5rem 1rem;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .res-right {
+        text-align: center;
     }
 }
 
