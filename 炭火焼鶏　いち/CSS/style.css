@@ -674,7 +674,7 @@ section h2::before {
     z-index: 2;
 }
 
-.about-text {
+.about-desc p {
     font-size: 16px;
 }
 
@@ -1251,7 +1251,7 @@ footer {
         font-size: 14px;
     }
 
-    .about-text,
+    .about-desc p,
     .recommended-list li,
     .contact-item p {
         font-size: 14px;
