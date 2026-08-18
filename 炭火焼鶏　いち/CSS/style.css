@@ -631,7 +631,7 @@ section h2::before {
     list-style: none;
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 15px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -672,6 +672,10 @@ section h2::before {
 .about-concept .container {
     position: relative;
     z-index: 2;
+}
+
+.about-text {
+    font-size: 16px;
 }
 
 .about-text-area {
@@ -1072,7 +1076,7 @@ section h2::before {
 
 .contact-item p {
     color: var(--text-dark);
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -1244,6 +1248,12 @@ footer {
 
 @media (max-width: 768px) {
     body {
+        font-size: 14px;
+    }
+
+    .about-text,
+    .recommended-list li,
+    .contact-item p {
         font-size: 14px;
     }
 
