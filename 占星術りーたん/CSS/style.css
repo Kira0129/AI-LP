@@ -521,7 +521,7 @@ a {
 }
 
 .h-card p {
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width: 767px) {
