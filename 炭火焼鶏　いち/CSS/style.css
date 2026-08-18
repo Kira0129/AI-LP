@@ -1313,9 +1313,16 @@ footer {
 
     .fv-nav-left,
     .hero-title-vertical,
-    .hero-highlights,
-    .fv-badge {
+    .hero-highlights {
         display: none !important;
+    }
+
+    .pc-badge {
+        display: none !important;
+    }
+
+    .sp-badge {
+        display: block !important;
     }
 
     .fv-social-scroll {
