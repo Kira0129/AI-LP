@@ -1251,6 +1251,10 @@ footer {
         font-size: 14px;
     }
 
+    .container {
+        padding: 0 1rem;
+    }
+
     .about-desc p,
     .recommended-list li,
     .contact-item p,
