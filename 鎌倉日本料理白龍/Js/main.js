@@ -189,3 +189,51 @@ if (backToTopBtn) {
         });
     });
 }
+
+// iOSでのbg-fixed（パララックス）無効化対策
+document.addEventListener('DOMContentLoaded', () => {
+    // iOS SafariおよびiPadOS判定
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    
+    if (isIOS) {
+        const messageSection = document.getElementById('message');
+        if (messageSection) {
+            // 背景画像用のdivを生成
+            const bgDiv = document.createElement('div');
+            // 高さを大きめに設定し、スクロール時に見切れないようにする
+            bgDiv.className = 'absolute top-[-20%] left-0 w-full h-[140%] bg-cover bg-center md:bg-[center_65%]';
+            bgDiv.style.zIndex = '-20';
+            
+            const bgImage = messageSection.style.backgroundImage;
+            if (bgImage) {
+                bgDiv.style.backgroundImage = bgImage;
+                
+                // 元のセクションの背景設定を解除し、overflow-hiddenを追加
+                messageSection.style.backgroundImage = 'none';
+                messageSection.classList.remove('bg-fixed');
+                messageSection.classList.add('overflow-hidden');
+                
+                // 要素を挿入（一番背面になるように先頭に追加）
+                messageSection.insertBefore(bgDiv, messageSection.firstChild);
+                
+                // スクロール連動でパララックス（Y軸移動）を適用
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            const rect = messageSection.getBoundingClientRect();
+                            // セクションが画面内にある場合のみ処理
+                            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                                // 移動量の係数（0.2くらいが自然な視差効果）
+                                const yPos = rect.top * 0.2; 
+                                bgDiv.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            }
+        }
+    }
+});
