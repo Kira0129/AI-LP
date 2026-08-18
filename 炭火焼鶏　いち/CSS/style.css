@@ -1254,7 +1254,8 @@ footer {
     .about-desc p,
     .recommended-list li,
     .contact-item p,
-    .feature-text p {
+    .feature-text p,
+    .menu-desc {
         font-size: 14px;
     }
 
