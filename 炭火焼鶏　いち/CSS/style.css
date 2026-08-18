@@ -520,7 +520,7 @@ header.scrolled {
     right: 0%;
     transform: translateY(-50%);
     z-index: 50;
-    width: 90vw;
+    width: 85vw;
     opacity: 1;
     pointer-events: none;
 }
