@@ -612,6 +612,7 @@ section h2::before {
 .voice .section-subtitle,
 .reservation .section-subtitle {
     color: var(--text-muted-dark);
+    font-size: 16px;
 }
 
 /* =========================================
@@ -1264,7 +1265,8 @@ footer {
     .contact-item p,
     .feature-text p,
     .menu-desc,
-    .res-note {
+    .res-note,
+    .reservation .section-subtitle {
         font-size: 14px;
     }
 
