@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炭火焼鶏いち - 本格焼鶏と創作料理</title>
+
+    <!-- OGP -->
+    <meta property="og:title" content="炭火焼鶏いち - 本格焼鶏と創作料理">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="郡山市虎丸町の本格焼鶏と創作料理を楽しめる居酒屋。一本の串に丁寧な仕事を。">
+    <meta property="og:site_name" content="炭火焼鶏いち">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&family=Yuji+Syuku&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー・ナビゲーション -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">炭火焼鶏いち</a>
+
+            <!-- PC用ナビゲーション -->
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="#about">こだわり</a></li>
+                    <li><a href="#features">特徴</a></li>
+                    <li><a href="#menu">メニュー</a></li>
+                    <li><a href="#voice">お客様の声</a></li>
+                    <li><a href="#contact">店舗情報</a></li>
+                    <li>
+                        <a href="tel:050-8884-9833" class="nav-reserve-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                            </svg>
+                            ご予約
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- ハンバーガーメニューアイコン -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- SP用ナビゲーションメニュー -->
+        <nav class="sp-nav" id="sp-nav">
+            <ul>
+                <li><a href="#about">こだわり</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#menu">メニュー</a></li>
+                <li><a href="#voice">お客様の声</a></li>
+                <li><a href="#contact">店舗情報</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ヒーロー -->
+    <section class="hero" id="home">
+        <!-- 左側ナビゲーション -->
+        <nav class="fv-nav-left">
+            <ul>
+                <li><a href="#contact">店舗情報</a></li>
+                <li><a href="#voice">お客様の声</a></li>
+                <li><a href="#menu">メニュー</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#about">こだわり</a></li>
+            </ul>
+        </nav>
+
+        <!-- SNSとスクロールダウン -->
+        <div class="fv-social-scroll">
+            <a href="https://www.instagram.com/sumibi_yakitori_ichi" target="_blank" class="social-link" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://www.gurutto-koriyama.com/restaurant/sumibiyakitori-ichi/" target="_blank" class="social-link" aria-label="ぐるっと郡山" style="font-size:12px; text-decoration:none; writing-mode:vertical-rl; font-weight:bold;">
+                ぐるっと郡山
+            </a>
+            <div class="scroll-down">SCROLL DOWN</div>
+        </div>
+
+        <!-- 中央縦書きキャッチコピー -->
+        <div class="hero-title-vertical">
+            <h1>一本の串に、<br class="pc-br-only">丁寧な仕事を。</h1>
+        </div>
+
+        <!-- ヒーローハイライト（スクロール検知で表示） -->
+        <div class="hero-highlights">
+            <div class="highlight-item">伊達鶏・黒さつま鶏使用</div>
+            <div class="highlight-item">紀州備長炭で焼き上げ</div>
+        </div>
+    </section>
+
+    <!-- こんな方におすすめ -->
+    <section id="recommended" class="recommended">
+        <div class="container">
+            <h2>こんな方におすすめ</h2>
+            <p class="section-subtitle">様々なシーンでお役立てください</p>
+            <ul class="recommended-list">
+                <li>おいしい焼鳥とお酒をゆっくり楽しみたい方</li>
+                <li>仕事帰りにふらっと立ち寄りたい方</li>
+                <li>職人の手仕事を間近で見たい方</li>
+                <li>ご友人やご家族と落ち着いた時間を過ごしたい方</li>
+                <li>素材にこだわった鶏料理を味わいたい方</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-concept">
+        <div class="container">
+            <div class="about-text-area">
+                <!-- 上部（ラベルと見出し）のラップ -->
+                <div class="about-top-wrap">
+                    <!-- 右カラム：ラベル -->
+                    <div class="about-col-right">
+                        <div class="about-label about-vertical-text">炭火焼鶏いち</div>
+                    </div>
+
+                    <!-- 中央カラム：大見出し -->
+                    <div class="about-col-center">
+                        <h2 class="about-catch about-vertical-text">
+                            <span>一本の串に、<br>丁寧な仕事を</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- 左カラム：本文（縦書き） -->
+                <div class="about-col-left">
+                    <div class="about-desc about-vertical-text">
+                        <p>郡山市虎丸町の「炭火焼鶏いち」は、<br>本格焼鶏と創作料理を楽しめる居酒屋です。</p>
+                        <p>伊達鶏と黒さつま鶏を丸鶏で仕入れ、店内で捌き、<br>一本一本手作業で串打ち。<br>素材の持ち味を大切にしながら、<br>紀州備長炭でじっくりと焼き上げます。</p>
+                        <p>落ち着いた店内で、<br>炭火の香りとともに心ほどける時間をお過ごしください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>当店の特徴</h2>
+            <p class="section-subtitle">炭火焼鶏いちのこだわり</p>
+
+            <div class="features-list">
+                <!-- 特徴1 -->
+                <div class="feature-item">
+                    <div class="feature-image-wrapper">
+                        <!--  -->
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop" alt="丸鶏から仕込む、手仕事の焼鶏">
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-number">01</div>
+                        <h3>丸鶏から仕込む、<br>手仕事の焼鶏</h3>
+                        <p>伊達鶏と黒さつま鶏を丸鶏で仕入れ、店内で丁寧に捌いています。<br>部位ごとの特徴を見極めながら、一本一本手作業で串打ちしています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴2 -->
+                <div class="feature-item">
+                    <div class="feature-image-wrapper">
+                        <!--  -->
+                        <img src="https://images.unsplash.com/photo-1550505095-81378a876121?q=80&w=1000&auto=format&fit=crop" alt="紀州備長炭">
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-number">02</div>
+                        <h3>紀州備長炭で引き出す、<br>鶏本来の旨み</h3>
+                        <p>和歌山県産の紀州備長炭を使用し、高温の炭火で香ばしく焼き上げます。<br>表面は香ばしく、中はジューシーに仕上げ、鶏の旨みを閉じ込めます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴3 -->
+                <div class="feature-item">
+                    <div class="feature-image-wrapper">
+                        <!--  -->
+                        <img src="https://images.unsplash.com/photo-1580828369062-817651a23861?q=80&w=1000&auto=format&fit=crop" alt="創作料理">
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-number">03</div>
+                        <h3>注文を受けてから仕上げる<br>創作料理</h3>
+                        <p>焼鶏だけでなく、お酒との相性を考えた創作料理もご用意しています。<br>一皿ずつご注文をいただいてから調理し、できたてのおいしさをお届けします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴4 -->
+                <div class="feature-item">
+                    <div class="feature-image-wrapper">
+                        <!--  -->
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" alt="落ち着いた和の空間">
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-number">04</div>
+                        <h3>気軽に立ち寄れる、<br>落ち着いた和の空間</h3>
+                        <p>職人の手仕事を間近で楽しめるカウンター席と、ご友人やご家族でゆっくり過ごせるテーブル席をご用意しています。<br>お一人での一杯から食事、宴会まで、さまざまなシーンで気軽にご利用いただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メニュー -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>メニュー</h2>
+            <p class="section-subtitle">こだわりの焼鶏と一品料理</p>
+
+            <!-- おすすめメニュー -->
+            <div class="special-menu-card">
+                <div class="special-menu-img">
+                    <!--  -->
+                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1000&auto=format&fit=crop" alt="7本盛り盛り合わせ">
+                </div>
+                <div class="special-menu-info">
+                    <div class="menu-badge">おすすめメニュー</div>
+                    <h3>7本盛り盛り合わせ</h3>
+                    <div class="menu-price">1,800円</div>
+                    <p class="menu-desc">盛り合わせには、箸休めの大根おろしと鶏スープがつきます。<br>部位のバランスを考え、その日のおすすめを最高の焼き加減でご提供いたします。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VOICE（お客様の声） -->
+    <section id="voice" class="voice">
+        <div class="container">
+            <h2>お客様の声</h2>
+            <p class="section-subtitle">当店をご利用いただいたお客様からのお喜びの声</p>
+
+            <div class="voice-grid">
+                <!-- レビュー1 -->
+                <div class="voice-card">
+                    <div class="voice-user">
+                        <div class="voice-info">
+                            <span class="voice-stars">★★★★★</span>
+                            <span class="voice-title">A 様</span>
+                        </div>
+                    </div>
+                    <p class="voice-text">一本一本丁寧に焼かれた焼き鳥はどれも絶品でした。特にレバーがとろけるようで最高です。大根おろしでお口直しできるのも嬉しいポイントです。</p>
+                    <div class="read-more-btn hidden">もっと見る</div>
+                </div>
+
+                <!-- レビュー2 -->
+                <div class="voice-card">
+                    <div class="voice-user">
+                        <div class="voice-info">
+                            <span class="voice-stars">★★★★★</span>
+                            <span class="voice-title">B 様</span>
+                        </div>
+                    </div>
+                    <p class="voice-text">カウンター席で焼いているところを見ながら飲むお酒は格別です。炭火の良い香りが漂い、落ち着いた雰囲気でとても居心地が良いお店でした。</p>
+                    <div class="read-more-btn hidden">もっと見る</div>
+                </div>
+
+                <!-- レビュー3 -->
+                <div class="voice-card">
+                    <div class="voice-user">
+                        <div class="voice-info">
+                            <span class="voice-stars">★★★★★</span>
+                            <span class="voice-title">C 様</span>
+                        </div>
+                    </div>
+                    <p class="voice-text">お任せの7本盛り合わせを頼みましたが、色々な部位が楽しめて大満足です。最後に出てくる鶏スープもホッとする味で、またすぐに行きたくなります。</p>
+                    <div class="read-more-btn hidden">もっと見る</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ご挨拶 -->
+    <section id="greeting" class="greeting">
+        <div class="container">
+            <div class="greeting-content">
+                <h3>おいしい焼鶏と、<br>心地よい時間を</h3>
+                <p>一本の串、一皿の料理に心を込め、素材のおいしさを丁寧にお届けします。<br>仕事帰りの一杯や、大切な方との食事など、気取らずゆっくりと過ごせる場所として、皆様のご来店を心よりお待ちしております。</p>
+                <div class="signature">炭火焼鶏いち</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>店舗情報</h2>
+            <p class="section-subtitle">炭火焼鶏いち</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>店舗名</h3>
+                        <p>炭火焼鶏いち</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>住所</h3>
+                        <p>〒963-8014<br>福島県郡山市虎丸町８−７</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>電話番号</h3>
+                        <p><a href="tel:050-8884-9833">050-8884-9833</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>営業時間</h3>
+                        <p>17:30〜24:00（定休日：火曜日）</p>
+                    </div>
+                    
+                    <div class="contact-item" style="border: none; margin-top: 2rem;">
+                        <div class="sns-links">
+                            <a href="https://www.instagram.com/sumibi_yakitori_ichi" target="_blank" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://www.gurutto-koriyama.com/restaurant/sumibiyakitori-ichi/" target="_blank" class="gurutto" aria-label="ぐるっと郡山">
+                                ぐるっと郡山
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <!-- 福島県郡山市虎丸町８−７のGoogle Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.319760759312!2d140.3789476!3d37.3994348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206ca50eb81dc7%3A0x6e2b6e5b49704e67!2z44CSOTYzLTgwMTQg56aP5bO255yM6YOh5bGx5biC6JmO5Li455S6OOKIkjc!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ご予約セクション -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <h2>ご予約</h2>
+            <p class="section-subtitle">お席のご予約はお電話にて承っております。</p>
+            
+            <div class="reservation-card">
+                <div class="reservation-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                    </svg>
+                </div>
+                <h3>お電話でのご予約</h3>
+                <p class="res-tel"><a href="tel:050-8884-9833">050-8884-9833</a></p>
+                <p class="res-note">営業時間：17:30〜24:00 (定休日: 火曜)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-sns">
+                <a href="https://www.instagram.com/sumibi_yakitori_ichi" target="_blank" aria-label="Instagram">Instagram</a>
+                <span>|</span>
+                <a href="https://www.gurutto-koriyama.com/restaurant/sumibiyakitori-ichi/" target="_blank" aria-label="ぐるっと郡山">ぐるっと郡山</a>
+            </div>
+            <p>&copy; 2026 炭火焼鶏いち. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- スマホ用フローティング予約ボタン (電話のみ) -->
+    <div class="floating-cta">
+        <a href="tel:050-8884-9833">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+            </svg>
+            <span>お電話でご予約</span>
+        </a>
+    </div>
+
+    <!-- トップへ戻るボタン -->
+    <button id="back-to-top" class="back-to-top" aria-label="ページトップへ戻る">
+        <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+        </svg>
+    </button>
+
+    <!-- JS -->
+    <script src="Js/script.js"></script>
+</body>
+</html>
