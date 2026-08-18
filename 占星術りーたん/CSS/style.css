@@ -41,6 +41,9 @@ body {
     body {
         font-size: 14px;
     }
+    .fv__text-area {
+        padding: 50px 20px 40px;
+    }
 }
 
 img { max-width: 100%; height: auto; display: block; }
