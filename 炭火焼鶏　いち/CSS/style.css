@@ -633,9 +633,11 @@ section h2::before {
     border: 1px solid var(--red);
     padding: 20px 8px;
     font-family: 'Yuji Syuku', serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.3em;
+    height: max-content;
+    align-self: flex-start;
 }
 
 .about-catch {
@@ -1183,7 +1185,7 @@ footer {
         justify-content: center;
         width: 100%;
     }
-    .about-label { font-size: 18px; padding: 15px 5px; }
+    .about-label { font-size: 14px; padding: 15px 5px; }
     .about-catch { font-size: 38px; gap: 10px; }
     .about-desc { font-size: 15px; line-height: 2.2; margin-right: 0; }
     .about-desc p { margin-left: 20px; }
