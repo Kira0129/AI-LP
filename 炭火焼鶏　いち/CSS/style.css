@@ -473,7 +473,7 @@ header.scrolled {
 .highlight-item {
     color: white;
     padding: 0.4rem 1.2rem;
-    font-size: 1.1rem;
+    font-size: 20px;
     letter-spacing: 0.1em;
     font-weight: normal;
     background: var(--red);
