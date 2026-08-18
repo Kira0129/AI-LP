@@ -137,13 +137,13 @@
                 <div class="about-top-wrap">
                     <!-- 右カラム：ラベル -->
                     <div class="about-col-right">
-                        <div class="about-label about-vertical-text">炭火焼鶏いち</div>
+                        <div class="about-label about-vertical-text">本格炭火焼鶏と創作料理を皆様へ</div>
                     </div>
 
                     <!-- 中央カラム：大見出し -->
                     <div class="about-col-center">
                         <h2 class="about-catch about-vertical-text">
-                            <span>一本の串に、<br>丁寧な仕事を</span>
+                            <span>炭火が引き出す、<br>鶏本来の旨み</span>
                         </h2>
                     </div>
                 </div>
@@ -249,6 +249,15 @@
                     <div class="menu-price">1,800円</div>
                     <p class="menu-desc">盛り合わせには、箸休めの大根おろしと鶏スープがつきます。<br>部位のバランスを考え、その日のおすすめを最高の焼き加減でご提供いたします。</p>
                 </div>
+            </div>
+
+            <!-- 画像ギャラリー (クリックで拡大) -->
+            <div class="menu-gallery">
+                <!-- サンプル画像（後で差し替え可能） -->
+                <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1000&auto=format&fit=crop" alt="メニュー画像1" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1000&auto=format&fit=crop" alt="メニュー画像2" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1580828369062-817651a23861?q=80&w=1000&auto=format&fit=crop" alt="メニュー画像3" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" alt="メニュー画像4" class="gallery-img">
             </div>
 
         </div>
@@ -418,6 +427,12 @@
             <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
         </svg>
     </button>
+
+    <!-- 画像拡大モーダル -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" alt="拡大画像">
+    </div>
 
     <!-- JS -->
     <script src="Js/script.js"></script>
