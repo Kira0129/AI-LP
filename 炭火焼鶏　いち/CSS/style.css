@@ -456,6 +456,30 @@ header.scrolled {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* FV Badge */
+.fv-badge {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 120;
+}
+
+.fv-badge img {
+    max-width: 250px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .fv-badge {
+        bottom: auto;
+        top: 20px;
+        right: 20px;
+    }
+    .fv-badge img {
+        max-width: 120px;
+    }
+}
+
 
 /* =========================================
    Section Common
