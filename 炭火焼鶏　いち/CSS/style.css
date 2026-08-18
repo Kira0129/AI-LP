@@ -1259,6 +1259,10 @@ footer {
         font-size: 14px;
     }
 
+    .feature-text h3 {
+        font-size: 18px;
+    }
+
     .greeting p {
         font-size: 14px;
         text-align: left;
