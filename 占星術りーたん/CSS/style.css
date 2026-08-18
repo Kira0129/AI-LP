@@ -109,18 +109,30 @@ a { text-decoration: none; color: inherit; transition: 0.3s cubic-bezier(0.4, 0,
 .fv__text-area {
     flex: 2; display: flex; flex-direction: column; justify-content: center; align-items: center;
     padding: 80px 20px 20px; text-align: center;
+    position: relative;
     background: 
         radial-gradient(circle at top left, #3b48a7 0%, transparent 60%),
         radial-gradient(circle at top right, #bc96a6 0%, transparent 60%),
         linear-gradient(to bottom, #837cb0 0%, #ebe9f2 100%);
 }
 
+.fv__text-area::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('../img/star.svg') repeat center center;
+    background-size: 800px auto;
+    opacity: 0.45;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
 .fv__catch {
+    position: relative; z-index: 1;
     font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; color: #fff;
     letter-spacing: 0.15em; line-height: 1.6; margin-bottom: 1.5rem;
     text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 .fv__sub {
+    position: relative; z-index: 1;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem); color: rgba(255,255,255,0.8);
     letter-spacing: 0.15em; line-height: 2;
 }
