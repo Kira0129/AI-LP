@@ -643,6 +643,13 @@ a {
     border-top: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
+#message {
+    background: 
+        radial-gradient(circle at right top, rgba(188, 150, 166, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at left bottom, rgba(59, 72, 167, 0.05) 0%, transparent 50%),
+        #fff;
+}
+
 .message-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -665,11 +672,13 @@ a {
 }
 
 .m-img-wrap {
-    width: 80%;
+    width: 75%;
     background: #fff;
-    padding: 10px 10px 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease, z-index 0.4s ease;
+    padding: 12px;
+    border: 1px solid rgba(188, 150, 166, 0.3);
+    box-shadow: 0 15px 40px rgba(131, 124, 176, 0.15);
+    border-radius: 4px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.5s ease;
     position: relative;
 }
 
@@ -678,25 +687,31 @@ a {
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
+    filter: sepia(0.2) contrast(1.05) brightness(1.02);
+    transition: filter 0.5s ease;
+}
+
+.m-img-wrap:hover img {
+    filter: sepia(0) contrast(1) brightness(1);
 }
 
 .m-img-1 {
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
     margin-left: 0;
     z-index: 3;
 }
 
 .m-img-2 {
-    transform: rotate(3deg);
-    margin-left: 15%;
-    margin-top: -15%;
+    transform: rotate(4deg);
+    margin-left: 12%;
+    margin-top: -18%;
     z-index: 2;
 }
 
 .m-img-3 {
     transform: rotate(-2deg);
-    margin-left: 5%;
-    margin-top: -10%;
+    margin-left: 24%;
+    margin-top: -18%;
     z-index: 1;
 }
 
@@ -710,10 +725,12 @@ a {
 }
 
 .message-text {
-    line-height: 2.2;
-    letter-spacing: 0.1em;
-    margin-bottom: 3rem;
+    line-height: 2.4;
+    letter-spacing: 0.12em;
+    margin-bottom: 4rem;
     text-align: left;
+    color: #555;
+    position: relative;
 }
 
 .cta-grid {
