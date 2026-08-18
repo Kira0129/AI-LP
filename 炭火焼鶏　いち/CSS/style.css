@@ -1263,6 +1263,11 @@ footer {
         font-size: 18px;
     }
 
+    .special-menu-info h3,
+    .menu-price {
+        font-size: 20px;
+    }
+
     .greeting p {
         font-size: 14px;
         text-align: left;
