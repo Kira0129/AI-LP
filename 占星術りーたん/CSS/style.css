@@ -816,10 +816,10 @@ a {
 
 .struggle__bg-img {
     position: absolute;
-    bottom: -5%;
-    right: -5%;
-    height: 100%;
-    max-height: 800px;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+    max-height: 600px;
     object-fit: contain;
     z-index: 0;
     opacity: 0.7; /* Adjust opacity as needed */
@@ -828,9 +828,9 @@ a {
 
 @media (max-width: 767px) {
     .struggle__bg-img {
-        height: 60%;
+        height: 45%;
         bottom: 0;
-        right: -10%;
+        right: -5%;
         opacity: 0.4;
     }
 }
