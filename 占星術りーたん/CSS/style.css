@@ -809,7 +809,7 @@ a {
 
 /* Struggle Section (Elegant Reference Design) */
 .struggle {
-    background-color: #FAF8F5; /* Warm, very light off-white background */
+    background-color: var(--clr-base); /* Match site base color */
     position: relative;
     overflow: hidden;
 }
@@ -835,44 +835,6 @@ a {
     }
 }
 
-.struggle-header {
-    text-align: center;
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.struggle-header__bg-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: clamp(3rem, 8vw, 6rem);
-    letter-spacing: 0.3em;
-    color: rgba(0, 0, 0, 0.03);
-    font-family: var(--ff-en-title);
-    white-space: nowrap;
-    z-index: -1;
-}
-
-.struggle-header__title {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #666;
-    letter-spacing: 0.15em;
-}
-
-.struggle-header__title::before,
-.struggle-header__title::after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    background-color: #ccc;
-}
-
 .struggle-box {
     max-width: 960px;
     margin: 0 auto;
@@ -892,7 +854,7 @@ a {
 
 .struggle-box__title {
     text-align: center;
-    color: #9F5747; /* Elegant reddish-brown */
+    color: var(--clr-dark);
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.15em;
@@ -918,7 +880,7 @@ a {
     width: 100%;
     max-width: 500px;
     height: 1px;
-    background-color: #eaeaea;
+    background-color: var(--clr-sub);
 }
 
 .struggle-list {
@@ -951,7 +913,7 @@ a {
     position: absolute;
     left: 0.2rem;
     top: 1.3rem;
-    color: #9F5747;
+    color: var(--clr-accent);
     font-size: 1rem;
     opacity: 0.8;
 }
