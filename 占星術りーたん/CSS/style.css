@@ -358,6 +358,9 @@ a {
     .fv__text-area {
         padding: 50px 20px 40px;
     }
+    .fv__catch, .fv__sub {
+        text-align: center;
+    }
 }
 
 .fv__text-area::before {
