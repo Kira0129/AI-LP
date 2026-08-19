@@ -831,8 +831,9 @@ a {
 @media (max-width: 767px) {
     .struggle__bg-img {
         height: 50%;
-        bottom: 0;
-        right: -5%;
+        bottom: auto; /* override default bottom: 0 */
+        top: 0; /* Position at the section heading */
+        right: -10%;
         opacity: 0.3; /* 30% opacity */
     }
 }
