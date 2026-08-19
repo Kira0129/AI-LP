@@ -1,0 +1,90 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #374151;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* アニメーション設定 */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* セクション共通装飾 (LIFE風) */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e66b27;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.section-label::before {
+    content: '';
+    display: block;
+    width: 24px; 
+    height: 2px;
+    background: #e66b27;
+}
+
+/* スライダー（FV背景用） */
+.hero-slider .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: transform 6s ease;
+}
+.hero-slider .slide-1 { animation: slideFade 15s infinite 0s; }
+.hero-slider .slide-2 { animation: slideFade 15s infinite 5s; }
+.hero-slider .slide-3 { animation: slideFade 15s infinite 10s; }
+
+@keyframes slideFade {
+    0%   { opacity: 1; transform: scale(1); }
+    28%  { opacity: 1; transform: scale(1.04); }
+    33%  { opacity: 0; transform: scale(1.05); }
+    95%  { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* FV Scroll Animation */
+.hero-scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+    margin: 0 auto;
+}
+@keyframes scrollLine {
+    0%,100% { opacity: 0.3; transform: scaleY(0.7); transform-origin: top; }
+    50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+}
+
+/* FAQ Toggle */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* 角丸とボーダーの共通化 */
+.card-style {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+.card-style:hover {
+    box-shadow: 0 12px 32px rgba(230, 107, 39, 0.12);
+    transform: translateY(-4px);
+}
