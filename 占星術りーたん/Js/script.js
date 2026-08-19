@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger Menu
     const hamburger = document.getElementById('js-hamburger');
     const mobileMenu = document.getElementById('js-mobile-menu');
+    const mobileClose = document.getElementById('js-mobile-close');
     const mobileLinks = document.querySelectorAll('.js-mobile-link');
 
     if (hamburger && mobileMenu) {
@@ -67,15 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = hamburger.classList.contains('is-open') ? 'hidden' : '';
         };
 
+        const closeMenu = () => {
+            hamburger.classList.remove('is-open');
+            mobileMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
         hamburger.addEventListener('click', toggleMenu);
+        if (mobileClose) mobileClose.addEventListener('click', closeMenu);
 
         // Close menu when a link is clicked
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('is-open');
-                mobileMenu.classList.remove('is-open');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
     }
 });
