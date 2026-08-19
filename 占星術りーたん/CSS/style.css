@@ -822,9 +822,9 @@ a {
 
 .struggle__bg-img {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 85%;
+    bottom: -40px;
+    right: 15px;
+    height: 60%;
     max-height: 650px;
     width: auto;
     object-fit: contain;
