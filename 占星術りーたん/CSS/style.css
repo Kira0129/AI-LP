@@ -818,30 +818,22 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
     height: 60%;
     max-height: 450px;
-    background-color: var(--clr-dark); /* Colorizes the SVG to site's dark purple */
-    -webkit-mask-image: url('../img/worrysvg.svg');
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: right bottom;
-    mask-image: url('../img/worrysvg.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: right bottom;
+    width: auto;
+    object-fit: contain;
     z-index: 0;
-    opacity: 0.12; /* Thin, faint look */
+    opacity: 0.15; /* Thin, faint look */
+    mix-blend-mode: multiply; /* Blends nicely with the lilac background */
     pointer-events: none;
 }
 
 @media (max-width: 767px) {
     .struggle__bg-img {
-        width: 100%;
         height: 35%;
         bottom: 0;
         right: -5%;
-        opacity: 0.08;
+        opacity: 0.1;
     }
 }
 
