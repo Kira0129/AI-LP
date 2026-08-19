@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Disable right-click to prevent image saving and text selection
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
     // Scroll Animation Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
