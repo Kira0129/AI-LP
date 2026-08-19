@@ -144,21 +144,41 @@
             </div>
 
             <!-- CONCEPT IMAGE GRID (3 Column Full-Width Style) -->
-            <div class="w-full js-fade mt-16 pb-6 md:pb-0">
-                <div class="flex md:grid md:grid-cols-3 gap-2 md:gap-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scrollbar">
-                    <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[85%] md:w-auto snap-center">
-                        <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80"
-                            alt="ホロスコープ"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+            <div class="w-full js-fade mt-16 pb-6 md:pb-0 overflow-hidden">
+                <div class="loop-slider md:grid md:grid-cols-3 md:gap-3">
+                    <!-- Track 1 (Original) -->
+                    <div class="loop-slider__track flex gap-2 md:contents">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80"
+                                alt="ホロスコープ"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80"
+                                alt="キャンドルとカード"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="img/aboutpic03.jpg" alt="星空とクリスタル"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
                     </div>
-                    <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[85%] md:w-auto snap-center">
-                        <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80"
-                            alt="キャンドルとカード"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[85%] md:w-auto snap-center">
-                        <img src="img/aboutpic03.jpg" alt="星空とクリスタル"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <!-- Track 2 (Clone for SP Loop) -->
+                    <div class="loop-slider__track flex gap-2 md:hidden" aria-hidden="true">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&q=80"
+                                alt="ホロスコープ"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80"
+                                alt="キャンドルとカード"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="img/aboutpic03.jpg" alt="星空とクリスタル"
+                                class="w-full h-full object-cover">
+                        </div>
                     </div>
                 </div>
             </div>

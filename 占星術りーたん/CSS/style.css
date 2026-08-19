@@ -848,6 +848,25 @@ a {
 }
 
 @media(max-width: 767px) {
+    .fv__text-area {
+        padding: 0 20px;
+    }
+    
+    .loop-slider {
+        display: flex;
+        width: max-content;
+        gap: 0.5rem; /* Matches gap-2 */
+    }
+    .loop-slider__track {
+        display: flex;
+        gap: 0.5rem;
+        animation: loop-marquee 15s linear infinite;
+    }
+    @keyframes loop-marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-100% - 0.5rem)); }
+    }
+
     .pc-only {
         display: none;
     }
