@@ -879,18 +879,42 @@ a {
     opacity: 1;
 }
 
-opacity: 0;
-visibility: hidden;
+/* Adjustments for SP when Fixed CTA is active */
+@media(max-width: 767px) {
+    .page-top-btn.is-active {
+        bottom: 80px; /* Above the fixed CTA */
+    }
+    .footer {
+        padding-bottom: 5rem;
+    }
 }
 
-.page-top-btn.is-active {
-    bottom: 30px;
-    opacity: 0.9;
-    visibility: visible;
+/* Fixed CTA for SP */
+.fixed-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.4s ease;
 }
-
-.page-top-btn:hover {
-    background-color: var(--clr-dark);
-    transform: translateY(-5px);
+.fixed-cta.is-visible {
+    transform: translateY(0);
     opacity: 1;
+}
+.fixed-cta__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--clr-accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }

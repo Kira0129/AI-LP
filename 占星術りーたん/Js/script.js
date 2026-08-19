@@ -82,4 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', closeMenu);
         });
     }
+
+    // Fixed CTA for SP (Show after FV)
+    const fixedCta = document.getElementById('js-fixed-cta');
+    if (fixedCta) {
+        window.addEventListener('scroll', () => {
+            // Check if we are on SP (window.innerWidth < 768) and scrolled past FV
+            if (window.innerWidth < 768 && window.scrollY > window.innerHeight * 0.8) {
+                fixedCta.classList.add('is-visible');
+            } else {
+                fixedCta.classList.remove('is-visible');
+            }
+        }, { passive: true });
+        
+        // Initial check
+        if (window.innerWidth < 768 && window.scrollY > window.innerHeight * 0.8) {
+            fixedCta.classList.add('is-visible');
+        }
+    }
 });
