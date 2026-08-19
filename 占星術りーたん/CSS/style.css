@@ -832,7 +832,7 @@ a {
     .struggle__bg-img {
         height: 30%;
         bottom: auto; /* override default bottom: 0 */
-        top: 0; /* Position at the section heading */
+        top: 40px; /* Position slightly below the section top */
         right: -10%;
         opacity: 0.3; /* 30% opacity */
     }
