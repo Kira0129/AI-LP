@@ -441,6 +441,102 @@ a {
     }
 }
 
+/* Struggle Section (Elegant Design) */
+.struggle {
+    background-color: rgba(235, 233, 242, 0.4); /* Very light, soft purple/gray */
+    position: relative;
+}
+
+.struggle-box {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(122, 101, 140, 0.08);
+    border: 1px solid rgba(196, 171, 137, 0.4); /* Subtle gold border */
+    position: relative;
+}
+
+.struggle-box::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--clr-accent);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@media(min-width: 768px) {
+    .struggle-box {
+        padding: 4rem 5rem;
+    }
+    .struggle-box::before {
+        top: -15px;
+        left: -15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+.struggle-box h2 {
+    display: inline-block;
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.struggle-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--clr-accent);
+}
+
+.struggle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.struggle-list li {
+    position: relative;
+    padding-left: 2.8rem;
+    color: var(--clr-text);
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+.struggle-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--clr-accent);
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+@media(min-width: 768px) {
+    .struggle-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
 /* 共通ボタン */
 .btn-elegant {
     display: inline-flex;
