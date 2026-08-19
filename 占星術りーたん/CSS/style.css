@@ -830,7 +830,7 @@ a {
 
 @media (max-width: 767px) {
     .struggle__bg-img {
-        height: 50%;
+        height: 30%;
         bottom: auto; /* override default bottom: 0 */
         top: 0; /* Position at the section heading */
         right: -10%;
