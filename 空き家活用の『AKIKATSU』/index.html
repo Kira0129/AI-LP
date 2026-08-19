@@ -393,41 +393,52 @@
         </div>
     </section>
 
-    <!-- CTAバナー: オレンジ基調のグラデーションに変更 -->
-    <section id="price" class="py-24 bg-gradient-to-br from-orange to-orange-dark text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        
-        <div class="max-w-[800px] mx-auto px-4 lg:px-8 text-center relative z-10 fade-in-up">
-            <div class="section-label justify-center !text-white before:bg-white">Consultation</div>
-            <h2 class="text-2xl lg:text-[34px] font-black font-sans tracking-tight mb-5 text-white">まずは無料相談から</h2>
-            <p class="text-white/90 font-bold text-[17px] lg:text-[19px] mb-10 tracking-wide">まだ何も決まっていなくても大丈夫です。</p>
+    <section id="price" class="py-24 bg-gray-base relative overflow-hidden">
+        <div class="max-w-[1100px] mx-auto px-4 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+                <!-- Image side -->
+                <div class="w-full lg:w-1/2 fade-in-up">
+                    <div class="aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="無料相談" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-orange/5 mix-blend-overlay"></div>
+                    </div>
+                </div>
 
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl text-left mb-10 max-w-[600px] mx-auto shadow-lg">
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3">
-                        <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-orange font-bold text-xs">✓</span>
-                        <span class="text-[15px] font-bold tracking-wide">売るか貸すか迷っている</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-orange font-bold text-xs">✓</span>
-                        <span class="text-[15px] font-bold tracking-wide">相続した実家をどうしたらいい？</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-orange font-bold text-xs">✓</span>
-                        <span class="text-[15px] font-bold tracking-wide">何年も放置してしまっている</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-orange font-bold text-xs">✓</span>
-                        <span class="text-[15px] font-bold tracking-wide">遠方なので管理できない</span>
-                    </li>
-                </ul>
+                <!-- Text side -->
+                <div class="w-full lg:w-1/2 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="section-label">Consultation</div>
+                    <h2 class="text-2xl lg:text-[32px] font-black font-sans tracking-tight mb-5 text-gray-800 leading-[1.4]">まずは無料相談から</h2>
+                    <p class="text-gray-800 font-bold text-[17px] lg:text-[19px] mb-8 tracking-wide">
+                        まだ何も決まっていなくても大丈夫です。
+                    </p>
+
+                    <div class="bg-white border border-orange/20 p-6 lg:p-8 rounded-2xl text-left mb-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 flex-shrink-0 rounded-full bg-orange/10 flex items-center justify-center text-orange font-bold text-[11px]">✓</span>
+                                <span class="text-[15px] font-bold tracking-wide text-gray-800">売るか貸すか迷っている</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 flex-shrink-0 rounded-full bg-orange/10 flex items-center justify-center text-orange font-bold text-[11px]">✓</span>
+                                <span class="text-[15px] font-bold tracking-wide text-gray-800">相続した実家をどうしたらいい？</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 flex-shrink-0 rounded-full bg-orange/10 flex items-center justify-center text-orange font-bold text-[11px]">✓</span>
+                                <span class="text-[15px] font-bold tracking-wide text-gray-800">何年も放置してしまっている</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 flex-shrink-0 rounded-full bg-orange/10 flex items-center justify-center text-orange font-bold text-[11px]">✓</span>
+                                <span class="text-[15px] font-bold tracking-wide text-gray-800">遠方なので管理できない</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-[15px] lg:text-[16px] font-medium leading-[1.8] text-gray-text">
+                        そんな段階からでも、お気軽にご相談ください。<br>
+                        空き家のこと、まずは話してみませんか。
+                    </p>
+                </div>
             </div>
-
-            <p class="text-[15px] lg:text-[17px] font-medium leading-[1.8] mb-10 opacity-90 text-white">
-                そんな段階からでも、お気軽にご相談ください。<br>
-                空き家のこと、まずは話してみませんか。
-            </p>
-
         </div>
     </section>
 
