@@ -33,4 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Initial check in case of refresh down the page
     if (window.scrollY > 100) header.classList.add('is-visible');
+
+    // Page Top Button
+    const pageTopBtn = document.getElementById('js-page-top');
+    if (pageTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                pageTopBtn.classList.add('is-active');
+            } else {
+                pageTopBtn.classList.remove('is-active');
+            }
+        }, { passive: true });
+
+        pageTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

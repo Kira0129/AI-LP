@@ -760,3 +760,35 @@ a {
         display: none;
     }
 }
+
+/* Page Top Button */
+.page-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: -80px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--clr-accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+}
+.page-top-btn.is-active {
+    bottom: 30px;
+    opacity: 0.9;
+    visibility: visible;
+}
+.page-top-btn:hover {
+    background-color: var(--clr-dark);
+    transform: translateY(-5px);
+    opacity: 1;
+}
