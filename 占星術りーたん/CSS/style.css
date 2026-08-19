@@ -574,14 +574,35 @@ a {
 .feature-item__img {
     flex: 1;
     aspect-ratio: 4/3;
-    overflow: hidden;
     position: relative;
+    z-index: 1;
 }
 
 .feature-item__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 60px 0 60px 0;
+    box-shadow: 0 10px 30px rgba(122,101,140,0.1);
+}
+
+.feature-item__img::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--clr-accent);
+    border-radius: 60px 0 60px 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+@media(min-width: 768px) {
+    .feature-item:nth-child(even) .feature-item__img::before {
+        left: 15px;
+    }
 }
 
 .feature-item__content {
