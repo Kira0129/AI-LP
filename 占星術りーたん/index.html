@@ -368,13 +368,10 @@
 
         <section class="message-section relative py-24 md:py-32" id="message">
             <!-- iOS Compatible Pure CSS Parallax -->
-            <div
-                style="clip: rect(0, auto, auto, 0); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-                <div
-                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center;">
+            <div class="absolute top-0 left-0 w-full h-full z-0" style="clip: rect(0, auto, auto, 0);">
+                <div class="fixed top-0 left-0 w-full h-[100vh] bg-cover bg-center bg-[url('img/messagebgsp.jpg')] md:bg-[url('img/messagebg.jpg')]">
                 </div>
-                <div
-                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(255, 255, 255, 0.4);">
+                <div class="fixed top-0 left-0 w-full h-[100vh] bg-white/40">
                 </div>
             </div>
 
@@ -396,7 +393,7 @@
                         class="message-text text-left md:text-center text-sm md:text-base leading-loose tracking-wider mb-12 text-[var(--clr-text)]">
                         私が子育てで折れそうになっていたとき、<br class="hidden md:block">
                         頼れる場所がありませんでした。<br><br>
-                        寄り添って、じっくり話を聞いてくれる人もいなくて——<br class="hidden md:block">
+                        寄り添って、じっくり話を聞いてくれる人もいなくて——<br>
                         心のどこかで、ずっと満たされない思いを<br class="hidden md:block">
                         抱えていました。<br><br>
                         だからこそ、<br class="hidden md:block">
@@ -408,12 +405,11 @@
 
                     <div class="message-profile flex items-center justify-center gap-4 mt-12">
                         <div class="w-16 h-16 rounded-full overflow-hidden shadow-md shrink-0">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150"
-                                alt="オーナー" class="w-full h-full object-cover">
+                            <img src="img/messagepic.jpg" alt="オーナー" class="w-full h-full object-cover">
                         </div>
                         <div class="text-left">
-                            <div class="text-xs text-gray-500 mb-1 tracking-widest">オーナー</div>
-                            <div class="text-lg tracking-widest font-medium text-[var(--clr-text)]">佐々木 真利奈</div>
+                            <div class="text-xs text-gray-500 mb-1 tracking-widest">星読み管理栄養士</div>
+                            <div class="text-lg tracking-widest font-medium text-[var(--clr-text)]">りーたん</div>
                         </div>
                     </div>
                 </div>
