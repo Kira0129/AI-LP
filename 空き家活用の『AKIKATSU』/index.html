@@ -114,16 +114,16 @@
                 style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
             </div>
 
-            <!-- PC用オーバーレイ（左側35%を完全にオレンジで塗りつぶし、そこから右へフェードアウト） -->
+            <!-- PC用オーバーレイ（左側25%を完全にオレンジで塗りつぶし、そこから早めにフェードアウトさせて画像を多く見せる） -->
             <div
-                class="hidden lg:block absolute inset-0 z-10 bg-gradient-to-r from-orange from-[35%] via-orange/80 via-[50%] to-transparent">
+                class="hidden lg:block absolute inset-0 z-10 bg-gradient-to-r from-orange from-[25%] via-orange/80 via-[40%] to-transparent to-[65%]">
             </div>
             <!-- SP用オーバーレイは削除 -->
         </div>
 
         <!-- ドットパターン（PCのみ、右側に向けてフェードアウトさせる） -->
         <div class="hidden lg:block absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px]"
-             style="-webkit-mask-image: linear-gradient(to right, black 30%, transparent 55%); mask-image: linear-gradient(to right, black 30%, transparent 55%);">
+             style="-webkit-mask-image: linear-gradient(to right, black 25%, transparent 50%); mask-image: linear-gradient(to right, black 25%, transparent 50%);">
         </div>
 
         <!-- ヒーローコンテンツ -->
