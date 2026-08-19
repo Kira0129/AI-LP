@@ -182,6 +182,12 @@ a {
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    .header__container {
+        padding: 0 1.5rem;
+    }
+}
+
 .header__logo {
     font-size: 1.2rem;
     font-weight: 500;
