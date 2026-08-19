@@ -123,11 +123,12 @@
 
         <!-- ドットパターン（PCのみ、右側に向けてフェードアウトさせる） -->
         <div class="hidden lg:block absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px]"
-             style="-webkit-mask-image: linear-gradient(to right, black 25%, transparent 50%); mask-image: linear-gradient(to right, black 25%, transparent 50%);">
+            style="-webkit-mask-image: linear-gradient(to right, black 25%, transparent 50%); mask-image: linear-gradient(to right, black 25%, transparent 50%);">
         </div>
 
         <!-- ヒーローコンテンツ -->
-        <div class="relative z-20 w-full max-w-[1200px] mx-auto px-4 lg:px-8 py-10 lg:py-24 flex-1 flex flex-col justify-center lg:block">
+        <div
+            class="relative z-20 w-full max-w-[1200px] mx-auto px-4 lg:px-8 py-10 lg:py-24 flex-1 flex flex-col justify-center lg:block">
             <div class="max-w-[720px]">
 
                 <div class="fade-in-up">
@@ -140,15 +141,18 @@
 
                 <div class="fade-in-up" style="transition-delay: 0.1s;">
                     <h1
-                        class="text-white font-black text-3xl md:text-5xl lg:text-[56px] leading-[1.3] mb-6 tracking-tight font-sans text-shadow-sm">
-                        売る前に、<br>
-                        <span class="text-white relative inline-block">
-                            活かすという選択<span class="absolute bottom-1 left-0 w-full h-[4px] bg-[#fbbf24]"></span>
-                        </span>を。
+                        class="font-black leading-[1.4] mb-6 tracking-tight font-sans drop-shadow-md">
+                        <span class="text-white text-2xl md:text-4xl lg:text-[40px] inline-block mb-1 md:mb-3">売る前に、</span><br>
+                        <span class="relative inline-block text-4xl md:text-6xl lg:text-[72px] text-navy z-10">
+                            <span class="relative z-10">活かすという選択</span>
+                            <!-- 太めのイエローマーカーで強調 -->
+                            <span class="absolute bottom-[10%] left-[-2%] w-[104%] h-[40%] bg-[#fbbf24] -z-10 rounded-sm"></span>
+                        </span>
+                        <span class="text-white text-3xl md:text-5xl lg:text-[48px] inline-block ml-1">を</span>
                     </h1>
                 </div>
 
-                <p class="text-white/90 md:font-medium leading-[2] mb-8 lg:mb-10 fade-in-up tracking-wide font-sans text-shadow-sm"
+                <p class="text-white font-bold text-[15px] lg:text-[17px] leading-[2.2] mb-8 lg:mb-10 fade-in-up tracking-wide font-sans drop-shadow-sm"
                     style="transition-delay: 0.2s;">
                     思い出の詰まった実家や空き家を、手放す前に収益を生む資産へ。<br class="hidden md:block">
                     相続・賃貸・売却まで、不動産のプロがあなたに合った方法を一緒に考えます。
