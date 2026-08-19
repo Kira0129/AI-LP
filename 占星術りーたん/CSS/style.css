@@ -900,10 +900,16 @@ a {
     position: relative;
     padding: 1.2rem 0 1.2rem 2.5rem;
     color: #444;
-    font-size: 0.95rem;
+    font-size: 14px;
     line-height: 1.6;
     letter-spacing: 0.05em;
     border-bottom: 1px dotted #ccc;
+}
+
+@media(min-width: 768px) {
+    .struggle-list li {
+        font-size: 16px;
+    }
 }
 
 .struggle-list li::before {
