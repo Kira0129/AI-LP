@@ -818,22 +818,22 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 60%;
-    max-height: 450px;
+    height: 85%;
+    max-height: 650px;
     width: auto;
     object-fit: contain;
     z-index: 0;
-    opacity: 0.15; /* Thin, faint look */
+    opacity: 0.3; /* 30% opacity */
     mix-blend-mode: multiply; /* Blends nicely with the lilac background */
     pointer-events: none;
 }
 
 @media (max-width: 767px) {
     .struggle__bg-img {
-        height: 35%;
+        height: 50%;
         bottom: 0;
         right: -5%;
-        opacity: 0.1;
+        opacity: 0.3; /* 30% opacity */
     }
 }
 
