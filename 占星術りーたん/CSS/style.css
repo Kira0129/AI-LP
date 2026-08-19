@@ -809,7 +809,7 @@ a {
 
 /* Struggle Section (Elegant Reference Design) */
 .struggle {
-    background-color: var(--clr-base); /* Match site base color */
+    background-color: #f0ebf4; /* Soft lilac to differentiate from ABOUT section */
     position: relative;
     overflow: hidden;
 }
