@@ -3,18 +3,23 @@ tailwind.config = {
         extend: {
             colors: {
                 orange: {
-                    DEFAULT: '#e66b27', // 士業系に合う、少し落ち着いたメインオレンジ
-                    light: '#fff8f3',
-                    hover: '#d45e1d',
-                    dark: '#c45517',
+                    DEFAULT: '#e7a163',
+                    light: '#fdf4eb',
+                    hover: '#d69152',
+                    dark: '#b8783d',
+                },
+                navy: {
+                    DEFAULT: '#102564',
+                    light: '#1c3a99',
+                    hover: '#0a1740',
                 },
                 gray: {
-                    base: '#f9fafb',   
-                    border: '#e5e7eb',
-                    text: '#374151',
-                    muted: '#6b7280',
-                    800: '#1f2937',     // 見出し等に使用するダークグレー
-                    900: '#111827'      // フッター等に使用する一番濃いグレー
+                    base: '#f8fafc',
+                    border: '#e2e8f0',
+                    text: '#334155',
+                    muted: '#64748b',
+                    800: '#1e293b',
+                    900: '#0f172a'
                 }
             },
             fontFamily: {
