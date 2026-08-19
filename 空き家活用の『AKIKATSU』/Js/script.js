@@ -3,10 +3,10 @@ tailwind.config = {
         extend: {
             colors: {
                 orange: {
-                    DEFAULT: '#f0ad74',
-                    light: '#fdf6f0',
-                    hover: '#e59d60',
-                    dark: '#c7834a',
+                    DEFAULT: '#f97316',
+                    light: '#fff7ed',
+                    hover: '#ea580c',
+                    dark: '#c2410c',
                 },
                 navy: {
                     DEFAULT: '#102564',
