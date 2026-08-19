@@ -33,4 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Initial check in case of refresh down the page
     if (window.scrollY > 100) header.classList.add('is-visible');
+
+    // Parallax effect (Smooth & iOS Safari Compatible)
+    const parallaxImages = document.querySelectorAll('.js-parallax');
+    if (parallaxImages.length > 0) {
+        window.addEventListener('scroll', () => {
+            requestAnimationFrame(() => {
+                parallaxImages.forEach(img => {
+                    const parent = img.closest('section');
+                    if (!parent) return;
+                    const rect = parent.getBoundingClientRect();
+                    
+                    // Check if section is in viewport
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        // Calculate offset from center of screen
+                        const centerOffset = (window.innerHeight / 2) - (rect.top + rect.height / 2);
+                        const speed = 0.15; // Parallax speed multiplier
+                        const yPos = centerOffset * speed;
+                        
+                        // Apply transform. Scale is kept to avoid edges showing.
+                        img.style.transform = `translateY(${yPos}px) scale(1.15)`;
+                    }
+                });
+            });
+        }, { passive: true });
+    }
 });
