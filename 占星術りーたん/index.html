@@ -39,10 +39,28 @@
                 <a href="#cta" class="header__reserve-btn">ご予約・お問い合わせ</a>
             </nav>
 
-            <!-- Mobile Menu Toggle (Simplified for demo) -->
-            <a href="#cta" class="header__reserve-btn sp-only">ご予約</a>
+            <!-- Hamburger Button -->
+            <button class="hamburger sp-only" id="js-hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu sp-only" id="js-mobile-menu">
+        <nav class="mobile-menu__nav">
+            <ul class="flex flex-col items-center gap-8 text-lg tracking-widest text-white mb-10">
+                <li><a href="#about" class="js-mobile-link hover:text-[var(--clr-main)]">ABOUT</a></li>
+                <li><a href="#horoscope" class="js-mobile-link hover:text-[var(--clr-main)]">HOROSCOPE</a></li>
+                <li><a href="#features" class="js-mobile-link hover:text-[var(--clr-main)]">FEATURES</a></li>
+                <li><a href="#menu" class="js-mobile-link hover:text-[var(--clr-main)]">MENU</a></li>
+                <li><a href="#cta" class="js-mobile-link hover:text-[var(--clr-main)]">ACCESS</a></li>
+            </ul>
+            <a href="#cta" class="header__reserve-btn js-mobile-link">ご予約・お問い合わせ</a>
+        </nav>
+    </div>
 
     <main>
         <section class="fv" id="fv">
