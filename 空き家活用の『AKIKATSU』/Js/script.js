@@ -78,20 +78,33 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // 3. TOPへ戻るボタンの制御
+    // 3. TOPへ戻るボタンとスマホ用追従CTAの制御
     const backToTopBtn = document.getElementById('backToTopBtn');
+    const spStickyCta = document.getElementById('spStickyCta');
     
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            if (backToTopBtn) {
                 backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
                 backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
-            } else {
+            }
+            if (spStickyCta) {
+                spStickyCta.classList.remove('opacity-0', 'invisible', 'translate-y-full');
+                spStickyCta.classList.add('opacity-100', 'visible', 'translate-y-0');
+            }
+        } else {
+            if (backToTopBtn) {
                 backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
                 backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
             }
-        });
+            if (spStickyCta) {
+                spStickyCta.classList.add('opacity-0', 'invisible', 'translate-y-full');
+                spStickyCta.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            }
+        }
+    });
 
+    if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
