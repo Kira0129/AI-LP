@@ -11,11 +11,14 @@ body {
 
 /* Custom Gold Text Gradient */
 .text-gold-gradient {
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728);
+    background: linear-gradient(to right, #D4AF37, #FFF9D2, #CBA135, #FFF9D2, #D4AF37);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    /* text-shadowがtransparentな文字を透過して暗く見せてしまうため、text-shadowを無効化しfilterを使用 */
+    text-shadow: none !important;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
 }
 
 /* Fade-in Animation Classes */
