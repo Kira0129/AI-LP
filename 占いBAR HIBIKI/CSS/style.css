@@ -127,6 +127,7 @@ body {
     border-radius: 2px;
     width: auto;
     height: 100%;
+    aspect-ratio: 3/4;
     max-width: 80vw; /* Keep it contained on mobile */
     object-fit: cover;
     display: block;
