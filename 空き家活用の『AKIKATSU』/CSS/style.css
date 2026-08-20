@@ -47,15 +47,14 @@ body {
     z-index: 1;
     transition: transform 6s ease;
 }
-.hero-slider .slide-1 { animation: slideFade 15s infinite 0s; }
-.hero-slider .slide-2 { animation: slideFade 15s infinite -10s; }
-.hero-slider .slide-3 { animation: slideFade 15s infinite -5s; }
+.hero-slider .slide-1 { animation: slideFade 10s infinite 0s; }
+.hero-slider .slide-2 { animation: slideFade 10s infinite -5s; }
 
 @keyframes slideFade {
     0%   { opacity: 1; transform: scale(1.015); }
-    23%  { opacity: 1; transform: scale(1.05); }
-    33%  { opacity: 0; transform: scale(1.065); }
-    90%  { opacity: 0; transform: scale(1); }
+    35%  { opacity: 1; transform: scale(1.05); }
+    50%  { opacity: 0; transform: scale(1.065); }
+    85%  { opacity: 0; transform: scale(1); }
     100% { opacity: 1; transform: scale(1.015); }
 }
 
