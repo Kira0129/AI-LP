@@ -872,7 +872,7 @@
                             受診前にご確認ください
                         </h4>
                         <p class="text-[14px] md:text-[16px] text-gray-700 leading-loose">
-                            光や音への過敏症状は、眼や耳の病気、神経系の疾患などによって生じる場合があります。まずは眼科や耳鼻科、神経内科などを受診し、器質的な疾患の有無を確認することが推奨されています。
+                            光や音への過敏症状は、眼や耳の病気、神経系の疾患などによって生じる場合があります。<br>まずは眼科や耳鼻科、神経内科などを受診し、器質的な疾患の有無を確認することが推奨されています。
                         </p>
                     </div>
                     <div class="w-full md:w-auto mt-2 md:mt-0 flex-shrink-0 text-center">
@@ -1000,9 +1000,13 @@
             </div>
         </section>
 
-        <section id="price" class="section py-16 md:py-24 relative bg-fixed bg-cover bg-center"
-            style="background-image: url('img/pricebg.jpg');">
-            <div class="absolute inset-0 bg-white/70"></div>
+        <section id="price" class="section py-16 md:py-24 relative overflow-hidden">
+            <!-- iOS対応パララックス背景 -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="sticky top-0 w-full h-screen bg-cover bg-center" style="background-image: url('img/pricebg.jpg');"></div>
+            </div>
+            
+            <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
             <div class="max-w-6xl mx-auto px-6 relative z-10">
                 <div class="text-center mb-16 anim-fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold tracking-wider text-primary mb-3 font-casual">PRICE</h2>
@@ -1027,7 +1031,7 @@
                                 <div class="text-4xl md:text-5xl font-bold tracking-wider mt-4">27,500<span
                                         class="text-lg md:text-2xl font-normal ml-1">円</span></div>
                                 <p class="mt-4 text-[14px] md:text-[16px] opacity-90 leading-loose text-left">
-                                    光や音によるつらさについて、<br class="hidden md:block">症状が現れる場面やこれまでの経過、生活環境などを丁寧に伺います。</p>
+                                    光や音によるつらさについて、症状が現れる場面やこれまでの経過、生活環境などを丁寧に伺います。</p>
                             </div>
                         </div>
                     </div>
@@ -1519,7 +1523,9 @@
     </footer>
 
     <!-- SP Fixed CTA -->
-    <div id="sp-fixed-cta" class="fixed bottom-0 left-0 w-full z-50 flex md:hidden shadow-[0_-2px_10px_rgba(0,0,0,0.1)] h-[60px]" style="opacity: 0; visibility: hidden; transform: translateY(100%); transition: all 0.3s ease;">
+    <div id="sp-fixed-cta"
+        class="fixed bottom-0 left-0 w-full z-50 flex md:hidden shadow-[0_-2px_10px_rgba(0,0,0,0.1)] h-[60px]"
+        style="opacity: 0; visibility: hidden; transform: translateY(100%); transition: all 0.3s ease;">
         <a href="tel:05054485059"
             class="flex-1 flex flex-col items-center justify-center bg-white border-t-4 border-primary text-primary font-bold text-sm font-casual">
             電話予約
@@ -1574,21 +1580,21 @@
             const spFixedCta = document.getElementById('sp-fixed-cta');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 300) {
-                    if(scrollTopBtn) {
+                    if (scrollTopBtn) {
                         scrollTopBtn.style.opacity = '1';
                         scrollTopBtn.style.visibility = 'visible';
                     }
-                    if(spFixedCta) {
+                    if (spFixedCta) {
                         spFixedCta.style.opacity = '1';
                         spFixedCta.style.visibility = 'visible';
                         spFixedCta.style.transform = 'translateY(0)';
                     }
                 } else {
-                    if(scrollTopBtn) {
+                    if (scrollTopBtn) {
                         scrollTopBtn.style.opacity = '0';
                         scrollTopBtn.style.visibility = 'hidden';
                     }
-                    if(spFixedCta) {
+                    if (spFixedCta) {
                         spFixedCta.style.opacity = '0';
                         spFixedCta.style.visibility = 'hidden';
                         spFixedCta.style.transform = 'translateY(100%)';
