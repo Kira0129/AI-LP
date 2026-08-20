@@ -502,7 +502,24 @@
                             <span class="text-gray-500 w-24 shrink-0">割り方</span>
                             <span>水割り / 炭酸割り / お茶割り / ウーロン茶割り</span>
                         </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Images -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 relative z-10 fade-in">
+            <div class="rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer" onclick="window.openImageModal('img/menupic01.jpg')">
+                <img src="img/menupic01.jpg" alt="Menu Image 1" class="w-full aspect-[4/3] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <i class="fas fa-search-plus text-3xl text-gold shadow-text"></i>
+                </div>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer" onclick="window.openImageModal('img/menupic02.jpg')">
+                <img src="img/menupic02.jpg" alt="Menu Image 2" class="w-full aspect-[4/3] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <i class="fas fa-search-plus text-3xl text-gold shadow-text"></i>
                 </div>
             </div>
         </div>
@@ -715,6 +732,12 @@
         </div>
     </div>
 </section>
+
+<!-- Image Modal -->
+<div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex-col items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer" onclick="window.closeImageModal()">
+    <button class="absolute top-6 right-6 text-white text-4xl hover:text-gold transition-colors focus:outline-none">&times;</button>
+    <img id="modal-image" src="" alt="Enlarged Image" class="max-w-[95%] max-h-[90vh] object-contain scale-95 transition-transform duration-300 rounded-lg shadow-2xl cursor-default" onclick="event.stopPropagation()">
+</div>
 
 <!-- Footer -->
 <footer class="bg-darker py-16 px-6 border-t border-white/5 text-center">
