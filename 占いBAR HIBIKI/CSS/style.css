@@ -84,22 +84,40 @@ body {
     }
 }
 
-/* Image Wrapper with Gold/Red accent */
+/* Image Wrapper with Tarot-card like ornate frame (Elegant & Fortune-telling style) */
 .fv-img-wrapper {
     position: relative;
-    padding: 4px; /* Thinner border for SP */
-    background: linear-gradient(45deg, #D4AF37, #996515, #BF953F); /* Gold gradient */
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-    border-radius: 4px;
-    transition: all 0.5s ease;
+    padding: 10px; /* Space for the tarot frame */
+    background: linear-gradient(135deg, #1a1a1a, #050505);
+    border: 1px solid #996515;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.15);
+    border-radius: 6px;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     transform: rotate(var(--fv-rotate, 0deg));
     transform-origin: center center;
-    will-change: transform;
+    will-change: transform, box-shadow, border-color;
 }
 @media (min-width: 768px) {
      .fv-img-wrapper {
-         padding: 6px;
+         padding: 14px;
      }
+}
+
+/* Inner thin gold line to complete the tarot look */
+.fv-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; bottom: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 10;
+    transition: border-color 0.7s ease;
+}
+@media (min-width: 768px) {
+    .fv-img-wrapper::before {
+        top: 6px; left: 6px; right: 6px; bottom: 6px;
+    }
 }
 
 .fv-img-wrapper img {
@@ -109,8 +127,9 @@ body {
     max-width: 80vw; /* Keep it contained on mobile */
     object-fit: cover;
     display: block;
-    filter: brightness(0.6) contrast(1.1) grayscale(30%); /* Darken non-active slides */
-    transition: filter 0.5s ease;
+    /* Mystical antique filter for non-active slides */
+    filter: brightness(0.5) contrast(1.2) sepia(30%) hue-rotate(-5deg) grayscale(40%); 
+    transition: filter 0.7s ease;
 }
 
 /* Sizes */
@@ -124,11 +143,16 @@ body {
 
 /* Active Slide State */
 .swiper-slide-active .fv-img-wrapper img {
-    filter: brightness(0.85) contrast(1.05) grayscale(0%); /* Slightly darker even when active so text is readable */
+    /* Clearer, slightly warm filter for the active slide */
+    filter: brightness(0.95) contrast(1.05) sepia(10%) grayscale(0%);
 }
 .swiper-slide-active .fv-img-wrapper {
     transform: rotate(var(--fv-rotate, 0deg)) scale(1.05);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 175, 55, 0.35);
+    border-color: #D4AF37; /* Brighter gold border on active */
+}
+.swiper-slide-active .fv-img-wrapper::before {
+    border-color: rgba(252, 238, 167, 0.6); /* Brighter inner line on active */
 }
 
 /* Tilt Modifiers */
