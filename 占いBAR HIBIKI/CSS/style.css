@@ -138,6 +138,7 @@ body {
 
 /* Sizes */
 .fv-img-large { height: 280px; }
+.fv-img-large img { aspect-ratio: 4/3; }
 .fv-img-small { height: 200px; }
 
 @media (min-width: 768px) {
