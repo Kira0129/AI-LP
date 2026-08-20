@@ -342,8 +342,9 @@
     </section>
 
     <!-- Image Divider -->
-    <section class="w-full relative">
-        <img src="img/picbg.jpg" alt="占いBAR HIBIKI" class="w-full h-[350px] md:h-[500px] object-cover">
+    <section class="w-full relative h-[350px] md:h-[500px] overflow-hidden">
+        <!-- パララックス背景 -->
+        <div class="absolute inset-0 bg-[url('img/picbg.jpg')] bg-cover bg-center bg-fixed"></div>
         <!-- エレガントなフィルター（オーバーレイ） -->
         <div class="absolute inset-0 bg-gradient-to-b from-darker/80 via-darker/30 to-darker/80 pointer-events-none"></div>
     </section>
