@@ -1002,7 +1002,7 @@
 
         <section id="price" class="section py-16 md:py-24 relative overflow-hidden">
             <!-- JSパララックス用背景 (PC/SP両対応) -->
-            <div id="price-parallax" class="absolute top-[-25%] left-0 w-full h-[150%] bg-cover bg-center pointer-events-none" style="background-image: url('img/pricebg.jpg');"></div>
+            <div id="price-parallax" class="absolute top-0 left-0 w-full h-[120vh] bg-cover bg-center pointer-events-none" style="background-image: url('img/pricebg.jpg');"></div>
             
             <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
             <div class="max-w-6xl mx-auto px-6 relative z-10">
@@ -1609,9 +1609,8 @@
                     const rect = priceSection.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
                     if (rect.top <= windowHeight && rect.bottom >= 0) {
-                        const scrollRatio = (windowHeight - rect.top) / (windowHeight + rect.height);
-                        const yShift = (scrollRatio - 0.5) * 30; // -15% to +15%
-                        priceParallax.style.transform = `translate3d(0, ${yShift}%, 0)`;
+                        // セクションのトップ位置と逆方向に移動させることで、画面に対して背景を完全に固定(bg-fixedを再現)
+                        priceParallax.style.transform = `translate3d(0, ${-rect.top}px, 0)`;
                     }
                 };
                 window.addEventListener('scroll', updateParallax, { passive: true });
