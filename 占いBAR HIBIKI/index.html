@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>占いBAR HIBIKI | 広島・胡町の本格占い＆エンターテインメントバー</title>
-    <meta name="description" content="広島市中区胡町にある本格占いとお酒、カラオケを楽しめる総合エンターテインメントバー「占いBAR HIBIKI」。経験豊富な占術師が在籍し、アットホームな空間で特別な夜を提供します。">
-    
+    <meta name="description"
+        content="広島市中区胡町にある本格占いとお酒、カラオケを楽しめる総合エンターテインメントバー「占いBAR HIBIKI」。経験豊富な占術師が在籍し、アットホームな空間で特別な夜を提供します。">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -49,459 +53,575 @@
         }
     </script>
 </head>
+
 <body class="font-sans antialiased selection:bg-gold selection:text-dark">
 
-<!-- Header -->
-<header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-darker/80 backdrop-blur-md border-b border-gold/20">
-    <a href="#" class="flex flex-col items-start gap-1">
-        <span class="font-serif text-[10px] tracking-[0.2em] text-white/70 leading-none">占いBAR</span>
-        <span class="font-en text-2xl font-bold tracking-widest text-gold-gradient leading-none">HIBIKI</span>
-    </a>
-    
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex gap-8 items-center">
-        <a href="#about" class="text-sm font-en tracking-widest hover:text-gold transition-colors">ABOUT</a>
-        <a href="#features" class="text-sm font-en tracking-widest hover:text-gold transition-colors">FEATURES</a>
-        <a href="#menu" class="text-sm font-en tracking-widest hover:text-gold transition-colors">MENU</a>
-        <a href="#staff" class="text-sm font-en tracking-widest hover:text-gold transition-colors">STAFF</a>
-        <a href="#access" class="text-sm font-en tracking-widest hover:text-gold transition-colors">ACCESS</a>
-        <a href="https://www.instagram.com/senjhbketajima" target="_blank" class="bg-gold-gradient text-dark font-bold py-2 px-6 rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
-            <i class="fab fa-instagram text-lg"></i> 予約する
+    <!-- Header -->
+    <header id="header"
+        class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-darker/80 backdrop-blur-md border-b border-gold/20">
+        <a href="#" class="flex flex-col items-start gap-1">
+            <span class="font-serif text-[10px] tracking-[0.2em] text-white/70 leading-none">占いBAR</span>
+            <span class="font-en text-2xl font-bold tracking-widest text-gold-gradient leading-none">HIBIKI</span>
         </a>
-    </nav>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-2xl text-gold focus:outline-none">
-        <i class="fas fa-bars"></i>
-    </button>
-</header>
-
-<!-- Mobile Nav (Hidden by default) -->
-<div id="mobile-menu" class="fixed inset-0 bg-darker/95 backdrop-blur-lg z-40 hidden flex-col items-center justify-center gap-8 px-6">
-    <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gold focus:outline-none">
-        <i class="fas fa-times"></i>
-    </button>
-    <a href="#about" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">ABOUT</a>
-    <a href="#features" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">FEATURES</a>
-    <a href="#menu" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">MENU</a>
-    <a href="#staff" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">STAFF</a>
-    <a href="#access" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">ACCESS</a>
-</div>
-
-<!-- Hero Section (FV) -->
-<section id="top" class="fv-section">
-    <!-- Swiper Container -->
-    <div class="swiper fv-swiper w-full h-full absolute inset-0 z-0">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-small fv-tilt-left">
-                    <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+1" alt="HIBIKI Gallery 1">
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-large">
-                    <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+2" alt="HIBIKI Gallery 2">
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-small fv-tilt-right">
-                    <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+3" alt="HIBIKI Gallery 3">
-                </div>
-            </div>
-             <!-- Slide 4 -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-large">
-                    <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+4" alt="HIBIKI Gallery 4">
-                </div>
-            </div>
-            <!-- Slide 5 (Loop用) -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-small fv-tilt-left">
-                    <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+5" alt="HIBIKI Gallery 5">
-                </div>
-            </div>
-            <!-- Slide 6 (Loop用) -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-large">
-                    <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+6" alt="HIBIKI Gallery 6">
-                </div>
-            </div>
-            <!-- Slide 7 (Loop用) -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-small fv-tilt-right">
-                    <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+7" alt="HIBIKI Gallery 7">
-                </div>
-            </div>
-            <!-- Slide 8 (Loop用) -->
-            <div class="swiper-slide">
-                <div class="fv-img-wrapper fv-img-large">
-                    <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+8" alt="HIBIKI Gallery 8">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Central Content Overlay -->
-    <div class="fv-content-overlay relative z-10 text-center px-4 w-full">
-        <p class="font-sans text-sm md:text-base tracking-[0.3em] text-gold mb-4 md:mb-6 fade-in shadow-text">占いBAR HIBIKI</p>
-        <h2 class="font-serif text-3xl md:text-6xl lg:text-7xl leading-tight mb-6 md:mb-8 fade-in text-white shadow-text" style="transition-delay: 200ms;">
-            運命が響き合う、<br class="md:hidden">特別な夜を
-        </h2>
-        
-        <div class="mt-8 md:mt-12 fade-in" style="transition-delay: 600ms;">
-            <a href="https://www.instagram.com/senjhbketajima" target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold-gradient text-dark font-bold py-3 md:py-4 px-8 md:px-10 rounded-full text-base md:text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                <i class="fab fa-instagram text-2xl"></i> <span class="hidden md:inline">Instagramで予約・詳細を見る</span><span class="md:hidden">予約・詳細はこちら</span>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 items-center">
+            <a href="#about" class="text-sm font-en tracking-widest hover:text-gold transition-colors">ABOUT</a>
+            <a href="#features" class="text-sm font-en tracking-widest hover:text-gold transition-colors">FEATURES</a>
+            <a href="#menu" class="text-sm font-en tracking-widest hover:text-gold transition-colors">MENU</a>
+            <a href="#staff" class="text-sm font-en tracking-widest hover:text-gold transition-colors">STAFF</a>
+            <a href="#access" class="text-sm font-en tracking-widest hover:text-gold transition-colors">ACCESS</a>
+            <a href="https://www.instagram.com/senjhbketajima" target="_blank"
+                class="bg-gold-gradient text-dark font-bold py-2 px-6 rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                <i class="fab fa-instagram text-lg"></i> 予約する
             </a>
-        </div>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-gold focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Nav (Hidden by default) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-darker/95 backdrop-blur-lg z-40 hidden flex-col items-center justify-center gap-8 px-6">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gold focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about"
+            class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">ABOUT</a>
+        <a href="#features"
+            class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">FEATURES</a>
+        <a href="#menu" class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">MENU</a>
+        <a href="#staff"
+            class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">STAFF</a>
+        <a href="#access"
+            class="mobile-link font-en text-2xl tracking-widest hover:text-gold transition-colors">ACCESS</a>
     </div>
-    
-    <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80 z-20">
-        <span class="font-en text-[10px] tracking-[0.3em] text-gold uppercase">Explore More</span>
-        <i class="fa-solid fa-chevron-down text-sm text-gold"></i>
-    </div>
-</section>
 
-<!-- Target Section -->
-<section class="py-24 md:py-32 px-6 relative bg-darker overflow-hidden">
-    <!-- SVG背景画像 -->
-    <div class="absolute inset-0 bg-[url('img/bg.svg')] bg-[length:600px] bg-center bg-repeat opacity-30 pointer-events-none"></div>
-
-    <!-- エレガントな背景の光 -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-5xl mx-auto relative z-10">
-        <!-- エレガントなフレーム -->
-        <div class="relative bg-darker/80 backdrop-blur-sm p-8 md:p-16 border border-white/10 fade-in">
-            <!-- 四隅のゴールドアクセント -->
-            <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold -translate-x-[2px] -translate-y-[2px]"></div>
-            <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold translate-x-[2px] -translate-y-[2px]"></div>
-            <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold -translate-x-[2px] translate-y-[2px]"></div>
-            <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold translate-x-[2px] translate-y-[2px]"></div>
-
-            <div class="text-center mb-12">
-                <span class="font-en text-gold tracking-[0.4em] text-xs md:text-sm block mb-4 uppercase">Recommended For</span>
-                <h3 class="font-serif text-2xl md:text-3xl text-white tracking-widest flex items-center justify-center gap-4 md:gap-6">
-                    <span class="w-12 md:w-24 h-[1px] bg-gradient-to-l from-gold to-transparent"></span>
-                    こんな方におすすめ
-                    <span class="w-12 md:w-24 h-[1px] bg-gradient-to-r from-gold to-transparent"></span>
-                </h3>
-            </div>
-            
-            <ul class="text-left max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-12 font-sans text-sm md:text-base tracking-wide text-gray-300">
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">恋愛や人間関係について相談したい方</span>
-                </li>
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">仕事やこれからの人生に迷っている方</span>
-                </li>
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">自分自身についてもっと深く知りたい方</span>
-                </li>
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">気軽な雰囲気で本格占いを受けたい方</span>
-                </li>
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">リーズナブルにお酒を楽しみたい方</span>
-                </li>
-                <li class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
-                    <span class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-                        <i class="fas fa-check text-[10px]"></i>
-                    </span>
-                    <span class="leading-relaxed group-hover:text-white transition-colors duration-500">飲みながら占いやカラオケを楽しみたい方</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="py-24 md:py-32 px-6 relative overflow-hidden bg-white">
-    <!-- エレガントな背景装飾 -->
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
-    
-    <div class="max-w-6xl mx-auto relative z-10">
-        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-            <div class="w-full lg:w-1/2 fade-in relative group">
-                <div class="absolute inset-0 bg-gold/10 transform rotate-3 rounded-2xl transition-transform duration-700 group-hover:rotate-6"></div>
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                    <img src="https://placehold.co/800x1000/1a1a1a/d4af37?text=Bar+Atmosphere" alt="占いとお酒を楽しめる空間" class="w-full h-full object-cover aspect-[4/5] opacity-90 group-hover:opacity-100 transition-opacity duration-700">
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 fade-in">
-                <div class="flex flex-col items-center lg:items-start text-center lg:text-left mb-10">
-                    <span class="font-en text-gold tracking-[0.4em] text-xs block mb-6 uppercase">Concept</span>
-                    <h2 class="font-serif text-3xl md:text-4xl leading-[1.6] tracking-wide text-gray-900">
-                        占いとお酒を、<br>もっと気軽に楽しめる場所
-                    </h2>
-                    <div class="w-12 h-[1px] bg-gold mt-8"></div>
-                </div>
-                
-                <div class="space-y-6 font-sans text-gray-700 leading-[2.2] text-sm md:text-base font-light tracking-wide">
-                    <p>
-                        広島市中区胡町にある、本格占いとお酒、カラオケを一緒に楽しめる総合エンターテインメントバーです。
-                    </p>
-                    <p>
-                        60分の飲み放題を楽しみながら、恋愛・仕事・人間関係・これからの人生など、気になることを本格的に鑑定。
-                    </p>
-                    <p>
-                        占いをしない日は、飲み放題やカラオケだけのご利用も可能です。
-                    </p>
-                    <p>
-                        占いに頼りたい夜も、誰かと楽しく過ごしたい夜も。気軽に立ち寄れて、ほっとできるアットホームな空間をご用意しています。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section id="features" class="py-24 md:py-32 px-6 relative bg-darker">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-20 fade-in">
-            <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Reason</span>
-            <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">4つの特徴</h2>
-            <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
-        </div>
-
-        <div class="space-y-24 lg:space-y-32">
-            <!-- Feature 01 -->
-            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 fade-in">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="feature-img-wrapper group">
-                        <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Tarot+%26+Drink" alt="本格占いをBARで気軽に" class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+    <!-- Hero Section (FV) -->
+    <section id="top" class="fv-section">
+        <!-- Swiper Container -->
+        <div class="swiper fv-swiper w-full h-full absolute inset-0 z-0">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-small fv-tilt-left">
+                        <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+1" alt="HIBIKI Gallery 1">
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 relative">
-                    <span class="absolute -top-12 -left-4 font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">01</span>
-                    <div class="relative z-10">
-                        <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">本格占いをBARで気軽に</h3>
-                        <p class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
-                            姓名判断、西洋占星術、タロット、オラクルカードなど、本格的な鑑定をお酒とともに楽しめます。<br>占い店に入るのは少し緊張するという方にも、BARならではのカジュアルな雰囲気で気軽にご相談いただけます。
-                        </p>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-large">
+                        <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+2" alt="HIBIKI Gallery 2">
                     </div>
                 </div>
-            </div>
-
-            <!-- Feature 02 -->
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20 fade-in">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="feature-img-wrapper group">
-                        <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Fortune+Teller" alt="経験豊富な占術師が在籍" class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-small fv-tilt-right">
+                        <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+3" alt="HIBIKI Gallery 3">
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 relative">
-                    <span class="absolute -top-12 -left-4 lg:auto lg:-right-4 lg:left-auto font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">02</span>
-                    <div class="relative z-10">
-                        <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">経験豊富な占術師が在籍</h3>
-                        <p class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
-                            占い歴21年のMASTERをはじめ、タロットを専門とするCASTも鑑定を担当。<br>恋愛や仕事、相性、人生の方向性など、お悩みに合わせて丁寧に読み解きます。
-                        </p>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-large">
+                        <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+4" alt="HIBIKI Gallery 4">
                     </div>
                 </div>
-            </div>
-
-            <!-- Feature 03 -->
-            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 fade-in">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="feature-img-wrapper group">
-                        <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Karaoke+%26+Bar" alt="飲み放題＆カラオケも楽しめる" class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                <!-- Slide 5 (Loop用) -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-small fv-tilt-left">
+                        <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+5" alt="HIBIKI Gallery 5">
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 relative">
-                    <span class="absolute -top-12 -left-4 font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">03</span>
-                    <div class="relative z-10">
-                        <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">飲み放題＆カラオケも楽しめる</h3>
-                        <p class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
-                            ドリンクは60分飲み放題制。<br>お酒やソフトドリンクを楽しみながら、カラオケで盛り上がったり、ゆっくり過ごしたりと、その日の気分に合わせてお楽しみいただけます。
-                        </p>
+                <!-- Slide 6 (Loop用) -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-large">
+                        <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+6" alt="HIBIKI Gallery 6">
                     </div>
                 </div>
-            </div>
-
-            <!-- Feature 04 -->
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20 fade-in">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="feature-img-wrapper group">
-                        <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Bar+Entrance" alt="アクセスしやすく、立ち寄りやすい" class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                <!-- Slide 7 (Loop用) -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-small fv-tilt-right">
+                        <img src="https://placehold.co/600x800/1a1a1a/d4af37?text=Bar+Image+7" alt="HIBIKI Gallery 7">
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 relative">
-                    <span class="absolute -top-12 -left-4 lg:auto lg:-right-4 lg:left-auto font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">04</span>
-                    <div class="relative z-10">
-                        <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">アクセスしやすく、<br class="md:hidden">立ち寄りやすい</h3>
-                        <p class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
-                            胡町電停・銀山町電停から徒歩3分圏内。<br>白を基調とした入りやすいビル内にあり、仕事帰りやお出かけのあとにも気軽に立ち寄れる立地です。
-                        </p>
+                <!-- Slide 8 (Loop用) -->
+                <div class="swiper-slide">
+                    <div class="fv-img-wrapper fv-img-large">
+                        <img src="https://placehold.co/1200x800/1a1a1a/d4af37?text=Bar+Image+8" alt="HIBIKI Gallery 8">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Menu Section -->
-<section id="menu" class="py-24 md:py-32 px-6 relative bg-dark overflow-hidden">
-    <!-- SVG背景画像 -->
-    <div class="absolute inset-0 bg-[url('img/bg.svg')] bg-[length:600px] bg-center bg-repeat opacity-30 pointer-events-none"></div>
+        <!-- Central Content Overlay -->
+        <div class="fv-content-overlay relative z-10 text-center px-4 w-full">
+            <p class="font-sans text-sm md:text-base tracking-[0.3em] text-gold mb-4 md:mb-6 fade-in shadow-text">占いBAR
+                HIBIKI</p>
+            <h2 class="font-serif text-3xl md:text-6xl lg:text-7xl leading-tight mb-6 md:mb-8 fade-in text-white shadow-text"
+                style="transition-delay: 200ms;">
+                運命が響き合う、<br class="md:hidden">特別な夜を
+            </h2>
 
-    <!-- エレガントな背景の光 -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <!-- Background Decor -->
-    <div class="absolute top-0 bottom-0 left-1/2 w-[1px] bg-gradient-to-b from-transparent via-gold/10 to-transparent hidden lg:block"></div>
-
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-20 fade-in">
-            <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Price & Menu</span>
-            <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">メニュー</h2>
-            <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            <div class="mt-8 md:mt-12 fade-in" style="transition-delay: 600ms;">
+                <a href="https://www.instagram.com/senjhbketajima" target="_blank"
+                    class="inline-flex items-center justify-center gap-3 bg-gold-gradient text-dark font-bold py-3 md:py-4 px-8 md:px-10 rounded-full text-base md:text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                    <i class="fab fa-instagram text-2xl"></i> <span
+                        class="hidden md:inline">Instagramで予約・詳細を見る</span><span class="md:hidden">予約・詳細はこちら</span>
+                </a>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative z-10">
-            <!-- Fortune Telling Menu -->
-            <div class="fade-in">
-                <div class="text-center mb-10">
-                    <h3 class="font-serif text-2xl text-white tracking-widest">占いメニュー</h3>
-                    <div class="text-gold/50 mt-4 text-sm"><i class="fas fa-moon"></i></div>
+        <!-- Scroll Down Indicator -->
+        <div
+            class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80 z-20">
+            <span class="font-en text-[10px] tracking-[0.3em] text-gold uppercase">Explore More</span>
+            <i class="fa-solid fa-chevron-down text-sm text-gold"></i>
+        </div>
+    </section>
+
+    <!-- Target Section -->
+    <section class="py-24 md:py-32 px-6 relative bg-dark overflow-hidden">
+        <!-- SVG背景画像 -->
+        <div
+            class="absolute inset-0 bg-[url('img/bg.svg')] bg-[length:600px] bg-center bg-repeat opacity-30 pointer-events-none">
+        </div>
+
+        <!-- エレガントな背景の光 -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <!-- エレガントなフレーム -->
+            <div class="relative bg-darker/80 backdrop-blur-sm p-8 md:p-16 border border-white/10 fade-in">
+                <!-- 四隅のゴールドアクセント -->
+                <div
+                    class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold -translate-x-[2px] -translate-y-[2px]">
                 </div>
-                
-                <div class="space-y-8">
-                    <!-- Item -->
-                    <div class="border-b border-white/10 pb-6 group">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">姓名判断 <span class="text-sm text-gray-500 font-sans ml-2">1名</span></h4>
-                            <span class="font-en text-gold text-lg tracking-widest">2,000 <span class="text-xs">yen</span></span>
-                        </div>
-                        <p class="text-sm text-gray-400 font-light leading-relaxed">お名前から、運勢・性格・相性などを読み解きます。</p>
+                <div
+                    class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold translate-x-[2px] -translate-y-[2px]">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold -translate-x-[2px] translate-y-[2px]">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold translate-x-[2px] translate-y-[2px]">
+                </div>
+
+                <div class="text-center mb-12">
+                    <span class="font-en text-gold tracking-[0.4em] text-xs md:text-sm block mb-4 uppercase">Recommended
+                        For</span>
+                    <h3
+                        class="font-serif text-2xl md:text-3xl text-white tracking-widest flex items-center justify-center gap-4 md:gap-6">
+                        <span class="w-12 md:w-24 h-[1px] bg-gradient-to-l from-gold to-transparent"></span>
+                        こんな方におすすめ
+                        <span class="w-12 md:w-24 h-[1px] bg-gradient-to-r from-gold to-transparent"></span>
+                    </h3>
+                </div>
+
+                <ul
+                    class="text-left max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-12 font-sans text-sm md:text-base tracking-wide text-gray-300">
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">恋愛や人間関係について相談したい方</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">仕事やこれからの人生に迷っている方</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">自分自身についてもっと深く知りたい方</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">気軽な雰囲気で本格占いを受けたい方</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">リーズナブルにお酒を楽しみたい方</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-4 group bg-dark p-4 border border-white/5 hover:border-gold/30 transition-colors duration-500">
+                        <span
+                            class="flex items-center justify-center w-6 h-6 rounded-full border border-gold/50 text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-500 shrink-0 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check text-[10px]"></i>
+                        </span>
+                        <span
+                            class="leading-relaxed group-hover:text-white transition-colors duration-500">飲みながら占いやカラオケを楽しみたい方</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 px-6 relative overflow-hidden bg-darker">
+        <!-- エレガントな背景装飾 -->
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2 fade-in relative group h-[400px] md:h-[550px]">
+                    <!-- Background decorative element -->
+                    <div class="absolute top-4 left-4 w-[70%] h-4/5 bg-gold/10 transform -rotate-3 rounded-2xl transition-transform duration-700 group-hover:-rotate-6 z-0"></div>
+                    
+                    <!-- Image 1 (Back, Top-Left) -->
+                    <div class="absolute top-0 left-0 w-[70%] h-4/5 rounded-2xl overflow-hidden shadow-xl border border-white/10 z-10 transition-transform duration-700 group-hover:-translate-y-2 group-hover:-translate-x-2">
+                        <img src="img/589018883_17848713957608084_2189180146269667902_n.jpg" alt="占いBAR HIBIKI 雰囲気" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 hover:scale-105">
                     </div>
                     
-                    <div class="border-b border-white/10 pb-6 group">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">タロット <span class="text-sm text-gray-500 font-sans ml-2">1問</span></h4>
-                            <span class="font-en text-gold text-lg tracking-widest">2,000 <span class="text-xs">yen</span></span>
-                        </div>
-                        <p class="text-sm text-gray-400 font-light leading-relaxed">今抱えているお悩みや気になることについて、カードからメッセージを読み解きます。</p>
+                    <!-- Image 2 (Front, Bottom-Right) -->
+                    <div class="absolute bottom-0 right-0 w-[60%] h-3/5 rounded-2xl overflow-hidden shadow-2xl border-4 border-darker z-20 transition-transform duration-700 group-hover:translate-y-2 group-hover:translate-x-2">
+                        <img src="img/line_624903813291573913.jpg" alt="占いBAR HIBIKI カクテル" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 hover:scale-105">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left mb-10">
+                        <span class="font-en text-gold tracking-[0.4em] text-xs block mb-6 uppercase">Concept</span>
+                        <h2 class="font-serif text-3xl md:text-4xl leading-[1.6] tracking-wide text-white">
+                            占いとお酒を、<br>もっと気軽に楽しめる場所
+                        </h2>
+                        <div class="w-12 h-[1px] bg-gold mt-8"></div>
                     </div>
 
-                    <div class="border-b border-white/10 pb-6 group">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">タロット30分</h4>
-                            <span class="font-en text-gold text-lg tracking-widest">5,000 <span class="text-xs">yen</span></span>
-                        </div>
-                        <p class="text-sm text-gray-400 font-light leading-relaxed">時間内で質問無制限。複数のお悩みをじっくり相談したい方におすすめです。</p>
+                    <div
+                        class="space-y-6 font-sans text-gray-300 leading-[2.2] text-sm md:text-base font-light tracking-wide">
+                        <p>
+                            広島市中区胡町にある、本格占いとお酒、カラオケを一緒に楽しめる総合エンターテインメントバーです。
+                        </p>
+                        <p>
+                            60分の飲み放題を楽しみながら、恋愛・仕事・人間関係・これからの人生など、気になることを本格的に鑑定。
+                        </p>
+                        <p>
+                            占いをしない日は、飲み放題やカラオケだけのご利用も可能です。
+                        </p>
+                        <p>
+                            占いに頼りたい夜も、誰かと楽しく過ごしたい夜も。気軽に立ち寄れて、ほっとできるアットホームな空間をご用意しています。
+                        </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="border-b border-white/10 pb-6 group">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">タロット＋オラクルカード</h4>
-                            <span class="font-en text-gold text-lg tracking-widest">5,000 <span class="text-xs">yen</span></span>
+    <!-- Features Section -->
+    <section id="features" class="py-24 md:py-32 px-6 relative bg-dark">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 fade-in">
+                <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Reason</span>
+                <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">4つの特徴</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div class="space-y-24 lg:space-y-32">
+                <!-- Feature 01 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 fade-in">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="feature-img-wrapper group">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Tarot+%26+Drink"
+                                alt="本格占いをBARで気軽に"
+                                class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                         </div>
-                        <p class="text-sm text-gray-400 font-light leading-relaxed">タロット1問＋オラクルカード1枚引き。恋愛や人間関係など、愛をテーマにしたお悩みにおすすめです。</p>
                     </div>
-
-                    <!-- Recommended Item -->
-                    <div class="bg-dark/50 p-6 rounded-xl border border-gold/30 shadow-[0_0_15px_rgba(212,175,55,0.05)] relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gold text-dark text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">Popular</div>
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-xl text-gold tracking-wide">総合鑑定</h4>
-                            <span class="font-en text-gold text-xl tracking-widest font-bold">6,000 <span class="text-xs font-normal">yen</span></span>
+                    <div class="w-full lg:w-1/2 relative">
+                        <span
+                            class="absolute -top-12 -left-4 font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">01</span>
+                        <div class="relative z-10">
+                            <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">
+                                本格占いをBARで気軽に</h3>
+                            <p
+                                class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
+                                姓名判断、西洋占星術、タロット、オラクルカードなど、本格的な鑑定をお酒とともに楽しめます。<br>占い店に入るのは少し緊張するという方にも、BARならではのカジュアルな雰囲気で気軽にご相談いただけます。
+                            </p>
                         </div>
-                        <p class="text-sm text-gray-300 font-light leading-relaxed mb-2">姓名判断1名＋タロット1問＋西洋占星術</p>
-                        <p class="text-xs text-gray-400 font-light leading-relaxed">複数の占術を組み合わせて読み解く、一番人気の総合鑑定です。</p>
                     </div>
+                </div>
 
-                    <div class="space-y-4 pt-4">
-                        <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-3">
-                            <h4 class="font-sans text-sm text-gray-300 font-light">鑑定延長 <span class="text-xs text-gray-500 ml-2">10分</span></h4>
-                            <span class="font-en text-gray-400 tracking-widest text-sm">2,000 <span class="text-xs">yen</span></span>
+                <!-- Feature 02 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20 fade-in">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="feature-img-wrapper group">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Fortune+Teller" alt="経験豊富な占術師が在籍"
+                                class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
                         </div>
-                        <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-3">
-                            <h4 class="font-sans text-sm text-gray-300 font-light">組み合わせ鑑定追加 <span class="text-xs text-gray-500 ml-2">1件（タロット1問or姓名判断1名）</span></h4>
-                            <span class="font-en text-gray-400 tracking-widest text-sm">2,000 <span class="text-xs">yen</span></span>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative">
+                        <span
+                            class="absolute -top-12 -left-4 lg:auto lg:-right-4 lg:left-auto font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">02</span>
+                        <div class="relative z-10">
+                            <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">
+                                経験豊富な占術師が在籍</h3>
+                            <p
+                                class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
+                                占い歴21年のMASTERをはじめ、タロットを専門とするCASTも鑑定を担当。<br>恋愛や仕事、相性、人生の方向性など、お悩みに合わせて丁寧に読み解きます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20 fade-in">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="feature-img-wrapper group">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Karaoke+%26+Bar"
+                                alt="飲み放題＆カラオケも楽しめる"
+                                class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative">
+                        <span
+                            class="absolute -top-12 -left-4 font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">03</span>
+                        <div class="relative z-10">
+                            <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">
+                                飲み放題＆カラオケも楽しめる</h3>
+                            <p
+                                class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
+                                ドリンクは60分飲み放題制。<br>お酒やソフトドリンクを楽しみながら、カラオケで盛り上がったり、ゆっくり過ごしたりと、その日の気分に合わせてお楽しみいただけます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 04 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20 fade-in">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="feature-img-wrapper group">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37?text=Bar+Entrance"
+                                alt="アクセスしやすく、立ち寄りやすい"
+                                class="w-full aspect-[4/3] object-cover opacity-80 hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative">
+                        <span
+                            class="absolute -top-12 -left-4 lg:auto lg:-right-4 lg:left-auto font-serif text-[120px] leading-none font-bold text-white/[0.03] italic pointer-events-none select-none">04</span>
+                        <div class="relative z-10">
+                            <h3 class="font-serif text-2xl md:text-3xl text-gold mb-6 tracking-wide leading-relaxed">
+                                アクセスしやすく、<br class="md:hidden">立ち寄りやすい</h3>
+                            <p
+                                class="font-sans text-sm md:text-base text-gray-300 leading-[2.2] font-light tracking-wide">
+                                胡町電停・銀山町電停から徒歩3分圏内。<br>白を基調とした入りやすいビル内にあり、仕事帰りやお出かけのあとにも気軽に立ち寄れる立地です。
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Drink & Karaoke Menu -->
-            <div class="fade-in" style="transition-delay: 200ms;">
-                <div class="text-center mb-10">
-                    <h3 class="font-serif text-2xl text-white tracking-widest">ドリンク & カラオケ</h3>
-                    <div class="text-gold/50 mt-4 text-sm"><i class="fas fa-wine-glass"></i></div>
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 md:py-32 px-6 relative bg-darker overflow-hidden">
+        <!-- SVG背景画像 -->
+        <div
+            class="absolute inset-0 bg-[url('img/bg.svg')] bg-[length:600px] bg-center bg-repeat opacity-30 pointer-events-none">
+        </div>
+
+        <!-- エレガントな背景の光 -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <!-- Background Decor -->
+        <div
+            class="absolute top-0 bottom-0 left-1/2 w-[1px] bg-gradient-to-b from-transparent via-gold/10 to-transparent hidden lg:block">
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 fade-in">
+                <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Price & Menu</span>
+                <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">メニュー</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative z-10">
+                <!-- Fortune Telling Menu -->
+                <div class="fade-in">
+                    <div class="text-center mb-10">
+                        <h3 class="font-serif text-2xl text-white tracking-widest">占いメニュー</h3>
+                        <div class="text-gold/50 mt-4 text-sm"><i class="fas fa-moon"></i></div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Item -->
+                        <div class="border-b border-white/10 pb-6 group">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4
+                                    class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">
+                                    姓名判断 <span class="text-sm text-gray-500 font-sans ml-2">1名</span></h4>
+                                <span class="font-en text-gold text-lg tracking-widest">2,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-400 font-light leading-relaxed">お名前から、運勢・性格・相性などを読み解きます。</p>
+                        </div>
+
+                        <div class="border-b border-white/10 pb-6 group">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4
+                                    class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">
+                                    タロット <span class="text-sm text-gray-500 font-sans ml-2">1問</span></h4>
+                                <span class="font-en text-gold text-lg tracking-widest">2,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-400 font-light leading-relaxed">
+                                今抱えているお悩みや気になることについて、カードからメッセージを読み解きます。</p>
+                        </div>
+
+                        <div class="border-b border-white/10 pb-6 group">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4
+                                    class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">
+                                    タロット30分</h4>
+                                <span class="font-en text-gold text-lg tracking-widest">5,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-400 font-light leading-relaxed">
+                                時間内で質問無制限。複数のお悩みをじっくり相談したい方におすすめです。</p>
+                        </div>
+
+                        <div class="border-b border-white/10 pb-6 group">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4
+                                    class="font-serif text-lg text-white tracking-wide group-hover:text-gold transition-colors">
+                                    タロット＋オラクルカード</h4>
+                                <span class="font-en text-gold text-lg tracking-widest">5,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-400 font-light leading-relaxed">
+                                タロット1問＋オラクルカード1枚引き。恋愛や人間関係など、愛をテーマにしたお悩みにおすすめです。</p>
+                        </div>
+
+                        <!-- Recommended Item -->
+                        <div
+                            class="bg-dark/50 p-6 rounded-xl border border-gold/30 shadow-[0_0_15px_rgba(212,175,55,0.05)] relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 bg-gold text-dark text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">
+                                Popular</div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4 class="font-serif text-xl text-gold tracking-wide">総合鑑定</h4>
+                                <span class="font-en text-gold text-xl tracking-widest font-bold">6,000 <span
+                                        class="text-xs font-normal">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed mb-2">姓名判断1名＋タロット1問＋西洋占星術</p>
+                            <p class="text-xs text-gray-400 font-light leading-relaxed">複数の占術を組み合わせて読み解く、一番人気の総合鑑定です。
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 pt-4">
+                            <div
+                                class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-3">
+                                <h4 class="font-sans text-sm text-gray-300 font-light">鑑定延長 <span
+                                        class="text-xs text-gray-500 ml-2">10分</span></h4>
+                                <span class="font-en text-gray-400 tracking-widest text-sm">2,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                            <div
+                                class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-3">
+                                <h4 class="font-sans text-sm text-gray-300 font-light">組み合わせ鑑定追加 <span
+                                        class="text-xs text-gray-500 ml-2">1件（タロット1問or姓名判断1名）</span></h4>
+                                <span class="font-en text-gray-400 tracking-widest text-sm">2,000 <span
+                                        class="text-xs">yen</span></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="space-y-8 mb-12">
-                    <div class="border-b border-white/10 pb-6 group">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h4 class="font-serif text-xl text-white tracking-wide group-hover:text-gold transition-colors">飲み放題 <span class="text-sm text-gray-500 font-sans ml-2">60分</span></h4>
-                            <span class="font-en text-gold text-2xl tracking-widest font-bold">3,000 <span class="text-sm font-normal">yen</span></span>
-                        </div>
-                        <p class="text-sm text-gray-400 font-light leading-relaxed">対象のお酒・ソフトドリンクをお楽しみいただけます。</p>
+                <!-- Drink & Karaoke Menu -->
+                <div class="fade-in" style="transition-delay: 200ms;">
+                    <div class="text-center mb-10">
+                        <h3 class="font-serif text-2xl text-white tracking-widest">ドリンク & カラオケ</h3>
+                        <div class="text-gold/50 mt-4 text-sm"><i class="fas fa-wine-glass"></i></div>
                     </div>
 
-                    <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
-                        <h4 class="font-sans text-base text-gray-300 font-light">カラオケ歌い放題 <span class="text-xs text-gray-500 ml-2">1名</span></h4>
-                        <span class="font-en text-gray-300 tracking-widest">1,000 <span class="text-xs">yen</span></span>
-                    </div>
-                    <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
-                        <h4 class="font-sans text-base text-gray-300 font-light">テキーラショット</h4>
-                        <span class="font-en text-gray-300 tracking-widest">700 <span class="text-xs">yen</span></span>
-                    </div>
-                    <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
-                        <h4 class="font-sans text-base text-gray-300 font-light">シャンパン</h4>
-                        <span class="font-en text-gray-300 tracking-widest">20,000 <span class="text-xs">yen</span></span>
-                    </div>
-                </div>
+                    <div class="space-y-8 mb-12">
+                        <div class="border-b border-white/10 pb-6 group">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h4
+                                    class="font-serif text-xl text-white tracking-wide group-hover:text-gold transition-colors">
+                                    飲み放題 <span class="text-sm text-gray-500 font-sans ml-2">60分</span></h4>
+                                <span class="font-en text-gold text-2xl tracking-widest font-bold">3,000 <span
+                                        class="text-sm font-normal">yen</span></span>
+                            </div>
+                            <p class="text-sm text-gray-400 font-light leading-relaxed">対象のお酒・ソフトドリンクをお楽しみいただけます。</p>
+                        </div>
 
-                <!-- Free Drink List -->
-                <div class="bg-dark p-8 rounded-2xl border border-white/5">
-                    <h5 class="text-center font-serif text-gold mb-8 tracking-widest text-sm flex items-center justify-center gap-4">
-                        <span class="w-8 h-[1px] bg-gold/50"></span>
-                        飲み放題対象ドリンク
-                        <span class="w-8 h-[1px] bg-gold/50"></span>
-                    </h5>
-                    
-                    <div class="space-y-6 text-sm font-sans text-gray-300 font-light tracking-wide">
-                        <div class="flex flex-col md:flex-row gap-2 md:gap-8">
-                            <span class="text-gray-500 w-24 shrink-0">焼酎</span>
-                            <span>麦 / 芋 / 鏡月 / 茉莉花</span>
+                        <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
+                            <h4 class="font-sans text-base text-gray-300 font-light">カラオケ歌い放題 <span
+                                    class="text-xs text-gray-500 ml-2">1名</span></h4>
+                            <span class="font-en text-gray-300 tracking-widest">1,000 <span
+                                    class="text-xs">yen</span></span>
                         </div>
-                        <div class="flex flex-col md:flex-row gap-2 md:gap-8">
-                            <span class="text-gray-500 w-24 shrink-0">ウイスキー</span>
-                            <span class="font-en text-xs tracking-widest uppercase">Blended Scotch / Bourbon</span>
+                        <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
+                            <h4 class="font-sans text-base text-gray-300 font-light">テキーラショット</h4>
+                            <span class="font-en text-gray-300 tracking-widest">700 <span
+                                    class="text-xs">yen</span></span>
                         </div>
-                        <div class="flex flex-col md:flex-row gap-2 md:gap-8">
-                            <span class="text-gray-500 w-24 shrink-0">その他</span>
-                            <span class="leading-relaxed">翠 / 巨峰酎ハイ / レモン酎ハイ / レモンサワー / 梅酒 / アサヒスーパードライ</span>
+                        <div class="flex justify-between items-baseline border-b border-dashed border-white/10 pb-4">
+                            <h4 class="font-sans text-base text-gray-300 font-light">シャンパン</h4>
+                            <span class="font-en text-gray-300 tracking-widest">20,000 <span
+                                    class="text-xs">yen</span></span>
                         </div>
-                        <div class="flex flex-col md:flex-row gap-2 md:gap-8">
-                            <span class="text-gray-500 w-24 shrink-0">ソフト</span>
-                            <span class="leading-relaxed">オレンジジュース / アイスコーヒー / ホットコーヒー / お茶 / ウーロン茶 / コカ・コーラ</span>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-2 md:gap-8 pt-6 border-t border-white/5">
-                            <span class="text-gray-500 w-24 shrink-0">割り方</span>
-                            <span>水割り / 炭酸割り / お茶割り / ウーロン茶割り</span>
-                        </div>
+                    </div>
+
+                    <!-- Free Drink List -->
+                    <div class="bg-dark p-8 rounded-2xl border border-white/5">
+                        <h5
+                            class="text-center font-serif text-gold mb-8 tracking-widest text-sm flex items-center justify-center gap-4">
+                            <span class="w-8 h-[1px] bg-gold/50"></span>
+                            飲み放題対象ドリンク
+                            <span class="w-8 h-[1px] bg-gold/50"></span>
+                        </h5>
+
+                        <div class="space-y-6 text-sm font-sans text-gray-300 font-light tracking-wide">
+                            <div class="flex flex-col md:flex-row gap-2 md:gap-8">
+                                <span class="text-gray-500 w-24 shrink-0">焼酎</span>
+                                <span>麦 / 芋 / 鏡月 / 茉莉花</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 md:gap-8">
+                                <span class="text-gray-500 w-24 shrink-0">ウイスキー</span>
+                                <span class="font-en text-xs tracking-widest uppercase">Blended Scotch / Bourbon</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 md:gap-8">
+                                <span class="text-gray-500 w-24 shrink-0">その他</span>
+                                <span class="leading-relaxed">翠 / 巨峰酎ハイ / レモン酎ハイ / レモンサワー / 梅酒 / アサヒスーパードライ</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 md:gap-8">
+                                <span class="text-gray-500 w-24 shrink-0">ソフト</span>
+                                <span class="leading-relaxed">オレンジジュース / アイスコーヒー / ホットコーヒー / お茶 / ウーロン茶 / コカ・コーラ</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 pt-6 border-t border-white/5">
+                                <span class="text-gray-500 w-24 shrink-0">割り方</span>
+                                <span>水割り / 炭酸割り / お茶割り / ウーロン茶割り</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -510,15 +630,21 @@
 
         <!-- Menu Images -->
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-16 relative z-10 fade-in">
-            <div class="w-full max-w-[350px] rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer shadow-lg" onclick="window.openImageModal('img/menupic01.jpg')">
-                <img src="img/menupic01.jpg" alt="Menu Image 1" class="w-full h-auto opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <div class="w-full max-w-[350px] rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer shadow-lg"
+                onclick="window.openImageModal('img/menupic01.jpg')">
+                <img src="img/menupic01.jpg" alt="Menu Image 1"
+                    class="w-full h-auto opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <i class="fas fa-search-plus text-3xl text-gold shadow-text"></i>
                 </div>
             </div>
-            <div class="w-full max-w-[350px] rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer shadow-lg" onclick="window.openImageModal('img/menupic02.jpg')">
-                <img src="img/menupic02.jpg" alt="Menu Image 2" class="w-full h-auto opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <div class="w-full max-w-[350px] rounded-xl overflow-hidden border border-white/5 relative group cursor-pointer shadow-lg"
+                onclick="window.openImageModal('img/menupic02.jpg')">
+                <img src="img/menupic02.jpg" alt="Menu Image 2"
+                    class="w-full h-auto opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <i class="fas fa-search-plus text-3xl text-gold shadow-text"></i>
                 </div>
             </div>
@@ -528,249 +654,285 @@
             <p>※占いのみでのご利用はできません。</p>
             <p>※現金のほか、各種カード・QUICPay・iD・交通系IC・主要QRコード決済に対応しています。</p>
         </div>
-    </div>
-</section>
-
-<!-- Staff Section -->
-<section id="staff" class="py-24 md:py-32 px-6 relative bg-white">
-    <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-20 fade-in">
-            <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Our Staff</span>
-            <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-gray-900">占術師のご紹介</h2>
-            <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-            <!-- MASTER -->
-            <div class="fade-in bg-gray-50 p-10 rounded-[2rem] border border-gray-200 relative group hover:border-gold/30 transition-colors duration-500 shadow-sm">
-                <div class="flex flex-col items-center">
-                    <div class="w-32 h-32 rounded-full border border-gold/50 p-1.5 mb-6 relative group-hover:scale-105 transition-transform duration-500">
-                        <img src="https://placehold.co/200x200/1a1a1a/d4af37?text=MASTER" alt="MASTER 千寿ひびき" class="w-full h-full rounded-full object-cover">
-                    </div>
-                    <span class="text-[10px] text-gold tracking-[0.3em] uppercase mb-2">代表占術師</span>
-                    <h3 class="font-serif text-2xl mb-1 text-gray-900 tracking-widest">千寿ひびき</h3>
-                    <p class="font-en text-sm text-gray-500 tracking-widest mb-8">Master</p>
-                    
-                    <div class="text-sm md:text-base font-sans text-gray-700 font-light leading-[2.2] space-y-4 text-left mb-8 w-full">
-                        <p>占い歴21年。</p>
-                        <p>姓名判断・西洋占星術から占いを学び始め、タロット・オラクルカードの鑑定経験も11年以上あり、さまざまなお悩みを多角的に読み解きます。</p>
-                        <p>一人ひとりのお話に耳を傾けながら、その方に必要なメッセージを丁寧にお伝えします。</p>
-                    </div>
+    <!-- Staff Section -->
+    <section id="staff" class="py-24 md:py-32 px-6 relative bg-dark">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-20 fade-in">
+                <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Our Staff</span>
+                <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">占術師のご紹介</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            </div>
 
-                    <div class="w-full bg-white py-4 px-6 rounded-xl border border-gray-200 text-center mt-auto">
-                        <span class="block text-[10px] text-gray-500 tracking-widest uppercase mb-2">対応占術</span>
-                        <p class="text-sm text-gold tracking-wide">姓名判断 / 西洋占星術 / タロット / オラクルカード</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+                <!-- MASTER -->
+                <div
+                    class="fade-in bg-darker p-10 rounded-[2rem] border border-white/5 relative group hover:border-gold/30 transition-colors duration-500">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-32 h-32 rounded-full border border-gold/50 p-1.5 mb-6 relative group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://placehold.co/200x200/1a1a1a/d4af37?text=MASTER" alt="MASTER 千寿ひびき"
+                                class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <span class="text-[10px] text-gold tracking-[0.3em] uppercase mb-2">代表占術師</span>
+                        <h3 class="font-serif text-2xl mb-1 text-white tracking-widest">千寿ひびき</h3>
+                        <p class="font-en text-sm text-gray-500 tracking-widest mb-8">Master</p>
+
+                        <div
+                            class="text-sm md:text-base font-sans text-gray-300 font-light leading-[2.2] space-y-4 text-left mb-8 w-full">
+                            <p>占い歴21年。</p>
+                            <p>姓名判断・西洋占星術から占いを学び始め、タロット・オラクルカードの鑑定経験も11年以上あり、さまざまなお悩みを多角的に読み解きます。</p>
+                            <p>一人ひとりのお話に耳を傾けながら、その方に必要なメッセージを丁寧にお伝えします。</p>
+                        </div>
+
+                        <div class="w-full bg-dark/50 py-4 px-6 rounded-xl border border-white/5 text-center mt-auto">
+                            <span class="block text-[10px] text-gray-500 tracking-widest uppercase mb-2">対応占術</span>
+                            <p class="text-sm text-gold tracking-wide">姓名判断 / 西洋占星術 / タロット / オラクルカード</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAST -->
+                <div class="fade-in bg-darker p-10 rounded-[2rem] border border-white/5 relative group hover:border-gold/30 transition-colors duration-500 mt-8 md:mt-0"
+                    style="transition-delay: 200ms;">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-32 h-32 rounded-full border border-gray-600 p-1.5 mb-6 relative group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://placehold.co/200x200/1a1a1a/cccccc?text=CAST" alt="CAST れい"
+                                class="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <span class="text-[10px] text-gray-400 tracking-[0.3em] uppercase mb-2">専属占術師</span>
+                        <h3 class="font-serif text-2xl mb-1 text-white tracking-widest">れい</h3>
+                        <p class="font-en text-sm text-gray-500 tracking-widest mb-8">Cast</p>
+
+                        <div
+                            class="text-sm md:text-base font-sans text-gray-300 font-light leading-[2.2] space-y-4 text-left mb-8 w-full">
+                            <p>タロット専門。</p>
+                            <p>占い歴3年ながら、鋭い感覚を活かしたタロット鑑定が魅力。代表占術師 千寿ひびきが自信を持って鑑定を任せる専属占術師です。</p>
+                            <p>今の状況や気持ちを整理したい方、タロットからヒントを受け取りたい方におすすめです。</p>
+                        </div>
+
+                        <div class="w-full bg-dark/50 py-4 px-6 rounded-xl border border-white/5 text-center mt-auto">
+                            <span class="block text-[10px] text-gray-500 tracking-widest uppercase mb-2">対応占術</span>
+                            <p class="text-sm text-gray-300 tracking-wide">タロット</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- CAST -->
-            <div class="fade-in bg-gray-50 p-10 rounded-[2rem] border border-gray-200 relative group hover:border-gold/30 transition-colors duration-500 mt-8 md:mt-0 shadow-sm" style="transition-delay: 200ms;">
-                <div class="flex flex-col items-center">
-                    <div class="w-32 h-32 rounded-full border border-gray-400 p-1.5 mb-6 relative group-hover:scale-105 transition-transform duration-500">
-                        <img src="https://placehold.co/200x200/1a1a1a/cccccc?text=CAST" alt="CAST れい" class="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <span class="text-[10px] text-gray-400 tracking-[0.3em] uppercase mb-2">専属占術師</span>
-                    <h3 class="font-serif text-2xl mb-1 text-gray-900 tracking-widest">れい</h3>
-                    <p class="font-en text-sm text-gray-500 tracking-widest mb-8">Cast</p>
-                    
-                    <div class="text-sm md:text-base font-sans text-gray-700 font-light leading-[2.2] space-y-4 text-left mb-8 w-full">
-                        <p>タロット専門。</p>
-                        <p>占い歴3年ながら、鋭い感覚を活かしたタロット鑑定が魅力。代表占術師 千寿ひびきが自信を持って鑑定を任せる専属占術師です。</p>
-                        <p>今の状況や気持ちを整理したい方、タロットからヒントを受け取りたい方におすすめです。</p>
-                    </div>
+    <!-- Voice Section -->
+    <section class="py-24 md:py-32 px-6 relative bg-darker overflow-hidden">
+        <!-- エレガントな背景テキスト -->
+        <div
+            class="absolute left-0 top-1/2 -translate-y-1/2 text-[120px] md:text-[200px] text-white/[0.02] font-serif italic pointer-events-none -rotate-90 origin-left select-none">
+            Reviews
+        </div>
 
-                    <div class="w-full bg-white py-4 px-6 rounded-xl border border-gray-200 text-center mt-auto">
-                        <span class="block text-[10px] text-gray-500 tracking-widest uppercase mb-2">対応占術</span>
-                        <p class="text-sm text-gray-600 tracking-wide">タロット</p>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20 fade-in">
+                <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Voice</span>
+                <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">お客様の声</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div
+                    class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500">
+                    <i
+                        class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
+                    <div class="relative z-10 pt-8">
+                        <div class="flex text-gold/80 text-xs mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
+                            本格的な占いに驚きました！お酒も美味しくて、アットホームな空間なのでとてもリラックスして相談できました。また来ます。
+                        </p>
+                        <p class="text-xs text-gray-500 text-right tracking-wide">— 20代 女性</p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500"
+                    style="transition-delay: 150ms;">
+                    <i
+                        class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
+                    <div class="relative z-10 pt-8">
+                        <div class="flex text-gold/80 text-xs mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
+                            BARの雰囲気がエレガントで素敵でした。占い師さんも話しやすく、仕事のモヤモヤがスッキリしました。お酒の種類も豊富で嬉しいです。
+                        </p>
+                        <p class="text-xs text-gray-500 text-right tracking-wide">— 30代 女性</p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500"
+                    style="transition-delay: 300ms;">
+                    <i
+                        class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
+                    <div class="relative z-10 pt-8">
+                        <div class="flex text-gold/80 text-xs mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
+                            友達と2人で飲み放題とカラオケを楽しみながら、タロット占いもしてもらえて大満足です！入りやすいビルで立地も良いです。
+                        </p>
+                        <p class="text-xs text-gray-500 text-right tracking-wide">— 20代 男性</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Voice Section -->
-<section class="py-24 md:py-32 px-6 relative bg-darker overflow-hidden">
-    <!-- エレガントな背景テキスト -->
-    <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[120px] md:text-[200px] text-white/[0.02] font-serif italic pointer-events-none -rotate-90 origin-left select-none">
-        Reviews
-    </div>
+    <!-- Message Section -->
+    <section class="py-24 md:py-32 px-6 relative flex items-center justify-center min-h-[80vh]">
+        <!-- 固定背景パララックス -->
+        <div class="absolute inset-0 bg-[url('img/messagebg.jpg')] bg-cover bg-center bg-fixed opacity-80"></div>
+        <!-- エレガントなグラデーションオーバーレイ -->
+        <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90"></div>
 
-    <div class="max-w-6xl mx-auto relative z-10">
-        <div class="text-center mb-20 fade-in">
-            <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Voice</span>
-            <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">お客様の声</h2>
-            <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+        <div class="max-w-3xl mx-auto relative z-10 text-center fade-in">
+            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl text-gold mb-12 leading-[2] tracking-widest">
+                占いをもっと身近に、<br>本格的に楽しんでほしい。
+            </h2>
+
+            <div class="space-y-8 font-sans text-sm md:text-base text-gray-200 leading-[2.4] font-light tracking-wide">
+                <p>そんな想いから、お酒や会話を楽しみながら<br class="hidden md:block">気軽に占いを受けられる場所をつくりました。</p>
+                <p>悩みを相談したい夜も、楽しく飲みたい夜も、<br class="hidden md:block">ただ誰かと話したい夜も。</p>
+                <p class="text-white font-serif text-lg md:text-xl mt-12 tracking-widest leading-[2]">
+                    一人ひとりが自分らしく過ごせる、<br>アットホームな場所として皆さまをお迎えします。</p>
+            </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Review 1 -->
-            <div class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500">
-                <i class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
-                <div class="relative z-10 pt-8">
-                    <div class="flex text-gold/80 text-xs mb-6 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <!-- Access Section -->
+    <section id="access" class="py-24 md:py-32 px-6 relative bg-dark">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 fade-in">
+                <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Access</span>
+                <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">店舗情報</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+            </div>
+
+            <div
+                class="flex flex-col lg:flex-row gap-10 lg:gap-16 bg-darker p-8 md:p-12 lg:p-16 rounded-[2rem] border border-white/5 shadow-2xl fade-in">
+                <!-- Info -->
+                <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                    <h3 class="font-serif text-2xl mb-10 text-white tracking-widest">占いBAR <span
+                            class="font-en text-gold">HIBIKI</span></h3>
+
+                    <dl class="space-y-6 font-sans text-sm md:text-base text-gray-300 font-light tracking-wide">
+                        <div class="flex flex-col md:flex-row border-b border-white/5 pb-6">
+                            <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">住所</dt>
+                            <dd class="leading-relaxed">
+                                〒730-0033<br>
+                                広島県広島市中区堀川町１−１５<br>
+                                ざくろビル 4階 佐久良内<br>
+                                <span class="text-xs text-gray-500 mt-2 block">（胡町電停・銀山町電停から徒歩3分圏内）</span>
+                            </dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row border-b border-white/5 pb-6">
+                            <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">電話番号</dt>
+                            <dd><a href="tel:050-5448-7553"
+                                    class="text-gold hover:text-white transition-colors font-en text-lg tracking-wider">050-5448-7553</a>
+                            </dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row border-b border-white/5 pb-6">
+                            <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">営業時間</dt>
+                            <dd class="font-en tracking-wider text-lg">19:00 - 5:00</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row border-b border-white/5 pb-6">
+                            <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">定休日</dt>
+                            <dd>火・水</dd>
+                        </div>
+                    </dl>
+
+                    <div class="mt-10">
+                        <a href="https://www.instagram.com/senjhbketajima" target="_blank"
+                            class="inline-flex items-center gap-3 text-white border border-white/20 hover:border-gold hover:text-gold transition-all duration-300 px-8 py-3 rounded-full text-sm tracking-wider">
+                            <i class="fab fa-instagram text-lg"></i> 公式Instagramはこちら
+                        </a>
                     </div>
-                    <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
-                        本格的な占いに驚きました！お酒も美味しくて、アットホームな空間なのでとてもリラックスして相談できました。また来ます。
-                    </p>
-                    <p class="text-xs text-gray-500 text-right tracking-wide">— 20代 女性</p>
+                </div>
+
+                <!-- Map -->
+                <div
+                    class="w-full lg:w-1/2 h-[350px] lg:h-auto min-h-[400px] rounded-xl overflow-hidden border border-white/10 relative">
+                    <!-- Using address for Google Maps embed -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.052824330541!2d132.4619721!3d34.3916297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa20b3b44b829%3A0x86bdcd1681285093!2z44CSNzMwLTAwMzMg5bqD5bO255yM5bqD5bO25biC5Lit5Yy65aCA5bed55S677yR4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1690000000000!5m2!1sja!2sjp"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0 grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                    </iframe>
                 </div>
             </div>
-
-            <!-- Review 2 -->
-            <div class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500" style="transition-delay: 150ms;">
-                <i class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
-                <div class="relative z-10 pt-8">
-                    <div class="flex text-gold/80 text-xs mb-6 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
-                        BARの雰囲気がエレガントで素敵でした。占い師さんも話しやすく、仕事のモヤモヤがスッキリしました。お酒の種類も豊富で嬉しいです。
-                    </p>
-                    <p class="text-xs text-gray-500 text-right tracking-wide">— 30代 女性</p>
-                </div>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="bg-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 relative fade-in group hover:bg-dark transition-colors duration-500" style="transition-delay: 300ms;">
-                <i class="fas fa-quote-left text-4xl text-gold/10 absolute top-8 left-8 group-hover:text-gold/20 transition-colors"></i>
-                <div class="relative z-10 pt-8">
-                    <div class="flex text-gold/80 text-xs mb-6 gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="font-sans text-sm text-gray-300 leading-[2.2] font-light mb-8">
-                        友達と2人で飲み放題とカラオケを楽しみながら、タロット占いもしてもらえて大満足です！入りやすいビルで立地も良いです。
-                    </p>
-                    <p class="text-xs text-gray-500 text-right tracking-wide">— 20代 男性</p>
-                </div>
-            </div>
         </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex-col items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer"
+        onclick="window.closeImageModal()">
+        <button
+            class="absolute top-6 right-6 text-white text-4xl hover:text-gold transition-colors focus:outline-none">&times;</button>
+        <img id="modal-image" src="" alt="Enlarged Image"
+            class="max-w-[95%] max-h-[90vh] object-contain scale-95 transition-transform duration-300 rounded-lg shadow-2xl cursor-default"
+            onclick="event.stopPropagation()">
     </div>
-</section>
 
-<!-- Message Section -->
-<section class="py-24 md:py-32 px-6 relative flex items-center justify-center min-h-[80vh]">
-    <!-- 固定背景パララックス -->
-    <div class="absolute inset-0 bg-[url('img/messagebg.jpg')] bg-cover bg-center bg-fixed opacity-80"></div>
-    <!-- エレガントなグラデーションオーバーレイ -->
-    <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90"></div>
-    
-    <div class="max-w-3xl mx-auto relative z-10 text-center fade-in">
-        <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl text-gold mb-12 leading-[2] tracking-widest">
-            占いをもっと身近に、<br>本格的に楽しんでほしい。
-        </h2>
-        
-        <div class="space-y-8 font-sans text-sm md:text-base text-gray-200 leading-[2.4] font-light tracking-wide">
-            <p>そんな想いから、お酒や会話を楽しみながら<br class="hidden md:block">気軽に占いを受けられる場所をつくりました。</p>
-            <p>悩みを相談したい夜も、楽しく飲みたい夜も、<br class="hidden md:block">ただ誰かと話したい夜も。</p>
-            <p class="text-white font-serif text-lg md:text-xl mt-12 tracking-widest leading-[2]">一人ひとりが自分らしく過ごせる、<br>アットホームな場所として皆さまをお迎えします。</p>
+    <!-- Footer -->
+    <footer class="bg-darker py-16 px-6 border-t border-white/5 text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <a href="#" class="mb-10 flex flex-col items-center gap-2 group">
+                <span
+                    class="font-serif text-[10px] tracking-[0.3em] text-gray-500 leading-none group-hover:text-gold transition-colors duration-300">占いBAR</span>
+                <span
+                    class="font-en text-4xl font-bold tracking-widest text-white group-hover:text-gold transition-colors duration-300">HIBIKI</span>
+            </a>
+
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
+                <a href="#about"
+                    class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">About</a>
+                <a href="#features"
+                    class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Features</a>
+                <a href="#menu"
+                    class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Menu</a>
+                <a href="#staff"
+                    class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Staff</a>
+                <a href="#access"
+                    class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Access</a>
+            </nav>
+
+            <p class="text-[10px] text-gray-600 font-en tracking-widest">&copy; 2026 URANAI BAR HIBIKI. ALL RIGHTS
+                RESERVED.</p>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Access Section -->
-<section id="access" class="py-24 md:py-32 px-6 relative bg-white">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-20 fade-in">
-            <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Access</span>
-            <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-gray-900">店舗情報</h2>
-            <div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
-        </div>
-
-        <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 bg-gray-50 p-8 md:p-12 lg:p-16 rounded-[2rem] border border-gray-200 shadow-xl fade-in">
-            <!-- Info -->
-            <div class="w-full lg:w-1/2 flex flex-col justify-center">
-                <h3 class="font-serif text-2xl mb-10 text-gray-900 tracking-widest">占いBAR <span class="font-en text-gold">HIBIKI</span></h3>
-                
-                <dl class="space-y-6 font-sans text-sm md:text-base text-gray-700 font-light tracking-wide">
-                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6">
-                        <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">住所</dt>
-                        <dd class="leading-relaxed">
-                            〒730-0033<br>
-                            広島県広島市中区堀川町１−１５<br>
-                            ざくろビル 4階 佐久良内<br>
-                            <span class="text-xs text-gray-500 mt-2 block">（胡町電停・銀山町電停から徒歩3分圏内）</span>
-                        </dd>
-                    </div>
-                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6">
-                        <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">電話番号</dt>
-                        <dd><a href="tel:050-5448-7553" class="text-gold hover:text-gray-900 transition-colors font-en text-lg tracking-wider">050-5448-7553</a></dd>
-                    </div>
-                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6">
-                        <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">営業時間</dt>
-                        <dd class="font-en tracking-wider text-lg">19:00 - 5:00</dd>
-                    </div>
-                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6">
-                        <dt class="w-32 text-gray-500 mb-2 md:mb-0 shrink-0 font-normal">定休日</dt>
-                        <dd>火・水</dd>
-                    </div>
-                </dl>
-                
-                <div class="mt-10">
-                    <a href="https://www.instagram.com/senjhbketajima" target="_blank" class="inline-flex items-center gap-3 text-gray-700 border border-gray-300 hover:border-gold hover:text-gold transition-all duration-300 px-8 py-3 rounded-full text-sm tracking-wider">
-                        <i class="fab fa-instagram text-lg"></i> 公式Instagramはこちら
-                    </a>
-                </div>
-            </div>
-
-            <!-- Map -->
-            <div class="w-full lg:w-1/2 h-[350px] lg:h-auto min-h-[400px] rounded-xl overflow-hidden border border-gray-200 relative">
-                <!-- Using address for Google Maps embed -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.052824330541!2d132.4619721!3d34.3916297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa20b3b44b829%3A0x86bdcd1681285093!2z44CSNzMwLTAwMzMg5bqD5bO255yM5bqD5bO25biC5Lit5Yy65aCA5bed55S677yR4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1690000000000!5m2!1sja!2sjp" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="absolute inset-0 grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
-                </iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Image Modal -->
-<div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex-col items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer" onclick="window.closeImageModal()">
-    <button class="absolute top-6 right-6 text-white text-4xl hover:text-gold transition-colors focus:outline-none">&times;</button>
-    <img id="modal-image" src="" alt="Enlarged Image" class="max-w-[95%] max-h-[90vh] object-contain scale-95 transition-transform duration-300 rounded-lg shadow-2xl cursor-default" onclick="event.stopPropagation()">
-</div>
-
-<!-- Footer -->
-<footer class="bg-darker py-16 px-6 border-t border-white/5 text-center">
-    <div class="max-w-4xl mx-auto flex flex-col items-center">
-        <a href="#" class="mb-10 flex flex-col items-center gap-2 group">
-            <span class="font-serif text-[10px] tracking-[0.3em] text-gray-500 leading-none group-hover:text-gold transition-colors duration-300">占いBAR</span>
-            <span class="font-en text-4xl font-bold tracking-widest text-white group-hover:text-gold transition-colors duration-300">HIBIKI</span>
+    <!-- SP Fixed Bottom Button -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-dark/90 backdrop-blur-sm border-t border-gold/30 p-3">
+        <a href="https://www.instagram.com/senjhbketajima" target="_blank"
+            class="flex items-center justify-center gap-2 w-full bg-gold-gradient text-dark font-bold py-3 rounded text-sm shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+            <i class="fab fa-instagram text-xl"></i> Instagramで予約する
         </a>
-        
-        <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
-            <a href="#about" class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">About</a>
-            <a href="#features" class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Features</a>
-            <a href="#menu" class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Menu</a>
-            <a href="#staff" class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Staff</a>
-            <a href="#access" class="text-xs font-en tracking-widest text-gray-500 hover:text-gold transition-colors uppercase">Access</a>
-        </nav>
-
-        <p class="text-[10px] text-gray-600 font-en tracking-widest">&copy; 2026 URANAI BAR HIBIKI. ALL RIGHTS RESERVED.</p>
     </div>
-</footer>
 
-<!-- SP Fixed Bottom Button -->
-<div class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-dark/90 backdrop-blur-sm border-t border-gold/30 p-3">
-    <a href="https://www.instagram.com/senjhbketajima" target="_blank" class="flex items-center justify-center gap-2 w-full bg-gold-gradient text-dark font-bold py-3 rounded text-sm shadow-[0_0_10px_rgba(212,175,55,0.4)]">
-        <i class="fab fa-instagram text-xl"></i> Instagramで予約する
-    </a>
-</div>
+    <!-- Swiper JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- Swiper JS Library -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Custom JS -->
-<script src="Js/script.js"></script>
+    <!-- Custom JS -->
+    <script src="Js/script.js"></script>
 
 </body>
+
 </html>
