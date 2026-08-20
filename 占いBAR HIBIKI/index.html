@@ -832,8 +832,11 @@
     </section>
 
     <!-- Access Section -->
-    <section id="access" class="py-24 md:py-32 px-6 relative bg-dark">
-        <div class="max-w-6xl mx-auto">
+    <section id="access" class="py-24 md:py-32 px-6 relative bg-dark overflow-hidden">
+        <!-- SVG背景画像 -->
+        <div class="absolute inset-0 bg-[url('img/bg.svg')] bg-[length:600px] bg-center bg-repeat opacity-30 pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-20 fade-in">
                 <span class="font-en text-gold tracking-[0.4em] text-xs block mb-4 uppercase">Access</span>
                 <h2 class="font-serif text-3xl md:text-4xl tracking-widest text-white">店舗情報</h2>
