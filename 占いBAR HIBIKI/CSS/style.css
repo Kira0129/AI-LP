@@ -155,12 +155,30 @@ body {
     border-color: rgba(252, 238, 167, 0.6); /* Brighter inner line on active */
 }
 
-/* Tilt Modifiers */
-.fv-tilt-left { --fv-rotate: -4deg; }
-.fv-tilt-right { --fv-rotate: 4deg; }
-@media (min-width: 768px) {
-    .fv-tilt-left { --fv-rotate: -6deg; }
-    .fv-tilt-right { --fv-rotate: 6deg; }
+/* Tilt Modifiers (Same movement for SP/PC) */
+.fv-tilt-left { --fv-rotate: -6deg; }
+.fv-tilt-right { --fv-rotate: 6deg; }
+
+/* Feature Image Decoration */
+.feature-img-wrapper {
+    position: relative;
+    padding: 8px;
+    background: linear-gradient(135deg, #1a1a1a, #050505);
+    border: 1px solid #996515;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+.feature-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; bottom: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 11px;
+    pointer-events: none;
+    z-index: 10;
+}
+.feature-img-wrapper img {
+    border-radius: 8px;
 }
 
 .fv-swiper, .fv-swiper .swiper-wrapper {
