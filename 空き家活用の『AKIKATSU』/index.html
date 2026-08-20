@@ -111,31 +111,29 @@
 
         <!-- 背景スライダー（PC:全画面, SP:上部半分） -->
         <div class="relative lg:absolute lg:inset-0 w-full h-[55vh] lg:h-full z-0 hero-slider">
-            <div class="slide slide-1"
-                style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide slide-1" style="background-image: url('img/fv01.jpg');">
             </div>
-            <div class="slide slide-2"
-                style="background-image: url('https://images.unsplash.com/photo-1583608205776-bfd35f6d9f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide slide-2" style="background-image: url('img/fv02.jpg');">
             </div>
             <div class="slide slide-3"
                 style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
             </div>
 
-            <!-- PC用オーバーレイ（左側25%を完全にオレンジで塗りつぶし、そこから早めにフェードアウトさせて画像を多く見せる） -->
+            <!-- PC用オーバーレイ（左側をオレンジで塗りつぶし、早めにフェードアウトさせて画像を多く見せる） -->
             <div
-                class="hidden lg:block absolute inset-0 z-10 bg-gradient-to-r from-orange from-[25%] via-orange/80 via-[40%] to-transparent to-[65%]">
+                class="hidden lg:block absolute inset-0 z-10 bg-gradient-to-r from-orange from-[10%] via-orange/80 via-[25%] to-transparent to-[45%]">
             </div>
             <!-- SP用オーバーレイは削除 -->
         </div>
 
         <!-- ドットパターン（PCのみ、右側に向けてフェードアウトさせる） -->
         <div class="hidden lg:block absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px]"
-            style="-webkit-mask-image: linear-gradient(to right, black 25%, transparent 50%); mask-image: linear-gradient(to right, black 25%, transparent 50%);">
+            style="-webkit-mask-image: linear-gradient(to right, black 15%, transparent 40%); mask-image: linear-gradient(to right, black 15%, transparent 40%);">
         </div>
 
         <!-- ヒーローコンテンツ -->
         <div
-            class="relative z-20 w-full max-w-[1200px] mx-auto px-4 lg:px-8 pt-10 pb-2 lg:py-24 flex-1 flex flex-col justify-center lg:block">
+            class="relative z-20 w-full max-w-[1200px] lg:max-w-[1440px] mx-auto px-4 lg:px-8 pt-10 pb-2 lg:py-24 flex-1 flex flex-col justify-center lg:block">
             <div class="max-w-[720px]">
 
                 <div class="fade-in-up">
@@ -700,8 +698,8 @@
                 <!-- Message Image -->
                 <div
                     class="rounded-xl overflow-hidden shadow-card aspect-[4/3] bg-gray-100 relative border border-gray-border h-full min-h-[300px] order-first lg:order-last">
-                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Message Image" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="img/messagepic.jpg" alt="Message Image"
+                        class="absolute inset-0 w-full h-full object-cover">
                 </div>
             </div>
 
