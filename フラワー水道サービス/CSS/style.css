@@ -213,15 +213,25 @@
       max-width: 800px;
     }
 
-    .hero-badge {
-      display: inline-block;
+    .hero-badges {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       background: var(--primary);
       color: var(--white);
-      padding: 8px 18px;
-      border-radius: 20px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
       font-weight: 700;
-      font-size: 15px;
-      margin-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.3;
       box-shadow: 0 4px 10px rgba(79, 195, 247, 0.3);
     }
 
@@ -1242,6 +1252,17 @@
         padding: 40px 15px 60px;
         max-width: 100%;
         text-align: center;
+      }
+
+      .hero-badges {
+        justify-content: center;
+      }
+
+      .hero-badge-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 11px;
+        gap: 10px;
       }
 
       .hero-title {
