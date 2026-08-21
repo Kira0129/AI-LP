@@ -231,6 +231,12 @@
       background-position: center;
     }
 
+    @media (min-width: 769px) {
+      .fv-swiper .swiper-slide:nth-child(2) .fv-slide-bg {
+        background-position: center 70%;
+      }
+    }
+
     .hero-visual::after {
       content: '';
       position: absolute;
