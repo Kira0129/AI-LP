@@ -865,7 +865,6 @@
     .voice-text {
       position: relative;
       z-index: 1;
-      font-size: 15px;
       color: var(--text-main);
       margin-bottom: 15px;
     }
