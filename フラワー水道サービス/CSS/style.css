@@ -748,6 +748,7 @@
 
     .feature-content p {
       color: var(--text-muted);
+      font-size: 16px;
     }
 
     /* ===== PRICE ===== */
@@ -1297,6 +1298,10 @@
       .feature-row:nth-child(even) .feature-num-badge {
         left: -10px;
         right: auto;
+      }
+
+      .feature-content p {
+        font-size: 14px;
       }
 
       .feature-content h3 {
