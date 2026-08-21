@@ -1485,6 +1485,10 @@
         padding: 20px;
         gap: 20px;
       }
+
+      .info-sns {
+        text-align: center;
+      }
     }
 
     /* SP Sticky CTA */
