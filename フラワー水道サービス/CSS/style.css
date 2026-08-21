@@ -1301,7 +1301,7 @@
       }
 
       .feature-content p {
-        font-size: 14px;
+        font-size: 14px !important;
       }
 
       .feature-content h3 {
