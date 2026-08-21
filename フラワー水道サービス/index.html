@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=34">
+  <link rel="stylesheet" href="css/style.css?v=35">
 </head>
 
 <body>
@@ -27,7 +27,12 @@
     <a href="#" class="header-logo">
       フラワー水道サービス
     </a>
-    <nav class="header-nav">
+    <div class="hamburger sp-only" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="header-nav" id="js-nav">
       <a href="#about">私たちについて</a>
       <a href="#service">サービス</a>
       <a href="#price">料金</a>
@@ -600,6 +605,27 @@
         }
       }
     });
+
+    // Hamburger Menu Logic
+    const hamburger = document.getElementById('js-hamburger');
+    const nav = document.getElementById('js-nav');
+    const navLinks = nav.querySelectorAll('a');
+
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+        document.body.classList.toggle('overflow-hidden');
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-active');
+          nav.classList.remove('is-active');
+          document.body.classList.remove('overflow-hidden');
+        });
+      });
+    }
 
     // Swiper Initialization
     document.addEventListener("DOMContentLoaded", function () {
