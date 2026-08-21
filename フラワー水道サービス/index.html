@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フラワー水道サービス | 水漏れ・詰まり修理、リフォーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@600;700&display=swap"
+    rel="stylesheet">
+  
+  <!-- OGP (Placeholder) -->
+  <meta property="og:title" content="フラワー水道サービス | 水漏れ・詰まり修理、リフォーム">
+  <meta property="og:description" content="金沢市を中心に、水漏れ・詰まり・水道修理など水まわりのお困りごとに対応しています。">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      /* Color Palette: 水色系＆カジュアル、シンプル */
+      --primary: #4FC3F7; /* 明るく爽やかな水色 */
+      --primary-dark: #0288D1; /* 濃いめの青（テキスト用） */
+      --primary-light: #E1F5FE; /* 非常に薄い水色（背景用） */
+      --accent: #FFCA28; /* カジュアルさを出す暖色アクセント */
+      --accent-hover: #FFB300;
+      --accent-light: #FFF8E1;
+      --white: #FFFFFF;
+      --bg-color: #FAFAFA; /* ほぼ白のシンプルな背景 */
+      --bg-gray: #F5F7FA;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --border: #E0E0E0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.8;
+      font-size: 16px; 
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    img {
+      pointer-events: none;
+      -webkit-touch-callout: none;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 共通フォントクラス */
+    .font-noto { font-family: 'Noto Sans JP', sans-serif; }
+    .font-en { font-family: 'Quicksand', sans-serif; }
+    .sp-only { display: none; }
+    .pc-only { display: block; }
+    .overflow-hidden { overflow: hidden; }
+    .text-center { text-align: center; }
+
+    /* SVGアイコン調整用 */
+    .svg-icon {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      transition: all 0.3s;
+    }
+
+    .header-logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 20px;
+      color: var(--primary-dark);
+    }
+
+    .header-logo svg {
+      color: var(--primary);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover { color: var(--primary); }
+
+    .header-tel {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .header-tel .tel-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .header-tel .tel-hours {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .btn-header-cta {
+      background: var(--accent);
+      color: var(--text-main);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(255, 202, 40, 0.3);
+      transition: all 0.3s;
+    }
+
+    .btn-header-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ===== HERO (FV) - Layout Kept as Requested ===== */
+    .hero {
+      position: relative;
+      padding-top: 70px;
+      height: 90vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--primary-light);
+    }
+
+    .hero-visual {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      /* Placeholder for a water-related image */
+      background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.4); /* Make it lighter for simplicity */
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgb(255 255 255 / 95%) 0%, rgb(255 255 255 / 80%) 40%, rgba(255, 255, 255, 0) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 0 5%;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(79, 195, 247, 0.3);
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    
+    .hero-title span {
+      color: var(--primary-dark);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 1.8vw, 18px);
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      background: rgba(255,255,255,0.9);
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+      border: 1px solid var(--primary-light);
+    }
+
+    .hero-points {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary-dark);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 2px solid var(--primary-light);
+    }
+
+    .hero-point .svg-icon {
+      color: var(--primary);
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 15;
+    }
+
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-bottom: -7px; 
+    }
+
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+    .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+    .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+    .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+    .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+    @keyframes move-forever {
+      0% { transform: translate3d(-90px, 0, 0); }
+      100% { transform: translate3d(85px, 0, 0); }
+    }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+      background: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 20;
+      margin: -40px 5% 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 2px solid var(--primary-light);
+    }
+
+    .cta-banner-label {
+      background: var(--accent);
+      color: var(--text-main);
+      display: inline-block;
+      padding: 6px 24px;
+      border-radius: 20px;
+      font-weight: 900;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: var(--text-main);
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .cta-btn-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      border: none;
+    }
+
+    .btn-cta:active { transform: translateY(4px); box-shadow: none !important; }
+
+    .btn-tel {
+      background: var(--white);
+      color: var(--text-main);
+      box-shadow: 0 4px 0 var(--border);
+      border: 2px solid var(--border);
+    }
+
+    .btn-tel .svg-icon { color: var(--primary); }
+
+    .btn-web {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 0 var(--primary-dark);
+    }
+
+    .btn-cta-main {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .btn-tel .btn-cta-main { font-size: 26px; color: var(--primary-dark);}
+    .btn-web .btn-cta-main { font-size: 20px; }
+
+    .btn-cta-note {
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .btn-tel .btn-cta-note { color: var(--text-muted); }
+    .btn-web .btn-cta-note { color: var(--primary-light); }
+
+    /* ===== ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== COMMON SECTION ===== */
+    .section { padding: 80px 0; }
+    .section-bg { background: var(--bg-gray); }
+    .inner { max-width: 1000px; margin: 0 auto; padding: 0 5%; }
+
+    .sec-title-wrap {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .sec-label {
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .sec-title {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    /* ===== TROUBLE (こんなお悩み) ===== */
+    .trouble-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .trouble-item {
+      background: var(--white);
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      gap: 12px;
+      border: 1px solid var(--primary-light);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+
+    .trouble-item::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px; height: 24px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      font-size: 14px;
+    }
+
+    .trouble-msg {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 40px;
+      padding: 20px;
+      background: var(--primary-light);
+      border-radius: 12px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-top {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 50px;
+    }
+
+    .about-text-area {
+      flex: 1.1;
+      text-align: left;
+    }
+    
+    .about-lead {
+      font-size: clamp(20px, 2.5vw, 26px);
+      color: var(--primary-dark);
+      margin-bottom: 25px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+
+    .about-text {
+      line-height: 2;
+      margin-bottom: 0;
+    }
+
+    .about-img-area {
+      flex: 1;
+      position: relative;
+    }
+
+    .about-img-area::before {
+      content: '';
+      position: absolute;
+      top: 20px; left: -20px;
+      width: 100%; height: 100%;
+      background: var(--primary-light);
+      border-radius: 20px;
+      z-index: 0;
+    }
+
+    .about-img-area img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      min-height: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      display: block;
+      object-fit: cover;
+    }
+
+    .area-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+    }
+
+    .area-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .area-item {
+      background: var(--bg-gray);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    /* ===== SERVICE ===== */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(79, 195, 247, 0.1);
+      border-color: var(--primary-light);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--primary-dark);
+    }
+
+    .service-title {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 15px;
+      color: var(--primary-dark);
+    }
+
+    .service-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      text-align: left;
+    }
+
+    /* ===== FEATURES ===== */
+    .feature-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .feature-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .feature-img {
+      flex: 1;
+      position: relative;
+    }
+
+    .feature-img img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .feature-num-badge {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      background: var(--accent);
+      color: var(--text-main);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 900;
+      font-family: 'Quicksand', sans-serif;
+      box-shadow: 0 4px 10px rgba(255, 202, 40, 0.4);
+      z-index: 2;
+    }
+
+    .feature-row:nth-child(even) .feature-num-badge {
+      left: auto;
+      right: -20px;
+    }
+
+    .feature-content {
+      flex: 1;
+    }
+
+    .feature-content h3 {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .feature-content p {
+      color: var(--text-muted);
+    }
+
+    /* ===== PRICE ===== */
+    .price-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .campaign-box {
+      background: #FFF8E1; /* 薄い黄色 */
+      border: 2px dashed #FFCA28;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .campaign-label {
+      display: inline-block;
+      background: #FF5722;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .campaign-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #D84315;
+      margin-bottom: 10px;
+    }
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .menu-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .menu-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .menu-name {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+    }
+
+    .menu-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .menu-price {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .menu-price span {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .price-note {
+      text-align: right;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    /* ===== VOICE (Placeholder layout) ===== */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .voice-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 25px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .voice-card::before {
+      content: '“';
+      position: absolute;
+      top: 10px; left: 15px;
+      font-size: 60px;
+      color: var(--primary-light);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .voice-text {
+      position: relative;
+      z-index: 1;
+      font-size: 15px;
+      color: var(--text-main);
+      margin-bottom: 15px;
+    }
+
+    .voice-attr {
+      text-align: right;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    /* ===== FLOW ===== */
+    .flow-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .flow-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid var(--primary-light);
+    }
+
+    .flow-step {
+      width: 80px;
+      text-align: center;
+      padding-right: 30px;
+      border-right: 2px solid var(--primary-light);
+      flex-shrink: 0;
+    }
+
+    .flow-step-label {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .flow-step-num {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+
+    .flow-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .flow-icon .svg-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .flow-content {
+      flex: 1;
+    }
+
+    .flow-content h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    .flow-content p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+
+    /* ===== MESSAGE ===== */
+    .message-section { 
+      background: var(--primary-light);
+      text-align: center;
+      border-top: 5px solid var(--primary);
+    }
+    
+    .msg-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .msg-title { 
+      font-size: 28px; 
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 30px; 
+      line-height: 1.4; 
+    }
+
+    .msg-text { 
+      font-size: 16px; 
+      margin-bottom: 40px; 
+      line-height: 2;
+      text-align: left;
+    }
+
+    /* ===== INFO / ACCESS ===== */
+    .info-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px;
+      border: 1px solid var(--border);
+    }
+
+    .info-detail {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .info-detail h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-table th, .info-table td {
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--border);
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .info-table th {
+      width: 100px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .map-container {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #333333;
+      color: #ffffff;
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-sns {
+      margin-bottom: 20px;
+    }
+
+    .btn-sns {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .btn-sns:hover { background: rgba(255,255,255,0.2); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      body { font-size: 14px; } 
+
+      .header-nav, .header-tel, .btn-header-cta { display: none; }
+      .site-header { padding: 0 20px; height: 60px; justify-content: space-between; }
+      
+      .pc-only { display: none; }
+      .sp-only { display: block; }
+
+      .hero {
+        padding-top: 60px;
+        height: auto;
+        min-height: auto;
+        flex-direction: column;
+      }
+      
+      .hero::before {
+        background: linear-gradient(180deg, rgb(255 255 255 / 90%) 0%, rgb(255 255 255 / 70%) 100%);
+      }
+      
+      .hero-visual { position: absolute; }
+      .hero-content { padding: 60px 15px 80px; max-width: 100%; text-align: center; }
+      .hero-title { font-size: 26px; }
+      
+      .hero-points { justify-content: center; }
+      .hero-point { font-size: 13px; padding: 10px 15px; }
+      
+      .cta-banner { padding: 30px 15px; margin: -30px 5% 40px; }
+      .cta-btn-wrap { flex-direction: column; align-items: center; }
+      .btn-cta { width: 100%; max-width: 100%; }
+
+      .trouble-list { grid-template-columns: 1fr; }
+
+      .about-top { flex-direction: column; gap: 40px; margin-bottom: 40px; }
+      .about-img-area { width: 100%; padding-left: 20px; padding-right: 0; }
+      .about-img-area::before { top: 15px; left: 5px; width: calc(100% - 5px); }
+      .about-lead { font-size: 20px; text-align: center; }
+      .area-box { padding: 25px 15px; border-radius: 12px; }
+
+      .service-grid, .voice-grid { grid-template-columns: 1fr; }
+      
+      .feature-rows { gap: 40px; }
+      .feature-row, .feature-row:nth-child(even) { flex-direction: column; gap: 25px; }
+      .feature-num-badge {
+        top: -15px; left: -10px;
+        width: 50px; height: 50px; font-size: 20px;
+      }
+      .feature-row:nth-child(even) .feature-num-badge { left: -10px; right: auto; }
+      .feature-content h3 { font-size: 18px; text-align: center; }
+
+      .menu-item { flex-direction: column; align-items: flex-start; }
+      .menu-price { align-self: flex-end; }
+
+      .flow-item { flex-direction: column; gap: 20px; padding: 25px 20px; text-align: center; }
+      .flow-step { border-right: none; border-bottom: 2px dashed var(--border); padding-right: 0; padding-bottom: 15px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }
+      .flow-step-num { font-size: 24px; }
+      .flow-icon { margin: 0 auto; width: 70px; height: 70px; }
+      .flow-icon .svg-icon { width: 32px; height: 32px; }
+
+      .info-wrap { padding: 20px; gap: 20px; }
+    }
+
+    /* SP Sticky CTA */
+    @media (max-width: 768px) {
+      .sp-sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; width: 100%;
+        z-index: 1500;
+        background: var(--white);
+        box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
+        opacity: 0; visibility: hidden;
+        transform: translateY(100%);
+        transition: all 0.4s;
+      }
+      .sp-sticky-cta.show { opacity: 1; visibility: visible; transform: translateY(0); }
+      .sp-sticky-cta .cta-item {
+        flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        padding: 10px 5px; text-decoration: none; font-weight: 700; font-size: 12px; gap: 4px;
+      }
+      .sp-sticky-cta .btn-tel { background: var(--white); color: var(--text-main); border-top: 1px solid var(--border); }
+      .sp-sticky-cta .btn-tel .svg-icon { color: var(--primary-dark); }
+      .sp-sticky-cta .btn-web { background: var(--primary); color: var(--white); border-top: 1px solid var(--primary); }
+      body { padding-bottom: 60px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="#" class="header-logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.5a5.5 5.5 0 0 1 5.5 5.5c0 4.5-5.5 11-5.5 11s-5.5-6.5-5.5-11a5.5 5.5 0 0 1 5.5-5.5z"></path>
+        <path d="M12 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+      </svg>
+      フラワー水道サービス
+    </a>
+    <nav class="header-nav">
+      <a href="#about">私たちについて</a>
+      <a href="#service">サービス</a>
+      <a href="#price">料金</a>
+      <a href="#flow">ご依頼の流れ</a>
+    </nav>
+    <div class="header-tel">
+      <a class="tel-num font-en" href="tel:05054487086">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        050-5448-7086
+      </a>
+      <span class="tel-hours">営業時間：8:00〜19:00 (不定休)</span>
+    </div>
+    <a href="https://mizu.company/contact/" class="btn-header-cta">WEBでお問い合わせ</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-visual"></div>
+    <div class="hero-content reveal">
+      <span class="hero-badge font-noto">金沢市中心に迅速対応！</span>
+      <h1 class="hero-title font-noto">水漏れ・詰まりを、<br><span>早く・確かに解決。</span></h1>
+      <p class="hero-subtitle font-noto">突然の水まわりトラブルも、迅速に対応！<br>事前見積もりと分かりやすい料金で、<br class="sp-only">安心してお任せいただける水道屋を目指しています。</p>
+
+      <div class="hero-points">
+        <div class="hero-point">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          見積もり無料
+        </div>
+        <div class="hero-point">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          自社一貫対応
+        </div>
+        <div class="hero-point">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          経験30年以上
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--bg-color)" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner reveal">
+    <span class="cta-banner-label font-noto">小さな水漏れから急なトラブルまで！</span>
+    <h2 class="font-noto">まずはお気軽にご相談ください。<br>お電話・WEBからお待ちしております。</h2>
+    <div class="cta-btn-wrap">
+      <a href="tel:05054487086" class="btn-cta btn-tel">
+        <span class="btn-cta-main font-en">
+          <svg class="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          050-5448-7086
+        </span>
+        <span class="btn-cta-note font-noto">営業時間：8:00〜19:00</span>
+      </a>
+      <a href="https://mizu.company/contact/" class="btn-cta btn-web">
+        <span class="btn-cta-main font-noto">
+          <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          WEBでお問い合わせ
+        </span>
+        <span class="btn-cta-note font-noto">24時間受付中！</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">ABOUT</span>
+        <h2 class="sec-title font-noto">私たちについて</h2>
+      </div>
+
+      <div class="about-container reveal">
+        <div class="about-top">
+          <div class="about-text-area">
+            <h3 class="about-lead font-noto">水まわりの困ったに、すぐ応える</h3>
+            <p class="about-text">
+              フラワー水道サービスは、金沢市を中心に、水漏れ・詰まり・水道修理など水まわりのお困りごとに対応しています。<br><br>
+              30年以上の経験を活かし、トラブルの原因を的確に確認。応急処置からしっかりとした修理まで、お客様のご希望や状況に合わせて作業いたします。<br><br>
+              修理だけでなく、トイレ・浴室・キッチンなどの水まわりリフォームにも対応しています。
+            </p>
+          </div>
+          <div class="about-img-area">
+            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800" alt="水回りの修理・リフォームの様子">
+          </div>
+        </div>
+
+        <div class="area-box">
+          <div class="area-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            対応エリア（石川県）
+          </div>
+          <div class="area-list">
+            <span class="area-item">金沢市</span>
+            <span class="area-item">野々市市</span>
+            <span class="area-item">白山市</span>
+            <span class="area-item">能美市</span>
+            <span class="area-item">小松市</span>
+            <span class="area-item">加賀市</span>
+            <span class="area-item">かほく市</span>
+            <span class="area-item">羽咋市</span>
+            <span class="area-item">河北郡津幡町</span>
+            <span class="area-item">河北郡内灘町</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TROUBLE -->
+  <section class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <h2 class="sec-title">こんなお悩みありませんか？</h2>
+      </div>
+      <div class="reveal">
+        <div class="trouble-list">
+          <div class="trouble-item">突然の水漏れを早く直してほしい</div>
+          <div class="trouble-item">トイレや排水口が詰まって流れない</div>
+          <div class="trouble-item">修理費用がいくらかかるのか不安</div>
+          <div class="trouble-item">作業前にきちんと見積もりを確認したい</div>
+          <div class="trouble-item">一時的な応急処置だけお願いしたい</div>
+          <div class="trouble-item">修理後もしっかり対応してほしい</div>
+        </div>
+        <p class="trouble-msg">そのお悩み、フラワー水道サービスが<br class="sp-only">解決します！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service" class="section section-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">SERVICE</span>
+        <h2 class="sec-title font-noto">サービス内容</h2>
+      </div>
+
+      <div class="service-grid reveal">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5a5.5 5.5 0 0 1 5.5 5.5c0 4.5-5.5 11-5.5 11s-5.5-6.5-5.5-11a5.5 5.5 0 0 1 5.5-5.5z"></path></svg>
+          </div>
+          <h3 class="service-title">水漏れ修理</h3>
+          <p class="service-desc">蛇口やトイレ、水道管、キッチン、洗面所などの水漏れに対応。原因を確認し、必要な修理をご提案します。</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h3 class="service-title">詰まり解消</h3>
+          <p class="service-desc">トイレ、キッチン、浴室、排水管などの詰まりに対応。できる限り早く、いつも通り使える状態を目指して作業します。</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="service-title">水道設備の修理・交換</h3>
+          <p class="service-desc">蛇口、便器、ボイラー、給湯器など、水まわり設備の不具合や交換もご相談いただけます。</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3 class="service-title">水まわりリフォーム</h3>
+          <p class="service-desc">修理をきっかけに、より使いやすい設備へ変更したい場合も対応。トイレ・浴室・キッチン・洗面所などのリフォームをご提案します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">FEATURES</span>
+        <h2 class="sec-title font-noto">選ばれる４つの特徴</h2>
+      </div>
+
+      <div class="feature-rows reveal">
+        <!-- 01 -->
+        <div class="feature-row">
+          <div class="feature-img">
+            <div class="feature-num-badge">01</div>
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=600" alt="経験を活かした迅速な対応">
+          </div>
+          <div class="feature-content">
+            <h3>経験を活かした迅速な対応</h3>
+            <p>長年培ってきた経験をもとに、トラブルの原因を見極め、スムーズな作業を心がけています。急な水漏れや詰まりにも、できる限り迅速に駆けつけます。</p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="feature-row">
+          <div class="feature-img">
+            <div class="feature-num-badge">02</div>
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600" alt="事前見積もりで分かりやすい料金">
+          </div>
+          <div class="feature-content">
+            <h3>事前見積もりで分かりやすい料金</h3>
+            <p>作業前に状態を確認し、施工方法と料金をご説明します。お見積もりは無料。内容にご納得いただいてから作業を行うため、初めての方も安心してご相談いただけます。</p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="feature-row">
+          <div class="feature-img">
+            <div class="feature-num-badge">03</div>
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="修理からアフターフォローまで自社対応">
+          </div>
+          <div class="feature-content">
+            <h3>修理からアフターフォローまで自社対応</h3>
+            <p>お見積もりから修理、施工後のサポートまで自社で一貫対応。余計な中間コストを抑えながら、適正な価格と確かな施工を大切にしています。</p>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="feature-row">
+          <div class="feature-img">
+            <div class="feature-num-badge">04</div>
+            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=600" alt="応急処置からしっかり修理まで">
+          </div>
+          <div class="feature-content">
+            <h3>応急処置からしっかり修理まで</h3>
+            <p>とりあえず水を止めたい場合から、原因を解消してしっかり直したい場合まで、ご希望に合わせて対応します。<br>営業時間外のご予約についても、お気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section id="price" class="section section-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">PRICE</span>
+        <h2 class="sec-title font-noto">料金目安</h2>
+      </div>
+
+      <div class="price-wrap reveal">
+        <div class="campaign-box">
+          <span class="campaign-label">初回特典</span>
+          <h3 class="campaign-title">次回使える500円引き券プレゼント</h3>
+          <p>初めてご利用いただいたお客様には、次回のご依頼時にご利用いただける500円引き券をお渡ししています。</p>
+        </div>
+
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-info">
+              <div class="menu-name">水漏れ修理</div>
+              <div class="menu-desc">トイレ・蛇口・キッチン・浴室・洗面所・水道管などの水漏れに対応します。</div>
+            </div>
+            <div class="menu-price">4,000<span>円〜</span></div>
+          </div>
+          
+          <div class="menu-item">
+            <div class="menu-info">
+              <div class="menu-name">詰まり修理</div>
+              <div class="menu-desc">トイレ・流し・浴室・排水管・下水などの詰まりを確認し、原因に合わせて作業します。</div>
+            </div>
+            <div class="menu-price">7,000<span>円〜</span></div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-info">
+              <div class="menu-name">水まわり設備</div>
+              <div class="menu-desc">便器・蛇口・ボイラー・給湯器などの修理や交換をご相談いただけます。</div>
+            </div>
+            <div class="menu-price">要お見積もり</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-info">
+              <div class="menu-name">水まわりリフォーム</div>
+              <div class="menu-desc">トイレ・浴室・キッチン・洗面所など、より快適に使うためのリフォームにも対応します。</div>
+            </div>
+            <div class="menu-price">要お見積もり</div>
+          </div>
+        </div>
+
+        <p class="price-note">※作業内容や現場の状況により料金は異なります。作業前にお見積もりをご案内します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE (Placeholder) -->
+  <section class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">VOICE</span>
+        <h2 class="sec-title font-noto">お客様の声</h2>
+      </div>
+      
+      <div class="voice-grid reveal">
+        <div class="voice-card">
+          <p class="voice-text">夜中にトイレが詰まってしまいパニックでしたが、電話したらすぐに来てくれて助かりました。説明も丁寧で安心できました。</p>
+          <div class="voice-attr">金沢市 40代 女性</div>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">キッチンの蛇口から水漏れしていて依頼しました。見積もりが明確で、無理な営業もなく、修理もあっという間に終わりました。</p>
+          <div class="voice-attr">野々市市 30代 男性</div>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">古いお風呂の修理を相談したところ、リフォームの提案もしていただき、結果的にとても使いやすいお風呂になりました。</p>
+          <div class="voice-attr">白山市 60代 女性</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow" class="section section-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label font-en">FLOW</span>
+        <h2 class="sec-title font-noto">ご依頼の流れ</h2>
+      </div>
+
+      <div class="flow-wrap reveal">
+        <div class="flow-item">
+          <div class="flow-step">
+            <div class="flow-step-label">STEP</div>
+            <div class="flow-step-num">01</div>
+          </div>
+          <div class="flow-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="flow-content">
+            <h3>お問い合わせ</h3>
+            <p>お電話またはお問い合わせフォームからご連絡ください。急な水まわりトラブルもお気軽にご相談いただけます。</p>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-step">
+            <div class="flow-step-label">STEP</div>
+            <div class="flow-step-num">02</div>
+          </div>
+          <div class="flow-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="8" y1="16" x2="16" y2="16"></line>
+            </svg>
+          </div>
+          <div class="flow-content">
+            <h3>現場確認・無料お見積もり</h3>
+            <p>現地でトラブルの原因や状態を確認し、必要な作業と料金をご説明します。</p>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-step">
+            <div class="flow-step-label">STEP</div>
+            <div class="flow-step-num">03</div>
+          </div>
+          <div class="flow-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <div class="flow-content">
+            <h3>修理・施工</h3>
+            <p>お見積もりにご納得いただいてから作業を開始。迅速かつ丁寧に修理・施工を行います。</p>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-step">
+            <div class="flow-step-label">STEP</div>
+            <div class="flow-step-num">04</div>
+          </div>
+          <div class="flow-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="flow-content">
+            <h3>完了・アフターフォロー</h3>
+            <p>施工後に状態をご確認いただき完了です。その後、気になることがございましたらお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section class="section message-section">
+    <div class="inner">
+      <div class="msg-wrap reveal">
+        <h2 class="msg-title font-noto">水まわりで困ったら、<br class="sp-only">まずはご相談ください。</h2>
+        <p class="msg-text">
+          突然の水漏れや詰まりは、早めの対応が大切です。<br><br>
+          一時的な応急処置から、原因をしっかり直す修理、設備交換やリフォームまで、お客様のご希望に合わせてご提案します。<br><br>
+          どんな小さなお困りごとでも構いません。<br>
+          迅速・丁寧な対応で、安心して使える水まわりをサポートいたします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO & ACCESS -->
+  <section class="section">
+    <div class="inner">
+      <div class="info-wrap reveal">
+        <div class="info-detail">
+          <h3>店舗情報</h3>
+          <table class="info-table">
+            <tr>
+              <th>店舗名</th>
+              <td>フラワー水道サービス</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>〒920-0056<br>石川県金沢市出雲町イ４１０ サン・スカイ</td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td>050-5448-7086</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>8:00〜19:00</td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>不定休</td>
+            </tr>
+          </table>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331102927284!2d136.634697!3d36.5702444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff833b3a3b2b51b%3A0x6b2b5b3b3b3b3b3b!2z44CSOTIwLTAwNTYg55-z5bed55yM6YeR5rKi5biC5Ye66Zuy55S644Kk77yU77yR77yQIOOCteODs-ODu-OCueOCq-OCqA!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-logo">フラワー水道サービス</div>
+      <div class="footer-sns">
+        <a href="https://mizu.company/" target="_blank" class="btn-sns">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          公式サイト
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; フラワー水道サービス All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SP STICKY CTA -->
+  <div class="sp-sticky-cta sp-only">
+    <a href="tel:05054487086" class="cta-item btn-tel">
+      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>電話で相談</span>
+    </a>
+    <a href="https://mizu.company/contact/" class="cta-item btn-web">
+      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      <span>WEBで相談</span>
+    </a>
+  </div>
+
+  <script>
+    // Scroll Animation (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target); 
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // SP Sticky CTA logic
+    const stickyCta = document.querySelector('.sp-sticky-cta');
+    const firstSection = document.querySelector('.section'); // 最初のセクション以降で表示
+
+    window.addEventListener('scroll', () => {
+      if (firstSection && window.innerWidth <= 768) {
+        const showTop = firstSection.offsetTop - window.innerHeight / 2;
+        if (window.scrollY >= showTop) {
+          stickyCta.classList.add('show');
+        } else {
+          stickyCta.classList.remove('show');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
