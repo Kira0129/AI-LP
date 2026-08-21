@@ -10,7 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@600;700&display=swap"
     rel="stylesheet">
-  
+
   <!-- OGP (Placeholder) -->
   <meta property="og:title" content="フラワー水道サービス | 水漏れ・詰まり修理、リフォーム">
   <meta property="og:description" content="金沢市を中心に、水漏れ・詰まり・水道修理など水まわりのお困りごとに対応しています。">
@@ -19,22 +19,34 @@
   <style>
     :root {
       /* Color Palette: 水色系＆カジュアル、シンプル */
-      --primary: #4FC3F7; /* 明るく爽やかな水色 */
-      --primary-dark: #0288D1; /* 濃いめの青（テキスト用） */
-      --primary-light: #E1F5FE; /* 非常に薄い水色（背景用） */
-      --accent: #FFCA28; /* カジュアルさを出す暖色アクセント */
+      --primary: #4FC3F7;
+      /* 明るく爽やかな水色 */
+      --primary-dark: #0288D1;
+      /* 濃いめの青（テキスト用） */
+      --primary-light: #E1F5FE;
+      /* 非常に薄い水色（背景用） */
+      --accent: #FFCA28;
+      /* カジュアルさを出す暖色アクセント */
       --accent-hover: #FFB300;
       --accent-light: #FFF8E1;
       --white: #FFFFFF;
-      --bg-color: #FAFAFA; /* ほぼ白のシンプルな背景 */
+      --bg-color: #FAFAFA;
+      /* ほぼ白のシンプルな背景 */
       --bg-gray: #F5F7FA;
       --text-main: #333333;
       --text-muted: #666666;
       --border: #E0E0E0;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
@@ -42,7 +54,7 @@
       color: var(--text-main);
       overflow-x: hidden;
       line-height: 1.8;
-      font-size: 16px; 
+      font-size: 16px;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -57,12 +69,29 @@
     }
 
     /* 共通フォントクラス */
-    .font-noto { font-family: 'Noto Sans JP', sans-serif; }
-    .font-en { font-family: 'Quicksand', sans-serif; }
-    .sp-only { display: none; }
-    .pc-only { display: block; }
-    .overflow-hidden { overflow: hidden; }
-    .text-center { text-align: center; }
+    .font-noto {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .font-en {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .sp-only {
+      display: none;
+    }
+
+    .pc-only {
+      display: block;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .text-center {
+      text-align: center;
+    }
 
     /* SVGアイコン調整用 */
     .svg-icon {
@@ -74,11 +103,13 @@
     /* ===== HEADER ===== */
     .site-header {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       padding: 0 40px;
       display: flex;
       align-items: center;
@@ -115,7 +146,9 @@
       transition: color 0.3s;
     }
 
-    .header-nav a:hover { color: var(--primary); }
+    .header-nav a:hover {
+      color: var(--primary);
+    }
 
     .header-tel {
       display: flex;
@@ -180,7 +213,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.4); /* Make it lighter for simplicity */
+      background: rgba(255, 255, 255, 0.4);
+      /* Make it lighter for simplicity */
     }
 
     .hero::before {
@@ -217,7 +251,7 @@
       line-height: 1.4;
       margin-bottom: 20px;
     }
-    
+
     .hero-title span {
       color: var(--primary-dark);
     }
@@ -227,7 +261,7 @@
       font-weight: 700;
       color: var(--text-muted);
       margin-bottom: 30px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       display: inline-block;
       padding: 15px 20px;
       border-radius: 10px;
@@ -252,7 +286,7 @@
       font-weight: 700;
       font-size: 14px;
       color: var(--primary-dark);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       border: 2px solid var(--primary-light);
     }
 
@@ -262,7 +296,9 @@
 
     .hero-wave {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       width: 100%;
       overflow: hidden;
       line-height: 0;
@@ -273,20 +309,41 @@
       position: relative;
       width: 100%;
       height: 60px;
-      margin-bottom: -7px; 
+      margin-bottom: -7px;
     }
 
-    .parallax > use {
+    .parallax>use {
       animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
     }
-    .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
-    .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
-    .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
-    .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
 
     @keyframes move-forever {
-      0% { transform: translate3d(-90px, 0, 0); }
-      100% { transform: translate3d(85px, 0, 0); }
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
     }
 
     /* ===== CTA BANNER ===== */
@@ -298,7 +355,7 @@
       z-index: 20;
       margin: -40px 5% 60px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       border: 2px solid var(--primary-light);
     }
 
@@ -343,7 +400,10 @@
       border: none;
     }
 
-    .btn-cta:active { transform: translateY(4px); box-shadow: none !important; }
+    .btn-cta:active {
+      transform: translateY(4px);
+      box-shadow: none !important;
+    }
 
     .btn-tel {
       background: var(--white);
@@ -352,7 +412,9 @@
       border: 2px solid var(--border);
     }
 
-    .btn-tel .svg-icon { color: var(--primary); }
+    .btn-tel .svg-icon {
+      color: var(--primary);
+    }
 
     .btn-web {
       background: var(--primary);
@@ -367,16 +429,29 @@
       font-weight: 900;
       line-height: 1;
     }
-    .btn-tel .btn-cta-main { font-size: 26px; color: var(--primary-dark);}
-    .btn-web .btn-cta-main { font-size: 20px; }
+
+    .btn-tel .btn-cta-main {
+      font-size: 26px;
+      color: var(--primary-dark);
+    }
+
+    .btn-web .btn-cta-main {
+      font-size: 20px;
+    }
 
     .btn-cta-note {
       font-size: 13px;
       font-weight: 700;
       margin-top: 8px;
     }
-    .btn-tel .btn-cta-note { color: var(--text-muted); }
-    .btn-web .btn-cta-note { color: var(--primary-light); }
+
+    .btn-tel .btn-cta-note {
+      color: var(--text-muted);
+    }
+
+    .btn-web .btn-cta-note {
+      color: var(--primary-light);
+    }
 
     /* ===== ANIMATIONS ===== */
     .reveal {
@@ -384,20 +459,32 @@
       transform: translateY(30px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
+
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
     /* ===== COMMON SECTION ===== */
-    .section { padding: 80px 0; }
-    .section-bg { background: var(--bg-gray); }
-    .inner { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-bg {
+      background: var(--bg-gray);
+    }
+
+    .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
 
     .sec-title-wrap {
       text-align: center;
       margin-bottom: 50px;
     }
+
     .sec-label {
       font-size: 14px;
       color: var(--primary);
@@ -406,6 +493,7 @@
       margin-bottom: 10px;
       display: block;
     }
+
     .sec-title {
       font-size: clamp(24px, 3vw, 36px);
       color: var(--primary-dark);
@@ -433,7 +521,7 @@
       text-align: left;
       gap: 12px;
       border: 1px solid var(--primary-light);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
 
     .trouble-item::before {
@@ -441,7 +529,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       background: var(--primary-light);
       color: var(--primary-dark);
       border-radius: 50%;
@@ -471,7 +560,7 @@
       flex: 1.1;
       text-align: left;
     }
-    
+
     .about-lead {
       font-size: clamp(20px, 2.5vw, 26px);
       color: var(--primary-dark);
@@ -493,8 +582,10 @@
     .about-img-area::before {
       content: '';
       position: absolute;
-      top: 20px; left: -20px;
-      width: 100%; height: 100%;
+      top: 20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
       background: var(--primary-light);
       border-radius: 20px;
       z-index: 0;
@@ -506,7 +597,7 @@
       width: 100%;
       min-height: 300px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       display: block;
       object-fit: cover;
     }
@@ -515,7 +606,7 @@
       background: var(--white);
       border-radius: 20px;
       padding: 30px 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
       border: 1px solid var(--border);
     }
 
@@ -567,16 +658,10 @@
 
     .service-img {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    
-    .service-img img {
-      width: 100%;
-      height: 100%;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
       display: block;
     }
 
@@ -622,7 +707,7 @@
       aspect-ratio: 4 / 3;
       object-fit: cover;
       border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
       border: 1px solid var(--border);
       display: block;
     }
@@ -674,7 +759,8 @@
     }
 
     .campaign-box {
-      background: #FFF8E1; /* 薄い黄色 */
+      background: #FFF8E1;
+      /* 薄い黄色 */
       border: 2px dashed #FFCA28;
       border-radius: 12px;
       padding: 25px;
@@ -772,7 +858,8 @@
     .voice-card::before {
       content: '“';
       position: absolute;
-      top: 10px; left: 15px;
+      top: 10px;
+      left: 15px;
       font-size: 60px;
       color: var(--primary-light);
       font-family: serif;
@@ -818,8 +905,8 @@
       bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 0; 
-      height: 0; 
+      width: 0;
+      height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid var(--primary-light);
@@ -858,7 +945,7 @@
       justify-content: center;
       flex-shrink: 0;
     }
-    
+
     .flow-icon .svg-icon {
       width: 40px;
       height: 40px;
@@ -882,28 +969,28 @@
 
 
     /* ===== MESSAGE ===== */
-    .message-section { 
+    .message-section {
       background: var(--primary-light);
       text-align: center;
       border-top: 5px solid var(--primary);
     }
-    
+
     .msg-wrap {
       max-width: 700px;
       margin: 0 auto;
     }
 
-    .msg-title { 
-      font-size: 28px; 
+    .msg-title {
+      font-size: 28px;
       font-weight: 900;
       color: var(--primary-dark);
-      margin-bottom: 30px; 
-      line-height: 1.4; 
+      margin-bottom: 30px;
+      line-height: 1.4;
     }
 
-    .msg-text { 
-      font-size: 16px; 
-      margin-bottom: 40px; 
+    .msg-text {
+      font-size: 16px;
+      margin-bottom: 40px;
       line-height: 2;
       text-align: left;
     }
@@ -923,7 +1010,7 @@
       flex: 1;
       min-width: 300px;
     }
-    
+
     .info-detail h3 {
       font-size: 20px;
       margin-bottom: 20px;
@@ -935,7 +1022,8 @@
       border-collapse: collapse;
     }
 
-    .info-table th, .info-table td {
+    .info-table th,
+    .info-table td {
       padding: 12px 0;
       border-bottom: 1px dashed var(--border);
       text-align: left;
@@ -985,7 +1073,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       color: #fff;
       padding: 10px 20px;
       border-radius: 30px;
@@ -993,10 +1081,13 @@
       font-size: 14px;
       transition: background 0.3s;
     }
-    .btn-sns:hover { background: rgba(255,255,255,0.2); }
+
+    .btn-sns:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding-top: 20px;
       font-size: 13px;
       color: #999;
@@ -1004,13 +1095,29 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      body { font-size: 14px; } 
+      body {
+        font-size: 14px;
+      }
 
-      .header-nav, .header-tel, .btn-header-cta { display: none; }
-      .site-header { padding: 0 20px; height: 60px; justify-content: space-between; }
-      
-      .pc-only { display: none; }
-      .sp-only { display: block; }
+      .header-nav,
+      .header-tel,
+      .btn-header-cta {
+        display: none;
+      }
+
+      .site-header {
+        padding: 0 20px;
+        height: 60px;
+        justify-content: space-between;
+      }
+
+      .pc-only {
+        display: none;
+      }
+
+      .sp-only {
+        display: block;
+      }
 
       .hero {
         padding-top: 60px;
@@ -1018,51 +1125,161 @@
         min-height: auto;
         flex-direction: column;
       }
-      
+
       .hero::before {
         background: linear-gradient(180deg, rgb(255 255 255 / 90%) 0%, rgb(255 255 255 / 70%) 100%);
       }
-      
-      .hero-visual { position: absolute; }
-      .hero-content { padding: 60px 15px 80px; max-width: 100%; text-align: center; }
-      .hero-title { font-size: 26px; }
-      
-      .hero-points { justify-content: center; }
-      .hero-point { font-size: 13px; padding: 10px 15px; }
-      
-      .cta-banner { padding: 30px 15px; margin: -30px 5% 40px; }
-      .cta-btn-wrap { flex-direction: column; align-items: center; }
-      .btn-cta { width: 100%; max-width: 100%; }
 
-      .trouble-list { grid-template-columns: 1fr; }
-
-      .about-top { flex-direction: column; gap: 40px; margin-bottom: 40px; }
-      .about-img-area { width: 100%; padding-left: 20px; padding-right: 0; }
-      .about-img-area::before { top: 15px; left: 5px; width: calc(100% - 5px); }
-      .about-lead { font-size: 20px; text-align: center; }
-      .area-box { padding: 25px 15px; border-radius: 12px; }
-
-      .service-grid, .voice-grid { grid-template-columns: 1fr; }
-      
-      .feature-rows { gap: 40px; }
-      .feature-row, .feature-row:nth-child(even) { flex-direction: column; gap: 25px; }
-      .feature-num-badge {
-        top: -15px; left: -10px;
-        width: 50px; height: 50px; font-size: 20px;
+      .hero-visual {
+        position: absolute;
       }
-      .feature-row:nth-child(even) .feature-num-badge { left: -10px; right: auto; }
-      .feature-content h3 { font-size: 18px; text-align: center; }
 
-      .menu-item { flex-direction: column; align-items: flex-start; }
-      .menu-price { align-self: flex-end; }
+      .hero-content {
+        padding: 60px 15px 80px;
+        max-width: 100%;
+        text-align: center;
+      }
 
-      .flow-item { flex-direction: column; gap: 20px; padding: 25px 20px; text-align: center; }
-      .flow-step { border-right: none; border-bottom: 2px dashed var(--border); padding-right: 0; padding-bottom: 15px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }
-      .flow-step-num { font-size: 24px; }
-      .flow-icon { margin: 0 auto; width: 70px; height: 70px; }
-      .flow-icon .svg-icon { width: 32px; height: 32px; }
+      .hero-title {
+        font-size: 26px;
+      }
 
-      .info-wrap { padding: 20px; gap: 20px; }
+      .hero-points {
+        justify-content: center;
+      }
+
+      .hero-point {
+        font-size: 13px;
+        padding: 10px 15px;
+      }
+
+      .cta-banner {
+        padding: 30px 15px;
+        margin: -30px 5% 40px;
+      }
+
+      .cta-btn-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-cta {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .trouble-list {
+        grid-template-columns: 1fr;
+      }
+
+      .about-top {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .about-img-area {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 0;
+      }
+
+      .about-img-area::before {
+        top: 15px;
+        left: 5px;
+        width: calc(100% - 5px);
+      }
+
+      .about-lead {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .area-box {
+        padding: 25px 15px;
+        border-radius: 12px;
+      }
+
+      .service-grid,
+      .voice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-rows {
+        gap: 40px;
+      }
+
+      .feature-row,
+      .feature-row:nth-child(even) {
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .feature-num-badge {
+        top: -15px;
+        left: -10px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .feature-row:nth-child(even) .feature-num-badge {
+        left: -10px;
+        right: auto;
+      }
+
+      .feature-content h3 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-price {
+        align-self: flex-end;
+      }
+
+      .flow-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+        text-align: center;
+      }
+
+      .flow-step {
+        border-right: none;
+        border-bottom: 2px dashed var(--border);
+        padding-right: 0;
+        padding-bottom: 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .flow-step-num {
+        font-size: 24px;
+      }
+
+      .flow-icon {
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+      }
+
+      .flow-icon .svg-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .info-wrap {
+        padding: 20px;
+        gap: 20px;
+      }
     }
 
     /* SP Sticky CTA */
@@ -1070,23 +1287,56 @@
       .sp-sticky-cta {
         display: flex;
         position: fixed;
-        bottom: 0; left: 0; width: 100%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         z-index: 1500;
         background: var(--white);
-        box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
-        opacity: 0; visibility: hidden;
+        box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
         transform: translateY(100%);
         transition: all 0.4s;
       }
-      .sp-sticky-cta.show { opacity: 1; visibility: visible; transform: translateY(0); }
-      .sp-sticky-cta .cta-item {
-        flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-        padding: 10px 5px; text-decoration: none; font-weight: 700; font-size: 12px; gap: 4px;
+
+      .sp-sticky-cta.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
-      .sp-sticky-cta .btn-tel { background: var(--white); color: var(--text-main); border-top: 1px solid var(--border); }
-      .sp-sticky-cta .btn-tel .svg-icon { color: var(--primary-dark); }
-      .sp-sticky-cta .btn-web { background: var(--primary); color: var(--white); border-top: 1px solid var(--primary); }
-      body { padding-bottom: 60px; }
+
+      .sp-sticky-cta .cta-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 5px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 12px;
+        gap: 4px;
+      }
+
+      .sp-sticky-cta .btn-tel {
+        background: var(--white);
+        color: var(--text-main);
+        border-top: 1px solid var(--border);
+      }
+
+      .sp-sticky-cta .btn-tel .svg-icon {
+        color: var(--primary-dark);
+      }
+
+      .sp-sticky-cta .btn-web {
+        background: var(--primary);
+        color: var(--white);
+        border-top: 1px solid var(--primary);
+      }
+
+      body {
+        padding-bottom: 60px;
+      }
     }
   </style>
 </head>
@@ -1096,7 +1346,8 @@
   <!-- HEADER -->
   <header class="site-header">
     <a href="#" class="header-logo">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2.5a5.5 5.5 0 0 1 5.5 5.5c0 4.5-5.5 11-5.5 11s-5.5-6.5-5.5-11a5.5 5.5 0 0 1 5.5-5.5z"></path>
         <path d="M12 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
       </svg>
@@ -1110,8 +1361,11 @@
     </nav>
     <div class="header-tel">
       <a class="tel-num font-en" href="tel:05054487086">
-        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
         </svg>
         050-5448-7086
       </a>
@@ -1126,23 +1380,27 @@
     <div class="hero-content reveal">
       <span class="hero-badge font-noto">金沢市中心に迅速対応！</span>
       <h1 class="hero-title font-noto">水漏れ・詰まりを、<br><span>早く・確かに解決。</span></h1>
-      <p class="hero-subtitle font-noto">突然の水まわりトラブルも、迅速に対応！<br>事前見積もりと分かりやすい料金で、<br class="sp-only">安心してお任せいただける水道屋を目指しています。</p>
+      <p class="hero-subtitle font-noto">突然の水まわりトラブルも、迅速に対応！<br>事前見積もりと分かりやすい料金で、<br
+          class="sp-only">安心してお任せいただける水道屋を目指しています。</p>
 
       <div class="hero-points">
         <div class="hero-point">
-          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           見積もり無料
         </div>
         <div class="hero-point">
-          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           自社一貫対応
         </div>
         <div class="hero-point">
-          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           経験30年以上
@@ -1172,8 +1430,11 @@
     <div class="cta-btn-wrap">
       <a href="tel:05054487086" class="btn-cta btn-tel">
         <span class="btn-cta-main font-en">
-          <svg class="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <svg class="svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
           </svg>
           050-5448-7086
         </span>
@@ -1181,7 +1442,8 @@
       </a>
       <a href="https://mizu.company/contact/" class="btn-cta btn-web">
         <span class="btn-cta-main font-noto">
-          <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
             <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -1212,13 +1474,18 @@
             </p>
           </div>
           <div class="about-img-area">
-            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800" alt="水回りの修理・リフォームの様子">
+            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800"
+              alt="水回りの修理・リフォームの様子">
           </div>
         </div>
 
         <div class="area-box">
           <div class="area-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
             対応エリア（石川県）
           </div>
           <div class="area-list">
@@ -1268,33 +1535,25 @@
 
       <div class="service-grid reveal">
         <div class="service-card">
-          <div class="service-img">
-            <img src="img/serpic01.jpg" alt="水漏れ修理">
-          </div>
+          <img src="img/serpic01.png" alt="水漏れ修理" class="service-img">
           <h3 class="service-title">水漏れ修理</h3>
           <p class="service-desc">蛇口やトイレ、水道管、キッチン、洗面所などの水漏れに対応。原因を確認し、必要な修理をご提案します。</p>
         </div>
-        
+
         <div class="service-card">
-          <div class="service-img">
-            <img src="img/serpic02.jpg" alt="詰まり解消">
-          </div>
+          <img src="img/serpic02.png" alt="詰まり解消" class="service-img">
           <h3 class="service-title">詰まり解消</h3>
           <p class="service-desc">トイレ、キッチン、浴室、排水管などの詰まりに対応。できる限り早く、いつも通り使える状態を目指して作業します。</p>
         </div>
 
         <div class="service-card">
-          <div class="service-img">
-            <img src="img/serpic03.jpg" alt="水道設備の修理・交換">
-          </div>
+          <img src="img/serpic03.png" alt="水道設備の修理・交換" class="service-img">
           <h3 class="service-title">水道設備の修理・交換</h3>
           <p class="service-desc">蛇口、便器、ボイラー、給湯器など、水まわり設備の不具合や交換もご相談いただけます。</p>
         </div>
 
         <div class="service-card">
-          <div class="service-img">
-            <img src="img/serpic04.jpg" alt="水まわりリフォーム">
-          </div>
+          <img src="img/serpic04.png" alt="水まわりリフォーム" class="service-img">
           <h3 class="service-title">水まわりリフォーム</h3>
           <p class="service-desc">修理をきっかけに、より使いやすい設備へ変更したい場合も対応。トイレ・浴室・キッチン・洗面所などのリフォームをご提案します。</p>
         </div>
@@ -1315,7 +1574,8 @@
         <div class="feature-row">
           <div class="feature-img">
             <div class="feature-num-badge">01</div>
-            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=600" alt="経験を活かした迅速な対応">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=600"
+              alt="経験を活かした迅速な対応">
           </div>
           <div class="feature-content">
             <h3>経験を活かした迅速な対応</h3>
@@ -1327,7 +1587,8 @@
         <div class="feature-row">
           <div class="feature-img">
             <div class="feature-num-badge">02</div>
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600" alt="事前見積もりで分かりやすい料金">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
+              alt="事前見積もりで分かりやすい料金">
           </div>
           <div class="feature-content">
             <h3>事前見積もりで分かりやすい料金</h3>
@@ -1339,7 +1600,8 @@
         <div class="feature-row">
           <div class="feature-img">
             <div class="feature-num-badge">03</div>
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="修理からアフターフォローまで自社対応">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600"
+              alt="修理からアフターフォローまで自社対応">
           </div>
           <div class="feature-content">
             <h3>修理からアフターフォローまで自社対応</h3>
@@ -1351,7 +1613,8 @@
         <div class="feature-row">
           <div class="feature-img">
             <div class="feature-num-badge">04</div>
-            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=600" alt="応急処置からしっかり修理まで">
+            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&q=80&w=600"
+              alt="応急処置からしっかり修理まで">
           </div>
           <div class="feature-content">
             <h3>応急処置からしっかり修理まで</h3>
@@ -1385,7 +1648,7 @@
             </div>
             <div class="menu-price">4,000<span>円〜</span></div>
           </div>
-          
+
           <div class="menu-item">
             <div class="menu-info">
               <div class="menu-name">詰まり修理</div>
@@ -1423,7 +1686,7 @@
         <span class="sec-label font-en">VOICE</span>
         <h2 class="sec-title font-noto">お客様の声</h2>
       </div>
-      
+
       <div class="voice-grid reveal">
         <div class="voice-card">
           <p class="voice-text">夜中にトイレが詰まってしまいパニックでしたが、電話したらすぐに来てくれて助かりました。説明も丁寧で安心できました。</p>
@@ -1456,8 +1719,11 @@
             <div class="flow-step-num">01</div>
           </div>
           <div class="flow-icon">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
             </svg>
           </div>
           <div class="flow-content">
@@ -1472,7 +1738,8 @@
             <div class="flow-step-num">02</div>
           </div>
           <div class="flow-icon">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
               <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
               <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -1491,8 +1758,11 @@
             <div class="flow-step-num">03</div>
           </div>
           <div class="flow-icon">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+              </path>
             </svg>
           </div>
           <div class="flow-content">
@@ -1507,7 +1777,8 @@
             <div class="flow-step-num">04</div>
           </div>
           <div class="flow-icon">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
@@ -1566,7 +1837,9 @@
           </table>
         </div>
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331102927284!2d136.634697!3d36.5702444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff833b3a3b2b51b%3A0x6b2b5b3b3b3b3b3b!2z44CSOTIwLTAwNTYg55-z5bed55yM6YeR5rKi5biC5Ye66Zuy55S644Kk77yU77yR77yQIOOCteODs-ODu-OCueOCq-OCqA!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.331102927284!2d136.634697!3d36.5702444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff833b3a3b2b51b%3A0x6b2b5b3b3b3b3b3b!2z44CSOTIwLTAwNTYg55-z5bed55yM6YeR5rKi5biC5Ye66Zuy55S644Kk77yU77yR77yQIOOCteODs-ODu-OCueOCq-OCqA!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -1578,7 +1851,8 @@
       <div class="footer-logo">フラワー水道サービス</div>
       <div class="footer-sns">
         <a href="https://mizu.company/" target="_blank" class="btn-sns">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
@@ -1595,13 +1869,17 @@
   <!-- SP STICKY CTA -->
   <div class="sp-sticky-cta sp-only">
     <a href="tel:05054487086" class="cta-item btn-tel">
-      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
       </svg>
       <span>電話で相談</span>
     </a>
     <a href="https://mizu.company/contact/" class="cta-item btn-web">
-      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
         <line x1="8" y1="21" x2="16" y2="21"></line>
         <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -1617,12 +1895,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target); 
+          revealObserver.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px' 
+      rootMargin: '0px 0px -50px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
@@ -1643,4 +1921,5 @@
     });
   </script>
 </body>
+
 </html>
