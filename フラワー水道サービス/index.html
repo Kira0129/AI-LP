@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=46">
+  <link rel="stylesheet" href="css/style.css?v=47">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
   <script>
@@ -69,7 +69,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-visual"></div>
+    <div class="swiper fv-swiper hero-visual">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="fv-slide-bg" style="background-image: url('img/fv01.jpg');"></div></div>
+        <div class="swiper-slide"><div class="fv-slide-bg" style="background-image: url('img/fv02.jpg');"></div></div>
+        <div class="swiper-slide"><div class="fv-slide-bg" style="background-image: url('img/fv03.jpg');"></div></div>
+      </div>
+    </div>
     <div class="hero-content reveal">
       <h1 class="hero-title font-noto">水漏れ・詰まりを<br><span>早く・確かに解決</span></h1>
       <p class="hero-subtitle font-noto">突然の水まわりトラブルも、迅速に対応！<br>事前見積もりと分かりやすい料金で、<br>安心してお任せいただける水道屋を目指しています。</p>
@@ -656,6 +662,17 @@
             slidesPerView: 1, // Will show 1 image at a time, but fills height
           }
         }
+      });
+
+      new Swiper(".fv-swiper", {
+        loop: true,
+        effect: "fade",
+        speed: 2000,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
       });
     });
 
