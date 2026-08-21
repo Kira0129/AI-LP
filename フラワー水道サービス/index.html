@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=21">
+  <link rel="stylesheet" href="css/style.css?v=22">
 </head>
 
 <body>
@@ -271,8 +271,7 @@
         <div class="feature-row">
           <div class="feature-img">
             <div class="feature-num-badge">03</div>
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600"
-              alt="修理からアフターフォローまで自社対応">
+            <img src="img/featurespic03.jpg" alt="修理からアフターフォローまで自社対応">
           </div>
           <div class="feature-content">
             <h3>修理からアフターフォローまで自社対応</h3>
@@ -579,6 +578,13 @@
     </a>
   </div>
 
+  <!-- PAGE TOP BUTTON -->
+  <a href="#" class="page-top-btn" id="pageTopBtn" aria-label="ページトップへ戻る">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -648,6 +654,24 @@
           };
           textEl.parentNode.insertBefore(btn, textEl.nextSibling);
         }
+      });
+    });
+
+    // Page Top Button
+    const pageTopBtn = document.getElementById('pageTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        pageTopBtn.classList.add('show');
+      } else {
+        pageTopBtn.classList.remove('show');
+      }
+    });
+
+    pageTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     });
   </script>
