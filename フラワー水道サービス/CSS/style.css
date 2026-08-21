@@ -1239,7 +1239,7 @@
       }
 
       .about-top {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 40px;
         margin-bottom: 40px;
       }
