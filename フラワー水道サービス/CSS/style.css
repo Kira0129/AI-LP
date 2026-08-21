@@ -1124,25 +1124,29 @@
       color: #fff;
     }
 
-    .footer-sns {
-      margin-bottom: 20px;
+    .info-sns {
+      margin-top: 25px;
     }
 
-    .btn-sns {
+    .btn-info-sns {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 24px;
       border-radius: 30px;
       text-decoration: none;
       font-size: 14px;
-      transition: background 0.3s;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-sns:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .btn-info-sns:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
     .footer-bottom {
