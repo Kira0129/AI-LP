@@ -16,7 +16,8 @@
   <meta property="og:description" content="金沢市を中心に、水漏れ・詰まり・水道修理など水まわりのお困りごとに対応しています。">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -316,11 +317,13 @@
 
         <div class="price-columns">
           <div class="price-left">
-            <div class="menu-image-grid">
-              <img src="img/menupic01.jpg" alt="メニュー画像1">
-              <img src="img/menupic02.jpg" alt="メニュー画像2">
-              <img src="img/menupic03.jpg" alt="メニュー画像3">
-              <img src="img/menupic04.jpg" alt="メニュー画像4">
+            <div class="swiper menu-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/menupic01.jpg" alt="メニュー画像1"></div>
+                <div class="swiper-slide"><img src="img/menupic02.jpg" alt="メニュー画像2"></div>
+                <div class="swiper-slide"><img src="img/menupic03.jpg" alt="メニュー画像3"></div>
+                <div class="swiper-slide"><img src="img/menupic04.jpg" alt="メニュー画像4"></div>
+              </div>
             </div>
           </div>
 
@@ -575,6 +578,8 @@
     </a>
   </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     // Scroll Animation (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal');
@@ -605,6 +610,26 @@
           stickyCta.classList.remove('show');
         }
       }
+    });
+
+    // Swiper Initialization
+    document.addEventListener("DOMContentLoaded", function() {
+      new Swiper(".menu-swiper", {
+        loop: true,
+        speed: 6000,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 15,
+        breakpoints: {
+          768: {
+            slidesPerView: 1, // Will show 1 image at a time, but fills height
+          }
+        }
+      });
     });
   </script>
 </body>
