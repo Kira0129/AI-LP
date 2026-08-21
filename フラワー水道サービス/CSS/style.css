@@ -508,7 +508,9 @@
     }
 
     .trouble-item {
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       padding: 15px 20px;
       border-radius: 12px;
       font-weight: 700;

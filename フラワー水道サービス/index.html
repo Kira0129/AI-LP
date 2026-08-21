@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=14">
 </head>
 
 <body>
@@ -199,7 +199,7 @@
           <div class="trouble-item">一時的な応急処置だけお願いしたい</div>
           <div class="trouble-item">修理後もしっかり対応してほしい</div>
         </div>
-        <p class="trouble-msg">そのお悩み、フラワー水道サービスが<br class="sp-only">解決します！</p>
+        <p class="trouble-msg">小さな水漏れから急なトラブルまで、フラワー水道サービスが<br class="sp-only">解決します！</p>
       </div>
     </div>
   </section>
@@ -379,15 +379,21 @@
 
       <div class="voice-grid reveal">
         <div class="voice-card">
-          <p class="voice-text">お風呂のシャワーが壊れ水が噴き出してしまったのですが、普段お願いしている業者さんはお休み。慌ててインターネットで見つけたこちらに依頼しました。こうした業者さんはどこも高いイメージがありましたが、手ごろな料金で助かりました。親切にご対応いただき、ありがとうございました！</p>
+          <p class="voice-text">
+            お風呂のシャワーが壊れ水が噴き出してしまったのですが、普段お願いしている業者さんはお休み。慌ててインターネットで見つけたこちらに依頼しました。こうした業者さんはどこも高いイメージがありましたが、手ごろな料金で助かりました。親切にご対応いただき、ありがとうございました！
+          </p>
           <div class="voice-attr">T様（男性）</div>
         </div>
         <div class="voice-card">
-          <p class="voice-text">水回りのトラブルだけでなくリフォームもしてくれるので、トイレに関する不満点をまるごと改善していただけました。あまり広告をしていないのですごく知名度が高いわけではないのですが、有名な業者さんと遜色のない仕事ぶりだと思います。</p>
+          <p class="voice-text">
+            水回りのトラブルだけでなくリフォームもしてくれるので、トイレに関する不満点をまるごと改善していただけました。あまり広告をしていないのですごく知名度が高いわけではないのですが、有名な業者さんと遜色のない仕事ぶりだと思います。
+          </p>
           <div class="voice-attr">S様（女性）</div>
         </div>
         <div class="voice-card">
-          <p class="voice-text">最初の依頼では旧型の和式トイレを洋式に取り替えていただきました。丁寧なアドバイスとともに、いい便器を格安で購入できました。対応がとてもよかったので、水回り関連の問題はこちらにお願いするように。この間、洗面台のハンドルシャワーの水の出が悪くなってしまったときも、すぐに直していただき助かりました。</p>
+          <p class="voice-text">
+            最初の依頼では旧型の和式トイレを洋式に取り替えていただきました。丁寧なアドバイスとともに、いい便器を格安で購入できました。対応がとてもよかったので、水回り関連の問題はこちらにお願いするように。この間、洗面台のハンドルシャワーの水の出が悪くなってしまったときも、すぐに直していただき助かりました。
+          </p>
           <div class="voice-attr">Y様（女性）</div>
         </div>
       </div>
@@ -617,7 +623,7 @@
     });
 
     // Swiper Initialization
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       new Swiper(".menu-swiper", {
         loop: true,
         speed: 6000,
@@ -637,15 +643,15 @@
     });
 
     // Voice Text Read More (After fonts are loaded)
-    window.addEventListener('load', function() {
-      document.querySelectorAll('.voice-card').forEach(function(card) {
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.voice-card').forEach(function (card) {
         var textEl = card.querySelector('.voice-text');
         // If the text overflows the clamped height
         if (textEl && textEl.scrollHeight > textEl.clientHeight) {
           var btn = document.createElement('button');
           btn.className = 'read-more-btn';
           btn.textContent = '続きを読む';
-          btn.onclick = function() {
+          btn.onclick = function () {
             textEl.classList.toggle('expanded');
             btn.textContent = textEl.classList.contains('expanded') ? '閉じる' : '続きを読む';
           };
