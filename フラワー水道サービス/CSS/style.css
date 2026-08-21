@@ -738,6 +738,14 @@
       margin: 0 auto;
     }
 
+    .campaign-banner {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
     .price-columns {
       display: flex;
       gap: 40px;
@@ -746,7 +754,7 @@
 
     .price-left {
       flex: 1;
-      min-width: 0; /* flexbox bug fix for hidden overflow */
+      min-width: 0;
       display: flex;
     }
 
@@ -754,75 +762,24 @@
       flex: 1.5;
     }
 
-    /* Loop Slider */
-    .loop-slider {
+    /* Menu Swiper */
+    .menu-swiper {
       width: 100%;
       height: 100%;
+      border-radius: 12px;
       overflow: hidden;
-      border-radius: 12px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 15px 0;
-      display: flex;
-      align-items: stretch;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .loop-track {
-      display: flex;
-      width: max-content;
-      animation: loop-slide 30s linear infinite;
+    .menu-swiper .swiper-wrapper {
+      transition-timing-function: linear !important;
     }
 
-    .loop-set {
-      display: flex;
-      gap: 15px;
-      padding-right: 15px;
+    .menu-swiper .swiper-slide img {
+      width: 100%;
       height: 100%;
-    }
-
-    .loop-track img {
-      width: auto;
-      height: 100%;
-      aspect-ratio: 16 / 9;
       object-fit: cover;
-      border-radius: 8px;
-    }
-
-    @keyframes loop-slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .campaign-box {
-      background: #FFF8E1;
-      /* 薄い黄色 */
-      border: 2px dashed #FFCA28;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .campaign-label {
-      display: inline-block;
-      background: #FF5722;
-      color: #fff;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .campaign-title {
-      font-size: 22px;
-      font-weight: 900;
-      color: #D84315;
-      margin-bottom: 10px;
+      /* メニューリストの高さに合わせて画像のアスペクト比を自動調整します */
     }
 
     .menu-list {
@@ -1276,6 +1233,15 @@
         flex-direction: column;
       }
 
+      .price-left {
+        order: 2;
+        aspect-ratio: 16 / 9;
+      }
+
+      .price-right {
+        order: 1;
+      }
+
       .menu-item {
         flex-direction: column;
         align-items: flex-start;
@@ -1380,4 +1346,14 @@
       body {
         padding-bottom: 60px;
       }
+    }
+
+    background: var(--primary);
+    color: var(--white);
+    border-top: 1px solid var(--primary);
+    }
+
+    body {
+      padding-bottom: 60px;
+    }
     }
