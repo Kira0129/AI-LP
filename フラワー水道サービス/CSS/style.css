@@ -1013,9 +1013,23 @@
 
     /* ===== MESSAGE ===== */
     .message-section {
-      background: var(--primary-light);
+      background: url('../img/messagebg.jpg') center/cover no-repeat;
       text-align: center;
       border-top: 5px solid var(--primary);
+      position: relative;
+    }
+
+    .message-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(225, 245, 254, 0.85);
+      z-index: 1;
+    }
+
+    .message-section > .inner {
+      position: relative;
+      z-index: 2;
     }
 
     .msg-wrap {
