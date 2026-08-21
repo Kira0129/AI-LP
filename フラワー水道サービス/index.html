@@ -631,6 +631,24 @@
         }
       });
     });
+
+    // Voice Text Read More (After fonts are loaded)
+    window.addEventListener('load', function() {
+      document.querySelectorAll('.voice-card').forEach(function(card) {
+        var textEl = card.querySelector('.voice-text');
+        // If the text overflows the clamped height
+        if (textEl && textEl.scrollHeight > textEl.clientHeight) {
+          var btn = document.createElement('button');
+          btn.className = 'read-more-btn';
+          btn.textContent = '続きを読む';
+          btn.onclick = function() {
+            textEl.classList.toggle('expanded');
+            btn.textContent = textEl.classList.contains('expanded') ? '閉じる' : '続きを読む';
+          };
+          textEl.parentNode.insertBefore(btn, textEl.nextSibling);
+        }
+      });
+    });
   </script>
 </body>
 

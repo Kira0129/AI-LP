@@ -866,7 +866,29 @@
       position: relative;
       z-index: 1;
       color: var(--text-main);
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .voice-text.expanded {
+      -webkit-line-clamp: unset;
+    }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
       margin-bottom: 15px;
+      text-decoration: underline;
+      display: inline-block;
     }
 
     .voice-attr {
