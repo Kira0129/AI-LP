@@ -1229,6 +1229,10 @@
         grid-template-columns: 1fr;
       }
 
+      .trouble-section {
+        background-position: 65% center;
+      }
+
       .about-top {
         flex-direction: column;
         gap: 40px;
