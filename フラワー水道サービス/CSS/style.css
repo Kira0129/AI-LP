@@ -1256,6 +1256,11 @@
         width: calc(100% - 5px);
       }
 
+      .about-img-area img {
+        height: 220px;
+        min-height: 220px;
+      }
+
       .about-lead {
         font-size: 20px;
         text-align: center;
