@@ -1305,7 +1305,8 @@
       .info-table td,
       .menu-desc,
       .service-desc,
-      .feature-content p {
+      .feature-content p,
+      .msg-text {
         font-size: 14px !important;
       }
 
