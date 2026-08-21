@@ -217,22 +217,20 @@
       display: flex;
       gap: 15px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
 
-    .hero-badge-circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .hero-badge-pill {
+      display: inline-block;
       background: var(--primary);
       color: var(--white);
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
+      padding: 8px 18px;
+      border-radius: 30px;
       font-weight: 700;
       font-size: 15px;
-      line-height: 1.3;
+      line-height: 1.4;
       box-shadow: 0 4px 10px rgba(79, 195, 247, 0.3);
+      white-space: nowrap;
     }
 
     .hero-title {
@@ -1232,28 +1230,17 @@
 
       .hero-badges {
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
+        gap: 8px;
       }
 
-      .hero-badge-circle {
-        width: 95px;
-        height: 95px;
-        font-size: 13px;
-        gap: 10px;
+      .hero-badge-pill {
+        padding: 6px 12px;
+        font-size: 12px;
       }
 
       .hero-title {
         font-size: 26px;
-      }
-
-      .hero-points {
-        justify-content: center;
-        margin-bottom: 0;
-      }
-
-      .hero-point {
-        font-size: 13px;
-        padding: 10px 15px;
       }
 
       .cta-banner {
