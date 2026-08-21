@@ -27,6 +27,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 70px;
     }
 
     body {
@@ -1220,6 +1221,10 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
+      html {
+        scroll-padding-top: 60px;
+      }
+
       body {
         font-size: 14px;
       }
