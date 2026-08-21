@@ -1245,10 +1245,12 @@
       .menu-item {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px 15px;
       }
 
       .menu-price {
         align-self: flex-end;
+        font-size: 20px;
       }
 
       .flow-item {
