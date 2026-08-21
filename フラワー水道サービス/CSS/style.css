@@ -1244,7 +1244,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
         z-index: 999;
         opacity: 0;
         visibility: hidden;
@@ -1257,7 +1257,7 @@
       }
 
       .header-nav a {
-        font-size: 18px;
+        font-size: 16px;
       }
 
       .site-header {
