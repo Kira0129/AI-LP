@@ -1260,6 +1260,18 @@
         font-size: 16px;
       }
 
+      .btn-header-cta-sp {
+        background: var(--accent) !important;
+        color: var(--text-main) !important;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(255, 202, 40, 0.3);
+        margin-top: 10px;
+        display: inline-block !important;
+      }
+
       .site-header {
         padding: 0 20px;
         height: 60px;
