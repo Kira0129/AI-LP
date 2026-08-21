@@ -1250,6 +1250,7 @@
 
       .hero-points {
         justify-content: center;
+        margin-bottom: 0;
       }
 
       .hero-point {
