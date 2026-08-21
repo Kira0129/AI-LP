@@ -734,8 +734,67 @@
 
     /* ===== PRICE ===== */
     .price-wrap {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .price-columns {
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .price-left {
+      flex: 1;
+      min-width: 0; /* flexbox bug fix for hidden overflow */
+      display: flex;
+    }
+
+    .price-right {
+      flex: 1.5;
+    }
+
+    /* Loop Slider */
+    .loop-slider {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 15px 0;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .loop-track {
+      display: flex;
+      width: max-content;
+      animation: loop-slide 30s linear infinite;
+    }
+
+    .loop-set {
+      display: flex;
+      gap: 15px;
+      padding-right: 15px;
+      height: 100%;
+    }
+
+    .loop-track img {
+      width: auto;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @keyframes loop-slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .campaign-box {
@@ -1211,6 +1270,10 @@
       .feature-content h3 {
         font-size: 18px;
         text-align: center;
+      }
+
+      .price-columns {
+        flex-direction: column;
       }
 
       .menu-item {
