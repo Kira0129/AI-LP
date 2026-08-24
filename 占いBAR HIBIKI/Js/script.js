@@ -47,22 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
-    const closeBtn = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     function toggleMenu() {
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('flex');
+        
+        const icon = menuBtn.querySelector('i');
+        
         if (mobileMenu.classList.contains('flex')) {
             document.body.style.overflow = 'hidden';
+            if (icon) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
         } else {
             document.body.style.overflow = 'auto';
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     }
 
     menuBtn.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', toggleMenu);
     mobileLinks.forEach(link => {
         link.addEventListener('click', toggleMenu);
     });
