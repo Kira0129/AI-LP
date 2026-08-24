@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
         :root {
-            --cream: #FAF8F5;
-            --warm-white: #FAF8F5;
-            --charcoal: #4A3E35;
-            --dark-brown: #2C2420;
-            --gold: #C49A6C;
-            --light-gold: #E5D6C5;
-            --red-accent: #B73225;
-            --muted: #8F8177;
-            --border: rgba(196, 154, 108, 0.3);
+            --cream: #F4EDE0;
+            --warm-white: #F4EDE0;
+            --charcoal: #2E221D;
+            --dark-brown: #2E221D;
+            --gold: #C8A375;
+            --light-gold: #EAE0CD;
+            --red-accent: #A32929;
+            --muted: #736153;
+            --border: rgba(200, 163, 117, 0.3);
         }
 
         /* Reset & Base */
@@ -64,6 +64,8 @@
             background: rgba(250, 248, 245, 0.98); backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border); height: 72px; display: flex; align-items: center; padding: 0 40px;
         }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Noto Sans JP', sans-serif; }
+        h2, h3, .menu-category-title { font-family: 'Yuji Syuku', serif !important; font-weight: 400 !important; }
         .hd-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
         .hd-logo-bar { width: 3px; height: 40px; background: var(--red-accent); border-radius: 2px; }
         .hd-logo-text { display: flex; flex-direction: column; line-height: 1; }
@@ -127,7 +129,7 @@
             font-family: 'Yuji Syuku', serif;
             writing-mode: vertical-rl;
             font-size: clamp(32px, 5vw, 55px);
-            font-weight: 900;
+            font-weight: 400;
             line-height: 1.6;
             letter-spacing: 0.1em;
             color: var(--dark-brown);
