@@ -498,12 +498,10 @@ h3,
         opacity: 1;
     }
 }
-
 .bg-recommend {
     background-image: url('../img/recomebg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
     z-index: 0;
 }
