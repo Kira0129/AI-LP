@@ -409,6 +409,23 @@ ul {
   text-transform: uppercase;
 }
 
+#sp-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 8px;
+  z-index: 2002;
+  transition: transform 0.3s;
+}
+
+#sp-menu-close:hover {
+  transform: scale(1.1);
+}
+
 /* FV (First View) */
 #fv {
   position: relative;
