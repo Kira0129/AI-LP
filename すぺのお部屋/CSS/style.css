@@ -1181,6 +1181,10 @@ footer {
 
 /* Media Queries */
 @media (max-width: 767px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
   .worry-list {
     grid-template-columns: 1fr;
   }

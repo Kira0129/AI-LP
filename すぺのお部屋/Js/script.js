@@ -32,7 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  // Hamburger Menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const spMenu = document.getElementById('sp-menu');
+  const spMenuLinks = document.querySelectorAll('#sp-menu nav a');
 
+  if (hamburgerBtn && spMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('active');
+      spMenu.classList.toggle('open');
+    });
+
+    spMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        spMenu.classList.remove('open');
+      });
+    });
+  }
 
   // Smooth Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
