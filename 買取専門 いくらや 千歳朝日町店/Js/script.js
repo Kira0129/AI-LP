@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
       header.classList.remove('opacity-0', 'invisible', '-translate-y-4');
-      header.classList.add('opacity-100', 'visible', 'translate-y-0', 'bg-white/95', 'backdrop-blur-md', 'border-b', 'border-gray-200', 'shadow-sm');
+      header.classList.add('opacity-100', 'visible', 'translate-y-0', 'bg-[repeating-linear-gradient(-45deg,#FFFFFF,#FFFFFF_15px,#FFFF00_15px,#FFFF00_30px)]', 'backdrop-blur-md', 'border-b', 'border-gray-200', 'shadow-sm');
     } else {
       header.classList.add('opacity-0', 'invisible', '-translate-y-4');
-      header.classList.remove('opacity-100', 'visible', 'translate-y-0', 'bg-white/95', 'backdrop-blur-md', 'border-b', 'border-gray-200', 'shadow-sm');
+      header.classList.remove('opacity-100', 'visible', 'translate-y-0', 'bg-[repeating-linear-gradient(-45deg,#FFFFFF,#FFFFFF_15px,#FFFF00_15px,#FFFF00_30px)]', 'backdrop-blur-md', 'border-b', 'border-gray-200', 'shadow-sm');
     }
   });
 
