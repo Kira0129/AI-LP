@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清香すし | 旬の寿司を、もっと気軽に</title>
+    <meta name="description"
+        content="大阪市旭区にある「清香すし」は、職人が一貫ずつ握る寿司を気軽に楽しめるお店です。旬の魚介を使った寿司や一品料理を、落ち着いた和の空間でゆったりとお楽しみください。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Font & Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-white': '#FAF8F5',     /* 背景: ベージュ */
+                        'brand-red': '#B73225',       /* アクセント: 寿司屋らしい深みのある赤 */
+                        'brand-purple': '#4A3E35',    /* サブテキスト: 茶色 */
+                        'brand-gold': '#C49A6C',      /* 装飾: 和の木目や竹をイメージ */
+                        'brand-gray': '#6B5D54',      /* グレーブラウン */
+                        'brand-charcoal': '#2C2420',  /* メインテキスト: 墨色・濃茶 */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body oncontextmenu="return false;">
+
+    <!-- ============================================
+       SITE HEADER
+    ============================================= -->
+    <header class="site-header">
+        <a href="#" class="hd-logo">
+            <div class="hd-logo-bar"></div>
+            <div class="hd-logo-text">
+                <span class="hd-logo-ja">清香すし</span>
+                <span class="hd-logo-en">SEIKA SUSHI</span>
+            </div>
+        </a>
+
+        <nav class="hd-nav">
+            <a href="#about" class="active">ABOUT</a>
+            <a href="#features">4つの特徴</a>
+            <a href="#recommend">おすすめMENU</a>
+            <a href="#menu">MENU</a>
+            <a href="#message">MESSAGE</a>
+            <a href="#access">店舗情報</a>
+        </nav>
+
+        <div class="hd-actions">
+            <a href="tel:050-5448-7087" class="hd-btn-insta">お電話</a>
+            <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank" class="hd-btn-reserve">WEB予約</a>
+        </div>
+
+        <button class="hd-hamburger" id="hdHamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="sp-menu-overlay" id="spMenuOverlay">
+        <div class="sp-menu-inner">
+            <nav class="flex flex-col gap-2 mb-10">
+                <a href="#about" class="sp-menu-link">ABOUT</a>
+                <a href="#features" class="sp-menu-link">4つの特徴</a>
+                <a href="#recommend" class="sp-menu-link">おすすめMENU</a>
+                <a href="#menu" class="sp-menu-link">MENU</a>
+                <a href="#message" class="sp-menu-link">MESSAGE</a>
+                <a href="#access" class="sp-menu-link">店舗情報</a>
+            </nav>
+            <div class="flex flex-col gap-4 items-center">
+                <a href="tel:050-5448-7087" class="w-full py-4 border-2 border-brand-red text-brand-red font-bold tracking-[0.15em] rounded text-sm">お電話でお問い合わせ</a>
+                <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank" class="w-full py-4 bg-brand-red text-white font-bold tracking-[0.15em] rounded text-sm">WEB予約</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       FV (HERO) SECTION
+    ============================================= -->
+    <div class="fv">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+
+        <div class="fv-body">
+            <div class="fv-sp-text">
+                <div class="fv-left-text">
+                    <p class="fv-vertical-copy">
+                        肩肘張らない落ち着いた<br>
+                        和の空間で、<br class="md:hidden">ゆったりと<br>
+                        お楽しみください。
+                    </p>
+                </div>
+                <div class="fv-center-spacer" style="position:relative;height:100%;"></div>
+                <div class="fv-right-col">
+                    <div class="fv-catchcopy-wrap">
+                        <div class="fv-catch-border"></div>
+                        <div class="fv-catch-lines">
+                            <!-- 右から読むため逆順配置 -->
+                            <span class="fv-catch-line large">気軽に</span>
+                            <span class="fv-catch-line medium">もっと</span>
+                            <span class="fv-catch-line large">旬の寿司を</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fv-cards-layer" id="fvCardsLayer">
+            <div class="fv-card pos-center" data-idx="0">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1200&auto=format&fit=crop" alt="新鮮な握り寿司">
+            </div>
+            <div class="fv-card pos-topright" data-idx="1">
+                <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1000&auto=format&fit=crop" alt="板前">
+            </div>
+            <div class="fv-card pos-botleft" data-idx="2">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1000&auto=format&fit=crop" alt="巻き寿司">
+            </div>
+            <div class="fv-card pos-hidden" data-idx="3">
+                <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?q=80&w=1000&auto=format&fit=crop" alt="和食">
+            </div>
+        </div>
+
+        <div class="fv-dot-row" id="fvDots">
+            <div class="fv-sdot active"></div><div class="fv-sdot"></div>
+            <div class="fv-sdot"></div><div class="fv-sdot"></div>
+        </div>
+    </div>
+
+
+    <!-- ============================================
+       ABOUT (CONCEPT)
+    ============================================= -->
+    <section id="about" class="concept">
+        <div class="concept-image">
+            <img src="https://images.unsplash.com/photo-1558235022-f949c25f4838?q=80&w=1200&auto=format&fit=crop" alt="お寿司屋のカウンター" loading="lazy">
+        </div>
+        <div class="concept-text reveal">
+            <div class="flex items-center gap-3 mb-4 text-brand-red">
+                <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                <span class="text-[10px] tracking-[0.4em] font-bold uppercase">About</span>
+            </div>
+            <h2 class="section-title">気取らず楽しむ、<br>町のお寿司屋</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+                大阪市旭区にある「清香すし」は、高級店のように肩肘張ることなく、回転寿司とはひと味違う、職人が一貫ずつ握る寿司を気軽に楽しめるお店です。<br><br>
+                その日に仕入れた旬の魚介を使い、寿司はもちろん、お造りや天ぷらなどの一品料理も豊富にご用意。<br><br>
+                お一人での食事から、ご家族やご友人との時間まで、ふらっと立ち寄ってゆっくり過ごせる、地域に根付いた寿司屋を目指しています。
+            </p>
+        </div>
+    </section>
+
+    <!-- Phase 2 Layout Wrapper -->
+    <div class="layout-phase-2">
+
+        <!-- Problem / おすすめ -->
+        <section id="problem" class="break-out-full-width py-20 lg:py-32 relative bg-brand-gold/10">
+            <div class="flex flex-col items-center justify-center mb-12 lg:mb-20 fade-in-up text-center relative z-10 w-full max-w-5xl mx-auto px-6">
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    こんな方におすすめ
+                </h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto px-6 relative z-10">
+                <div class="bg-white p-8 lg:p-12 rounded-xl shadow-sm border border-brand-gold/30 relative mt-6 fade-in-up">
+                    <ul class="flex flex-col gap-6 text-sm lg:text-base text-brand-purple tracking-widest leading-loose font-medium">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>気軽に入れる寿司屋を探している方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>旬の魚をリーズナブルに楽しみたい方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>寿司だけでなく一品料理も味わいたい方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>仕事帰りや遅い時間に食事を楽しみたい方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>お一人でゆっくり寿司やお酒を楽しみたい方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span>家族や友人と落ち着いて食事をしたい方</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features (Commitment) -->
+        <section id="features" class="break-out-full-width py-20 lg:py-32 bg-white relative overflow-hidden">
+            <div class="zen-mist-container">
+                <svg class="zen-mist-svg" viewBox="0 0 2000 1000" preserveAspectRatio="none">
+                    <path d="M0,400 Q500,300 1000,400 T2000,400 V1000 H0 Z" fill="rgba(196, 154, 108, 0.1)" />
+                    <path d="M0,500 Q500,600 1000,500 T2000,500 V1000 H0 Z" fill="rgba(196, 154, 108, 0.05)" />
+                </svg>
+            </div>
+
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6 relative z-10">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Features</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">4つの特徴</h2>
+            </div>
+
+            <div class="flex flex-col gap-24 lg:gap-32 max-w-6xl mx-auto px-6 lg:px-0 relative z-10">
+                <!-- 01 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1615361200141-f45040f367be?q=80&w=800&auto=format&fit=crop" alt="新鮮な魚介" class="w-full h-full object-cover rounded shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">01</span>
+                        <h3 class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">毎日仕入れる旬の新鮮魚介</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            その日の状態を見極めながら、新鮮な魚介を仕入れています。<br>
+                            旬の味わいを大切に、一貫一貫心を込めて握る寿司や、お造り・一品料理としてご提供します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1625052980838-8ff3908b8b0e?q=80&w=800&auto=format&fit=crop" alt="リーズナブルな寿司" class="w-full h-full object-cover rounded shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">02</span>
+                        <h3 class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">気軽に楽しめる、<br class="md:hidden">リーズナブルな寿司</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            肩肘張る高級店ではなく、普段使いしやすい価格と雰囲気を大切にしています。<br>
+                            本格的な寿司はもちろん、天ぷらや一品料理まで幅広く楽しめます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1574211110052-19e917d056c7?q=80&w=800&auto=format&fit=crop" alt="柔軟な対応" class="w-full h-full object-cover rounded shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">03</span>
+                        <h3 class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">お好みに合わせた柔軟な対応</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify">
+                            シャリを小さめにしたい、わさびを抜いてほしい、大きなネタは食べやすくカットしてほしいなど、ご希望に合わせて対応します。<br>
+                            苦手なネタがある場合も、可能な範囲で変更いたします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
+                    <div class="w-full lg:w-1/2 aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=800&auto=format&fit=crop" alt="お持ち帰り" class="w-full h-full object-cover rounded shadow-sm">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">04</span>
+                        <h3 class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">店内でも、ご自宅でも楽しめる</h3>
+                        <p class="text-brand-gray leading-loose tracking-wider text-justify mb-4">
+                            落ち着いた和の空間でゆっくり過ごせるほか、お持ち帰りにも対応しています。<br>
+                            ご自宅で楽しみたい方や、ご家族への持ち帰りにもおすすめです。
+                        </p>
+                        <p class="text-xs text-brand-gray/80 leading-relaxed">
+                            ※一部お持ち帰りできない商品がございます。<br>
+                            ※混雑時はお渡しまでにお時間をいただく場合があります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Recommend MENU -->
+        <section id="recommend" class="break-out-full-width py-20 lg:py-32 relative text-brand-gray bg-brand-white">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center relative z-10 w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Recommend</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    おすすめMENU
+                </h2>
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto flex flex-col gap-24 px-6 lg:px-0">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center fade-in-up group">
+                    <div class="w-full lg:w-1/2 aspect-[4/3] overflow-hidden rounded shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1626200419109-31518f8e79cb?q=80&w=1000&auto=format&fit=crop" alt="お料理厳選コース" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    </div>
+                    <div class="w-full lg:w-1/2 bg-white p-8 lg:p-12 rounded shadow-sm border border-brand-gold/30 relative -mt-16 lg:mt-0 lg:-ml-12 z-10">
+                        <h3 class="text-2xl lg:text-3xl mb-4 tracking-widest font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+                            お料理厳選コース
+                        </h3>
+                        <div class="flex flex-col sm:flex-row items-baseline gap-2 sm:gap-4 mb-6 border-b border-brand-gold/40 pb-4">
+                            <p class="text-3xl font-bold text-brand-red">3,850円<span class="text-lg">（税込）</span></p>
+                            <span class="text-sm text-brand-gray/80">／1名様</span>
+                        </div>
+                        <p class="text-base opacity-90 leading-loose mb-6 text-brand-gray">
+                            先付けからお食事、汁物まで楽しめる全8品のコースです。<br>
+                            旬の味わいをゆっくり楽しみたい方や、ご家族・ご友人とのお食事にもおすすめです。
+                        </p>
+                        
+                        <div class="bg-brand-white p-4 rounded text-sm mb-4">
+                            <h4 class="font-bold text-brand-charcoal mb-2">【コース内容】</h4>
+                            <p class="leading-relaxed">先付け / お造り盛り / 煮物 / 焼き物 / 揚げ物 / 酢の物 / 食事 / 汁物</p>
+                        </div>
+                        <div class="text-xs text-brand-gray/80 space-y-1">
+                            <p>・4名様〜ご予約可能 / 滞在時間：2時間</p>
+                            <p>・予約可能曜日：月・水〜日 / 予約締切：ご来店日の前日18時まで</p>
+                            <p>※お飲み物は別途ご注文ください。<br>※ご予約はお電話にてお願いいたします。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MENU Section -->
+        <section id="menu" class="break-out-full-width py-20 lg:py-32 bg-brand-gold/10">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-20 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Menu</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">
+                    MENU
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-6 lg:px-0">
+                
+                <!-- Highlighted Item -->
+                <div class="fade-in-up bg-white rounded shadow-sm border border-brand-gold/30 flex flex-col md:flex-row overflow-hidden mb-16 group">
+                    <div class="w-full md:w-5/12 overflow-hidden aspect-[4/3] md:aspect-auto">
+                        <img src="https://images.unsplash.com/photo-1633649539327-0ea8cc61d9be?q=80&w=1000&auto=format&fit=crop" alt="清香握り盛り合わせ" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="w-full md:w-7/12 p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
+                            <h3 class="font-bold text-2xl tracking-wide text-brand-charcoal">清香握り盛り合わせ</h3>
+                            <p class="text-brand-red font-bold text-2xl whitespace-nowrap">1,188円</p>
+                        </div>
+                        <p class="text-sm text-brand-gray leading-loose mb-4">
+                            毎日仕入れる新鮮なネタを楽しめる、豪華9種の握り盛り合わせです。<br>
+                            モンゴウイカ、インドマグロ、タイ、サーモン、ハマチ、エビ、タマゴ、タコ、トビッコなど、人気の味覚をバランスよく盛り込みました。ボリュームもしっかりあり、いろいろな寿司を一度に楽しみたい方におすすめです。
+                        </p>
+                        <p class="text-xs text-brand-gray/80 leading-relaxed">
+                            ※苦手なネタがある場合は、可能な範囲で他のお寿司へ変更いたします。お気軽にスタッフまでお申し付けください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text Menu Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 fade-in-up delay-100">
+                    
+                    <div>
+                        <h4 class="menu-category-title">握り 2貫</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>本まぐろ</span><span>418円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>サーモン</span><span>308円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>たい</span><span>308円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>中とろ</span><span>638円</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="menu-category-title">盛り合わせ・巻き寿司</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>清香握り盛り合わせ</span><span>1,188円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>上にぎり</span><span>2,178円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>おやじ巻き（海鮮巻き）</span><span>1,188円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>バッテラ</span><span>748円</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="menu-category-title">お造り</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>どっさりお造り盛り</span><span>2,178円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>お造り三種盛り</span><span>1,078円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>お造り五種盛り</span><span>1,738円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>本まぐろ造り</span><span>968円</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="menu-category-title">一品料理</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>豚の角煮</span><span>748円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>れんこんまんじゅう</span><span>638円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>ホタテきのこバター</span><span>858円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>鯛のあら煮</span><span>858円</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="menu-category-title">天ぷら・揚げ物</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>天ぷら盛り合わせ</span><span>968円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>どっさり天ぷら盛り合わせ</span><span>1,738円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>海鮮串揚げ 5本</span><span>638円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>えびマヨ</span><span>748円</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="menu-category-title">焼き物</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>カマ塩焼き</span><span>858円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>とろほっけ</span><span>968円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>うなぎ蒲焼</span><span>1,408円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>ゲソ塩焼き</span><span>638円</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="menu-category-title">おすすめ料理</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>海鮮グラタン</span><span>858円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>えびアボカドチーズグラタン</span><span>638円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>まぐろホホ肉ステーキ</span><span>748円</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="menu-category-title">おふくろの味</h4>
+                        <ul class="space-y-3 text-[15px] text-brand-charcoal">
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>う巻き</span><span>968円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>茶碗蒸し</span><span>638円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>筑前煮</span><span>418円</span></li>
+                            <li class="flex justify-between border-b border-brand-gold/20 pb-2 border-dashed"><span>出し巻</span><span>528円</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hidden lg:block">
+                        <!-- Empty block for grid alignment -->
+                    </div>
+
+                </div>
+                <div class="text-right mt-6 text-sm text-brand-gray/80 fade-in-up">※価格はすべて税込です。</div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section -->
+        <section class="break-out-full-width py-24 bg-brand-charcoal text-brand-white">
+            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row gap-8 justify-center items-center text-center">
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">お電話でのご予約・お問い合わせ</p>
+                    <a href="tel:050-5448-7087" class="block text-3xl lg:text-4xl font-bold tracking-widest hover:text-brand-gold transition-colors text-brand-white">050-5448-7087</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">Webからのお席予約</p>
+                    <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank" class="block w-full py-5 bg-brand-red hover:bg-white hover:text-brand-red text-white text-lg font-bold tracking-[0.2em] transition-colors rounded">
+                        WEB予約はこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message" class="break-out-full-width py-24 lg:py-48 relative text-brand-charcoal overflow-hidden border-y border-brand-gold/20">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl z-0"></div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-red/5 rounded-full blur-3xl z-0"></div>
+
+            <div class="relative z-10">
+                <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                    <div class="flex items-center gap-3 mb-3 text-brand-red">
+                        <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                        <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Message</span>
+                        <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    </div>
+                    <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">MESSAGE</h2>
+                </div>
+
+                <div class="max-w-3xl mx-auto px-6 text-left md:text-center fade-in-up text-brand-charcoal">
+                    <h3 class="text-2xl lg:text-4xl font-bold mb-12 tracking-[0.2em] leading-relaxed text-brand-red text-left md:text-center">
+                        おいしい寿司を、<br>もっと身近に
+                    </h3>
+                    <div class="space-y-8 text-base lg:text-lg leading-loose tracking-widest text-brand-charcoal font-medium">
+                        <p>
+                            旬の魚を使った寿司や一品料理を、<br class="hidden md:block">特別な日だけでなく、普段の食事として気軽に楽しんでいただきたい。
+                        </p>
+                        <p>
+                            そんな想いで、一貫一貫心を込めてお作りしています。
+                        </p>
+                        <p>
+                            お一人でも、ご家族やご友人と一緒でも。<br>
+                            ふらっと立ち寄れて、ゆっくり食事を楽しめる地域のお寿司屋として、<br class="hidden md:block">皆さまをお迎えいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="break-out-full-width py-20 lg:py-32 bg-brand-gold/10">
+            <div class="flex flex-col items-center justify-center mb-16 lg:mb-24 fade-in-up text-center w-full max-w-5xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-3 text-brand-red">
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                    <span class="text-[10px] tracking-[0.4em] font-bold uppercase">Access</span>
+                    <span class="w-8 h-[2px] bg-brand-red/30 rounded-full"></span>
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold tracking-widest text-brand-charcoal">店舗情報</h2>
+            </div>
+
+            <div class="w-full px-6 lg:px-16 fade-in-up">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-0 bg-white rounded shadow-sm border border-brand-gold/30 overflow-hidden">
+                    <div class="w-full lg:w-1/2 space-y-10 p-8 lg:p-12">
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Shop</p>
+                            <h3 class="text-2xl font-bold tracking-widest border-b-2 pb-4 border-brand-gold/30 text-brand-charcoal">清香すし</h3>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Address</p>
+                            <p class="text-base tracking-wider leading-loose font-medium text-brand-purple">
+                                〒535-0002<br>大阪府大阪市旭区大宮４丁目２０−２６
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Tel</p>
+                            <p class="text-2xl font-bold tracking-widest text-brand-purple">
+                                <a href="tel:050-5448-7087" class="hover:text-brand-red transition-colors">050-5448-7087</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Open</p>
+                                <p class="text-base tracking-wider leading-relaxed font-medium text-brand-purple">
+                                    水曜〜土曜日 17:00〜27:00 (L.O 26:30)<br>
+                                    日、月曜日 17:00〜24:00 (L.O 23:30)
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Close</p>
+                                <p class="text-base tracking-wider font-medium text-brand-purple">火曜日</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Payment</p>
+                                <p class="text-base tracking-wider font-medium text-brand-purple">現金、カード、電子決済</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">SNS</p>
+                                <a href="https://www.instagram.com/seika.sushi/" target="_blank" class="inline-block p-2 border border-brand-gold/50 rounded-full hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 h-[350px] lg:h-auto lg:min-h-[400px] flex bg-gray-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.3242091769615!2d135.5458043!3d34.722241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0503f8a0a99%3A0x88981df2f6d2f707!2z44CSNTM1LTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5pet5Yy65aSn5a6u77yU5LiB55uu77yS77yQ4oiS77yS77yW!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-brand-charcoal text-brand-white pb-8 text-center pt-12">
+        <div class="mb-6 text-center">
+            <h1 class="text-xl font-bold tracking-widest mb-1 text-brand-white">清香すし</h1>
+        </div>
+        <p class="text-xs tracking-widest text-brand-white/60">&copy; 2026 SEIKA SUSHI. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SP Bottom Fixed CTA -->
+    <div id="spFixedCta" class="fixed bottom-0 left-0 w-full z-[60] flex lg:hidden shadow-[0_-5px_10px_rgba(0,0,0,0.05)] text-center transition-all duration-500">
+        <a href="tel:050-5448-7087" class="w-1/2 bg-brand-white py-4 text-brand-charcoal border-r border-brand-gold/30 flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest font-bold">お電話</span>
+            <span class="font-bold text-sm tracking-wide">050-5448-7087</span>
+        </a>
+        <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank" class="w-1/2 bg-brand-red py-4 text-white flex flex-col justify-center items-center">
+            <span class="text-[10px] mb-1 tracking-widest font-bold">お席を予約</span>
+            <span class="font-bold text-sm tracking-wide">Reserve</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop" class="fixed bottom-24 right-5 lg:bottom-12 lg:right-12 z-50 w-12 h-12 border-2 border-brand-gold/50 bg-brand-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:bg-brand-red hover:text-white hover:border-brand-red rounded-full text-xl text-brand-purple shadow-sm">
+        ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="Js/script.js"></script>
+</body>
+</html>
