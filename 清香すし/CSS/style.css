@@ -66,38 +66,50 @@
         }
         h1, h2, h3, h4, h5, h6 { font-family: 'Noto Sans JP', sans-serif; }
         h2, h3, .menu-category-title { font-family: 'Yuji Syuku', serif !important; font-weight: 400 !important; }
-        /* Japanese Section Headers */
+        /* Japanese Section Headers (Horizontal) */
         .section-header-jp {
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
             justify-content: center;
+            text-align: center;
         }
         .section-header-jp .en-title {
-            writing-mode: vertical-rl;
-            font-size: 10px;
+            writing-mode: horizontal-tb;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
             letter-spacing: 0.4em;
             color: var(--red-accent);
             text-transform: uppercase;
             font-weight: 700;
             font-family: 'Noto Sans JP', sans-serif;
-            margin-top: 16px;
+            margin-top: 0;
+        }
+        .section-header-jp .en-title::before,
+        .section-header-jp .en-title::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background-color: var(--red-accent);
+            opacity: 0.3;
+            border-radius: 999px;
         }
         .section-header-jp .v-line {
-            width: 1px;
-            min-height: 120px;
-            background-color: var(--gold);
-            opacity: 0.6;
+            display: none;
         }
         .section-header-jp .ja-title {
-            writing-mode: vertical-rl;
+            writing-mode: horizontal-tb;
             font-size: clamp(24px, 5vw, 32px);
-            letter-spacing: 0.25em;
+            letter-spacing: 0.15em;
             color: var(--charcoal);
             font-family: 'Yuji Syuku', serif !important;
             font-weight: 400 !important;
             margin: 0;
-            line-height: 1;
+            line-height: 1.4;
         }
         
         .hd-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
