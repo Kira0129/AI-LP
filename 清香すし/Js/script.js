@@ -23,13 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const W = layer.offsetWidth, H = layer.offsetHeight;
             const SW = Math.round(Math.min(Math.max(130, W * 0.13), 185));
             const SH = Math.round(Math.min(Math.max(155, H * 0.22), 220));
-            const LW = Math.round(Math.min(Math.max(560, W * 0.58), 820));
-            const LH = Math.round(Math.min(Math.max(440, H * 0.62), 640));
+            let LW = Math.round(Math.min(Math.max(560, W * 0.55), 800));
+            let LH = Math.round(Math.min(Math.max(440, H * 0.62), 640));
+
+            const safeRight = W - Math.max(280, W * 0.22);
+            let trL = safeRight - SW - 20;
+
+            let cL = Math.round((W - LW) / 2) - 180;
+            if (cL < 80) cL = 80;
+
+            if (cL + LW > safeRight) {
+                cL = safeRight - LW;
+                if (cL < 80) {
+                    cL = 80;
+                    LW = safeRight - 80;
+                }
+            }
+
             return {
-                center: { t: Math.round((H - LH) / 2), l: Math.round((W - LW) / 2), w: LW, h: LH },
-                topright: { t: 56, l: W - SW - 120, w: SW, h: SH },
-                botleft: { t: H - SH - 40, l: 16, w: SW, h: SH },
-                hidden: { t: 56, l: W - SW - 120, w: SW, h: SH },
+                center: { t: Math.round((H - LH) / 2), l: cL, w: LW, h: LH },
+                topright: { t: 64, l: trL, w: SW, h: SH },
+                botleft: { t: H - SH - 40, l: 32, w: SW, h: SH },
+                hidden: { t: 64, l: trL, w: SW, h: SH },
             };
         }
 
