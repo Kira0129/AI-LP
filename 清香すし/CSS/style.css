@@ -14,16 +14,24 @@
 
         /* Reset & Base */
         body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--warm-white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
-            padding-top: 72px;
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--warm-white);
+            font-size: 14px;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            padding-top: 72px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 600px) {
