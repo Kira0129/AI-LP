@@ -66,6 +66,40 @@
         }
         h1, h2, h3, h4, h5, h6 { font-family: 'Noto Sans JP', sans-serif; }
         h2, h3, .menu-category-title { font-family: 'Yuji Syuku', serif !important; font-weight: 400 !important; }
+        /* Japanese Section Headers */
+        .section-header-jp {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            justify-content: center;
+        }
+        .section-header-jp .en-title {
+            writing-mode: vertical-rl;
+            font-size: 10px;
+            letter-spacing: 0.4em;
+            color: var(--red-accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Noto Sans JP', sans-serif;
+            margin-top: 16px;
+        }
+        .section-header-jp .v-line {
+            width: 1px;
+            min-height: 120px;
+            background-color: var(--gold);
+            opacity: 0.6;
+        }
+        .section-header-jp .ja-title {
+            writing-mode: vertical-rl;
+            font-size: clamp(24px, 5vw, 32px);
+            letter-spacing: 0.25em;
+            color: var(--charcoal);
+            font-family: 'Yuji Syuku', serif !important;
+            font-weight: 400 !important;
+            margin: 0;
+            line-height: 1;
+        }
+        
         .hd-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
         .hd-logo-bar { width: 3px; height: 40px; background: var(--red-accent); border-radius: 2px; }
         .hd-logo-text { display: flex; flex-direction: column; line-height: 1; }
