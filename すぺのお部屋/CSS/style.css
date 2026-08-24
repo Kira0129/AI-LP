@@ -1215,6 +1215,10 @@ footer {
     display: flex;
   }
 
+  #price {
+    background-attachment: scroll;
+  }
+
   .worry-list {
     grid-template-columns: 1fr;
   }
