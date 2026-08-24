@@ -22,7 +22,8 @@ html {
 
   --section-gap-sp: 80px;
   --section-gap-pc: 120px;
-  --max-width: 1100px;
+  --max-width: 1200px;
+  --feature-max-width: 1100px;
   --side-pad-sp: 20px;
   --side-pad-pc: 40px;
 }
@@ -965,7 +966,7 @@ section {
 
   .feature-sticky-wrap {
     display: grid;
-    grid-template-columns: calc(max(var(--side-pad-pc), (100vw - var(--max-width)) / 2) + 340px) 1fr;
+    grid-template-columns: calc(max(var(--side-pad-pc), (100vw - var(--feature-max-width)) / 2) + 340px) 1fr;
     align-items: start;
     gap: 0;
     width: 100%;
@@ -974,7 +975,7 @@ section {
   .feature-sticky-head {
     position: sticky;
     top: 120px;
-    padding-left: max(var(--side-pad-pc), calc((100vw - var(--max-width)) / 2));
+    padding-left: max(var(--side-pad-pc), calc((100vw - var(--feature-max-width)) / 2));
     padding-right: 48px;
     box-sizing: border-box;
     margin-bottom: 0;
