@@ -370,11 +370,12 @@
     </section>
 
     <!-- Image Divider -->
-    <section class="w-full relative h-[350px] md:h-[550px] [clip-path:inset(0)]">
-        <!-- 固定背景パララックス (iOS Safari対応) -->
-        <div class="fixed inset-0 bg-[url('img/picbg.jpg')] bg-cover bg-center opacity-80 -z-10"></div>
-        <!-- エレガントなグラデーションオーバーレイ -->
-        <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90 pointer-events-none">
+    <section class="w-full relative h-[350px] md:h-[550px]">
+        <div class="absolute inset-0 [clip-path:inset(0)] -z-10">
+            <!-- 固定背景パララックス (iOS Safari対応) -->
+            <div class="fixed inset-0 bg-[url('img/picbg.jpg')] bg-cover bg-center opacity-80"></div>
+            <!-- エレガントなグラデーションオーバーレイ -->
+            <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90 pointer-events-none"></div>
         </div>
     </section>
 
@@ -847,11 +848,13 @@
     </section>
 
     <!-- Message Section -->
-    <section class="py-24 md:py-32 px-6 relative flex items-center justify-center min-h-[80vh] [clip-path:inset(0)]">
-        <!-- 固定背景パララックス (iOS Safari対応) -->
-        <div class="fixed inset-0 bg-[url('img/messagebg.jpg')] bg-cover bg-[80%_center] opacity-80 -z-10"></div>
-        <!-- エレガントなグラデーションオーバーレイ -->
-        <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90"></div>
+    <section class="py-24 md:py-32 px-6 relative flex items-center justify-center min-h-[80vh]">
+        <div class="absolute inset-0 [clip-path:inset(0)] -z-10">
+            <!-- 固定背景パララックス (iOS Safari対応) -->
+            <div class="fixed inset-0 bg-[url('img/messagebg.jpg')] bg-cover bg-[80%_center] opacity-80"></div>
+            <!-- エレガントなグラデーションオーバーレイ -->
+            <div class="absolute inset-0 bg-gradient-to-b from-darker/90 via-darker/60 to-darker/90"></div>
+        </div>
 
         <div class="max-w-3xl mx-auto relative z-10 text-center fade-in">
             <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl text-gold mb-12 leading-[2] tracking-widest">
