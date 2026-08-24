@@ -120,13 +120,25 @@
         .fv-sp-text { display: contents; }
         .fv-left-text { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; height: 100%; padding-top: 60px; animation: fadeIn 1.2s 0.3s both; position: relative; z-index: 15; pointer-events: none; }
         .fv-vertical-copy { writing-mode: vertical-rl; font-size: 16px; font-weight: 500; line-height: 2.2; letter-spacing: 0.15em; color: var(--dark-brown); margin-left: 24px; }
-        .fv-right-col { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; height: 100%; padding-left: 24px; padding-bottom: 80px; animation: fadeIn 1.2s 0.5s both; position: relative; z-index: 15; pointer-events: none; }
-        .fv-catchcopy-wrap { display: flex; align-items: flex-start; gap: 0; justify-content: flex-end; padding: 24px 0; }
-        .fv-catch-border { width: 2px; background: var(--red-accent); align-self: stretch; margin-right: 24px; opacity: 0.4; }
-        .fv-catch-lines { display: flex; gap: 14px; align-items: flex-start; }
-        .fv-catch-line { writing-mode: vertical-rl; font-weight: 700; line-height: 1.1; letter-spacing: 0.08em; color: var(--dark-brown); }
-        .fv-catch-line.large { font-size: clamp(40px, 5vw, 62px); }
-        .fv-catch-line.medium { font-size: clamp(32px, 4vw, 50px); }
+        .fv-right-col { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; height: 100%; padding-left: 24px; padding-bottom: 0; animation: fadeIn 1.2s 0.5s both; position: relative; z-index: 15; pointer-events: none; }
+        .fv-catchcopy-wrap { pointer-events: auto; text-align: left; }
+        .fv-main-copy {
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4), 0px 0px 12px rgba(255, 255, 255, 0.7);
+            font-family: 'HGP行書体', 'HGS行書体', 'HG行書体', 'ヒラギノ行書 W4', 'Yuji Boku', serif;
+            writing-mode: vertical-rl;
+            font-size: clamp(32px, 5vw, 55px);
+            font-weight: 900;
+            line-height: 1.6;
+            letter-spacing: 0.1em;
+            color: var(--dark-brown);
+        }
+        .fv-main-copy .em {
+            color: var(--red-accent);
+            text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0 0 10px rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            margin-top: 0;
+            margin-right: 8px;
+        }
 
         .fv-cards-layer { position: absolute; inset: 0; z-index: 8; pointer-events: none; }
         .fv-card { position: absolute; overflow: hidden; pointer-events: auto; transition: top 1s cubic-bezier(0.77, 0, 0.175, 1), left 1s cubic-bezier(0.77, 0, 0.175, 1), width 1s cubic-bezier(0.77, 0, 0.175, 1), height 1s cubic-bezier(0.77, 0, 0.175, 1), border-radius 1s ease, box-shadow 1s ease, opacity 0.6s ease; will-change: top, left, width, height, opacity; }
@@ -144,21 +156,20 @@
         .fv-sdot.active { background: var(--red-accent); transform: scale(1.5); }
 
         @media (max-width: 600px) {
-            .fv { min-height: auto; overflow: hidden; }
-            .fv-body { display: flex; flex-direction: column; padding: 0; align-items: stretch; position: relative; min-height: 0; }
+            .fv { min-height: auto; overflow: hidden; display: flex; flex-direction: column; }
+            .fv-body { display: contents; }
+            .fv-center-spacer { display: none; }
             #fvCardsLayer { display: none !important; }
-            #spSliderWrap { position: relative !important; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #eee; margin-top: -20px; }
-            .fv-sp-text { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; padding: 20px 20px 10px; gap: 16px; background: var(--warm-white); position: relative; z-index: 10; }
-            .fv-left-text { padding-top: 0; height: auto; flex-shrink: 0; }
-            .fv-vertical-copy { font-size: 11px; letter-spacing: 0.18em; line-height: 2; margin-left: 0; }
-            .fv-right-col { align-items: flex-end; padding: 0; height: auto; flex: 1; }
-            .fv-catch-border { display: none; }
-            .fv-catch-lines { gap: 6px; }
-            .fv-catch-line.large { font-size: clamp(26px, 7vw, 36px); }
-            .fv-catch-line.medium { font-size: clamp(20px, 5vw, 28px); }
+            #spSliderWrap { position: relative !important; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #eee; margin-top: 0; z-index: 8; order: 2; }
+            .fv-sp-text { display: contents; }
+            .fv-left-text { order: 3; padding: 24px 5px; align-items: center; width: 100%; height: auto; flex-shrink: 0; padding-top: 0; }
+            .fv-vertical-copy { writing-mode: horizontal-tb; border-left: none; padding-left: 0; text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 12px; margin-left: 0; font-size: 14px; letter-spacing: 0.1em; line-height: 2; }
+            .fv-right-col { order: 1; padding: 24px 5px 12px; align-items: center; width: 100%; height: auto; flex: 1; justify-content: center; }
+            .fv-catchcopy-wrap { text-align: center; }
+            .fv-main-copy { writing-mode: horizontal-tb; font-size: 26px; text-align: center; line-height: 1.6; }
+            .fv-main-copy .em { margin-top: 8px; margin-right: 0; }
             .fv-dot-row { bottom: 8px !important; }
             .petal:nth-child(n+4) { display: none; }
-            .fv-center-spacer { display: none; }
         }
 
         /* ABOUT */
