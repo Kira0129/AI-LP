@@ -409,6 +409,19 @@ ul {
   text-transform: uppercase;
 }
 
+.sp-menu-cta {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.sp-menu-cta a {
+  width: 100%;
+}
+
 #sp-menu-close {
   position: absolute;
   top: 24px;
