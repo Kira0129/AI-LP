@@ -124,7 +124,7 @@
         .fv-catchcopy-wrap { pointer-events: auto; text-align: left; }
         .fv-main-copy {
             text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4), 0px 0px 12px rgba(255, 255, 255, 0.7);
-            font-family: 'HGP行書体', 'HGS行書体', 'HG行書体', 'ヒラギノ行書 W4', 'Yuji Boku', serif;
+            font-family: 'Yuji Syuku', serif;
             writing-mode: vertical-rl;
             font-size: clamp(32px, 5vw, 55px);
             font-weight: 900;
