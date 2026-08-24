@@ -45,11 +45,21 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   line-height: 1.6;
+  
+  /* テキスト選択・長押しメニュー禁止 */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  
+  /* 画像保存・ドラッグ禁止 */
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 a {

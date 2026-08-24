@@ -1,3 +1,6 @@
+// 右クリックを禁止
+document.addEventListener('contextmenu', e => e.preventDefault());
+
 document.addEventListener('DOMContentLoaded', () => {
   // Header Scroll
   const header = document.getElementById('site-header');
