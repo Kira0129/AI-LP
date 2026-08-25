@@ -319,10 +319,10 @@ section { padding: 96px 0; }
 .about-frame-inner { border: 1px dashed var(--border); padding: 64px 48px; display: flex; flex-direction: column; align-items: center; border-radius: 2px;}
 
 .about-content { display: flex; align-items: stretch; gap: 64px; margin-top: 56px; width: 100%; }
-.about-image { width: 45%; position: relative; }
+.about-image { width: 50%; position: relative; }
 .about-image::after { content: ''; position: absolute; top: 12px; left: -12px; width: 100%; height: 100%; background: var(--cream); z-index: 0; border-radius: 4px;}
 .about-image img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; border-radius: 4px; display: block; }
-.about-text { width: 55%; display: flex; flex-direction: column; justify-content: center; }
+.about-text { width: 50%; display: flex; flex-direction: column; justify-content: center; }
 .about-lead { font-size: clamp(18px, 2vw, 22px); font-weight: 900; color: var(--dark-brown); letter-spacing: 0.1em; margin-bottom: 24px; line-height: 1.6; border-bottom: 2px solid var(--cream); padding-bottom: 16px;}
 
 .features-section { background: var(--cream); }
