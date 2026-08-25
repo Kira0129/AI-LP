@@ -299,8 +299,8 @@ img {
 .fv-catch-line.large { font-size: clamp(32px, 4.5vw, 56px); }
 
 .fv-banner {
-  background: #9b1e1c;
-  color: #fff;
+  background: var(--dark-brown);
+  color: var(--warm-white);
   text-align: center;
   padding: 16px 20px;
   font-weight: 700;
