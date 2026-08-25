@@ -385,9 +385,11 @@ section {
   text-align: left;
   padding: 20px var(--side-pad-sp);
   width: 100%;
-  pointer-events: none; /* テキスト選択等ができるようにしつつ下敷きの操作を妨げない */
+  pointer-events: none;
+  /* テキスト選択等ができるようにしつつ下敷きの操作を妨げない */
 }
-.fv-content > * {
+
+.fv-content>* {
   pointer-events: auto;
 }
 
@@ -405,21 +407,20 @@ section {
   color: var(--white);
   letter-spacing: 0.1em;
   text-align: left;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0.8em 0.4em;
-  border-radius: 4px;
 }
 
 .fv-heading-line {
   display: block;
 }
+
 .fv-heading .line1 {
-  margin-top: -0.5em; /* ちょっと上に */
+  margin-top: -0.5em;
+  /* ちょっと上に */
 }
+
 .fv-heading .line2 {
-  margin-top: 1.5em; /* ちょっと下に */
+  margin-top: 1.5em;
+  /* ちょっと下に */
 }
 
 
@@ -1307,6 +1308,10 @@ section {
     width: 100%;
   }
 
+  #fv-slides-container div:nth-of-type(1) {
+    background-position: center 55%;
+  }
+
   .fv-bg::after {
     background: linear-gradient(to right, rgba(8, 8, 8, 0.5) 0%, rgba(8, 8, 8, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
   }
@@ -1315,11 +1320,13 @@ section {
     padding: 90px var(--side-pad-pc) 0;
     max-width: none;
   }
+
   .fv-heading {
     top: 25%;
     right: 10%;
     font-size: 45px;
   }
+
   .fv-bottom-left {
     bottom: 10%;
     left: 5%;
@@ -1331,7 +1338,7 @@ section {
     margin-bottom: 24px;
   }
 
-/* .fv-heading PC moved to .fv-content section above */
+  /* .fv-heading PC moved to .fv-content section above */
 
   .fv-sub {
     font-size: 16px;
