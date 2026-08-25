@@ -691,6 +691,11 @@ section {
   color: var(--text-light);
   margin-left: 4px;
 }
+.menu-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 
 /* ========== VOICE ========== */
 #voice {
