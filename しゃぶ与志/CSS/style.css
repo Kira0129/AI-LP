@@ -408,7 +408,7 @@ section {
 }
 
 .fv-heading-line {
-  display: inline-block;
+  display: block;
 }
 .fv-heading .line1 {
   margin-top: -0.5em; /* ちょっと上に */
