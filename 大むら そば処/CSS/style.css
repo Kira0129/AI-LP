@@ -440,7 +440,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
 
 @media (max-width: 600px) {
   html { scroll-padding-top: 60px; }
-  body { padding-top: 60px; font-size: 15px; }
+  body { padding-top: 60px; font-size: 14px; }
   .sp-only { display: block; }
   .site-header { height: 60px; padding: 0 16px; }
   .hd-logo-ja { font-size: 18px; }
