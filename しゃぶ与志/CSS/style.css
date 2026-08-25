@@ -1018,8 +1018,8 @@ section {
   /* 背景画像 */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  /* パララックス効果 */
+  background-attachment: scroll;
+  /* SPではパララックス効果を無効化 */
   opacity: 0.4;
 }
 
@@ -1411,6 +1411,11 @@ section {
   .voice-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+  }
+
+  .message-bg::before {
+    background-attachment: fixed;
+    /* PCではパララックス効果を有効化 */
   }
 
   #message {
