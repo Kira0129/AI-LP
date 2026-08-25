@@ -355,8 +355,8 @@ section { padding: 96px 0; }
 .menu-s-price { background: #fff; padding-left: 12px; color: var(--dark-brown); }
 
 .service-box { background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 32px; text-align: center; margin-bottom: 40px; }
-.service-title { font-size: 20px; font-weight: 900; color: var(--dark-brown); margin-bottom: 24px; display: inline-block; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
-.service-list { list-style: none; text-align: left; display: inline-block; }
+.service-title { font-size: 20px; font-weight: 900; color: var(--dark-brown); margin: 0 auto 24px auto; display: block; width: fit-content; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+.service-list { list-style: none; text-align: left; display: block; width: fit-content; margin: 0 auto; }
 .service-list li { margin-bottom: 12px; font-weight: 700; font-size: 16px; color: var(--charcoal); display: flex; align-items: center; gap: 12px; }
 .service-day { display: inline-block; background: #fff; color: var(--mid-brown); padding: 4px 12px; border-radius: 20px; font-size: 14px; min-width: 120px; text-align: center; border: 1px solid var(--border); }
 
