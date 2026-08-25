@@ -758,14 +758,18 @@ section {
 .message-bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: url('../img/messagebg.jpg'); /* 背景画像 */
   background-size: cover;
   background-position: center;
-  opacity: 0.25;
+  background-attachment: fixed; /* パララックス効果 */
+  opacity: 0.4;
+}
+.message-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--black) 0%, transparent 20%, transparent 80%, var(--black) 100%);
 }
 #message .container {
   position: relative;
