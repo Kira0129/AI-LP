@@ -629,6 +629,21 @@ section {
 #menu {
   position: relative;
   background: var(--black);
+  /* padding等は既存のままであればそのまま維持 */
+}
+#menu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/menubg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+}
+#menu .container {
+  position: relative;
+  z-index: 2;
 }
 .menu-list-wrap {
   display: grid;
