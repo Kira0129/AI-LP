@@ -101,7 +101,25 @@ window.addEventListener('load', () => {
     fvElements.forEach(el => el.classList.add('appear'));
 });
 
-// (GALLERYセクションのスライダー初期化コードは削除されました)
+// GALLERYセクションのスライダー初期化
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.gallery-slider', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            loop: true,
+            speed: 5000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: { slidesPerView: 1.5, spaceBetween: 32 },
+                1024: { slidesPerView: 2.5, spaceBetween: 32 }
+            }
+        });
+    }
+});
 
 // TOPへ戻るボタンと追従CTAの制御
 const backToTopBtn = document.getElementById('back-to-top');
