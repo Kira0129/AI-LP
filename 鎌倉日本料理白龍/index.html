@@ -49,7 +49,7 @@
                     <li><a href="#about" class="hover:text-[var(--gold-accent)] transition-colors">想い</a></li>
                     <li><a href="#kodawari" class="hover:text-[var(--gold-accent)] transition-colors">こだわり</a></li>
                     <li><a href="#menu" class="hover:text-[var(--gold-accent)] transition-colors">お品書き</a></li>
-                    <li><a href="#voice" class="hover:text-[var(--gold-accent)] transition-colors">お客様の声</a></li>
+                    <li><a href="#gallery" class="hover:text-[var(--gold-accent)] transition-colors">Gallery</a></li>
                     <li><a href="#info" class="hover:text-[var(--gold-accent)] transition-colors">店舗情報</a></li>
                 </ul>
             </nav>
@@ -83,7 +83,7 @@
                 <li><a href="#about" class="mobile-link">想い</a></li>
                 <li><a href="#kodawari" class="mobile-link">こだわり</a></li>
                 <li><a href="#menu" class="mobile-link">お品書き</a></li>
-                <li><a href="#voice" class="mobile-link">お客様の声</a></li>
+                <li><a href="#gallery" class="mobile-link">Gallery</a></li>
                 <li><a href="#info" class="mobile-link">店舗情報</a></li>
                 <li class="mt-8">
                     <a href="tel:050-5448-7563"
@@ -513,121 +513,22 @@
             </div>
         </section>
 
-        <!-- VOICE セクション -->
-        <section id="voice" class="bg-[var(--section-bg-alt)] py-24 md:py-32">
+        <!-- GALLERY セクション -->
+        <section id="gallery" class="bg-[var(--section-bg-alt)] py-24 md:py-32">
             <div class="container mx-auto px-6 max-w-6xl">
-                <h2 class="text-2xl md:text-3xl section-title fade-in mb-16">お客様の声<span>VOICE</span></h2>
+                <h2 class="text-2xl md:text-3xl section-title fade-in mb-16">ギャラリー<span>GALLERY</span></h2>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-
-                    <!-- 左カラム：スライダー -->
-                    <div class="w-full relative fade-in h-auto lg:h-full mb-10 lg:mb-0">
-                        <div class="lg:sticky lg:top-32 w-full">
-                            <div
-                                class="aspect-square lg:aspect-[3/4] overflow-hidden shadow-sm border border-gray-200 bg-[var(--gray-dark)]">
-                                <div class="swiper voice-slider w-full h-full">
-                                    <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
-                                        <div class="swiper-slide"><img src="img/voicepic01.jpg" alt="日本料理のイメージ 1"
-                                                class="w-full h-full object-cover"></div>
-                                        <div class="swiper-slide"><img src="img/voicepic02.jpg" alt="日本料理のイメージ 2"
-                                                class="w-full h-full object-cover"></div>
-                                        <div class="swiper-slide"><img src="img/voicepic03.jpg" alt="日本料理のイメージ 3"
-                                                class="w-full h-full object-cover"></div>
-                                    </div>
-                                </div>
+                <div class="w-full relative fade-in">
+                    <div class="aspect-square md:aspect-video lg:aspect-[21/9] overflow-hidden shadow-sm border border-gray-200 bg-[var(--gray-dark)] w-full max-w-5xl mx-auto">
+                        <div class="swiper gallery-slider w-full h-full">
+                            <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+                                <div class="swiper-slide"><img src="img/voicepic01.jpg" alt="日本料理のイメージ 1"
+                                        class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="img/voicepic02.jpg" alt="日本料理のイメージ 2"
+                                        class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="img/voicepic03.jpg" alt="日本料理のイメージ 3"
+                                        class="w-full h-full object-cover"></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- 右カラム：口コミコンテンツ -->
-                    <div class="w-full space-y-8 fade-in flex flex-col">
-
-                        <!-- Review 1 -->
-                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
-                            <h3
-                                class="font-bold text-[var(--text-main)] text-[16px] md:text-lg mb-6 flex justify-between items-center">
-                                高橋薫 様
-                                <span
-                                    class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
-                            </h3>
-                            <div class="relative">
-                                <div
-                                    class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                    <p>法事にて初めて利用させて頂きました。<br>
-                                        コース料理になっていますが、どの料理も美味しかったです。<br>
-                                        普段使い出来る金額ではないですが、美味しい料理は勿論、落ち着いた雰囲気、丁寧な接客で、行事などの際にはお薦めのお店でした。<br>
-                                        ご馳走様でした。</p>
-                                </div>
-                                <button
-                                    class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                    続きを読む
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Review 2 -->
-                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
-                            <h3
-                                class="font-bold text-[var(--text-main)] text-[16px] md:text-lg mb-6 flex justify-between items-center">
-                                ふさふさほびっと。 様
-                                <span
-                                    class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
-                            </h3>
-                            <div class="relative">
-                                <div
-                                    class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                    <p>鎌倉にある和食料理店。<br>
-                                        ミシュランの星を獲得した事があるよう。<br><br>
-                                        鎌倉の中の方にあるため道路は狭く水路もあり大型の車だと冗談じゃなく脱輪する恐れあり。<br>
-                                        普段運転しない方は無理して車では行かない方が良さそう。<br><br>
-                                        決して大きなお店ではないが、落ち着きのある趣で庭に面した部分は大きな窓ガラスを使用して開放感を出している。カウンター、テーブル、個室。<br><br>
-                                        料理はどれも見た目から味まで洗練されていて気持ちよく箸をすすめる事ができる。お酒もこだわり選び抜いた物。<br><br>
-                                        特に蕎麦は板長が工夫を凝らしながら打ったものでとても美味。<br><br>
-                                        是非また足を運んで舌鼓を打ちたい。</p>
-                                </div>
-                                <button
-                                    class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                    続きを読む
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Review 3 -->
-                        <div class="bg-white p-8 md:p-10 shadow-sm border-l-2 border-[var(--gold-accent)] relative">
-                            <h3
-                                class="font-bold text-[var(--text-main)] text-[16px] md:text-lg mb-6 flex justify-between items-center">
-                                ゾウ 様
-                                <span
-                                    class="text-[var(--gold-accent)] tracking-widest text-sm md:text-base">★★★★★</span>
-                            </h3>
-                            <div class="relative">
-                                <div
-                                    class="text-gray-700 leading-loose text-sm review-content line-clamp-3 overflow-hidden transition-all duration-300">
-                                    <p>お料理は細かな工夫と丁寧な仕事に毎回感動させられます。<br><br>
-                                        一回海老のアレルギーと話したら以来ずっと克服した今もお料理の海老は大丈夫か聞いて下さいます。そのくらいお客様の事をしっかり記憶していてくださいます。<br><br>
-                                        また来年、楽しみにして伺います。<br>
-                                        ごちそうさまでした。</p>
-                                </div>
-                                <button
-                                    class="read-more-btn mt-6 text-[var(--gold-accent)] text-xs font-bold tracking-widest border-b border-[var(--gold-accent)] pb-1 hover:opacity-70 transition-opacity self-start">
-                                    続きを読む
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Google口コミリンクボタン -->
-                        <div class="mt-8 flex justify-center w-full">
-                            <a href="https://hakuryu-kamakura.happytry.fun/jump01.html"
-                                target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center px-8 py-4 bg-[var(--gold-accent)] text-white text-sm md:text-base font-bold tracking-widest hover:opacity-90 transition-opacity duration-300 rounded-sm shadow-md">
-                                その他の口コミはこちら
-                                <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                    </path>
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>

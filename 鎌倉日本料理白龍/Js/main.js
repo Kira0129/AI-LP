@@ -101,41 +101,10 @@ window.addEventListener('load', () => {
     fvElements.forEach(el => el.classList.add('appear'));
 });
 
-// VOICEセクションの続きを読むトグル
-document.addEventListener('DOMContentLoaded', () => {
-    const readMoreBtns = document.querySelectorAll('.read-more-btn');
-    
-    // 少し遅延させてから高さを判定する（フォントの読み込み等を考慮）
-    setTimeout(() => {
-        readMoreBtns.forEach(btn => {
-            const content = btn.previousElementSibling;
-            
-            // 内容の実際の高さ（scrollHeight）と、3行制限時の高さ（clientHeight）を比較
-            if (content.scrollHeight <= content.clientHeight) {
-                // 3行以下ならボタンを隠し、制限クラスも外す（念のため）
-                btn.style.display = 'none';
-                content.classList.remove('line-clamp-3');
-            }
-            
-            btn.addEventListener('click', function() {
-                if (content.classList.contains('line-clamp-3')) {
-                    // 開く
-                    content.classList.remove('line-clamp-3');
-                    this.innerText = '閉じる';
-                } else {
-                    // 閉じる
-                    content.classList.add('line-clamp-3');
-                    this.innerText = '続きを読む';
-                }
-            });
-        });
-    }, 100);
-});
-
-// VOICEセクションのスライダー初期化
+// GALLERYセクションのスライダー初期化
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof Swiper !== 'undefined') {
-        new Swiper('.voice-slider', {
+        new Swiper('.gallery-slider', {
             slidesPerView: 1.2,
             spaceBetween: 20,
             loop: true,
@@ -145,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 disableOnInteraction: false,
             },
             breakpoints: {
-                768: { slidesPerView: 1.2, spaceBetween: 32 }
+                768: { slidesPerView: 1.5, spaceBetween: 32 },
+                1024: { slidesPerView: 2.5, spaceBetween: 32 }
             }
         });
     }
