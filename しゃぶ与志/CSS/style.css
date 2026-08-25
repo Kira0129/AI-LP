@@ -453,14 +453,7 @@ section {
 
 /* fv-heading moved above */
 
-.fv-divider {
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fvFadeUp 1s ease forwards 0.5s;
-}
+
 
 .fv-sub {
   font-family: 'Noto Serif JP', serif;
