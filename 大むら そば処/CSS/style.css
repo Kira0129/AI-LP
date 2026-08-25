@@ -310,7 +310,7 @@ img {
 
 section { padding: 96px 0; }
 .section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: var(--mid-brown); margin-bottom: 16px; display: block; font-family: serif; }
-.section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: var(--dark-brown); line-height: 1.5; letter-spacing: 0.08em; }
+.section-title { font-size: 30px; font-weight: 900; color: var(--dark-brown); line-height: 1.5; letter-spacing: 0.08em; }
 .section-desc { line-height: 2; color: var(--charcoal); letter-spacing: 0.06em; margin-top: 24px; }
 .divider { width: 50px; height: 2px; background: var(--gold); margin: 24px auto; }
 .centered { text-align: center; }
@@ -441,6 +441,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
 @media (max-width: 600px) {
   html { scroll-padding-top: 60px; }
   body { padding-top: 60px; font-size: 14px; }
+  .section-title { font-size: 25px; }
   .sp-only { display: block; }
   .site-header { height: 60px; padding: 0 16px; }
   .hd-logo-ja { font-size: 18px; }
