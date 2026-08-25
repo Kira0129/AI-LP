@@ -1132,11 +1132,53 @@ section {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ========== FLOATING CTA (SP) ========== */
+#floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#floating-cta .floating-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  gap: 8px;
+}
+
+#floating-cta .floating-btn svg {
+  flex-shrink: 0;
+}
+
+#floating-cta .btn-accent {
+  background: var(--accent);
+}
+
+#floating-cta .btn-brown {
+  background: var(--brown);
+}
+
+@media (min-width: 768px) {
+  #floating-cta {
+    display: none;
+  }
+}
+
 /* ========== BACK TO TOP ========== */
 #back-to-top {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 80px;
   width: 48px;
   height: 48px;
   background: var(--black-light);
