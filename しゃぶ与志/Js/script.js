@@ -1,3 +1,8 @@
+// ========== 右クリック（コンテキストメニュー）禁止 ==========
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
 // ========== HAMBURGER MENU ==========
 const hamburger = document.getElementById('hamburger-btn');
 const fullscreenMenu = document.getElementById('fullscreen-menu');
