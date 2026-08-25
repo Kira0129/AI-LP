@@ -737,9 +737,33 @@ section {
   height: 1px;
   background: var(--accent);
 }
+.voice-text-container {
+  display: flex;
+  flex-direction: column;
+}
 .voice-text {
   color: var(--text-main);
   line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.voice-text.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+.voice-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  padding: 0;
+  margin-top: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  align-self: flex-start;
+  display: none; /* デフォルトは非表示。JSで3行以上か判定して表示 */
 }
 
 /* ========== MESSAGE ========== */

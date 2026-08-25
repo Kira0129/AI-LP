@@ -82,3 +82,34 @@ if (slidesContainer) {
     }
   }
 }
+
+// ========== VOICE READ MORE ==========
+document.addEventListener('DOMContentLoaded', () => {
+  // フォントの読み込みや描画の遅延に対応するため、少し遅らせて判定
+  setTimeout(() => {
+    const textContainers = document.querySelectorAll('.voice-text-container');
+    
+    textContainers.forEach(container => {
+      const textEl = container.querySelector('.voice-text');
+      const btnEl = container.querySelector('.voice-more-btn');
+      
+      if (textEl && btnEl) {
+        // スクロール高さが表示高さより大きければ3行以上と判定
+        if (textEl.scrollHeight > textEl.clientHeight) {
+          btnEl.style.display = 'inline-block';
+          
+          btnEl.addEventListener('click', () => {
+            textEl.classList.toggle('expanded');
+            if (textEl.classList.contains('expanded')) {
+              btnEl.textContent = '閉じる';
+              btnEl.setAttribute('aria-expanded', 'true');
+            } else {
+              btnEl.textContent = '続きを読む';
+              btnEl.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      }
+    });
+  }, 100);
+});
