@@ -356,6 +356,10 @@ section {
   z-index: 0;
 }
 
+#fv-slides-container div:nth-of-type(3) {
+  background-position: 45% center;
+}
+
 .fv-bg::after {
   content: '';
   position: absolute;
@@ -1310,6 +1314,10 @@ section {
 
   #fv-slides-container div:nth-of-type(1) {
     background-position: center 55%;
+  }
+
+  #fv-slides-container div:nth-of-type(3) {
+    background-position: center center;
   }
 
   .fv-bg::after {
