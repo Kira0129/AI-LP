@@ -765,6 +765,11 @@ section {
   align-self: flex-start;
   display: none; /* デフォルトは非表示。JSで3行以上か判定して表示 */
 }
+.voice-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 
 /* ========== MESSAGE ========== */
 #message {
