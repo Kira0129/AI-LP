@@ -28,13 +28,21 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 fadeEls.forEach(el => observer.observe(el));
 
-// ========== BACK TO TOP ==========
+// ========== SCROLL VISIBILITY (BACK TO TOP & FLOATING CTA) ==========
 const backToTop = document.getElementById('back-to-top');
+const floatingCta = document.getElementById('floating-cta');
+const fvSection = document.getElementById('fv');
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add('visible');
+  // FVの高さの約60%（またはフォールバックとして300px）を超えたら表示
+  const threshold = fvSection ? fvSection.offsetHeight * 0.6 : 300;
+  
+  if (window.scrollY > threshold) {
+    if (backToTop) backToTop.classList.add('visible');
+    if (floatingCta) floatingCta.classList.add('visible');
   } else {
-    backToTop.classList.remove('visible');
+    if (backToTop) backToTop.classList.remove('visible');
+    if (floatingCta) floatingCta.classList.remove('visible');
   }
 });
 
