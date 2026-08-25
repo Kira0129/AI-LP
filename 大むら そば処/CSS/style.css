@@ -314,7 +314,7 @@ section { padding: 96px 0; }
 }
 
 .about-section { background: var(--warm-white); background-image: radial-gradient(rgba(140, 94, 60, 0.1) 1.5px, transparent 1.5px); background-size: 24px 24px; }
-.about-inner { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+.about-inner { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
 .about-frame { background: #fff; border: 1px solid var(--dark-brown); padding: 6px; box-shadow: 8px 8px 0px rgba(92, 58, 33, 0.1); border-radius: 4px; }
 .about-frame-inner { border: 1px dashed var(--border); padding: 64px 48px; display: flex; flex-direction: column; align-items: center; border-radius: 2px;}
 
@@ -326,7 +326,7 @@ section { padding: 96px 0; }
 .about-lead { font-size: clamp(18px, 2vw, 22px); font-weight: 900; color: var(--dark-brown); letter-spacing: 0.1em; margin-bottom: 24px; line-height: 1.6; border-bottom: 2px solid var(--cream); padding-bottom: 16px;}
 
 .features-section { background: var(--cream); }
-.features-inner { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+.features-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 .feature-list { margin-top: 72px; display: flex; flex-direction: column; gap: 80px; }
 .feature-item { display: flex; align-items: center; gap: 64px; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
 .feature-item:nth-child(even) { flex-direction: row-reverse; }
@@ -338,7 +338,7 @@ section { padding: 96px 0; }
 .feature-title { font-size: clamp(20px, 2.5vw, 26px); font-weight: 900; color: var(--dark-brown); line-height: 1.5; margin-bottom: 16px; position: relative; z-index: 1; }
 
 .menu-section { background: var(--warm-white); }
-.menu-inner { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+.menu-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 .menu-wrapper { background: #fff; border-radius: 8px; padding: 56px; margin-top: 48px; box-shadow: 0 10px 30px rgba(92, 58, 33, 0.05); border: 1px solid var(--cream); }
 
 .menu-highlight-list { display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
@@ -376,13 +376,13 @@ section { padding: 96px 0; }
 }
 
 .voice-section { background: var(--cream); padding: 96px 0; }
-.voice-inner { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+.voice-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 .voice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
 .voice-icon { width: 48px; height: 48px; background: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; border: 1px solid var(--border); color: var(--dark-brown); }
 .voice-text { font-size: 15px; line-height: 1.8; color: var(--charcoal); }
 
 .message-section { background: var(--warm-white); }
-.message-inner { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+.message-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 .message-content { display: flex; align-items: center; gap: 64px; }
 .message-image { width: 45%; border-radius: 8px; overflow: hidden; border: 8px solid var(--cream); flex-shrink: 0; box-shadow: 0 8px 24px rgba(92, 58, 33, 0.08); }
 .message-image img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; display: block; }
@@ -397,7 +397,7 @@ section { padding: 96px 0; }
 .btn-cta-tel:hover, .btn-cta-web:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
 
 .access-section { background: var(--warm-white); padding: 96px 0; }
-.access-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.access-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .access-row { display: flex; gap: 24px; padding: 20px 0; border-bottom: 1px dashed var(--border); font-weight: 500; }
 .access-label { color: var(--mid-brown); font-weight: bold; min-width: 80px; }
 .map-container { height: 400px; border-radius: 8px; overflow: hidden; border: 4px solid var(--cream); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
