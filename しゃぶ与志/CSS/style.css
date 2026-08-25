@@ -1265,8 +1265,8 @@ section {
   }
   .fv-heading {
     top: 25%;
-    right: 15%;
-    font-size: clamp(40px, 4.5vw, 64px);
+    right: 10%;
+    font-size: 45px;
   }
   .fv-bottom-left {
     bottom: 15%;
