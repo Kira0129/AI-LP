@@ -8,6 +8,15 @@
     <meta name="description"
         content="大阪市旭区にある「清香すし」は、職人が一貫ずつ握る寿司を気軽に楽しめるお店です。旬の魚介を使った寿司や一品料理を、落ち着いた和の空間でゆったりとお楽しみください。">
 
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="清香すし | 旬の寿司を、もっと気軽に">
+    <meta property="og:description" content="大阪市旭区にある「清香すし」は、職人が一貫ずつ握る寿司を気軽に楽しめるお店です。旬の魚介を使った寿司や一品料理を、落ち着いた和の空間でゆったりとお楽しみください。">
+    <meta property="og:url" content="https://seika-sushi.happytry.fun/">
+    <meta property="og:site_name" content="清香すし">
+    <meta property="og:image" content="https://seika-sushi.happytry.fun/img/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +50,15 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
 </head>
 
 <body oncontextmenu="return false;">
@@ -50,21 +68,21 @@
     ============================================= -->
     <header class="site-header">
         <a href="#" class="hd-logo">
-            <img src="img/logo.jpg" alt="清香すし ロゴ" class="h-16 w-auto object-contain mix-blend-multiply">
+            <img src="img/logo.jpg" alt="清香すし ロゴ" class="h-12 md:h-16 w-auto object-contain mix-blend-multiply">
         </a>
 
         <nav class="hd-nav">
             <a href="#about" class="active">ABOUT</a>
             <a href="#features">4つの特徴</a>
-            <a href="#recommend">おすすめMENU</a>
-            <a href="#menu">MENU</a>
-            <a href="#message">MESSAGE</a>
+            <a href="#recommend">おすすめ料理</a>
+            <a href="#menu">おしながき</a>
+            <a href="#message">ご挨拶</a>
             <a href="#access">店舗情報</a>
         </nav>
 
         <div class="hd-actions">
             <a href="tel:050-5448-7087" class="hd-btn-insta">お電話</a>
-            <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank"
+            <a href="https://seika-sushi.happytry.fun/jump01.html" target="_blank"
                 class="hd-btn-reserve">WEB予約</a>
         </div>
 
@@ -78,15 +96,15 @@
             <nav class="flex flex-col gap-2 mb-10">
                 <a href="#about" class="sp-menu-link">ABOUT</a>
                 <a href="#features" class="sp-menu-link">4つの特徴</a>
-                <a href="#recommend" class="sp-menu-link">おすすめMENU</a>
-                <a href="#menu" class="sp-menu-link">MENU</a>
-                <a href="#message" class="sp-menu-link">MESSAGE</a>
+                <a href="#recommend" class="sp-menu-link">おすすめ料理</a>
+                <a href="#menu" class="sp-menu-link">おしながき</a>
+                <a href="#message" class="sp-menu-link">ご挨拶</a>
                 <a href="#access" class="sp-menu-link">店舗情報</a>
             </nav>
             <div class="flex flex-col gap-4 items-center">
                 <a href="tel:050-5448-7087"
                     class="w-full py-4 border-2 border-brand-red text-brand-red font-bold tracking-[0.15em] rounded text-sm">お電話でお問い合わせ</a>
-                <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank"
+                <a href="https://seika-sushi.happytry.fun/jump01.html" target="_blank"
                     class="w-full py-4 bg-brand-red text-white font-bold tracking-[0.15em] rounded text-sm">WEB予約</a>
             </div>
         </div>
@@ -97,13 +115,6 @@
        FV (HERO) SECTION
     ============================================= -->
     <div class="fv">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-
         <div class="fv-body">
             <div class="fv-sp-text">
                 <div class="fv-left-text">
@@ -116,7 +127,7 @@
                     <div class="fv-catchcopy-wrap">
                         <h1 class="fv-main-copy">
                             <span class="em">旬の寿司を、</span><br>
-                            もっと気軽に
+                            <span class="sub">もっと気軽に</span>
                         </h1>
                     </div>
                 </div>
@@ -125,20 +136,16 @@
 
         <div class="fv-cards-layer" id="fvCardsLayer">
             <div class="fv-card pos-center" data-idx="0">
-                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1200&auto=format&fit=crop"
-                    alt="新鮮な握り寿司">
+                <img src="img/fv01.jpg" alt="新鮮な握り寿司">
             </div>
             <div class="fv-card pos-topright" data-idx="1">
-                <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1000&auto=format&fit=crop"
-                    alt="板前">
+                <img src="img/fv02.jpg" alt="板前">
             </div>
             <div class="fv-card pos-botleft" data-idx="2">
-                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1000&auto=format&fit=crop"
-                    alt="巻き寿司">
+                <img src="img/fv03.jpg" alt="巻き寿司">
             </div>
             <div class="fv-card pos-hidden" data-idx="3">
-                <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?q=80&w=1000&auto=format&fit=crop"
-                    alt="和食">
+                <img src="img/fv04.jpg" alt="和食">
             </div>
         </div>
 
@@ -156,8 +163,7 @@
     ============================================= -->
     <section id="about" class="concept">
         <div class="concept-image">
-            <img src="https://images.unsplash.com/photo-1558235022-f949c25f4838?q=80&w=1200&auto=format&fit=crop"
-                alt="お寿司屋のカウンター" loading="lazy">
+            <img src="img/aboutpic.jpg" alt="お寿司屋のカウンター" loading="lazy">
         </div>
         <div class="concept-text reveal">
             <div class="flex items-center gap-3 mb-4 text-brand-red">
@@ -178,7 +184,7 @@
     <div class="layout-phase-2">
 
         <!-- Problem / おすすめ -->
-        <section id="problem" class="break-out-full-width py-20 lg:py-32 relative bg-brand-gold/10">
+        <section id="problem" class="break-out-full-width py-20 lg:py-32 relative bg-problem">
             <div class="mb-12 lg:mb-20 fade-in-up relative z-10 w-full max-w-7xl mx-auto px-6">
                 <div class="section-header-jp">
                     <span class="en-title">RECOMMEND</span>
@@ -189,32 +195,32 @@
 
             <div class="max-w-6xl mx-auto px-6 relative z-10">
                 <div
-                    class="bg-white p-8 lg:p-12 rounded-xl shadow-sm border border-brand-gold/30 relative mt-6 fade-in-up">
+                    class="bg-white/85 p-4 lg:p-12 rounded-xl shadow-sm border border-brand-gold/30 relative mt-6 fade-in-up">
                     <ul
                         class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-10 text-sm lg:text-base text-brand-purple tracking-widest leading-loose font-medium">
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
                             <span>気軽に入れる寿司屋を探している方</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
                             <span>旬の魚をリーズナブルに楽しみたい方</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
-                            <span>寿司だけでなく一品料理も味わいたい方</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
+                            <span>寿司だけでなく一品料理も<br class="md:hidden">味わいたい方</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
-                            <span>仕事帰りや遅い時間に食事を楽しみたい方</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
+                            <span>仕事帰りや遅い時間に食事を<br class="md:hidden">楽しみたい方</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
-                            <span>お一人でゆっくり寿司やお酒を楽しみたい方</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
+                            <span>お一人でゆっくり寿司やお酒を<br class="md:hidden">楽しみたい方</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-red font-bold mt-1">✓</span>
-                            <span>家族や友人と落ち着いて食事をしたい方</span>
+                            <span class="text-brand-red mt-[2px] text-lg leading-none">✿</span>
+                            <span>家族や友人と落ち着いて食事を<br class="md:hidden">したい方</span>
                         </li>
                     </ul>
                 </div>
@@ -239,12 +245,11 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-24 lg:gap-32 max-w-7xl mx-auto px-6 lg:px-0 relative z-10">
+            <div class="flex flex-col gap-16 lg:gap-20 max-w-7xl mx-auto px-6 lg:px-0 relative z-10">
                 <!-- 01 -->
                 <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
-                    <div class="w-full lg:w-1/2 aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1615361200141-f45040f367be?q=80&w=800&auto=format&fit=crop"
-                            alt="新鮮な魚介" class="w-full h-full object-cover rounded shadow-sm">
+                    <div class="w-full lg:w-1/2 img-4-3">
+                        <img src="img/serpic01.jpg" alt="新鮮な魚介" class="w-full h-full object-cover rounded shadow-sm">
                     </div>
                     <div class="w-full lg:w-1/2">
                         <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">01</span>
@@ -260,9 +265,9 @@
 
                 <!-- 02 -->
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
-                    <div class="w-full lg:w-1/2 aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1625052980838-8ff3908b8b0e?q=80&w=800&auto=format&fit=crop"
-                            alt="リーズナブルな寿司" class="w-full h-full object-cover rounded shadow-sm">
+                    <div class="w-full lg:w-1/2 img-4-3">
+                        <img src="img/serpic02.jpg" alt="リーズナブルな寿司"
+                            class="w-full h-full object-cover rounded shadow-sm">
                     </div>
                     <div class="w-full lg:w-1/2">
                         <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">02</span>
@@ -278,15 +283,14 @@
 
                 <!-- 03 -->
                 <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 fade-in-up">
-                    <div class="w-full lg:w-1/2 aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1574211110052-19e917d056c7?q=80&w=800&auto=format&fit=crop"
-                            alt="柔軟な対応" class="w-full h-full object-cover rounded shadow-sm">
+                    <div class="w-full lg:w-1/2 img-4-3">
+                        <img src="img/serpic03.jpg" alt="柔軟な対応" class="w-full h-full object-cover rounded shadow-sm">
                     </div>
                     <div class="w-full lg:w-1/2">
                         <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">03</span>
                         <h3
                             class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">
-                            お好みに合わせた柔軟な対応</h3>
+                            お好みに合わせた<br class="md:hidden">柔軟な対応</h3>
                         <p class="text-brand-gray leading-loose tracking-wider text-justify">
                             シャリを小さめにしたい、わさびを抜いてほしい、大きなネタは食べやすくカットしてほしいなど、ご希望に合わせて対応します。<br>
                             苦手なネタがある場合も、可能な範囲で変更いたします。
@@ -296,15 +300,14 @@
 
                 <!-- 04 -->
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 fade-in-up">
-                    <div class="w-full lg:w-1/2 aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=800&auto=format&fit=crop"
-                            alt="お持ち帰り" class="w-full h-full object-cover rounded shadow-sm">
+                    <div class="w-full lg:w-1/2 img-4-3">
+                        <img src="img/serpic04.jpg" alt="お持ち帰り" class="w-full h-full object-cover rounded shadow-sm">
                     </div>
                     <div class="w-full lg:w-1/2">
                         <span class="block text-brand-red tracking-widest mb-2 text-sm font-bold">04</span>
                         <h3
                             class="text-2xl lg:text-3xl mb-6 tracking-widest font-bold leading-relaxed text-brand-charcoal">
-                            店内でも、ご自宅でも楽しめる</h3>
+                            店内でも、<br class="md:hidden">ご自宅でも楽しめる</h3>
                         <p class="text-brand-gray leading-loose tracking-wider text-justify mb-4">
                             落ち着いた和の空間でゆっくり過ごせるほか、お持ち帰りにも対応しています。<br>
                             ご自宅で楽しみたい方や、ご家族への持ち帰りにもおすすめです。
@@ -331,9 +334,8 @@
 
             <div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-24 px-6 lg:px-0">
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center fade-in-up group">
-                    <div class="w-full lg:w-1/2 aspect-[4/3] overflow-hidden rounded shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1626200419109-31518f8e79cb?q=80&w=1000&auto=format&fit=crop"
-                            alt="お料理厳選コース"
+                    <div class="w-full lg:w-1/2 img-4-3 overflow-hidden rounded shadow-sm">
+                        <img src="img/recomemenupic.jpg" alt="お料理厳選コース"
                             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
                     </div>
                     <div
@@ -369,7 +371,7 @@
 
         <!-- MENU Section -->
         <section id="menu" class="break-out-full-width py-20 lg:py-32 bg-brand-gold/10">
-            <div class="mb-16 lg:mb-20 fade-in-up relative z-10 w-full max-w-7xl mx-auto px-6">
+            <div class="mb-16 lg:mb-24 fade-in-up relative z-10 w-full max-w-7xl mx-auto px-6">
                 <div class="section-header-jp">
                     <span class="en-title">MENU</span>
                     <div class="v-line"></div>
@@ -382,13 +384,14 @@
                 <!-- Highlighted Item -->
                 <div
                     class="fade-in-up bg-white rounded shadow-sm border border-brand-gold/30 flex flex-col md:flex-row overflow-hidden mb-16 group">
-                    <div class="w-full md:w-5/12 overflow-hidden aspect-[4/3] md:aspect-auto">
+                    <div class="w-full md:w-5/12 overflow-hidden img-4-3 md:aspect-auto">
                         <img src="img/menupic.jpg" alt="清香握り盛り合わせ"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div class="w-full md:w-7/12 p-8 lg:p-12 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-4 border-b border-brand-gold/30 pb-4 gap-4">
-                            <h3 class="font-bold text-2xl tracking-wide text-brand-charcoal">清香握り盛り合わせ</h3>
+                            <h3 class="font-bold text-2xl tracking-wide text-brand-charcoal">清香握り<br
+                                    class="md:hidden">盛り合わせ</h3>
                             <p class="text-brand-red font-bold text-2xl whitespace-nowrap">1,188円</p>
                         </div>
                         <p class="text-brand-gray leading-loose mb-4">
@@ -551,13 +554,21 @@
 
                 </div>
                 <div class="text-right mt-6 text-sm text-brand-gray/80 fade-in-up">※価格はすべて税込です。</div>
+
+                <div class="mt-12 text-center fade-in-up">
+                    <a href="https://seika-sushi.happytry.fun/jump02.html" target="_blank" rel="noopener noreferrer"
+                        class="inline-block px-10 py-4 bg-brand-charcoal hover:bg-brand-red text-white font-bold tracking-[0.2em] rounded transition-colors shadow-sm">
+                        その他料理はこちら
+                    </a>
+                </div>
             </div>
         </section>
 
 
         <!-- CTA Section -->
-        <section class="break-out-full-width py-24 bg-brand-charcoal text-brand-white">
-            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8 justify-center items-center text-center">
+        <section class="break-out-full-width py-24 bg-brand-charcoal text-brand-white bg-wafu-pattern relative z-0">
+            <div
+                class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8 justify-center items-center text-center relative z-10">
                 <div class="w-full md:w-1/2">
                     <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">お電話でのご予約・お問い合わせ</p>
                     <a href="tel:050-5448-7087"
@@ -565,7 +576,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <p class="text-sm tracking-[0.2em] mb-4 text-brand-gold font-bold">ホットペッパーグルメからのお席予約</p>
-                    <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank"
+                    <a href="https://seika-sushi.happytry.fun/jump01.html" target="_blank"
                         class="block w-full py-5 bg-brand-red hover:bg-white hover:text-brand-red text-white text-lg font-bold tracking-[0.2em] transition-colors rounded">
                         WEB予約はこちら
                     </a>
@@ -575,7 +586,7 @@
 
         <!-- Message Section -->
         <section id="message"
-            class="break-out-full-width py-24 lg:py-48 relative text-brand-charcoal overflow-hidden border-y border-brand-gold/20">
+            class="break-out-full-width py-20 lg:py-32 relative text-brand-charcoal overflow-hidden border-y border-brand-gold/20 bg-message">
             <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl z-0"></div>
             <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-red/5 rounded-full blur-3xl z-0"></div>
 
@@ -622,7 +633,7 @@
             <div class="w-full px-6 lg:px-16 fade-in-up">
                 <div
                     class="flex flex-col lg:flex-row gap-12 lg:gap-0 bg-white rounded shadow-sm border border-brand-gold/30 overflow-hidden">
-                    <div class="w-full lg:w-1/2 space-y-10 p-8 lg:p-12">
+                    <div class="w-full lg:w-1/2 space-y-10 p-6 lg:p-12">
                         <div>
                             <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Shop</p>
                             <h3
@@ -631,7 +642,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Address</p>
-                            <p class="text-base tracking-wider leading-loose font-medium text-brand-purple">
+                            <p class="text-sm lg:text-base tracking-wider leading-loose font-medium text-brand-purple">
                                 〒535-0002<br>大阪府大阪市旭区大宮４丁目２０−２６
                             </p>
                         </div>
@@ -645,7 +656,8 @@
                         <div class="flex flex-col gap-6">
                             <div>
                                 <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Open</p>
-                                <p class="text-base tracking-wider leading-relaxed font-medium text-brand-purple">
+                                <p
+                                    class="text-sm lg:text-base tracking-wider leading-relaxed font-medium text-brand-purple">
                                     水曜〜土曜日 17:00〜27:00 (L.O 26:30)<br>
                                     日、月曜日 17:00〜24:00 (L.O 23:30)
                                 </p>
@@ -653,16 +665,17 @@
                             <div>
                                 <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Close
                                 </p>
-                                <p class="text-base tracking-wider font-medium text-brand-purple">火曜日</p>
+                                <p class="text-sm lg:text-base tracking-wider font-medium text-brand-purple">火曜日</p>
                             </div>
                             <div>
                                 <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">Payment
                                 </p>
-                                <p class="text-base tracking-wider font-medium text-brand-purple">現金、カード、電子決済</p>
+                                <p class="text-sm lg:text-base tracking-wider font-medium text-brand-purple">現金、カード、電子決済
+                                </p>
                             </div>
                             <div>
                                 <p class="text-[10px] text-brand-red tracking-[0.4em] mb-2 font-bold uppercase">SNS</p>
-                                <a href="https://www.instagram.com/seika.sushi/" target="_blank"
+                                <a href="https://seika-sushi.happytry.fun/jump03.html" target="_blank"
                                     class="inline-block p-2 border border-brand-gold/50 rounded-full hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -703,7 +716,7 @@
             <span class="text-[10px] mb-1 tracking-widest font-bold">お電話</span>
             <span class="font-bold text-sm tracking-wide">050-5448-7087</span>
         </a>
-        <a href="https://www.hotpepper.jp/strJ004660358/?reserveCondModalShow=true" target="_blank"
+        <a href="https://seika-sushi.happytry.fun/jump01.html" target="_blank"
             class="w-1/2 bg-brand-red py-4 text-white flex flex-col justify-center items-center">
             <span class="text-[10px] mb-1 tracking-widest font-bold">お席を予約</span>
             <span class="font-bold text-sm tracking-wide">Reserve</span>

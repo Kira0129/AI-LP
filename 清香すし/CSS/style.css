@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+.img-4-3 {
+    height: 250px;
+}
+
+@media (min-width: 1024px) {
+    .img-4-3 {
+        height: 350px;
+        aspect-ratio: auto;
+    }
+}
+
 :root {
     --cream: #F4EDE0;
     --warm-white: #F4EDE0;
@@ -423,10 +434,21 @@ h3,
     position: relative;
     width: 100%;
     min-height: calc(100vh - 72px);
-    background: var(--warm-white);
+    background-image: url('../img/fvbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.fv::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(244, 237, 224, 0.5);
+    z-index: 0;
 }
 
 .petal {
@@ -496,6 +518,28 @@ h3,
     50% {
         transform: translateY(-14px) rotate(15deg);
         opacity: 1;
+    }
+}
+
+.bg-wafu-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C8A375' stroke-width='1.5' stroke-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='30' /%3E%3Ccircle cx='0' cy='0' r='30' /%3E%3Ccircle cx='60' cy='0' r='30' /%3E%3Ccircle cx='0' cy='60' r='30' /%3E%3Ccircle cx='60' cy='60' r='30' /%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    background-repeat: repeat;
+}
+
+.bg-problem {
+    background-image: linear-gradient(rgba(244, 237, 224, 0.5), rgba(244, 237, 224, 0.5)), url('../img/worrybg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bg-message {
+    background-image: linear-gradient(rgba(244, 237, 224, 0.75), rgba(244, 237, 224, 0.75)), url('../img/messagebg.jpg');
+    background-size: cover;
+    background-position: 45% center;
+}
+@media (min-width: 1024px) {
+    .bg-message {
+        background-position: center;
     }
 }
 .bg-recommend {
@@ -578,9 +622,9 @@ h3,
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4), 0px 0px 12px rgba(255, 255, 255, 0.7);
     font-family: 'Yuji Syuku', serif;
     writing-mode: vertical-rl;
-    font-size: clamp(32px, 5vw, 55px);
+    font-size: clamp(40px, 6vw, 72px);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.2;
     letter-spacing: 0.1em;
     color: var(--dark-brown);
 }
@@ -591,6 +635,12 @@ h3,
     display: inline-block;
     margin-top: 0;
     margin-right: 8px;
+    transform: translateY(-30px);
+}
+
+.fv-main-copy .sub {
+    display: inline-block;
+    transform: translateY(30px);
 }
 
 .fv-cards-layer {
@@ -727,7 +777,7 @@ h3,
         background: #eee;
         margin-top: 0;
         z-index: 8;
-        order: 2;
+        order: 1;
     }
 
     .fv-sp-text {
@@ -736,12 +786,11 @@ h3,
 
     .fv-left-text {
         order: 3;
-        padding: 24px 5px;
+        padding: 24px 16px 40px;
         align-items: center;
         width: 100%;
         height: auto;
         flex-shrink: 0;
-        padding-top: 0;
     }
 
     .fv-vertical-copy {
@@ -758,12 +807,11 @@ h3,
     }
 
     .fv-right-col {
-        order: 1;
-        padding: 24px 5px 12px;
+        order: 2;
+        padding: 48px 16px 10px;
         align-items: center;
         width: 100%;
         height: auto;
-        flex: 1;
         justify-content: center;
     }
 
@@ -773,14 +821,20 @@ h3,
 
     .fv-main-copy {
         writing-mode: horizontal-tb;
-        font-size: 26px;
+        font-size: 38px;
         text-align: center;
-        line-height: 1.6;
+        line-height: 1.1;
     }
 
     .fv-main-copy .em {
-        margin-top: 8px;
+        margin-top: 0;
         margin-right: 0;
+        transform: translateY(-8px);
+    }
+
+    .fv-main-copy .sub {
+        display: inline-block;
+        transform: translateY(8px);
     }
 
     .fv-dot-row {
