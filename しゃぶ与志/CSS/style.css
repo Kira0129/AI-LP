@@ -403,7 +403,7 @@ section {
   right: var(--side-pad-sp);
   writing-mode: vertical-rl;
   font-family: 'Noto Serif JP', serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1.6;
   opacity: 0;
