@@ -487,7 +487,24 @@ section {
 .cta-btn.brown:hover { background: var(--dark); }
 
 /* ========== ABOUT ========== */
-#about { background: var(--black); }
+#about {
+  position: relative;
+  background: var(--black);
+}
+#about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/menubg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+}
+#about .container {
+  position: relative;
+  z-index: 2;
+}
 .about-inner {
   display: grid;
   grid-template-columns: 1fr;
