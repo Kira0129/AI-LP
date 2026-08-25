@@ -386,28 +386,6 @@ section {
   text-align: left;
   padding: 40px var(--side-pad-sp);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.fv-content-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.fv-logo {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 24px;
-  opacity: 0;
-  animation: fvFadeUp 1s ease forwards 0.2s;
-}
-
-.fv-content-right {
-  display: flex;
-  justify-content: flex-end;
 }
 
 @keyframes fvFadeUp {
@@ -444,27 +422,34 @@ section {
   background: var(--accent);
 }
 
+.fv-logo-wrap {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9); /* 見えやすいように白背景 */
+  padding: 16px 24px;
+  border: 3px solid #ffffff; /* 白枠 */
+  border-radius: 4px;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fvFadeUp 1s ease forwards 0.2s;
+}
+
+.fv-logo {
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
 .fv-heading {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(28px, 7vw, 48px);
   font-weight: 600;
-  line-height: 2.2; /* ブロック背景があるため行間を広めにとる */
+  line-height: 1.4;
+  margin-bottom: 24px;
   opacity: 0;
   animation: fvFadeUp 1s ease forwards 0.3s;
   color: var(--white);
-  letter-spacing: 0.1em;
-  writing-mode: vertical-rl;
+  letter-spacing: 0.05em;
 }
-
-.fv-heading-line {
-  background-color: #a31d1d; /* 深みのある赤 */
-  padding: 16px 8px;
-  display: inline-block;
-}
-
-.fv-heading .line1 { margin-top: 0; }
-.fv-heading .line2 { margin-top: 2.5em; }
-.fv-heading .line3 { margin-top: 5em; }
 
 .fv-divider {
   width: 40px;
@@ -1274,15 +1259,8 @@ section {
 
   .fv-content {
     padding: 0 var(--side-pad-pc);
-    max-width: 1000px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* または flex-end */
+    max-width: 900px;
   }
-  .fv-logo {
-    max-width: 300px;
-  }
-
 
   .fv-catch-en {
     font-size: 14px;
@@ -1290,7 +1268,8 @@ section {
   }
 
   .fv-heading {
-    font-size: clamp(36px, 4vw, 56px);
+    font-size: clamp(40px, 5vw, 64px);
+    margin-bottom: 32px;
   }
 
   .fv-sub {
