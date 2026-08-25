@@ -1124,7 +1124,7 @@ section {
   position: relative;
   z-index: 2;
   background: #050505;
-  padding: 60px var(--side-pad-sp) 40px;
+  padding: 60px var(--side-pad-sp) 100px;
   text-align: center;
 }
 
@@ -1526,5 +1526,9 @@ section {
     bottom: 40px;
     width: 56px;
     height: 56px;
+  }
+
+  #footer {
+    padding: 60px var(--side-pad-pc) 40px;
   }
 }
