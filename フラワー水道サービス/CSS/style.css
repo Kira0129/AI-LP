@@ -1545,6 +1545,12 @@
         transform: translateY(0);
       }
 
+      body.overflow-hidden .sp-sticky-cta {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+
       .sp-sticky-cta .cta-item {
         flex: 1;
         display: flex;
