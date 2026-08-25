@@ -296,7 +296,9 @@ section {
   z-index: 10;
   text-align: left;
   padding: 40px var(--side-pad-sp);
-  width: 100%;
+  width: auto;
+  align-self: flex-end;
+  writing-mode: vertical-rl;
 }
 @keyframes fvFadeUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -308,7 +310,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.25em;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-left: 12px;
   opacity: 0;
   animation: fvFadeUp 1s ease forwards 0.1s;
   display: flex;
@@ -318,8 +320,8 @@ section {
 .fv-catch-en::before {
   content: '';
   display: block;
-  width: 30px;
-  height: 1px;
+  width: 1px;
+  height: 30px;
   background: var(--accent);
 }
 .fv-heading {
@@ -327,17 +329,17 @@ section {
   font-size: clamp(28px, 7vw, 48px);
   font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 24px;
+  margin-left: 24px;
   opacity: 0;
   animation: fvFadeUp 1s ease forwards 0.3s;
   color: var(--white);
   letter-spacing: 0.05em;
 }
 .fv-divider {
-  width: 40px;
-  height: 2px;
+  width: 2px;
+  height: 40px;
   background: var(--accent);
-  margin-bottom: 20px;
+  margin-left: 20px;
   opacity: 0;
   animation: fvFadeUp 1s ease forwards 0.5s;
 }
@@ -992,7 +994,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     background: var(--black);
     margin-top: 0;
     padding-top: 90px;
@@ -1010,10 +1012,10 @@ section {
   }
   .fv-content {
     padding: 0 var(--side-pad-pc);
-    max-width: 900px;
+    max-width: none;
   }
-  .fv-catch-en { font-size: 14px; margin-bottom: 24px; }
-  .fv-heading { font-size: clamp(40px, 5vw, 64px); margin-bottom: 32px; }
+  .fv-catch-en { font-size: 14px; margin-left: 24px; }
+  .fv-heading { font-size: clamp(40px, 5vw, 64px); margin-left: 32px; }
   .fv-sub { font-size: clamp(18px, 2vw, 24px); }
 
   .recommend-inner {
