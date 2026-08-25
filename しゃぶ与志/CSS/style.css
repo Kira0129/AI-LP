@@ -407,6 +407,16 @@ section {
   text-align: left;
 }
 
+.fv-heading-line {
+  display: inline-block;
+}
+.fv-heading .line1 {
+  margin-top: -0.5em; /* ちょっと上に */
+}
+.fv-heading .line2 {
+  margin-top: 1.5em; /* ちょっと下に */
+}
+
 
 .fv-bottom-left {
   position: absolute;
