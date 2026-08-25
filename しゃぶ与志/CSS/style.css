@@ -326,7 +326,7 @@ section {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(28px, 7vw, 48px);
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 2.2; /* ブロック背景があるため行間を広めにとる */
   opacity: 0;
   animation: fvFadeUp 1s ease forwards 0.3s;
   color: var(--white);
@@ -337,6 +337,20 @@ section {
   right: var(--side-pad-sp);
   writing-mode: vertical-rl;
   z-index: 20;
+}
+.fv-heading-line {
+  background-color: #a31d1d; /* 添付画像のような深みのある赤 */
+  padding: 16px 8px; /* 縦書き時の上下16px、左右8pxの余白 */
+  display: inline-block;
+}
+.fv-heading .line1 {
+  /* 一番右の行はそのまま */
+}
+.fv-heading .line2 {
+  margin-top: 2.5em; /* 真ん中の行は少し下げる */
+}
+.fv-heading .line3 {
+  margin-top: 5em; /* 一番左の行はさらに下げる */
 }
 .fv-divider {
   width: 40px;
