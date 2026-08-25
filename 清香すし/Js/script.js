@@ -282,4 +282,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.1 }).observe(footer);
     }
+
+    // Voice Toggle
+    const voiceWraps = document.querySelectorAll('.voice-content-wrap');
+    voiceWraps.forEach(wrap => {
+        const textEl = wrap.querySelector('.voice-text');
+        const btn = wrap.querySelector('.voice-toggle-btn');
+        if (!textEl || !btn) return;
+
+        setTimeout(() => {
+            if (textEl.scrollHeight > textEl.clientHeight) {
+                btn.classList.remove('hidden');
+            }
+        }, 100);
+
+        btn.addEventListener('click', () => {
+            if (textEl.classList.contains('voice-text-clamp')) {
+                textEl.classList.remove('voice-text-clamp');
+                btn.innerHTML = '閉じる <span class="inline-block transform rotate-180 transition-transform duration-300">▼</span>';
+            } else {
+                textEl.classList.add('voice-text-clamp');
+                btn.innerHTML = '続きを読む <span class="inline-block transform transition-transform duration-300">▼</span>';
+            }
+        });
+    });
 });

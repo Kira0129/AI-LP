@@ -1034,3 +1034,10 @@ h3,
     height: 2px;
     background: linear-gradient(90deg, var(--red-accent) 0%, transparent 100%);
 }
+/* Voice Section */
+.voice-text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
