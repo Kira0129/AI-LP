@@ -731,7 +731,7 @@ section {
 .feature-cards {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 24px;
 }
 
 .feature-card {
@@ -739,15 +739,13 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 500px;
+  background: var(--black);
 }
 
 .feature-card-img {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 240px;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -757,18 +755,13 @@ section {
 }
 
 .feature-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .feature-card-body {
   position: relative;
   z-index: 2;
-  padding: 40px 24px;
+  padding: 32px 24px;
 }
 
 .feature-num {
@@ -1371,8 +1364,31 @@ section {
     margin-bottom: 0;
   }
 
+  .feature-cards {
+    gap: 0;
+  }
+
   .feature-card {
+    justify-content: flex-end;
     min-height: 600px;
+    background: transparent;
+  }
+
+  .feature-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .feature-card::after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .feature-card-body {
