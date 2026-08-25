@@ -948,8 +948,9 @@ section {
     max-width: 960px;
   }
   .recommend-img { width: 40%; height: auto; }
-  .recommend-content { width: 60%; padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .recommend-content { width: 60%; padding: 48px 35px; display: flex; flex-direction: column; justify-content: center; }
   .recommend-content h2 { text-align: left; }
+  .recommend-list li { padding: 5px; }
   
   .cta-block { padding: 64px var(--side-pad-pc); }
   .cta-inner { gap: 32px; }
