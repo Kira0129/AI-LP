@@ -396,3 +396,9 @@ header.scrolled {
 
 .cta-tel { background-color: var(--color-main); }
 .cta-web { background-color: var(--color-accent); }
+
+/* Gallery Swiper */
+.gallery-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+

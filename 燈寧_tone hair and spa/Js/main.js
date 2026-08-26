@@ -92,4 +92,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => {
         revealObserver.observe(el);
     });
+
+    // 7. Gallery Swiper
+    const gallerySwiper = new Swiper('.gallery-swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+        speed: 5000,
+        allowTouchMove: false, // Prevents manual swiping to keep continuous loop smooth
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: { slidesPerView: 3, spaceBetween: 15 },
+            1024: { slidesPerView: 5, spaceBetween: 20 }
+        }
+    });
+
+    // 8. Gallery Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.getElementById('close-lightbox');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    if (lightbox && lightboxImg && galleryImages) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('opacity-0', 'pointer-events-none');
+            });
+        });
+
+        const closeMenu = () => lightbox.classList.add('opacity-0', 'pointer-events-none');
+        
+        if (closeLightbox) closeLightbox.addEventListener('click', closeMenu);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeMenu();
+        });
+    }
 });

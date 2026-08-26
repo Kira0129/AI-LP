@@ -390,8 +390,45 @@
             </div>
         </section>
 
+        <!-- Styles Gallery -->
+        <section id="gallery" class="py-24 bg-toneBase overflow-hidden">
+            <div class="container mx-auto px-6 max-w-7xl mb-12">
+                <div class="colmo-header reveal reveal-up">
+                    <span class="sub-text">Styles</span>
+                    <h2>スタイルギャラリー</h2>
+                </div>
+            </div>
+            
+            <!-- Swiper Container -->
+            <div class="swiper gallery-swiper reveal reveal-up delay-100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/F5F3F0/A9897A?text=Style+1" alt="Style 1" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/FFFFFF/A9897A?text=Style+2" alt="Style 2" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/F5F3F0/A9897A?text=Style+3" alt="Style 3" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/FFFFFF/A9897A?text=Style+4" alt="Style 4" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/F5F3F0/A9897A?text=Style+5" alt="Style 5" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/FFFFFF/A9897A?text=Style+6" alt="Style 6" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://placehold.co/600x800/F5F3F0/A9897A?text=Style+7" alt="Style 7" class="w-full h-64 md:h-80 object-cover cursor-pointer hover:opacity-80 transition gallery-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Message -->
-        <section id="message" class="bg-toneBase px-6">
+        <section id="message" class="bg-toneBase px-6 mt-16 md:mt-24">
             <div class="container mx-auto max-w-7xl reveal reveal-up">
                 <div class="asym-grid-50-50">
                     <div class="reveal reveal-left">
@@ -521,6 +558,12 @@
         <a href="https://beauty.hotpepper.jp/slnH000819246/" target="_blank"
             class="flex-1 text-center py-4 text-xs tracking-widest text-white bg-toneAccent font-serif">WEB
             RESERVATION</a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[2000] bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white text-4xl font-light hover:text-gray-300 transition">&times;</button>
+        <img id="lightbox-img" src="" alt="Gallery Image Zoom" class="max-w-[90%] max-h-[90%] object-contain">
     </div>
 
     <!-- Scripts -->
