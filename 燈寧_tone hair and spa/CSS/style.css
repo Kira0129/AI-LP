@@ -440,3 +440,13 @@ header.scrolled {
     transition-timing-function: linear !important;
 }
 
+
+/* Background Texture */
+.bg-texture {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 追従パララックス効果（任意・上品な見え方になります） */
+}
+
