@@ -115,15 +115,15 @@ header.scrolled {
     color: var(--color-main);
 }
 
-/* ══════════════════════════════
+/* 笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武
     FV (Rounded Stage Style) - Maintained
-══════════════════════════════ */
+笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武 */
 .fv {
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 700px;
-    background: var(--color-bg-light);
+    background: #fcfbfa;
     overflow: hidden;
 }
 
@@ -140,7 +140,7 @@ header.scrolled {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 40px 40px 0 40px; /* 少しアシンメトリーな角丸でエレガントに */
+    border-radius: 40px 40px 0 40px; /* 蟆代＠繧｢繧ｷ繝ｳ繝｡繝医Μ繝ｼ縺ｪ隗剃ｸｸ縺ｧ繧ｨ繝ｬ繧ｬ繝ｳ繝医↓ */
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
@@ -161,7 +161,7 @@ header.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.95) contrast(1.05); /* 高級感のための微調整 */
+    filter: brightness(0.95) contrast(1.05); /* 鬮倡ｴ壽─縺ｮ縺溘ａ縺ｮ蠕ｮ隱ｿ謨ｴ */
 }
 
 /* Slide Counter */
@@ -447,6 +447,6 @@ header.scrolled {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* �Ǐ]�p�����b�N�X���ʁi�C�ӁE��i�Ȍ������ɂȂ�܂��j */
+    background-attachment: fixed; /* 追従パララックス効果（任意・上品な見え方になります） */
 }
 
