@@ -443,7 +443,7 @@ header.scrolled {
 
 /* Background Texture */
 .bg-texture {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/bg.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
