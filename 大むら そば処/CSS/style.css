@@ -504,7 +504,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
   .fv-right-col { padding: 40px 20px 32px; width: 100%; display: flex; flex-direction: column; align-items: center; order: 1; }
   .fv-catch-lines { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .fv-catch-line { writing-mode: horizontal-tb; text-align: center; }
-  .fv-catch-line.large { font-size: clamp(28px, 7vw, 36px); }
+  .fv-catch-line.large { font-size: 25px; }
   .fv-dot-row { bottom: 12px; }
   .pc-spacer { display: none; }
 
