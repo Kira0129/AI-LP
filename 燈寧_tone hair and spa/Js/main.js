@@ -61,8 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if(href === '#') return;
             e.preventDefault();
+            
+            if(href === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
             const target = document.querySelector(href);
             if(target) {
                 const headerHeight = document.querySelector('header').offsetHeight;
@@ -129,6 +136,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (closeLightbox) closeLightbox.addEventListener('click', closeMenu);
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeMenu();
+        });
+    }
+
+    // 9. Page Top Button
+    const pageTop = document.getElementById('page-top');
+    if (pageTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                pageTop.classList.remove('opacity-0', 'invisible');
+                pageTop.classList.add('opacity-100', 'visible');
+            } else {
+                pageTop.classList.remove('opacity-100', 'visible');
+                pageTop.classList.add('opacity-0', 'invisible');
+            }
         });
     }
 });
