@@ -436,7 +436,9 @@ section { padding: 96px 0; }
 .voice-name { font-weight: bold; font-size: 16px; color: var(--dark-brown); }
 .voice-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
 .voice-text { line-height: 1.8; color: var(--charcoal); }
-
+.voice-more-btn-wrap { text-align: center; margin-top: 48px; }
+.btn-voice-more { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 48px; background: #fff; color: var(--dark-brown); text-decoration: none; font-weight: bold; border: 2px solid var(--dark-brown); border-radius: 50px; transition: all 0.3s; }
+.btn-voice-more:hover { background: var(--dark-brown); color: #fff; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
 .message-section { background: var(--warm-white); }
 .message-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 .message-content { display: flex; align-items: center; gap: 64px; }
