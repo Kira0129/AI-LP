@@ -132,7 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
     spWrap.appendChild(spTrack);
     const dr = document.querySelector('.fv-dot-row');
     if (dr) { spWrap.appendChild(dr); dr.style.bottom = '16px'; }
-    fvBody.insertBefore(spWrap, fvBody.firstChild);
+    
+    const spText = document.querySelector('.fv-sp-text');
+    if (spText) {
+      spText.appendChild(spWrap);
+    } else {
+      fvBody.insertBefore(spWrap, fvBody.firstChild);
+    }
 
     let sx = 0;
     spWrap.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
