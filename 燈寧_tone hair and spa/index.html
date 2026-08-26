@@ -299,30 +299,29 @@
                     <h2>メニュー</h2>
                 </div>
 
-                <div class="space-y-12 mt-16">
+                <div class="space-y-24 md:space-y-32 mt-20">
                     <!-- Menu 1 -->
-                    <div class="bg-white shadow-sm flex flex-col md:flex-row reveal reveal-up hover:shadow-md transition duration-500 relative overflow-hidden group">
-                        <!-- Recommend Badge -->
-                        <div class="absolute top-4 left-0 bg-toneAccent text-white text-[10px] md:text-xs tracking-widest py-1 px-4 z-10 uppercase font-serif shadow-sm">
-                            Recommend
-                        </div>
-                        
+                    <div class="flex flex-col md:flex-row items-center reveal reveal-up group">
                         <!-- Image -->
-                        <div class="w-full md:w-5/12 h-64 md:h-auto overflow-hidden relative shrink-0">
-                            <img src="https://placehold.co/600x600/F5F3F0/A9897A?text=Reset+Cut" alt="リセットカット" class="w-full h-full object-cover md:absolute md:inset-0 group-hover:scale-105 transition-transform duration-700">
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="https://placehold.co/800x800/F5F3F0/A9897A?text=Reset+Cut" alt="リセットカット" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                            <!-- Recommend Badge -->
+                            <div class="absolute top-0 left-0 bg-toneAccent text-white text-[10px] md:text-xs tracking-widest py-2 px-6 z-10 uppercase font-serif">
+                                Recommend
+                            </div>
                         </div>
 
                         <!-- Content -->
-                        <div class="p-8 md:p-10 flex flex-col flex-grow justify-center">
-                            <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-2 xl:gap-4 border-b border-gray-100 pb-4 mb-4">
-                                <h4 class="text-xl md:text-2xl font-serif text-toneMain">リセットカット</h4>
-                                <div class="text-xl font-serif text-toneAccent shrink-0">
+                        <div class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-8 md:p-14 relative -mt-12 md:mt-0 md:-ml-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4 class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest mb-4">リセットカット</h4>
+                                <div class="text-xl font-serif text-toneAccent">
                                     8,500<span class="text-sm font-sans ml-1">円</span>
                                 </div>
                             </div>
-                            <p class="text-sm text-toneMain opacity-70 leading-loose">
+                            <p class="text-sm text-toneMain opacity-70 leading-loose tracking-wider">
                                 カットに、選べるプチスパが付いたメニューです。<br>
-                                <span class="block mt-2 text-xs">
+                                <span class="block mt-4 text-xs">
                                     ・アロマ：その日の気分に合わせて精油をセレクト<br>
                                     ・クレンジング：生炭酸と炭の力で頭皮をすっきりケア
                                 </span>
@@ -331,21 +330,21 @@
                     </div>
 
                     <!-- Menu 2 -->
-                    <div class="bg-white shadow-sm flex flex-col md:flex-row reveal reveal-up delay-100 hover:shadow-md transition duration-500 relative overflow-hidden group">
+                    <div class="flex flex-col md:flex-row-reverse items-center reveal reveal-up delay-100 group">
                         <!-- Image -->
-                        <div class="w-full md:w-5/12 h-64 md:h-auto overflow-hidden relative shrink-0">
-                            <img src="https://placehold.co/600x600/F5F3F0/A9897A?text=Hydrogen+Care" alt="カット＋水素トリートメント" class="w-full h-full object-cover md:absolute md:inset-0 group-hover:scale-105 transition-transform duration-700">
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="https://placehold.co/800x800/FFFFFF/A9897A?text=Hydrogen+Care" alt="カット＋水素トリートメント" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
                         </div>
 
                         <!-- Content -->
-                        <div class="p-8 md:p-10 flex flex-col flex-grow justify-center">
-                            <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-2 xl:gap-4 border-b border-gray-100 pb-4 mb-4">
-                                <h4 class="text-xl md:text-2xl font-serif text-toneMain leading-snug">カット＋<br class="xl:hidden">水素トリートメント</h4>
-                                <div class="text-xl font-serif text-toneAccent shrink-0">
+                        <div class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-8 md:p-14 relative -mt-12 md:mt-0 md:-mr-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4 class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest leading-snug mb-4">カット＋<br class="hidden xl:block">水素トリートメント</h4>
+                                <div class="text-xl font-serif text-toneAccent">
                                     17,000<span class="text-sm font-sans ml-1">円</span>
                                 </div>
                             </div>
-                            <p class="text-sm text-toneMain opacity-70 leading-loose">
+                            <p class="text-sm text-toneMain opacity-70 leading-loose tracking-wider">
                                 カットに、水素パウダーを使用したケアを組み合わせたメニューです。<br>
                                 頭皮への負担に配慮し、前処理・後処理剤まで含めて丁寧に施術します。
                             </p>
@@ -353,21 +352,21 @@
                     </div>
 
                     <!-- Menu 3 -->
-                    <div class="bg-white shadow-sm flex flex-col md:flex-row reveal reveal-up delay-200 hover:shadow-md transition duration-500 relative overflow-hidden group">
+                    <div class="flex flex-col md:flex-row items-center reveal reveal-up delay-200 group">
                         <!-- Image -->
-                        <div class="w-full md:w-5/12 h-64 md:h-auto overflow-hidden relative shrink-0">
-                            <img src="https://placehold.co/600x600/F5F3F0/A9897A?text=Deep+Spa" alt="ディープスパ" class="w-full h-full object-cover md:absolute md:inset-0 group-hover:scale-105 transition-transform duration-700">
+                        <div class="w-full md:w-7/12 h-64 md:h-[480px] overflow-hidden relative">
+                            <img src="https://placehold.co/800x800/F5F3F0/A9897A?text=Deep+Spa" alt="ディープスパ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
                         </div>
 
                         <!-- Content -->
-                        <div class="p-8 md:p-10 flex flex-col flex-grow justify-center">
-                            <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-2 xl:gap-4 border-b border-gray-100 pb-4 mb-4">
-                                <h4 class="text-xl md:text-2xl font-serif text-toneMain leading-snug">ディープスパ<span class="block text-xs mt-1 xl:mt-2">【頭浸浴・頭皮診断付き】</span></h4>
-                                <div class="text-xl font-serif text-toneAccent shrink-0">
+                        <div class="w-11/12 md:w-6/12 bg-white/95 backdrop-blur-sm p-8 md:p-14 relative -mt-12 md:mt-0 md:-ml-24 z-10 shadow-xl shadow-toneBeige/50 mx-auto md:mx-0">
+                            <div class="flex flex-col border-b border-gray-100 pb-6 mb-6">
+                                <h4 class="text-2xl md:text-3xl font-serif text-toneMain tracking-widest leading-snug mb-4">ディープスパ<br><span class="block text-sm mt-2 opacity-80">【頭浸浴・頭皮診断付き】</span></h4>
+                                <div class="text-xl font-serif text-toneAccent">
                                     12,000<span class="text-sm font-sans ml-1">円</span>
                                 </div>
                             </div>
-                            <p class="text-sm text-toneMain opacity-70 leading-loose">
+                            <p class="text-sm text-toneMain opacity-70 leading-loose tracking-wider">
                                 マイクロスコープによる頭皮診断を行い、現在の状態やお悩みに合わせたオーダーメイドスパをご提案。<br>
                                 頭浸浴から始まる癒しの時間で、頭皮を整えながら、頭も心もゆったりとほぐしていきます。
                             </p>
