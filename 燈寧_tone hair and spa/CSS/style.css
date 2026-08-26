@@ -258,8 +258,23 @@ header.scrolled {
     text-decoration: none;
     border-radius: 0;
     transition: background .4s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.float-btn:hover { background: var(--color-accent); }
+.float-btn:last-child {
+    border-bottom: none;
+}
+.float-btn.web-btn {
+    background: var(--color-accent);
+}
+.float-btn.web-btn:hover {
+    background: rgba(169, 137, 122, 0.8);
+}
+.float-btn.tel-btn {
+    background: var(--color-main);
+}
+.float-btn.tel-btn:hover { 
+    background: var(--color-accent); 
+}
 .float-btn-text { writing-mode: vertical-rl; font-size: 11px; margin-top: 10px; letter-spacing: 0.15em; font-weight: 300; }
 
 /* Responsive FV adjustments */
