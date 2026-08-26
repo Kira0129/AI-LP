@@ -410,6 +410,7 @@ section { padding: 96px 0; }
 .service-list { list-style: none; text-align: left; display: block; width: fit-content; margin: 0 auto; }
 .service-list li { margin-bottom: 12px; font-weight: 700; font-size: 16px; color: var(--charcoal); display: flex; align-items: center; gap: 12px; }
 .service-day { display: inline-block; background: #fff; color: var(--mid-brown); padding: 4px 12px; border-radius: 20px; font-size: 14px; min-width: 120px; text-align: center; border: 1px solid var(--border); }
+.service-note { font-size: 14px; font-weight: normal; }
 
 .btn-more { display: inline-flex; align-items: center; justify-content: center; padding: 16px 48px; background: #fff; color: var(--dark-brown); text-decoration: none; font-weight: bold; border: 2px solid var(--dark-brown); border-radius: 50px; transition: all 0.3s; margin: 0 auto; width: fit-content; display: flex; }
 .btn-more:hover { background: var(--dark-brown); color: #fff; }
@@ -516,6 +517,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
   .service-box { padding: 24px 16px; }
   .service-list li { font-size: 14px; flex-direction: column; align-items: flex-start; gap: 4px; padding-bottom: 12px; border-bottom: 1px dashed rgba(0,0,0,0.1); }
   .service-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .service-note { font-size: 12px; }
   
   .gallery-strip { height: 200px; margin-top: 64px; }
   .gallery-track { animation-duration: 20s; }
