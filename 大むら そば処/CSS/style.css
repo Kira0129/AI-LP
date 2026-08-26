@@ -491,6 +491,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
   body { padding-top: 60px; font-size: 14px; }
   .section-title { font-size: 25px; }
   .sp-only { display: block; }
+  .pc-only { display: none !important; }
   .site-header { height: 60px; padding: 0 16px; }
   .hd-logo-ja { font-size: 18px; }
   .hd-actions { display: none; }
