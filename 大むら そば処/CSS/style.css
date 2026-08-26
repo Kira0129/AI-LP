@@ -533,6 +533,7 @@ footer { background: var(--charcoal); color: #fff; padding: 60px 0 30px; text-al
 
   .voice-inner { padding: 0 20px; }
   .message-inner { padding: 0 20px; }
+  .message-content { text-align: left; }
   .message-image { width: 80%; max-width: 320px; margin: 0 auto; }
   
   .cta-band { padding: 48px 20px; }
