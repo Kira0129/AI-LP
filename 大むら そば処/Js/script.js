@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!spBuilt) return;
     spBuilt = false;
     const dr = document.querySelector('.fv-dot-row');
-    const fv = layer.parentElement.parentElement;
+    const fv = layer.parentElement;
     if (dr && fv) { fv.appendChild(dr); dr.style.bottom = '24px'; }
     if (spWrap) { spWrap.remove(); spWrap = null; spTrack = null; }
     layer.style.display = '';
