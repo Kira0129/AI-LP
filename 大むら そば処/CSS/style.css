@@ -430,7 +430,11 @@ section { padding: 96px 0; }
 .voice-section { background: var(--cream); padding: 96px 0; }
 .voice-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 .voice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
-.voice-icon { width: 48px; height: 48px; background: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; border: 1px solid var(--border); color: var(--dark-brown); }
+.voice-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.voice-icon { width: 48px; height: 48px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; border: 1px solid var(--border); color: var(--dark-brown); flex-shrink: 0; }
+.voice-meta { display: flex; flex-direction: column; gap: 4px; }
+.voice-name { font-weight: bold; font-size: 16px; color: var(--dark-brown); }
+.voice-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
 .voice-text { line-height: 1.8; color: var(--charcoal); }
 
 .message-section { background: var(--warm-white); }
