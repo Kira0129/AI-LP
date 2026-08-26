@@ -7,7 +7,7 @@
     --font-serif: 'Noto Serif JP', serif;
 }
 
-body {
+html, body {
     font-family: var(--font-sans);
     line-height: 2.2;
     letter-spacing: 0.08em;
@@ -15,6 +15,7 @@ body {
     background-color: var(--color-bg-white);
     font-size: 14px;
     overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -449,4 +450,8 @@ header.scrolled {
     background-repeat: no-repeat;
     background-attachment: fixed; /* 追従パララックス効果（任意・上品な見え方になります） */
 }
+
+
+/* Fix horizontal scroll */
+html, body { overflow-x: hidden; width: 100%; position: relative; max-width: 100vw; }
 
