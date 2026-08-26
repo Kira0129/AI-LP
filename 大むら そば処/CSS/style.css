@@ -1487,6 +1487,10 @@ footer {
     padding: 0 20px;
   }
 
+  .about-image {
+    height: 210px;
+  }
+
   .about-frame-inner {
     padding: 40px 20px;
   }
