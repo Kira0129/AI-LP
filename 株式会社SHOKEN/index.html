@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社SHOKEN | 内装・店舗リフォーム・原状回復</title>
+  <meta name="description" content="東京都練馬区を拠点に関東全域へ。施工実績1,000件以上、信頼で選ばれる株式会社SHOKEN。内装リフォーム、店舗内装、原状回復工事はお任せください。">
+
+  <!-- 外部フォントの読み込み (Noto Sans JP / Oswald) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+            en: ['Oswald', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#111111',     // スマートな漆黒
+              green: '#00A86B',     // カジュアルでスマートなグリーン
+              lightGreen: '#e6f7f0', // 薄いグリーン（背景用）
+              white: '#ffffff',
+              gray: '#f9f9f9',      // オフホワイト
+              darkGray: '#444444'   // テキスト用グレー
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s ease-out forwards',
+            'slide-bg': 'slideBg 20s linear infinite',
+            'marquee': 'marquee 25s linear infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideBg: {
+              '0%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.05)' },
+              '100%': { transform: 'scale(1)' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #ffffff;
+      color: #111111;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Marquee Outline Text */
+    .text-outline {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    }
+    .text-outline-green {
+      -webkit-text-stroke: 1px #00A86B;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00A86B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #008755;
+    }
+
+    /* Hamburger Menu Animation */
+    .hamburger-line {
+      transition: all 0.3s ease;
+    }
+    .nav-open .hamburger-line-1 { transform: translateY(8px) rotate(45deg); }
+    .nav-open .hamburger-line-2 { opacity: 0; }
+    .nav-open .hamburger-line-3 { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Decorative clip path for backgrounds */
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 calc(100% - 3vw));
+    }
+  </style>
+</head>
+<body class="font-sans text-[14px] md:text-[16px] overflow-x-hidden relative">
+
+  <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-brand-black/90 backdrop-blur-md text-white border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 z-50">
+        <span class="font-en text-3xl font-bold tracking-wider text-white">SHO<span class="text-brand-green">KEN</span></span>
+      </a>
+
+      <!-- PC Navigation -->
+      <nav class="hidden md:flex items-center gap-8 font-bold text-sm tracking-widest">
+        <a href="#about" class="hover:text-brand-green transition-colors">ABOUT</a>
+        <a href="#service" class="hover:text-brand-green transition-colors">SERVICE</a>
+        <a href="#works" class="hover:text-brand-green transition-colors">WORKS</a>
+        <a href="#voice" class="hover:text-brand-green transition-colors">VOICE</a>
+        <a href="#flow" class="hover:text-brand-green transition-colors">FLOW</a>
+        <div class="flex items-center gap-3">
+          <a href="https://line.me/R/ti/p/@337txrkd" target="_blank" rel="noopener noreferrer" class="bg-[#06C755] text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors flex items-center gap-1 shadow-lg shadow-green-900/20">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21 10.5c0-4.14-4.03-7.5-9-7.5s-9 3.36-9 7.5c0 3.72 2.72 6.87 6.46 7.42.27.06.63.19.72.44.08.23.03.6.01.76-.02.2-.12.75-.15.93-.05.28-.24.96.84.5 1.08-.45 5.86-3.46 7.97-5.88l.05-.06c1.37-1.55 2.1-3.3 2.1-4.11z"/></svg>
+            LINE
+          </a>
+          <a href="https://shoken-0215.com/form/inquiry" target="_blank" rel="noopener noreferrer" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-green-700 transition-colors flex items-center gap-1 shadow-lg shadow-green-900/20">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            WEB
+          </a>
+        </div>
+      </nav>
+
+      <!-- SP Hamburger -->
+      <button id="hamburger" class="md:hidden z-50 w-8 h-6 flex flex-col justify-between items-center cursor-pointer" aria-label="メニュー開閉">
+        <span class="hamburger-line hamburger-line-1 w-full h-0.5 bg-white block"></span>
+        <span class="hamburger-line hamburger-line-2 w-full h-0.5 bg-white block"></span>
+        <span class="hamburger-line hamburger-line-3 w-full h-0.5 bg-white block"></span>
+      </button>
+    </div>
+
+    <!-- SP Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-black flex flex-col items-center justify-center gap-8 transition-transform duration-300 translate-x-full z-40">
+      <a href="#about" class="mobile-link text-white text-2xl font-bold font-en tracking-widest">ABOUT</a>
+      <a href="#service" class="mobile-link text-white text-2xl font-bold font-en tracking-widest">SERVICE</a>
+      <a href="#works" class="mobile-link text-white text-2xl font-bold font-en tracking-widest">WORKS</a>
+      <a href="#voice" class="mobile-link text-white text-2xl font-bold font-en tracking-widest">VOICE</a>
+      <a href="#flow" class="mobile-link text-white text-2xl font-bold font-en tracking-widest">FLOW</a>
+    </div>
+  </header>
+
+  <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-brand-black">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://placehold.co/1920x1080/111111/444444?text=Interior+Renovation" alt="SHOKEN Interior" class="w-full h-full object-cover opacity-50 animate-slide-bg mix-blend-luminosity">
+    </div>
+    
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent z-10"></div>
+
+    <div class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+      
+      <!-- FV Badges -->
+      <div class="flex flex-wrap gap-3 mb-8 animate-fade-up">
+        <span class="bg-brand-green/20 text-brand-green border border-brand-green text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-lg backdrop-blur-md">1000件以上の実績</span>
+        <span class="bg-brand-green/20 text-brand-green border border-brand-green text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-lg backdrop-blur-md">リピーター率90%の満足度</span>
+        <span class="bg-brand-green/20 text-brand-green border border-brand-green text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow-lg backdrop-blur-md">練馬区から関東全域へ</span>
+      </div>
+
+      <!-- Catchcopy -->
+      <div class="animate-fade-up" style="animation-delay: 0.2s;">
+        <h2 class="text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6 drop-shadow-lg tracking-wide">
+          施工実績1,000件以上、<br>
+          <span class="text-brand-green">信頼</span>で選ばれるSHOKENへ
+        </h2>
+      </div>
+    </div>
+
+    <!-- Marquee Text at Bottom of FV -->
+    <div class="absolute bottom-0 left-0 w-full z-20 overflow-hidden h-24 flex items-center border-t border-white/10 bg-brand-black/30 backdrop-blur-sm">
+      <div class="flex whitespace-nowrap animate-marquee">
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline">RENOVATION & INTERIOR</span>
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline text-outline-green">SHOKEN</span>
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline">RENOVATION & INTERIOR</span>
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline text-outline-green">SHOKEN</span>
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline">RENOVATION & INTERIOR</span>
+        <span class="font-en text-5xl sm:text-7xl font-bold px-8 text-outline text-outline-green">SHOKEN</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-gray relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12 reveal">
+        <h3 class="text-2xl sm:text-3xl font-bold text-brand-black mb-4 tracking-wide">こんなお悩みありませんか？</h3>
+        <div class="w-12 h-1 bg-brand-green mx-auto"></div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12 reveal border border-gray-100">
+        <ul class="space-y-6 text-brand-darkGray font-medium">
+          <li class="flex items-start bg-brand-gray p-4 rounded-xl">
+            <svg class="w-6 h-6 text-brand-green mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span>住まいの内装をリフォームして、快適な空間にしたい</span>
+          </li>
+          <li class="flex items-start bg-brand-gray p-4 rounded-xl">
+            <svg class="w-6 h-6 text-brand-green mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span>店舗やオフィスの内装工事を、安心して任せられる業者を探している</span>
+          </li>
+          <li class="flex items-start bg-brand-gray p-4 rounded-xl">
+            <svg class="w-6 h-6 text-brand-green mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span>原状回復工事を、スピーディーかつ丁寧に対応してほしい</span>
+          </li>
+          <li class="flex items-start bg-brand-gray p-4 rounded-xl">
+            <svg class="w-6 h-6 text-brand-green mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span>施工実績が豊富で、信頼できるリフォーム会社に依頼したい</span>
+          </li>
+          <li class="flex items-start bg-brand-gray p-4 rounded-xl">
+            <svg class="w-6 h-6 text-brand-green mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            <span>希望や予算に合わせて、最適なプランを提案してほしい</span>
+          </li>
+        </ul>
+
+        <div class="mt-12 text-center bg-brand-black text-white p-6 rounded-2xl">
+          <p class="text-lg sm:text-2xl font-bold tracking-wide">
+            そのお悩み、ぜひ<span class="text-brand-green mx-1">株式会社SHOKEN</span>にご相談ください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 bg-white clip-diagonal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image side -->
+        <div class="order-2 lg:order-1 reveal relative">
+          <div class="absolute -inset-4 bg-brand-green/10 rounded-[2.5rem] transform rotate-3"></div>
+          <img src="https://placehold.co/800x800/111111/00A86B?text=SHOKEN+About" alt="株式会社SHOKENについて" class="relative rounded-3xl w-full h-auto object-cover shadow-2xl">
+        </div>
+        
+        <!-- Text side -->
+        <div class="order-1 lg:order-2 reveal">
+          <div class="mb-8">
+            <span class="font-en text-brand-green font-bold tracking-widest block mb-2 text-xl">ABOUT US</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-black leading-tight">株式会社SHOKENについて</h2>
+          </div>
+          <div class="w-12 h-1 bg-brand-black mb-8"></div>
+          
+          <div class="space-y-6 text-brand-darkGray leading-relaxed">
+            <p>
+              東京都練馬区を拠点に、住宅リフォーム・内装リフォーム・店舗内装工事・原状回復工事を手掛けるリフォーム会社です。
+            </p>
+            <p>
+              戸建て・マンション・店舗・商業施設など幅広い施工実績を活かし、お客様のご要望に寄り添った最適なプランをご提案。丁寧なヒアリングから設計・施工・お引き渡しまで一貫して対応し、高品質な施工をお届けします。
+            </p>
+            <div class="mt-8 p-6 bg-brand-lightGreen rounded-2xl border border-brand-green/20 shadow-sm">
+              <p class="font-bold text-brand-black">
+                練馬区をはじめ関東エリアでリフォームや内装工事をご検討の方は、ぜひ株式会社SHOKENへご相談ください。<br>
+                <span class="text-brand-green mt-2 block text-xl">お見積もり・ご相談は無料です。</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="py-24 bg-brand-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="font-en text-brand-green font-bold tracking-widest text-xl">SERVICE</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand-black mt-2 mb-6">４つのサービス</h2>
+        <div class="w-12 h-1 bg-brand-green mx-auto"></div>
+      </div>
+
+      <!-- Image Grid Layout for Services -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- Service 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group reveal border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://placehold.co/800x600/111111/ffffff?text=Interior+Reform" alt="内装リフォーム工事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-brand-green text-white font-en font-bold text-xl px-4 py-1 rounded-full shadow">01</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-brand-black mb-4">内装リフォーム工事</h3>
+            <p class="text-brand-darkGray leading-relaxed">
+              壁紙・床の張り替えから間取り変更まで、戸建て・マンションの内装リフォームに幅広く対応。お客様のライフスタイルやご要望に合わせた、快適で機能的な住空間をご提案します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group reveal border border-gray-100" style="transition-delay: 0.1s;">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://placehold.co/800x600/00A86B/ffffff?text=Shop+Interior" alt="店舗・テナント内装工事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-brand-black text-white font-en font-bold text-xl px-4 py-1 rounded-full shadow">02</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-brand-black mb-4">店舗・テナント内装工事</h3>
+            <p class="text-brand-darkGray leading-relaxed">
+              店舗・オフィス・商業施設の内装工事を、設計から施工まで一貫対応。新規開業や改装、レイアウト変更など、業種やコンセプトに合わせた理想の空間づくりをサポートします。
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group reveal border border-gray-100" style="transition-delay: 0.2s;">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://placehold.co/800x600/e6f7f0/111111?text=Restoration" alt="原状回復工事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-brand-green text-white font-en font-bold text-xl px-4 py-1 rounded-full shadow">03</div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-brand-black mb-4">原状回復工事</h3>
+            <p class="text-brand-darkGray leading-relaxed">
+              店舗やオフィス、賃貸物件の原状回復工事に対応。契約内容に沿った適切な施工を行い、スピーディーかつ丁寧な仕上がりで安心してお任せいただけます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-brand-black rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group reveal border border-brand-green/30" style="transition-delay: 0.3s;">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://placehold.co/800x600/111111/00A86B?text=High+Quality+Works" alt="豊富な実績と自社一貫施工" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-white text-brand-black font-en font-bold text-xl px-4 py-1 rounded-full shadow">04</div>
+          </div>
+          <div class="p-8 relative z-10 -mt-10">
+            <h3 class="text-2xl font-bold text-white mb-4">豊富な実績と自社一貫施工</h3>
+            <p class="text-gray-300 leading-relaxed">
+              施工実績1,000件以上、リピーター率90％の信頼と実績。練馬区を拠点に関東全域へ対応し、経験豊富な自社スタッフが打ち合わせから施工完了まで責任を持って、高品質な内装工事をご提供します。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="font-en text-brand-green font-bold tracking-widest text-xl">WORKS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand-black mt-2 mb-6">施工実績</h2>
+        <div class="w-12 h-1 bg-brand-green mx-auto mb-6"></div>
+        <p class="text-brand-darkGray max-w-3xl mx-auto leading-relaxed">
+          株式会社SHOKENがこれまでに手掛けた施工事例をご紹介します。<br>
+          東京都練馬区を拠点に、関東全域で住宅リフォーム・店舗内装工事・原状回復工事など、幅広い施工実績を積み重ねてまいりました。<br>
+          豊富な経験と確かな技術で、お客様の理想を形にする内装工事をご提供しています。
+        </p>
+      </div>
+
+      <div class="space-y-20">
+        <!-- Case 1 -->
+        <div class="reveal">
+          <h3 class="text-2xl font-bold text-brand-black mb-6 pl-4 border-l-4 border-brand-green">CASE.01 戸建て内装フルリフォーム</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <img src="https://placehold.co/600x450/f9f9f9/111111?text=Before+1" alt="施工前" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/00A86B/ffffff?text=After+1" alt="施工後" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/f9f9f9/111111?text=Before+2" alt="施工前" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/00A86B/ffffff?text=After+2" alt="施工後" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+          </div>
+          <p class="text-brand-darkGray bg-brand-gray p-6 rounded-2xl leading-relaxed">
+            長年住み慣れた戸建て住宅のフルリフォーム事例です。ライフスタイルの変化に合わせて間取りを大きく変更し、広々としたリビングダイニングを実現。白を基調とした壁紙に、落ち着いた色合いのフローリングを合わせることで、スマートで飽きのこない空間に仕上げました。
+          </p>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="reveal">
+          <h3 class="text-2xl font-bold text-brand-black mb-6 pl-4 border-l-4 border-brand-green">CASE.02 カフェ新店舗 内装工事</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <img src="https://placehold.co/600x450/f9f9f9/111111?text=Before+1" alt="スケルトン状態" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/00A86B/ffffff?text=After+1" alt="カウンター造作" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/00A86B/ffffff?text=After+2" alt="内装仕上げ" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/111111/ffffff?text=After+3" alt="店舗完成" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+          </div>
+          <p class="text-brand-darkGray bg-brand-gray p-6 rounded-2xl leading-relaxed">
+            スケルトン物件からのカフェ新規出店に伴う内装工事です。「カジュアルかつ洗練された空間」というオーナー様のご要望に対し、木材の温もりとモルタル調のシャープさを組み合わせたデザインをご提案。カウンターの造作から照明の配置まで、一貫して施工いたしました。
+          </p>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="reveal">
+          <h3 class="text-2xl font-bold text-brand-black mb-6 pl-4 border-l-4 border-brand-green">CASE.03 オフィス 原状回復工事</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+             <img src="https://placehold.co/600x450/f9f9f9/111111?text=Before+1" alt="解体前" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/111111/ffffff?text=Working+1" alt="解体作業中" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/111111/ffffff?text=Working+2" alt="補修作業中" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+            <img src="https://placehold.co/600x450/00A86B/ffffff?text=After+1" alt="原状回復完了" class="w-full h-48 object-cover rounded-xl shadow-sm hover:opacity-80 transition cursor-pointer" onclick="openModal(this.src)">
+          </div>
+          <p class="text-brand-darkGray bg-brand-gray p-6 rounded-2xl leading-relaxed">
+            テナント退去に伴うオフィスの原状回復工事です。間仕切り（パーテーション）の撤去、床のタイルカーペット剥がし、天井や壁のクロス張り替えをスピーディーに実施。ビル管理会社のガイドラインに沿った的確な施工で、スケジュール通りにお引き渡しを完了しました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-brand-lightGreen relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-green/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-brand-green/20 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-black mb-6 tracking-wide">
+        理想の空間づくりを、<br class="sm:hidden">私たちと一緒に始めませんか？
+      </h2>
+      <p class="text-brand-darkGray mb-10 leading-relaxed max-w-2xl mx-auto font-medium">
+        お見積もり・ご相談は無料です。<br>
+        住宅リフォーム、店舗内装、原状回復など、内装に関するお悩みはお気軽にお問い合わせください。
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="tel:050-5448-5155" class="w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2 bg-brand-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          電話で相談
+        </a>
+        <a href="https://line.me/R/ti/p/@337txrkd" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2 bg-[#06C755] text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 10.5c0-4.14-4.03-7.5-9-7.5s-9 3.36-9 7.5c0 3.72 2.72 6.87 6.46 7.42.27.06.63.19.72.44.08.23.03.6.01.76-.02.2-.12.75-.15.93-.05.28-.24.96.84.5 1.08-.45 5.86-3.46 7.97-5.88l.05-.06c1.37-1.55 2.1-3.3 2.1-4.11z"/></svg>
+          LINEで相談
+        </a>
+        <a href="https://shoken-0215.com/form/inquiry" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-w-[200px] flex items-center justify-center gap-2 bg-brand-green text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          WEBフォーム
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="voice" class="py-24 bg-brand-gray relative">
+    <div class="absolute inset-0 bg-brand-black/5 clip-diagonal"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="font-en text-brand-green font-bold tracking-widest text-xl">VOICE</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand-black mt-2 mb-6">お客様の声</h2>
+        <div class="w-12 h-1 bg-brand-green mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Voice 1 -->
+        <div class="bg-white p-8 sm:p-10 rounded-3xl relative shadow-lg border border-gray-100 reveal">
+          <div class="text-8xl text-brand-lightGreen font-serif absolute -top-4 left-6 z-0">"</div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-brand-black text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">T</div>
+              <div>
+                <h4 class="font-bold text-brand-black text-lg">T様（店舗内装工事）</h4>
+                <div class="flex text-brand-green text-sm mt-1">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-brand-darkGray leading-relaxed">
+              初めての飲食店オープンで不安なことばかりでしたが、SHOKENの担当者の方が親身になって相談に乗ってくれました。予算が限られている中で、デザイン性と機能性を両立する素晴らしい提案をしていただき、カジュアルでありながらスマートな理想の空間が完成しました。施工もスムーズで、安心してお任せできました。
+            </p>
+          </div>
+        </div>
+
+        <!-- Voice 2 -->
+        <div class="bg-white p-8 sm:p-10 rounded-3xl relative shadow-lg border border-gray-100 reveal" style="transition-delay: 0.1s;">
+          <div class="text-8xl text-brand-lightGreen font-serif absolute -top-4 left-6 z-0">"</div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-brand-green text-white rounded-full flex items-center justify-center font-bold text-xl shadow-md">K</div>
+              <div>
+                <h4 class="font-bold text-brand-black text-lg">K様（住宅内装リフォーム）</h4>
+                <div class="flex text-brand-green text-sm mt-1">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-brand-darkGray leading-relaxed">
+              中古マンションを購入し、入居前にクロスと床の張り替えをお願いしました。事前の打ち合わせで色のサンプルをいくつも見せていただき、納得いくまで選ぶことができました。職人さんたちの作業もとても丁寧で、仕上がりも完璧です。見違えるように綺麗な部屋になり、新しい生活が楽しみです。ありがとうございました。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="py-24 bg-brand-black text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="font-en text-brand-green font-bold tracking-widest text-xl">FLOW</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-6">ご依頼の流れ</h2>
+        <div class="w-12 h-1 bg-brand-green mx-auto"></div>
+      </div>
+
+      <div class="space-y-6 relative before:absolute before:inset-0 before:ml-[1.4rem] md:before:ml-[50%] md:before:-translate-x-px before:h-full before:w-0.5 before:bg-brand-green/30">
+        
+        <!-- Steps 1 to 8 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-brand-green text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 shadow-lg z-10">1</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              Step-1：お問い合わせ
+            </h3>
+            <p class="text-gray-300 leading-relaxed">お電話・メールにてお問い合わせを受け付けております。<br>メールの場合、確認後こちらからお電話をさせていただきます。</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">2</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              Step-2：現地調査
+            </h3>
+            <p class="text-gray-300 leading-relaxed">ご都合のよろしい日程をお伺いし、現場調査を行ないます。<br><span class="text-xs text-gray-400">※遠方への現地調査の場合、出張費をいただくことがあります。</span></p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">3</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              Step-3：お見積もり
+            </h3>
+            <p class="text-gray-300 leading-relaxed">ヒアリング内容や現場調査から、正式なお見積もり額を提示いたします。<br>お見積もりの時点では、まだ料金は発生いたしません。</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">4</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+              Step-4：ご契約
+            </h3>
+            <p class="text-gray-300 leading-relaxed">お見積もり内容にご納得いただければ、ご契約をさせていただきます。<br>ご不明な点や気になることがございましたら、何度でもお気軽にご質問ください。</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">5</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+              Step-5：打ち合わせ
+            </h3>
+            <p class="text-gray-300 leading-relaxed">お客さまのイメージを確実にカタチにするため、ご要望をもう一度しっかりと確認させていただいてから、設計作業とデザインに取り掛かります。</p>
+          </div>
+        </div>
+        
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">6</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              Step-6：施工
+            </h3>
+            <p class="text-gray-300 leading-relaxed">打ち合わせで決定した内容とスケジュールで、工事を進行いたします。</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-gray-800 text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 z-10">7</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              Step-7：施工完了
+            </h3>
+            <p class="text-gray-300 leading-relaxed">お客さまにご確認していただき、ご満足いただけましたら施工完了となります。<br>通常はこの段階で代金のお支払いをお願いしております。</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group reveal">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-brand-black bg-brand-green text-white font-bold shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 shadow-lg z-10">8</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-brand-green/10 border border-brand-green/30 p-6 rounded-2xl backdrop-blur-sm">
+            <h3 class="font-bold text-brand-green text-lg mb-2 flex items-center gap-2">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              Step-8：アフターフォロー
+            </h3>
+            <p class="text-gray-200 leading-relaxed">施工完了後、心配な点や問題点がございましたら、即対応させていただいております。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="font-en text-brand-green font-bold tracking-widest text-xl">CONTACT & INFO</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-brand-black mt-2 mb-6">お問い合わせ・店舗情報</h2>
+        <div class="w-12 h-1 bg-brand-green mx-auto mb-6"></div>
+        <p class="text-brand-darkGray">お見積もり・ご相談は無料です。お気軽にお問い合わせください。</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 bg-brand-gray p-8 sm:p-12 rounded-3xl reveal border border-gray-200 shadow-sm">
+        
+        <!-- Info -->
+        <div class="lg:w-1/2 flex flex-col justify-center">
+          <h3 class="text-2xl font-bold text-brand-black mb-8 border-b-2 border-brand-green inline-block pb-2">株式会社SHOKEN</h3>
+          
+          <dl class="space-y-6 text-brand-darkGray mb-10">
+            <div class="flex flex-col sm:flex-row border-b border-gray-300/50 pb-4">
+              <dt class="w-32 font-bold text-brand-black">住所</dt>
+              <dd class="flex-1">〒176-0005<br>東京都練馬区旭丘１丁目４８−２</dd>
+            </div>
+            <div class="flex flex-col sm:flex-row border-b border-gray-300/50 pb-4">
+              <dt class="w-32 font-bold text-brand-black">電話番号</dt>
+              <dd class="flex-1 font-bold text-brand-black text-xl"><a href="tel:050-5448-5155" class="hover:text-brand-green transition-colors">050-5448-5155</a></dd>
+            </div>
+            <div class="flex flex-col sm:flex-row border-b border-gray-300/50 pb-4">
+              <dt class="w-32 font-bold text-brand-black">営業時間</dt>
+              <dd class="flex-1">9時00分～18時00分</dd>
+            </div>
+            <div class="flex flex-col sm:flex-row">
+              <dt class="w-32 font-bold text-brand-black">定休日</dt>
+              <dd class="flex-1">不定休</dd>
+            </div>
+          </dl>
+
+          <!-- Contact Buttons -->
+          <div class="flex flex-col gap-4">
+            <a href="tel:050-5448-5155" class="flex items-center justify-center gap-2 w-full bg-brand-black text-white py-4 rounded-full font-bold hover:bg-gray-800 transition-all shadow-md hover:shadow-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              電話で相談する
+            </a>
+            <div class="flex gap-4">
+              <a href="https://line.me/R/ti/p/@337txrkd" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-[#06C755] text-white py-4 rounded-full font-bold hover:bg-green-600 transition-all shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 10.5c0-4.14-4.03-7.5-9-7.5s-9 3.36-9 7.5c0 3.72 2.72 6.87 6.46 7.42.27.06.63.19.72.44.08.23.03.6.01.76-.02.2-.12.75-.15.93-.05.28-.24.96.84.5 1.08-.45 5.86-3.46 7.97-5.88l.05-.06c1.37-1.55 2.1-3.3 2.1-4.11z"/></svg>
+                LINEで相談
+              </a>
+              <a href="https://shoken-0215.com/form/inquiry" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-brand-green text-white py-4 rounded-full font-bold hover:bg-green-700 transition-all shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                WEBフォーム
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="lg:w-1/2 min-h-[400px] rounded-2xl overflow-hidden shadow-inner border border-gray-200">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.868019688628!2d139.6738981!3d35.7294474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ed5a23072213%3A0xc48083818e11a2f6!2z44CSMTc2LTAwMDUg5p2x5Lqs6YO957e06aas5Yy65pet5LiY5LiYMeS4geebru-1lO-1mC0y!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0; filter: grayscale(20%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brand-black text-white py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+      <!-- Footer Logo -->
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <a href="#" class="font-en text-3xl font-bold tracking-wider text-white">SHO<span class="text-brand-green">KEN</span></a>
+        <p class="text-gray-400 text-sm">株式会社SHOKEN<br>〒176-0005 東京都練馬区旭丘１丁目４８−２</p>
+      </div>
+      
+      <!-- Footer Nav -->
+      <nav class="flex flex-wrap justify-center gap-6 text-sm font-bold tracking-widest font-en">
+        <a href="#about" class="hover:text-brand-green transition-colors">ABOUT</a>
+        <a href="#service" class="hover:text-brand-green transition-colors">SERVICE</a>
+        <a href="#works" class="hover:text-brand-green transition-colors">WORKS</a>
+        <a href="#voice" class="hover:text-brand-green transition-colors">VOICE</a>
+        <a href="#flow" class="hover:text-brand-green transition-colors">FLOW</a>
+      </nav>
+    </div>
+    
+    <div class="mt-12 text-center text-gray-500 text-xs border-t border-white/10 pt-8">
+      &copy; SHOKEN Co., Ltd. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Modal for Image Preview -->
+  <div id="image-modal" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+    <button id="close-modal" class="absolute top-6 right-6 text-white hover:text-brand-green transition-colors">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <img id="modal-image" src="" alt="拡大画像" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+  </div>
+
+  <script>
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const header = document.getElementById('header');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('nav-open');
+      if (mobileMenu.classList.contains('translate-x-full')) {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (hamburger.classList.contains('nav-open')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('py-2');
+        header.classList.remove('py-4');
+      } else {
+        header.classList.add('py-4');
+        header.classList.remove('py-2');
+      }
+    });
+
+    // Reveal Animation on Scroll
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Image Modal
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeModalBtn = document.getElementById('close-modal');
+
+    window.openModal = function(src) {
+      modalImage.src = src;
+      modal.classList.remove('hidden');
+      // Trigger reflow
+      void modal.offsetWidth;
+      modal.classList.remove('opacity-0');
+      modalImage.classList.remove('scale-95');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      modalImage.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modalImage.src = '';
+        if (!hamburger.classList.contains('nav-open')) {
+          document.body.style.overflow = '';
+        }
+      }, 300);
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
