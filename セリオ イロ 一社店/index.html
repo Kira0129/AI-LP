@@ -327,8 +327,11 @@
   </section>
 
   <!-- Menu -->
-  <section id="menu" class="py-24 md:py-32 px-6 bg-white border-y border-serio-gray">
-    <div class="max-w-[1000px] mx-auto">
+  <section id="menu" class="relative py-24 md:py-32 px-6 bg-white border-y border-serio-gray overflow-hidden">
+    <!-- 背景画像（薄く） -->
+    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-10" style="background-image: url('img/fvbg.jpg');"></div>
+    
+    <div class="relative z-10 max-w-[1000px] mx-auto">
       <div class="text-center mb-16 reveal">
         <span class="font-en text-xs tracking-[0.4em] text-serio-gold block mb-4">MENU</span>
         <h2 class="font-serif text-2xl md:text-3xl text-serio-dark tracking-widest mb-4">メニュー</h2>
