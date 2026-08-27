@@ -261,7 +261,7 @@
 
   <!-- SP Menu Overlay -->
   <div id="sp-menu"
-    class="fixed inset-0 bg-serio-beige backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 pb-24">
+    class="fixed top-20 bottom-[56px] left-0 right-0 bg-serio-beige backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 pb-10 overflow-y-auto">
     <nav class="flex flex-col items-center gap-8 text-serio-dark font-en text-xl tracking-widest">
       <a href="#about" class="menu-link hover:text-serio-gold transition-colors">ABOUT</a>
       <a href="#features" class="menu-link hover:text-serio-gold transition-colors">FEATURES</a>
@@ -1061,12 +1061,18 @@
         if (menuBtn.classList.contains('open')) {
           spMenu.classList.remove('opacity-0', 'pointer-events-none');
           document.body.style.overflow = 'hidden';
+          // Force header to have white background when menu is open
+          header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md');
+          header.classList.remove('bg-transparent');
           headerLogo.classList.remove('text-white');
           headerLogo.classList.add('text-serio-dark');
         } else {
           spMenu.classList.add('opacity-0', 'pointer-events-none');
           document.body.style.overflow = '';
+          // Revert header to transparent ONLY if we are at the top
           if (window.scrollY <= 50) {
+            header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-md');
+            header.classList.add('bg-transparent');
             headerLogo.classList.remove('text-serio-dark');
             headerLogo.classList.add('text-white');
           }
