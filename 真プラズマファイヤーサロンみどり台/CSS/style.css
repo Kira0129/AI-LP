@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --brand-main: #F08DA1;
   --brand-light: #FDF3F5;
   --brand-dark: #D9657B;
@@ -96,7 +96,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-  pointer-events: none;
+  
 }
 
 .hero-text-box {
@@ -173,7 +173,7 @@ body {
 
 /* Custom Checkmark for Troubles */
 .trouble-list li::before {
-  content: '✓';
+  content: '笨・;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -236,4 +236,16 @@ body {
   .hero-slide:nth-child(3) {
     background-position: 65% center;
   }
+}
+
+/* Prevent Text Selection and Image Dragging */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  
 }
