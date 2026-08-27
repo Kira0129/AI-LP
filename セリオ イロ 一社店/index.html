@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>SERIO ILO（セリオ イロ） | 唯一無二のビューティサロン</title>
   <meta name="description" content="名古屋市名東区一社にあるトータルビューティーサロン「SERIO ILO」。トレンド×モード×ハイクオリティで、新しい自分へ。">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -41,31 +44,36 @@
       color: #2c2c2c;
       -webkit-font-smoothing: antialiased;
     }
-    
+
     /* Scroll Reveal Animations */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .reveal-left {
       opacity: 0;
       transform: translateX(-40px);
       transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+
     .reveal-left.is-visible {
       opacity: 1;
       transform: translateX(0);
     }
+
     .reveal-right {
       opacity: 0;
       transform: translateX(40px);
       transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+
     .reveal-right.is-visible {
       opacity: 1;
       transform: translateX(0);
@@ -73,8 +81,15 @@
 
     /* Missing Keyframes added for FV Text */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* FV Slider Animation */
@@ -86,16 +101,43 @@
       opacity: 0;
       animation: bgFade 18s infinite ease-in-out;
     }
-    .fv-bg-slide:nth-child(1) { animation-delay: 0s; }
-    .fv-bg-slide:nth-child(2) { animation-delay: 6s; }
-    .fv-bg-slide:nth-child(3) { animation-delay: 12s; }
+
+    .fv-bg-slide:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .fv-bg-slide:nth-child(2) {
+      animation-delay: 6s;
+    }
+
+    .fv-bg-slide:nth-child(3) {
+      animation-delay: 12s;
+    }
 
     @keyframes bgFade {
-      0% { opacity: 0; transform: scale(1.05); }
-      10% { opacity: 1; transform: scale(1.05); }
-      33% { opacity: 1; transform: scale(1.02); }
-      43% { opacity: 0; transform: scale(1.0); }
-      100% { opacity: 0; }
+      0% {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+
+      10% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      33% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
+      43% {
+        opacity: 0;
+        transform: scale(1.0);
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     /* Menu dot leader */
@@ -117,17 +159,25 @@
 
     /* Auto Loop Slider */
     @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
+
     .animate-marquee {
       display: flex;
       width: max-content;
       animation: marquee 30s linear infinite;
     }
+
     .animate-marquee:hover {
       animation-play-state: paused;
     }
+
     .marquee-item {
       width: 280px;
       height: 186px;
@@ -137,6 +187,7 @@
       overflow: hidden;
       border-radius: 4px;
     }
+
     @media (min-width: 768px) {
       .marquee-item {
         width: 400px;
@@ -144,26 +195,31 @@
         margin: 0 15px;
       }
     }
+
     .marquee-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
+
     .marquee-item:hover img {
       transform: scale(1.05);
     }
   </style>
 </head>
+
 <body class="selection:bg-serio-gold selection:text-white">
 
   <!-- Header -->
-  <header id="header" class="fixed w-full top-0 left-0 z-50 transition-all duration-500 -translate-y-full opacity-0 pointer-events-none bg-transparent text-white">
+  <header id="header"
+    class="fixed w-full top-0 left-0 z-50 transition-all duration-500 -translate-y-full opacity-0 pointer-events-none bg-transparent text-white">
     <div class="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="font-en text-xl md:text-2xl tracking-widest font-medium z-50 transition-colors duration-300" id="header-logo">
+      <a href="#" class="font-en text-xl md:text-2xl tracking-widest font-medium z-50 transition-colors duration-300"
+        id="header-logo">
         SERIO ILO
       </a>
-      
+
       <!-- PC Nav -->
       <div class="hidden md:flex items-center gap-10">
         <nav class="flex gap-8 font-en text-sm tracking-widest" id="pc-nav">
@@ -174,10 +230,14 @@
           <a href="#access" class="hover:text-serio-gold transition-colors">ACCESS</a>
         </nav>
         <div class="flex gap-4">
-          <a href="tel:052-734-8492" class="border border-white/50 hover:bg-white hover:text-serio-dark text-white px-6 py-3 font-serif text-sm tracking-widest transition-colors" id="header-tel">
+          <a href="tel:052-734-8492"
+            class="border border-white/50 hover:bg-white hover:text-serio-dark text-white px-6 py-3 font-serif text-sm tracking-widest transition-colors"
+            id="header-tel">
             052-734-8492
           </a>
-          <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ" target="_blank" class="bg-serio-brown hover:bg-serio-dark text-white px-8 py-3 font-serif text-sm tracking-widest transition-colors shadow-lg">
+          <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ"
+            target="_blank"
+            class="bg-serio-brown hover:bg-serio-dark text-white px-8 py-3 font-serif text-sm tracking-widest transition-colors shadow-lg">
             WEB予約
           </a>
         </div>
@@ -185,15 +245,20 @@
 
       <!-- SP Hamburger -->
       <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 z-50 relative group">
-        <span class="w-6 h-[1px] bg-white transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-[5px]" id="line1"></span>
+        <span
+          class="w-6 h-[1px] bg-white transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-[5px]"
+          id="line1"></span>
         <span class="w-6 h-[1px] bg-white mt-2 transition-all duration-300 group-[.open]:opacity-0" id="line2"></span>
-        <span class="w-6 h-[1px] bg-white mt-2 transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-[7px]" id="line3"></span>
+        <span
+          class="w-6 h-[1px] bg-white mt-2 transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-[7px]"
+          id="line3"></span>
       </button>
     </div>
   </header>
 
   <!-- SP Menu Overlay -->
-  <div id="sp-menu" class="fixed inset-0 bg-serio-dark/98 backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+  <div id="sp-menu"
+    class="fixed inset-0 bg-serio-dark/98 backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
     <nav class="flex flex-col items-center gap-8 text-white font-en text-xl tracking-widest">
       <a href="#about" class="menu-link hover:text-serio-gold transition-colors">ABOUT</a>
       <a href="#features" class="menu-link hover:text-serio-gold transition-colors">FEATURES</a>
@@ -202,41 +267,52 @@
       <a href="#access" class="menu-link hover:text-serio-gold transition-colors">ACCESS</a>
     </nav>
     <div class="mt-12 flex flex-col gap-4 w-64">
-      <a href="tel:052-734-8492" class="border border-white/50 text-white text-center py-4 font-serif tracking-widest hover:bg-white hover:text-serio-dark transition-colors">
+      <a href="tel:052-734-8492"
+        class="border border-white/50 text-white text-center py-4 font-serif tracking-widest hover:bg-white hover:text-serio-dark transition-colors">
         052-734-8492
       </a>
-      <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ" target="_blank" class="bg-serio-brown text-white text-center py-4 font-serif tracking-widest hover:bg-serio-gold transition-colors">
+      <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ"
+        target="_blank"
+        class="bg-serio-brown text-white text-center py-4 font-serif tracking-widest hover:bg-serio-gold transition-colors">
         WEB予約はこちら
       </a>
     </div>
   </div>
 
   <!-- FV Section -->
-  <section id="fv" class="relative w-full h-[100svh] min-h-[650px] flex flex-col md:flex-row overflow-hidden bg-serio-dark">
+  <section id="fv"
+    class="relative w-full h-[100svh] min-h-[650px] flex flex-col md:flex-row overflow-hidden bg-serio-dark">
     <!-- Left Text Area -->
-    <div class="flex-1 md:flex-[4] flex flex-col justify-center items-center text-center px-6 md:px-12 bg-serio-beige relative z-10 pt-24 md:pt-0 pb-12 md:pb-0 order-2 md:order-1 h-[45svh] md:h-full border-r border-serio-gray/50 overflow-hidden">
+    <div
+      class="flex-1 md:flex-[4] flex flex-col justify-center items-center text-center px-4 md:px-12 bg-serio-beige relative z-10 order-2 md:order-1 h-[50svh] md:h-full border-r border-serio-gray/50 overflow-hidden">
       <!-- 背景画像（少し濃く） -->
-      <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30" style="background-image: url('img/fvbg.jpg');"></div>
-      
-      <h2 class="relative z-10 font-serif text-[1.2rem] md:text-2xl text-serio-dark font-light leading-loose tracking-widest mb-8 opacity-0 animate-[fadeUp_1.5s_0.4s_forwards]">
-        まだ知らない、<br class="md:hidden">自分の美しさへ
+      <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30" style="background-image: url('img/fvbg.jpg');">
+      </div>
+
+      <h2
+        class="relative z-10 font-serif text-[1.1rem] md:text-2xl text-serio-dark font-light leading-loose tracking-widest mb-5 md:mb-8 opacity-0 animate-[fadeUp_1.5s_0.4s_forwards]">
+        まだ知らない、自分の美しさへ
       </h2>
-      <h1 class="relative z-10 mb-8 opacity-0 animate-[fadeUp_1.5s_0.6s_forwards]">
-        <img src="img/logo.png" alt="SERIO ILO" class="w-48 md:w-[300px] h-auto object-contain mx-auto">
+      <h1 class="relative z-10 mb-5 md:mb-8 opacity-0 animate-[fadeUp_1.5s_0.6s_forwards]">
+        <img src="img/logo.png" alt="SERIO ILO" class="w-56 md:w-[300px] h-auto object-contain mx-auto">
       </h1>
-      <div class="relative z-10 w-[1px] h-16 bg-serio-gold mb-8 opacity-0 animate-[fadeUp_1.5s_0.8s_forwards]"></div>
-      <p class="relative z-10 font-serif text-sm md:text-base text-serio-dark/80 leading-loose tracking-widest opacity-0 animate-[fadeUp_1.5s_1s_forwards]">
+      <div class="relative z-10 w-[1px] h-10 md:h-16 bg-serio-gold mb-5 md:mb-8 opacity-0 animate-[fadeUp_1.5s_0.8s_forwards]"></div>
+      <p
+        class="relative z-10 font-serif text-xs md:text-base text-serio-dark/80 leading-loose tracking-widest opacity-0 animate-[fadeUp_1.5s_1s_forwards]">
         似合うだけでは終わらない。<br>
         トレンドと感性を重ね、あなたの魅力をアップデートします。
       </p>
     </div>
-    
+
     <!-- Right Image Slider -->
-    <div class="flex-none md:flex-[6] w-full h-[55svh] md:h-full relative order-1 md:order-2">
+    <div class="flex-none md:flex-[6] w-full h-[50svh] md:h-full relative order-1 md:order-2">
       <div class="absolute inset-0 z-0">
-        <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1200x900/5c4033/faf8f5?text=Elegant+Interior');"></div>
-        <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1200x900/2c2c2c/faf8f5?text=Sophisticated+Style');"></div>
-        <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1200x900/b0966a/faf8f5?text=Premium+Service');"></div>
+        <div class="fv-bg-slide"
+          style="background-image: url('https://placehold.co/1200x900/5c4033/faf8f5?text=Elegant+Interior');"></div>
+        <div class="fv-bg-slide"
+          style="background-image: url('https://placehold.co/1200x900/2c2c2c/faf8f5?text=Sophisticated+Style');"></div>
+        <div class="fv-bg-slide"
+          style="background-image: url('https://placehold.co/1200x900/b0966a/faf8f5?text=Premium+Service');"></div>
       </div>
       <!-- オーバーレイ -->
       <div class="absolute inset-0 bg-serio-dark/20 z-0"></div>
@@ -244,7 +320,8 @@
   </section>
 
   <!-- Concept -->
-  <section class="py-24 md:py-32 px-6 text-center relative bg-cover bg-center bg-no-repeat" style="background-image: url('img/conceptbg.jpg');">
+  <section class="py-24 md:py-32 px-6 text-center relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('img/conceptbg.jpg');">
     <!-- ダークグレーのオーバーレイ -->
     <div class="absolute inset-0 bg-serio-dark/85 z-0"></div>
     <div class="max-w-3xl mx-auto reveal relative z-10">
@@ -252,7 +329,8 @@
       <h2 class="font-serif text-xl md:text-2xl text-white leading-[2] tracking-widest mb-12">
         トレンド×モード×ハイクオリティで、<br>新しい自分へ。
       </h2>
-      <div class="font-serif text-sm md:text-base text-white/90 leading-[2.4] tracking-wider text-justify md:text-center space-y-6">
+      <div
+        class="font-serif text-sm md:text-base text-white/90 leading-[2.4] tracking-wider text-justify md:text-center space-y-6">
         <p>
           iloが目指すのは、ご来店のたびに<br class="hidden md:block">新しい発見とときめきに出会えるサロンであること。<br>
           高い技術力に、最先端のトレンドと感性豊かなモードを融合し、<br class="hidden md:block">お客様一人ひとりの魅力を最大限に引き出します。
@@ -270,7 +348,8 @@
     <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
       <div class="w-full md:w-1/2 reveal-left relative">
         <div class="aspect-[4/5] overflow-hidden relative z-10">
-          <img src="https://placehold.co/800x1000/e5e0d8/5c4033?text=Premium+Space" alt="About ILO" class="w-full h-full object-cover">
+          <img src="https://placehold.co/800x1000/e5e0d8/5c4033?text=Premium+Space" alt="About ILO"
+            class="w-full h-full object-cover">
         </div>
         <!-- エレガントな装飾枠 -->
         <div class="absolute -bottom-6 -left-6 w-[80%] h-[80%] border border-serio-gold/30 z-0 hidden md:block"></div>
@@ -313,13 +392,14 @@
             <h3 class="font-serif text-lg md:text-xl text-serio-dark tracking-widest">トレンドを先取りする高いデザイン力</h3>
           </div>
           <div class="overflow-hidden aspect-[16/9] mb-6">
-            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Design" alt="Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Design" alt="Design"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           </div>
           <p class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider">
             最新トレンドとモード感を取り入れたデザインで、お客様一人ひとりの魅力を最大限に引き出します。期待を超える提案力で、新しい自分との出会いをお届けします。
           </p>
         </div>
-        
+
         <!-- 02 -->
         <div class="reveal flex flex-col group md:mt-16">
           <div class="flex items-baseline gap-4 mb-4 border-b border-serio-gold/30 pb-4">
@@ -327,7 +407,8 @@
             <h3 class="font-serif text-lg md:text-xl text-serio-dark tracking-widest">一人ひとりに寄り添うオーダーメイド提案</h3>
           </div>
           <div class="overflow-hidden aspect-[16/9] mb-6">
-            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Order+Made" alt="Order Made" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Order+Made" alt="Order Made"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           </div>
           <p class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider">
             ライフスタイルや髪質、なりたいイメージを丁寧にヒアリング。経験豊富なスタイリストが、お客様だけの似合わせスタイルをご提案します。
@@ -341,7 +422,8 @@
             <h3 class="font-serif text-lg md:text-xl text-serio-dark tracking-widest">ヘアから着付けまで叶うトータルビューティー</h3>
           </div>
           <div class="overflow-hidden aspect-[16/9] mb-6">
-            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Total+Beauty" alt="Total Beauty" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Total+Beauty" alt="Total Beauty"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           </div>
           <p class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider">
             カットやカラーはもちろん、ヘアメイク・着付け・フォト撮影まで対応。成人式や七五三、ウェディングなど、大切な人生の節目を美しく彩ります。
@@ -355,7 +437,8 @@
             <h3 class="font-serif text-lg md:text-xl text-serio-dark tracking-widest">特別な時間を演出する上質なサロン空間</h3>
           </div>
           <div class="overflow-hidden aspect-[16/9] mb-6">
-            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Premium+Space" alt="Space" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="https://placehold.co/800x450/e5e0d8/5c4033?text=Premium+Space" alt="Space"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           </div>
           <p class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider">
             非日常を感じられる洗練された空間と、常に進化し続ける技術・サービスをご提供。訪れるたびに新しい発見があり、長く通いたくなるサロンです。
@@ -368,8 +451,9 @@
   <!-- Menu -->
   <section id="menu" class="relative py-24 md:py-32 px-6 bg-white border-y border-serio-gray">
     <!-- 背景画像（少し濃く） -->
-    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-25" style="background-image: url('img/fvbg.jpg');"></div>
-    
+    <div class="absolute inset-0 z-0 bg-cover bg-center opacity-25" style="background-image: url('img/fvbg.jpg');">
+    </div>
+
     <div class="relative z-10 max-w-[1000px] mx-auto">
       <div class="text-center mb-16 reveal">
         <span class="font-en text-xs tracking-[0.4em] text-serio-gold block mb-4">MENU</span>
@@ -380,180 +464,183 @@
         <!-- Left Video -->
         <div class="w-full relative h-full">
           <div class="relative lg:sticky top-0 lg:top-32 w-full z-10 reveal-left">
-            <video src="movie/menumoive.mp4" autoplay loop muted playsinline class="w-full max-h-[75vh] object-contain mx-auto shadow-sm"></video>
+            <video src="movie/menumoive.mp4" autoplay loop muted playsinline
+              class="w-full max-h-[75vh] object-contain mx-auto shadow-sm"></video>
           </div>
         </div>
 
         <!-- Right Content -->
         <div class="flex flex-col gap-16">
           <!-- CUT -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            CUT
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>前髪カット</span><span class="dot-leader"></span><span>¥1,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ディレクターカット</span><span class="dot-leader"></span><span>¥9,200</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>トップスタイリストカット</span><span class="dot-leader"></span><span>¥7,200</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>カット</span><span class="dot-leader"></span><span>¥6,100～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>キッズカット（0～2歳）</span><span class="dot-leader"></span><span>¥2,400～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>幼稚園カット（3～6歳）</span><span class="dot-leader"></span><span>¥3,900～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>学生カット（小学生～）</span><span class="dot-leader"></span><span>¥4,900～</span>
-            </li>
-          </ul>
-          <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※担当スタイリストにより料金が異なります。</p>
-        </div>
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              CUT
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>前髪カット</span><span class="dot-leader"></span><span>¥1,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ディレクターカット</span><span class="dot-leader"></span><span>¥9,200</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>トップスタイリストカット</span><span class="dot-leader"></span><span>¥7,200</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>カット</span><span class="dot-leader"></span><span>¥6,100～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>キッズカット（0～2歳）</span><span class="dot-leader"></span><span>¥2,400～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>幼稚園カット（3～6歳）</span><span class="dot-leader"></span><span>¥3,900～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>学生カット（小学生～）</span><span class="dot-leader"></span><span>¥4,900～</span>
+              </li>
+            </ul>
+            <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※担当スタイリストにより料金が異なります。</p>
+          </div>
 
-        <!-- COLOR -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            COLOR
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>Tゾーンカラー</span><span class="dot-leader"></span><span>¥3,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>リタッチ（根元3cm以内）</span><span class="dot-leader"></span><span>¥5,700</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>フルカラー</span><span class="dot-leader"></span><span>¥7,100～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>透明感カラー</span><span class="dot-leader"></span><span>¥9,300～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ヘアマニキュア</span><span class="dot-leader"></span><span>¥9,300～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>トリートメントカラー</span><span class="dot-leader"></span><span>¥10,400～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ブリーチダブルカラー</span><span class="dot-leader"></span><span>¥18,300～</span>
-            </li>
-          </ul>
-          <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
-        </div>
+          <!-- COLOR -->
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              COLOR
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>Tゾーンカラー</span><span class="dot-leader"></span><span>¥3,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>リタッチ（根元3cm以内）</span><span class="dot-leader"></span><span>¥5,700</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>フルカラー</span><span class="dot-leader"></span><span>¥7,100～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>透明感カラー</span><span class="dot-leader"></span><span>¥9,300～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ヘアマニキュア</span><span class="dot-leader"></span><span>¥9,300～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>トリートメントカラー</span><span class="dot-leader"></span><span>¥10,400～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ブリーチダブルカラー</span><span class="dot-leader"></span><span>¥18,300～</span>
+              </li>
+            </ul>
+            <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
+          </div>
 
-        <!-- PERM -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            PERM
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>ポイントパーマ</span><span class="dot-leader"></span><span>¥11,800～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ハイドレイドパーマ</span><span class="dot-leader"></span><span>¥13,900～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>エアウェーブパーマ</span><span class="dot-leader"></span><span>¥17,100～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>デジタルパーマ</span><span class="dot-leader"></span><span>¥17,100～</span>
-            </li>
-          </ul>
-          <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
-        </div>
+          <!-- PERM -->
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              PERM
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>ポイントパーマ</span><span class="dot-leader"></span><span>¥11,800～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ハイドレイドパーマ</span><span class="dot-leader"></span><span>¥13,900～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>エアウェーブパーマ</span><span class="dot-leader"></span><span>¥17,100～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>デジタルパーマ</span><span class="dot-leader"></span><span>¥17,100～</span>
+              </li>
+            </ul>
+            <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
+          </div>
 
-        <!-- STRAIGHT -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            STRAIGHT
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>ポイントストレート</span><span class="dot-leader"></span><span>¥9,700～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ナチュラルストレート</span><span class="dot-leader"></span><span>¥11,800～</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>アイロンストレート</span><span class="dot-leader"></span><span>¥26,700～</span>
-            </li>
-          </ul>
-          <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
-        </div>
+          <!-- STRAIGHT -->
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              STRAIGHT
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>ポイントストレート</span><span class="dot-leader"></span><span>¥9,700～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ナチュラルストレート</span><span class="dot-leader"></span><span>¥11,800～</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>アイロンストレート</span><span class="dot-leader"></span><span>¥26,700～</span>
+              </li>
+            </ul>
+            <p class="text-xs text-serio-dark/50 mt-4 tracking-wider">※髪の長さにより料金が異なります。</p>
+          </div>
 
-        <!-- TREATMENT -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            TREATMENT
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>ウルトラファインバブル</span><span class="dot-leader"></span><span>¥1,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>ハイドレイド</span><span class="dot-leader"></span><span>¥3,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>トリートメントS</span><span class="dot-leader"></span><span>¥3,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>オージュア M / L</span><span class="dot-leader"></span><span>¥5,800 / ¥7,100</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>TOKIO M / L</span><span class="dot-leader"></span><span>¥6,000 / ¥8,100</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>クロノロジスト</span><span class="dot-leader"></span><span>¥7,800</span>
-            </li>
-          </ul>
-        </div>
+          <!-- TREATMENT -->
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              TREATMENT
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>ウルトラファインバブル</span><span class="dot-leader"></span><span>¥1,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>ハイドレイド</span><span class="dot-leader"></span><span>¥3,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>トリートメントS</span><span class="dot-leader"></span><span>¥3,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>オージュア M / L</span><span class="dot-leader"></span><span>¥5,800 / ¥7,100</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>TOKIO M / L</span><span class="dot-leader"></span><span>¥6,000 / ¥8,100</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>クロノロジスト</span><span class="dot-leader"></span><span>¥7,800</span>
+              </li>
+            </ul>
+          </div>
 
-        <!-- HEAD SPA -->
-        <div class="reveal">
-          <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
-            HEAD SPA
-            <span class="flex-grow h-[1px] bg-serio-gray"></span>
-          </h3>
-          <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
-            <li class="flex justify-between items-end">
-              <span>頭浸浴</span><span class="dot-leader"></span><span>¥3,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>保湿コース（10分）</span><span class="dot-leader"></span><span>¥3,300</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>クレンジングコース（20分）</span><span class="dot-leader"></span><span>¥4,400</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>抜け毛・白髪予防（30分）</span><span class="dot-leader"></span><span>¥5,500</span>
-            </li>
-            <li class="flex justify-between items-end">
-              <span>エイジングケア（40分）</span><span class="dot-leader"></span><span>¥7,500</span>
-            </li>
-          </ul>
-        </div>
+          <!-- HEAD SPA -->
+          <div class="reveal">
+            <h3 class="font-en text-xl text-serio-dark mb-6 tracking-widest flex items-center gap-4">
+              HEAD SPA
+              <span class="flex-grow h-[1px] bg-serio-gray"></span>
+            </h3>
+            <ul class="space-y-4 font-serif text-sm md:text-base tracking-wider text-serio-dark/90">
+              <li class="flex justify-between items-end">
+                <span>頭浸浴</span><span class="dot-leader"></span><span>¥3,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>保湿コース（10分）</span><span class="dot-leader"></span><span>¥3,300</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>クレンジングコース（20分）</span><span class="dot-leader"></span><span>¥4,400</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>抜け毛・白髪予防（30分）</span><span class="dot-leader"></span><span>¥5,500</span>
+              </li>
+              <li class="flex justify-between items-end">
+                <span>エイジングケア（40分）</span><span class="dot-leader"></span><span>¥7,500</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      
+
       <p class="text-center text-xs text-serio-dark/50 mt-12 tracking-wider reveal">※表示価格はすべて税込です。</p>
 
       <div class="mt-16 text-center reveal">
-        <a href="https://ilo-serio.co.jp/store/issha/" target="_blank" class="inline-flex items-center gap-4 bg-transparent border border-serio-brown text-serio-brown px-12 py-4 hover:bg-serio-brown hover:text-white transition-colors duration-300 font-serif tracking-widest text-sm">
+        <a href="https://ilo-serio.co.jp/store/issha/" target="_blank"
+          class="inline-flex items-center gap-4 bg-transparent border border-serio-brown text-serio-brown px-12 py-4 hover:bg-serio-brown hover:text-white transition-colors duration-300 font-serif tracking-widest text-sm">
           詳しいメニューはコチラ
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-4 h-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </a>
@@ -562,7 +649,8 @@
   </section>
 
   <!-- Voice -->
-  <section class="py-24 md:py-32 px-6 text-serio-beige relative bg-cover bg-center bg-no-repeat" style="background-image: url('img/voicebg.jpg');">
+  <section class="py-24 md:py-32 px-6 text-serio-beige relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('img/voicebg.jpg');">
     <!-- ダークグレーのオーバーレイ -->
     <div class="absolute inset-0 bg-serio-dark/80 z-0"></div>
     <div class="max-w-[1200px] mx-auto relative z-10">
@@ -570,12 +658,13 @@
         <span class="font-en text-xs tracking-[0.4em] text-serio-gold block mb-4">VOICE</span>
         <h2 class="font-serif text-2xl md:text-3xl tracking-widest">お客様の声</h2>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Voice 1 -->
         <div class="bg-[#333333] p-10 rounded-sm border border-serio-gold/20 reveal">
           <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
+            <div
+              class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
               l
             </div>
             <div>
@@ -584,16 +673,19 @@
             </div>
           </div>
           <div class="voice-text-wrap flex flex-col items-end">
-            <p class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
+            <p
+              class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
               カットが上手なので髪の毛が多くて硬い私でもいつも手入れのしやすい髪型にしてくれます！<br>先日はショートにしてパーマをかけてもらいました。イメージ通りのヘアスタイルに大満足！仕事先、友達、家族みんなに好評です！
             </p>
-            <button class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
+            <button
+              class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
           </div>
         </div>
         <!-- Voice 2 -->
         <div class="bg-[#333333] p-10 rounded-sm border border-serio-gold/20 reveal md:translate-y-8">
           <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
+            <div
+              class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
               h
             </div>
             <div>
@@ -602,16 +694,19 @@
             </div>
           </div>
           <div class="voice-text-wrap flex flex-col items-end">
-            <p class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
+            <p
+              class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
               雰囲気がとても良く、行くだけで癒されます。<br>丁寧で、いつも希望の髪型にしてもらえます！<br>迷っていても、似合う髪型にしてもらえるので安心してお任せできます。
             </p>
-            <button class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
+            <button
+              class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
           </div>
         </div>
         <!-- Voice 3 -->
         <div class="bg-[#333333] p-10 rounded-sm border border-serio-gold/20 reveal">
           <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
+            <div
+              class="w-12 h-12 rounded-full bg-serio-beige text-serio-brown flex items-center justify-center font-serif text-lg">
               K
             </div>
             <div>
@@ -620,18 +715,23 @@
             </div>
           </div>
           <div class="voice-text-wrap flex flex-col items-end">
-            <p class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
+            <p
+              class="font-serif text-sm md:text-base leading-loose tracking-wider text-serio-beige/80 line-clamp-3 w-full transition-all duration-300">
               比較的にオシャレに無頓着な自分でも親切に相談に乗ってくれました！厄介な髪質でも顔の形が多少コンプレックスでも、似合う髪型を考えてくれてどれが良いか選ばせてくれます。
             </p>
-            <button class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
+            <button
+              class="read-more-btn mt-2 text-serio-gold text-xs underline font-serif tracking-widest hidden">続きを読む</button>
           </div>
         </div>
       </div>
 
       <div class="mt-16 text-center reveal">
-        <a href="https://www.google.com/search?q=%E3%82%BB%E3%83%AA%E3%82%AA+%E3%82%A4%E3%83%AD+%E4%B8%80%E7%A4%BE%E5%BA%97&rlz=1C1VDKB_jaJP1161JP1162&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQkxMTEyajBqMTWoAgiwAgHxBeSBJDMvQDdS8QXkgSQzL0A3Ug&sourceid=chrome&ie=UTF-8&sec_src=editors#irp=&lrd=0x600365436ba741e9:0xcb5ae02a4806b0fc,1,,,," target="_blank" class="inline-flex items-center gap-4 bg-transparent border border-serio-gold text-serio-gold px-12 py-4 hover:bg-serio-gold hover:text-serio-dark transition-colors duration-300 font-serif tracking-widest text-sm">
+        <a href="https://www.google.com/search?q=%E3%82%BB%E3%83%AA%E3%82%AA+%E3%82%A4%E3%83%AD+%E4%B8%80%E7%A4%BE%E5%BA%97&rlz=1C1VDKB_jaJP1161JP1162&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQkxMTEyajBqMTWoAgiwAgHxBeSBJDMvQDdS8QXkgSQzL0A3Ug&sourceid=chrome&ie=UTF-8&sec_src=editors#irp=&lrd=0x600365436ba741e9:0xcb5ae02a4806b0fc,1,,,,"
+          target="_blank"
+          class="inline-flex items-center gap-4 bg-transparent border border-serio-gold text-serio-gold px-12 py-4 hover:bg-serio-gold hover:text-serio-dark transition-colors duration-300 font-serif tracking-widest text-sm">
           その口コミはこちら
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-4 h-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </a>
@@ -648,21 +748,24 @@
       </div>
 
       <div class="flex flex-col gap-32">
-        
+
         <!-- Staff 1 -->
         <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center reveal">
           <div class="w-full md:w-5/12">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Hiroe+Nakajima" alt="中島 裕恵" class="w-full h-full object-cover">
+              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Hiroe+Nakajima" alt="中島 裕恵"
+                class="w-full h-full object-cover">
             </div>
           </div>
           <div class="w-full md:w-7/12 flex flex-col justify-center">
-            <p class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">Director</p>
+            <p
+              class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">
+              Director</p>
             <h3 class="font-serif text-2xl md:text-3xl text-serio-dark tracking-widest mb-2 flex items-baseline gap-4">
               中島 裕恵 <span class="font-en text-sm text-serio-dark/50 tracking-widest">Hiroe Nakajima</span>
             </h3>
             <p class="text-xs text-serio-dark/60 mb-8 tracking-wider">神楽坂出勤日：月曜日・火曜日</p>
-            
+
             <div class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider space-y-4">
               <p>プロとしての的確な提案で、大人世代から絶大な信頼を集めるスタイリスト。</p>
               <p>迷いのない速いカットと、数ヶ月先まで計算されたパーマで日常に溶け込む上質なスタイルを叶えます。</p>
@@ -676,18 +779,21 @@
         <div class="flex flex-col md:flex-row-reverse gap-12 md:gap-20 items-center reveal">
           <div class="w-full md:w-5/12">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Yumi+Misawa" alt="三澤 悠美" class="w-full h-full object-cover">
+              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Yumi+Misawa" alt="三澤 悠美"
+                class="w-full h-full object-cover">
             </div>
           </div>
           <div class="w-full md:w-7/12 flex flex-col justify-center">
-            <p class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">Manager</p>
+            <p
+              class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">
+              Manager</p>
             <h3 class="font-serif text-2xl md:text-3xl text-serio-dark tracking-widest mb-2 flex items-baseline gap-4">
               三澤 悠美 <span class="font-en text-sm text-serio-dark/50 tracking-widest">Yumi Misawa</span>
             </h3>
             <p class="text-xs text-serio-dark/60 mb-8 tracking-wider">
               一社出勤日：土日 ／ 神楽坂出勤日：火〜金・祝
             </p>
-            
+
             <div class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider space-y-4">
               <p>周りから褒められる似合う変化をプラスしたい方にオススメ。</p>
               <p>センスの良さとナチュラルからモードまでの幅広い似合わせに定評があり、男女問わず、様々な年代から支持されています。</p>
@@ -701,16 +807,19 @@
         <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center reveal">
           <div class="w-full md:w-5/12">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Mizuki+Adaniya" alt="安谷屋 瑞貴" class="w-full h-full object-cover">
+              <img src="https://placehold.co/600x800/e5e0d8/5c4033?text=Mizuki+Adaniya" alt="安谷屋 瑞貴"
+                class="w-full h-full object-cover">
             </div>
           </div>
           <div class="w-full md:w-7/12 flex flex-col justify-center">
-            <p class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">Top Stylist</p>
+            <p
+              class="font-en text-serio-gold tracking-widest text-xs mb-3 border-b border-serio-gold/30 inline-block pb-1">
+              Top Stylist</p>
             <h3 class="font-serif text-2xl md:text-3xl text-serio-dark tracking-widest mb-2 flex items-baseline gap-4">
               安谷屋 瑞貴 <span class="font-en text-sm text-serio-dark/50 tracking-widest">Mizuki Adaniya</span>
             </h3>
             <p class="text-xs text-serio-dark/60 mb-8 tracking-wider">一社出勤日：第2・4月曜日</p>
-            
+
             <div class="font-serif text-sm md:text-base text-serio-dark/80 leading-[2.2] tracking-wider space-y-4">
               <p>小学生の頃から美容、メイクに関心を抱き、沖縄から単身で名古屋へ。専門学校を卒業後、美容に関する情熱とスタッフの人柄にひかれて「SERIO」の一員に。</p>
               <p>栄店で4~5年経験を積んだ後、10年ほど前に一社店（ilo）に加わりました。</p>
@@ -746,28 +855,43 @@
     <!-- Auto Loop Image Slider -->
     <div class="mt-20 overflow-hidden relative w-full reveal">
       <!-- 両端を少しぼかすグラデーション（任意） -->
-      <div class="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-      <div class="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-      
+      <div
+        class="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+      </div>
+
       <div class="animate-marquee">
         <!-- 元の要素 -->
-        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+1" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+2" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/b0966a/faf8f5?text=Photo+3" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+4" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+5" alt="Gallery" class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+1" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+2" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/b0966a/faf8f5?text=Photo+3" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+4" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+5" alt="Gallery"
+            class="lightbox-trigger"></div>
         <!-- 複製要素（ループ用） -->
-        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+1" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+2" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/b0966a/faf8f5?text=Photo+3" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+4" alt="Gallery" class="lightbox-trigger"></div>
-        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+5" alt="Gallery" class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+1" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+2" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/b0966a/faf8f5?text=Photo+3" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/e5e0d8/5c4033?text=Photo+4" alt="Gallery"
+            class="lightbox-trigger"></div>
+        <div class="marquee-item"><img src="https://placehold.co/600x400/2c2c2c/faf8f5?text=Photo+5" alt="Gallery"
+            class="lightbox-trigger"></div>
       </div>
     </div>
   </section>
 
   <!-- Access -->
-  <section id="access" class="py-24 md:py-32 px-6 text-white relative bg-cover bg-center bg-no-repeat" style="background-image: url('img/accessbg.jpg');">
+  <section id="access" class="py-24 md:py-32 px-6 text-white relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('img/accessbg.jpg');">
     <!-- ダークグレーのオーバーレイ -->
     <div class="absolute inset-0 bg-serio-dark/85 z-0"></div>
     <div class="max-w-[1100px] mx-auto relative z-10">
@@ -817,10 +941,15 @@
           </table>
 
           <div class="mt-10 flex gap-4">
-            <a href="https://www.instagram.com/serio_ilo_issya/" target="_blank" class="w-12 h-12 flex items-center justify-center border border-white/30 hover:border-serio-gold hover:text-serio-gold transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <a href="https://www.instagram.com/serio_ilo_issya/" target="_blank"
+              class="w-12 h-12 flex items-center justify-center border border-white/30 hover:border-serio-gold hover:text-serio-gold transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
-            <a href="https://ilo-serio.co.jp/" target="_blank" class="h-12 px-6 flex items-center justify-center border border-white/30 hover:border-serio-gold hover:text-serio-gold transition-all font-en text-xs tracking-widest">
+            <a href="https://ilo-serio.co.jp/" target="_blank"
+              class="h-12 px-6 flex items-center justify-center border border-white/30 hover:border-serio-gold hover:text-serio-gold transition-all font-en text-xs tracking-widest">
               OFFICIAL SITE
             </a>
           </div>
@@ -829,7 +958,11 @@
         <!-- Map -->
         <div class="w-full md:w-1/2 reveal-right order-1 md:order-2 h-[350px] md:h-auto min-h-[350px]">
           <!-- Google Map iframe -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.5859752139827!2d136.99614599999998!3d35.166945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600365436ba741e9%3A0xcb5ae02a4806b0fc!2z44K744Oq44KqIOOCpOODrSDkuIDnpL7lupc!5e0!3m2!1sja!2sjp!4v1787801790077!5m2!1sja!2sjp" width="100%" height="100%" style="border:0; filter: grayscale(80%) sepia(20%) hue-rotate(340deg) opacity(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.5859752139827!2d136.99614599999998!3d35.166945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600365436ba741e9%3A0xcb5ae02a4806b0fc!2z44K744Oq44KqIOOCpOODrSDkuIDnpL7lupc!5e0!3m2!1sja!2sjp!4v1787801790077!5m2!1sja!2sjp"
+            width="100%" height="100%"
+            style="border:0; filter: grayscale(80%) sepia(20%) hue-rotate(340deg) opacity(0.9);" allowfullscreen=""
+            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
     </div>
@@ -842,15 +975,22 @@
 
   <!-- SP Fixed CTA -->
   <div class="fixed bottom-0 left-0 w-full md:hidden flex z-40 bg-serio-dark shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
-    <a href="tel:052-734-8492" class="flex-1 text-white text-center py-4 font-serif text-sm tracking-widest flex items-center justify-center gap-2 border-r border-white/10 active:bg-serio-dark/80">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-serio-gold">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+    <a href="tel:052-734-8492"
+      class="flex-1 text-white text-center py-4 font-serif text-sm tracking-widest flex items-center justify-center gap-2 border-r border-white/10 active:bg-serio-dark/80">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 text-serio-gold">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
       </svg>
       電話予約
     </a>
-    <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ" target="_blank" class="flex-1 bg-serio-brown text-white text-center py-4 font-serif text-sm tracking-widest flex items-center justify-center gap-2 active:bg-serio-brown/80">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-serio-beige">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+    <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ"
+      target="_blank"
+      class="flex-1 bg-serio-brown text-white text-center py-4 font-serif text-sm tracking-widest flex items-center justify-center gap-2 active:bg-serio-brown/80">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 text-serio-beige">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
       </svg>
       WEB予約
     </a>
@@ -864,9 +1004,9 @@
       const headerLogo = document.getElementById('header-logo');
       const pcNavLinks = document.querySelectorAll('#pc-nav a');
       const headerTel = document.getElementById('header-tel');
-      
+
       window.addEventListener('scroll', () => {
-        if(window.scrollY > 50) {
+        if (window.scrollY > 50) {
           header.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
           header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md');
           header.classList.remove('bg-transparent');
@@ -915,7 +1055,7 @@
         menuBtn.classList.toggle('open');
         if (menuBtn.classList.contains('open')) {
           spMenu.classList.remove('opacity-0', 'pointer-events-none');
-          document.body.style.overflow = 'hidden'; 
+          document.body.style.overflow = 'hidden';
           // Open state is always white
           document.getElementById('line1').classList.replace('bg-serio-dark', 'bg-white');
           document.getElementById('line2').classList.replace('bg-serio-dark', 'bg-white');
@@ -924,7 +1064,7 @@
           spMenu.classList.add('opacity-0', 'pointer-events-none');
           document.body.style.overflow = '';
           // Revert to dark if scrolled
-          if(window.scrollY > 50) {
+          if (window.scrollY > 50) {
             document.getElementById('line1').classList.replace('bg-white', 'bg-serio-dark');
             document.getElementById('line2').classList.replace('bg-white', 'bg-serio-dark');
             document.getElementById('line3').classList.replace('bg-white', 'bg-serio-dark');
@@ -960,7 +1100,7 @@
       const modal = document.getElementById('lightbox-modal');
       const modalImg = document.getElementById('lightbox-img');
       const triggers = document.querySelectorAll('.lightbox-trigger');
-      
+
       const openModal = (src) => {
         modalImg.src = src;
         modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -1002,7 +1142,7 @@
       // Page Top Button
       const pageTopBtn = document.getElementById('page-top');
       window.addEventListener('scroll', () => {
-        if(window.scrollY > 300) {
+        if (window.scrollY > 300) {
           pageTopBtn.classList.remove('opacity-0', 'pointer-events-none');
         } else {
           pageTopBtn.classList.add('opacity-0', 'pointer-events-none');
@@ -1019,16 +1159,20 @@
   </script>
 
   <!-- Lightbox Modal -->
-  <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 cursor-zoom-out p-4 md:p-8">
+  <div id="lightbox-modal"
+    class="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 cursor-zoom-out p-4 md:p-8">
     <img id="lightbox-img" src="" alt="Enlarged" class="max-w-full max-h-full object-contain shadow-2xl rounded-sm">
   </div>
 
   <!-- Page Top Button -->
-  <a href="#" id="page-top" class="fixed right-4 md:right-8 bottom-20 md:bottom-12 w-12 h-12 bg-[#1a1a1a] text-serio-beige border border-serio-gold/50 flex flex-col items-center justify-center text-[10px] tracking-widest z-40 opacity-0 pointer-events-none transition-all duration-300 hover:bg-serio-gold hover:text-serio-dark hover:border-serio-gold shadow-lg shadow-black/20">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mb-0.5">
+  <a href="#" id="page-top"
+    class="fixed right-4 md:right-8 bottom-20 md:bottom-12 w-12 h-12 bg-[#1a1a1a] text-serio-beige border border-serio-gold/50 flex flex-col items-center justify-center text-[10px] tracking-widest z-40 opacity-0 pointer-events-none transition-all duration-300 hover:bg-serio-gold hover:text-serio-dark hover:border-serio-gold shadow-lg shadow-black/20">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      class="w-4 h-4 mb-0.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
     </svg>
     TOP
   </a>
 </body>
+
 </html>
