@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --brand-main: #F08DA1;
   --brand-light: #FDF3F5;
   --brand-dark: #D9657B;
@@ -72,7 +72,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
   width: 100%;
@@ -189,3 +189,4 @@ body {
 #mobile-menu {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
