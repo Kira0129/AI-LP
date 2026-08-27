@@ -245,21 +245,24 @@
 
       <!-- SP Hamburger -->
       <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 z-50 relative group">
-        <span
-          class="w-6 h-[1px] bg-white transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-[5px]"
-          id="line1"></span>
-        <span class="w-6 h-[1px] bg-white mt-2 transition-all duration-300 group-[.open]:opacity-0" id="line2"></span>
-        <span
-          class="w-6 h-[1px] bg-white mt-2 transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-[7px]"
-          id="line3"></span>
+        <!-- Hamburger Lines -->
+        <div class="flex flex-col justify-center items-center w-full h-full group-[.open]:hidden">
+          <span class="w-6 h-[1px] bg-white transition-all duration-300" id="line1"></span>
+          <span class="w-6 h-[1px] bg-white mt-2 transition-all duration-300" id="line2"></span>
+          <span class="w-6 h-[1px] bg-white mt-2 transition-all duration-300" id="line3"></span>
+        </div>
+        <!-- Close X -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-serio-dark hidden group-[.open]:block">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
     </div>
   </header>
 
   <!-- SP Menu Overlay -->
   <div id="sp-menu"
-    class="fixed inset-0 bg-serio-dark/98 backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
-    <nav class="flex flex-col items-center gap-8 text-white font-en text-xl tracking-widest">
+    class="fixed inset-0 bg-serio-beige backdrop-blur-md z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500 pb-24">
+    <nav class="flex flex-col items-center gap-8 text-serio-dark font-en text-xl tracking-widest">
       <a href="#about" class="menu-link hover:text-serio-gold transition-colors">ABOUT</a>
       <a href="#features" class="menu-link hover:text-serio-gold transition-colors">FEATURES</a>
       <a href="#menu" class="menu-link hover:text-serio-gold transition-colors">MENU</a>
@@ -268,7 +271,7 @@
     </nav>
     <div class="mt-12 flex flex-col gap-4 w-64">
       <a href="tel:052-734-8492"
-        class="border border-white/50 text-white text-center py-4 font-serif tracking-widest hover:bg-white hover:text-serio-dark transition-colors">
+        class="border border-serio-dark/30 text-serio-dark text-center py-4 font-serif tracking-widest hover:bg-serio-dark hover:text-serio-beige transition-colors">
         052-734-8492
       </a>
       <a href="https://my.saloon.to/?g=41232&m=0001&introduction_clear=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnbEOnUS2_Nzvw67zlZ4zPepJiqx7WzzgvTE6OZE5PiDeU2OHZ1tEZsguk4mE_aem_7d9H3M--QpbOdH_8XgMHEQ"
@@ -1058,18 +1061,14 @@
         if (menuBtn.classList.contains('open')) {
           spMenu.classList.remove('opacity-0', 'pointer-events-none');
           document.body.style.overflow = 'hidden';
-          // Open state is always white
-          document.getElementById('line1').classList.replace('bg-serio-dark', 'bg-white');
-          document.getElementById('line2').classList.replace('bg-serio-dark', 'bg-white');
-          document.getElementById('line3').classList.replace('bg-serio-dark', 'bg-white');
+          headerLogo.classList.remove('text-white');
+          headerLogo.classList.add('text-serio-dark');
         } else {
           spMenu.classList.add('opacity-0', 'pointer-events-none');
           document.body.style.overflow = '';
-          // Revert to dark if scrolled
-          if (window.scrollY > 50) {
-            document.getElementById('line1').classList.replace('bg-white', 'bg-serio-dark');
-            document.getElementById('line2').classList.replace('bg-white', 'bg-serio-dark');
-            document.getElementById('line3').classList.replace('bg-white', 'bg-serio-dark');
+          if (window.scrollY <= 50) {
+            headerLogo.classList.remove('text-serio-dark');
+            headerLogo.classList.add('text-white');
           }
         }
       };
