@@ -133,7 +133,7 @@ body {
 
 /* Common Section Styles */
 .section-title {
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(20px, 4vw, 36px);
   line-height: 1.4;
 }
 
