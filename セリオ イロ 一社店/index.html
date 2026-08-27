@@ -998,6 +998,23 @@
           }
         }, 100);
       });
+
+      // Page Top Button
+      const pageTopBtn = document.getElementById('page-top');
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+          pageTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+          pageTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+      pageTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 
@@ -1005,5 +1022,13 @@
   <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 cursor-zoom-out p-4 md:p-8">
     <img id="lightbox-img" src="" alt="Enlarged" class="max-w-full max-h-full object-contain shadow-2xl rounded-sm">
   </div>
+
+  <!-- Page Top Button -->
+  <a href="#" id="page-top" class="fixed right-4 md:right-8 bottom-20 md:bottom-12 w-12 h-12 bg-[#1a1a1a] text-serio-beige border border-serio-gold/50 flex flex-col items-center justify-center text-[10px] tracking-widest z-40 opacity-0 pointer-events-none transition-all duration-300 hover:bg-serio-gold hover:text-serio-dark hover:border-serio-gold shadow-lg shadow-black/20">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mb-0.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
+    TOP
+  </a>
 </body>
 </html>
