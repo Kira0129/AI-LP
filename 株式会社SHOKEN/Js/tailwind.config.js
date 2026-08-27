@@ -19,8 +19,8 @@ tailwind.config = {
         'fade-up': 'fadeUp 0.8s ease-out forwards',
         'slide-bg': 'slideBg 20s linear infinite',
         'marquee': 'marquee 25s linear infinite',
-        'fv-slide-1': 'fvSlide1 14s infinite',
-        'fv-slide-2': 'fvSlide2 14s infinite',
+        'fv-slide-1': 'fvSlide1 10s infinite',
+        'fv-slide-2': 'fvSlide2 10s infinite',
       },
       keyframes: {
         fadeUp: {
@@ -32,19 +32,19 @@ tailwind.config = {
           '50%': { transform: 'scale(1.05)' },
           '100%': { transform: 'scale(1)' },
         },
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
         fvSlide1: {
-          '0%, 40%': { opacity: '0.5', transform: 'scale(1)' },
+          '0%, 40%': { opacity: '1', transform: 'scale(1)' },
           '50%, 90%': { opacity: '0', transform: 'scale(1.05)' },
-          '100%': { opacity: '0.5', transform: 'scale(1)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
         fvSlide2: {
           '0%, 40%': { opacity: '0', transform: 'scale(1.05)' },
-          '50%, 90%': { opacity: '0.5', transform: 'scale(1)' },
+          '50%, 90%': { opacity: '1', transform: 'scale(1)' },
           '100%': { opacity: '0', transform: 'scale(1.05)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         }
       }
     }
