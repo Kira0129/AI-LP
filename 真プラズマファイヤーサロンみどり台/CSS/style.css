@@ -232,3 +232,8 @@ body {
 #mobile-menu {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+@media (max-width: 767px) {
+  .hero-slide:nth-child(3) {
+    background-position: 65% center;
+  }
+}
