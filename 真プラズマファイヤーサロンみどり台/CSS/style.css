@@ -26,6 +26,7 @@ body {
 #header {
   transition: all 0.3s ease;
 }
+
 #header.scrolled {
   box-shadow: 0 4px 20px rgba(240, 141, 161, 0.1);
   padding-top: 4px;
@@ -43,6 +44,7 @@ body {
   padding-top: 80px;
   overflow: hidden;
 }
+
 .hero-left-bg {
   position: absolute;
   top: 0;
@@ -52,6 +54,7 @@ body {
   background: linear-gradient(135deg, var(--brand-light) 0%, #FFE4E9 100%);
   z-index: 1;
 }
+
 .hero-visual {
   position: absolute;
   top: 0;
@@ -63,21 +66,24 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 .hero-visual::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, #FFE4E9 0%, rgba(255, 228, 233, 0.4) 30%, transparent 100%);
 }
+
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 1280px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 20px;
   width: 100%;
   pointer-events: none;
 }
+
 .hero-text-box {
   max-width: 650px;
   pointer-events: auto;
@@ -88,32 +94,36 @@ body {
   box-shadow: 0 10px 30px rgba(240, 141, 161, 0.15);
   border: 2px solid #FFF;
 }
-@media (min-width: 961px) {
-  .hero-text-box {
-    margin-left: -40px;
-  }
-}
+
 @media (max-width: 960px) {
   #hero {
     flex-direction: column;
     min-height: auto;
     padding-top: 70px;
   }
-  .hero-left-bg { display: none; }
+
+  .hero-left-bg {
+    display: none;
+  }
+
   .hero-visual {
     position: relative;
     width: 100%;
     height: 350px;
     order: 1;
   }
+
   .hero-visual::after {
     background: linear-gradient(to bottom, rgba(255, 228, 233, 0) 0%, var(--brand-light) 100%);
   }
+
   .hero-content {
     order: 2;
     padding: 0;
-    margin-top: -50px; /* Overlap image */
+    margin-top: -50px;
+    /* Overlap image */
   }
+
   .hero-text-box {
     margin: 0 16px;
     padding: 32px 24px;
@@ -126,6 +136,7 @@ body {
   font-size: clamp(24px, 4vw, 36px);
   line-height: 1.4;
 }
+
 .section-label {
   font-weight: 900;
   letter-spacing: 0.1em;
@@ -139,6 +150,7 @@ body {
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
@@ -176,9 +188,11 @@ body {
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
+
 .faq-item.active .faq-answer {
   max-height: 500px;
 }
+
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
 }
@@ -187,12 +201,19 @@ body {
 .hamburger span {
   transition: all 0.3s ease;
 }
-.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 #mobile-menu {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-
