@@ -93,3 +93,25 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.fade-in').forEach(element => {
   observer.observe(element);
 });
+
+// Read More Toggle for Voice Section
+const readMoreBtns = document.querySelectorAll('.read-more-btn');
+readMoreBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const card = e.currentTarget.closest('.fade-in');
+    const textEl = card.querySelector('.review-text');
+    const btnText = e.currentTarget.querySelector('.btn-text');
+    const btnIcon = e.currentTarget.querySelector('.btn-icon');
+    
+    if (textEl.classList.contains('line-clamp-3')) {
+      textEl.classList.remove('line-clamp-3');
+      btnText.textContent = '閉じる';
+      btnIcon.classList.add('rotate-180');
+    } else {
+      textEl.classList.add('line-clamp-3');
+      btnText.textContent = '続きを読む';
+      btnIcon.classList.remove('rotate-180');
+    }
+  });
+});
+
