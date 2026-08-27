@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquee Outline Text */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+.text-outline-green {
+  -webkit-text-stroke: 1px #00A86B;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #00A86B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008755;
+}
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+  transition: all 0.3s ease;
+}
+.nav-open .hamburger-line-1 { transform: translateY(8px) rotate(45deg); }
+.nav-open .hamburger-line-2 { opacity: 0; }
+.nav-open .hamburger-line-3 { transform: translateY(-8px) rotate(-45deg); }
+
+/* Decorative clip path for backgrounds */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 calc(100% - 3vw));
+}
