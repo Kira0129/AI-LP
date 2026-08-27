@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>真プラズマファイヤーサロンみどり台 | 身体と心をやさしく整える隠れ家サロン</title>
+  <meta name="description" content="稲毛区みどり台の隠れ家的プライベート整体サロン。プラズマファイヤーや温熱施術、新リンパ施術を組み合わせ、一人ひとりのお悩みに寄り添います。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              main: '#F08DA1',     /* 明るく親しみやすいピンク */
+              light: '#FDF3F5',    /* 背景用の極薄ピンク */
+              dark: '#D9657B',     /* 濃いめのピンク */
+              accent: '#F2A65A',   /* アクセントのオレンジ */
+              deco: '#9bc96f',     /* 装飾用の明るいグリーン */
+              text: '#554A4B',     /* 柔らかいブラウン/チャコールグレー */
+              bg: '#FFFDFD'        /* ページ全体の背景 */
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-main: #F08DA1;
+      --brand-light: #FDF3F5;
+      --brand-dark: #D9657B;
+      --brand-accent: #F2A65A;
+      --brand-deco: #9bc96f;
+      --brand-text: #554A4B;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--brand-text);
+      background-color: #FFFDFD;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* Header */
+    #header {
+      transition: all 0.3s ease;
+    }
+    #header.scrolled {
+      box-shadow: 0 4px 20px rgba(240, 141, 161, 0.1);
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    /* FV / Hero */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+    .hero-left-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--brand-light) 0%, #FFE4E9 100%);
+      z-index: 1;
+    }
+    .hero-visual {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      z-index: 1;
+      background-image: url('https://placehold.co/1200x800/FFD1DB/FFFDFD?text=Salon+Atmosphere');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #FFE4E9 0%, rgba(255, 228, 233, 0.4) 30%, transparent 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      width: 100%;
+      pointer-events: none;
+    }
+    .hero-text-box {
+      max-width: 650px;
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(240, 141, 161, 0.15);
+      border: 2px solid #FFF;
+    }
+    @media (max-width: 960px) {
+      #hero {
+        flex-direction: column;
+        min-height: auto;
+        padding-top: 70px;
+      }
+      .hero-left-bg { display: none; }
+      .hero-visual {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        order: 1;
+      }
+      .hero-visual::after {
+        background: linear-gradient(to bottom, rgba(255, 228, 233, 0) 0%, var(--brand-light) 100%);
+      }
+      .hero-content {
+        order: 2;
+        padding: 0;
+        margin-top: -50px; /* Overlap image */
+      }
+      .hero-text-box {
+        margin: 0 16px;
+        padding: 32px 24px;
+        box-shadow: 0 4px 20px rgba(240, 141, 161, 0.2);
+      }
+    }
+
+    /* Common Section Styles */
+    .section-title {
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.4;
+    }
+    .section-label {
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-main);
+    }
+    
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Checkmark for Troubles */
+    .trouble-list li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: var(--brand-deco);
+      color: white;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Blob Shape Background */
+    .blob-bg {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.4;
+      filter: blur(40px);
+    }
+
+    /* FAQ Toggle */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Mobile Menu */
+    .hamburger span {
+      transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    #mobile-menu {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+  </style>
+</head>
+<body class="relative font-sans">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 text-brand-main font-bold text-lg sm:text-xl md:text-2xl hover:opacity-80 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          真プラズマファイヤーサロンみどり台
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-6 font-bold text-brand-text">
+          <a href="#about" class="hover:text-brand-main transition">当サロンについて</a>
+          <a href="#service" class="hover:text-brand-main transition">施術メニュー</a>
+          <a href="#features" class="hover:text-brand-main transition">特徴</a>
+          <a href="#menu" class="hover:text-brand-main transition">料金</a>
+          <a href="#faq" class="hover:text-brand-main transition">よくある質問</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="tel:050-5448-7259" class="text-brand-text font-bold hover:text-brand-main flex items-center gap-1">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            050-5448-7259
+          </a>
+          <a href="https://salon-midoridai.jp/contact/" target="_blank" rel="noopener" class="bg-brand-main text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:bg-brand-dark hover:shadow-lg transition transform hover:-translate-y-0.5">
+            WEB予約・お問合せ
+          </a>
+        </div>
+
+        <!-- Hamburger (Mobile) -->
+        <button id="hamburger" class="lg:hidden hamburger flex flex-col justify-center items-center w-8 h-8 z-[60] outline-none">
+          <span class="bg-brand-main h-1 w-6 rounded-full mb-1.5 block"></span>
+          <span class="bg-brand-main h-1 w-6 rounded-full mb-1.5 block"></span>
+          <span class="bg-brand-main h-1 w-6 rounded-full block"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-sm z-[55] opacity-0 invisible flex flex-col items-center justify-center">
+    <nav class="flex flex-col items-center gap-8 text-xl font-bold text-brand-text">
+      <a href="#about" class="mobile-link hover:text-brand-main">当サロンについて</a>
+      <a href="#service" class="mobile-link hover:text-brand-main">施術メニュー</a>
+      <a href="#features" class="mobile-link hover:text-brand-main">特徴</a>
+      <a href="#menu" class="mobile-link hover:text-brand-main">料金・コース</a>
+      <a href="#faq" class="mobile-link hover:text-brand-main">よくある質問</a>
+      <a href="#contact" class="mobile-link hover:text-brand-main">アクセス</a>
+      
+      <div class="mt-4 flex flex-col items-center gap-4 w-full px-8">
+        <a href="tel:050-5448-7259" class="w-full text-center border-2 border-brand-main text-brand-main py-3 rounded-full">電話をかける</a>
+        <a href="https://salon-midoridai.jp/contact/" target="_blank" class="w-full text-center bg-brand-main text-white py-3 rounded-full">WEBで予約する</a>
+      </div>
+    </nav>
+  </div>
+
+  <section id="hero">
+    <div class="hero-left-bg"></div>
+    <div class="hero-visual"></div>
+    
+    <div class="hero-content">
+      <div class="hero-text-box fade-in">
+        <div class="inline-flex items-center gap-2 bg-brand-light text-brand-main px-4 py-1.5 rounded-full font-bold text-sm mb-6 border border-brand-main/20">
+          <span class="w-2 h-2 rounded-full bg-brand-deco"></span>
+          千葉市稲毛区みどり台の整体サロン
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-text leading-tight mb-6">
+          みどり台の隠れ家サロンで、<br>
+          <span class="text-brand-main">身体と心をやさしく整える</span><br class="hidden sm:block">時間を
+        </h1>
+        
+        <p class="text-brand-text leading-relaxed mb-8">
+          プラズマファイヤーや温熱施術、新リンパ施術を組み合わせ、<br class="hidden lg:block">
+          一人ひとりのお悩みに寄り添う整体サロンです。
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://salon-midoridai.jp/contact/" target="_blank" class="bg-brand-main text-white font-bold py-4 px-8 rounded-full text-center shadow-lg hover:bg-brand-dark hover:shadow-xl transition transform hover:-translate-y-1">
+            WEBから予約する
+          </a>
+          <a href="tel:050-5448-7259" class="bg-white border-2 border-brand-main text-brand-main font-bold py-4 px-8 rounded-full text-center shadow hover:bg-brand-light transition flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            050-5448-7259
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="troubles" class="py-20 bg-brand-light relative overflow-hidden">
+    <!-- Decorative blob -->
+    <div class="blob-bg bg-brand-main/20 w-96 h-96 rounded-full -top-20 -right-20"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold bg-white text-brand-main inline-block py-4 px-8 rounded-full shadow-sm border border-brand-main/10">
+          こんなお悩みありませんか？
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-t-8 border-brand-main flex flex-col md:flex-row gap-8 items-center fade-in">
+        <!-- 画像エリア -->
+        <div class="w-full md:w-1/2 shrink-0 rounded-2xl overflow-hidden shadow-inner hidden sm:block">
+          <img src="https://placehold.co/600x600/FDF3F5/F08DA1?text=Worries" alt="お悩み" class="w-full h-full object-cover">
+        </div>
+        <div class="w-full md:hidden shrink-0 rounded-2xl overflow-hidden shadow-inner h-48">
+          <img src="https://placehold.co/600x400/FDF3F5/F08DA1?text=Worries" alt="お悩み" class="w-full h-full object-cover">
+        </div>
+
+        <!-- テキストエリア -->
+        <div class="w-full md:w-1/2">
+          <ul class="trouble-list space-y-4 font-medium text-brand-text">
+            <li>肩こりや腰のつらさを感じている</li>
+            <li>身体の重だるさがなかなか抜けない</li>
+            <li>年齢とともに不調を感じやすくなった</li>
+            <li>整体に行っても同じ悩みを繰り返してしまう</li>
+            <li>自分の身体に合った施術を受けたい</li>
+            <li>落ち着いた個室サロンで相談したい</li>
+          </ul>
+          
+          <div class="mt-8 bg-brand-light py-4 px-6 rounded-xl border border-brand-main/30 text-center">
+            <p class="font-bold text-brand-dark mb-1">そのお悩み、当サロンにお任せください！</p>
+            <svg class="w-6 h-6 text-brand-deco mx-auto animate-bounce mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 bg-white relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        
+        <div class="w-full lg:w-1/2 relative fade-in">
+          <div class="rounded-3xl overflow-hidden shadow-2xl relative z-10">
+            <img src="https://placehold.co/800x600/FDF3F5/F08DA1?text=Private+Salon" alt="サロン風景" class="w-full h-auto">
+          </div>
+          <!-- Decor -->
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-deco rounded-full opacity-30 z-0"></div>
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-brand-main rounded-full opacity-20 z-0"></div>
+        </div>
+
+        <div class="w-full lg:w-1/2 fade-in">
+          <div class="mb-6">
+            <span class="section-label text-sm">About</span>
+            <h2 class="section-title font-bold mt-2 text-brand-text">
+              稲毛区みどり台の<br>
+              <span class="text-brand-main">隠れ家的プライベート整体サロン</span>
+            </h2>
+          </div>
+          
+          <div class="space-y-5 leading-relaxed text-brand-text/90">
+            <p>真プラズマファイヤーサロンみどり台は、千葉市稲毛区みどり台エリアにある予約制のプライベート整体サロンです。</p>
+            <p>住宅街の中にある落ち着いた空間で、周りを気にせずゆっくりと施術を受けていただけます。</p>
+            <p>肩こりや腰のつらさ、年齢とともに感じやすい身体の重だるさなど、一人ひとりのお悩みを丁寧に伺いながら、身体の状態に合わせたオーダーメイドの施術をご提案しています。</p>
+            <p class="bg-brand-light p-4 rounded-xl border border-brand-main/20">
+              一般的な整体とは異なり、新リンパ施術やサーモファイヤー温熱施術、プラズマファイヤー、ライジングヒートなど、さまざまな技術や機器を組み合わせて、快適な身体づくりをサポートします。
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="py-24 bg-brand-light/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <span class="section-label">Service</span>
+        <h2 class="section-title font-bold mt-2">当サロンの<span class="text-brand-main">施術メニュー</span></h2>
+        <p class="mt-4 text-brand-text/80">多様な技術と機器でお悩みにアプローチします</p>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Service 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition duration-300 border border-brand-light fade-in">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://placehold.co/600x400/FDF3F5/F08DA1?text=New+Lymph" alt="新リンパ施術" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-4 mb-4 border-b-2 border-brand-light pb-4">
+              <div class="w-12 h-12 bg-brand-light text-brand-main rounded-full flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">新リンパ施術</h3>
+            </div>
+            <p class="text-brand-text/90 leading-relaxed">身体の状態を確認しながら、リンパや筋肉、骨格のバランスに着目した施術を行います。<br class="hidden lg:block">肩こりや腰のつらさ、身体の重だるさが気になる方におすすめです。</p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition duration-300 border border-brand-light fade-in">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://placehold.co/600x400/FDF3F5/9bc96f?text=Thermo+Fire" alt="サーモファイヤー温熱施術" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-4 mb-4 border-b-2 border-brand-light pb-4">
+              <div class="w-12 h-12 bg-brand-light text-brand-deco rounded-full flex items-center justify-center shrink-0">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">サーモファイヤー温熱施術</h3>
+            </div>
+            <p class="text-brand-text/90 leading-relaxed">温熱による心地よさで、身体をじんわり温めながらリラックスできる施術です。<br class="hidden lg:block">冷えやこわばりが気になる方、ゆっくり身体をゆるめたい方にもおすすめです。</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition duration-300 border border-brand-light fade-in">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://placehold.co/600x400/FDF3F5/F08DA1?text=Plasma+Fire" alt="プラズマファイヤー施術" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-4 mb-4 border-b-2 border-brand-light pb-4">
+              <div class="w-12 h-12 bg-brand-light text-brand-main rounded-full flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">プラズマファイヤー施術</h3>
+            </div>
+            <p class="text-brand-text/90 leading-relaxed">サロンならではの専用機器を使用し、身体の状態に合わせて施術を行います。<br class="hidden lg:block">通常の整体とは違うアプローチを試してみたい方にもおすすめです。</p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition duration-300 border border-brand-light fade-in">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://placehold.co/600x400/FDF3F5/9bc96f?text=Rising+Heat" alt="ライジングヒート" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-4 mb-4 border-b-2 border-brand-light pb-4">
+              <div class="w-12 h-12 bg-brand-light text-brand-deco rounded-full flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">ライジングヒート</h3>
+            </div>
+            <p class="text-brand-text/90 leading-relaxed">身体の状態やお悩みに合わせて組み合わせるオプション施術です。<br class="hidden lg:block">その日のコンディションに合わせて、必要なケアをご提案します。</p>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 md:p-10 rounded-3xl shadow-sm hover:shadow-lg transition duration-300 border border-brand-light fade-in">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://placehold.co/600x400/FDF3F5/F08DA1?text=Order+Made" alt="オーダーメイド整体" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-4 mb-4 border-b-2 border-brand-light pb-4">
+              <div class="w-12 h-12 bg-brand-light text-brand-main rounded-full flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">オーダーメイド整体</h3>
+            </div>
+            <p class="text-brand-text/90 leading-relaxed">決まった流れで進めるのではなく、施術前のヒアリングを大切にしています。<br class="hidden lg:block">お客様のお悩みや身体の状態を確認しながら、一人ひとりに合わせた内容で施術いたします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <span class="section-label">Features</span>
+        <h2 class="section-title font-bold mt-2">当サロンの<span class="text-brand-main">3つの特徴</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center text-center fade-in">
+          <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 shadow-md">
+            <img src="https://placehold.co/600x450/FDF3F5/F08DA1?text=Feature+01" alt="オーダーメイド施術" class="w-full h-full object-cover transition transform hover:scale-105 duration-500">
+            <div class="absolute top-4 left-4 bg-brand-main text-white font-bold text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">01</div>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-dark">一人ひとりに合わせた<br>オーダーメイド施術</h3>
+          <p class="text-brand-text/80 leading-relaxed text-left">同じ肩こりや腰のつらさでも、原因や身体の状態は人によって異なります。丁寧なヒアリングを行い、今のお身体に合わせた施術内容をご提案します。</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center text-center fade-in" style="transition-delay: 0.1s;">
+          <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 shadow-md">
+            <img src="https://placehold.co/600x450/FDF3F5/F08DA1?text=Feature+02" alt="専門機器と手技" class="w-full h-full object-cover transition transform hover:scale-105 duration-500">
+            <div class="absolute top-4 left-4 bg-brand-deco text-white font-bold text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">02</div>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-dark">専門機器と手技を<br>組み合わせた整体</h3>
+          <p class="text-brand-text/80 leading-relaxed text-left">新リンパ施術や温熱施術に加え、プラズマファイヤーやライジングヒートなども取り入れています。手技だけに頼らず、さまざまなアプローチで快適な身体づくりをサポートします。</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center text-center fade-in" style="transition-delay: 0.2s;">
+          <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 shadow-md">
+            <img src="https://placehold.co/600x450/FDF3F5/F08DA1?text=Feature+03" alt="プライベート空間" class="w-full h-full object-cover transition transform hover:scale-105 duration-500">
+            <div class="absolute top-4 left-4 bg-brand-dark text-white font-bold text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-lg">03</div>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-brand-dark">予約制・個室の<br>プライベート空間</h3>
+          <p class="text-brand-text/80 leading-relaxed text-left">住宅街にある隠れ家的なサロンのため、初めての方も落ち着いて過ごしやすい雰囲気です。周りを気にせず、ゆっくりご自身の身体と向き合える時間をお届けします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="py-24 bg-brand-light">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 fade-in">
+        <span class="section-label">Course & Price</span>
+        <h2 class="section-title font-bold mt-2 text-brand-text">コース・料金</h2>
+      </div>
+
+      <div class="space-y-8 fade-in">
+        <!-- Course 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-white flex flex-col md:flex-row hover:shadow-md transition duration-300">
+          <div class="w-full md:w-2/5 shrink-0">
+            <img src="https://placehold.co/600x400/FDF3F5/F08DA1?text=Standard" alt="スタンダードコース" class="w-full h-56 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+            <div class="text-brand-main font-bold text-sm mb-2">基本の整体＋リンパの施術</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-brand-text mb-4">スタンダードコース <span class="text-lg font-normal text-brand-text/60">約30分</span></h3>
+            <div class="text-3xl md:text-4xl font-bold text-brand-dark mt-auto pt-4 border-t border-brand-light">
+              ￥5,500<span class="text-sm font-normal text-brand-text/70 ml-1">(税込)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md border-2 border-brand-deco flex flex-col md:flex-row hover:shadow-lg transition duration-300 relative">
+          <div class="absolute top-4 left-4 z-10 bg-brand-deco text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-sm flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            一番人気
+          </div>
+          <div class="w-full md:w-2/5 shrink-0">
+            <img src="https://placehold.co/600x400/FDF3F5/9bc96f?text=Advance" alt="アドバンスコース" class="w-full h-56 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+            <div class="text-brand-deco font-bold text-sm mb-2 leading-relaxed">基本の整体＋リンパの施術＋<br class="hidden lg:block">(近赤外線施術 または プラズマ療法)</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-brand-text mb-4">アドバンスコース <span class="text-lg font-normal text-brand-text/60">約60分</span></h3>
+            <div class="text-3xl md:text-4xl font-bold text-brand-dark mt-auto pt-4 border-t border-brand-light">
+              ￥8,800<span class="text-sm font-normal text-brand-text/70 ml-1">(税込)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-white flex flex-col md:flex-row hover:shadow-md transition duration-300">
+          <div class="w-full md:w-2/5 shrink-0">
+            <img src="https://placehold.co/600x400/FDF3F5/D9657B?text=Special" alt="スペシャルコース" class="w-full h-56 md:h-full object-cover">
+          </div>
+          <div class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+            <div class="text-brand-dark font-bold text-sm mb-2 leading-relaxed">基本の整体＋リンパの施術＋<br class="hidden lg:block">近赤外線施術＋プラズマ療法</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-brand-text mb-4">スペシャルコース <span class="text-lg font-normal text-brand-text/60">約90分</span></h3>
+            <div class="text-3xl md:text-4xl font-bold text-brand-dark mt-auto pt-4 border-t border-brand-light">
+              ￥13,200<span class="text-sm font-normal text-brand-text/70 ml-1">(税込)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="mt-16 fade-in">
+        <h4 class="text-center font-bold text-xl mb-6 text-brand-dark border-b-2 border-brand-main inline-block mx-auto">オプション・その他</h4>
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <ul class="divide-y divide-brand-light">
+            <li class="py-4 flex justify-between items-center">
+              <span class="font-bold">金箔施術 <span class="text-sm font-normal text-brand-text/60">1枚</span></span>
+              <span class="font-bold">￥1,100<span class="text-xs font-normal">(税込)</span></span>
+            </li>
+            <li class="py-4 flex justify-between items-center">
+              <span class="font-bold">基本整体 <span class="text-sm font-normal text-brand-text/60">10分</span></span>
+              <span class="font-bold">￥1,100<span class="text-xs font-normal">(税込)</span></span>
+            </li>
+            <li class="py-4 flex justify-between items-center">
+              <span class="font-bold">温熱療法 <span class="text-sm font-normal text-brand-text/60">20分</span></span>
+              <span class="font-bold">￥5,500<span class="text-xs font-normal">(税込)</span></span>
+            </li>
+            <li class="py-4 flex justify-between items-center">
+              <span class="font-bold text-brand-main">初診カウンセリング・検査</span>
+              <span class="font-bold text-brand-main">￥2,200<span class="text-xs font-normal">(税込)</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="voice" class="py-24 bg-white relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <span class="section-label">Voice</span>
+        <h2 class="section-title font-bold mt-2">お客様の声</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Voice 1 -->
+        <div class="bg-brand-light/50 p-8 rounded-3xl relative fade-in">
+          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <img src="https://placehold.co/100x100/F08DA1/FFFDFD?text=User" alt="お客様" class="w-16 h-16 rounded-full border-4 border-white shadow-sm">
+          </div>
+          <div class="mt-6">
+            <div class="flex text-brand-accent mb-3 justify-center">★★★★★</div>
+            <p class="text-brand-text/90 leading-relaxed text-center">親身になって話を聞いてくださり、施術も丁寧でした。身体がとても軽くなりました！落ち着いた雰囲気でリラックスできます。</p>
+          </div>
+        </div>
+        
+        <!-- Voice 2 -->
+        <div class="bg-brand-light/50 p-8 rounded-3xl relative fade-in" style="transition-delay: 0.1s;">
+          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <img src="https://placehold.co/100x100/F2A65A/FFFDFD?text=User" alt="お客様" class="w-16 h-16 rounded-full border-4 border-white shadow-sm">
+          </div>
+          <div class="mt-6">
+            <div class="flex text-brand-accent mb-3 justify-center">★★★★★</div>
+            <p class="text-brand-text/90 leading-relaxed text-center">長年の腰の重さが気になっていましたが、プラズマファイヤーの施術後、スッキリしました。これからも通いたいと思います。</p>
+          </div>
+        </div>
+
+        <!-- Voice 3 -->
+        <div class="bg-brand-light/50 p-8 rounded-3xl relative fade-in" style="transition-delay: 0.2s;">
+          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <img src="https://placehold.co/100x100/D9657B/FFFDFD?text=User" alt="お客様" class="w-16 h-16 rounded-full border-4 border-white shadow-sm">
+          </div>
+          <div class="mt-6">
+            <div class="flex text-brand-accent mb-3 justify-center">★★★★★</div>
+            <p class="text-brand-text/90 leading-relaxed text-center">温熱施術がとても心地よくて眠ってしまいました。終わった後は身体の芯から温まり、とても楽になりました。ありがとうございます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="message" class="py-24 bg-brand-main text-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-1/2 fade-in">
+          <div class="rounded-3xl overflow-hidden border-4 border-white shadow-xl">
+             <img src="https://placehold.co/600x600/FFFDFD/F08DA1?text=Owner+Message" alt="オーナー" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 fade-in">
+          <span class="text-brand-light font-bold tracking-widest text-sm mb-2 block">Message</span>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 leading-snug">
+            笑顔で過ごせる毎日を、<br>身体づくりからサポートします。
+          </h2>
+          <div class="space-y-4 text-white/90 leading-relaxed">
+            <p>身体の不調が続くと、気持ちまで沈んでしまうことがあります。</p>
+            <p>真プラズマファイヤーサロンみどり台では、地域の皆さまが少しでも元気に、笑顔で毎日を過ごせるよう、一人ひとりのお悩みに誠心誠意向き合っています。</p>
+            <p>優しい雰囲気のオーナーが、施術前にしっかりとお話を伺い、無理のない施術をご提案いたします。</p>
+            <p class="font-bold text-white mt-4 bg-white/20 p-4 rounded-xl">身体のつらさを一人で抱え込まず、まずはお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <span class="section-label">Q & A</span>
+        <h2 class="section-title font-bold mt-2">よくある質問</h2>
+      </div>
+
+      <div class="space-y-4 fade-in">
+        
+        <div class="faq-item bg-brand-light rounded-2xl overflow-hidden cursor-pointer">
+          <div class="faq-question flex justify-between items-center p-6 font-bold text-brand-dark">
+            <div class="flex items-center gap-4">
+              <span class="text-brand-main text-2xl">Q</span>
+              <span>予約は必要ですか？</span>
+            </div>
+            <span class="faq-icon text-brand-main text-2xl transition-transform duration-300">+</span>
+          </div>
+          <div class="faq-answer bg-white mx-2 mb-2 rounded-xl">
+            <div class="p-6 flex items-start gap-4 text-brand-text/90">
+              <span class="text-brand-deco text-2xl font-bold">A</span>
+              <p class="mt-1">予約必須とさせていただいておりますので、前日までのご予約をお願いいたします。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-brand-light rounded-2xl overflow-hidden cursor-pointer">
+          <div class="faq-question flex justify-between items-center p-6 font-bold text-brand-dark">
+            <div class="flex items-center gap-4">
+              <span class="text-brand-main text-2xl">Q</span>
+              <span>支払方法は何がありますか？</span>
+            </div>
+            <span class="faq-icon text-brand-main text-2xl transition-transform duration-300">+</span>
+          </div>
+          <div class="faq-answer bg-white mx-2 mb-2 rounded-xl">
+            <div class="p-6 flex items-start gap-4 text-brand-text/90">
+              <span class="text-brand-deco text-2xl font-bold">A</span>
+              <p class="mt-1">恐れ入りますが、現金のみでのお支払いをお願いしております。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-brand-light rounded-2xl overflow-hidden cursor-pointer">
+          <div class="faq-question flex justify-between items-center p-6 font-bold text-brand-dark">
+            <div class="flex items-center gap-4">
+              <span class="text-brand-main text-2xl">Q</span>
+              <span>駐車場はありますか？</span>
+            </div>
+            <span class="faq-icon text-brand-main text-2xl transition-transform duration-300">+</span>
+          </div>
+          <div class="faq-answer bg-white mx-2 mb-2 rounded-xl">
+            <div class="p-6 flex items-start gap-4 text-brand-text/90">
+              <span class="text-brand-deco text-2xl font-bold">A</span>
+              <p class="mt-1">駐車場をご用意しておりますので、お車でお越しの際はご利用ください。なお、ご利用の際は予約時にご申告をお願いいたします。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item bg-brand-light rounded-2xl overflow-hidden cursor-pointer">
+          <div class="faq-question flex justify-between items-center p-6 font-bold text-brand-dark">
+            <div class="flex items-center gap-4">
+              <span class="text-brand-main text-2xl">Q</span>
+              <span>男性も施術を受けられますか？</span>
+            </div>
+            <span class="faq-icon text-brand-main text-2xl transition-transform duration-300">+</span>
+          </div>
+          <div class="faq-answer bg-white mx-2 mb-2 rounded-xl">
+            <div class="p-6 flex items-start gap-4 text-brand-text/90">
+              <span class="text-brand-deco text-2xl font-bold">A</span>
+              <p class="mt-1">男性も受けていただけます。お気軽にご予約ください。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-brand-light border-t-4 border-brand-main">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12 bg-white p-8 md:p-12 rounded-3xl shadow-xl fade-in relative overflow-hidden">
+        
+        <div class="w-full lg:w-1/2 relative z-10">
+          <h2 class="text-2xl font-bold text-brand-dark mb-8 border-b-2 border-brand-light pb-4">
+            真プラズマファイヤーサロンみどり台<br>
+            <span class="text-lg font-normal text-brand-text/70">新リンパサロンみどり台</span>
+          </h2>
+
+          <div class="space-y-4 text-brand-text mb-8">
+            <div class="flex items-start gap-4 border-b border-brand-light pb-3">
+              <div class="w-24 font-bold text-brand-main shrink-0">住所</div>
+              <div>〒263-0042<br>千葉県千葉市稲毛区黒砂３丁目４−８</div>
+            </div>
+            <div class="flex items-center gap-4 border-b border-brand-light pb-3">
+              <div class="w-24 font-bold text-brand-main shrink-0">電話番号</div>
+              <div class="font-bold text-xl text-brand-dark"><a href="tel:050-5448-7259" class="hover:opacity-70">050-5448-7259</a></div>
+            </div>
+            <div class="flex items-start gap-4 border-b border-brand-light pb-3">
+              <div class="w-24 font-bold text-brand-main shrink-0">営業時間</div>
+              <div>10:00〜13:00 / 15:00〜最終受付18:00</div>
+            </div>
+            <div class="flex items-center gap-4 border-b border-brand-light pb-3">
+              <div class="w-24 font-bold text-brand-main shrink-0">定休日</div>
+              <div>水曜、祝日</div>
+            </div>
+            <div class="flex items-center gap-4 pb-3">
+              <div class="w-24 font-bold text-brand-main shrink-0">決済方法</div>
+              <div class="bg-gray-100 px-3 py-1 rounded text-sm font-bold text-gray-600">現金のみ</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href="https://salon-midoridai.jp/contact/" target="_blank" class="bg-brand-main text-white font-bold py-3 px-8 rounded-full shadow hover:bg-brand-dark transition w-full sm:w-auto text-center">WEBで予約する</a>
+            
+            <div class="flex gap-4 items-center justify-center w-full sm:w-auto">
+              <a href="https://salon-midoridai.jp/" target="_blank" class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-main hover:bg-brand-main hover:text-white transition" aria-label="Website">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              </a>
+              <a href="https://www.instagram.com/daotiandaotianchangzhi/?hl=ja" target="_blank" class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-main hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white transition" aria-label="Instagram">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 h-[350px] lg:h-auto rounded-2xl overflow-hidden shadow-inner border-2 border-brand-light relative z-10">
+          <!-- 住所から生成したGoogle Maps iframe -->
+          <iframe src="https://maps.google.co.jp/maps?q=千葉県千葉市稲毛区黒砂３丁目４−８&output=embed&t=m&z=16" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brand-text py-8 text-center border-t-8 border-brand-main">
+    <div class="mb-4">
+      <a href="#" class="text-white font-bold text-lg opacity-90 hover:opacity-100">真プラズマファイヤーサロンみどり台</a>
+    </div>
+    <p class="text-white text-xs opacity-60">© 2026 真プラズマファイヤーサロンみどり台. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SP Sticky CTA -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.1)] flex lg:hidden">
+    <a href="tel:050-5448-7259" class="flex-1 flex flex-col items-center justify-center py-3 border-r border-gray-200 text-brand-main font-bold">
+      <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+      <span class="text-[10px]">電話予約</span>
+    </a>
+    <a href="https://salon-midoridai.jp/contact/" target="_blank" class="flex-1 flex flex-col items-center justify-center py-3 bg-brand-main text-white font-bold">
+      <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <span class="text-[10px]">WEB予約</span>
+    </a>
+  </div>
+
+  <script>
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      if (mobileMenu.classList.contains('invisible')) {
+        mobileMenu.classList.remove('invisible', 'opacity-0');
+        mobileMenu.classList.add('visible', 'opacity-100');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('invisible', 'opacity-0');
+        mobileMenu.classList.remove('visible', 'opacity-100');
+        document.body.style.overflow = '';
+      }
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('invisible')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // FAQ Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+        });
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Scroll Animation
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
