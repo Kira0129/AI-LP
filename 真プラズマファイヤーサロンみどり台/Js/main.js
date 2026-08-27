@@ -47,6 +47,11 @@ function toggleMenu() {
 
 hamburger.addEventListener('click', toggleMenu);
 
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+if (mobileMenuClose) {
+  mobileMenuClose.addEventListener('click', toggleMenu);
+}
+
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     if (!mobileMenu.classList.contains('invisible')) {
