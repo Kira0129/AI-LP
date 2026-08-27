@@ -1079,6 +1079,31 @@ section {
   color: var(--charcoal);
 }
 
+.voice-text.clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.voice-read-more {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: var(--mid-brown);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 8px;
+  transition: opacity 0.3s;
+}
+
+.voice-read-more:hover {
+  opacity: 0.8;
+}
+
 .voice-more-btn-wrap {
   text-align: center;
   margin-top: 48px;

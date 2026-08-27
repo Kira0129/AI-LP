@@ -217,4 +217,37 @@ document.addEventListener('DOMContentLoaded', () => {
     else ptBtn.classList.remove('is-show');
   }, { passive: true });
   ptBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // 5. Voice Text Clamp
+  const voiceTexts = document.querySelectorAll('.voice-text');
+  // Check after font load or immediate
+  const checkClamp = () => {
+    voiceTexts.forEach(p => {
+      // Remove any existing buttons just in case
+      const existingBtn = p.parentNode.querySelector('.voice-read-more');
+      if (existingBtn) existingBtn.remove();
+      
+      p.classList.add('clamped');
+      if (p.scrollHeight > p.clientHeight) {
+        const btn = document.createElement('button');
+        btn.className = 'voice-read-more';
+        btn.textContent = '続きを読む';
+        p.parentNode.insertBefore(btn, p.nextSibling);
+        
+        btn.addEventListener('click', () => {
+          if (p.classList.contains('clamped')) {
+            p.classList.remove('clamped');
+            btn.textContent = '閉じる';
+          } else {
+            p.classList.add('clamped');
+            btn.textContent = '続きを読む';
+          }
+        });
+      }
+    });
+  };
+  
+  // Run on load and after fonts to ensure correct height calculation
+  checkClamp();
+  window.addEventListener('load', checkClamp);
 });
