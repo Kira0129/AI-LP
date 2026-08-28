@@ -114,7 +114,7 @@ img {
 .counter-total { font-size: 14px; color: var(--color-main); opacity: 0.5; }
 
 .fv-copy {
-    position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; z-index: 50; color: #fff;
+    position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; z-index: 50; color: #fff;
 }
 .copy-main-badge {
     font-size: 13px; font-weight: 800; color: var(--color-main); background: #fff;
@@ -125,6 +125,7 @@ img {
     font-weight: 900; font-size: 32px; line-height: 1.5; text-shadow: 0 4px 15px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.8);
 }
 @media (min-width: 768px) {
+    .fv-copy { bottom: 40px; }
     .copy-main-badge { font-size: 15px; padding: 8px 24px; }
     .copy-main-text { font-size: 48px; }
 }
