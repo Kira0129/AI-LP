@@ -101,4 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // Fixed CTA SP Display Logic (Target Section Trigger)
+    const fixedCtaSp = document.querySelector('.fixed-cta-sp');
+    const targetSection = document.querySelector('.target-section');
+    if (fixedCtaSp && targetSection) {
+        window.addEventListener('scroll', () => {
+            const rect = targetSection.getBoundingClientRect();
+            if (rect.top <= window.innerHeight) {
+                fixedCtaSp.classList.add('show');
+            } else {
+                fixedCtaSp.classList.remove('show');
+            }
+        });
+    }
 });
