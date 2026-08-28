@@ -12,6 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Price Swiper (Auto Loop)
+    new Swiper('.price-slider', {
+        loop: true,
+        speed: 5000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 2,
+        spaceBetween: 16,
+        breakpoints: {
+            768: { slidesPerView: 3, spaceBetween: 24 },
+            1024: { slidesPerView: 4, spaceBetween: 30 }
+        }
+    });
+
     // Drawer
     const burger = document.getElementById('burger');
     const drawer = document.getElementById('drawer');
