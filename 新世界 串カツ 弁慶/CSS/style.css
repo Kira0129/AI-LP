@@ -799,6 +799,7 @@ nav a:hover {
     color: var(--text-main);
     margin-bottom: 20px;
     line-height: 1.9;
+    font-size: 16px;
 }
 
 /* ===== Info & Map ===== */
@@ -822,7 +823,7 @@ nav a:hover {
     padding: 18px 0;
     border-bottom: 1px solid var(--line-color);
     text-align: left;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .info-table th {
@@ -1070,6 +1071,15 @@ footer {
     }
 
     .voice-text-full {
+        font-size: 14px;
+    }
+
+    .message-content p {
+        font-size: 14px;
+    }
+
+    .info-table th,
+    .info-table td {
         font-size: 14px;
     }
 
