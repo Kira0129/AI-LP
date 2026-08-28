@@ -385,7 +385,7 @@
         }
 
         .bg-problem {
-            background-image: linear-gradient(rgba(248, 248, 248, 0.85), rgba(248, 248, 248, 0.85)), url('../img/worrybg.jpg');
+            background-image: linear-gradient(rgba(248, 248, 248, 0.5), rgba(248, 248, 248, 0.5)), url('../img/worrybg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -397,7 +397,7 @@
         }
 
         .bg-recommend {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../img/menubg.jpg');
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/menubg.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
