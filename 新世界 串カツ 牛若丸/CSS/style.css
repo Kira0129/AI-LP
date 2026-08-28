@@ -752,3 +752,4 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+@media (max-width: 600px) { .bg-message { background-position: 45% center; } }
