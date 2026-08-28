@@ -338,7 +338,7 @@ nav a:hover {
 /* ===== CTA Section ===== */
 .cta-section {
     background: var(--primary-color);
-    padding: 50px 5%;
+    padding: 100px 5%;
     color: #fff;
     text-align: center;
 }
@@ -460,7 +460,7 @@ nav a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 120px 5%;
+    padding: 100px 5%;
     color: #fff;
     overflow: hidden;
     background-image: url('../img/aboutpic.jpg');
