@@ -560,7 +560,6 @@ nav a:hover {
 /* ===== Menu Section ===== */
 .menu-section {
     background-color: var(--bg-offwhite);
-    padding-bottom: 0;
 }
 
 .menu-featured {
