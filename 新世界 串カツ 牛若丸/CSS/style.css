@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
         .img-4-3 {
             height: 250px;
@@ -361,7 +361,7 @@
             position: relative;
             width: 100%;
             min-height: calc(100vh - 72px);
-            background-image: url('https://placehold.co/1920x1080/eeeeee/cccccc?text=[Image+of+大衆酒場の店内]');
+            background-image: url('../img/fvbg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
