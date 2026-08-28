@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 右クリック（コンテキストメニュー）を禁止
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
     // Full Width Loop Slider (Menu)
     if(document.querySelector('.menu-loop-swiper')) {
         new Swiper('.menu-loop-swiper', {

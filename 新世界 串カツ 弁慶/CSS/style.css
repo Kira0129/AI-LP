@@ -36,6 +36,10 @@ body {
     line-height: 1.8;
     letter-spacing: 0.03em;
     overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 p {
@@ -456,7 +460,7 @@ nav a:hover {
 /* ===== About Section ===== */
 .about-section-image {
     position: relative;
-    background-position: center 40%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1006,7 +1010,6 @@ footer {
 
     .about-section-image {
         background-attachment: scroll;
-        background-position: center;
     }
 
     .hero-top {
