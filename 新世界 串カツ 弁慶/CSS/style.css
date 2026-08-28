@@ -760,7 +760,7 @@ nav a:hover {
 .voice-text-full {
     line-height: 1.8;
     color: var(--text-main);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* ===== Message Section ===== */
@@ -1066,6 +1066,10 @@ footer {
     }
 
     .item-head .name {
+        font-size: 14px;
+    }
+
+    .voice-text-full {
         font-size: 14px;
     }
 
