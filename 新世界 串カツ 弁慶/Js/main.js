@@ -87,4 +87,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    // Voice Section Read More
+    const readMoreBtns = document.querySelectorAll('.voice-read-more');
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const wrap = this.previousElementSibling;
+            if (wrap.classList.contains('expanded')) {
+                wrap.classList.remove('expanded');
+                this.textContent = 'もっと見る';
+            } else {
+                wrap.classList.add('expanded');
+                this.textContent = '閉じる';
+            }
+        });
+    });
 });
