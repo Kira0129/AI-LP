@@ -113,11 +113,11 @@
             padding: 0 40px;
         }
 
-        /* 見出しフォントのオーバーライド */
+        /* 見�Eしフォント�Eオーバ�EライチE*/
         h1, h2, h3, h4, h5, h6,
         .fv-main-copy, .fv-vertical-copy, .ja-title, .section-title, .menu-category-title {
             font-family: 'Yuji Syuku', serif !important;
-            font-weight: 400 !important; /* 筆文字をきれいに表示するため太字を解除 */
+            font-weight: 400 !important; /* 筁E��字をきれぁE��表示するため太字を解除 */
         }
 
         .menu-category-title {
@@ -145,7 +145,7 @@
             text-transform: uppercase;
             font-weight: 900;
             margin-top: 0;
-            font-family: 'Noto Sans JP', sans-serif !important; /* 英語タイトルはゴシック維持 */
+            font-family: 'Noto Sans JP', sans-serif !important; /* 英語タイトルはゴシチE��維持E*/
         }
 
         .section-header-jp .en-title::before,
@@ -628,7 +628,7 @@
             .fv-catchcopy-wrap { text-align: center; }
             .fv-main-copy {
                 writing-mode: horizontal-tb;
-                font-size: 36px;
+                font-size: 30px;
                 text-align: center;
                 line-height: 1.3;
             }
