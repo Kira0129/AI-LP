@@ -1201,7 +1201,8 @@ footer {
 /* img tags replacing background-images */
 .hero-bg-image img,
 .service-image img,
-.menu-featured-img img {
+.menu-featured-img img,
+.message-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
