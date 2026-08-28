@@ -456,7 +456,7 @@ nav a:hover {
 /* ===== About Section ===== */
 .about-section-image {
     position: relative;
-    background-position: center;
+    background-position: center 40%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1006,6 +1006,7 @@ footer {
 
     .about-section-image {
         background-attachment: scroll;
+        background-position: center;
     }
 
     .hero-top {
