@@ -271,10 +271,10 @@ header.scrolled {
 .float-btn.web-btn:hover {
     background: rgba(169, 137, 122, 0.8);
 }
-.float-btn.tel-btn {
+.float-btn.insta-btn {
     background: var(--color-main);
 }
-.float-btn.tel-btn:hover { 
+.float-btn.insta-btn:hover { 
     background: var(--color-accent); 
 }
 .float-btn-text { writing-mode: vertical-rl; font-size: 11px; margin-top: 10px; letter-spacing: 0.15em; font-weight: 300; }
