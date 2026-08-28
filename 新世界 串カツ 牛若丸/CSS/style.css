@@ -648,6 +648,7 @@
         .concept-image {
             position: relative;
             overflow: hidden;
+            height: 740px;
         }
 
         .concept-image img {
