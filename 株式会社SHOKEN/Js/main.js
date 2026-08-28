@@ -112,11 +112,9 @@ if (backToTopBtn) {
   });
 }
 
-// Disable right-click and dragging on images to prevent saving
+// Disable right-click globally
 document.addEventListener('contextmenu', (e) => {
-  if (e.target.tagName === 'IMG') {
-    e.preventDefault();
-  }
+  e.preventDefault();
 });
 
 document.addEventListener('dragstart', (e) => {
