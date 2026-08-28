@@ -1087,6 +1087,11 @@ footer {
         gap: 40px;
     }
 
+    .menu-note {
+        padding: 20px;
+        text-align: left;
+    }
+
     .menu-loop-swiper .swiper-slide {
         width: 220px;
     }
