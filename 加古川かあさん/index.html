@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加古川かあさん | 看護師の視点で暮らしを支える家事代行</title>
+    <meta name="description" content="暮らしのそばに、看護の安心を。家事だけでは届かない、健康や安全への気づきまで。看護・介護の経験を活かし、一人ひとりの毎日に寄り添います。">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeMain: '#5D4037',     /* 落ち着いたブラウン（テキストやメインカラー） */
+                        themeBg: '#FFF9F5',       /* 全体の背景（極薄いクリーム・オレンジ） */
+                        themeSoft: '#FFEDDF',     /* 柔らかいセクション背景用の薄オレンジ */
+                        themeAccent: '#F48C42',   /* アクセントの温かみのあるオレンジ */
+                        themeLight: '#ffffff',    /* 白 */
+                        lineGreen: '#06C755',     /* LINEカラー */
+                    },
+                    fontFamily: {
+                        sans: ['"M PLUS Rounded 1c"', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: 丸みのあるフォントでカジュアル・柔らかさを演出 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Swiper.js (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <ul class="nav-group left">
+            <li><a href="#about"><span class="nav-ja">私たちについて</span><span class="nav-en">About</span></a></li>
+            <li><a href="#features"><span class="nav-ja">特徴</span><span class="nav-en">Features</span></a></li>
+        </ul>
+
+        <a href="#" class="header-logo">
+            加古川かあさん
+        </a>
+
+        <ul class="nav-group right">
+            <li><a href="#price"><span class="nav-ja">料金案内</span><span class="nav-en">Price</span></a></li>
+            <li><a href="#access"><span class="nav-ja">アクセス</span><span class="nav-en">Access</span></a></li>
+        </ul>
+
+        <!-- Mobile Burger -->
+        <div id="burger" class="lg:hidden flex items-center cursor-pointer">
+            <div class="space-y-1.5">
+                <span class="block w-6 h-1 rounded-full bg-themeMain"></span>
+                <span class="block w-6 h-1 rounded-full bg-themeMain"></span>
+                <span class="block w-6 h-1 rounded-full bg-themeMain"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="drawer" class="flex-col">
+        <button id="close-drawer" class="absolute top-6 right-6 text-4xl text-themeMain">&times;</button>
+        <nav class="flex flex-col items-center w-full">
+            <a href="#about">私たちについて</a>
+            <a href="#features">特徴</a>
+            <a href="#price">料金案内</a>
+            <a href="#message">代表メッセージ</a>
+            <a href="#access">アクセス</a>
+
+            <div class="mt-8 flex flex-col gap-4 w-[80%] max-w-xs mx-auto">
+                <a href="tel:050-5448-5093" class="nui-btn !w-full !px-4 !justify-center !text-sm">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+                    </svg>
+                    電話で相談
+                </a>
+                <a href="https://line.me/R/ti/p/@268kxush" target="_blank" class="nui-btn nui-btn-line !w-full !px-4 !justify-center !text-sm">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M22.5 10.4c0-4.3-4.1-7.8-9.1-7.8s-9.1 3.5-9.1 7.8c0 3.8 2.6 7 6.3 7.7.3.1.6.2.7.5l.3 1.9c0 .1.1.2.2.2s.2 0 .3-.1l2.4-1.9c.2-.2.5-.3.8-.3 1.9.3 7.2-.6 7.2-7.8z" />
+                    </svg>
+                    LINEで相談
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- FV -->
+    <section class="fv">
+        <!-- Abstract Soft Shapes -->
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+        </div>
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" /></svg>
+        </div>
+        <div class="floating-shape">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+        </div>
+
+        <div class="slide-counter-wrap">
+            <span class="counter-current" id="curNum">01</span>
+            <span class="counter-total">03</span>
+        </div>
+
+        <div class="fv-stage">
+            <div class="fv-stage-inner">
+                <div class="swiper fv-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- プレースホルダー画像 -->
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1200" alt="掃除・家事のイメージ"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=1200" alt="笑顔のシニアと介護者"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80&w=1200" alt="料理・キッチンのイメージ"></div>
+                    </div>
+                </div>
+
+                <div class="fv-copy reveal reveal-up delay-300">
+                    <div class="copy-main-badge text-themeMain">加古川かあさん</div>
+                    <h2 class="copy-main">
+                        <span class="copy-main-text">
+                            暮らしのそばに、<br>看護の安心を
+                        </span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Contact Btn -->
+        <a href="https://line.me/R/ti/p/@268kxush" target="_blank" class="res-circle-btn hidden lg:flex">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                 <path d="M22.5 10.4c0-4.3-4.1-7.8-9.1-7.8s-9.1 3.5-9.1 7.8c0 3.8 2.6 7 6.3 7.7.3.1.6.2.7.5l.3 1.9c0 .1.1.2.2.2s.2 0 .3-.1l2.4-1.9c.2-.2.5-.3.8-.3 1.9.3 7.2-.6 7.2-7.8z" />
+            </svg>
+            <span class="btn-ja" style="font-size: 13px; text-align: center;">LINEで<br>相談する</span>
+        </a>
+    </section>
+
+    <!-- Float Right Buttons -->
+    <div class="float-right">
+        <a href="tel:050-5448-5093" class="float-btn float-btn-tel">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            <span class="float-btn-text">電話相談</span>
+        </a>
+        <a href="https://line.me/R/ti/p/@268kxush" target="_blank" class="float-btn float-btn-line">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                 <path d="M22.5 10.4c0-4.3-4.1-7.8-9.1-7.8s-9.1 3.5-9.1 7.8c0 3.8 2.6 7 6.3 7.7.3.1.6.2.7.5l.3 1.9c0 .1.1.2.2.2s.2 0 .3-.1l2.4-1.9c.2-.2.5-.3.8-.3 1.9.3 7.2-.6 7.2-7.8z" />
+            </svg>
+            <span class="float-btn-text">LINE相談</span>
+        </a>
+    </div>
+
+    <main>
+        <!-- TV: こんなお悩みありませんか？ -->
+        <section class="container mx-auto px-6 max-w-6xl reveal reveal-up pt-12">
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch bg-themeSoft rounded-[40px] p-6 lg:p-10 border-4 border-white shadow-sm">
+                <div class="reveal reveal-left delay-200 h-full order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1543333995-a78aea2eee50?auto=format&fit=crop&q=80&w=800" alt="悩む人のイメージ" class="w-full h-64 lg:h-full object-cover rounded-[24px]">
+                </div>
+                <div class="h-full flex flex-col justify-center space-y-6 reveal reveal-right delay-300 order-1 lg:order-2">
+                    <h2 class="text-2xl md:text-3xl font-black text-themeMain flex items-start md:items-center gap-3">
+                        <span class="bg-themeAccent text-white text-sm px-3 py-1 rounded-full shrink-0 mt-1 md:mt-0">CHECK</span>
+                        <span>こんなお悩み<br class="md:hidden">ありませんか？</span>
+                    </h2>
+
+                    <ul class="space-y-4 text-sm md:text-base font-bold text-themeMain">
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-themeAccent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            まだ介護サービスを使うほどではないけれど、不安がある
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-themeAccent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            退院後の生活に慣れるまで、家事や見守りのサポートがほしい
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-themeAccent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            妊娠中・産後で、無理をせずに生活を整えたい
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                            <svg class="w-6 h-6 text-themeAccent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            忙しくても、健康や安全に気を配りたい
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="px-6 relative overflow-hidden">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                        About Us
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                    </h2>
+                    <p class="sec-title-ja">家事だけでは届かない、<br class="md:hidden">健康や安全への気づきまで</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mt-10">
+                    <div class="space-y-6 reveal reveal-left delay-200">
+                        <h3 class="text-xl md:text-2xl font-black text-themeAccent mb-4 leading-tight">看護師の視点で、<br>暮らしと健康を支える家事代行</h3>
+                        <p class="text-sm md:text-base leading-loose font-bold text-themeMain">
+                            加古川かあさんは、介護認定を受けていないものの日常生活に不安のある方を中心に、看護師の知識を活かした家事代行を行っています。<br><br>
+                            栄養バランスに配慮した食事づくりや、感染症対策を意識した掃除、生活動線の安全確保など、家事を通して暮らしと健康をやさしく支えるサービスです。<br><br>
+                            看護・介護の経験を活かし、一人ひとりの毎日に寄り添います。
+                        </p>
+                    </div>
+                    <div class="reveal reveal-right delay-300">
+                        <img src="https://images.unsplash.com/photo-1516149893016-813d9a01d5d3?auto=format&fit=crop&q=80&w=800" alt="寄り添うイメージ" class="w-full border-8 border-white shadow-lg -rotate-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="bg-themeSoft px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                        Features
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                    </h2>
+                    <p class="sec-title-ja">加古川かあさん 3つの特徴</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10 lg:gap-12 mt-12 pt-6">
+                    <!-- 01 -->
+                    <div class="feature-card reveal reveal-up delay-100">
+                        <div class="feature-num">01</div>
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=500" alt="医療・介護の知識" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-themeMain mb-3 border-b-2 border-themeAccent pb-2">
+                            医療・介護の知識を<br>活かした家事サポート</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            医療行為ではなく、看護師としての経験を活かし、生活の中での「気づき」を大切にしながら、健康や安全に配慮した家事を行います。バイタルサインの確認や服薬状況の見守りを通じて、日常の小さな変化にも気づける体制を大切にしています。
+                        </p>
+                    </div>
+                    <!-- 02 -->
+                    <div class="feature-card reveal reveal-up delay-200">
+                        <div class="feature-num">02</div>
+                        <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&q=80&w=500" alt="これからを見据えた暮らし" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-themeMain mb-3 border-b-2 border-themeAccent pb-2">
+                            これからを見据えた<br>暮らしの家事代行</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            転倒やつまずきにつながりにくいよう、動きやすさを意識した掃除や整理整頓を実施。食事は、食べやすさや栄養バランスに配慮し、体調に合わせて準備します。介護ベッド周りの清掃、掃除・洗濯・料理など柔軟に対応します。
+                        </p>
+                    </div>
+                    <!-- 03 -->
+                    <div class="feature-card reveal reveal-up delay-300">
+                        <div class="feature-num">03</div>
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=500" alt="心に寄り添う" class="w-full h-40 object-cover mb-6 rounded-2xl">
+                        <h4 class="text-lg font-black text-themeMain mb-3 border-b-2 border-themeAccent pb-2">
+                            心に寄り添う、<br>見守りとコミュニケーション</h4>
+                        <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
+                            高齢者や療養中の方との会話を通じて、孤立や不安を和らげ、ご家族の安心にもつながるサポートを行います。体調急変時には落ち着いて状況を判断し、必要に応じて医療機関との連携を検討します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICE -->
+        <section id="price" class="px-6">
+            <div class="container mx-auto max-w-4xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                        Price
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                    </h2>
+                    <p class="sec-title-ja">料金案内</p>
+                </div>
+
+                <div class="text-sm md:text-base font-bold text-themeMain mb-8 text-center reveal reveal-up bg-themeSoft p-4 rounded-2xl">
+                    <p>※表示料金はすべて税別です。</p>
+                    <p>※年齢・病気の種類・医療ケアの有無・利用時間・利用回数に制限はありません。</p>
+                    <p>※医療処置が必要な場合は、主治医の訪問看護指示書に沿って対応します。</p>
+                </div>
+
+                <!-- 入会金 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-2 border-themeSoft mb-6 flex justify-between items-center reveal reveal-up">
+                    <h4 class="text-xl font-black text-themeMain">入会金</h4>
+                    <span class="text-2xl font-black text-themeAccent">10,000<span class="text-sm text-gray-500">円</span></span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- 家事応援サービス -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-themeAccent reveal reveal-up delay-100">
+                        <h4 class="text-lg font-black text-themeMain mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-themeAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                            家事応援サービス
+                        </h4>
+                        <ul class="space-y-3 font-bold text-gray-700">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>9:00〜18:00</span>
+                                <span class="text-lg text-themeAccent">2,500円<span class="text-xs text-gray-500"> / 1時間</span></span>
+                            </li>
+                            <li class="flex justify-between items-center pt-1">
+                                <span class="bg-themeSoft px-2 py-1 rounded text-sm text-themeMain">お試し 2時間</span>
+                                <span class="text-lg text-themeAccent">4,000円</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 介護サービス -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-themeAccent reveal reveal-up delay-200">
+                        <h4 class="text-lg font-black text-themeMain mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-themeAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            介護サービス
+                        </h4>
+                        <ul class="space-y-3 font-bold text-gray-700">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>9:00〜18:00</span>
+                                <span class="text-lg text-themeAccent">3,500円<span class="text-xs text-gray-500"> / 1時間</span></span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>18:00〜22:00</span>
+                                <span class="text-lg text-themeAccent">4,000円<span class="text-xs text-gray-500"> / 1時間</span></span>
+                            </li>
+                            <li class="flex justify-between items-center pt-1">
+                                <span class="bg-themeSoft px-2 py-1 rounded text-sm text-themeMain">お試し 2時間</span>
+                                <span class="text-lg text-themeAccent">5,000円</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- ナースケアサービス -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-themeAccent reveal reveal-up delay-100">
+                        <h4 class="text-lg font-black text-themeMain mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-themeAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            ナースケアサービス
+                        </h4>
+                        <ul class="space-y-3 font-bold text-gray-700">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>9:00〜18:00</span>
+                                <span class="text-lg text-themeAccent">4,500円<span class="text-xs text-gray-500"> / 1時間</span></span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>18:00〜22:00</span>
+                                <span class="text-lg text-themeAccent">6,000円<span class="text-xs text-gray-500"> / 1時間</span></span>
+                            </li>
+                            <li class="flex justify-between items-center pt-1">
+                                <span class="bg-themeSoft px-2 py-1 rounded text-sm text-themeMain">お試し 2時間</span>
+                                <span class="text-lg text-themeAccent">7,000円</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 外出付き添い看護 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border-t-4 border-themeAccent reveal reveal-up delay-200 flex flex-col">
+                        <h4 class="text-lg font-black text-themeMain mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-themeAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            外出付き添い看護
+                        </h4>
+                        <ul class="space-y-3 font-bold text-gray-700 flex-grow">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>4時間</span>
+                                <span class="text-lg text-themeAccent">28,000円</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>12時間</span>
+                                <span class="text-lg text-themeAccent">56,000円</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>24時間</span>
+                                <span class="text-lg text-themeAccent">112,000円</span>
+                            </li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-4 leading-relaxed font-bold">長時間の外出や通院、旅行などの付き添いについてもご相談いただけます。</p>
+                    </div>
+                </div>
+
+                <!-- その他・お支払い・キャンセル -->
+                <div class="grid md:grid-cols-2 gap-6 reveal reveal-up delay-300">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border-2 border-themeSoft">
+                        <h4 class="text-md font-black text-themeMain mb-3 border-b-2 border-themeSoft pb-2">その他の費用</h4>
+                        <ul class="space-y-2 text-sm font-bold text-gray-700">
+                            <li class="flex justify-between"><span>医療材料費</span><span>実費</span></li>
+                            <li class="flex justify-between"><span>交通費</span><span>1kmにつき100円</span></li>
+                            <li class="flex justify-between"><span>駐車料金</span><span>実費</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border-2 border-themeSoft">
+                        <h4 class="text-md font-black text-themeMain mb-3 border-b-2 border-themeSoft pb-2">お支払いについて</h4>
+                        <p class="text-sm font-bold text-gray-700 leading-relaxed mb-2">サービス利用料は前払いとなります。<br>お支払い方法は、銀行振込または銀行引き落としです。</p>
+                        <p class="text-xs text-gray-500 font-bold">銀行振込の場合は、指定の期限までにご入金をお願いいたします。</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border-2 border-themeSoft md:col-span-2">
+                        <h4 class="text-md font-black text-themeMain mb-3 border-b-2 border-themeSoft pb-2">キャンセル料</h4>
+                        <ul class="space-y-2 text-sm font-bold text-gray-700 mb-4">
+                            <li class="flex justify-between border-b border-gray-50 pb-1"><span>前々日まで</span><span>無料</span></li>
+                            <li class="flex justify-between border-b border-gray-50 pb-1"><span>前日</span><span>利用料金の50％</span></li>
+                            <li class="flex justify-between border-b border-gray-50 pb-1"><span>当日</span><span>利用料金の100％</span></li>
+                        </ul>
+                        <p class="text-xs text-gray-500 font-bold">※キャンセルのご連絡は18:00までにお願いいたします。<br>※留守番電話でのキャンセルは受け付けておりません。</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 reveal reveal-up">
+                    <a href="https://line.me/R/ti/p/@268kxush" target="_blank" class="nui-btn nui-btn-line">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                             <path d="M22.5 10.4c0-4.3-4.1-7.8-9.1-7.8s-9.1 3.5-9.1 7.8c0 3.8 2.6 7 6.3 7.7.3.1.6.2.7.5l.3 1.9c0 .1.1.2.2.2s.2 0 .3-.1l2.4-1.9c.2-.2.5-.3.8-.3 1.9.3 7.2-.6 7.2-7.8z" />
+                        </svg>
+                        LINEから相談・予約する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESSAGE -->
+        <section id="message" class="px-6 bg-themeSoft">
+            <div class="container mx-auto max-w-5xl">
+                <div class="colmo-header reveal reveal-up">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                        Message
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                    </h2>
+                    <p class="sec-title-ja">代表メッセージ</p>
+                </div>
+
+                <div class="bg-white rounded-[40px] p-8 md:p-12 border-2 border-white shadow-xl reveal reveal-up">
+                    <div class="grid md:grid-cols-5 gap-10 items-center">
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80&w=400" alt="代表" class="w-full max-w-[250px] mx-auto rounded-[32px] border-4 border-themeSoft">
+                        </div>
+                        <div class="md:col-span-3 space-y-5">
+                            <h3 class="text-xl md:text-2xl font-black text-themeAccent border-b border-gray-100 pb-4">
+                                その方らしい暮らしを、<br class="md:hidden">そっと支えたい</h3>
+                            <p class="text-sm md:text-base font-bold text-gray-700 leading-loose">
+                                認知症看護や特別養護老人ホーム、精神科、障害者訪問看護、訪問介護など、これまでさまざまな現場で多くの方の暮らしに関わってきました。<br><br>
+                                その経験を通して感じてきたのは、在宅での生活には、ご本人だけでなくご家族にもさまざまな不安や負担があるということです。<br>
+                                だからこそ、家事をお手伝いするだけではなく、その日の様子や気持ちにも目を向け、一人ひとりの思いに寄り添うことを大切にしています。<br><br>
+                                毎日の暮らしが少しでも安心でき、笑顔で過ごせる時間が増えるよう、これまでの看護・介護経験を活かしてお手伝いいたします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESS -->
+        <section id="access" class="px-6 pb-24">
+            <div class="container mx-auto max-w-6xl reveal reveal-up">
+                <div class="colmo-header">
+                    <h2 class="sec-title-en">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                        Access
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" /></svg>
+                    </h2>
+                    <p class="sec-title-ja">店舗情報</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-10 bg-white rounded-[32px] overflow-hidden border-4 border-themeSoft shadow-md">
+                    <!-- Info -->
+                    <div class="p-8 md:p-10 space-y-6 flex flex-col justify-center">
+                        <h3 class="text-xl font-black text-themeMain mb-4 border-b-2 border-themeSoft pb-3">加古川かあさん</h3>
+
+                        <dl class="space-y-4 text-sm md:text-base text-gray-700 font-bold">
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-themeAccent font-black">住所</dt>
+                                <dd class="col-span-3 md:col-span-4">〒675-0104<br>兵庫県加古川市<br class="md:hidden">平岡町土山３９０−２１ 408
+                                </dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-themeAccent font-black">電話番号</dt>
+                                <dd class="col-span-3 md:col-span-4 text-lg text-themeMain font-black"><a href="tel:050-5448-5093">050-5448-5093</a></dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-themeAccent font-black">営業時間</dt>
+                                <dd class="col-span-3 md:col-span-4">9:00～17:00</dd>
+                            </div>
+                            <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+                                <dt class="text-themeAccent font-black">定休日</dt>
+                                <dd class="col-span-3 md:col-span-4">不定休</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- Map -->
+                    <div class="min-h-[300px] lg:h-auto w-full">
+                        <iframe
+                            src="https://maps.google.com/maps?q=兵庫県加古川市平岡町土山３９０−２１&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full object-cover !rounded-none">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 bg-themeMain text-white text-center">
+        <div class="container mx-auto max-w-6xl">
+            <a href="#" class="mb-6 block text-2xl font-black text-themeAccent">
+                加古川かあさん
+            </a>
+            
+            <div class="mb-8 flex justify-center">
+                <a href="https://homecaresupport-niji.jimdofree.com/" target="_blank" class="inline-flex items-center gap-2 bg-white text-themeMain px-6 py-2 rounded-full font-bold hover:bg-themeSoft transition shadow-sm text-sm">
+                    <svg class="w-5 h-5 text-themeAccent" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                    公式サイトへ
+                </a>
+            </div>
+
+            <nav class="mb-8">
+                <ul class="flex flex-wrap justify-center gap-6 text-sm font-bold opacity-80">
+                    <li><a href="#about" class="hover:text-themeAccent transition">ABOUT</a></li>
+                    <li><a href="#features" class="hover:text-themeAccent transition">FEATURES</a></li>
+                    <li><a href="#price" class="hover:text-themeAccent transition">PRICE</a></li>
+                    <li><a href="#message" class="hover:text-themeAccent transition">MESSAGE</a></li>
+                    <li><a href="#access" class="hover:text-themeAccent transition">ACCESS</a></li>
+                </ul>
+            </nav>
+            <p class="text-xs opacity-50 tracking-widest">&copy; 2026 加古川かあさん. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom CTA -->
+    <div class="bottom-cta lg:hidden">
+        <a href="tel:050-5448-5093" style="background-color: var(--color-accent);">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            </svg>
+            電話相談
+        </a>
+        <a href="https://line.me/R/ti/p/@268kxush" target="_blank" style="background-color: var(--color-line);">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                 <path d="M22.5 10.4c0-4.3-4.1-7.8-9.1-7.8s-9.1 3.5-9.1 7.8c0 3.8 2.6 7 6.3 7.7.3.1.6.2.7.5l.3 1.9c0 .1.1.2.2.2s.2 0 .3-.1l2.4-1.9c.2-.2.5-.3.8-.3 1.9.3 7.2-.6 7.2-7.8z" />
+            </svg>
+            LINE相談
+        </a>
+    </div>
+    <!-- Page Top Btn -->
+    <a href="#" id="page-top" class="page-top">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M12 4l8 8h-6v8h-4v-8H4z" />
+        </svg>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="Js/main.js"></script>
+</body>
+</html>
