@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>株式会社アールグラシア｜港区・中央区のマンション売買</title>
+  <meta name="description" content="港区・中央区のマンション売買に、上質な選択と確かなご提案を。理想の住まい探しから売却相談まで、株式会社アールグラシアが丁寧にサポートします。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Reset & Base Variables
+       ========================================================================== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Color Palette: Beige, Brown, Gold */
+      --bg-base: #FDFBF7; /* 非常に明るいベージュ（メイン背景） */
+      --bg-light: #FFFFFF; /* 白（カード等の背景） */
+      --bg-lighter: #F5EFE6; /* やや濃いベージュ（アクセント背景） */
+      
+      --text-main: #332C23; /* 濃いブラウン（基本テキスト） */
+      --text-muted: #665D50; /* 中間ブラウン（補足テキスト） */
+      --text-dark: #8C8273;
+      
+      --accent: #B89656; /* ゴールド */
+      --accent-hover: #9E7D42;
+      
+      --border: #E8E0D0; /* 薄い境界線 */
+      --border-light: #F0EADF;
+
+      --font-en: 'Montserrat', sans-serif;
+      --font-ja: 'Noto Sans JP', sans-serif;
+      --font-serif: 'Noto Serif JP', serif;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+      background: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-ja);
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      html, body { font-size: 14px; }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+
+    .sp-only { display: none; }
+
+    @media (max-width: 768px) {
+      .sp-only { display: block; }
+      .pc-only { display: none; }
+    }
+
+    /* ==========================================================================
+       Animations
+       ========================================================================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       Common Typography & Layout
+       ========================================================================== */
+    section { padding: 120px 0; }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 80px 0; }
+      .section-inner { padding: 0 24px; }
+    }
+
+    .sec-label {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .sec-title {
+      font-family: var(--font-serif);
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+      color: var(--text-main);
+    }
+
+    .sec-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--accent);
+      margin: 32px 0;
+    }
+
+    .sec-divider-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto 40px;
+    }
+
+    .sec-divider-center::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .sec-divider-center::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      margin-bottom: 8px;
+      transform: rotate(45deg);
+    }
+
+    /* ==========================================================================
+       Buttons
+       ========================================================================== */
+    .btn-primary,
+    .btn-secondary,
+    .btn-mail {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 54px;
+      padding: 0 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-mail {
+      background: var(--text-main);
+      color: #fff;
+      border: 1px solid var(--text-main);
+    }
+
+    .btn-mail:hover {
+      background: transparent;
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       Header
+       ========================================================================== */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2000;
+      transition: background 0.4s, box-shadow 0.4s, border 0.4s;
+    }
+
+    #header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      transition: padding 0.4s;
+    }
+
+    #header.scrolled .header-inner {
+      padding: 16px 48px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-en {
+      font-family: var(--font-en);
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      transition: color 0.4s;
+    }
+    
+    #header.scrolled .logo-en {
+      color: var(--text-main);
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .header-nav a:not(.header-btn) {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.4s;
+    }
+
+    #header.scrolled .header-nav a:not(.header-btn) {
+      color: var(--text-main);
+    }
+
+    .header-nav a:not(.header-btn)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .header-nav a:not(.header-btn):hover {
+      color: var(--accent) !important;
+    }
+    .header-nav a:not(.header-btn):hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      z-index: 2000;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: #fff;
+      transition: 0.3s;
+    }
+    
+    #header.scrolled .hamburger span {
+      background: var(--text-main);
+    }
+
+    .hamburger.active span {
+      background: var(--text-main) !important;
+    }
+
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .header-nav { display: none; }
+      .hamburger { display: flex; }
+      .header-inner, #header.scrolled .header-inner { padding: 16px 24px; }
+    }
+
+    /* Mobile Menu */
+    .sp-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(253, 251, 247, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .sp-menu.active { transform: translateX(0); }
+
+    .sp-menu nav {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      text-align: center;
+    }
+
+    .sp-menu a {
+      font-family: var(--font-en);
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .sp-menu a:hover { color: var(--accent); }
+
+    /* ==========================================================================
+       FV (First View)
+       ========================================================================== */
+    #fv {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+      background: var(--text-main);
+    }
+
+    .fv-bg-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .fv-bg-slide {
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      animation: bgFade 18s infinite ease-in-out;
+    }
+
+    /* 高級感のあるマンションのダミー画像 */
+    .fv-bg-slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80'); animation-delay: 0s; }
+    .fv-bg-slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80'); animation-delay: 6s; }
+    .fv-bg-slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); animation-delay: 12s; }
+
+    @keyframes bgFade {
+      0% { opacity: 0; transform: scale(1.06); }
+      10% { opacity: 1; transform: scale(1.06); }
+      33% { opacity: 1; transform: scale(1.02); }
+      43% { opacity: 0; transform: scale(1.0); }
+      100% { opacity: 0; }
+    }
+
+    /* 画像の上に敷くオーバーレイ（文字を読みやすくするため） */
+    #fv::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30, 25, 20, 0.7) 0%, rgba(30, 25, 20, 0.3) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .fv-content {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* 中央寄りに配置 */
+      padding: clamp(40px, 8vw, 100px) clamp(24px, 6vw, 80px);
+    }
+
+    .fv-eyebrow {
+      font-family: var(--font-en);
+      font-size: clamp(.6rem, 1vw, .8rem);
+      letter-spacing: .3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: fadeUp 1.2s .4s both;
+    }
+
+    .fv-title {
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: .1em;
+      animation: fadeUp 1.2s .6s both;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .fv-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 32px 0;
+      animation: fadeUp 1.2s .7s both;
+    }
+
+    .fv-sub {
+      line-height: 2;
+      letter-spacing: .1em;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      animation: fadeUp 1.2s .85s both;
+    }
+
+    .fv-cta-row {
+      margin-top: 48px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp 1.2s 1s both;
+    }
+
+    .fv-scroll {
+      position: absolute;
+      bottom: 32px;
+      right: 48px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeUp 1.2s 1.3s both;
+    }
+
+    .fv-scroll span {
+      font-family: var(--font-en);
+      font-size: .6rem;
+      letter-spacing: .3em;
+      color: #fff;
+      text-transform: uppercase;
+      writing-mode: vertical-lr;
+    }
+
+    .fv-scroll-line {
+      width: 1px;
+      height: 60px;
+      background: rgba(255,255,255,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fv-scroll-line::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--accent);
+      animation: scrollLine 2s 1.5s infinite;
+    }
+
+    @keyframes scrollLine {
+      0% { top: -100%; }
+      100% { top: 200%; }
+    }
+
+    @media (max-width: 767px) {
+      #fv {
+        height: auto;
+        min-height: calc(100svh - 60px);
+        margin-top: 60px;
+      }
+      .fv-content {
+        justify-content: flex-start;
+        padding-top: 64px;
+      }
+      .fv-scroll { display: none; }
+      .fv-cta-row { display: none; }
+    }
+
+    /* ==========================================================================
+       Problem Section
+       ========================================================================== */
+    .problem-section {
+      position: relative;
+      background-color: var(--bg-lighter);
+      padding: 100px 0;
+    }
+
+    .problem-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-light);
+      border: 1px solid var(--accent);
+      padding: 56px 48px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    }
+
+    .problem-box::before {
+      content: 'ISSUES';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-lighter);
+      padding: 0 24px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+    }
+
+    .problem-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 32px;
+    }
+
+    .problem-list li {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+      color: var(--text-main);
+      padding-left: 32px;
+      position: relative;
+    }
+
+    .problem-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 16px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      .problem-box { padding: 48px 24px; }
+      .problem-list { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    /* ==========================================================================
+       About Section (Concept)
+       ========================================================================== */
+    .about-section {
+      padding-top: 0;
+      padding-bottom: 0;
+      background: var(--bg-base);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+
+    .about-text {
+      padding: 100px 48px 100px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-p {
+      font-size: 1rem;
+      line-height: 2.2;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-text { padding: 64px 24px; }
+      .about-text .section-inner { margin-left: 0 !important; max-width: 100% !important;}
+      .about-img { height: 350px; }
+    }
+
+    /* ==========================================================================
+       Services Section
+       ========================================================================== */
+    .service-panels {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel {
+      position: relative;
+      height: 550px;
+      overflow: hidden;
+      display: block;
+      background: var(--text-main);
+    }
+
+    .panel-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+      opacity: 0.8;
+    }
+
+    .panel:hover .panel-bg {
+      transform: scale(1.05);
+      opacity: 0.5;
+    }
+
+    .panel-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 56px 48px;
+      background: linear-gradient(to top, rgba(30, 25, 20, 0.95) 0%, rgba(30, 25, 20, 0.5) 60%, transparent 100%);
+    }
+
+    .panel-num {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .panel-title {
+      font-size: 24px;
+      color: #fff;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+    }
+
+    .panel-desc {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 768px) {
+      .service-panels { grid-template-columns: 1fr; }
+      .panel { height: auto; display: flex; flex-direction: column; }
+      .panel-bg { position: relative; height: 250px; opacity: 1;}
+      .panel:hover .panel-bg { transform: none; opacity: 1;}
+      .panel-content {
+        position: relative;
+        background: var(--bg-light);
+        padding: 48px 24px;
+      }
+      .panel-title { color: var(--text-main); }
+      .panel-desc { color: var(--text-muted); }
+    }
+
+    /* ==========================================================================
+       Features Section
+       ========================================================================== */
+    .features-section {
+      background: var(--bg-base);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    .feature-item {
+      background: var(--bg-light);
+      padding: 48px 32px;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+    }
+
+    .feature-num {
+      font-family: var(--font-en);
+      font-size: 32px;
+      color: var(--border);
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    .feature-title {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin: 40px 0 24px;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    .feature-desc {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 1024px) {
+      .features-grid { grid-template-columns: 1fr; gap: 24px; }
+      .feature-item { padding: 40px 24px; }
+      .feature-num { top: 24px; right: 24px; }
+      .feature-title { margin-top: 24px; }
+    }
+
+    /* ==========================================================================
+       Pricing/Contact Band
+       ========================================================================== */
+    .pricing-band {
+      position: relative;
+      background: linear-gradient(rgba(44, 38, 32, 0.8), rgba(44, 38, 32, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover;
+      background-attachment: fixed;
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .pricing-title {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      color: #fff;
+    }
+
+    .pricing-desc {
+      font-size: 1rem;
+      line-height: 2;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-band { background-attachment: scroll; padding: 80px 24px;}
+      .pricing-desc { text-align: left; }
+    }
+
+    /* ==========================================================================
+       Staff Section
+       ========================================================================== */
+    .staff-section {
+      background: var(--bg-lighter);
+    }
+
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 64px;
+    }
+
+    .staff-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .staff-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 24px;
+      border: 2px solid var(--border-light);
+    }
+
+    .staff-name {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+      color: var(--text-main);
+    }
+
+    .staff-comment {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .staff-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ==========================================================================
+       Message Section
+       ========================================================================== */
+    .message-section {
+      padding: 0;
+      background: var(--bg-base);
+    }
+
+    .message-grid {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      min-height: 600px;
+    }
+
+    .message-img {
+      position: relative;
+    }
+
+    .message-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .message-content {
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .message-title {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 3vw, 32px);
+      margin-bottom: 40px;
+      line-height: 1.6;
+      color: var(--text-main);
+      letter-spacing: 0.1em;
+    }
+
+    .message-text {
+      font-size: 1rem;
+      line-height: 2.2;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .message-grid { grid-template-columns: 1fr; }
+      .message-img { height: 300px; order: -1; }
+      .message-content { padding: 48px 24px; }
+      .message-title { text-align: left; }
+    }
+
+    /* ==========================================================================
+       Access Section
+       ========================================================================== */
+    .access-section {
+      background: var(--bg-light);
+      border-top: 1px solid var(--border);
+    }
+
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 48px;
+    }
+
+    .access-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .access-row {
+      display: flex;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .access-label {
+      min-width: 80px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-family: var(--font-en);
+      padding-top: 4px;
+    }
+
+    .access-value {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      letter-spacing: 0.08em;
+    }
+
+    .access-map {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border: 1px solid var(--border);
+      background: var(--bg-lighter);
+    }
+
+    .access-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 900px) {
+      .access-label { min-width: 60px; }
+      .access-grid { grid-template-columns: 1fr; gap: 40px;}
+      .access-map { aspect-ratio: 4/3; }
+    }
+
+    /* ==========================================================================
+       Footer
+       ========================================================================== */
+    footer {
+      background: var(--text-main);
+      padding: 80px 0 40px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-logo {
+      font-family: var(--font-en);
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: #fff;
+      margin-bottom: 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .footer-desc {
+      font-size: 0.875rem;
+      line-height: 2;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .footer-col a,
+    .footer-col p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover { color: var(--accent); }
+
+    .sns-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    
+    .sns-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: #fff;
+      transition: all 0.3s;
+    }
+
+    .sns-links a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 32px auto 0;
+      padding: 0 48px;
+      text-align: center;
+      font-size: 11px;
+      font-family: var(--font-en);
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 768px) {
+      footer { padding-bottom: 100px; }
+      .footer-inner { grid-template-columns: 1fr; padding: 0 24px; gap: 40px; }
+      .footer-bottom { padding: 0 24px; }
+    }
+
+    /* ==========================================================================
+       Fixed SP CTA & Back to Top
+       ========================================================================== */
+    .sp-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      z-index: 1000;
+      background: var(--bg-light);
+      border-top: 1px solid var(--border);
+    }
+
+    .sp-cta a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      gap: 4px;
+    }
+
+    .sp-cta .cta-tel { background: var(--bg-light); }
+    .sp-cta .cta-web { background: var(--text-main); color: #fff; }
+
+    @media (max-width: 768px) { .sp-cta { display: flex; } }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 50px;
+      height: 50px;
+      background: var(--text-main);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 900;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    #back-to-top:hover {
+      background: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      #back-to-top { bottom: 84px; right: 16px; width: 44px; height: 44px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-text">
+          <span class="logo-en">R.GRACIA</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICE</a>
+        <a href="#features">FEATURES</a>
+        <a href="#staff">STAFF</a>
+        <a href="#access">ACCESS</a>
+        <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary header-btn"
+          style="height: 40px; padding: 0 24px; font-size: 12px; font-family: var(--font-ja); font-weight: 500; letter-spacing: 0.1em; border-radius: 0;">ご来店予約</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="sp-menu" id="spMenu">
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICE</a>
+      <a href="#features">FEATURES</a>
+      <a href="#staff">STAFF</a>
+      <a href="#access">ACCESS</a>
+      <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary"
+        style="margin-top:24px; font-family: var(--font-ja); font-size: 14px; padding: 0 32px; height: 50px; letter-spacing: 0.1em;">ご来店予約</a>
+    </nav>
+  </div>
+
+  <!-- ====================== FV ====================== -->
+  <section id="fv" aria-label="ファーストビュー">
+    <div class="fv-bg-slider" role="img" aria-label="メインビジュアル">
+      <!-- Unsplashの高級マンション・インテリアの画像を利用 -->
+      <div class="fv-bg-slide"></div>
+      <div class="fv-bg-slide"></div>
+      <div class="fv-bg-slide"></div>
+    </div>
+    <div class="fv-content">
+      <p class="fv-eyebrow">Real Estate Partner</p>
+      <h1 class="fv-title">
+        港区・中央区のマンション売買に、<br>
+        上質な選択と確かなご提案を
+      </h1>
+      <div class="fv-divider"></div>
+      <p class="fv-sub">
+        都心の価値を見極める不動産パートナーとして、<br>
+        理想の住まい探しから売却相談まで丁寧にサポートします。
+      </p>
+      <div class="fv-cta-row">
+        <a href="tel:050-5448-5144" class="btn-primary" style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="margin-right:8px;">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+          </svg>
+          電話で相談する
+        </a>
+        <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; margin-right:8px;">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          ご来店予約
+        </a>
+      </div>
+    </div>
+    <div class="fv-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="fv-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Problem ====================== -->
+  <section class="problem-section" id="problem">
+    <div class="section-inner">
+      <div class="problem-box reveal">
+        <h2 class="sec-title" style="text-align: center; margin-bottom: 40px; font-size: 24px;">こんなお悩みありませんか</h2>
+        <ul class="problem-list">
+          <li>港区や中央区で中古マンションを探している</li>
+          <li>都心マンションの購入を検討している</li>
+          <li>所有しているマンションを売却したい</li>
+          <li>不動産の査定価格を知りたい</li>
+          <li>投資用マンションについて相談したい</li>
+          <li>相続した不動産をどうすればよいか分からない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== About ====================== -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1577042531398-e7947da7020c?auto=format&fit=crop&w=800&q=80" alt="オフィスのイメージ">
+      </div>
+      <div class="about-text">
+        <div class="section-inner" style="padding:0; max-width: 500px; margin-left: 64px;">
+          <span class="sec-label">About</span>
+          <h2 class="sec-title" style="margin-bottom: 32px; font-size: clamp(22px, 3vw, 28px);">
+            港区・中央区の<br>マンション売買に強い不動産会社
+          </h2>
+          <p class="about-p reveal">
+            株式会社アールグラシアは、東京都心の不動産を中心に、マンション・中古マンションの売買をサポートする不動産会社です。
+          </p>
+          <p class="about-p reveal">
+            港区・中央区をはじめ、都心エリアならではの立地、資産性、住み心地を踏まえながら、お客様の目的に合わせた物件選びをご提案いたします。<br><br>
+            買いたい方、売りたい方、投資を検討されている方、ご相続に関する不動産のお悩みがある方まで、幅広いご相談に対応しています。<br><br>
+            物件の条件だけでなく、将来の暮らしや資産価値まで見据えたご提案を大切にしています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Service ====================== -->
+  <section id="services" style="padding: 0;">
+    <div class="service-panels">
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="中古マンション購入サポート" class="panel-bg">
+        <div class="panel-content reveal">
+          <span class="panel-num">SERVICE 01</span>
+          <h3 class="panel-title">中古マンション購入サポート</h3>
+          <p class="panel-desc">
+            港区・中央区を中心に、都心で中古マンションをお探しの方へ、条件に合った物件探しをお手伝いします。立地、間取り、眺望、管理状況、資産性などを確認しながら、納得できる住まい選びをサポートします。
+          </p>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="マンション売却相談" class="panel-bg">
+        <div class="panel-content reveal">
+          <span class="panel-num">SERVICE 02</span>
+          <h3 class="panel-title">マンション売却相談</h3>
+          <p class="panel-desc">
+            所有されているマンションの売却をご検討中の方へ、査定から販売活動、契約まで丁寧にご案内します。大切な不動産をより良い形で売却できるよう、エリア特性や市場動向を踏まえてご提案いたします。
+          </p>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80" alt="投資用不動産のご相談" class="panel-bg">
+        <div class="panel-content reveal">
+          <span class="panel-num">SERVICE 03</span>
+          <h3 class="panel-title">投資用不動産のご相談</h3>
+          <p class="panel-desc">
+            都心マンションを投資目的で検討されている方へ、収益性や将来性を考慮した物件選びをサポートします。購入後の活用や売却まで見据えたご相談も可能です。
+          </p>
+        </div>
+      </div>
+      <div class="panel">
+        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80" alt="相続不動産のご相談" class="panel-bg">
+        <div class="panel-content reveal">
+          <span class="panel-num">SERVICE 04</span>
+          <h3 class="panel-title">相続不動産のご相談</h3>
+          <p class="panel-desc">
+            相続したマンションや不動産の売却、活用についてのご相談も承ります。今後どうするべきか分からない段階でも、状況を整理しながら分かりやすくご案内いたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Features ====================== -->
+  <section id="features" class="features-section">
+    <div class="section-inner">
+      <div class="sec-divider-center reveal"></div>
+      <div class="reveal" style="text-align: center;">
+        <span class="sec-label">Features</span>
+        <h2 class="sec-title">当社の3つの特徴</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <span class="feature-num">01</span>
+          <h3 class="feature-title">港区・中央区を中心とした<br>都心不動産に対応</h3>
+          <p class="feature-desc">都心エリアのマンション売買では、駅距離や築年数だけでなく、街の将来性や建物の管理状況、資産価値の見極めが大切です。<br>アールグラシアでは、港区・中央区を中心に、都心不動産ならではの視点でご提案いたします。</p>
+        </div>
+        <div class="feature-item reveal">
+          <span class="feature-num">02</span>
+          <h3 class="feature-title">購入・売却・投資まで<br>幅広く相談できる</h3>
+          <p class="feature-desc">住まいとしての購入はもちろん、売却査定、投資用物件、ご相続に関する不動産相談まで対応しています。<br>お客様の目的に合わせて、必要な情報を整理しながら最適な選択をサポートします。</p>
+        </div>
+        <div class="feature-item reveal">
+          <span class="feature-num">03</span>
+          <h3 class="feature-title">上質な物件選びを<br>丁寧にサポート</h3>
+          <p class="feature-desc">都心のマンションは、物件ごとに魅力や価値が大きく異なります。<br>アールグラシアでは、お客様のご希望を丁寧に伺い、暮らし方や将来設計に合った一邸をご提案いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Pricing / Contact Band ====================== -->
+  <section class="pricing-band" id="contact-band">
+    <div class="reveal">
+      <h2 class="pricing-title">まずはお気軽にご相談ください</h2>
+      <p class="pricing-desc">
+        港区・中央区でマンションの購入や売却をご検討中の方は、まずはお気軽にお問い合わせください。<br><br>
+        ご希望のエリアやご予算、売却予定の物件情報、ご相続に関するお悩みなどを伺いながら、今後の流れを分かりやすくご案内いたします。<br>
+        理想の住まい探しも、大切な不動産の売却も、アールグラシアが丁寧にサポートいたします。
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:050-5448-5144" class="btn-primary" style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">TEL: 050-5448-5144</a>
+        <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary">ご来店予約</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Staff ====================== -->
+  <section class="staff-section" id="staff">
+    <div class="section-inner">
+      <div class="sec-divider-center reveal"></div>
+      <div class="reveal" style="text-align: center;">
+        <span class="sec-label">Staff</span>
+        <h2 class="sec-title">スタッフ紹介</h2>
+      </div>
+      <div class="staff-grid">
+        <div class="staff-card reveal">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="田川 理加" class="staff-img">
+          <h3 class="staff-name">代表 田川 理加</h3>
+          <p class="staff-comment">
+            不動産キャリア23年。<br>
+            港区・中央区をはじめとする東京都心の不動産に向き合い、賃貸・売買・投資用物件まで幅広くサポートしています。<br><br>
+            マンション、一戸建て、土地、収益物件、タワーマンション、リフォーム・リノベーションなど、さまざまな不動産相談に対応。<br>
+            お客様の大切な資産と暮らしに寄り添い、愛情深く丁寧なご提案を大切にしています。
+          </p>
+        </div>
+        <div class="staff-card reveal">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="飯塚 成" class="staff-img">
+          <h3 class="staff-name">飯塚 成</h3>
+          <p class="staff-comment">
+            宅地建物取引士の資格を持つスタッフです。<br>
+            中古マンションや中古戸建ての売買相談をはじめ、賃貸物件のご案内にも対応しています。<br><br>
+            お客様の想いや希望を大切にしながら、早く正確に動くことを心がけています。<br>
+            初めての不動産購入や売却で不安がある方も、安心してご相談ください。
+          </p>
+        </div>
+        <div class="staff-card reveal">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="河谷 吏騎" class="staff-img">
+          <h3 class="staff-name">河谷 吏騎</h3>
+          <p class="staff-comment">
+            お客様に安心してお任せいただけるよう、心を込めたご案内を大切にしています。<br><br>
+            物件探しや不動産相談では、条件だけでなく、お客様の暮らし方や将来のご希望まで丁寧に伺いながらサポートいたします。<br>
+            都心での住まい探しやマンション売買のご相談も、お気軽にお声がけください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Message ====================== -->
+  <section class="message-section" id="message">
+    <div class="message-grid">
+      <div class="message-content reveal">
+        <span class="sec-label">Message</span>
+        <h2 class="message-title">都心の不動産に、信頼できるパートナーを</h2>
+        <div class="message-text">
+          マンションの購入や売却は、人生の中でも大きな決断のひとつです。<br><br>
+          特に港区・中央区などの都心エリアでは、立地や建物の魅力だけでなく、資産性や将来性まで見据えた判断が求められます。<br><br>
+          株式会社アールグラシアでは、お客様の想いやご希望を丁寧に伺いながら、一人ひとりに合った不動産の選択をサポートいたします。<br><br>
+          買いたい、売りたい、投資したい、相続について相談したい。<br>
+          東京都心の不動産に関するお悩みは、ぜひお気軽にご相談ください。
+        </div>
+      </div>
+      <div class="message-img reveal">
+        <!-- 高級感のある内装イメージ -->
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt="上質な空間のイメージ">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Access ====================== -->
+  <section class="access-section" id="access">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="sec-label">Company / Access</span>
+        <h2 class="sec-title">会社情報・アクセス</h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="access-grid reveal">
+        <div class="access-info">
+          <div class="access-row">
+            <span class="access-label">店舗名</span>
+            <span class="access-value">株式会社アールグラシア</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">住所</span>
+            <span class="access-value">〒105-0013<br>東京都港区浜松町１丁目１−２<br>汐留MKタワ 11F</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">電話番号</span>
+            <span class="access-value"><a href="tel:050-5448-5144" style="color: inherit; text-decoration: none;">050-5448-5144</a></span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">営業時間</span>
+            <span class="access-value">9:00~20:00</span>
+          </div>
+          <div class="access-row">
+            <span class="access-label">定休日</span>
+            <span class="access-value">年末年始</span>
+          </div>
+        </div>
+        <div class="access-map">
+          <!-- 浜松町 汐留MKタワー周辺のGoogle Maps iframe -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.776092497672!2d139.7554904!3d35.6578508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bc8a9665bc7%3A0xc3c544520cebf1!2z5rGQ55mpTUsgVGF3ZXI!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Footer ====================== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="footer-logo">R.GRACIA</a>
+        <p class="footer-desc">
+          港区・中央区のマンション売買に、<br>上質な選択と確かなご提案を
+        </p>
+        <div class="sns-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>MENU</h4>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICE</a>
+        <a href="#features">FEATURES</a>
+        <a href="#staff">STAFF</a>
+        <a href="#access">ACCESS</a>
+      </div>
+      <div class="footer-col">
+        <h4>INFORMATION</h4>
+        <a href="#">会社概要</a>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">お問い合わせ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; R.GRACIA All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- ====================== Fixed CTA (SP) ====================== -->
+  <div class="sp-cta">
+    <a href="tel:050-5448-5144" class="cta-tel">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" /></svg>
+      電話する
+    </a>
+    <a href="https://www.r-gracia.jp/reservation/select/" class="cta-web">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM5 20V10h14l.002 10H5zM5 8V6h14v2H5z" /></svg>
+      ご来店予約
+    </a>
+  </div>
+
+  <button id="back-to-top" aria-label="ページトップへ戻る">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" /></svg>
+  </button>
+
+  <script>
+    // ==========================================
+    // JavaScript
+    // ==========================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Header Scroll Effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // 2. Hamburger Menu
+      const hamburger = document.getElementById('hamburger');
+      const spMenu = document.getElementById('spMenu');
+      const spLinks = spMenu.querySelectorAll('a');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        spMenu.classList.toggle('active');
+      });
+
+      spLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          spMenu.classList.remove('active');
+        });
+      });
+
+      // 3. Scroll Reveal Animation
+      const reveals = document.querySelectorAll('.reveal');
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+        
+        reveals.forEach(reveal => {
+          const elementTop = reveal.getBoundingClientRect().top;
+          if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add('visible');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Trigger on load
+
+      // 4. Back to Top Button
+      const backToTop = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
