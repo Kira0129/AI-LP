@@ -675,6 +675,10 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     }
 
+    .problem-box .sec-title {
+      font-size: 24px;
+    }
+
     .problem-box::before {
       content: 'ISSUES';
       position: absolute;
@@ -718,6 +722,9 @@
     @media (max-width: 900px) {
       .problem-box {
         padding: 48px 15px;
+      }
+      .problem-box .sec-title {
+        font-size: 20px;
       }
 
       .problem-list {
