@@ -62,3 +62,8 @@ if (spCta && aboutSection) {
     }
   });
 }
+
+// Prevent text selection and image saving
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());

@@ -35,12 +35,17 @@ body {
   background: var(--bg-dark);
   overflow-x: hidden;
   letter-spacing: 0.05em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img {
   pointer-events: none;
   max-width: 100%;
   height: auto;
+  -webkit-touch-callout: none;
 }
 
 .sp-only { display: none; }
