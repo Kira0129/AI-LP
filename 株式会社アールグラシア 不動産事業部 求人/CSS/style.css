@@ -530,6 +530,17 @@ section {
   top: 20px; right: 30px;
   line-height: 1;
 }
+.work-icon {
+  margin-bottom: 20px;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+}
+.work-icon svg {
+  width: 42px;
+  height: 42px;
+  fill: currentColor;
+}
 .work-title {
   font-size: 20px;
   font-weight: 400;
