@@ -639,6 +639,7 @@
     .problem-section {
       position: relative;
       background-color: var(--bg-lighter);
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B89656' fill-opacity='0.08'%3E%3Cpath d='M30 60L0 30 30 0l30 30-30 30zm0-56.57L3.43 30 30 56.57 56.57 30 30 3.43z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       padding: 100px 0;
     }
 
