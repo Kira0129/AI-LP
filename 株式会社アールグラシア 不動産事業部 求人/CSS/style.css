@@ -746,6 +746,12 @@ section {
   margin-bottom: 24px;
 }
 
+@media (max-width: 960px) {
+  #message {
+    text-align: left;
+  }
+}
+
 /* =========================================
    Contact & CTA
 ========================================= */
