@@ -9,7 +9,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -25,18 +27,25 @@
 
     :root {
       /* Color Palette: Beige, Brown, Gold */
-      --bg-base: #FDFBF7; /* 非常に明るいベージュ（メイン背景） */
-      --bg-light: #FFFFFF; /* 白（カード等の背景） */
-      --bg-lighter: #F5EFE6; /* やや濃いベージュ（アクセント背景） */
-      
-      --text-main: #332C23; /* 濃いブラウン（基本テキスト） */
-      --text-muted: #665D50; /* 中間ブラウン（補足テキスト） */
+      --bg-base: #FDFBF7;
+      /* 非常に明るいベージュ（メイン背景） */
+      --bg-light: #FFFFFF;
+      /* 白（カード等の背景） */
+      --bg-lighter: #F5EFE6;
+      /* やや濃いベージュ（アクセント背景） */
+
+      --text-main: #332C23;
+      /* 濃いブラウン（基本テキスト） */
+      --text-muted: #665D50;
+      /* 中間ブラウン（補足テキスト） */
       --text-dark: #8C8273;
-      
-      --accent: #B89656; /* ゴールド */
+
+      --accent: #B89656;
+      /* ゴールド */
       --accent-hover: #9E7D42;
-      
-      --border: #E8E0D0; /* 薄い境界線 */
+
+      --border: #E8E0D0;
+      /* 薄い境界線 */
       --border-light: #F0EADF;
 
       --font-en: 'Montserrat', sans-serif;
@@ -58,7 +67,11 @@
     }
 
     @media (max-width: 768px) {
-      html, body { font-size: 14px; }
+
+      html,
+      body {
+        font-size: 14px;
+      }
     }
 
     img {
@@ -68,19 +81,33 @@
       pointer-events: none;
     }
 
-    .sp-only { display: none; }
+    .sp-only {
+      display: none;
+    }
 
     @media (max-width: 768px) {
-      .sp-only { display: block; }
-      .pc-only { display: none; }
+      .sp-only {
+        display: block;
+      }
+
+      .pc-only {
+        display: none;
+      }
     }
 
     /* ==========================================================================
        Animations
        ========================================================================== */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .reveal {
@@ -97,7 +124,9 @@
     /* ==========================================================================
        Common Typography & Layout
        ========================================================================== */
-    section { padding: 120px 0; }
+    section {
+      padding: 120px 0;
+    }
 
     .section-inner {
       max-width: 1200px;
@@ -105,16 +134,14 @@
       padding: 0 48px;
     }
 
-    /* 各セクションの幅広用指定 */
-    .problem-section .section-inner,
-    .features-section .section-inner,
-    .staff-section .section-inner {
-      max-width: 1400px;
-    }
-
     @media (max-width: 768px) {
-      section { padding: 80px 0; }
-      .section-inner { padding: 0 24px; }
+      section {
+        padding: 80px 0;
+      }
+
+      .section-inner {
+        padding: 0 24px;
+      }
     }
 
     .sec-label {
@@ -236,7 +263,7 @@
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     }
 
     .header-inner {
@@ -272,7 +299,7 @@
       line-height: 1;
       transition: color 0.4s;
     }
-    
+
     #header.scrolled .logo-en {
       color: var(--text-main);
     }
@@ -312,6 +339,7 @@
     .header-nav a:not(.header-btn):hover {
       color: var(--accent) !important;
     }
+
     .header-nav a:not(.header-btn):hover::after {
       width: 100%;
     }
@@ -333,7 +361,7 @@
       background: #fff;
       transition: 0.3s;
     }
-    
+
     #header.scrolled .hamburger span {
       background: var(--text-main);
     }
@@ -342,14 +370,31 @@
       background: var(--text-main) !important;
     }
 
-    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     @media (max-width: 900px) {
-      .header-nav { display: none; }
-      .hamburger { display: flex; }
-      .header-inner, #header.scrolled .header-inner { padding: 16px 24px; }
+      .header-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner,
+      #header.scrolled .header-inner {
+        padding: 16px 24px;
+      }
     }
 
     /* Mobile Menu */
@@ -367,7 +412,9 @@
       transition: transform 0.4s ease;
     }
 
-    .sp-menu.active { transform: translateX(0); }
+    .sp-menu.active {
+      transform: translateX(0);
+    }
 
     .sp-menu nav {
       display: flex;
@@ -385,7 +432,9 @@
       transition: color 0.3s;
     }
 
-    .sp-menu a:hover { color: var(--accent); }
+    .sp-menu a:hover {
+      color: var(--accent);
+    }
 
     /* ==========================================================================
        FV (First View)
@@ -415,16 +464,45 @@
     }
 
     /* 高級感のあるマンションのダミー画像 */
-    .fv-bg-slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80'); animation-delay: 0s; }
-    .fv-bg-slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80'); animation-delay: 6s; }
-    .fv-bg-slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); animation-delay: 12s; }
+    .fv-bg-slide:nth-child(1) {
+      background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');
+      animation-delay: 0s;
+    }
+
+    .fv-bg-slide:nth-child(2) {
+      background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80');
+      animation-delay: 6s;
+    }
+
+    .fv-bg-slide:nth-child(3) {
+      background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
+      animation-delay: 12s;
+    }
 
     @keyframes bgFade {
-      0% { opacity: 0; transform: scale(1.06); }
-      10% { opacity: 1; transform: scale(1.06); }
-      33% { opacity: 1; transform: scale(1.02); }
-      43% { opacity: 0; transform: scale(1.0); }
-      100% { opacity: 0; }
+      0% {
+        opacity: 0;
+        transform: scale(1.06);
+      }
+
+      10% {
+        opacity: 1;
+        transform: scale(1.06);
+      }
+
+      33% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
+      43% {
+        opacity: 0;
+        transform: scale(1.0);
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     /* 画像の上に敷くオーバーレイ（文字を読みやすくするため） */
@@ -443,7 +521,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* 中央寄りに配置 */
+      justify-content: center;
+      /* 中央寄りに配置 */
       padding: clamp(40px, 8vw, 100px) clamp(24px, 6vw, 80px);
     }
 
@@ -515,7 +594,7 @@
     .fv-scroll-line {
       width: 1px;
       height: 60px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -532,8 +611,13 @@
     }
 
     @keyframes scrollLine {
-      0% { top: -100%; }
-      100% { top: 200%; }
+      0% {
+        top: -100%;
+      }
+
+      100% {
+        top: 200%;
+      }
     }
 
     @media (max-width: 767px) {
@@ -542,12 +626,19 @@
         min-height: calc(100svh - 60px);
         margin-top: 60px;
       }
+
       .fv-content {
         justify-content: flex-start;
         padding-top: 64px;
       }
-      .fv-scroll { display: none; }
-      .fv-cta-row { display: none; }
+
+      .fv-scroll {
+        display: none;
+      }
+
+      .fv-cta-row {
+        display: none;
+      }
     }
 
     /* ==========================================================================
@@ -560,14 +651,14 @@
     }
 
     .problem-box {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       background: var(--bg-light);
       border: 1px solid var(--accent);
       padding: 56px 48px;
       position: relative;
       z-index: 1;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     }
 
     .problem-box::before {
@@ -611,8 +702,14 @@
     }
 
     @media (max-width: 900px) {
-      .problem-box { padding: 48px 24px; }
-      .problem-list { grid-template-columns: 1fr; gap: 16px; }
+      .problem-box {
+        padding: 48px 24px;
+      }
+
+      .problem-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
     }
 
     /* ==========================================================================
@@ -657,10 +754,22 @@
     }
 
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-text { padding: 64px 24px; }
-      .about-text .section-inner { margin-left: 0 !important; max-width: 100% !important;}
-      .about-img { height: 350px; }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-text {
+        padding: 64px 24px;
+      }
+
+      .about-text .section-inner {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .about-img {
+        height: 350px;
+      }
     }
 
     /* ==========================================================================
@@ -727,17 +836,40 @@
     }
 
     @media (max-width: 768px) {
-      .service-panels { grid-template-columns: 1fr; }
-      .panel { height: auto; display: flex; flex-direction: column; }
-      .panel-bg { position: relative; height: 250px; opacity: 1;}
-      .panel:hover .panel-bg { transform: none; opacity: 1;}
+      .service-panels {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .panel-bg {
+        position: relative;
+        height: 250px;
+        opacity: 1;
+      }
+
+      .panel:hover .panel-bg {
+        transform: none;
+        opacity: 1;
+      }
+
       .panel-content {
         position: relative;
         background: var(--bg-light);
         padding: 48px 24px;
       }
-      .panel-title { color: var(--text-main); }
-      .panel-desc { color: var(--text-muted); }
+
+      .panel-title {
+        color: var(--text-main);
+      }
+
+      .panel-desc {
+        color: var(--text-muted);
+      }
     }
 
     /* ==========================================================================
@@ -764,7 +896,7 @@
 
     .feature-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
     }
 
     .feature-num {
@@ -788,17 +920,30 @@
     }
 
     .feature-desc {
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.9;
       color: var(--text-muted);
       letter-spacing: 0.05em;
     }
 
     @media (max-width: 1024px) {
-      .features-grid { grid-template-columns: 1fr; gap: 24px; }
-      .feature-item { padding: 40px 24px; }
-      .feature-num { top: 24px; right: 24px; }
-      .feature-title { margin-top: 24px; }
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .feature-item {
+        padding: 40px 24px;
+      }
+
+      .feature-num {
+        top: 24px;
+        right: 24px;
+      }
+
+      .feature-title {
+        margin-top: 24px;
+      }
     }
 
     /* ==========================================================================
@@ -833,8 +978,14 @@
     }
 
     @media (max-width: 768px) {
-      .pricing-band { background-attachment: scroll; padding: 80px 24px;}
-      .pricing-desc { text-align: left; }
+      .pricing-band {
+        background-attachment: scroll;
+        padding: 80px 24px;
+      }
+
+      .pricing-desc {
+        text-align: left;
+      }
     }
 
     /* ==========================================================================
@@ -879,7 +1030,7 @@
     }
 
     .staff-comment {
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.9;
       color: var(--text-muted);
       letter-spacing: 0.05em;
@@ -887,7 +1038,10 @@
     }
 
     @media (max-width: 900px) {
-      .staff-grid { grid-template-columns: 1fr; gap: 32px; }
+      .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
     }
 
     /* ==========================================================================
@@ -939,10 +1093,22 @@
     }
 
     @media (max-width: 900px) {
-      .message-grid { grid-template-columns: 1fr; }
-      .message-img { height: 300px; order: -1; }
-      .message-content { padding: 48px 24px; }
-      .message-title { text-align: left; }
+      .message-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .message-img {
+        height: 300px;
+        order: -1;
+      }
+
+      .message-content {
+        padding: 48px 24px;
+      }
+
+      .message-title {
+        text-align: left;
+      }
     }
 
     /* ==========================================================================
@@ -1004,9 +1170,18 @@
     }
 
     @media (max-width: 900px) {
-      .access-label { min-width: 60px; }
-      .access-grid { grid-template-columns: 1fr; gap: 40px;}
-      .access-map { aspect-ratio: 4/3; }
+      .access-label {
+        min-width: 60px;
+      }
+
+      .access-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .access-map {
+        aspect-ratio: 4/3;
+      }
     }
 
     /* ==========================================================================
@@ -1026,7 +1201,7 @@
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 48px;
       padding-bottom: 64px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .footer-logo {
@@ -1041,7 +1216,7 @@
     }
 
     .footer-desc {
-      font-size: 0.875rem;
+      font-size: 1rem;
       line-height: 2;
       letter-spacing: 0.08em;
     }
@@ -1056,29 +1231,31 @@
 
     .footer-col a,
     .footer-col p {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       display: block;
       margin-bottom: 12px;
       transition: color 0.3s;
     }
 
-    .footer-col a:hover { color: var(--accent); }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
 
     .sns-links {
       display: flex;
       gap: 16px;
       margin-top: 24px;
     }
-    
+
     .sns-links a {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 40px;
       height: 40px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       color: #fff;
       transition: all 0.3s;
@@ -1100,9 +1277,19 @@
     }
 
     @media (max-width: 768px) {
-      footer { padding-bottom: 100px; }
-      .footer-inner { grid-template-columns: 1fr; padding: 0 24px; gap: 40px; }
-      .footer-bottom { padding: 0 24px; }
+      footer {
+        padding-bottom: 100px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        padding: 0 24px;
+      }
     }
 
     /* ==========================================================================
@@ -1133,10 +1320,20 @@
       gap: 4px;
     }
 
-    .sp-cta .cta-tel { background: var(--bg-light); }
-    .sp-cta .cta-web { background: var(--text-main); color: #fff; }
+    .sp-cta .cta-tel {
+      background: var(--bg-light);
+    }
 
-    @media (max-width: 768px) { .sp-cta { display: flex; } }
+    .sp-cta .cta-web {
+      background: var(--text-main);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .sp-cta {
+        display: flex;
+      }
+    }
 
     #back-to-top {
       position: fixed;
@@ -1171,7 +1368,12 @@
     }
 
     @media (max-width: 768px) {
-      #back-to-top { bottom: 84px; right: 16px; width: 44px; height: 44px; }
+      #back-to-top {
+        bottom: 84px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+      }
     }
   </style>
 </head>
@@ -1232,15 +1434,21 @@
         理想の住まい探しから売却相談まで丁寧にサポートします。
       </p>
       <div class="fv-cta-row">
-        <a href="tel:050-5448-5144" class="btn-primary" style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">
+        <a href="tel:050-5448-5144" class="btn-primary"
+          style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="margin-right:8px;">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
           </svg>
           電話で相談する
         </a>
         <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary">
-          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; margin-right:8px;">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+          <svg viewBox="0 0 24 24"
+            style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round; margin-right:8px;">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
           ご来店予約
         </a>
@@ -1273,7 +1481,8 @@
   <section class="about-section" id="about">
     <div class="about-grid">
       <div class="about-img reveal">
-        <img src="https://images.unsplash.com/photo-1577042531398-e7947da7020c?auto=format&fit=crop&w=800&q=80" alt="オフィスのイメージ">
+        <img src="https://images.unsplash.com/photo-1577042531398-e7947da7020c?auto=format&fit=crop&w=800&q=80"
+          alt="オフィスのイメージ">
       </div>
       <div class="about-text">
         <div class="section-inner" style="padding:0; max-width: 500px; margin-left: 64px;">
@@ -1298,7 +1507,8 @@
   <section id="services" style="padding: 0;">
     <div class="service-panels">
       <div class="panel">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="中古マンション購入サポート" class="panel-bg">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+          alt="中古マンション購入サポート" class="panel-bg">
         <div class="panel-content reveal">
           <span class="panel-num">SERVICE 01</span>
           <h3 class="panel-title">中古マンション購入サポート</h3>
@@ -1308,7 +1518,8 @@
         </div>
       </div>
       <div class="panel">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="マンション売却相談" class="panel-bg">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+          alt="マンション売却相談" class="panel-bg">
         <div class="panel-content reveal">
           <span class="panel-num">SERVICE 02</span>
           <h3 class="panel-title">マンション売却相談</h3>
@@ -1318,7 +1529,8 @@
         </div>
       </div>
       <div class="panel">
-        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80" alt="投資用不動産のご相談" class="panel-bg">
+        <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80"
+          alt="投資用不動産のご相談" class="panel-bg">
         <div class="panel-content reveal">
           <span class="panel-num">SERVICE 03</span>
           <h3 class="panel-title">投資用不動産のご相談</h3>
@@ -1328,7 +1540,8 @@
         </div>
       </div>
       <div class="panel">
-        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80" alt="相続不動産のご相談" class="panel-bg">
+        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80"
+          alt="相続不動産のご相談" class="panel-bg">
         <div class="panel-content reveal">
           <span class="panel-num">SERVICE 04</span>
           <h3 class="panel-title">相続不動産のご相談</h3>
@@ -1353,17 +1566,20 @@
         <div class="feature-item reveal">
           <span class="feature-num">01</span>
           <h3 class="feature-title">港区・中央区を中心とした<br>都心不動産に対応</h3>
-          <p class="feature-desc">都心エリアのマンション売買では、駅距離や築年数だけでなく、街の将来性や建物の管理状況、資産価値の見極めが大切です。<br>アールグラシアでは、港区・中央区を中心に、都心不動産ならではの視点でご提案いたします。</p>
+          <p class="feature-desc">
+            都心エリアのマンション売買では、駅距離や築年数だけでなく、街の将来性や建物の管理状況、資産価値の見極めが大切です。<br>アールグラシアでは、港区・中央区を中心に、都心不動産ならではの視点でご提案いたします。</p>
         </div>
         <div class="feature-item reveal">
           <span class="feature-num">02</span>
           <h3 class="feature-title">購入・売却・投資まで<br>幅広く相談できる</h3>
-          <p class="feature-desc">住まいとしての購入はもちろん、売却査定、投資用物件、ご相続に関する不動産相談まで対応しています。<br>お客様の目的に合わせて、必要な情報を整理しながら最適な選択をサポートします。</p>
+          <p class="feature-desc">
+            住まいとしての購入はもちろん、売却査定、投資用物件、ご相続に関する不動産相談まで対応しています。<br>お客様の目的に合わせて、必要な情報を整理しながら最適な選択をサポートします。</p>
         </div>
         <div class="feature-item reveal">
           <span class="feature-num">03</span>
           <h3 class="feature-title">上質な物件選びを<br>丁寧にサポート</h3>
-          <p class="feature-desc">都心のマンションは、物件ごとに魅力や価値が大きく異なります。<br>アールグラシアでは、お客様のご希望を丁寧に伺い、暮らし方や将来設計に合った一邸をご提案いたします。</p>
+          <p class="feature-desc">都心のマンションは、物件ごとに魅力や価値が大きく異なります。<br>アールグラシアでは、お客様のご希望を丁寧に伺い、暮らし方や将来設計に合った一邸をご提案いたします。
+          </p>
         </div>
       </div>
     </div>
@@ -1379,7 +1595,8 @@
         理想の住まい探しも、大切な不動産の売却も、アールグラシアが丁寧にサポートいたします。
       </p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="tel:050-5448-5144" class="btn-primary" style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">TEL: 050-5448-5144</a>
+        <a href="tel:050-5448-5144" class="btn-primary"
+          style="background: rgba(255,255,255,0.1); border-color: #fff; color: #fff;">TEL: 050-5448-5144</a>
         <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="btn-primary">ご来店予約</a>
       </div>
     </div>
@@ -1395,7 +1612,8 @@
       </div>
       <div class="staff-grid">
         <div class="staff-card reveal">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="田川 理加" class="staff-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+            alt="田川 理加" class="staff-img">
           <h3 class="staff-name">代表 田川 理加</h3>
           <p class="staff-comment">
             不動産キャリア23年。<br>
@@ -1405,7 +1623,8 @@
           </p>
         </div>
         <div class="staff-card reveal">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="飯塚 成" class="staff-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+            alt="飯塚 成" class="staff-img">
           <h3 class="staff-name">飯塚 成</h3>
           <p class="staff-comment">
             宅地建物取引士の資格を持つスタッフです。<br>
@@ -1415,7 +1634,8 @@
           </p>
         </div>
         <div class="staff-card reveal">
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="河谷 吏騎" class="staff-img">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80"
+            alt="河谷 吏騎" class="staff-img">
           <h3 class="staff-name">河谷 吏騎</h3>
           <p class="staff-comment">
             お客様に安心してお任せいただけるよう、心を込めたご案内を大切にしています。<br><br>
@@ -1443,7 +1663,8 @@
       </div>
       <div class="message-img reveal">
         <!-- 高級感のある内装イメージ -->
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt="上質な空間のイメージ">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+          alt="上質な空間のイメージ">
       </div>
     </div>
   </section>
@@ -1468,7 +1689,8 @@
           </div>
           <div class="access-row">
             <span class="access-label">電話番号</span>
-            <span class="access-value"><a href="tel:050-5448-5144" style="color: inherit; text-decoration: none;">050-5448-5144</a></span>
+            <span class="access-value"><a href="tel:050-5448-5144"
+                style="color: inherit; text-decoration: none;">050-5448-5144</a></span>
           </div>
           <div class="access-row">
             <span class="access-label">営業時間</span>
@@ -1500,7 +1722,12 @@
         </p>
         <div class="sns-links">
           <a href="https://www.instagram.com/rgracia.tokyo/" target="_blank" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
           </a>
         </div>
       </div>
@@ -1518,10 +1745,12 @@
         <a href="https://www.r-gracia.jp/reservation/select/" target="_blank">ご来店予約</a>
         <div class="sns-links" style="margin-top: 16px;">
           <a href="https://www.r-gracia.jp/" target="_blank" aria-label="公式ホームページ" title="公式ホームページ">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
             </svg>
           </a>
         </div>
@@ -1536,20 +1765,27 @@
   <div class="sp-cta">
     <a href="tel:050-5448-5144" class="cta-tel">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
       </svg>
       電話で相談
     </a>
     <a href="https://www.r-gracia.jp/reservation/select/" target="_blank" class="cta-web">
-      <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+      <svg viewBox="0 0 24 24"
+        style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
       </svg>
       ご来店予約
     </a>
   </div>
 
   <button id="back-to-top" aria-label="TOPへ戻る">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 19V5M5 12l7-7 7 7" />
     </svg>
   </button>
@@ -1612,4 +1848,5 @@
     }
   </script>
 </body>
+
 </html>
