@@ -632,14 +632,7 @@
         flex-shrink: 0;
       }
 
-      .fv-bg-slider::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(30, 25, 20, 0.2);
-        z-index: 2;
-        pointer-events: none;
-      }
+
 
       .fv-content {
         justify-content: center;
