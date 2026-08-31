@@ -398,7 +398,7 @@ section {
   .hero-left-bg { display: none; }
   .hero-slider {
     width: 100%;
-    height: 400px;
+    height: 270px;
     position: relative;
     order: 1;
   }
