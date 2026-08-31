@@ -1364,6 +1364,10 @@ section {
     height: auto;
   }
 
+  .recommend-img img {
+    object-position: 10% center;
+  }
+
   .recommend-content {
     width: 60%;
     padding: 48px 35px;
