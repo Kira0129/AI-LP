@@ -858,6 +858,7 @@
 
       .panel-title {
         color: var(--text-main);
+        font-size: 20px;
       }
 
       .panel-desc {
