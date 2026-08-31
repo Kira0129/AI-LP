@@ -438,6 +438,7 @@
       min-height: 620px;
       overflow: hidden;
       background: var(--text-main);
+      padding: 0;
     }
 
     .fv-bg-slider {
