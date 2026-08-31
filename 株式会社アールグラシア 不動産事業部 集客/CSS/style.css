@@ -274,8 +274,8 @@
       flex-direction: column;
     }
 
-    .logo-en {
-      font-family: var(--font-en);
+    .logo-ja {
+      font-family: var(--font-ja);
       font-size: 20px;
       font-weight: 500;
       color: #fff;
@@ -284,7 +284,7 @@
       transition: color 0.4s;
     }
 
-    #header.scrolled .logo-en {
+    #header.scrolled .logo-ja {
       color: var(--text-main);
     }
 
@@ -367,7 +367,7 @@
     }
 
     @media (max-width: 900px) {
-      .logo-en {
+      .logo-ja {
         color: var(--text-main);
       }
 
@@ -1223,8 +1223,8 @@
     }
 
     .footer-logo {
-      font-family: var(--font-en);
-      font-size: 24px;
+      font-family: var(--font-ja);
+      font-size: 22px;
       font-weight: 500;
       letter-spacing: 0.1em;
       color: #fff;
