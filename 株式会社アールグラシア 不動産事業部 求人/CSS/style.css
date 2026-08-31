@@ -224,7 +224,12 @@ section {
     width: 80%;
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
-  .header-cta { margin-top: 20px; width: 80%; }
+  .header-cta {
+    margin-top: 20px;
+    width: 80%;
+    border: none;
+    color: var(--white) !important;
+  }
   .nav-open .header-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-open .header-hamburger span:nth-child(2) { opacity: 0; }
   .nav-open .header-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
