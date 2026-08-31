@@ -536,14 +536,10 @@ section {
   position: relative;
   z-index: 1;
 }
-.work-icon svg {
+.work-icon img {
   width: 48px;
   height: 48px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: contain;
 }
 .work-title {
   font-size: 20px;
