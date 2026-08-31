@@ -281,24 +281,20 @@ section {
   opacity: 0;
   z-index: 1;
 }
-/* Unsplash Images for Luxury Real Estate */
+/* FV Images */
 .slide-1 {
-  animation: slideFade 18s infinite -1.5s;
-  background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  animation: slideFade 12s infinite;
+  background-image: url('../img/fv01.jpg');
 }
 .slide-2 {
-  animation: slideFade 18s infinite -13.5s;
-  background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-}
-.slide-3 {
-  animation: slideFade 18s infinite -7.5s;
-  background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  animation: slideFade 12s infinite 6s;
+  background-image: url('../img/fv02.jpg');
 }
 @keyframes slideFade {
   0% { opacity: 0; transform: scale(1); }
-  10% { opacity: 1; transform: scale(1.02); }
-  33.33% { opacity: 1; transform: scale(1.05); }
-  43.33% { opacity: 0; transform: scale(1.07); }
+  5% { opacity: 1; transform: scale(1.01); }
+  45% { opacity: 1; transform: scale(1.05); }
+  55% { opacity: 0; transform: scale(1.06); }
   100% { opacity: 0; transform: scale(1); }
 }
 
