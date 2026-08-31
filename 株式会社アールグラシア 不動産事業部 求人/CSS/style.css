@@ -275,7 +275,7 @@ section {
 .hero-slider-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, var(--bg-dark) 0%, rgba(10,10,10,0.7) 30%, transparent 100%);
+  background: linear-gradient(to right, var(--bg-dark) 0%, rgb(10 10 10 / 20%) 30%, transparent 100%);
   z-index: 2;
 }
 .slide {
