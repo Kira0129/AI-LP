@@ -288,18 +288,22 @@ section {
 }
 /* FV Images */
 .slide-1 {
-  animation: slideFade 12s infinite;
+  animation: slideFade 18s infinite;
   background-image: url('../img/fv01.jpg');
 }
 .slide-2 {
-  animation: slideFade 12s infinite 6s;
+  animation: slideFade 18s infinite 6s;
   background-image: url('../img/fv02.jpg');
+}
+.slide-3 {
+  animation: slideFade 18s infinite 12s;
+  background-image: url('../img/fv03.jpg');
 }
 @keyframes slideFade {
   0% { opacity: 0; transform: scale(1); }
   5% { opacity: 1; transform: scale(1.01); }
-  45% { opacity: 1; transform: scale(1.05); }
-  55% { opacity: 0; transform: scale(1.06); }
+  33% { opacity: 1; transform: scale(1.05); }
+  42% { opacity: 0; transform: scale(1.06); }
   100% { opacity: 0; transform: scale(1); }
 }
 
