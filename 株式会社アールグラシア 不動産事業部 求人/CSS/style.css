@@ -594,7 +594,6 @@ section {
   height: 100%;
   object-fit: cover;
   transition: transform 0.8s ease;
-  filter: brightness(0.8);
 }
 .merit-item:hover .merit-img img {
   transform: scale(1.05);
