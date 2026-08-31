@@ -403,7 +403,7 @@ section {
   }
   .hero-content {
     width: 100%;
-    padding: 50px 24px;
+    padding: 50px 15px;
     order: 2;
     background: var(--bg-dark);
   }
