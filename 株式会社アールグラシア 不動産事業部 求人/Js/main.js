@@ -49,3 +49,16 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// SP CTA sticky display
+const spCta = document.querySelector('.sp-cta');
+const aboutSection = document.getElementById('about');
+if (spCta && aboutSection) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= aboutSection.offsetTop - window.innerHeight / 2) {
+      spCta.classList.add('show');
+    } else {
+      spCta.classList.remove('show');
+    }
+  });
+}
