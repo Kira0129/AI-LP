@@ -307,7 +307,7 @@ section {
   pointer-events: none;
 }
 .hero-text-box {
-  max-width: 700px;
+  max-width: 1000px;
   pointer-events: auto;
 }
 
