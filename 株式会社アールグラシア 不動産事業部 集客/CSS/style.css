@@ -367,12 +367,20 @@
     }
 
     @media (max-width: 900px) {
+      .logo-en {
+        color: var(--text-main);
+      }
+
       .header-nav {
         display: none;
       }
 
       .hamburger {
         display: flex;
+      }
+
+      .hamburger span {
+        background: var(--text-main);
       }
 
       .header-inner,
