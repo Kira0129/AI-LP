@@ -408,7 +408,7 @@ section {
     background: var(--bg-dark);
   }
   .hero-slider-overlay { display: none; }
-  .hero-catchcopy { font-size: 28px; }
+  .hero-catchcopy { font-size: 23px; }
   .hero-sub { font-size: 14px; }
   .hero-btns { flex-direction: column; width: 100%; }
   .hero-btns a { width: 100%; padding: 16px; }
