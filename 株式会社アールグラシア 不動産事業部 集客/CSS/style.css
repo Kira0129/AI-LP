@@ -959,7 +959,7 @@
        ========================================================================== */
     .pricing-band {
       position: relative;
-      background: linear-gradient(rgba(44, 38, 32, 0.8), rgba(44, 38, 32, 0.8)), url('../img/messagebg.jpg') center/cover;
+      background: linear-gradient(rgba(44, 38, 32, 0.8), rgba(44, 38, 32, 0.8)), url('../img/pricebg.jpg') center/cover;
       background-attachment: fixed;
       padding: 100px 24px;
       text-align: center;
