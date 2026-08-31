@@ -455,19 +455,18 @@
       animation: bgFade 18s infinite ease-in-out;
     }
 
-    /* 高級感のあるマンションのダミー画像 */
     .fv-bg-slide:nth-child(1) {
-      background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');
+      background-image: url('../img/fv01.jpg');
       animation-delay: 0s;
     }
 
     .fv-bg-slide:nth-child(2) {
-      background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80');
+      background-image: url('../img/fv02.jpg');
       animation-delay: 6s;
     }
 
     .fv-bg-slide:nth-child(3) {
-      background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');
+      background-image: url('../img/fv03.jpg');
       animation-delay: 12s;
     }
 
