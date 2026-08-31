@@ -762,6 +762,7 @@ section {
 @media (max-width: 960px) {
   #message {
     text-align: left;
+    background-attachment: scroll;
   }
 }
 
