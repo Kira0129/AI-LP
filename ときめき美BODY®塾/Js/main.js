@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const hamburger = document.getElementById('js-hamburger');
             const mobileMenu = document.getElementById('js-mobile-menu');
             const mobileLinks = document.querySelectorAll('.js-mobile-link');
+            const mobileClose = document.getElementById('js-mobile-close');
 
             if (hamburger && mobileMenu) {
                 const toggleMenu = () => {
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 hamburger.addEventListener('click', toggleMenu);
+                if (mobileClose) mobileClose.addEventListener('click', closeMenu);
                 mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
             }
 
