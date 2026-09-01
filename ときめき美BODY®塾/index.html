@@ -1240,6 +1240,20 @@
                     if (e.target === modal) closeModal();
                 });
             }
+
+            // Page Top Button Visibility
+            const pageTopBtn = document.getElementById('js-page-top');
+            if (pageTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        pageTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                        pageTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                    } else {
+                        pageTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                        pageTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                    }
+                });
+            }
         });
     </script>
 
@@ -1250,5 +1264,10 @@
             <img id="js-modal-image-src" src="" alt="Enlarged Image" class="max-w-full max-h-[90vh] object-contain transform scale-95 transition-transform duration-300">
         </div>
     </div>
+
+    <!-- Page Top Button -->
+    <a href="#" id="js-page-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 md:w-14 md:h-14 bg-gold text-white rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-gold/90 hover:-translate-y-1" aria-label="ページトップへ戻る">
+        <i class="fa-solid fa-arrow-up text-lg md:text-xl"></i>
+    </a>
 </body>
 </html>
