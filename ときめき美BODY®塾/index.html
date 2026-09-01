@@ -767,16 +767,18 @@
                     <!-- Case 1 -->
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade">
                         <div class="flex gap-4 mb-6">
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -788,16 +790,18 @@
                     <!-- Case 2 -->
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.1s;">
                         <div class="flex gap-4 mb-6">
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -809,16 +813,18 @@
                     <!-- Case 3 -->
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.2s;">
                         <div class="flex gap-4 mb-6">
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -830,16 +836,18 @@
                     <!-- Case 4 -->
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade">
                         <div class="flex gap-4 mb-6">
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -851,16 +859,18 @@
                     <!-- Case 5 -->
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.1s;">
                         <div class="flex gap-4 mb-6">
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover">
+                            <div class="w-1/2 relative overflow-hidden group">
+                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -1177,7 +1187,53 @@
                     }
                 });
             });
+
+            // Image Modal
+            const modal = document.getElementById('js-image-modal');
+            const modalImg = document.getElementById('js-modal-image-src');
+            const modalClose = document.getElementById('js-modal-close');
+            const modalTriggers = document.querySelectorAll('.js-modal-img');
+
+            if (modal && modalImg && modalTriggers.length > 0) {
+                const openModal = (src) => {
+                    modalImg.src = src;
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modalImg.classList.remove('scale-95');
+                    modalImg.classList.add('scale-100');
+                    document.body.style.overflow = 'hidden';
+                };
+
+                const closeModal = () => {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    modalImg.classList.add('scale-95');
+                    modalImg.classList.remove('scale-100');
+                    setTimeout(() => {
+                        modalImg.src = '';
+                        document.body.style.overflow = '';
+                    }, 300);
+                };
+
+                modalTriggers.forEach(trigger => {
+                    trigger.addEventListener('click', () => {
+                        const src = trigger.getAttribute('data-src');
+                        if (src) openModal(src);
+                    });
+                });
+
+                modalClose.addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+            }
         });
     </script>
+
+    <!-- Image Modal -->
+    <div id="js-image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative max-w-[95%] md:max-w-[80%] max-h-[90vh]">
+            <button id="js-modal-close" class="absolute -top-12 right-0 text-white hover:text-gold transition-colors text-4xl">&times;</button>
+            <img id="js-modal-image-src" src="" alt="Enlarged Image" class="max-w-full max-h-[90vh] object-contain transform scale-95 transition-transform duration-300">
+        </div>
+    </div>
 </body>
 </html>
