@@ -275,6 +275,13 @@
             margin: 0 auto 32px;
         }
 
+        @media (max-width: 767px) {
+            .fv-divider {
+                height: 35px;
+                margin: 0 auto 10px;
+            }
+        }
+
         /* 縦書きテキスト */
         .vertical-text {
             writing-mode: vertical-rl;
