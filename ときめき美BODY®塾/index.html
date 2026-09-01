@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ときめき美BODY® | 何歳からでも、自分らしく輝ける毎日へ</title>
+    <meta name="description" content="大人の美しさは、整った体から生まれる。身体・美容・食・習慣を整えながら、これからの人生をもっと軽やかに楽しむためのセルフケアをお伝えします。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#FAF8F5',
+                        pink: '#EBCFC8',
+                        gold: '#D4B46A',
+                        text: '#5B4B46',
+                    },
+                    fontFamily: {
+                        mincho: ['"Shippori Mincho"', 'serif'],
+                        en: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --clr-bg: #FAF8F5;
+            --clr-pink: #EBCFC8;
+            --clr-gold: #D4B46A;
+            --clr-text: #5B4B46;
+        }
+
+        body {
+            background-color: var(--clr-bg);
+            color: var(--clr-text);
+            font-family: "Shippori Mincho", serif;
+            line-height: 2.2;
+            letter-spacing: 0.08em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 共通アニメーション */
+        .js-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .js-fade.is-active {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* セクションタイトル */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-title-en {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2.5rem;
+            color: var(--clr-gold);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        .section-title-ja {
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--clr-text);
+            opacity: 0.8;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* ボタン */
+        .btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 3rem;
+            background-color: transparent;
+            color: var(--clr-text);
+            border: 1px solid var(--clr-gold);
+            font-size: 0.95rem;
+            letter-spacing: 0.15em;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s;
+            text-decoration: none;
+        }
+        .btn-elegant::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--clr-pink);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+        .btn-elegant:hover {
+            color: var(--clr-text);
+        }
+        .btn-elegant:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+
+        /* ヘッダー */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 50;
+            border-bottom: 1px solid rgba(212, 180, 106, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        /* ハンバーガーメニュー */
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 60;
+            background: transparent;
+            border: none;
+        }
+        .hamburger span {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: var(--clr-text);
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 9px; }
+        .hamburger span:nth-child(3) { bottom: 0; }
+        .hamburger.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .hamburger.is-open span:nth-child(2) { opacity: 0; }
+        .hamburger.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--clr-bg);
+            z-index: 55;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        .mobile-menu.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* FV スライダー & レイアウト (すぺのお部屋スタイル) */
+        #fv {
+            position: relative;
+            width: 100%;
+            height: 100svh;
+            min-height: 600px;
+            display: flex;
+            background-color: var(--clr-bg);
+            overflow: hidden;
+        }
+
+        .fv-text-part {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .fv-image-part {
+            flex: 1.2;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .fv-bg-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .fv-bg-slide {
+            position: absolute;
+            inset: 0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            animation: bgFade 18s infinite ease-in-out;
+        }
+        .fv-bg-slide:nth-child(1) { animation-delay: 0s; }
+        .fv-bg-slide:nth-child(2) { animation-delay: 6s; }
+        .fv-bg-slide:nth-child(3) { animation-delay: 12s; }
+
+        @keyframes bgFade {
+            0% { opacity: 0; transform: scale(1.05); }
+            10% { opacity: 1; transform: scale(1.05); }
+            33% { opacity: 1; transform: scale(1.02); }
+            43% { opacity: 0; transform: scale(1.0); }
+            100% { opacity: 0; }
+        }
+
+        .fv-divider {
+            width: 1px;
+            height: 60px;
+            background-color: var(--clr-gold);
+            margin: 0 auto 32px;
+        }
+
+        /* 縦書きテキスト */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* スクロールダウン */
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+        .scroll-down span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--clr-text);
+        }
+        .scroll-down::after {
+            content: '';
+            width: 1px;
+            height: 60px;
+            background-color: var(--clr-gold);
+            animation: scrollLine 2s infinite;
+        }
+        @keyframes scrollLine {
+            0% { transform: scaleY(0); transform-origin: top; }
+            50% { transform: scaleY(1); transform-origin: top; }
+            50.1% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+
+        /* ABOUTセクション用 スマホ画像ループスライダー */
+        @media (max-width: 767px) {
+            .loop-slider {
+                display: flex;
+                width: max-content;
+                gap: 0.5rem;
+            }
+            .loop-slider__track {
+                display: flex;
+                gap: 0.5rem;
+                animation: loop-marquee 15s linear infinite;
+            }
+            @keyframes loop-marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-100% - 0.5rem)); }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="js-header">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+            <a href="#" class="text-xl tracking-widest font-en text-text">ときめき美BODY<sup class="text-xs">®</sup></a>
+
+            <!-- PC Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm tracking-widest font-en">
+                <a href="#about" class="hover:text-gold transition-colors">ABOUT</a>
+                <a href="#service" class="hover:text-gold transition-colors">SERVICE</a>
+                <a href="#features" class="hover:text-gold transition-colors">FEATURES</a>
+                <a href="#menu" class="hover:text-gold transition-colors">MENU</a>
+                <a href="#voice" class="hover:text-gold transition-colors">VOICE</a>
+                <a href="#access" class="hover:text-gold transition-colors">ACCESS</a>
+                <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="border border-gold px-6 py-2 hover:bg-pink transition-colors">RESERVE</a>
+            </nav>
+
+            <!-- SP Hamburger -->
+            <button class="hamburger md:hidden" id="js-hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="js-mobile-menu">
+        <nav class="flex flex-col items-center gap-8 text-lg tracking-widest font-en">
+            <a href="#about" class="js-mobile-link hover:text-gold">ABOUT</a>
+            <a href="#service" class="js-mobile-link hover:text-gold">SERVICE</a>
+            <a href="#features" class="js-mobile-link hover:text-gold">FEATURES</a>
+            <a href="#menu" class="js-mobile-link hover:text-gold">MENU</a>
+            <a href="#voice" class="js-mobile-link hover:text-gold">VOICE</a>
+            <a href="#access" class="js-mobile-link hover:text-gold">ACCESS</a>
+            <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="js-mobile-link border border-gold px-8 py-3 mt-4 hover:bg-pink">RESERVE</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- FV -->
+        <section id="fv">
+            <div class="fv-text-part">
+                <p class="font-en text-gold tracking-widest text-sm mb-4 md:mb-6 js-fade">TOKIMEKI BI-BODY</p>
+                
+                <h1 class="text-3xl md:text-4xl lg:text-5xl leading-relaxed tracking-widest mb-6 font-light js-fade" style="transition-delay: 0.2s;">
+                    何歳からでも、<br>
+                    自分らしく輝ける毎日へ。
+                </h1>
+                
+                <div class="fv-divider js-fade" style="transition-delay: 0.4s;"></div>
+                
+                <p class="text-sm md:text-base leading-loose tracking-wider opacity-90 js-fade" style="transition-delay: 0.6s;">
+                    がんばりすぎず、心地よく。<br>
+                    身体・美容・食・習慣を整えながら、<br class="md:hidden">
+                    これからの人生をもっと軽やかに楽しむための<br class="md:hidden">セルフケアをお伝えします。
+                </p>
+
+                <div class="scroll-down">
+                    <span>SCROLL</span>
+                </div>
+            </div>
+            
+            <div class="fv-image-part">
+                <div class="fv-bg-slider">
+                    <!-- 画像は雰囲気に合うダミー画像を設定。本番環境で差し替えてください。 -->
+                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1499557406180-2a818318182b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Worries -->
+        <section class="py-24 md:py-32 relative">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-16 js-fade">
+                    <span class="font-en text-gold text-lg tracking-widest mb-2 block">WORRIES</span>
+                    <h2 class="text-2xl md:text-3xl tracking-widest">こんなお悩みありませんか？</h2>
+                </div>
+
+                <div class="bg-white p-8 md:p-16 border-[0.5px] border-gold/40 shadow-[0_10px_40px_rgba(91,75,70,0.03)] relative js-fade">
+                    <!-- 装飾 -->
+                    <div class="absolute -top-3 -left-3 w-6 h-6 border-t-[0.5px] border-l-[0.5px] border-gold"></div>
+                    <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-[0.5px] border-r-[0.5px] border-gold"></div>
+
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">朝起きても、すっきりしない日が増えた</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">鏡を見るたびに、年齢による変化が気になる</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">猫背やぽっこりお腹など、姿勢の崩れが気になる</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">以前より体力が落ち、外出がおっくうになった</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">膝や腰、股関節などに不安を感じている</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">顔のたるみやほうれい線、表情の変化が気になる</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">旅行や趣味をもっと元気に楽しみたい</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-gold mt-1 text-sm"><i class="fa-solid fa-check"></i></span>
+                            <span class="tracking-wider">年齢を理由に、やりたいことを諦めたくない</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-12 pt-8 border-t-[0.5px] border-gold/30 text-center">
+                        <p class="text-lg tracking-widest text-gold font-medium">これからの自分のために、<br class="md:hidden">身体と向き合う時間を始めてみませんか。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-24 md:py-32 bg-white relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">About</h2>
+                    <span class="section-title-ja">コンセプト</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 js-fade">
+                    <!-- PC 縦書きタイトル -->
+                    <div class="hidden md:block text-gold text-[28px] lg:text-[32px] font-light" style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.3em; line-height: 2;">
+                        美しさも、健やかさも、<br>毎日の小さな習慣から。
+                    </div>
+                    <!-- SP 横書きタイトル -->
+                    <div class="md:hidden text-center text-gold text-2xl font-light mb-6" style="letter-spacing: 0.15em; line-height: 1.6;">
+                        美しさも、健やかさも、<br>毎日の小さな習慣から。
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="text-left text-text leading-[2.2] tracking-wide max-w-xl">
+                        <p class="mb-6">ときめき美BODY®は、セルフ整体を中心に、姿勢・呼吸・食事・美容・生活習慣までトータルに学ぶオンラインプログラムです。</p>
+                        <p class="mb-6">激しい運動や無理なトレーニングではなく、自分自身の身体を使って、毎日少しずつ整えていくことを大切にしています。</p>
+                        <p class="mb-6">目指しているのは、ただ見た目を変えることではありません。</p>
+                        <p class="mb-6">身体が軽やかになることで、出かけたくなる。<br>鏡を見ることが少し楽しくなる。<br>新しいことにも挑戦したくなる。</p>
+                        <p>そんな、人生まで前向きに広がっていくようなウェルネス習慣をお届けします。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 画像ループスライダー (PC: 3カラムグリッド / SP: 横ループ) -->
+            <div class="w-full js-fade mt-16 pb-6 md:pb-0 overflow-hidden">
+                <div class="loop-slider md:grid md:grid-cols-3 md:gap-3">
+                    <!-- Track 1 -->
+                    <div class="loop-slider__track flex gap-2 md:contents">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="セルフ整体" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80" alt="食事と健康" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80" alt="ライフスタイル" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                    <!-- Track 2 (SP Loop Clone) -->
+                    <div class="loop-slider__track flex gap-2 md:hidden" aria-hidden="true">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="セルフ整体" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80" alt="食事と健康" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80" alt="ライフスタイル" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE -->
+        <section id="service" class="py-24 md:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Service</h2>
+                    <span class="section-title-ja">身体から、人生を整える4つのステップ</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
+                        <div class="text-gold font-en tracking-widest text-sm mb-4">STEP 01 - 整える</div>
+                        <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODY90</h3>
+                        <p class="text-sm leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                            身体の土台や姿勢、呼吸、食事、生活習慣を学び、自分自身で身体を整える習慣を身につけます。
+                        </p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group" style="transition-delay: 0.1s;">
+                        <div class="text-gold font-en tracking-widest text-sm mb-4">STEP 02 - 輝く</div>
+                        <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美FACE30</h3>
+                        <p class="text-sm leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                            顔だけにアプローチするのではなく、姿勢や身体全体から整え、自然でいきいきとした表情を目指します。
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
+                        <div class="text-gold font-en tracking-widest text-sm mb-4">STEP 03 - 届ける</div>
+                        <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODYアカデミー</h3>
+                        <p class="text-sm leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                            自分自身が学び、体験してきたセルフ整体を、今度は誰かに伝えるための知識と指導力を育てます。
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group" style="transition-delay: 0.1s;">
+                        <div class="text-gold font-en tracking-widest text-sm mb-4">STEP 04 - 育む</div>
+                        <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODYクラブ</h3>
+                        <p class="text-sm leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                            講座を終えたあとも、仲間と学び、実践を続けられるコミュニティ。年齢やライフスタイルの変化に合わせて、自分の身体と向き合い続けます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="py-24 md:py-32 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Features</h2>
+                    <span class="section-title-ja">5つの特徴</span>
+                </div>
+
+                <div class="space-y-24 md:space-y-32">
+                    <!-- F1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="オンライン講座" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">01</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">全国どこからでも受講できる<br class="hidden lg:block">オンライン講座</h3>
+                            <p class="text-sm leading-loose tracking-wider opacity-90">座学から実践、個別サポートまでオンラインで完結。ご自宅から参加できるため、全国はもちろん、海外からでも自分の生活に合わせて学ぶことができます。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- F2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="がんばらないから、続けやすい" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">02</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">がんばらないから、続けやすい</h3>
+                            <p class="text-sm leading-loose tracking-wider opacity-90">特別な道具やハードな運動は必要ありません。自分の身体を使ったやさしいセルフ整体を、毎日の暮らしの中へ少しずつ取り入れます。無理をして頑張るのではなく、心地よく続けられることを大切にしています。</p>
+                        </div>
+                    </div>
+
+                    <!-- F3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="一人ひとりに合わせた個別サポート" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">03</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">一人ひとりに合わせた<br class="hidden lg:block">個別サポート</h3>
+                            <p class="text-sm leading-loose tracking-wider opacity-90">講座開始時には身体の状態やお悩みについて個別にお話を伺います。姿勢や動きを確認しながら、その方に必要なセルフケアを日々の実践へ取り入れ、少人数制ならではの丁寧なサポートを行います。</p>
+                        </div>
+                    </div>
+
+                    <!-- F4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="身体・美容・食・習慣をトータルに" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">04</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">身体・美容・食・習慣を<br class="hidden lg:block">トータルに</h3>
+                            <p class="text-sm leading-loose tracking-wider opacity-90">身体を整えるだけではなく、食事・栄養・睡眠・呼吸・姿勢・表情など、毎日の暮らし全体を見つめていきます。外側だけの美しさではなく、心身ともに健やかで、自分らしく輝くための習慣を育てます。</p>
+                        </div>
+                    </div>
+
+                    <!-- F5 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="学んで終わらない、ずっと続けられる環境" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">05</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">学んで終わらない、<br class="hidden lg:block">ずっと続けられる環境</h3>
+                            <p class="text-sm leading-loose tracking-wider opacity-90">平日の実践ライブや質問サポートに加え、講座資料やアーカイブ動画は永年視聴可能。受講期間が終わったあとも、必要なときに何度でも振り返ることができ、自分のペースで学びを続けられます。一人では続けにくいことも、仲間やサポートとともに習慣へつなげていきます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu" class="py-24 md:py-32 relative bg-bg/50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Menu</h2>
+                    <span class="section-title-ja">コース案内</span>
+                </div>
+
+                <!-- Recommend: ときめき美BODY90 -->
+                <div class="relative flex flex-col md:flex-row items-center mb-24 js-fade">
+                    <!-- Image Area -->
+                    <div class="w-full md:w-7/12 relative z-0">
+                        <div class="aspect-[4/3] md:aspect-[5/4] relative overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ときめき美BODY90" class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                        </div>
+                        <div class="absolute -z-10 w-full h-full border border-gold opacity-50 top-4 -left-4"></div>
+                        <div class="absolute -top-4 -left-4 md:-left-8 bg-gold text-white px-6 py-2 text-sm tracking-widest z-20">
+                            RECOMMEND
+                        </div>
+                    </div>
+
+                    <!-- Text Area (overlapping) -->
+                    <div class="w-full md:w-6/12 relative z-10 -mt-12 md:mt-0 md:-ml-24">
+                        <div class="bg-white/95 backdrop-blur-md p-8 md:p-12 shadow-lg border border-gold/10">
+                            <div class="border-b-[0.5px] border-gold pb-4 mb-6">
+                                <span class="font-en text-gold tracking-widest block mb-1">01. BI-BODY 90</span>
+                                <h3 class="text-2xl md:text-3xl tracking-widest text-text font-light">ときめき美BODY90</h3>
+                                <p class="text-xs text-text/70 mt-2 tracking-widest">資料・アーカイブ動画 永年視聴可能</p>
+                            </div>
+                            
+                            <p class="text-base text-gold tracking-widest mb-6 font-medium">何歳からでも、自分史上いちばん軽やかな身体へ。</p>
+                            
+                            <p class="leading-loose text-text text-sm tracking-wider mb-6">
+                                健康・食・美容・習慣・人生をトータルに整える90日プログラムです。<br>
+                                身体の仕組みを学ぶ座学と、毎日のセルフ整体を組み合わせ、自分自身で身体を整える習慣を育てます。
+                            </p>
+
+                            <div class="bg-bg p-6 border-[0.5px] border-gold/20">
+                                <h4 class="text-sm tracking-widest text-gold mb-4 text-center">主な内容</h4>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs tracking-wider text-text/90">
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>Zoom座学 月2回×全6回</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>平日朝のセルフ整体ライブ</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>動画ライブラリー</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>LINEでの質問サポート</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>食事・栄養講座</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>美容レッスン</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>姿勢・動きの個別指導</li>
+                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>毎週のチャレンジプログラム</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 美FACE30 (Image Right Layout) -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center mb-24 js-fade">
+                    <!-- Image Area -->
+                    <div class="w-full md:w-7/12 relative z-0">
+                        <div class="aspect-[4/3] md:aspect-[5/4] relative overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ときめき美FACE30" class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                        </div>
+                        <div class="absolute -z-10 w-full h-full border border-gold opacity-50 top-4 -right-4"></div>
+                    </div>
+
+                    <!-- Text Area (overlapping) -->
+                    <div class="w-full md:w-6/12 relative z-10 -mt-12 md:mt-0 md:-mr-24">
+                        <div class="bg-white/95 backdrop-blur-md p-8 md:p-12 shadow-lg border border-gold/10">
+                            <div class="border-b-[0.5px] border-gold pb-4 mb-6">
+                                <span class="font-en text-gold tracking-widest block mb-1">02. BI-FACE 30</span>
+                                <h3 class="text-2xl md:text-3xl tracking-widest text-text font-light">ときめき美FACE30</h3>
+                            </div>
+                            
+                            <p class="text-base text-gold tracking-widest mb-6 font-medium">30日で、表情から輝く自然な美しさへ。</p>
+                            
+                            <p class="leading-loose text-text text-sm tracking-wider">
+                                顔だけでなく、姿勢や呼吸、身体全体とのつながりを大切にする30日間のセルフケアプログラム。<br>強く押したり無理に引き上げたりせず、1日5分から取り入れやすいやさしいケアで、自然で明るい表情を目指します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Menus (Card Layout) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                    <div class="bg-white p-8 border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-gold font-en text-xs tracking-widest mb-2">03. 1 DAY</div>
+                        <h3 class="text-lg tracking-widest mb-4">ときめき美FACE 1DAY</h3>
+                        <p class="text-sm leading-loose tracking-wider opacity-90">
+                            美FACEのセルフケアを気軽に体験できる1日プログラムです。<br>まずは自分の顔や身体と向き合ってみたい方、美FACE30を始める前に体験してみたい方におすすめです。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow" style="transition-delay: 0.1s;">
+                        <div class="text-gold font-en text-xs tracking-widest mb-2">04. ACADEMY</div>
+                        <h3 class="text-lg tracking-widest mb-4">ときめき美BODYアカデミー</h3>
+                        <p class="text-sm text-gold mb-4 text-xs tracking-widest">あなたの経験が、誰かの未来を変える。</p>
+                        <p class="text-sm leading-loose tracking-wider opacity-90">
+                            セルフ整体を学ぶだけでなく、誰かに安全に、分かりやすく伝えるための知識と指導力を身につける講師養成プログラムです。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow" style="transition-delay: 0.2s;">
+                        <div class="text-gold font-en text-xs tracking-widest mb-2">05. CLUB</div>
+                        <h3 class="text-lg tracking-widest mb-4">ときめき美BODYクラブ</h3>
+                        <p class="text-sm text-gold mb-4 text-xs tracking-widest">一生、自分の身体を好きでいられる仲間と。</p>
+                        <p class="text-sm leading-loose tracking-wider opacity-90">
+                            講座卒業後も、学び続けられるコミュニティ。<br>卒業をゴールにせず、これから先も自分らしく健やかに過ごすための場所です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Price Info -->
+                <div class="text-center js-fade bg-white p-10 md:p-16 border-[0.5px] border-gold/30 shadow-sm relative">
+                     <!-- 装飾 -->
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gold/20"></div>
+                    <div class="inline-block relative">
+                        <h3 class="text-xl tracking-widest mb-6">受講料について</h3>
+                        <div class="w-12 h-[1px] bg-gold mx-auto mb-6"></div>
+                    </div>
+                    <p class="text-sm md:text-base leading-loose tracking-wider max-w-2xl mx-auto">
+                        まずは個別面談で現在のお悩みや身体の状態、ご希望についてお伺いしています。<br><br>
+                        お話を伺ったうえで、興味を持っていただいた方へ、ご自身に合った講座内容と受講料をご案内いたします。<br>
+                        無理なご案内ではありませんので、まずはお気軽にご相談ください。
+                    </p>
+                    <div class="mt-10">
+                        <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="btn-elegant">個別面談を予約する</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOICE (Before / After) -->
+        <section id="voice" class="py-24 md:py-32 bg-white relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Voice</h2>
+                    <span class="section-title-ja">受講者様の声・変化</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Voice 1 -->
+                    <div class="bg-bg p-8 flex flex-col js-fade">
+                        <div class="w-full aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="受講者様" class="w-full h-full object-cover filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <p class="text-sm leading-loose tracking-wider flex-grow italic mb-4">
+                            「長い間、いろいろとお世話になりました。お陰様で、その後、セルフ整体を続けられています。一人ではこんなに習慣になるまで継続できなかったと思います。毎朝、決まった時間に先生であったり、参加者さんと実践できて励みになりました。」
+                        </p>
+                        <div class="text-right text-gold text-sm tracking-widest border-t-[0.5px] border-gold/30 pt-4">— 60代女性</div>
+                    </div>
+
+                    <!-- Voice 2 -->
+                    <div class="bg-bg p-8 flex flex-col js-fade" style="transition-delay: 0.1s;">
+                        <div class="w-full aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="受講者様" class="w-full h-full object-cover filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <p class="text-sm leading-loose tracking-wider flex-grow italic mb-4">
+                            「セルフ整体と聞いて、何をするのかわからなかったが、実際にやってみたら、肩こりが解消し、使っていない筋肉を動かすことの心地よさ、身体の温もりを感じることができました。」
+                        </p>
+                        <div class="text-right text-gold text-sm tracking-widest border-t-[0.5px] border-gold/30 pt-4">— 60代女性</div>
+                    </div>
+
+                    <!-- Voice 3 -->
+                    <div class="bg-bg p-8 flex flex-col js-fade" style="transition-delay: 0.2s;">
+                        <div class="w-full aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="受講者様" class="w-full h-full object-cover filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <p class="text-sm leading-loose tracking-wider flex-grow italic mb-4">
+                            「当初、頑張ってセルフ整体を学ぼうと思ったけれど、『頑張らなくて良い、むしろ頑張らない方が身体がリラックスして骨格まで変わる』と言われて、びっくりしました。気合いと根性は要りませんでした。」
+                        </p>
+                        <div class="text-right text-gold text-sm tracking-widest border-t-[0.5px] border-gold/30 pt-4">— 50代女性</div>
+                    </div>
+
+                    <!-- Voice 4 -->
+                    <div class="bg-bg p-8 flex flex-col js-fade">
+                        <div class="w-full aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="受講者様" class="w-full h-full object-cover filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <p class="text-sm leading-loose tracking-wider flex-grow italic mb-4">
+                            「セルフ整体の動きに名前がついていて、そのネーミングが面白く、楽しみながら行うことができました。」
+                        </p>
+                        <div class="text-right text-gold text-sm tracking-widest border-t-[0.5px] border-gold/30 pt-4">— 50代女性</div>
+                    </div>
+
+                    <!-- Voice 5 -->
+                    <div class="bg-bg p-8 flex flex-col js-fade" style="transition-delay: 0.1s;">
+                        <div class="w-full aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="受講者様" class="w-full h-full object-cover filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <p class="text-sm leading-loose tracking-wider flex-grow italic mb-4">
+                            「もたついた顔のフェイスラインがシャープになり、周りから驚かれました。道具を使わないし、簡単なのに変化を感じることが出来て、とても嬉しいです。」
+                        </p>
+                        <div class="text-right text-gold text-sm tracking-widest border-t-[0.5px] border-gold/30 pt-4">— 70代女性</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE & MESSAGE -->
+        <section class="py-24 md:py-32 bg-pink/10 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row gap-16 items-start">
+                    
+                    <!-- 写真エリア -->
+                    <div class="w-full md:w-5/12 js-fade">
+                        <div class="relative w-full aspect-[3/4]">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="とくもと えり" class="w-full h-full object-cover shadow-xl filter contrast-[0.9]">
+                            <div class="absolute -bottom-6 -left-6 w-full h-full border-[0.5px] border-gold -z-10"></div>
+                        </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="w-full md:w-7/12 js-fade">
+                        <div class="mb-12">
+                            <span class="font-en tracking-widest text-gold text-sm block mb-2">OWNER PROFILE</span>
+                            <div class="text-sm tracking-widest opacity-80 mb-1">ときめき美BODY® 主宰</div>
+                            <h3 class="text-2xl md:text-3xl tracking-widest">とくもと えり</h3>
+                        </div>
+
+                        <div class="space-y-4 text-sm leading-loose tracking-wider opacity-90 mb-12 border-b-[0.5px] border-gold/30 pb-12">
+                            <p>子どもの頃から身体が弱く、病院へ通うことが日常だった経験から、食や健康について学び始めました。</p>
+                            <p>その後、パン教室や料理教室、そば打ち教室などを約25年間続け、多くの方の食と健康に携わってきました。</p>
+                            <p>自身も年齢とともに身体の変化を感じる中でセルフ整体と出会い、64歳から本格的に学び始めます。</p>
+                            <p>毎日少しずつ身体と向き合ううちに、姿勢や呼吸、日々の過ごし方への意識にも変化が生まれました。</p>
+                            <p>現在68歳。海外への一人旅や新しい挑戦を楽しみながら、自身の経験を活かして、女性が何歳からでも自分らしい人生を楽しむためのサポートを行っています。</p>
+                        </div>
+
+                        <!-- MESSAGE -->
+                        <div>
+                            <span class="font-en tracking-widest text-gold text-sm block mb-4">MESSAGE</span>
+                            <h4 class="text-xl md:text-2xl tracking-widest leading-relaxed mb-6">
+                                これからの人生が、いちばん楽しい。<br>
+                                そう思える毎日へ。
+                            </h4>
+                            <div class="space-y-4 text-sm leading-loose tracking-wider opacity-90">
+                                <p>以前の私は、身体の不調を体質や年齢のせいだと思っていました。<br>でも、自分の身体と向き合い、毎日少しずつ整えることを続けたことで、人生の楽しみ方まで変わっていきました。</p>
+                                <p class="text-gold">何歳からでも、新しいことを始めていい。<br>行きたい場所へ行っていい。<br>もっと自分を好きになっていい。</p>
+                                <p>ときめき美BODY®でお伝えしたいのは、単なるセルフ整体ではありません。</p>
+                                <p>身体を整え、心が軽くなり、自分らしい人生を楽しむための力を育てること。</p>
+                                <p>あなたがこれからの毎日を、ときめきながら歩んでいけるよう、心を込めてサポートします。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / CONTACT -->
+        <section class="py-24 md:py-32 bg-white text-center border-b-[0.5px] border-gold/20">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="section-title js-fade mb-12">
+                    <h2 class="section-title-en">Contact</h2>
+                    <span class="section-title-ja">ご予約・お問い合わせ</span>
+                </div>
+
+                <p class="text-sm md:text-base leading-loose tracking-wider mb-12 js-fade">
+                    個別面談のご予約はご予約フォームより承ります。<br>
+                    その他のお問い合わせは、LINE公式またはメールにてお気軽にご連絡ください。
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center gap-6 mb-16 js-fade">
+                    <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="btn-elegant w-full md:w-auto">
+                        <i class="fa-regular fa-calendar-check mr-2"></i> 個別面談を予約する
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 js-fade">
+                    <div class="p-8 border-[0.5px] border-gold/30 hover:border-gold transition-colors">
+                        <i class="fa-brands fa-line text-3xl text-[#06C755] mb-4"></i>
+                        <h4 class="tracking-widest mb-2">LINE公式アカウント</h4>
+                        <p class="text-xs opacity-70 mb-6">ご質問などお気軽にメッセージください</p>
+                        <a href="https://wzq9wu1c.autosns.app/addfriend/s/KFs2C03DLj/@074upacq" target="_blank" class="text-sm text-gold hover:text-text transition-colors border-b border-gold pb-1">LINEで友だち追加する</a>
+                    </div>
+                    <div class="p-8 border-[0.5px] border-gold/30 hover:border-gold transition-colors">
+                        <i class="fa-regular fa-envelope text-3xl text-gold mb-4"></i>
+                        <h4 class="tracking-widest mb-2">メールアドレス</h4>
+                        <p class="text-xs opacity-70 mb-6">2〜3営業日以内にご返信いたします</p>
+                        <a href="mailto:namueri0959@yahoo.co.jp" class="text-sm tracking-wider font-en hover:text-gold transition-colors">namueri0959@yahoo.co.jp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access & Information -->
+        <section id="access" class="py-24 md:py-32 bg-bg relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Information</h2>
+                    <span class="section-title-ja">店舗情報・アクセス</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-stretch">
+                    <!-- 店舗情報 -->
+                    <div class="js-fade flex flex-col">
+                        <div class="border-[0.5px] border-gold/30 p-8 md:p-12 bg-white flex-grow">
+                            <h3 class="text-xl tracking-widest mb-8 text-gold border-b-[0.5px] border-gold/30 pb-4">ときめき美BODY<sup class="text-xs">®</sup></h3>
+                            <dl class="space-y-4 text-sm tracking-wider leading-loose">
+                                <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">住所</dt>
+                                    <dd>〒525-0047<br>滋賀県草津市追分２丁目１０−２</dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">電話番号</dt>
+                                    <dd><a href="tel:080-1515-4058" class="hover:text-gold transition-colors font-en text-base">080-1515-4058</a></dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">営業時間</dt>
+                                    <dd>10：00〜17：00</dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">定休日</dt>
+                                    <dd>日, 祝日</dd>
+                                </div>
+                            </dl>
+
+                            <!-- SNS Links -->
+                            <div class="mt-12 pt-8 border-t-[0.5px] border-gold/30">
+                                <span class="block text-sm text-gold font-en tracking-widest mb-6">Official SNS</span>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="https://www.instagram.com/eri_stretch" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-lg"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/share/174r8mdPqu/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook-f text-lg"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC6uspkryNZNBLJJl1eX4UQw" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="YouTube">
+                                        <i class="fa-brands fa-youtube text-lg"></i>
+                                    </a>
+                                    <a href="https://ameblo.jp/couaile-kitchen/" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Ameba Blog">
+                                        <i class="fa-solid fa-pen-nib text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="js-fade flex flex-col">
+                        <div class="w-full h-[350px] lg:h-full min-h-[300px] border-[0.5px] border-gold/30 p-2 bg-white flex-grow">
+                            <!-- 滋賀県草津市追分２丁目１０−２の検索結果を埋め込み -->
+                            <iframe src="https://maps.google.com/maps?q=滋賀県草津市追分２丁目１０−２&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t-[0.5px] border-gold/20 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <a href="#" class="text-xl tracking-widest font-en text-text block mb-6">ときめき美BODY<sup class="text-xs">®</sup></a>
+            <p class="font-en text-xs tracking-widest opacity-60">&copy; 2026 Tokimeki Bi-BODY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Animation (Fade in & Blur reveal)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.js-fade, .js-blur-reveal').forEach(el => observer.observe(el));
+
+            // Header Background on Scroll
+            const header = document.getElementById('js-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(250, 248, 245, 0.98)';
+                    header.style.boxShadow = '0 4px 20px rgba(91, 75, 70, 0.05)';
+                } else {
+                    header.style.backgroundColor = 'rgba(250, 248, 245, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+
+            // Hamburger Menu
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            const mobileLinks = document.querySelectorAll('.js-mobile-link');
+
+            if (hamburger && mobileMenu) {
+                const toggleMenu = () => {
+                    hamburger.classList.toggle('is-open');
+                    mobileMenu.classList.toggle('is-open');
+                    document.body.style.overflow = hamburger.classList.contains('is-open') ? 'hidden' : '';
+                };
+
+                const closeMenu = () => {
+                    hamburger.classList.remove('is-open');
+                    mobileMenu.classList.remove('is-open');
+                    document.body.style.overflow = '';
+                }
+
+                hamburger.addEventListener('click', toggleMenu);
+                mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+            }
+
+            // Smooth Scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerHeight = document.querySelector('.header').offsetHeight;
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
