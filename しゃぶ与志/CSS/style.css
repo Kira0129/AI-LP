@@ -771,8 +771,8 @@ section {
 
 .feature-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 124px;
+  left: 16px;
   width: 100px;
   height: 100px;
   background: var(--accent);
@@ -1503,6 +1503,12 @@ section {
     background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.7) 30%, rgba(0, 0, 0, 0) 65%);
     pointer-events: none;
     z-index: 1;
+  }
+
+  .feature-badge {
+    top: 32px;
+    right: 32px;
+    left: auto;
   }
 
   .feature-card-body {
