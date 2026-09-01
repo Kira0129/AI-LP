@@ -246,17 +246,14 @@
             #fv {
                 flex-direction: column;
             }
+
             .fv-text-part {
                 flex: 1.2;
                 padding-top: 70px;
             }
+
             .fv-image-part {
                 flex: 1;
-            }
-            .scroll-down {
-                bottom: 10px;
-                transform: translateX(-50%) scale(0.85);
-                transform-origin: bottom center;
             }
         }
 
@@ -324,56 +321,6 @@
         .vertical-text {
             writing-mode: vertical-rl;
             text-orientation: mixed;
-        }
-
-        /* スクロールダウン */
-        .scroll-down {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            z-index: 10;
-        }
-
-        .scroll-down span {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
-            color: var(--clr-text);
-        }
-
-        .scroll-down::after {
-            content: '';
-            width: 1px;
-            height: 60px;
-            background-color: var(--clr-gold);
-            animation: scrollLine 2s infinite;
-        }
-
-        @keyframes scrollLine {
-            0% {
-                transform: scaleY(0);
-                transform-origin: top;
-            }
-
-            50% {
-                transform: scaleY(1);
-                transform-origin: top;
-            }
-
-            50.1% {
-                transform: scaleY(1);
-                transform-origin: bottom;
-            }
-
-            100% {
-                transform: scaleY(0);
-                transform-origin: bottom;
-            }
         }
 
         /* ABOUTセクション用 スマホ画像ループスライダー */
@@ -451,7 +398,7 @@
                 <h1 class="text-3xl md:text-4xl lg:text-5xl leading-relaxed tracking-widest mb-6 font-light js-fade"
                     style="transition-delay: 0.2s;">
                     何歳からでも、<br>
-                    自分らしく輝ける毎日へ。
+                    自分らしく輝ける毎日へ
                 </h1>
 
                 <div class="fv-divider js-fade" style="transition-delay: 0.4s;"></div>
@@ -462,10 +409,6 @@
                     身体・美容・食・習慣を整えながら、<br class="md:hidden">
                     これからの人生をもっと軽やかに楽しむための<br class="md:hidden">セルフケアをお伝えします。
                 </p>
-
-                <div class="scroll-down">
-                    <span>SCROLL</span>
-                </div>
             </div>
 
             <div class="fv-image-part">
