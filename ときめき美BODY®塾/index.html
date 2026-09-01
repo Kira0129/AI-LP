@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -59,6 +62,7 @@
             transform: translateY(30px);
             transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
         }
+
         .js-fade.is-active {
             opacity: 1;
             transform: none;
@@ -69,6 +73,7 @@
             text-align: center;
             margin-bottom: 4rem;
         }
+
         .section-title-en {
             font-family: "Cormorant Garamond", serif;
             font-size: 2.5rem;
@@ -77,6 +82,7 @@
             text-transform: uppercase;
             font-weight: 300;
         }
+
         .section-title-ja {
             font-size: 0.9rem;
             letter-spacing: 0.2em;
@@ -102,6 +108,7 @@
             transition: color 0.4s;
             text-decoration: none;
         }
+
         .btn-elegant::before {
             content: '';
             position: absolute;
@@ -115,9 +122,11 @@
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: -1;
         }
+
         .btn-elegant:hover {
             color: var(--clr-text);
         }
+
         .btn-elegant:hover::before {
             transform: scaleY(1);
             transform-origin: top;
@@ -147,6 +156,7 @@
             background: transparent;
             border: none;
         }
+
         .hamburger span {
             position: absolute;
             width: 100%;
@@ -155,12 +165,30 @@
             left: 0;
             transition: all 0.3s ease;
         }
-        .hamburger span:nth-child(1) { top: 0; }
-        .hamburger span:nth-child(2) { top: 9px; }
-        .hamburger span:nth-child(3) { bottom: 0; }
-        .hamburger.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-        .hamburger.is-open span:nth-child(2) { opacity: 0; }
-        .hamburger.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .hamburger.is-open span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.is-open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.is-open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
 
         .mobile-menu {
             position: fixed;
@@ -178,6 +206,7 @@
             visibility: hidden;
             transition: all 0.4s ease;
         }
+
         .mobile-menu.is-open {
             opacity: 1;
             visibility: visible;
@@ -213,6 +242,24 @@
             overflow: hidden;
         }
 
+        @media (max-width: 767px) {
+            #fv {
+                flex-direction: column;
+            }
+            .fv-text-part {
+                flex: 1.2;
+                padding-top: 70px;
+            }
+            .fv-image-part {
+                flex: 1;
+            }
+            .scroll-down {
+                bottom: 10px;
+                transform: translateX(-50%) scale(0.85);
+                transform-origin: bottom center;
+            }
+        }
+
         .fv-bg-slider {
             position: absolute;
             inset: 0;
@@ -227,16 +274,43 @@
             opacity: 0;
             animation: bgFade 18s infinite ease-in-out;
         }
-        .fv-bg-slide:nth-child(1) { animation-delay: 0s; }
-        .fv-bg-slide:nth-child(2) { animation-delay: 6s; }
-        .fv-bg-slide:nth-child(3) { animation-delay: 12s; }
+
+        .fv-bg-slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .fv-bg-slide:nth-child(2) {
+            animation-delay: 6s;
+        }
+
+        .fv-bg-slide:nth-child(3) {
+            animation-delay: 12s;
+        }
 
         @keyframes bgFade {
-            0% { opacity: 0; transform: scale(1.05); }
-            10% { opacity: 1; transform: scale(1.05); }
-            33% { opacity: 1; transform: scale(1.02); }
-            43% { opacity: 0; transform: scale(1.0); }
-            100% { opacity: 0; }
+            0% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            33% {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+
+            43% {
+                opacity: 0;
+                transform: scale(1.0);
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
 
         .fv-divider {
@@ -264,12 +338,14 @@
             gap: 10px;
             z-index: 10;
         }
+
         .scroll-down span {
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.8rem;
             letter-spacing: 0.2em;
             color: var(--clr-text);
         }
+
         .scroll-down::after {
             content: '';
             width: 1px;
@@ -277,11 +353,27 @@
             background-color: var(--clr-gold);
             animation: scrollLine 2s infinite;
         }
+
         @keyframes scrollLine {
-            0% { transform: scaleY(0); transform-origin: top; }
-            50% { transform: scaleY(1); transform-origin: top; }
-            50.1% { transform: scaleY(1); transform-origin: bottom; }
-            100% { transform: scaleY(0); transform-origin: bottom; }
+            0% {
+                transform: scaleY(0);
+                transform-origin: top;
+            }
+
+            50% {
+                transform: scaleY(1);
+                transform-origin: top;
+            }
+
+            50.1% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
+
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
         }
 
         /* ABOUTセクション用 スマホ画像ループスライダー */
@@ -291,18 +383,26 @@
                 width: max-content;
                 gap: 0.5rem;
             }
+
             .loop-slider__track {
                 display: flex;
                 gap: 0.5rem;
                 animation: loop-marquee 15s linear infinite;
             }
+
             @keyframes loop-marquee {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-100% - 0.5rem)); }
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-100% - 0.5rem));
+                }
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -345,16 +445,19 @@
         <!-- FV -->
         <section id="fv">
             <div class="fv-text-part">
-                <p class="font-en text-gold tracking-widest text-[14px] md:text-[16px] mb-4 md:mb-6 js-fade">TOKIMEKI BI-BODY</p>
-                
-                <h1 class="text-3xl md:text-4xl lg:text-5xl leading-relaxed tracking-widest mb-6 font-light js-fade" style="transition-delay: 0.2s;">
+                <p class="font-en text-gold tracking-widest text-[14px] md:text-[16px] mb-4 md:mb-6 js-fade">TOKIMEKI
+                    BI-BODY</p>
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl leading-relaxed tracking-widest mb-6 font-light js-fade"
+                    style="transition-delay: 0.2s;">
                     何歳からでも、<br>
                     自分らしく輝ける毎日へ。
                 </h1>
-                
+
                 <div class="fv-divider js-fade" style="transition-delay: 0.4s;"></div>
-                
-                <p class="text-sm md:text-base leading-loose tracking-wider opacity-90 js-fade" style="transition-delay: 0.6s;">
+
+                <p class="text-sm md:text-base leading-loose tracking-wider opacity-90 js-fade"
+                    style="transition-delay: 0.6s;">
                     がんばりすぎず、心地よく。<br>
                     身体・美容・食・習慣を整えながら、<br class="md:hidden">
                     これからの人生をもっと軽やかに楽しむための<br class="md:hidden">セルフケアをお伝えします。
@@ -364,13 +467,19 @@
                     <span>SCROLL</span>
                 </div>
             </div>
-            
+
             <div class="fv-image-part">
                 <div class="fv-bg-slider">
                     <!-- 画像は雰囲気に合うダミー画像を設定。本番環境で差し替えてください。 -->
-                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1499557406180-2a818318182b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
-                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
-                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+                    <div class="fv-bg-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1499557406180-2a818318182b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                    </div>
+                    <div class="fv-bg-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                    </div>
+                    <div class="fv-bg-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                    </div>
                 </div>
             </div>
         </section>
@@ -383,48 +492,59 @@
                     <h2 class="text-2xl md:text-3xl tracking-widest">こんなお悩みありませんか？</h2>
                 </div>
 
-                <div class="bg-white p-8 md:p-16 border-[0.5px] border-gold/40 shadow-[0_10px_40px_rgba(91,75,70,0.03)] relative js-fade">
+                <div
+                    class="bg-white p-8 md:p-16 border-[0.5px] border-gold/40 shadow-[0_10px_40px_rgba(91,75,70,0.03)] relative js-fade">
                     <!-- 装飾 -->
                     <div class="absolute -top-3 -left-3 w-6 h-6 border-t-[0.5px] border-l-[0.5px] border-gold"></div>
-                    <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-[0.5px] border-r-[0.5px] border-gold"></div>
+                    <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-[0.5px] border-r-[0.5px] border-gold">
+                    </div>
 
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">朝起きても、すっきりしない日が増えた</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">鏡を見るたびに、年齢による変化が気になる</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">猫背やぽっこりお腹など、姿勢の崩れが気になる</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">以前より体力が落ち、外出がおっくうになった</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">膝や腰、股関節などに不安を感じている</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">顔のたるみやほうれい線、表情の変化が気になる</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">旅行や趣味をもっと元気に楽しみたい</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i class="fa-solid fa-check"></i></span>
+                            <span class="text-gold mt-1 text-[14px] md:text-[16px]"><i
+                                    class="fa-solid fa-check"></i></span>
                             <span class="tracking-wider">年齢を理由に、やりたいことを諦めたくない</span>
                         </li>
                     </ul>
 
                     <div class="mt-12 pt-8 border-t-[0.5px] border-gold/30 text-center">
-                        <p class="text-lg tracking-widest text-gold font-medium">これからの自分のために、<br class="md:hidden">身体と向き合う時間を始めてみませんか。</p>
+                        <p class="text-lg tracking-widest text-gold font-medium">これからの自分のために、<br
+                                class="md:hidden">身体と向き合う時間を始めてみませんか。</p>
                     </div>
                 </div>
             </div>
@@ -440,11 +560,13 @@
 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 js-fade">
                     <!-- PC 縦書きタイトル -->
-                    <div class="hidden md:block text-gold text-[28px] lg:text-[32px] font-light" style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.3em; line-height: 2;">
+                    <div class="hidden md:block text-gold text-[28px] lg:text-[32px] font-light"
+                        style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.3em; line-height: 2;">
                         美しさも、健やかさも、<br>毎日の小さな習慣から。
                     </div>
                     <!-- SP 横書きタイトル -->
-                    <div class="md:hidden text-center text-gold text-2xl font-light mb-6" style="letter-spacing: 0.15em; line-height: 1.6;">
+                    <div class="md:hidden text-center text-gold text-2xl font-light mb-6"
+                        style="letter-spacing: 0.15em; line-height: 1.6;">
                         美しさも、健やかさも、<br>毎日の小さな習慣から。
                     </div>
 
@@ -464,26 +586,38 @@
                 <div class="loop-slider md:grid md:grid-cols-3 md:gap-3">
                     <!-- Track 1 -->
                     <div class="loop-slider__track flex gap-2 md:contents">
-                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="セルフ整体" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
+                                alt="セルフ整体"
+                                class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
                         </div>
-                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80" alt="食事と健康" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80"
+                                alt="食事と健康"
+                                class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
                         </div>
-                        <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
-                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80" alt="ライフスタイル" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80"
+                                alt="ライフスタイル"
+                                class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1] hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
                     <!-- Track 2 (SP Loop Clone) -->
                     <div class="loop-slider__track flex gap-2 md:hidden" aria-hidden="true">
                         <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="セルフ整体" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
+                                alt="セルフ整体" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
                         </div>
                         <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80" alt="食事と健康" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80"
+                                alt="食事と健康" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
                         </div>
                         <div class="aspect-[16/10] overflow-hidden relative bg-gray-100 flex-shrink-0 w-[75vw]">
-                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80" alt="ライフスタイル" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                            <img src="https://images.unsplash.com/photo-1499557406180-2a818318182b?auto=format&fit=crop&q=80"
+                                alt="ライフスタイル" class="w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
                         </div>
                     </div>
                 </div>
@@ -500,37 +634,49 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     <!-- Service 1 -->
-                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
-                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 01 - 整える</div>
+                    <div
+                        class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
+                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 01 - 整える
+                        </div>
                         <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODY90</h3>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
                             身体の土台や姿勢、呼吸、食事、生活習慣を学び、自分自身で身体を整える習慣を身につけます。
                         </p>
                     </div>
-                    
+
                     <!-- Service 2 -->
-                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group" style="transition-delay: 0.1s;">
-                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 02 - 輝く</div>
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group"
+                        style="transition-delay: 0.1s;">
+                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 02 - 輝く
+                        </div>
                         <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美FACE30</h3>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
                             顔だけにアプローチするのではなく、姿勢や身体全体から整え、自然でいきいきとした表情を目指します。
                         </p>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
-                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 03 - 届ける</div>
+                    <div
+                        class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group">
+                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 03 - 届ける
+                        </div>
                         <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODYアカデミー</h3>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
                             自分自身が学び、体験してきたセルフ整体を、今度は誰かに伝えるための知識と指導力を育てます。
                         </p>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group" style="transition-delay: 0.1s;">
-                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 04 - 育む</div>
+                    <div class="bg-white p-10 border-[0.5px] border-gold/30 hover:border-gold transition-colors duration-500 js-fade group"
+                        style="transition-delay: 0.1s;">
+                        <div class="text-gold font-en tracking-widest text-[14px] md:text-[16px] mb-4">STEP 04 - 育む
+                        </div>
                         <h3 class="text-xl tracking-widest mb-6 pb-4 border-b-[0.5px] border-gold/30">美BODYクラブ</h3>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
                             講座を終えたあとも、仲間と学び、実践を続けられるコミュニティ。年齢やライフスタイルの変化に合わせて、自分の身体と向き合い続けます。
                         </p>
                     </div>
@@ -551,29 +697,37 @@
                     <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
                         <div class="w-full md:w-1/2 relative z-0">
                             <div class="aspect-[4/3] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="オンライン講座" class="w-full h-full object-cover filter contrast-[0.9]">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="オンライン講座" class="w-full h-full object-cover filter contrast-[0.9]">
                             </div>
                             <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">01</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">全国どこからでも受講できる<br class="hidden lg:block">オンライン講座</h3>
-                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">座学から実践、個別サポートまでオンラインで完結。ご自宅から参加できるため、全国はもちろん、海外からでも自分の生活に合わせて学ぶことができます。</p>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">全国どこからでも受講できる<br
+                                    class="hidden lg:block">オンライン講座</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                座学から実践、個別サポートまでオンラインで完結。ご自宅から参加できるため、全国はもちろん、海外からでも自分の生活に合わせて学ぶことができます。</p>
                         </div>
                     </div>
-                    
+
                     <!-- F2 -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
                         <div class="w-full md:w-1/2 relative z-0">
                             <div class="aspect-[4/3] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="がんばらないから、続けやすい" class="w-full h-full object-cover filter contrast-[0.9]">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="がんばらないから、続けやすい" class="w-full h-full object-cover filter contrast-[0.9]">
                             </div>
-                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10"></div>
+                            <div
+                                class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10">
+                            </div>
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">02</span>
                             <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">がんばらないから、続けやすい</h3>
-                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">特別な道具やハードな運動は必要ありません。自分の身体を使ったやさしいセルフ整体を、毎日の暮らしの中へ少しずつ取り入れます。無理をして頑張るのではなく、心地よく続けられることを大切にしています。</p>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                特別な道具やハードな運動は必要ありません。自分の身体を使ったやさしいセルフ整体を、毎日の暮らしの中へ少しずつ取り入れます。無理をして頑張るのではなく、心地よく続けられることを大切にしています。
+                            </p>
                         </div>
                     </div>
 
@@ -581,14 +735,18 @@
                     <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
                         <div class="w-full md:w-1/2 relative z-0">
                             <div class="aspect-[4/3] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="一人ひとりに合わせた個別サポート" class="w-full h-full object-cover filter contrast-[0.9]">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="一人ひとりに合わせた個別サポート" class="w-full h-full object-cover filter contrast-[0.9]">
                             </div>
                             <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">03</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">一人ひとりに合わせた<br class="hidden lg:block">個別サポート</h3>
-                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">講座開始時には身体の状態やお悩みについて個別にお話を伺います。姿勢や動きを確認しながら、その方に必要なセルフケアを日々の実践へ取り入れ、少人数制ならではの丁寧なサポートを行います。</p>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">一人ひとりに合わせた<br
+                                    class="hidden lg:block">個別サポート</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                講座開始時には身体の状態やお悩みについて個別にお話を伺います。姿勢や動きを確認しながら、その方に必要なセルフケアを日々の実践へ取り入れ、少人数制ならではの丁寧なサポートを行います。
+                            </p>
                         </div>
                     </div>
 
@@ -596,14 +754,20 @@
                     <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
                         <div class="w-full md:w-1/2 relative z-0">
                             <div class="aspect-[4/3] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="身体・美容・食・習慣をトータルに" class="w-full h-full object-cover filter contrast-[0.9]">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="身体・美容・食・習慣をトータルに" class="w-full h-full object-cover filter contrast-[0.9]">
                             </div>
-                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10"></div>
+                            <div
+                                class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border-[0.5px] border-gold -z-10">
+                            </div>
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">04</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">身体・美容・食・習慣を<br class="hidden lg:block">トータルに</h3>
-                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">身体を整えるだけではなく、食事・栄養・睡眠・呼吸・姿勢・表情など、毎日の暮らし全体を見つめていきます。外側だけの美しさではなく、心身ともに健やかで、自分らしく輝くための習慣を育てます。</p>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">身体・美容・食・習慣を<br
+                                    class="hidden lg:block">トータルに</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                身体を整えるだけではなく、食事・栄養・睡眠・呼吸・姿勢・表情など、毎日の暮らし全体を見つめていきます。外側だけの美しさではなく、心身ともに健やかで、自分らしく輝くための習慣を育てます。
+                            </p>
                         </div>
                     </div>
 
@@ -611,14 +775,18 @@
                     <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
                         <div class="w-full md:w-1/2 relative z-0">
                             <div class="aspect-[4/3] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="学んで終わらない、ずっと続けられる環境" class="w-full h-full object-cover filter contrast-[0.9]">
+                                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="学んで終わらない、ずっと続けられる環境" class="w-full h-full object-cover filter contrast-[0.9]">
                             </div>
                             <div class="absolute -top-4 -left-4 w-full h-full border-[0.5px] border-gold -z-10"></div>
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gold/30 block mb-2 leading-none">05</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">学んで終わらない、<br class="hidden lg:block">ずっと続けられる環境</h3>
-                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">平日の実践ライブや質問サポートに加え、講座資料やアーカイブ動画は永年視聴可能。受講期間が終わったあとも、必要なときに何度でも振り返ることができ、自分のペースで学びを続けられます。一人では続けにくいことも、仲間やサポートとともに習慣へつなげていきます。</p>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-gold">学んで終わらない、<br
+                                    class="hidden lg:block">ずっと続けられる環境</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                平日の実践ライブや質問サポートに加え、講座資料やアーカイブ動画は永年視聴可能。受講期間が終わったあとも、必要なときに何度でも振り返ることができ、自分のペースで学びを続けられます。一人では続けにくいことも、仲間やサポートとともに習慣へつなげていきます。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -638,10 +806,13 @@
                     <!-- Image Area -->
                     <div class="w-full md:w-7/12 relative z-0">
                         <div class="aspect-[4/3] md:aspect-[5/4] relative overflow-hidden shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ときめき美BODY90" class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="ときめき美BODY90"
+                                class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
                         </div>
                         <div class="absolute -z-10 w-full h-full border border-gold opacity-50 top-4 -left-4"></div>
-                        <div class="absolute -top-4 -left-4 md:-left-8 bg-gold text-white px-6 py-2 text-[14px] md:text-[16px] tracking-widest z-20">
+                        <div
+                            class="absolute -top-4 -left-4 md:-left-8 bg-gold text-white px-6 py-2 text-[14px] md:text-[16px] tracking-widest z-20">
                             RECOMMEND
                         </div>
                     </div>
@@ -654,25 +825,34 @@
                                 <h3 class="text-2xl md:text-3xl tracking-widest text-text font-light">ときめき美BODY90</h3>
                                 <p class="text-xs text-text/70 mt-2 tracking-widest">資料・アーカイブ動画 永年視聴可能</p>
                             </div>
-                            
+
                             <p class="text-base text-gold tracking-widest mb-6 font-medium">何歳からでも、自分史上いちばん軽やかな身体へ。</p>
-                            
+
                             <p class="leading-loose text-text text-[14px] md:text-[16px] tracking-wider mb-6">
                                 健康・食・美容・習慣・人生をトータルに整える90日プログラムです。<br>
                                 身体の仕組みを学ぶ座学と、毎日のセルフ整体を組み合わせ、自分自身で身体を整える習慣を育てます。
                             </p>
 
                             <div class="bg-bg p-6 border-[0.5px] border-gold/20">
-                                <h4 class="text-[14px] md:text-[16px] tracking-widest text-gold mb-4 text-center">主な内容</h4>
+                                <h4 class="text-[14px] md:text-[16px] tracking-widest text-gold mb-4 text-center">主な内容
+                                </h4>
                                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs tracking-wider text-text/90">
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>Zoom座学 月2回×全6回</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>平日朝のセルフ整体ライブ</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>動画ライブラリー</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>LINEでの質問サポート</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>食事・栄養講座</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>美容レッスン</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>姿勢・動きの個別指導</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-gold rounded-full mr-2"></span>毎週のチャレンジプログラム</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>Zoom座学 月2回×全6回</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>平日朝のセルフ整体ライブ</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>動画ライブラリー</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>LINEでの質問サポート</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>食事・栄養講座</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>美容レッスン</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>姿勢・動きの個別指導</li>
+                                    <li class="flex items-center"><span
+                                            class="w-1 h-1 bg-gold rounded-full mr-2"></span>毎週のチャレンジプログラム</li>
                                 </ul>
                             </div>
                         </div>
@@ -684,7 +864,9 @@
                     <!-- Image Area -->
                     <div class="w-full md:w-7/12 relative z-0">
                         <div class="aspect-[4/3] md:aspect-[5/4] relative overflow-hidden shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ときめき美FACE30" class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="ときめき美FACE30"
+                                class="absolute inset-0 w-full h-full object-cover filter contrast-[0.9] sepia-[0.1]">
                         </div>
                         <div class="absolute -z-10 w-full h-full border border-gold opacity-50 top-4 -right-4"></div>
                     </div>
@@ -696,9 +878,9 @@
                                 <span class="font-en text-gold tracking-widest block mb-1">02. BI-FACE 30</span>
                                 <h3 class="text-2xl md:text-3xl tracking-widest text-text font-light">ときめき美FACE30</h3>
                             </div>
-                            
+
                             <p class="text-base text-gold tracking-widest mb-6 font-medium">30日で、表情から輝く自然な美しさへ。</p>
-                            
+
                             <p class="leading-loose text-text text-[14px] md:text-[16px] tracking-wider">
                                 顔だけでなく、姿勢や呼吸、身体全体とのつながりを大切にする30日間のセルフケアプログラム。<br>強く押したり無理に引き上げたりせず、1日5分から取り入れやすいやさしいケアで、自然で明るい表情を目指します。
                             </p>
@@ -708,44 +890,56 @@
 
                 <!-- Other Menus (Card Layout) -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                    <div class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+                    <div
+                        class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
                         <div class="w-full aspect-[4/3] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80" alt="ときめき美FACE 1DAY" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80"
+                                alt="ときめき美FACE 1DAY"
+                                class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="py-[30px] px-[17px] flex flex-col flex-grow">
                             <div class="text-gold font-en text-xs tracking-widest mb-2">03. 1 DAY</div>
                             <h3 class="text-lg tracking-widest mb-4">ときめき美FACE 1DAY</h3>
-                            <p class="text-[14px] md:text-[16px] text-gold mb-4 tracking-widest">まずは1日、自分の美しさと向き合う時間。</p>
+                            <p class="text-[14px] md:text-[16px] text-gold mb-4 tracking-widest">まずは1日、自分の美しさと向き合う時間。
+                            </p>
                             <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 mt-auto">
                                 美FACEのセルフケアを気軽に体験できる1日プログラムです。<br>これから美FACE30を始めたい方や、まずは体験してみたい方におすすめです。
                             </p>
                         </div>
                     </div>
 
-                    <div class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full" style="transition-delay: 0.1s;">
+                    <div class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
+                        style="transition-delay: 0.1s;">
                         <div class="w-full aspect-[4/3] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="ときめき美BODYアカデミー" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
+                                alt="ときめき美BODYアカデミー"
+                                class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="py-[30px] px-[17px] flex flex-col flex-grow">
                             <div class="text-gold font-en text-xs tracking-widest mb-2">04. ACADEMY</div>
                             <h3 class="text-lg tracking-widest mb-4">ときめき美BODYアカデミー</h3>
-                            <p class="text-[14px] md:text-[16px] text-gold mb-4 text-xs tracking-widest">あなたの経験が、誰かの未来を変える。</p>
+                            <p class="text-[14px] md:text-[16px] text-gold mb-4 text-xs tracking-widest">
+                                あなたの経験が、誰かの未来を変える。</p>
                             <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 mt-auto">
                                 セルフ整体を学ぶだけでなく、誰かに安全に、分かりやすく伝えるための知識と指導力を身につける講師養成プログラムです。
                             </p>
                         </div>
                     </div>
 
-                    <div class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full" style="transition-delay: 0.2s;">
+                    <div class="bg-white border-[0.5px] border-gold/30 js-fade shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
+                        style="transition-delay: 0.2s;">
                         <div class="w-full aspect-[4/3] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&q=80" alt="ときめき美BODYクラブ" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&q=80"
+                                alt="ときめき美BODYクラブ"
+                                class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="py-[30px] px-[17px] flex flex-col flex-grow">
                             <div class="text-gold font-en text-xs tracking-widest mb-2">05. CLUB</div>
                             <h3 class="text-lg tracking-widest mb-4">ときめき美BODYクラブ</h3>
-                            <p class="text-[14px] md:text-[16px] text-gold mb-4 text-xs tracking-widest">一生、自分の身体を好きでいられる仲間と。</p>
+                            <p class="text-[14px] md:text-[16px] text-gold mb-4 text-xs tracking-widest">
+                                一生、自分の身体を好きでいられる仲間と。</p>
                             <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 mt-auto">
-                                講座卒業後も、学び続けられるコミュニティ。<br>卒業をゴールにせず、これから先も自分らしく健やかに過ごすための場所です。
+                                卒業後も、学び続けられるコミュニティ。<br>卒業をゴールにせず、これから先も自分らしく健やかに過ごすための場所です。
                             </p>
                         </div>
                     </div>
@@ -753,7 +947,7 @@
 
                 <!-- Price Info -->
                 <div class="text-center js-fade bg-white p-10 md:p-16 border-[0.5px] border-gold/30 shadow-sm relative">
-                     <!-- 装飾 -->
+                    <!-- 装飾 -->
                     <div class="absolute top-0 left-0 w-2 h-full bg-gold/20"></div>
                     <div class="inline-block relative">
                         <h3 class="text-xl tracking-widest mb-6">受講料について</h3>
@@ -765,7 +959,8 @@
                         無理なご案内ではありませんので、まずはお気軽にご相談ください。
                     </p>
                     <div class="mt-10">
-                        <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="btn-elegant">個別面談を予約する</a>
+                        <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank"
+                            class="btn-elegant">個別面談を予約する</a>
                     </div>
                 </div>
             </div>
@@ -784,67 +979,114 @@
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade">
                         <div class="flex gap-4 mb-6">
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80"
+                                        alt="Before"
+                                        class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80"
+                                        alt="After"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
                             猫背、お腹ぽっこり解消、バストアップ、ヒップアップまで叶いました。
                         </p>
                     </div>
 
                     <!-- Case 2 -->
-                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.1s;">
+                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade"
+                        style="transition-delay: 0.1s;">
                         <div class="flex gap-4 mb-6">
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80"
+                                        alt="Before"
+                                        class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80"
+                                        alt="After"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
                             顎のもたつき解消、顔の横幅が狭くなりました。周りから何やってるの？と聞かれたそうです。
                         </p>
                     </div>
 
                     <!-- Case 3 -->
-                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.2s;">
+                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade"
+                        style="transition-delay: 0.2s;">
                         <div class="flex gap-4 mb-6">
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80"
+                                        alt="Before"
+                                        class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80"
+                                        alt="After"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
                             全体が小顔に。顎の歪みが解消、頬がアップ。人中が短くなりました。
                         </p>
                     </div>
@@ -853,44 +1095,75 @@
                     <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade">
                         <div class="flex gap-4 mb-6">
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+                                        alt="Before"
+                                        class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+                                        alt="After"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
                             あごがV字形に、頬も口角もアップ。
                         </p>
                     </div>
 
                     <!-- Case 5 -->
-                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade" style="transition-delay: 0.1s;">
+                    <div class="bg-white p-6 md:p-8 border-[0.5px] border-gold/30 shadow-sm js-fade"
+                        style="transition-delay: 0.1s;">
                         <div class="flex gap-4 mb-6">
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="Before" class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-text text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">BEFORE</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80"
+                                        alt="Before"
+                                        class="w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-1/2 relative overflow-hidden group">
-                                <span class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
-                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img" data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80" alt="After" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
-                                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                                <span
+                                    class="absolute top-0 left-0 bg-gold text-white text-[10px] tracking-widest px-3 py-1 z-10 font-en pointer-events-none">AFTER</span>
+                                <div class="aspect-[4/5] overflow-hidden bg-gray-100 cursor-pointer js-modal-img"
+                                    data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80"
+                                        alt="After"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 pointer-events-none">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 border-t-[0.5px] border-gold/30 pt-4">
                             首がいつも右側に傾いていましたが正中線に整い、口角もアップ。笑顔が増えました。
                         </p>
                     </div>
@@ -910,34 +1183,42 @@
                     <!-- Voice 1 -->
                     <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade">
                         <i class="fa-solid fa-quote-left text-4xl text-gold/20 absolute top-6 left-6"></i>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
                             「長い間、いろいろとお世話になりました。お陰様で、その後、セルフ整体を続けられています。一人ではこんなに習慣になるまで継続できなかったと思います。毎朝、決まった時間に先生であったり、参加者さんと実践できて励みになりました。」
                         </p>
-                        <div class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
+                        <div
+                            class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
                             <i class="fa-regular fa-user text-gold text-[14px] md:text-[16px]"></i>
                             <span class="text-gold text-[14px] md:text-[16px] tracking-widest">60代女性</span>
                         </div>
                     </div>
 
                     <!-- Voice 2 -->
-                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade" style="transition-delay: 0.1s;">
+                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade"
+                        style="transition-delay: 0.1s;">
                         <i class="fa-solid fa-quote-left text-4xl text-gold/20 absolute top-6 left-6"></i>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
                             「セルフ整体と聞いて、何をするのかわからなかったが、実際にやってみたら、肩こりが解消し、使っていない筋肉を動かすことの心地よさ、身体の温もりを感じることができました。」
                         </p>
-                        <div class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
+                        <div
+                            class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
                             <i class="fa-regular fa-user text-gold text-[14px] md:text-[16px]"></i>
                             <span class="text-gold text-[14px] md:text-[16px] tracking-widest">60代女性</span>
                         </div>
                     </div>
 
                     <!-- Voice 3 -->
-                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade" style="transition-delay: 0.2s;">
+                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade"
+                        style="transition-delay: 0.2s;">
                         <i class="fa-solid fa-quote-left text-4xl text-gold/20 absolute top-6 left-6"></i>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
                             「当初、頑張ってセルフ整体を学ぼうと思ったけれど、『頑張らなくて良い、むしろ頑張らない方が身体がリラックスして骨格まで変わる』と言われて、びっくりしました。気合いと根性は要りませんでした。」
                         </p>
-                        <div class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
+                        <div
+                            class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
                             <i class="fa-regular fa-user text-gold text-[14px] md:text-[16px]"></i>
                             <span class="text-gold text-[14px] md:text-[16px] tracking-widest">50代女性</span>
                         </div>
@@ -946,22 +1227,27 @@
                     <!-- Voice 4 -->
                     <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade">
                         <i class="fa-solid fa-quote-left text-4xl text-gold/20 absolute top-6 left-6"></i>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
                             「セルフ整体の動きに名前がついていて、そのネーミングが面白く、楽しみながら行うことができました。」
                         </p>
-                        <div class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
+                        <div
+                            class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
                             <i class="fa-regular fa-user text-gold text-[14px] md:text-[16px]"></i>
                             <span class="text-gold text-[14px] md:text-[16px] tracking-widest">50代女性</span>
                         </div>
                     </div>
 
                     <!-- Voice 5 -->
-                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade" style="transition-delay: 0.1s;">
+                    <div class="bg-bg p-8 flex flex-col relative border-[0.5px] border-gold/30 js-fade"
+                        style="transition-delay: 0.1s;">
                         <i class="fa-solid fa-quote-left text-4xl text-gold/20 absolute top-6 left-6"></i>
-                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
+                        <p
+                            class="text-[14px] md:text-[16px] leading-loose tracking-wider flex-grow italic mb-6 relative z-10 pt-4">
                             「もたついた顔のフェイスラインがシャープになり、周りから驚かれました。道具を使わないし、簡単なのに変化を感じることが出来て、とても嬉しいです。」
                         </p>
-                        <div class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
+                        <div
+                            class="flex items-center justify-end gap-2 border-t-[0.5px] border-gold/30 pt-4 mt-auto relative z-10">
                             <i class="fa-regular fa-user text-gold text-[14px] md:text-[16px]"></i>
                             <span class="text-gold text-[14px] md:text-[16px] tracking-widest">70代女性</span>
                         </div>
@@ -974,19 +1260,22 @@
         <section class="py-24 md:py-32 bg-pink/10 relative overflow-hidden">
             <div class="max-w-6xl mx-auto px-6 relative z-10">
                 <div class="flex flex-col md:flex-row gap-16 items-start">
-                    
+
                     <!-- 写真エリア -->
                     <div class="w-full md:w-5/12 js-fade">
                         <div class="relative w-full aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="とくもと えり" class="w-full h-full object-cover shadow-xl filter contrast-[0.9]">
-                            <div class="absolute -bottom-6 -left-6 w-full h-full border-[0.5px] border-gold -z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="とくもと えり" class="w-full h-full object-cover shadow-xl filter contrast-[0.9]">
+                            <div class="absolute -bottom-6 -left-6 w-full h-full border-[0.5px] border-gold -z-10">
+                            </div>
                         </div>
                     </div>
 
                     <!-- テキストエリア -->
                     <div class="w-full md:w-7/12 js-fade">
                         <div class="mb-12">
-                            <span class="font-en tracking-widest text-gold text-[14px] md:text-[16px] block mb-2">OWNER PROFILE</span>
+                            <span class="font-en tracking-widest text-gold text-[14px] md:text-[16px] block mb-2">OWNER
+                                PROFILE</span>
                             <div class="text-[14px] md:text-[16px] tracking-widest opacity-80 mb-1">ときめき美BODY® 主宰</div>
                             <h3 class="text-2xl md:text-3xl tracking-widest">とくもと えり</h3>
                         </div>
@@ -1013,7 +1302,8 @@
                 </h4>
                 <div class="space-y-6 text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
                     <p>以前の私は、身体の不調を体質や年齢のせいだと思っていました。<br>でも、自分の身体と向き合い、毎日少しずつ整えることを続けたことで、人生の楽しみ方まで変わっていきました。</p>
-                    <p class="text-gold font-medium text-base">何歳からでも、新しいことを始めていい。<br>行きたい場所へ行っていい。<br>もっと自分を好きになっていい。</p>
+                    <p class="text-gold font-medium text-base">何歳からでも、新しいことを始めていい。<br>行きたい場所へ行っていい。<br>もっと自分を好きになっていい。
+                    </p>
                     <p>ときめき美BODY®でお伝えしたいのは、単なるセルフ整体ではありません。<br>身体を整え、心が軽くなり、自分らしい人生を楽しむための力を育てること。</p>
                     <p>あなたがこれからの毎日を、ときめきながら歩んでいけるよう、心を込めてサポートします。</p>
                 </div>
@@ -1034,7 +1324,8 @@
                 </p>
 
                 <div class="flex flex-col md:flex-row justify-center gap-6 mb-16 js-fade">
-                    <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank" class="btn-elegant w-full md:w-auto">
+                    <a href="https://timerex.net/s/namueri110716_75d9/5ebc7308" target="_blank"
+                        class="btn-elegant w-full md:w-auto">
                         <i class="fa-regular fa-calendar-check mr-2"></i> 個別面談を予約する
                     </a>
                 </div>
@@ -1044,13 +1335,15 @@
                         <i class="fa-brands fa-line text-3xl text-[#06C755] mb-4"></i>
                         <h4 class="tracking-widest mb-2">LINE公式アカウント</h4>
                         <p class="text-xs opacity-70 mb-6">ご質問などお気軽にメッセージください</p>
-                        <a href="https://wzq9wu1c.autosns.app/addfriend/s/KFs2C03DLj/@074upacq" target="_blank" class="text-[14px] md:text-[16px] text-gold hover:text-text transition-colors border-b border-gold pb-1">LINEで友だち追加する</a>
+                        <a href="https://wzq9wu1c.autosns.app/addfriend/s/KFs2C03DLj/@074upacq" target="_blank"
+                            class="text-[14px] md:text-[16px] text-gold hover:text-text transition-colors border-b border-gold pb-1">LINEで友だち追加する</a>
                     </div>
                     <div class="p-8 border-[0.5px] border-gold/30 hover:border-gold transition-colors">
                         <i class="fa-regular fa-envelope text-3xl text-gold mb-4"></i>
                         <h4 class="tracking-widest mb-2">メールアドレス</h4>
                         <p class="text-xs opacity-70 mb-6">2〜3営業日以内にご返信いたします</p>
-                        <a href="mailto:namueri0959@yahoo.co.jp" class="text-[14px] md:text-[16px] tracking-wider font-en hover:text-gold transition-colors">namueri0959@yahoo.co.jp</a>
+                        <a href="mailto:namueri0959@yahoo.co.jp"
+                            class="text-[14px] md:text-[16px] tracking-wider font-en hover:text-gold transition-colors">namueri0959@yahoo.co.jp</a>
                     </div>
                 </div>
             </div>
@@ -1068,18 +1361,23 @@
                     <!-- 店舗情報 -->
                     <div class="js-fade flex flex-col">
                         <div class="border-[0.5px] border-gold/30 p-8 md:p-12 bg-white flex-grow">
-                            <h3 class="text-xl tracking-widest mb-8 text-gold border-b-[0.5px] border-gold/30 pb-4">ときめき美BODY<sup class="text-xs">®</sup></h3>
+                            <h3 class="text-xl tracking-widest mb-8 text-gold border-b-[0.5px] border-gold/30 pb-4">
+                                ときめき美BODY<sup class="text-xs">®</sup></h3>
                             <dl class="space-y-4 text-[14px] md:text-[16px] tracking-wider leading-loose">
                                 <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
                                     <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">住所</dt>
                                     <dd>〒525-0047<br>滋賀県草津市追分２丁目１０−２</dd>
                                 </div>
                                 <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
-                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">電話番号</dt>
-                                    <dd><a href="tel:080-1515-4058" class="hover:text-gold transition-colors font-en text-base">080-1515-4058</a></dd>
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">電話番号
+                                    </dt>
+                                    <dd><a href="tel:080-1515-4058"
+                                            class="hover:text-gold transition-colors font-en text-base">080-1515-4058</a>
+                                    </dd>
                                 </div>
                                 <div class="flex flex-col md:flex-row border-b-[0.5px] border-gray-100 pb-4">
-                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">営業時間</dt>
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-gold font-medium mb-1 md:mb-0">営業時間
+                                    </dt>
                                     <dd>10：00〜17：00</dd>
                                 </div>
                                 <div class="flex flex-col md:flex-row">
@@ -1090,18 +1388,28 @@
 
                             <!-- SNS Links -->
                             <div class="mt-12 pt-8 border-t-[0.5px] border-gold/30">
-                                <span class="block text-[14px] md:text-[16px] text-gold font-en tracking-widest mb-6">Official SNS</span>
+                                <span
+                                    class="block text-[14px] md:text-[16px] text-gold font-en tracking-widest mb-6">Official
+                                    SNS</span>
                                 <div class="flex flex-wrap gap-4">
-                                    <a href="https://www.instagram.com/eri_stretch" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Instagram">
+                                    <a href="https://www.instagram.com/eri_stretch" target="_blank"
+                                        class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                                        aria-label="Instagram">
                                         <i class="fa-brands fa-instagram text-lg"></i>
                                     </a>
-                                    <a href="https://www.facebook.com/share/174r8mdPqu/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Facebook">
+                                    <a href="https://www.facebook.com/share/174r8mdPqu/?mibextid=wwXIfr" target="_blank"
+                                        class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                                        aria-label="Facebook">
                                         <i class="fa-brands fa-facebook-f text-lg"></i>
                                     </a>
-                                    <a href="https://www.youtube.com/channel/UC6uspkryNZNBLJJl1eX4UQw" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="YouTube">
+                                    <a href="https://www.youtube.com/channel/UC6uspkryNZNBLJJl1eX4UQw" target="_blank"
+                                        class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                                        aria-label="YouTube">
                                         <i class="fa-brands fa-youtube text-lg"></i>
                                     </a>
-                                    <a href="https://ameblo.jp/couaile-kitchen/" target="_blank" class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300" aria-label="Ameba Blog">
+                                    <a href="https://ameblo.jp/couaile-kitchen/" target="_blank"
+                                        class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                                        aria-label="Ameba Blog">
                                         <i class="fa-solid fa-pen-nib text-lg"></i>
                                     </a>
                                 </div>
@@ -1111,9 +1419,13 @@
 
                     <!-- Map -->
                     <div class="js-fade flex flex-col">
-                        <div class="w-full h-[350px] lg:h-full min-h-[300px] border-[0.5px] border-gold/30 p-2 bg-white flex-grow">
+                        <div
+                            class="w-full h-[350px] lg:h-full min-h-[300px] border-[0.5px] border-gold/30 p-2 bg-white flex-grow">
                             <!-- 滋賀県草津市追分２丁目１０−２の検索結果を埋め込み -->
-                            <iframe src="https://maps.google.com/maps?q=滋賀県草津市追分２丁目１０−２&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://maps.google.com/maps?q=滋賀県草津市追分２丁目１０−２&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -1124,7 +1436,8 @@
     <!-- Footer -->
     <footer class="bg-white py-12 border-t-[0.5px] border-gold/20 text-center">
         <div class="max-w-[1440px] mx-auto px-6">
-            <a href="#" class="text-xl tracking-widest font-en text-text block mb-6">ときめき美BODY<sup class="text-xs">®</sup></a>
+            <a href="#" class="text-xl tracking-widest font-en text-text block mb-6">ときめき美BODY<sup
+                    class="text-xs">®</sup></a>
             <p class="font-en text-xs tracking-widest opacity-60">&copy; 2026 Tokimeki Bi-BODY. All Rights Reserved.</p>
         </div>
     </footer>
@@ -1137,7 +1450,7 @@
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1259,16 +1572,22 @@
     </script>
 
     <!-- Image Modal -->
-    <div id="js-image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="js-image-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="relative max-w-[95%] md:max-w-[80%] max-h-[90vh]">
-            <button id="js-modal-close" class="absolute -top-12 right-0 text-white hover:text-gold transition-colors text-4xl">&times;</button>
-            <img id="js-modal-image-src" src="" alt="Enlarged Image" class="max-w-full max-h-[90vh] object-contain transform scale-95 transition-transform duration-300">
+            <button id="js-modal-close"
+                class="absolute -top-12 right-0 text-white hover:text-gold transition-colors text-4xl">&times;</button>
+            <img id="js-modal-image-src" src="" alt="Enlarged Image"
+                class="max-w-full max-h-[90vh] object-contain transform scale-95 transition-transform duration-300">
         </div>
     </div>
 
     <!-- Page Top Button -->
-    <a href="#" id="js-page-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 md:w-14 md:h-14 bg-gold text-white rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-gold/90 hover:-translate-y-1" aria-label="ページトップへ戻る">
+    <a href="#" id="js-page-top"
+        class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-12 h-12 md:w-14 md:h-14 bg-gold text-white rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-gold/90 hover:-translate-y-1"
+        aria-label="ページトップへ戻る">
         <i class="fa-solid fa-arrow-up text-lg md:text-xl"></i>
     </a>
 </body>
+
 </html>
