@@ -505,8 +505,8 @@ ul { list-style: none; }
 /* Voice Section */
 #voice { background: var(--bg-pale); }
 .voice-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px; margin-top: 48px;
+  display: flex; flex-direction: column; gap: 24px;
+  margin: 48px auto 0; max-width: 800px;
 }
 .voice-card {
   background: #fff; padding: 32px; border-radius: 12px;
@@ -516,6 +516,25 @@ ul { list-style: none; }
   content: '“'; font-size: 80px; color: var(--accent-light);
   position: absolute; top: -10px; left: 20px; font-family: serif; line-height: 1;
 }
+.voice-stars {
+  color: #ffb400; font-size: 1.3rem; letter-spacing: 0.1em;
+  margin-bottom: 12px; position: relative; z-index: 1;
+}
+.voice-text {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.voice-text.is-expanded {
+  display: block; -webkit-line-clamp: unset;
+}
+.voice-more-btn {
+  background: none; border: none; color: var(--primary);
+  font-family: inherit; font-size: 0.9rem; font-weight: bold;
+  cursor: pointer; margin-top: 12px; padding: 2px 0;
+  border-bottom: 1px solid var(--primary); display: inline-block;
+  position: relative; z-index: 1;
+}
+.voice-more-btn:hover { opacity: 0.8; }
 .voice-card p { position: relative; z-index: 1; line-height: 1.8; color: var(--text-mid); }
 
 /* Message Section */

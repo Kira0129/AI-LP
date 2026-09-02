@@ -84,4 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   revealEls.forEach(el => observer.observe(el));
+
+  // Voice Read More Toggle
+  const voiceMoreBtns = document.querySelectorAll('.voice-more-btn');
+  voiceMoreBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const textContainer = this.previousElementSibling;
+      if (textContainer.classList.contains('is-expanded')) {
+        textContainer.classList.remove('is-expanded');
+        this.textContent = 'もっと見る';
+      } else {
+        textContainer.classList.add('is-expanded');
+        this.textContent = '閉じる';
+      }
+    });
+  });
 });
