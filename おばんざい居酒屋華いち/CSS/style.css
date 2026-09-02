@@ -416,7 +416,6 @@ ul { list-style: none; }
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   color: var(--text-main);
@@ -430,7 +429,6 @@ ul { list-style: none; }
   text-align: center;
   font-weight: bold;
   color: var(--primary-dark);
-  font-size: 0.95rem;
   border-top: 1px dashed var(--text-light);
   padding-top: 16px;
   margin-bottom: 0 !important;
@@ -487,7 +485,7 @@ ul { list-style: none; }
 }
 .menu-name { font-weight: 700; color: var(--text-main); font-size: 1.1rem; }
 .menu-price { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
-.menu-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.5; }
+.menu-desc { color: var(--text-mid); line-height: 1.5; }
 
 .course-banner {
   background: var(--primary); color: #fff; 
@@ -502,7 +500,7 @@ ul { list-style: none; }
 .course-banner-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .course-banner-content { flex: 1.2; padding: clamp(24px, 4vw, 40px); text-align: left; }
 .course-banner-content h3 { font-family: var(--font-display); margin-bottom: 12px; }
-.course-banner-content p { opacity: 0.9; line-height: 1.8; font-size: 0.95rem; }
+.course-banner-content p { opacity: 0.9; line-height: 1.8; }
 
 /* Voice Section */
 #voice { background: var(--bg-pale); }
@@ -518,7 +516,7 @@ ul { list-style: none; }
   content: '“'; font-size: 80px; color: var(--accent-light);
   position: absolute; top: -10px; left: 20px; font-family: serif; line-height: 1;
 }
-.voice-card p { position: relative; z-index: 1; font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); }
+.voice-card p { position: relative; z-index: 1; line-height: 1.8; color: var(--text-mid); }
 
 /* Message Section */
 #message { background: #fff; }
@@ -547,7 +545,7 @@ ul { list-style: none; }
 .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
 .payment-sec { margin-top: 24px; }
-.payment-sec p { font-size: 0.9rem; font-weight: bold; margin-bottom: 8px; color: var(--text-main); }
+.payment-sec p { font-weight: bold; margin-bottom: 8px; color: var(--text-main); }
 .payment-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .payment-list span {
   font-size: 0.75rem; background: #fff; padding: 4px 10px;
