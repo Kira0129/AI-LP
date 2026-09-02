@@ -106,7 +106,7 @@ ul { list-style: none; }
 .accent-line-left { margin-left: 0; }
 
 .section-wrap {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: clamp(60px, 10vw, 100px) clamp(24px, 6vw, 60px);
 }
