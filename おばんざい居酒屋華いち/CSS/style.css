@@ -882,6 +882,10 @@ ul {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+.message-content {
+  text-align: center;
+}
+
 .message-content h2 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
@@ -1225,6 +1229,18 @@ footer {
 
   #message {
     background-attachment: scroll;
+  }
+
+  .message-content-wrap {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .message-content {
+    text-align: left;
+  }
+
+  .message-content .accent-line {
+    margin-left: 0;
   }
 
   .cta-buttons-wrap {
