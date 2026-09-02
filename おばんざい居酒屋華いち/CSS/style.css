@@ -229,7 +229,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 4%;
+  padding: 10px 4%;
 }
 
 .site-logo {
@@ -237,7 +237,7 @@ ul {
   align-items: center;
 }
 .site-logo img {
-  height: clamp(40px, 8vw, 80px); /* ほどよい大きさに調整 */
+  height: 65px;
   width: auto;
   object-fit: contain;
 }
