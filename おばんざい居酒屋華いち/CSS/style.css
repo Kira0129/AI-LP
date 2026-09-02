@@ -1036,6 +1036,14 @@ footer {
 
 /* Media Queries */
 @media (max-width: 767px) {
+  .header-inner {
+    padding: 10px 4%;
+  }
+
+  .site-logo img {
+    height: 50px;
+  }
+
   .hamburger-btn {
     display: flex;
   }
