@@ -1236,6 +1236,10 @@ footer {
     display: flex;
   }
 
+  .menu-box {
+    padding: 25px;
+  }
+
   body {
     padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
   }
