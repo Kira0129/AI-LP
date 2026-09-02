@@ -65,29 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 0;
+        const headerHeight = header.offsetHeight;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });
   });
 
-  // Scroll Reveal
-  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const reveal = () => {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 50;
-    revealElements.forEach(el => {
-      const revealTop = el.getBoundingClientRect().top;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('is-visible');
+  // Scroll Reveal Animation
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
       }
     });
-  };
-  
-  window.addEventListener('scroll', reveal, { passive: true });
-  reveal(); // init
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => observer.observe(el));
 });
