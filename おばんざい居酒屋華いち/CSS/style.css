@@ -401,10 +401,16 @@ ul { list-style: none; }
   font-size: 1.1rem;
 }
 .about-recommend-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .about-recommend-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
 .about-recommend-list li {
   display: flex;
