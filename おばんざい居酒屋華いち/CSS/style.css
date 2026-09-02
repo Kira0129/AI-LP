@@ -522,10 +522,28 @@ ul {
   align-items: center;
 }
 
-.about-image img {
+.about-images {
+  position: relative;
   width: 100%;
+  padding-bottom: 15%;
+}
+
+.about-img-main {
+  width: 80%;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.about-img-sub {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  border-radius: 12px;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: block;
 }
 
 .about-text h2 {
@@ -1223,7 +1241,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .about-image {
+  .about-images {
     order: -1;
   }
 
