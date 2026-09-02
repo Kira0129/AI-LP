@@ -111,23 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target && e.target.matches('.menu-slide-track img')) {
         if (lightboxImg) {
           lightboxImg.src = e.target.src;
-          lightbox.style.display = 'flex';
-          setTimeout(() => { lightbox.style.opacity = '1'; }, 10);
+          lightbox.classList.add('active');
         }
       }
     });
 
     // 閉じるボタンで閉じる
     lightboxClose.addEventListener('click', () => {
-      lightbox.style.opacity = '0';
-      setTimeout(() => { lightbox.style.display = 'none'; }, 300);
+      lightbox.classList.remove('active');
     });
 
     // 背景クリックで閉じる
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
-        lightbox.style.opacity = '0';
-        setTimeout(() => { lightbox.style.display = 'none'; }, 300);
+        lightbox.classList.remove('active');
       }
     });
   }
