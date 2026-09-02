@@ -874,7 +874,6 @@ ul {
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  padding: 80px 0;
 }
 
 #message::before {
