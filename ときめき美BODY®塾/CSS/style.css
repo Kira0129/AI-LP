@@ -14,7 +14,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 共通アニメーション */
+        /* 蜈ｱ騾壹い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ */
         .js-fade {
             opacity: 0;
             transform: translateY(30px);
@@ -26,7 +26,7 @@
             transform: none;
         }
 
-        /* セクションタイトル */
+        /* 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧､繝医Ν */
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
@@ -56,7 +56,7 @@
             margin-top: 0.5rem;
         }
 
-        /* ボタン */
+        /* 繝懊ち繝ｳ */
         .btn-elegant {
             display: inline-flex;
             align-items: center;
@@ -96,7 +96,7 @@
             transform-origin: top;
         }
 
-        /* ヘッダー */
+        /* 繝倥ャ繝繝ｼ */
         .header {
             position: fixed;
             top: 0;
@@ -110,7 +110,7 @@
             transition: transform 0.5s ease;
         }
 
-        /* ハンバーガーメニュー */
+        /* 繝上Φ繝舌�繧ｬ繝ｼ繝｡繝九Η繝ｼ */
         .hamburger {
             width: 30px;
             height: 20px;
@@ -176,7 +176,7 @@
             visibility: visible;
         }
 
-        /* FV スライダー & レイアウト (すぺのお部屋スタイル) */
+        /* FV 繧ｹ繝ｩ繧､繝繝ｼ & 繝ｬ繧､繧｢繧ｦ繝� (縺吶⊆縺ｮ縺企Κ螻九せ繧ｿ繧､繝ｫ) */
         #fv {
             position: relative;
             width: 100%;
@@ -288,13 +288,13 @@
             }
         }
 
-        /* 縦書きテキスト */
+        /* 邵ｦ譖ｸ縺阪ユ繧ｭ繧ｹ繝� */
         .vertical-text {
             writing-mode: vertical-rl;
             text-orientation: mixed;
         }
 
-        /* ABOUTセクション用 スマホ画像ループスライダー */
+        /* ABOUT繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ逕ｨ 繧ｹ繝槭�逕ｻ蜒上Ν繝ｼ繝励せ繝ｩ繧､繝繝ｼ */
         @media (max-width: 767px) {
             .loop-slider {
                 display: flex;
@@ -318,7 +318,7 @@
                 }
             }
         }
-/* �w�i�摜�̃p�����b�N�X���I�[�o�[���C */
+/* 背景画像のパララックス＆オーバーレイ */
 .bg-overlay-light {
     position: relative;
     z-index: 0;
@@ -330,25 +330,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.85); /* ���Ŕ������� */
+    background-color: rgba(255, 255, 255, 0.85); /* 白で薄くする */
     z-index: -1;
 }
 
 
-/* FV���������̑��� */
+/* FV文字部分の装飾 */
 .fv-text-part::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../img/fvsoushoku.png');
     background-size: contain;
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
-    opacity: 0.12; /* �����A�������̂��鑕�� */
+    opacity: 0.25; /* もう少し見えるように透明度を調整 */
     z-index: -1;
     pointer-events: none;
 }
