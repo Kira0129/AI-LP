@@ -99,4 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const sliderImages = document.querySelectorAll('.menu-slide-track img');
+
+  if (lightbox && lightboxImg && sliderImages.length > 0) {
+    sliderImages.forEach(img => {
+      img.addEventListener('click', () => {
+        // 画像URLを取得してLightboxにセット
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    // 閉じるボタンで閉じる
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    // 背景クリックで閉じる
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  }
 });
