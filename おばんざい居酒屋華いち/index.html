@@ -559,6 +559,38 @@
     <img id="lightbox-img" src="" alt="拡大画像">
   </div>
 
+  <script>
+    // キャッシュの影響を受けないようインラインで直接Lightboxのスクリプトを記述
+    document.addEventListener('DOMContentLoaded', function() {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbClose = document.querySelector('.lightbox-close');
+      const sImgs = document.querySelectorAll('.menu-slide-track img');
+
+      if (lb && lbImg) {
+        sImgs.forEach(function(img) {
+          img.addEventListener('click', function() {
+            lbImg.src = this.src;
+            lb.style.display = 'flex';
+            setTimeout(() => { lb.style.opacity = '1'; }, 10);
+          });
+        });
+
+        lbClose.addEventListener('click', function() {
+          lb.style.opacity = '0';
+          setTimeout(() => { lb.style.display = 'none'; }, 300);
+        });
+
+        lb.addEventListener('click', function(e) {
+          if (e.target === lb) {
+            lb.style.opacity = '0';
+            setTimeout(() => { lb.style.display = 'none'; }, 300);
+          }
+        });
+      }
+    });
+  </script>
+
   <script src="./Js/main.js?v=2"></script>
 </body>
 
