@@ -334,3 +334,22 @@
     z-index: -1;
 }
 
+
+/* FV•¶š•”•ª‚Ì‘•ü */
+.fv-text-part::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-image: url('../img/fvsoushoku.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12; /* ”–‚­A‚‹‰Š´‚Ì‚ ‚é‘•ü */
+    z-index: -1;
+    pointer-events: none;
+}
+
