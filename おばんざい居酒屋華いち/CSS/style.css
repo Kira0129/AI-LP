@@ -505,7 +505,7 @@ ul {
 
 .cta-section h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: 20px;
   color: #fff;
   margin-bottom: 24px;
 }
