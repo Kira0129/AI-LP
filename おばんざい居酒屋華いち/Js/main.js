@@ -104,26 +104,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.querySelector('.lightbox-close');
-  const sliderImages = document.querySelectorAll('.menu-slide-track img');
 
-  if (lightbox && lightboxImg && sliderImages.length > 0) {
-    sliderImages.forEach(img => {
-      img.addEventListener('click', () => {
-        // 画像URLを取得してLightboxにセット
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-      });
+  if (lightbox && lightboxClose) {
+    // 確実にクリックイベントを拾うためにEvent Delegationを使用
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.matches('.menu-slide-track img')) {
+        if (lightboxImg) {
+          lightboxImg.src = e.target.src;
+          lightbox.style.display = 'flex';
+          setTimeout(() => { lightbox.style.opacity = '1'; }, 10);
+        }
+      }
     });
 
     // 閉じるボタンで閉じる
     lightboxClose.addEventListener('click', () => {
-      lightbox.classList.remove('active');
+      lightbox.style.opacity = '0';
+      setTimeout(() => { lightbox.style.display = 'none'; }, 300);
     });
 
     // 背景クリックで閉じる
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
-        lightbox.classList.remove('active');
+        lightbox.style.opacity = '0';
+        setTimeout(() => { lightbox.style.display = 'none'; }, 300);
       }
     });
   }
