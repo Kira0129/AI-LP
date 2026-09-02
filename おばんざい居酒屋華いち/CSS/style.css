@@ -1194,6 +1194,10 @@ footer {
     text-align: center;
   }
 
+  .course-banner-content p {
+    text-align: left;
+  }
+
   .about-grid,
   .access-grid,
   .message-grid {
