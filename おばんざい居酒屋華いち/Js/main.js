@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hamburger Menu
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const spMenu = document.getElementById('sp-menu');
+  const spMenuClose = document.getElementById('sp-menu-close');
   const spMenuLinks = document.querySelectorAll('#sp-menu nav a');
 
   if (hamburgerBtn && spMenu) {
@@ -47,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburgerBtn.classList.remove('active');
       spMenu.classList.remove('open');
     };
+
+    if (spMenuClose) {
+      spMenuClose.addEventListener('click', closeMenu);
+    }
 
     spMenuLinks.forEach(link => {
       link.addEventListener('click', closeMenu);
