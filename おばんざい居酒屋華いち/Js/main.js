@@ -133,4 +133,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // テキスト選択禁止
+  document.addEventListener('selectstart', e => {
+    e.preventDefault();
+  });
+
+  // 右クリック（コンテキストメニュー）禁止による画像等の保存防止
+  document.addEventListener('contextmenu', e => {
+    e.preventDefault();
+  });
+
+  // 画像のドラッグ禁止
+  document.addEventListener('dragstart', e => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
 });
