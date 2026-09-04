@@ -323,9 +323,8 @@ ul {
   align-items: center;
   text-align: center;
   padding: 0 clamp(20px, 4vw, 60px);
-  background-color: var(--primary-dark);
-  /* ボタニカルなテクスチャや画像をブレンド */
-  background-image: linear-gradient(rgba(58, 99, 78, 0.85), rgba(92, 141, 115, 0.9)), url('https://images.unsplash.com/photo-1497250681554-23ca1259b15d?q=80&w=1000');
+  background-color: #628f7f; /* fvbg.svg内のメインカラーに合わせて調整 */
+  background-image: url('../img/fvbg.svg');
   background-size: cover;
   background-position: center;
   position: relative;
