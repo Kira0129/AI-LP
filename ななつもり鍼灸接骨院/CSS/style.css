@@ -421,7 +421,7 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.85); /* 視認性確保のための白オーバーレイ */
+  background: rgba(255, 255, 255, 0.6); /* 視認性確保のための白オーバーレイ（画像の透明度調整） */
   z-index: 0;
 }
 #about .section-wrap, #service .section-wrap, #voice .section-wrap, #access .section-wrap {
