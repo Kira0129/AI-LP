@@ -395,6 +395,29 @@ ul {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.fv-badges {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  animation: fadeUp 1.5s 1s both cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.fv-badge {
+  width: clamp(70px, 8vw, 84px);
+  height: clamp(70px, 8vw, 84px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  font-weight: bold;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
 /* CTA Section */
 .cta-section {
