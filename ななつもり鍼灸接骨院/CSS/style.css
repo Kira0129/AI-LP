@@ -948,6 +948,18 @@ ul {
   text-align: right;
 }
 
+.recommend-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
 /* 料金注釈 (保険・交通事故) */
 .price-notes {
   margin-top: 40px;
