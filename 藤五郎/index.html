@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿司 藤五郎 | 新潟の旬を、寿司と地酒で味わう</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- OGP -->
+    <meta property="og:url" content="https://tougorou.example.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="寿司 藤五郎 | 新潟の旬を、寿司と地酒で味わう">
+    <meta property="og:description" content="新潟駅徒歩8分。職人が仕立てる旬の寿司と和食、選りすぐりの新潟地酒。落ち着いた和の空間で、心ゆくまでお楽しみください。">
+    <meta property="og:site_name" content="寿司 藤五郎">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        :root {
+            /* 配色：茶色、ベージュ、紺 */
+            --bg-beige: #F7F6F2;     /* 温かみのあるベージュ（背景） */
+            --text-brown: #3E3129;   /* 深い茶色（メインテキスト） */
+            --accent-navy: #1C2C47;  /* 紺色（アクセント・見出し） */
+            --accent-brown: #8B664B; /* 明るめの茶色（サブアクセント） */
+            --border-color: #D6D2C4; /* ボーダー用 */
+        }
+
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: var(--bg-beige);
+            color: var(--text-brown);
+            overflow-x: hidden;
+            letter-spacing: 0.1em;
+            font-size: 15px; 
+            line-height: 2;
+        }
+
+        @media (min-width: 768px) {
+            body { font-size: 16px; }
+        }
+
+        /* 縦書きのユーティリティクラス */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        /* プレースホルダー画像用スタイル */
+        .img-placeholder {
+            background-color: #E6E2D8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-brown);
+            font-size: 1rem;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* アニメーション用クラス */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* FVのオーバーレイグラデーション */
+        .fv-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(28,44,71,0.4) 0%,
+                rgba(28,44,71,0.2) 50%,
+                rgba(62,49,41,0.6) 100%
+            );
+        }
+
+        /* セクションタイトル装飾 */
+        .section-title {
+            color: var(--accent-navy);
+            text-align: center;
+            letter-spacing: 0.2em;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+        .section-title span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--accent-brown);
+            margin-top: 0.5rem;
+            letter-spacing: 0.15em;
+        }
+
+        /* カスタムスクロールバー */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-beige); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-navy); }
+
+        html { scroll-behavior: smooth; }
+
+        @keyframes scroll-down {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* FV Slider Animation */
+        .fv-slider {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background-color: var(--text-brown);
+        }
+        .fv-slider .slide-item {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            animation: fv-anime 18s linear infinite;
+        }
+        .fv-slider .slide-item:nth-child(1) { animation-delay: 0s; }
+        .fv-slider .slide-item:nth-child(2) { animation-delay: 6s; }
+        .fv-slider .slide-item:nth-child(3) { animation-delay: 12s; }
+
+        @keyframes fv-anime {
+            0% { opacity: 0; transform: scale(1); }
+            8% { opacity: 1; }
+            33% { opacity: 1; }
+            41% { opacity: 0; transform: scale(1.05); }
+            100% { opacity: 0; transform: scale(1.05); }
+        }
+    </style>
+</head>
+
+<body class="antialiased select-none" oncontextmenu="return false;" style="-webkit-touch-callout: none;">
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold tracking-widest text-white transition-colors duration-500" id="header-logo">
+                <a href="#" class="flex items-baseline">
+                    <span>寿司 藤五郎</span>
+                </a>
+            </h1>
+
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-8 text-white transition-colors duration-500 text-sm" id="header-nav">
+                    <li><a href="#about" class="hover:text-[var(--accent-brown)] transition-colors">想い</a></li>
+                    <li><a href="#kodawari" class="hover:text-[var(--accent-brown)] transition-colors">こだわり</a></li>
+                    <li><a href="#menu" class="hover:text-[var(--accent-brown)] transition-colors">お品書き</a></li>
+                    <li><a href="#voice" class="hover:text-[var(--accent-brown)] transition-colors">お客様の声</a></li>
+                    <li><a href="#info" class="hover:text-[var(--accent-brown)] transition-colors">店舗情報</a></li>
+                </ul>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:050-8881-0730" class="header-btn border border-white text-white px-5 py-2 text-sm hover:bg-white hover:text-[var(--accent-navy)] transition-colors duration-300 flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    050-8881-0730
+                </a>
+                <a href="https://r.gnavi.co.jp/myavd1je0000/" target="_blank" class="header-btn border border-[var(--accent-navy)] bg-[var(--accent-navy)] text-white px-5 py-2 text-sm hover:opacity-80 transition-opacity duration-300">
+                    WEB予約
+                </a>
+            </div>
+
+            <!-- SP用ハンバーガーメニューボタン -->
+            <button class="lg:hidden text-white z-50 relative" id="mobile-menu-btn" aria-label="Menu">
+                <svg class="w-8 h-8 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- SP用メニューパネル -->
+        <div class="fixed inset-0 bg-[var(--accent-navy)] z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center" id="mobile-menu">
+            <ul class="flex flex-col space-y-6 text-white text-lg text-center w-full px-8">
+                <li><a href="#about" class="mobile-link block border-b border-white/20 pb-2">想い</a></li>
+                <li><a href="#kodawari" class="mobile-link block border-b border-white/20 pb-2">こだわり</a></li>
+                <li><a href="#menu" class="mobile-link block border-b border-white/20 pb-2">お品書き</a></li>
+                <li><a href="#voice" class="mobile-link block border-b border-white/20 pb-2">お客様の声</a></li>
+                <li><a href="#info" class="mobile-link block border-b border-white/20 pb-2">店舗情報</a></li>
+                <li class="pt-6 flex flex-col gap-4">
+                    <a href="https://r.gnavi.co.jp/myavd1je0000/" target="_blank" class="mobile-link bg-white text-[var(--accent-navy)] px-8 py-3 w-full font-bold">WEBで予約する</a>
+                    <a href="tel:050-8881-0730" class="mobile-link border border-white text-white px-8 py-3 w-full flex justify-center items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        050-8881-0730
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- 背景画像スライダー -->
+        <div class="fv-slider">
+            <div class="slide-item"><div class="img-placeholder"></div></div>
+            <div class="slide-item"><div class="img-placeholder"></div></div>
+            <div class="slide-item"><div class="img-placeholder"></div></div>
+        </div>
+
+        <!-- オーバーレイ -->
+        <div class="absolute inset-0 fv-overlay z-10"></div>
+
+        <!-- コンテンツ -->
+        <div class="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 pt-20">
+            <div class="flex flex-col-reverse md:flex-row items-center md:items-start justify-center h-full w-full max-w-5xl mx-auto relative">
+
+                <!-- 店名 (PCのみ左下表示) -->
+                <div class="hidden md:block absolute bottom-10 left-10 text-left fade-in" style="transition-delay: 500ms;">
+                    <h2 class="text-white text-3xl lg:text-4xl font-bold tracking-[0.3em] mb-6">寿司 藤五郎</h2>
+                </div>
+
+                <!-- サブキャッチ＆メインキャッチ（縦書き）とスクロール線 -->
+                <div class="flex flex-col items-center self-end md:self-auto pr-2 md:pr-0 md:absolute md:top-[15%] lg:top-[20%] md:right-12 lg:right-24">
+                    <div class="flex md:space-x-12 mb-10 md:mb-16 md:w-auto">
+                        <div class="vertical-text text-white text-xs md:text-sm leading-[2.5] tracking-[0.2em] font-light fade-in absolute bottom-12 left-2 md:relative md:bottom-auto md:left-auto" style="transition-delay: 300ms;">
+                            <p>職人が仕立てる旬の寿司と和食、</p>
+                            <p>選りすぐりの新潟地酒。</p>
+                            <p>落ち着いた和の空間で、</p>
+                            <p>心ゆくまでお楽しみください。</p>
+                        </div>
+
+                        <div class="vertical-text text-white text-xl md:text-2xl lg:text-3xl leading-[2.2] tracking-[0.4em] font-medium fade-in drop-shadow-md">
+                            <p>新潟の旬を、</p>
+                            <p>　　寿司と地酒で味わう</p>
+                        </div>
+                    </div>
+
+                    <!-- スクロールダウン -->
+                    <div class="flex flex-col items-center fade-in" style="transition-delay: 800ms;">
+                        <div class="w-px h-20 md:h-28 bg-white/20 relative overflow-hidden">
+                            <div class="w-full h-full bg-white absolute top-0 left-0 animate-[scroll-down_2.5s_ease-in-out_infinite]"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- ABOUT セクション -->
+        <section id="about" class="container mx-auto px-6 py-24 md:py-32">
+            <div class="flex flex-col lg:flex-row items-center gap-16 mb-16 md:mb-24">
+                <!-- 画像エリア（モダンなレイアウト） -->
+                <div class="w-full lg:w-1/2 relative fade-in">
+                    <div class="w-[80%] aspect-[4/5] shadow-lg">
+                        <div class="img-placeholder">[Image of 旬の寿司盛り合わせ]</div>
+                    </div>
+                    <div class="w-[50%] aspect-square shadow-xl absolute bottom-[-10%] right-[5%] border-8 border-[var(--bg-beige)]">
+                        <div class="img-placeholder">[Image of 新潟の地魚]</div>
+                    </div>
+                </div>
+                
+                <!-- テキストエリア -->
+                <div class="w-full lg:w-1/2 fade-in mt-12 lg:mt-0 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-3xl text-[var(--accent-navy)] mb-8 tracking-widest font-medium leading-relaxed">
+                        新潟の旬と職人の技を楽しむ、<br>寿司と和食の店
+                    </h2>
+                    <div class="space-y-6 text-[var(--text-brown)] leading-loose">
+                        <p>新潟市中央区、新潟駅から徒歩約8分の「藤五郎」。</p>
+                        <p>毎朝仕入れる旬の地魚や天然本マグロなど、鮮度と品質にこだわった魚介を、寿司や和食でお楽しみいただけます。寿司の技術を競う全国大会で入賞経験を持つ職人が、素材のおいしさを丁寧に引き出します。</p>
+                        <p>昼は御膳を中心としたランチ、夜は新潟の地酒とともに、ゆっくりと食事を楽しむひとときを。</p>
+                        <p>カウンターや落ち着いた座敷をご用意し、普段のお食事から接待、記念日、ご家族でのお集まりまで、さまざまなシーンでご利用いただけます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- こんな方におすすめ -->
+            <div class="w-full max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm border-t-4 border-[var(--accent-navy)] fade-in">
+                <h3 class="text-center text-lg md:text-xl text-[var(--accent-navy)] tracking-widest mb-8 md:mb-10 font-medium">
+                    こんな方におすすめ
+                </h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">新潟ならではの旬の魚や寿司を楽しみたい方</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">接待や大切な方との食事に使えるお店を探している方</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">地酒と相性の良い和食をゆっくり味わいたい方</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">家族やグループでくつろげる和食店を探している方</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">落ち着いた雰囲気で食事を楽しみたい方</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[var(--accent-brown)] mr-3 mt-1">■</span>
+                        <span class="text-sm md:text-base leading-relaxed">新潟駅周辺でランチや夕食を楽しみたい方</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- KODAWARI セクション -->
+        <section id="kodawari" class="py-24 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl md:text-3xl section-title fade-in">4つのこだわり<span>OUR COMMITMENT</span></h2>
+
+                <div class="space-y-24 max-w-6xl mx-auto mt-16">
+                    <!-- こだわり 01 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-[var(--accent-brown)] text-3xl font-serif mr-4">01</span>
+                                <h3 class="text-xl md:text-2xl font-medium tracking-wider text-[var(--accent-navy)]">毎朝目利きする、新潟の旬魚</h3>
+                            </div>
+                            <p class="leading-loose text-[var(--text-brown)]">
+                                店主自ら市場で目利きし、近海で水揚げされた旬の地魚や天然本マグロなどを厳選。<br>
+                                その日の仕入れだからこそ味わえる、新潟ならではの旬のおいしさをお届けします。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2 aspect-[4/3]">
+                            <div class="img-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <!-- こだわり 02 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16 fade-in">
+                        <div class="w-full md:w-1/2 aspect-[4/3]">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-[var(--accent-brown)] text-3xl font-serif mr-4">02</span>
+                                <h3 class="text-xl md:text-2xl font-medium tracking-wider text-[var(--accent-navy)]">全国大会入賞経験を持つ職人の技</h3>
+                            </div>
+                            <p class="leading-loose text-[var(--text-brown)]">
+                                素材の持ち味を生かし、一貫の寿司から季節の和食まで丁寧に仕立てます。<br>
+                                長年培ってきた技術で、味はもちろん、目でも楽しめる一皿をご提供します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- こだわり 03 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16 fade-in">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-[var(--accent-brown)] text-3xl font-serif mr-4">03</span>
+                                <h3 class="text-xl md:text-2xl font-medium tracking-wider text-[var(--accent-navy)]">料理と楽しむ、豊富な新潟地酒</h3>
+                            </div>
+                            <p class="leading-loose text-[var(--text-brown)]">
+                                佐渡の地酒「真野鶴」をはじめ、新潟県内の酒蔵から選りすぐった日本酒をご用意。<br>
+                                寿司や旬魚との相性を考えながら、その日の料理に合う一杯をお楽しみいただけます。
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2 aspect-[4/3]">
+                            <div class="img-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <!-- こだわり 04 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16 fade-in">
+                        <div class="w-full md:w-1/2 aspect-[4/3]">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <div class="flex items-baseline mb-4">
+                                <span class="text-[var(--accent-brown)] text-3xl font-serif mr-4">04</span>
+                                <h3 class="text-xl md:text-2xl font-medium tracking-wider text-[var(--accent-navy)]">ゆっくり過ごせる、落ち着いた和の空間</h3>
+                            </div>
+                            <p class="leading-loose text-[var(--text-brown)]">
+                                職人の仕事を間近で楽しめるカウンターから、靴を脱いでくつろげる座敷までご用意しています。<br>
+                                おひとりでのお食事はもちろん、ご家族、接待、宴会、大切な方とのひとときにもご利用いただけます。座敷は20名まで利用可能です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU セクション -->
+        <section id="menu" class="py-24 md:py-32 bg-[var(--accent-navy)] text-white relative">
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-serif tracking-[0.2em] mb-4 text-[var(--bg-beige)]">お品書き</h2>
+                    <span class="block text-sm tracking-widest text-[var(--accent-brown)] uppercase">Menu</span>
+                </div>
+
+                <!-- 変更箇所：各コースを画像付きレイアウトに変更 -->
+                <div class="space-y-12">
+                    <!-- 6000円コース -->
+                    <div class="flex flex-col md:flex-row bg-white/5 border border-white/20 hover:bg-white/10 transition-colors overflow-hidden fade-in">
+                        <div class="w-full md:w-2/5 aspect-[4/3] md:aspect-auto">
+                            <div class="img-placeholder" style="min-height: 250px;">[Image of 6,000円コース]</div>
+                        </div>
+                        <div class="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-center">
+                            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-6 border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-medium tracking-wider mb-2 lg:mb-0 text-[var(--bg-beige)]">6,000円コース</h3>
+                                <p class="text-xl font-serif text-[var(--accent-brown)]">お一人様 6,000円 <span class="text-sm">(税込)</span></p>
+                            </div>
+                            <p class="mb-6 leading-loose text-white/80 flex-grow">旬の鮮魚のお造りやお寿司、焼き物、揚げ物まで楽しめる全6品のコースです。<br>各種宴会やご家族・ご友人とのお食事にもおすすめです。</p>
+                            <div class="bg-black/20 p-4 text-sm leading-relaxed text-white/90">
+                                【全6品】先付け / 海鮮サラダ / 本日の焼き物 / 本日の揚げ物 / 本日の御造り3種 / 本日のお寿司3貫
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8000円コース -->
+                    <div class="flex flex-col md:flex-row bg-white/5 border border-white/20 hover:bg-white/10 transition-colors overflow-hidden fade-in">
+                        <div class="w-full md:w-2/5 aspect-[4/3] md:aspect-auto">
+                            <div class="img-placeholder" style="min-height: 250px;">[Image of 8,000円コース]</div>
+                        </div>
+                        <div class="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-center">
+                            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-6 border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-medium tracking-wider mb-2 lg:mb-0 text-[var(--bg-beige)]">8,000円コース</h3>
+                                <p class="text-xl font-serif text-[var(--accent-brown)]">お一人様 8,000円 <span class="text-sm">(税込)</span></p>
+                            </div>
+                            <p class="mb-6 leading-loose text-white/80 flex-grow">お造りやお寿司に加え、酢の物や煮物・蒸し物も楽しめる全8品。<br>宴会や記念日、少し特別なお食事にもおすすめです。</p>
+                            <div class="bg-black/20 p-4 text-sm leading-relaxed text-white/90">
+                                【全8品】先付け / 海鮮サラダ / 本日の焼き物 / 本日の揚げ物 / 本日の酢の物 / 本日の煮物または蒸し物 / 本日の御造り3種 / 本日のお寿司3貫
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10000円コース -->
+                    <div class="flex flex-col md:flex-row bg-white/5 border border-[var(--accent-brown)] hover:bg-white/10 transition-colors overflow-hidden fade-in relative">
+                        <div class="absolute top-0 right-0 bg-[var(--accent-brown)] text-white text-xs py-1 px-8 transform translate-x-8 translate-y-4 rotate-45 z-10 shadow-md">おすすめ</div>
+                        <div class="w-full md:w-2/5 aspect-[4/3] md:aspect-auto">
+                            <div class="img-placeholder" style="min-height: 250px;">[Image of 豪華舟盛りコース]</div>
+                        </div>
+                        <div class="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-center">
+                            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-6 border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-medium tracking-wider mb-2 lg:mb-0 text-[var(--bg-beige)]">豪華舟盛り 10,000円コース</h3>
+                                <p class="text-xl font-serif text-[var(--accent-brown)]">お一人様 10,000円 <span class="text-sm">(税込)</span></p>
+                            </div>
+                            <p class="mb-6 leading-loose text-white/80 flex-grow">旬の鮮魚を豪華な舟盛りで楽しめる、全8品の贅沢なコースです。<br>接待や記念日、大切な方とのお食事にもおすすめです。</p>
+                            <div class="bg-black/20 p-4 text-sm leading-relaxed text-white/90">
+                                【全8品】先付け / 海鮮サラダ / 本日の焼き物 / 本日の揚げ物 / 本日の酢の物 / 本日の煮物または蒸し物 / 本日のお造り舟盛り / 本日のお寿司5貫
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 飲み放題・注意事項 -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+                    <div class="bg-white text-[var(--text-brown)] p-8 rounded-sm">
+                        <h4 class="text-lg font-bold mb-4 text-[var(--accent-navy)] border-b border-[var(--border-color)] pb-2">飲み放題</h4>
+                        <p class="leading-loose">各コース <strong>＋2,500円（税込）</strong>で飲み放題を追加できます。<br>ご希望の際はご予約時にご相談ください。</p>
+                    </div>
+                    <div class="bg-white text-[var(--text-brown)] p-8 rounded-sm">
+                        <h4 class="text-lg font-bold mb-4 text-[var(--accent-navy)] border-b border-[var(--border-color)] pb-2">ご利用について</h4>
+                        <ul class="space-y-2 text-sm leading-relaxed">
+                            <li>・ 4名様より承ります。</li>
+                            <li>・ ご来店時間：11:30〜14:00 / 17:00〜21:30</li>
+                            <li>・ ご予約：2日前の23:00まで</li>
+                            <li class="text-gray-500 mt-2 text-xs">※仕入れ状況により料理内容が変更となる場合があります。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16 fade-in">
+                    <a href="https://r.gnavi.co.jp/myavd1je0000/menu2/" target="_blank" class="inline-block bg-white text-[var(--accent-navy)] px-10 py-4 font-bold tracking-widest hover:bg-[var(--bg-beige)] transition-colors rounded-sm">
+                        その他メニューはこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション (ご予約・お問い合わせ) -->
+        <section class="relative py-24 md:py-32 text-white text-center bg-cover bg-center overflow-hidden">
+            <!-- 背景用プレースホルダー -->
+            <div class="absolute inset-0 z-0">
+                <div class="img-placeholder text-white/30" style="background-color: var(--text-brown);">[Image of 職人が寿司を握る姿や店内の様子]</div>
+            </div>
+            <!-- 暗いオーバーレイ（文字の視認性確保と高級感） -->
+            <div class="absolute inset-0 bg-[var(--accent-navy)] bg-opacity-85 z-10"></div>
+
+            <div class="relative z-20 container mx-auto px-6 fade-in">
+                <h2 class="text-2xl md:text-3xl text-[var(--bg-beige)] mb-4 tracking-[0.2em] font-serif font-medium">ご予約・お問い合わせ</h2>
+                <p class="mb-10 text-gray-200 text-sm md:text-base leading-loose max-w-2xl mx-auto tracking-wide">
+                    接待、記念日、ご家族でのお集まりなど、<br class="md:hidden">大切な方とのひとときに。<br>
+                    皆様のご来店を心よりお待ちしております。
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <!-- 電話予約ボタン -->
+                    <a href="tel:050-8881-0730" class="w-full md:w-auto inline-flex items-center justify-center px-10 py-5 bg-[var(--accent-brown)] text-white text-lg md:text-xl hover:opacity-90 transition-opacity duration-300 rounded-sm shadow-lg font-medium tracking-widest border border-[var(--accent-brown)]">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        050-8881-0730
+                    </a>
+
+                    <!-- WEB予約ボタン -->
+                    <a href="https://r.gnavi.co.jp/myavd1je0000/" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center px-10 py-5 bg-transparent text-white text-lg md:text-xl hover:bg-white hover:text-[var(--accent-navy)] transition-colors duration-300 rounded-sm shadow-lg font-medium tracking-widest border border-white">
+                        WEBで予約する
+                    </a>
+                </div>
+                <p class="mt-6 text-xs text-gray-300 tracking-wider">受付時間：11:30〜14:00 / 17:00〜21:30</p>
+            </div>
+        </section>
+
+        <!-- VOICE セクション -->
+        <section id="voice" class="py-24 md:py-32 bg-[var(--bg-beige)]">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-2xl md:text-3xl section-title fade-in mb-16">お客様の声<span>VOICE</span></h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+                    <!-- レビュー 1 -->
+                    <div class="bg-white p-8 shadow-sm border border-[var(--border-color)]">
+                        <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
+                        <h3 class="font-bold text-[var(--accent-navy)] mb-3">新鮮な地魚と日本酒</h3>
+                        <p class="text-sm leading-loose tracking-wide">
+                            新鮮な地魚と日本酒の相性が抜群でした。カウンターで大将の手捌きを見るのも楽しかったです。職人技を感じる素晴らしいお寿司でした。
+                        </p>
+                    </div>
+
+                    <!-- レビュー 2 -->
+                    <div class="bg-white p-8 shadow-sm border border-[var(--border-color)]">
+                        <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
+                        <h3 class="font-bold text-[var(--accent-navy)] mb-3">家族の記念日で利用</h3>
+                        <p class="text-sm leading-loose tracking-wide">
+                            家族の記念日で利用しました。個室でゆっくり食事ができ、豪華な舟盛りに両親も大喜びでした。また特別な日にお伺いしたいです。
+                        </p>
+                    </div>
+
+                    <!-- レビュー 3 -->
+                    <div class="bg-white p-8 shadow-sm border border-[var(--border-color)]">
+                        <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
+                        <h3 class="font-bold text-[var(--accent-navy)] mb-3">接待で利用しました</h3>
+                        <p class="text-sm leading-loose tracking-wide">
+                            接待で利用。コースのバランスが良く、どれも丁寧な仕事がされていてお客様にも好評でした。落ち着いた空間で話も弾みました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESSAGE セクション -->
+        <section id="message" class="relative py-32 md:py-48 bg-fixed bg-center bg-cover flex items-center justify-center">
+            <!-- ダミー背景（本来は background-image: url('...'); にする） -->
+            <div class="absolute inset-0 bg-[var(--text-brown)] z-0">
+                <div class="img-placeholder text-white/30" style="background-color: var(--text-brown);"></div>
+            </div>
+            <!-- オーバーレイ -->
+            <div class="absolute inset-0 bg-[var(--accent-navy)] bg-opacity-80 z-10"></div>
+
+            <div class="relative z-20 container mx-auto px-6 text-center fade-in">
+                <h2 class="text-2xl md:text-4xl text-white mb-8 tracking-[0.2em] font-serif font-light leading-relaxed">
+                    新潟のおいしさを、<br class="md:hidden">一番おいしいかたちで
+                </h2>
+
+                <div class="w-12 h-[1px] bg-[var(--accent-brown)] mx-auto mb-10"></div>
+
+                <div class="space-y-8 text-gray-200 leading-[2.2] tracking-[0.15em] font-light text-sm md:text-base max-w-2xl mx-auto text-left md:text-center">
+                    <p>
+                        新潟には、四季折々の魚介や地酒など、この土地だからこそ味わえる魅力がたくさんあります。
+                    </p>
+                    <p>
+                        私たちが大切にしているのは、良い素材を選ぶこと、そしてその持ち味を職人の技で丁寧に引き出すことです。
+                    </p>
+                    <p>
+                        寿司を気軽に楽しむランチから、地酒とともにゆっくり過ごす夜、大切な方との特別なお食事まで。
+                    </p>
+                    <p>
+                        一皿一皿に心を込め、新潟のおいしさを存分に感じていただける時間をご用意して、皆さまをお待ちしております。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO セクション -->
+        <section id="info" class="container mx-auto px-6 py-24 md:py-32">
+            <h2 class="text-2xl md:text-3xl section-title fade-in">店舗情報<span>INFORMATION</span></h2>
+
+            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto bg-white border border-[var(--border-color)] shadow-sm fade-in">
+                
+                <!-- テキスト情報 -->
+                <div class="w-full lg:w-1/2 p-8 md:p-12">
+                    <table class="w-full text-sm text-[var(--text-brown)] border-collapse">
+                        <tbody>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 text-[var(--accent-navy)]">店舗名</th>
+                                <td class="py-4 font-bold text-base">寿司 藤五郎</td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 align-top text-[var(--accent-navy)]">住所</th>
+                                <td class="py-4">
+                                    〒950-0916<br>
+                                    新潟県新潟市中央区米山２丁目１−３
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 align-top text-[var(--accent-navy)]">電話番号</th>
+                                <td class="py-4">
+                                    <a href="tel:050-8881-0730" class="text-lg font-bold text-[var(--accent-brown)]">050-8881-0730</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 align-top text-[var(--accent-navy)]">営業時間</th>
+                                <td class="py-4">
+                                    11:30 ~ 14:30<br>
+                                    17:00 ~ 22:30
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 text-[var(--accent-navy)]">定休日</th>
+                                <td class="py-4">火曜日</td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)]">
+                                <th class="py-4 text-left font-medium w-24 align-top text-[var(--accent-navy)]">WEB予約</th>
+                                <td class="py-4">
+                                    <a href="https://r.gnavi.co.jp/myavd1je0000/" target="_blank" class="text-blue-600 underline">ぐるなび予約ページへ</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mt-10">
+                        <a href="https://www.instagram.com/tougorou333/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full md:w-auto bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity font-medium">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+                            Instagramを見る
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps (ダミーの新潟駅周辺マップ) -->
+                <div class="w-full lg:w-1/2 min-h-[350px] bg-gray-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.3514781498327!2d139.0592963153063!3d37.90209427973715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff4c98a58a74b1b%3A0xc3f8c5c7d0d0c3c3!2z44CSOTUwLTA5MTYg5paw5r2f55yM5paw5r2f5biC5Lit5aSu5Yy657Gz5bGx77yS5LiB55uu77yR4oiS77yT!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" 
+                        width="100%" height="100%" style="border:0; min-height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[var(--accent-navy)] text-gray-400 pt-16 pb-28 md:py-12 border-t border-[var(--accent-brown)]">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <h2 class="text-2xl font-bold tracking-widest text-[var(--bg-beige)] mb-4">寿司 藤五郎</h2>
+            <p class="text-sm mb-8">〒950-0916 新潟県新潟市中央区米山２丁目１−３</p>
+            <div class="text-center text-xs">
+                &copy; Sushi Tougorou. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOPへ戻るボタン -->
+    <a href="#" id="back-to-top" class="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-40 bg-[var(--accent-brown)] text-white w-12 h-12 flex flex-col items-center justify-center rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-500 hover:bg-[var(--accent-navy)] hover:-translate-y-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </a>
+
+    <!-- SP用 追従CTA (画面下部固定) -->
+    <div id="sp-floating-cta" class="fixed bottom-0 left-0 w-full z-50 md:hidden opacity-0 pointer-events-none transition-opacity duration-500 shadow-[0_-4px_15px_rgba(0,0,0,0.2)] flex">
+        <a href="tel:050-8881-0730" class="flex-1 flex items-center justify-center py-4 bg-[var(--accent-brown)] text-white text-sm font-bold tracking-widest border-r border-white/20">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            電話予約
+        </a>
+        <a href="https://r.gnavi.co.jp/myavd1je0000/" target="_blank" class="flex-1 flex items-center justify-center py-4 bg-[var(--accent-navy)] text-white text-sm font-bold tracking-widest">
+            WEB予約
+        </a>
+    </div>
+
+    <script>
+        // スクロール時のヘッダー背景色変更
+        const header = document.getElementById('header');
+        const headerLogo = document.getElementById('header-logo');
+        const headerNav = document.getElementById('header-nav');
+        const headerBtns = document.querySelectorAll('.header-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // スクロール時：白背景
+                header.classList.add('bg-white', 'shadow-md');
+                header.classList.remove('bg-transparent');
+                
+                headerLogo.classList.remove('text-white');
+                headerLogo.classList.add('text-[var(--accent-navy)]');
+                
+                headerNav.classList.remove('text-white');
+                headerNav.classList.add('text-[var(--text-brown)]');
+
+                headerBtns.forEach(btn => {
+                    if(btn.textContent.includes('WEB予約')) return; // WEB予約ボタンは色維持
+                    btn.classList.remove('border-white', 'text-white', 'hover:bg-white', 'hover:text-[var(--accent-navy)]');
+                    btn.classList.add('border-[var(--accent-navy)]', 'text-[var(--accent-navy)]', 'hover:bg-[var(--accent-navy)]', 'hover:text-white');
+                });
+                
+                mobileMenuBtn.classList.remove('text-white');
+                mobileMenuBtn.classList.add('text-[var(--accent-navy)]');
+            } else {
+                // トップ時：透明背景
+                header.classList.remove('bg-white', 'shadow-md');
+                header.classList.add('bg-transparent');
+                
+                headerLogo.classList.add('text-white');
+                headerLogo.classList.remove('text-[var(--accent-navy)]');
+                
+                headerNav.classList.add('text-white');
+                headerNav.classList.remove('text-[var(--text-brown)]');
+
+                headerBtns.forEach(btn => {
+                    if(btn.textContent.includes('WEB予約')) return;
+                    btn.classList.add('border-white', 'text-white', 'hover:bg-white', 'hover:text-[var(--accent-navy)]');
+                    btn.classList.remove('border-[var(--accent-navy)]', 'text-[var(--accent-navy)]', 'hover:bg-[var(--accent-navy)]', 'hover:text-white');
+                });
+
+                if (!document.getElementById('mobile-menu').classList.contains('translate-x-0')) {
+                    mobileMenuBtn.classList.add('text-white');
+                    mobileMenuBtn.classList.remove('text-[var(--accent-navy)]');
+                }
+            }
+        });
+
+        // モバイルメニューのトグル
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.classList.remove('translate-x-0');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Back to top button visibility
+        const backToTop = document.getElementById('back-to-top');
+        const spFloatingCta = document.getElementById('sp-floating-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                spFloatingCta.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                spFloatingCta.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+    </script>
+</body>
+</html>
