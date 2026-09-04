@@ -148,6 +148,8 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(60px, 10vw, 100px) clamp(24px, 6vw, 60px);
+  position: relative;
+  z-index: 1;
 }
 
 .sec-title {
@@ -1452,6 +1454,18 @@ footer {
   #voice,
   #access {
     background-image: url('../img/spbg.jpg');
+  }
+
+  #about::before,
+  #service::before,
+  #voice::before,
+  #access::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+    pointer-events: none;
   }
 
   body {
