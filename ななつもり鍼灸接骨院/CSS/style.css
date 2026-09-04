@@ -409,8 +409,27 @@ ul {
   margin-bottom: 24px;
 }
 
+/* 共通背景画像設定（旧 白背景セクション） */
+#about, #service, #voice, #access {
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+#about::before, #service::before, #voice::before, #access::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85); /* 視認性確保のための白オーバーレイ */
+  z-index: 0;
+}
+#about .section-wrap, #service .section-wrap, #voice .section-wrap, #access .section-wrap {
+  position: relative;
+  z-index: 1;
+}
+
 /* About Section */
-#about { background: #fff; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -552,7 +571,6 @@ ul {
 }
 
 /* Service Section */
-#service { background: #fff; }
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -734,7 +752,6 @@ ul {
 }
 
 /* Voice Section */
-#voice { background: #fff; }
 .voice-grid { display: flex; flex-direction: column; gap: 24px; margin: 48px auto 0; }
 .voice-card {
   background: var(--bg-light);
@@ -850,7 +867,6 @@ ul {
 .message-content p { color: var(--text-mid); line-height: 2; margin-bottom: 20px; }
 
 /* Access Section */
-#access { background: #fff; }
 .access-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
