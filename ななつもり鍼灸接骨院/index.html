@@ -257,10 +257,13 @@
           <div class="accent-line"></div>
         </div>
 
-        <div class="price-layout">
-          <!-- 左カラム：自費・リラク -->
-          <div class="price-col reveal-left">
-            <div class="price-box">
+        <div class="price-cards">
+          <!-- 自費診療 -->
+          <div class="price-card reveal">
+            <div class="price-img">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600" alt="">
+            </div>
+            <div class="price-content">
               <h3>自費診療</h3>
               <table class="price-table">
                 <tbody>
@@ -291,8 +294,14 @@
                 </tbody>
               </table>
             </div>
+          </div>
 
-            <div class="price-box">
+          <!-- リラクゼーション -->
+          <div class="price-card reveal" style="transition-delay: 0.1s;">
+            <div class="price-img">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=600" alt="">
+            </div>
+            <div class="price-content">
               <h3>リラクゼーション</h3>
               <table class="price-table">
                 <tbody>
@@ -308,19 +317,17 @@
               </table>
             </div>
           </div>
+        </div>
 
-          <!-- 右カラム：保険など -->
-          <div class="price-col reveal-right">
-            <div class="price-box">
-              <h3>保険診療</h3>
-              <p>症状や診療内容、保険適用の条件によって料金が異なります。<br>詳しくはご来院時にご相談ください。</p>
-            </div>
-
-            <div class="price-box">
-              <h3>交通事故による施術</h3>
-              <p>交通事故によるケガについてもご相談いただけます。</p>
-              <p class="service-note">※自賠責保険等が適用される場合、窓口負担が発生しないケースがあります。適用条件については事前にご確認ください。</p>
-            </div>
+        <!-- 保険診療・交通事故（注意事項風） -->
+        <div class="price-notes reveal">
+          <div class="price-note-box">
+            <h4><span class="note-icon">⚠</span> 保険診療について</h4>
+            <p>症状や診療内容、保険適用の条件によって料金が異なります。<br>詳しくはご来院時にご相談ください。</p>
+          </div>
+          <div class="price-note-box">
+            <h4><span class="note-icon">⚠</span> 交通事故による施術について</h4>
+            <p>交通事故によるケガについてもご相談いただけます。<br><span class="service-note">※自賠責保険等が適用される場合、窓口負担が発生しないケースがあります。適用条件については事前にご確認ください。</span></p>
           </div>
         </div>
       </div>
