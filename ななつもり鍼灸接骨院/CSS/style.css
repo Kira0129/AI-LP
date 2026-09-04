@@ -1384,6 +1384,10 @@ footer {
     order: -1;
   }
 
+  .about-recommend {
+    padding: 30px;
+  }
+
   #message {
     background-attachment: scroll;
   }
