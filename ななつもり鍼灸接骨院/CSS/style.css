@@ -599,7 +599,7 @@ ul {
   right: 0;
   width: 55%;
   border-radius: 12px;
-  border: 6px solid #fff;
+  border: 4px solid #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: block;
 }
@@ -1169,7 +1169,7 @@ ul {
 
 /* Message Section */
 #message {
-  background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1600');
+  background-image: url('../img/messagebg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
