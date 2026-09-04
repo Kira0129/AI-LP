@@ -1425,6 +1425,16 @@ footer {
     margin: 0 auto 20px;
   }
 
+  .fv-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .fv-eyebrow {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
   #sp-fixed-cta.visible {
     display: flex;
   }
