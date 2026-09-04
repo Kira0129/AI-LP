@@ -763,11 +763,40 @@ ul {
   color: var(--accent);
   font-size: 1.2rem;
   letter-spacing: 0.1em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   position: relative; z-index: 1;
 }
-.voice-card p {
-  position: relative; z-index: 1; line-height: 1.8; color: var(--text-mid);
+.voice-name {
+  position: relative; z-index: 1;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+.voice-text-wrap {
+  position: relative; z-index: 1;
+}
+.voice-text {
+  color: var(--text-mid);
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.voice-text.is-expanded {
+  -webkit-line-clamp: unset;
+}
+.voice-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 12px;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  position: relative; z-index: 1;
 }
 
 /* Staff Section */

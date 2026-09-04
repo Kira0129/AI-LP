@@ -89,4 +89,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   revealEls.forEach(el => observer.observe(el));
+
+  // Voice Toggle Logic
+  const voiceCards = document.querySelectorAll('.voice-card');
+  voiceCards.forEach(card => {
+    const textEl = card.querySelector('.voice-text');
+    const toggleBtn = card.querySelector('.voice-toggle-btn');
+    if (!textEl || !toggleBtn) return;
+
+    // Check if text is overflowing (more than 3 lines)
+    // We do this by checking if the scrollHeight is greater than the clientHeight
+    // Note: This needs a slight delay to ensure fonts/layout are rendered
+    setTimeout(() => {
+      if (textEl.scrollHeight > textEl.clientHeight) {
+        toggleBtn.style.display = 'block';
+      }
+    }, 100);
+
+    toggleBtn.addEventListener('click', () => {
+      textEl.classList.toggle('is-expanded');
+      if (textEl.classList.contains('is-expanded')) {
+        toggleBtn.textContent = '閉じる';
+      } else {
+        toggleBtn.textContent = '続きを読む';
+      }
+    });
+  });
 });
