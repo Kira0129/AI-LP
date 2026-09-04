@@ -29,6 +29,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  font-size: 16px;
 }
 
 body {
@@ -38,7 +39,6 @@ body {
   background: var(--bg-light);
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -59,7 +59,7 @@ ul {
 }
 
 @media (max-width: 767px) {
-  body { font-size: 14px; }
+  html { font-size: 14px; }
 }
 
 .sp-only { display: none; }
