@@ -1,328 +1,330 @@
 :root {
-            --clr-bg: #FAF8F5;
-            --clr-pink: #EBCFC8;
-            --clr-gold: #D4B46A;
-            --clr-text: #5B4B46;
+    --clr-bg: #FAF8F5;
+    --clr-pink: #EBCFC8;
+    --clr-gold: #D4B46A;
+    --clr-text: #5B4B46;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: "Shippori Mincho", serif;
+    line-height: 2.2;
+    letter-spacing: 0.08em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 蜈ｱ騾壹い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ */
+.js-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.js-fade.is-active {
+    opacity: 1;
+    transform: none;
+}
+
+/* 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧､繝医Ν */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title-en {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    color: var(--clr-gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .section-title-en {
+        font-size: 2.5rem;
+    }
+}
+
+.section-title-ja {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--clr-text);
+    opacity: 0.8;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* 繝懊ち繝ｳ */
+.btn-elegant {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: var(--clr-text);
+    border: 1px solid var(--clr-gold);
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+    text-decoration: none;
+}
+
+.btn-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-pink);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+.btn-elegant:hover {
+    color: var(--clr-text);
+}
+
+.btn-elegant:hover::before {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* 繝倥ャ繝繝ｼ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(250, 248, 245, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+    border-bottom: 1px solid rgba(212, 180, 106, 0.2);
+    transition: transform 0.5s ease;
+}
+
+/* 繝上Φ繝舌�繧ｬ繝ｼ繝｡繝九Η繝ｼ */
+.hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 60;
+    background: transparent;
+    border: none;
+}
+
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-text);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger.is-open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-bg);
+    z-index: 55;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FV 繧ｹ繝ｩ繧､繝繝ｼ & 繝ｬ繧､繧｢繧ｦ繝� (縺吶⊆縺ｮ縺企Κ螻九せ繧ｿ繧､繝ｫ) */
+#fv {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 600px;
+    display: flex;
+    background-color: var(--clr-bg);
+    overflow: hidden;
+}
+
+.fv-text-part {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.fv-image-part {
+    flex: 1.2;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    #fv {
+        flex-direction: column;
+    }
+
+    .fv-text-part {
+        flex: 1.2;
+        padding-top: 70px;
+    }
+
+    .fv-image-part {
+        flex: 1;
+    }
+}
+
+.fv-bg-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.fv-bg-slide {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    animation: bgFade 18s infinite ease-in-out;
+}
+
+.fv-bg-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fv-bg-slide:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.fv-bg-slide:nth-child(3) {
+    animation-delay: 12s;
+}
+
+@keyframes bgFade {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    33% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    43% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fv-divider {
+    width: 1px;
+    height: 60px;
+    background-color: var(--clr-gold);
+    margin: 0 auto 32px;
+}
+
+@media (max-width: 767px) {
+    .fv-divider {
+        height: 35px;
+        margin: 0 auto 10px;
+    }
+}
+
+/* 邵ｦ譖ｸ縺阪ユ繧ｭ繧ｹ繝� */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+/* ABOUT繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ逕ｨ 繧ｹ繝槭�逕ｻ蜒上Ν繝ｼ繝励せ繝ｩ繧､繝繝ｼ */
+@media (max-width: 767px) {
+    .loop-slider {
+        display: flex;
+        width: max-content;
+        gap: 0.5rem;
+    }
+
+    .loop-slider__track {
+        display: flex;
+        gap: 0.5rem;
+        animation: loop-marquee 15s linear infinite;
+    }
+
+    @keyframes loop-marquee {
+        0% {
+            transform: translateX(0);
         }
 
-        body {
-            background-color: var(--clr-bg);
-            color: var(--clr-text);
-            font-family: "Shippori Mincho", serif;
-            line-height: 2.2;
-            letter-spacing: 0.08em;
-            -webkit-font-smoothing: antialiased;
+        100% {
+            transform: translateX(calc(-100% - 0.5rem));
         }
+    }
+}
 
-        /* 蜈ｱ騾壹い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ */
-        .js-fade {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .js-fade.is-active {
-            opacity: 1;
-            transform: none;
-        }
-
-        /* 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧､繝医Ν */
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title-en {
-            font-family: "Cormorant Garamond", serif;
-            font-size: 30px;
-            color: var(--clr-gold);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        @media (min-width: 768px) {
-            .section-title-en {
-                font-size: 2.5rem;
-            }
-        }
-
-        .section-title-ja {
-            font-size: 0.9rem;
-            letter-spacing: 0.2em;
-            color: var(--clr-text);
-            opacity: 0.8;
-            display: block;
-            margin-top: 0.5rem;
-        }
-
-        /* 繝懊ち繝ｳ */
-        .btn-elegant {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 3rem;
-            background-color: transparent;
-            color: var(--clr-text);
-            border: 1px solid var(--clr-gold);
-            font-size: 0.95rem;
-            letter-spacing: 0.15em;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.4s;
-            text-decoration: none;
-        }
-
-        .btn-elegant::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--clr-pink);
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: -1;
-        }
-
-        .btn-elegant:hover {
-            color: var(--clr-text);
-        }
-
-        .btn-elegant:hover::before {
-            transform: scaleY(1);
-            transform-origin: top;
-        }
-
-        /* 繝倥ャ繝繝ｼ */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background-color: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 50;
-            border-bottom: 1px solid rgba(212, 180, 106, 0.2);
-            transition: transform 0.5s ease;
-        }
-
-        /* 繝上Φ繝舌�繧ｬ繝ｼ繝｡繝九Η繝ｼ */
-        .hamburger {
-            width: 30px;
-            height: 20px;
-            position: relative;
-            cursor: pointer;
-            z-index: 60;
-            background: transparent;
-            border: none;
-        }
-
-        .hamburger span {
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background-color: var(--clr-text);
-            left: 0;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger span:nth-child(2) {
-            top: 9px;
-        }
-
-        .hamburger span:nth-child(3) {
-            bottom: 0;
-        }
-
-        .hamburger.is-open span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        .hamburger.is-open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.is-open span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--clr-bg);
-            z-index: 55;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .mobile-menu.is-open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* FV 繧ｹ繝ｩ繧､繝繝ｼ & 繝ｬ繧､繧｢繧ｦ繝� (縺吶⊆縺ｮ縺企Κ螻九せ繧ｿ繧､繝ｫ) */
-        #fv {
-            position: relative;
-            width: 100%;
-            height: 100svh;
-            min-height: 600px;
-            display: flex;
-            background-color: var(--clr-bg);
-            overflow: hidden;
-        }
-
-        .fv-text-part {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
-            position: relative;
-            z-index: 10;
-        }
-
-        .fv-image-part {
-            flex: 1.2;
-            position: relative;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        @media (max-width: 767px) {
-            #fv {
-                flex-direction: column;
-            }
-
-            .fv-text-part {
-                flex: 1.2;
-                padding-top: 70px;
-            }
-
-            .fv-image-part {
-                flex: 1;
-            }
-        }
-
-        .fv-bg-slider {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-        }
-
-        .fv-bg-slide {
-            position: absolute;
-            inset: 0;
-            background-position: center;
-            background-size: cover;
-            opacity: 0;
-            animation: bgFade 18s infinite ease-in-out;
-        }
-
-        .fv-bg-slide:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .fv-bg-slide:nth-child(2) {
-            animation-delay: 6s;
-        }
-
-        .fv-bg-slide:nth-child(3) {
-            animation-delay: 12s;
-        }
-
-        @keyframes bgFade {
-            0% {
-                opacity: 0;
-                transform: scale(1.05);
-            }
-
-            10% {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-
-            33% {
-                opacity: 1;
-                transform: scale(1.02);
-            }
-
-            43% {
-                opacity: 0;
-                transform: scale(1.0);
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .fv-divider {
-            width: 1px;
-            height: 60px;
-            background-color: var(--clr-gold);
-            margin: 0 auto 32px;
-        }
-
-        @media (max-width: 767px) {
-            .fv-divider {
-                height: 35px;
-                margin: 0 auto 10px;
-            }
-        }
-
-        /* 邵ｦ譖ｸ縺阪ユ繧ｭ繧ｹ繝� */
-        .vertical-text {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-
-        /* ABOUT繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ逕ｨ 繧ｹ繝槭�逕ｻ蜒上Ν繝ｼ繝励せ繝ｩ繧､繝繝ｼ */
-        @media (max-width: 767px) {
-            .loop-slider {
-                display: flex;
-                width: max-content;
-                gap: 0.5rem;
-            }
-
-            .loop-slider__track {
-                display: flex;
-                gap: 0.5rem;
-                animation: loop-marquee 15s linear infinite;
-            }
-
-            @keyframes loop-marquee {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(calc(-100% - 0.5rem));
-                }
-            }
-        }
 /* 背景画像のパララックス＆オーバーレイ */
 .bg-overlay-light {
     position: relative;
     z-index: 0;
 }
+
 .bg-overlay-light::before {
     content: "";
     position: absolute;
@@ -330,7 +332,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.85); /* 白で薄くする */
+    background-color: rgba(255, 255, 255, 0.85);
+    /* 白で薄くする */
     z-index: -1;
 }
 
@@ -347,8 +350,8 @@
     background-size: contain;
     background-position: bottom center;
     background-repeat: no-repeat;
-    opacity: 0.25; /* もう少し見えるように透明度を調整 */
+    opacity: 0.25;
+    /* もう少し見えるように透明度を調整 */
     z-index: -1;
     pointer-events: none;
 }
-

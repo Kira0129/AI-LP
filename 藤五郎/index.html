@@ -726,52 +726,78 @@
         // モバイルメニューのトグル
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-full');
-            mobileMenu.classList.toggle('translate-x-0');
-        });
+        let isMenuOpen = false;
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                mobileMenuBtn.innerHTML = '<svg class="w-8 h-8 transition-colors duration-500" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            } else {
                 mobileMenu.classList.add('translate-x-full');
                 mobileMenu.classList.remove('translate-x-0');
-            });
+                const iconColor = window.scrollY > 50 ? 'var(--accent-navy)' : 'white';
+                mobileMenuBtn.innerHTML = `<svg class="w-8 h-8 transition-colors duration-500" fill="none" stroke="${iconColor}" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => { if(isMenuOpen) toggleMenu(); });
         });
 
-        // Intersection Observer for fade-in animations
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        // フェードインアニメーション
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
+                    observer.unobserve(entry.target); 
                 }
             });
-        }, appearOptions);
+        }, observerOptions);
 
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
+        fadeElements.forEach(el => observer.observe(el));
+
+        // ページロード時のフェードイン
+        window.addEventListener('load', () => {
+            document.querySelectorAll('section:first-of-type .fade-in').forEach(el => el.classList.add('appear'));
         });
 
-        // Back to top button visibility
-        const backToTop = document.getElementById('back-to-top');
+        // TOPへ戻るボタンと追従CTA
+        const backToTopBtn = document.getElementById('back-to-top');
         const spFloatingCta = document.getElementById('sp-floating-cta');
+
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.remove('opacity-0', 'pointer-events-none');
-                spFloatingCta.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                backToTop.classList.add('opacity-0', 'pointer-events-none');
-                spFloatingCta.classList.add('opacity-0', 'pointer-events-none');
+            if (backToTopBtn) {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100');
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+
+            if (spFloatingCta) {
+                if (window.scrollY > window.innerHeight * 0.5) {
+                    spFloatingCta.classList.remove('opacity-0', 'pointer-events-none');
+                    spFloatingCta.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    spFloatingCta.classList.remove('opacity-100', 'pointer-events-auto');
+                    spFloatingCta.classList.add('opacity-0', 'pointer-events-none');
+                }
             }
         });
+
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
