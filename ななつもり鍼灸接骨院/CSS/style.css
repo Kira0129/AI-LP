@@ -705,6 +705,7 @@ ul {
   padding: 16px 8px;
   border-bottom: 1px dashed var(--bg-pale);
   text-align: left;
+  font-size: 1rem;
 }
 .price-table th { font-weight: normal; color: var(--text-main); }
 .price-table td { font-weight: bold; color: var(--primary-dark); text-align: right; }
@@ -737,7 +738,7 @@ ul {
 }
 .price-note-box p {
   color: var(--text-mid);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
