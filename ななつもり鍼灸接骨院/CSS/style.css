@@ -1416,8 +1416,13 @@ footer {
 
   .fv-text-part {
     flex: 1;
-    padding: 40px 24px 60px;
+    padding: 30px 24px;
     justify-content: flex-start;
+  }
+
+  .fv-divider {
+    height: 40px;
+    margin: 0 auto 20px;
   }
 
   #sp-fixed-cta.visible {
