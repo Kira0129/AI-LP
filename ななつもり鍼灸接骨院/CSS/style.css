@@ -1388,6 +1388,10 @@ footer {
     padding: 30px;
   }
 
+  .price-content {
+    padding: 20px;
+  }
+
   #message {
     background-attachment: scroll;
   }
