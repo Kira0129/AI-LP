@@ -216,6 +216,10 @@ ul {
   color: var(--primary-dark);
   text-decoration: none;
 }
+.site-logo img {
+  height: 48px;
+  width: auto;
+}
 .header-actions {
   display: flex;
   align-items: center;
@@ -877,6 +881,10 @@ footer {
   color: #fff;
   margin-bottom: 24px;
   display: inline-block;
+}
+.footer-logo img {
+  height: 56px;
+  width: auto;
 }
 .footer-sns { margin: 20px 0; }
 .footer-sns a {
