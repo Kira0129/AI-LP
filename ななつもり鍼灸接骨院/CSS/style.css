@@ -613,13 +613,10 @@ ul {
 /* Price Section */
 #price { background: var(--bg-pale); }
 .price-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-top: 48px;
-}
-@media (min-width: 900px) {
-  .price-cards { grid-template-columns: 1fr 1fr; }
 }
 .price-card {
   background: #fff;
@@ -655,6 +652,41 @@ ul {
   background: var(--bg-light);
   padding: 10px;
   border-radius: 8px;
+}
+
+@media (min-width: 900px) {
+  .price-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .price-card.price-sub {
+    flex-direction: row-reverse;
+  }
+  .price-img {
+    width: 45%;
+    padding-top: 0;
+    flex-shrink: 0;
+  }
+  .price-content {
+    width: 55%;
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* メインカード（自費診療）の強調 */
+  .price-card.price-main .price-content h3 {
+    font-size: 1.8rem;
+    background: var(--primary);
+    color: #fff;
+    padding: 16px;
+  }
+  .price-card.price-main .price-table th, 
+  .price-card.price-main .price-table td {
+    font-size: 1.1rem;
+    padding: 20px 8px;
+  }
 }
 .price-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
 .price-table th, .price-table td {
