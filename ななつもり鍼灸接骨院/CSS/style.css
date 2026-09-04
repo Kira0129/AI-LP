@@ -1447,6 +1447,13 @@ footer {
     display: flex;
   }
 
+  #about,
+  #service,
+  #voice,
+  #access {
+    background-image: url('../img/spbg.jpg');
+  }
+
   body {
     padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
   }
