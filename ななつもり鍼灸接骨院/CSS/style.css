@@ -473,7 +473,7 @@ ul {
   font-family: var(--font-display);
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   font-weight: bold;
-  color: var(--accent-light);
+  color: var(--primary-dark);
   margin-bottom: 24px;
   animation: fadeUp 1.5s 0.4s both cubic-bezier(0.25, 0.46, 0.45, 0.94);
   letter-spacing: 0.1em;
@@ -483,7 +483,7 @@ ul {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--primary-dark);
   line-height: 1.5;
   letter-spacing: 0.05em;
   margin-bottom: 32px;
@@ -493,7 +493,7 @@ ul {
 .fv-divider {
   width: 2px;
   height: 60px;
-  background: var(--accent-light);
+  background: var(--primary-dark);
   margin: 0 auto 32px;
   animation: fadeUp 1.5s 0.7s both cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -501,7 +501,7 @@ ul {
 .fv-sub {
   font-family: var(--font-body);
   font-size: clamp(0.9rem, 1vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
   line-height: 2;
   animation: fadeUp 1.5s 0.85s both cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -529,10 +529,10 @@ ul {
   width: clamp(90px, 11vw, 110px);
   height: clamp(90px, 11vw, 110px);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  color: #fff;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
