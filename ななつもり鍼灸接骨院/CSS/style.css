@@ -885,6 +885,9 @@ ul {
   line-height: 1.6;
 }
 .message-content p { color: var(--text-mid); line-height: 2; margin-bottom: 20px; }
+@media(max-width: 767px) {
+  .message-content p { text-align: left; }
+}
 
 /* Access Section */
 .access-grid {
