@@ -656,10 +656,15 @@ body {
 ========================================================== */
 .troubles {
   background: linear-gradient(rgba(15, 40, 75, 0.85), rgba(15, 40, 75, 0.85)), url('../img/worrybg.jpg') center/cover no-repeat;
-  padding: 80px 0;
+  padding: 100px 0;
   position: relative;
   z-index: 20;
   color: var(--white);
+}
+@media (max-width: 768px) {
+  .troubles {
+    padding: 70px 0;
+  }
 }
 
 .trouble-box {
@@ -1026,14 +1031,12 @@ body {
   display: flex;
   gap: 80px;
   align-items: center;
-  padding: 40px 0;
 }
 
 @media (max-width: 768px) {
   .message-wrap {
     flex-direction: column;
     gap: 40px;
-    padding: 20px 0;
   }
 }
 
@@ -1110,8 +1113,13 @@ body {
 .cta-section {
   background: var(--primary);
   color: var(--white);
-  padding: 80px 0;
+  padding: 100px 0;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 0;
+  }
 }
 
 .cta-inner {
