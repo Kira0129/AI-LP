@@ -560,6 +560,14 @@ body {
   .message-title { font-size: 26px; }
 }
 .message-content p { margin-bottom: 40px; color: var(--text-main); font-size: 15px; }
+.message-banner-wrap { text-align: center; }
+.message-banner {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
 .btn-contact-line {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
