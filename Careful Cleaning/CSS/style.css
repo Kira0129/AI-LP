@@ -150,6 +150,11 @@ body {
   background: #05a044;
   border-color: #05a044;
 }
+.header-line-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
 
 /* ハンバーガーメニュー */
 .hamburger-btn { display: none; }
