@@ -82,12 +82,17 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .header-logo {
+  display: flex;
+  align-items: center;
   font-family: var(--font-mincho);
   font-size: 24px;
   font-weight: 900;
   color: var(--primary);
   text-decoration: none;
   letter-spacing: 0.1em;
+}
+.header-logo img {
+  vertical-align: middle;
 }
 .header-right {
   display: flex;
