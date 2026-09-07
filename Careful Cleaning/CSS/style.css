@@ -541,51 +541,67 @@ body {
   }
 }
 
-.about-images {
-  flex: 1;
-  display: flex;
-  gap: 15px;
+.about-images-modern {
+  flex: 1.2;
+  position: relative;
+  height: 480px;
 }
 
-.about-img-main {
-  flex: 2;
-}
-
-.about-img-main img {
-  width: 100%;
-  height: 100%;
+.about-images-modern img {
+  position: absolute;
   object-fit: cover;
-  display: block;
-  box-shadow: 0 15px 40px rgba(15, 40, 75, 0.08);
+  box-shadow: 0 20px 40px rgba(15, 40, 75, 0.15);
 }
 
-.about-img-sub {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* メイン画像（一番大きく奥に配置） */
+.about-pic-1 {
+  width: 75%;
+  height: 80%;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.about-img-sub img {
-  width: 100%;
-  height: calc(50% - 7.5px);
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 15px 40px rgba(15, 40, 75, 0.08);
+/* サブ画像1（左下に重ねる） */
+.about-pic-2 {
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border: 8px solid var(--white);
 }
 
-@media (max-width: 480px) {
-  .about-images {
-    flex-direction: column;
+/* サブ画像2（真ん中下寄りに小さく重ねる） */
+.about-pic-3 {
+  width: 40%;
+  height: 45%;
+  bottom: 10%;
+  right: -5%;
+  z-index: 3;
+  border: 8px solid var(--white);
+}
+
+@media (max-width: 768px) {
+  .about-images-modern {
+    height: 350px;
+    width: 100%;
   }
-  .about-img-sub {
-    flex-direction: row;
+  
+  .about-pic-1 {
+    width: 80%;
+    height: 75%;
   }
-  .about-img-sub img {
-    height: 150px;
+  
+  .about-pic-2 {
+    width: 55%;
+    height: 50%;
   }
-  .about-img-main img {
-    height: 250px;
+  
+  .about-pic-3 {
+    width: 45%;
+    height: 40%;
+    right: 0;
   }
 }
 
