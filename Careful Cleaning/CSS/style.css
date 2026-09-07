@@ -654,7 +654,10 @@ body {
 .staff-info h4 span {
   font-size: 12px; color: var(--text-muted); display: block; margin-top: 4px; font-family: var(--font-gothic);
 }
-.staff-info p { font-size: 14px; color: var(--text-main); line-height: 1.7; }
+.staff-info p { font-size: 16px; color: var(--text-main); line-height: 1.7; }
+@media (max-width: 768px) {
+  .staff-info p { font-size: 14px; }
+}
 
 /* ==========================================================
    Store / Access
