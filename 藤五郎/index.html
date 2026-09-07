@@ -510,14 +510,10 @@
         </section>
 
         <!-- MENU セクション -->
-        <section id="menu" class="relative py-24 md:py-32 overflow-hidden bg-cover bg-center">
-            <!-- 背景用プレースホルダー -->
-            <div class="absolute inset-0 z-0">
-                <div class="img-placeholder text-white/30" style="background-color: var(--bg-beige);">[Image of
-                    和風の背景テクスチャ]</div>
-            </div>
+        <section id="menu" class="relative py-24 md:py-32 overflow-hidden bg-cover bg-center"
+            style="background-image: url('img/menubg.jpg');">
             <!-- コンテンツの可読性を上げるための薄いオーバーレイ（ベージュ系） -->
-            <div class="absolute inset-0 bg-[var(--bg-beige)]/90 z-10"></div>
+            <div class="absolute inset-0 bg-[#F5F2EB]/90 z-10"></div>
 
             <div class="container mx-auto px-6 relative z-20">
 
@@ -532,7 +528,7 @@
                         <!-- 1セット目 -->
                         <div class="flex gap-4 pr-4 pl-4">
                             <div class="w-[75vw] aspect-[4/3] shrink-0 rounded-sm overflow-hidden shadow-md">
-                                <img src="img/menu1.png" alt="お品書き1" class="w-full h-full object-cover">
+                                <img src="img/menu01.jpg" alt="お品書き1" class="w-full h-full object-cover">
                             </div>
                             <div class="w-[75vw] aspect-[4/3] shrink-0 rounded-sm overflow-hidden shadow-md">
                                 <img src="img/menu02.jpg" alt="お品書き2" class="w-full h-full object-cover">
@@ -544,7 +540,7 @@
                         <!-- 2セット目（ループ用） -->
                         <div class="flex gap-4 pr-4">
                             <div class="w-[75vw] aspect-[4/3] shrink-0 rounded-sm overflow-hidden shadow-md">
-                                <img src="img/menu1.png" alt="お品書き1" class="w-full h-full object-cover">
+                                <img src="img/menu01.jpg" alt="お品書き1" class="w-full h-full object-cover">
                             </div>
                             <div class="w-[75vw] aspect-[4/3] shrink-0 rounded-sm overflow-hidden shadow-md">
                                 <img src="img/menu02.jpg" alt="お品書き2" class="w-full h-full object-cover">
@@ -559,7 +555,7 @@
                 <!-- PC用: 3カラムグリッド -->
                 <div class="hidden md:grid grid-cols-3 gap-8 w-full max-w-6xl mx-auto mb-24 relative z-10">
                     <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in">
-                        <img src="img/menu1.png" alt="お品書き1"
+                        <img src="img/menu01.jpg" alt="お品書き1"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in mt-12"
