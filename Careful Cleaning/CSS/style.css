@@ -655,7 +655,7 @@ body {
    Troubles
 ========================================================== */
 .troubles {
-  background: linear-gradient(rgba(15, 40, 75, 0.85), rgba(15, 40, 75, 0.85)), url('../img/worrybg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(15, 40, 75, 0.5), rgba(15, 40, 75, 0.5)), url('../img/worrybg.jpg') center/cover no-repeat;
   padding: 100px 0;
   position: relative;
   z-index: 20;
