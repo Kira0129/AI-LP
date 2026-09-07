@@ -549,6 +549,11 @@ body {
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .btn-contact-line:hover { background: #05a044; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(6, 199, 85, 0.2); }
+.line-logo-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
 
 /* ==========================================================
    CTA Section
