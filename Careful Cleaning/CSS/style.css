@@ -551,6 +551,51 @@ body {
 .btn-contact-line:hover { background: #05a044; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(6, 199, 85, 0.2); }
 
 /* ==========================================================
+   CTA Section
+========================================================== */
+.cta-section {
+  background: var(--primary);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.cta-title {
+  font-family: var(--font-mincho);
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.cta-desc {
+  font-size: 15px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.cta-tel {
+  display: inline-block;
+  font-size: 48px;
+  font-family: var(--font-gothic);
+  font-weight: 900;
+  color: var(--accent);
+  text-decoration: none;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  .cta-tel { font-size: 36px; }
+}
+.cta-time {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================
    Staff
 ========================================================== */
 .staff-bg { background: var(--bg-gray); }
