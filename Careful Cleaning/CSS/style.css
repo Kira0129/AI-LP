@@ -664,6 +664,7 @@ body {
 @media (max-width: 768px) {
   .troubles {
     padding: 70px 0;
+    background-position: 60% center;
   }
 }
 
