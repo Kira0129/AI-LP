@@ -37,7 +37,8 @@
             /* ボーダー用 */
         }
 
-        html, body {
+        html,
+        body {
             font-family: 'Noto Serif JP', serif;
             background-color: var(--bg-beige);
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
@@ -303,13 +304,13 @@
         <!-- 背景画像スライダー -->
         <div class="fv-slider">
             <div class="slide-item">
-                <div class="img-placeholder"></div>
+                <img src="img/fv01.jpg" alt="寿司 藤五郎" class="w-full h-full object-cover">
             </div>
             <div class="slide-item">
-                <div class="img-placeholder"></div>
+                <img src="img/fv02.jpg" alt="新潟の地酒と和食" class="w-full h-full object-cover">
             </div>
             <div class="slide-item">
-                <div class="img-placeholder"></div>
+                <img src="img/fv03.jpg" alt="落ち着いた和の空間" class="w-full h-full object-cover">
             </div>
         </div>
 
@@ -710,8 +711,7 @@
                         </div>
 
                         <!-- ご利用について (注意事項風) -->
-                        <div
-                            class="bg-[var(--bg-beige)]/40 p-4 border border-dashed border-[var(--accent-brown)]/50">
+                        <div class="bg-[var(--bg-beige)]/40 p-4 border border-dashed border-[var(--accent-brown)]/50">
                             <h4
                                 class="font-bold text-lg mb-6 text-[var(--text-brown)] tracking-widest flex items-center justify-center border-b border-[var(--accent-brown)]/30 pb-4">
                                 ご利用にあたっての<br class="md:hidden">注意事項
@@ -723,7 +723,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="mr-3 text-[var(--accent-brown)] opacity-70 text-sm mt-1">❖</span>
-                                    <span>ご来店時間：11:30〜14:00 / 17:00〜21:30</span>
+                                    <span>ご来店時間：11:30〜14:00 / <br class="md:hidden">17:00〜21:30</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="mr-3 text-[var(--accent-brown)] opacity-70 text-sm mt-1">❖</span>
@@ -931,7 +931,7 @@
                                 <th class="py-4 text-left font-medium w-24 align-top text-[var(--accent-navy)]">住所</th>
                                 <td class="py-4">
                                     〒950-0916<br>
-                                    新潟県新潟市中央区米山２丁目１−３
+                                    新潟県新潟市中央区米山<br class="md:hidden">２丁目１−３
                                 </td>
                             </tr>
                             <tr class="border-b border-[var(--border-color)]">
@@ -973,8 +973,8 @@
                 <div class="w-full lg:w-1/2 min-h-[350px] bg-gray-200 flex flex-col">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.9136834653846!2d139.0589113!3d37.9090802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff4c98b94151c27%3A0x21de97e9a4b198a4!2z5a-_5Y-4IOiXpOS6lOmDjg!5e0!3m2!1sja!2sjp!4v1788516775807!5m2!1sja!2sjp"
-                        width="100%" height="100%" style="border:0; min-height: 350px; flex-grow: 1;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin">
+                        width="100%" height="100%" style="border:0; min-height: 350px; flex-grow: 1;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
                 </div>
             </div>
