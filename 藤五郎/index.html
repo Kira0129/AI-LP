@@ -141,9 +141,15 @@
 
         /* 無限スクロールアニメーション（スマホスライダー用） */
         @keyframes scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
+
         .animate-scroll-left {
             animation: scroll-left 15s linear infinite;
         }
@@ -553,13 +559,18 @@
                 <!-- PC用: 3カラムグリッド -->
                 <div class="hidden md:grid grid-cols-3 gap-8 w-full max-w-6xl mx-auto mb-24 relative z-10">
                     <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in">
-                        <img src="img/menu1.png" alt="お品書き1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        <img src="img/menu1.png" alt="お品書き1"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in mt-12" style="transition-delay: 150ms;">
-                        <img src="img/menu2.png" alt="お品書き2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in mt-12"
+                        style="transition-delay: 150ms;">
+                        <img src="img/menu2.png" alt="お品書き2"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in" style="transition-delay: 300ms;">
-                        <img src="img/menu3.png" alt="お品書き3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <div class="aspect-square overflow-hidden rounded-sm shadow-md fade-in"
+                        style="transition-delay: 300ms;">
+                        <img src="img/menu3.png" alt="お品書き3"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
 
@@ -791,7 +802,8 @@
                         <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
                         <h3 class="font-bold text-[var(--accent-navy)] mb-3">mayu naka</h3>
                         <div class="review-content relative flex flex-col flex-grow">
-                            <p class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
+                            <p
+                                class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
                                 せっかく新潟に来たから、新潟らしい美味しいものが食べたい！と思い、偶然見つけて足を運んでみたお店。<br>
                                 こんなに最高！って思うお店は久しぶりだったかも。<br>
                                 本当に美味しくて、素材の味が活かされるレベルの高いお料理だった！<br>
@@ -799,7 +811,8 @@
                                 さらにリーズナブル！<br>
                                 最高な時間をありがとうございました。
                             </p>
-                            <button class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
+                            <button
+                                class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
                         </div>
                     </div>
 
@@ -808,12 +821,14 @@
                         <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
                         <h3 class="font-bold text-[var(--accent-navy)] mb-3">ritsu</h3>
                         <div class="review-content relative flex flex-col flex-grow">
-                            <p class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
+                            <p
+                                class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
                                 大将のお話しがとても楽しく心地良いお店です。<br>
                                 好みに合わせてお酒を勧めてくれます。<br>
                                 お寿司も1品料理も全て美味しくいただきました。
                             </p>
-                            <button class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
+                            <button
+                                class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
                         </div>
                     </div>
 
@@ -822,17 +837,20 @@
                         <div class="flex text-[var(--accent-brown)] mb-4">★ ★ ★ ★ ★</div>
                         <h3 class="font-bold text-[var(--accent-navy)] mb-3">秋月五十鈴</h3>
                         <div class="review-content relative flex flex-col flex-grow">
-                            <p class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
+                            <p
+                                class="leading-loose tracking-wide line-clamp-3 text-[14px] md:text-[16px] transition-all duration-300">
                                 新潟駅南口から5分。趣あるアプローチを抜けると素朴な、それでいてしっとりした店内。カウンター5席ほど。18人くらい入れる小上がりは小宴会もできる。見てないけど椅子席も奥にあるのかな。寿司盛り込みはスペシャリテの「極み」。これに前菜の鳥焼きと茶碗蒸しついてこの値段は破格。大将はずっとお仕事中で言葉は交わしませんでしたが、中居のお嬢さんがとても優秀。電話予約のときからたいへん好感して、大将の指導が行き届いているんでしょう。握りはいずれも出色のネタ。シャリが大きいのは新潟特有なのか、連れ合いに合わせてくれたのか。たいへん満足した食事になりました。
                             </p>
-                            <button class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
+                            <button
+                                class="read-more-btn text-[var(--accent-brown)] text-sm font-bold mt-auto pt-4 self-start hover:opacity-80 transition-opacity">続きを読む</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Google口コミボタン -->
                 <div class="text-center mt-16 fade-in">
-                    <a href="https://www.google.com/search?sca_esv=c0bc85df0c82686c&rlz=1C1TMBY_jaJP1190JP1190&sxsrf=APpeQnuRtDstc-qbM2b8OJj-uUyI2p5Naw:1785144202882&kgmid=/g/11p48p79wx&q=%E5%AF%BF%E5%8F%B8+%E8%97%A4%E4%BA%94%E9%83%8E&shem=dlvs1,epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/1&kgs=5cdb841548ecf686&utm_source=dlvs1,epsd1,ltae,rimspwouoe,sh/x/loc/uni/m1/1#lrd=0x5ff4c98b94151c27:0x21de97e9a4b198a4,1,,,," target="_blank"
+                    <a href="https://www.google.com/search?sca_esv=c0bc85df0c82686c&rlz=1C1TMBY_jaJP1190JP1190&sxsrf=APpeQnuRtDstc-qbM2b8OJj-uUyI2p5Naw:1785144202882&kgmid=/g/11p48p79wx&q=%E5%AF%BF%E5%8F%B8+%E8%97%A4%E4%BA%94%E9%83%8E&shem=dlvs1,epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/1&kgs=5cdb841548ecf686&utm_source=dlvs1,epsd1,ltae,rimspwouoe,sh/x/loc/uni/m1/1#lrd=0x5ff4c98b94151c27:0x21de97e9a4b198a4,1,,,,"
+                        target="_blank"
                         class="inline-block bg-white border border-[var(--accent-navy)] text-[var(--accent-navy)] px-10 py-4 font-bold tracking-widest hover:bg-[var(--accent-navy)] hover:text-white transition-colors duration-300 rounded-sm">
                         その他の口コミはこちら
                     </a>
@@ -846,8 +864,8 @@
                     reviewContents.forEach(content => {
                         const p = content.querySelector('p');
                         const btn = content.querySelector('.read-more-btn');
-                        
-                        if(p && btn) {
+
+                        if (p && btn) {
                             setTimeout(() => {
                                 // 要素の実際の高さと制限された高さを比較してボタンの表示非表示を切り替え
                                 if (p.scrollHeight <= p.clientHeight) {
@@ -887,7 +905,7 @@
                     </h2>
 
                     <div class="text-gray-200 leading-[2.5] md:leading-[3] tracking-[0.15em] font-light">
-                        <p class="mb-6 md:mb-0 md:ml-8">新潟には、四季折々の魚介や地酒など、<br>この土地だからこそ味わえる魅力がたくさんあります。</p>
+                        <p class="mb-6 md:mb-0 md:ml-8">新潟には、四季折々の魚介や地酒など、<br class="hidden md:inline">この土地だからこそ味わえる魅力がたくさんあります。</p>
                         <p class="mb-6 md:mb-0 md:ml-8">私たちが大切にしているのは、良い素材を選ぶこと、<br>そしてその持ち味を職人の技で丁寧に引き出すことです。</p>
                         <p class="mb-6 md:mb-0 md:ml-8">寿司を気軽に楽しむランチから、<br>地酒とともにゆっくり過ごす夜、<br>大切な方との特別なお食事まで。</p>
                         <p>一皿一皿に心を込め、<br>新潟のおいしさを存分に感じていただける時間を<br>ご用意して、皆さまをお待ちしております。</p>
