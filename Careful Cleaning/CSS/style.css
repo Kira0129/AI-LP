@@ -1252,6 +1252,7 @@ body {
 @media (max-width: 768px) {
   .staff-info p {
     font-size: 14px;
+    text-align: left;
   }
 }
 
