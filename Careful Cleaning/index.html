@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careful Cleaning | 見えない汚れまで、丁寧に。暮らしに、安心と清潔を。</title>
+  
+  <meta name="description" content="大阪府豊中市のハウスクリーニング。エアコンから水まわりまで、プロの技術でしっかり洗浄。分かりやすい料金と丁寧な作業で、気持ちよく過ごせる住まいへ。">
+
+  <!-- フォントの読み込み: Noto Sans JP (ゴシック) & Noto Serif JP (明朝) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <a href="#" class="header-logo">Careful Cleaning</a>
+
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="#about">ABOUT</a>
+        <a href="#service">SERVICE</a>
+        <a href="#price">PRICE</a>
+        <a href="#staff">STAFF</a>
+        <a href="#store">店舗情報</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:092-600-7432" class="btn-header-tel">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          092-600-7432
+        </a>
+        <a href="https://lin.ee/nCM6ejv" target="_blank" class="btn-header-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.3c0-4.3-4.2-7.8-9.4-7.8-5.2 0-9.4 3.5-9.4 7.8 0 3.8 2.8 7.1 6.8 7.7.3.1.7.3.7.6 0 .2-.1.5-.2.8-.2.7-1 3-1.1 3.5-.1.4.1.7.5.5 2.2-1.2 5.9-3.5 7.8-5.2 2.6-2.1 4.3-4.9 4.3-7.9zM7.5 12.4H5.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9 0H9.1c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9-1.2h-1.1V7.4c0-.3-.3-.6-.6-.6h-1.2c-.3 0-.6.3-.6.6v4.4c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-1.2c0-.3-.3-.6-.6-.6zm5.1 0h-1.1v-2l-1.9 2.5c-.1.1-.3.2-.5.2h-1.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h1.1c.3 0 .6.3.6.6v2l1.9-2.5c.1-.1.3-.2.5-.2h1.2c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6z"/></svg>
+          LINEで予約
+        </a>
+      </div>
+    </div>
+
+    <!-- SP用ハンバーガー -->
+    <button class="hamburger-btn sp-only" id="hamburgerBtn" aria-label="メニューを開く">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </header>
+
+  <!-- SP用ドロワー -->
+  <nav class="sp-nav" id="spNav">
+    <div class="sp-nav-header">
+      <button class="sp-nav-close" id="spNavCloseBtn" aria-label="メニューを閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <ul class="sp-nav-list">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#service">SERVICE</a></li>
+      <li><a href="#price">PRICE</a></li>
+      <li><a href="#staff">STAFF</a></li>
+      <li><a href="#store">店舗情報</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ================= FV (Hero) ================= -->
+  <section class="hero">
+    <div class="hero-visual">
+      <img src="https://placehold.co/1200x800/ccd5e0/0f284b?text=Air+Conditioner" alt="クリーンなリビング" class="fv-slide">
+      <img src="https://placehold.co/1200x800/e0e5cd/0f284b?text=Clean+Kitchen" alt="清潔なキッチン" class="fv-slide">
+      <img src="https://placehold.co/1200x800/e0d8cd/0f284b?text=Clean+Bathroom" alt="清潔な浴室" class="fv-slide">
+    </div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title font-mincho">見えない汚れまで、丁寧に。<br>暮らしに、安心と清潔を。</h1>
+      <p class="hero-subtitle">エアコンから水まわりまで、プロの技術でしっかり洗浄。<br class="pc-only">分かりやすい料金と丁寧な作業で、気持ちよく過ごせる住まいへ。</p>
+    </div>
+    <div class="hero-wave">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.8)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(184, 150, 77, 0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= Troubles ================= -->
+  <section class="troubles">
+    <div class="inner">
+      <div class="trouble-box reveal">
+        <h2 class="trouble-title font-mincho">こんなお悩みありませんか？</h2>
+        <ul class="trouble-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> エアコンから嫌なニオイがする</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 内部のカビやホコリが気になる</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 自分では奥まで掃除できない</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> キッチンや浴室の頑固な汚れが落ちない</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 追加料金を請求されないか不安</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> どの清掃業者を選べばよいか分からない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= About ================= -->
+  <section id="about" class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">ABOUT</span>
+        <h2 class="sec-title font-mincho">Careful Cleaningについて</h2>
+      </div>
+      <div class="about-wrap reveal">
+        <div class="about-img">
+          <img src="https://placehold.co/600x400/f0f4f8/0f284b?text=Cleaning+Staff" alt="清掃作業の様子">
+        </div>
+        <div class="about-content">
+          <p>Careful Cleaningは、大阪府豊中市を拠点に、エアコンクリーニングやハウスクリーニングを行っています。</p>
+          <p>作業前に内容と料金を分かりやすくご説明し、ご納得いただいてから作業を開始します。見えない部分まで丁寧に清掃し、お客様に「お願いしてよかった」と思っていただける仕上がりを大切にしています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Service ================= -->
+  <section id="service" class="section service-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">SERVICE</span>
+        <h2 class="sec-title font-mincho">当店のこだわり</h2>
+      </div>
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=Clear+Pricing" alt="明朗な料金" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 01</span>
+            <h3 class="service-name">明朗な料金</h3>
+            <p class="service-desc">作業前に料金と作業内容を分かりやすくご説明します。追加作業や別途料金が必要な場合も、必ず事前にご案内し、ご納得いただいてから作業します。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=Deep+Cleaning" alt="プロによる徹底洗浄" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 02</span>
+            <h3 class="service-name">プロによる徹底洗浄</h3>
+            <p class="service-desc">ご家庭では掃除が難しいエアコン内部のカビやホコリ、キッチン・浴室の頑固な汚れまで、専用の機材と洗剤を使用して丁寧に洗浄します。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=Careful+Work" alt="住まいを傷つけない丁寧な作業" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 03</span>
+            <h3 class="service-name">住まいを傷つけない<br>丁寧な作業</h3>
+            <p class="service-desc">作業場所の周囲をしっかり養生し、壁・床・家具などに配慮しながら作業します。清掃後の確認や後片付けまで丁寧に行います。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=Various+Cleaning" alt="幅広い清掃に対応" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 04</span>
+            <h3 class="service-name">幅広い清掃に対応</h3>
+            <p class="service-desc">エアコンだけでなく、レンジフード、キッチン、浴室、洗面所、トイレ、窓・サッシ、ベランダまで、住まいの清掃をまとめてご相談いただけます。</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=LINE+Bonus" alt="公式LINE・お友達紹介特典" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 05</span>
+            <h3 class="service-name">公式LINE・<br>お友達紹介特典</h3>
+            <p class="service-desc">ご利用に応じて特典が受けられるショップカードをご用意。さらにお友達紹介特典もございます。現在はどちらの特典も「エアコン抗菌コート1台分無料」でご提供しています。</p>
+            <span class="service-note">※特典内容や条件は変更になる場合がございます。最新情報は公式LINEでご確認ください。</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img src="https://placehold.co/600x400/fdfbf5/b8964d?text=Satisfaction" alt="納得できる仕上がり" class="service-img">
+          <div class="service-content">
+            <span class="service-num">SERVICE 06</span>
+            <h3 class="service-name">納得できる仕上がり</h3>
+            <p class="service-desc">作業後はお客様と一緒に仕上がりを確認します。ただ汚れを落とすだけでなく、安心して気持ちよく過ごせる空間づくりを大切にしています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Price ================= -->
+  <section id="price" class="section">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">PRICE</span>
+        <h2 class="sec-title font-mincho">料金案内</h2>
+      </div>
+
+      <!-- 水回り3点セット（画像付き横並びレイアウト） -->
+      <div class="price-set-box reveal">
+        <div class="price-set-badge">まとめてお得！</div>
+        <div class="price-set-img">
+          <img src="https://placehold.co/600x600/fdfbf5/b8964d?text=Water+Area+Set" alt="水回り3点セット">
+        </div>
+        <div class="price-set-content">
+          <h3 class="price-set-title">水回り3点セット</h3>
+          <p class="price-set-desc">キッチン・レンジフード・浴室の3点<br>キッチンの油汚れ、レンジフード内部に蓄積した頑固な油やホコリ、浴室の水アカ・カビ・皮脂汚れをまとめて清掃します。ご家庭では落としにくい汚れを、場所に合わせた専用洗剤と道具で丁寧に洗浄します。</p>
+          
+          <div class="price-set-discount">通常合計 39,000円 のところ単品より 7,000円お得</div>
+          <div class="price-set-price">32,000<span>円(税込)</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">セットメニューをご利用の場合も、公式LINEショップカードのポイントが貯まります。貯まったポイントで、お得な特典をご利用いただけます。<br>※ショップカードの特典内容や適用条件は変更になる場合がございます。</p>
+        </div>
+      </div>
+
+      <!-- 単品メニュー・オプション・注意事項（1カラム縦並び） -->
+      <div class="price-tables reveal">
+        <div style="width: 100%;">
+          <h4 class="price-table-title">クリーニング単品メニュー</h4>
+          <table class="price-table" style="margin-bottom: 40px;">
+            <tbody>
+              <tr><th>エアコンノーマルタイプ</th><td>11,000円</td></tr>
+              <tr><th>お掃除機能付きエアコン</th><td>15,000円</td></tr>
+              <tr><th>レンジフードクリーニング</th><td>13,000円</td></tr>
+              <tr><th>キッチンクリーニング</th><td>13,000円</td></tr>
+              <tr><th>浴室クリーニング</th><td>13,000円</td></tr>
+              <tr><th>洗面所クリーニング</th><td>8,000円</td></tr>
+              <tr><th>トイレクリーニング</th><td>6,000円</td></tr>
+              <tr><th>窓・サッシ (1㎡)</th><td>1,000円</td></tr>
+              <tr><th>ベランダ・バルコニー (1㎡)</th><td>2,500円</td></tr>
+            </tbody>
+          </table>
+
+          <h4 class="price-table-title">オプション</h4>
+          <table class="price-table">
+            <tbody>
+              <tr><th>エアコン抗菌コート (1台)</th><td>2,500円</td></tr>
+              <tr><th>室外機クリーニング (1台)</th><td>3,500円</td></tr>
+            </tbody>
+          </table>
+
+          <ul class="price-notes">
+            <li>※すべて税込価格です。</li>
+            <li>※公式LINEのショップカード特典、お友達紹介特典をご用意しています。</li>
+            <li>※現在の特典は「エアコン抗菌コート1台分無料」です。</li>
+            <li>※特典の内容や適用条件は変更になる場合がございます。</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= Staff ================= -->
+  <section id="staff" class="section staff-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">STAFF</span>
+        <h2 class="sec-title font-mincho">スタッフ紹介</h2>
+      </div>
+      <div class="staff-list reveal">
+        <div class="staff-card">
+          <img src="https://placehold.co/200x200/f0f4f8/0f284b?text=Staff+1" alt="田中 優馬" class="staff-img">
+          <div class="staff-info">
+            <h4>田中 優馬 <span>株式会社Revive 代表取締役</span></h4>
+            <p>お客様が安心してご依頼できるよう、分かりやすい料金説明と丁寧な対応を大切にしています。「またお願いしたい」と思っていただけるサービスを目指しています。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <img src="https://placehold.co/200x200/f0f4f8/0f284b?text=Staff+2" alt="宗野 伊知郎" class="staff-img">
+          <div class="staff-info">
+            <h4>宗野 伊知郎 <span>大阪エリア担当</span></h4>
+            <p>大阪エリアの現場作業を担当しています。お客様の住まいや周囲に配慮しながら、一つひとつの作業を丁寧に行い、納得いただける仕上がりを目指します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Message ================= -->
+  <section class="section">
+    <div class="inner">
+      <div class="message-wrap reveal">
+        <div class="message-img">
+          <img src="https://placehold.co/600x600/f0f4f8/0f284b?text=Message" alt="お客様へのメッセージ">
+        </div>
+        <div class="message-content">
+          <h3 class="font-mincho" style="font-size: 24px; margin-bottom: 20px;">見えない汚れまで、丁寧に。</h3>
+          <p>
+            お客様からいただく「お願いしてよかった」という言葉を、何より大切にしています。作業内容や料金をきちんとご説明し、見えない部分まで手を抜かず丁寧に仕上げます。<br><br>
+            汚れやニオイでお困りのことがありましたら、小さなことでもお気軽にご相談ください。<br><br>
+            ご予約やご相談は公式LINEからも受け付けています。ショップカードやお友達紹介のお得な特典もございますので、ぜひご利用ください。
+          </p>
+          <a href="https://lin.ee/nCM6ejv" target="_blank" class="btn-contact-line">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.3c0-4.3-4.2-7.8-9.4-7.8-5.2 0-9.4 3.5-9.4 7.8 0 3.8 2.8 7.1 6.8 7.7.3.1.7.3.7.6 0 .2-.1.5-.2.8-.2.7-1 3-1.1 3.5-.1.4.1.7.5.5 2.2-1.2 5.9-3.5 7.8-5.2 2.6-2.1 4.3-4.9 4.3-7.9zM7.5 12.4H5.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9 0H9.1c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9-1.2h-1.1V7.4c0-.3-.3-.6-.6-.6h-1.2c-.3 0-.6.3-.6.6v4.4c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-1.2c0-.3-.3-.6-.6-.6zm5.1 0h-1.1v-2l-1.9 2.5c-.1.1-.3.2-.5.2h-1.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h1.1c.3 0 .6.3.6.6v2l1.9-2.5c.1-.1.3-.2.5-.2h1.2c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6z"/></svg>
+            LINEでお問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Store ================= -->
+  <section id="store" class="section staff-bg">
+    <div class="inner">
+      <div class="sec-title-wrap reveal">
+        <span class="sec-label">STORE</span>
+        <h2 class="sec-title font-mincho">店舗情報</h2>
+      </div>
+      <div class="store-container reveal">
+        <div class="store-info">
+          <h3>Careful Cleaning</h3>
+          <table class="store-info-table">
+            <tbody>
+              <tr>
+                <th>店舗名</th>
+                <td>Careful Cleaning（ケアフルクリーニング）</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>大阪府豊中市柴原町3丁目</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:092-600-7432" style="color: inherit; text-decoration: none;">092-600-7432</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>9:00〜19:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>不定休</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="https://www.instagram.com/careful_cleaning.fuk.osa?igsh=ZnJieWJpb3B4NWx1&utm_source=qr" target="_blank" class="btn-sns-insta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagramを見る
+          </a>
+        </div>
+        <div class="map-container">
+          <!-- 豊中市柴原町3丁目付近のマップ（埋め込み用パラメータ） -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.1340156947234!2d135.4593452!3d34.8055458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f074d6b63c4d%3A0x6b9d6a35d94bc028!2z5aSn6Ziq5bqc6LGK5Lit5biC5p-05Y6f55S677yT5LiB55uu!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer & CTA ================= -->
+  <footer class="site-footer">
+    <p style="font-size: 13px; letter-spacing: 0.1em;">&copy; Careful Cleaning All Rights Reserved.</p>
+  </footer>
+
+  <!-- SP Sticky CTA -->
+  <div class="sp-sticky-cta sp-only">
+    <a href="tel:092-600-7432" class="btn-cta-tel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>電話で相談</span>
+    </a>
+    <a href="https://lin.ee/nCM6ejv" target="_blank" class="btn-cta-line">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.3c0-4.3-4.2-7.8-9.4-7.8-5.2 0-9.4 3.5-9.4 7.8 0 3.8 2.8 7.1 6.8 7.7.3.1.7.3.7.6 0 .2-.1.5-.2.8-.2.7-1 3-1.1 3.5-.1.4.1.7.5.5 2.2-1.2 5.9-3.5 7.8-5.2 2.6-2.1 4.3-4.9 4.3-7.9zM7.5 12.4H5.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9 0H9.1c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h2.3c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6zm3.9-1.2h-1.1V7.4c0-.3-.3-.6-.6-.6h-1.2c-.3 0-.6.3-.6.6v4.4c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-1.2c0-.3-.3-.6-.6-.6zm5.1 0h-1.1v-2l-1.9 2.5c-.1.1-.3.2-.5.2h-1.2c-.3 0-.6-.3-.6-.6V7.4c0-.3.3-.6.6-.6h1.1c.3 0 .6.3.6.6v2l1.9-2.5c.1-.1.3-.2.5-.2h1.2c.3 0 .6.3.6.6v4.4c0 .3-.3.6-.6.6z"/></svg>
+      <span>LINEで予約</span>
+    </a>
+  </div>
+
+  <!-- ================= Scripts ================= -->
+  <script src="js/main.js"></script>
+</body>
+</html>
