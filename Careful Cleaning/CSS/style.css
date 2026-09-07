@@ -996,6 +996,13 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+@media (max-width: 768px) {
+  .price-table th,
+  .price-table td {
+    padding: 15px 10px;
+  }
+}
+
 .price-table th {
   text-align: left;
   font-weight: 500;
