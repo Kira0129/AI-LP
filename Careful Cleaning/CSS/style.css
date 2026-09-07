@@ -1048,7 +1048,6 @@ body {
 .message-img img {
   width: 100%;
   max-width: 450px;
-  aspect-ratio: 3/4;
   object-fit: cover;
   border: none;
   border-radius: 0;
