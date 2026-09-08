@@ -663,12 +663,14 @@ section {
   padding-left: 24px;
   color: var(--color-text-main);
   font-size: 14px;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: auto-phrase;
 }
 
 @media (min-width: 768px) {
   .worry-list li {
     font-size: 16px;
+    white-space: nowrap;
   }
 }
 
