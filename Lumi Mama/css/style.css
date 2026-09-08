@@ -1006,21 +1006,49 @@ section {
     ========================================================== */
 #message {
   background-color: var(--color-beige-light);
-  text-align: center;
+}
+
+.message-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .message-grid {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .message-text {
+    width: 55%;
+  }
+  
+  .message-image {
+    width: 45%;
+  }
+}
+
+.message-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
 }
 
 .message-catch {
   font-family: var(--font-heading);
   font-size: clamp(22px, 4vw, 28px);
   color: var(--color-text-main);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .message-body {
   color: var(--color-text-light);
-  max-width: 700px;
-  margin: 0 auto 80px;
 }
 
 .message-body p {
