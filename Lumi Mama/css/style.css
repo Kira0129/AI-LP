@@ -2,22 +2,21 @@
        VARIABLES
     ========================================================== */
 :root {
-  /* Color Palette: くすみピンク、ベージュ、白 */
-  --color-pink-light: #f7f3f2;
-  --color-pink-main: #d6baba;
-  --color-pink-dark: #b59595;
+  /* Color Palette: エレガントなくすみピンク、ベージュ、白 */
+  --color-pink-light: #f9f6f6;
+  --color-pink-main: #d3bebe;
+  --color-pink-dark: #b09797;
 
-  --color-beige-light: #fcfaf8;
-  --color-beige-main: #ebe3dc;
-  --color-beige-dark: #d1c5bc;
+  --color-beige-light: #fbfaf9;
+  --color-beige-main: #e8e2dd;
+  --color-beige-dark: #c9bfb8;
 
   --color-white: #ffffff;
 
-  --color-text-main: #4a3e3d;
-  --color-text-light: #807372;
+  --color-text-main: #3b3332;
+  --color-text-light: #7a6e6d;
 
   --color-line: #06c755;
-  /* LINE Official Color */
 
   /* Typography */
   --font-jp: 'Noto Sans JP', sans-serif;
@@ -126,21 +125,22 @@ section {
 }
 
 .section-heading-en {
+  display: block;
   font-family: var(--font-en);
-  font-size: clamp(32px, 5vw, 46px);
-  font-style: italic;
+  font-size: clamp(32px, 5vw, 42px);
   color: var(--color-pink-dark);
   margin-bottom: 10px;
-  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-weight: 400;
 }
 
 .section-heading-ja {
-  font-family: var(--font-heading);
+  display: block;
+  font-family: var(--font-jp);
   font-size: 13px;
-  letter-spacing: 0.2em;
   color: var(--color-text-light);
-  display: inline-block;
-  position: relative;
+  letter-spacing: 0.15em;
+  font-weight: 300;
 }
 
 .section-heading-ja::before,
@@ -169,21 +169,21 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--color-line);
-  color: #fff !important;
-  font-family: var(--font-jp);
-  font-size: 15px;
+  background-color: var(--color-line);
+  color: var(--color-white);
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  padding: 16px 40px;
-  border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(6, 199, 85, 0.2);
+  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-line:hover {
-  background: #05b34c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(6, 199, 85, 0.3);
 }
 
 /* ==========================================================
@@ -743,10 +743,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #fff;
+  background: var(--color-white);
   padding: 40px;
-  border: 1px solid var(--color-beige-main);
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
   align-items: center;
   text-align: center;
 }
@@ -822,13 +822,12 @@ section {
 
 .feature-card {
   background: var(--color-white);
-  border: 1px solid var(--color-beige-main);
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(214, 186, 186, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-card:hover {
