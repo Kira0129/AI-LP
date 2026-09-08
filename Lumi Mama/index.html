@@ -1,645 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumi Mama｜ママのための産前産後ケア・訪問助産師</title>
-  <meta name="description" content="妊娠中から産後まで。助産師がご自宅へ伺い、心と身体に寄り添います。練馬区を中心とした訪問専門の産前産後ケアサービス。">
+  <title>Lumi Mama・懊・繝槭・縺溘ａ縺ｮ逕｣蜑咲肇蠕後こ繧｢繝ｻ險ｪ蝠丞勧逕｣蟶ｫ</title>
+  <meta name="description" content="螯雁ｨ荳ｭ縺九ｉ逕｣蠕後∪縺ｧ縲ょ勧逕｣蟶ｫ縺後＃閾ｪ螳・∈莨ｺ縺・∝ｿ・→霄ｫ菴薙↓蟇・ｊ豺ｻ縺・∪縺吶らｷｴ鬥ｬ蛹ｺ繧剃ｸｭ蠢・→縺励◆險ｪ蝠丞ｰる摩縺ｮ逕｣蜑咲肇蠕後こ繧｢繧ｵ繝ｼ繝薙せ縲・>
   
-  <!-- Fonts: モダンゴシック、エレガントな明朝体、スタイリッシュな欧文フォント -->
+  <!-- Fonts: 繝｢繝繝ｳ繧ｴ繧ｷ繝・け縲√お繝ｬ繧ｬ繝ｳ繝医↑譏取悃菴薙√せ繧ｿ繧､繝ｪ繝・す繝･縺ｪ谺ｧ譁・ヵ繧ｩ繝ｳ繝・-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    /* ==========================================================
-       VARIABLES
-    ========================================================== */
-    :root {
-      /* Color Palette: くすみピンク、ベージュ、白 */
-      --color-pink-light: #f7f3f2;
-      --color-pink-main: #d6baba;
-      --color-pink-dark: #b59595;
-      
-      --color-beige-light: #fcfaf8;
-      --color-beige-main: #ebe3dc;
-      --color-beige-dark: #d1c5bc;
-      
-      --color-white: #ffffff;
-      
-      --color-text-main: #4a3e3d;
-      --color-text-light: #807372;
-      
-      --color-line: #06c755; /* LINE Official Color */
-
-      /* Typography */
-      --font-jp: 'Noto Sans JP', sans-serif;
-      --font-heading: 'Shippori Mincho', serif;
-      --font-en: 'Playfair Display', serif;
-
-      --max-width: 1000px;
-      --section-padding: 100px 20px;
-    }
-
-    /* ==========================================================
-       RESET & BASE
-    ========================================================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    body {
-      font-family: var(--font-jp);
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 2;
-      letter-spacing: 0.06em;
-      color: var(--color-text-main);
-      background-color: var(--color-white);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    @media (max-width: 767px) {
-      body {
-        font-size: 14px;
-        line-height: 1.8;
-      }
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .sp-br { display: none; }
-    .pc-br { display: block; }
-    @media (max-width: 767px) {
-      .sp-br { display: block; }
-      .pc-br { display: none; }
-    }
-
-    /* ==========================================================
-       LAYOUT & COMPONENTS
-    ========================================================== */
-    .section-inner {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    section {
-      padding: var(--section-padding);
-      position: relative;
-    }
-
-    @media (max-width: 767px) {
-      section { padding: 70px 20px; }
-    }
-
-    /* Section Headings */
-    .section-heading {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-heading-en {
-      font-family: var(--font-en);
-      font-size: clamp(32px, 5vw, 46px);
-      font-style: italic;
-      color: var(--color-pink-dark);
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
-
-    .section-heading-ja {
-      font-family: var(--font-heading);
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      color: var(--color-text-light);
-      display: inline-block;
-      position: relative;
-    }
-    .section-heading-ja::before,
-    .section-heading-ja::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 30px;
-      height: 1px;
-      background-color: var(--color-beige-dark);
-    }
-    .section-heading-ja::before { right: 100%; margin-right: 15px; }
-    .section-heading-ja::after { left: 100%; margin-left: 15px; }
-
-    /* Buttons */
-    .btn-line {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--color-line);
-      color: #fff !important;
-      font-family: var(--font-jp);
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      padding: 16px 40px;
-      border-radius: 4px;
-      box-shadow: 0 4px 15px rgba(6, 199, 85, 0.2);
-    }
-    .btn-line:hover {
-      background: #05b34c;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(6, 199, 85, 0.3);
-    }
-
-    /* ==========================================================
-       HEADER
-    ========================================================== */
-    #site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s;
-      border-bottom: 1px solid transparent;
-    }
-    #site-header.scrolled {
-      border-bottom: 1px solid var(--color-pink-light);
-      box-shadow: 0 2px 10px rgba(74, 62, 61, 0.03);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      height: 70px;
-    }
-
-    .header-logo a {
-      font-family: var(--font-en);
-      font-size: 24px;
-      font-style: italic;
-      color: var(--color-text-main);
-      font-weight: 500;
-    }
-
-    .header-nav { display: none; }
-    @media (min-width: 900px) {
-      .header-nav {
-        display: flex;
-        gap: 30px;
-        align-items: center;
-      }
-      .header-nav a:not(.btn-line) {
-        font-family: var(--font-en);
-        font-size: 14px;
-        color: var(--color-text-light);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .header-nav a:not(.btn-line):hover { color: var(--color-pink-dark); }
-      .header-nav .btn-line { padding: 10px 24px; font-size: 13px; }
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      z-index: 1100;
-    }
-    @media (min-width: 900px) { .hamburger { display: none; } }
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 1px;
-      background: var(--color-text-main);
-      transition: 0.3s;
-    }
-
-    #nav-overlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: var(--color-beige-light);
-      z-index: 2000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: 0.4s;
-    }
-    #nav-overlay.open { opacity: 1; pointer-events: all; }
-    
-    .overlay-close {
-      position: absolute; top: 20px; right: 20px;
-      background: none; border: none; font-size: 30px;
-      color: var(--color-text-light); cursor: pointer;
-    }
-    .overlay-nav ul {
-      display: flex; flex-direction: column; gap: 30px; text-align: center;
-    }
-    .overlay-nav a {
-      font-family: var(--font-en); font-size: 20px; color: var(--color-text-main);
-      text-transform: uppercase; letter-spacing: 0.1em;
-    }
-
-    /* ==========================================================
-       FV (指定レイアウト維持・デザインのみ変更)
-    ========================================================== */
-    #fv {
-      position: relative;
-      height: 100vh;
-      min-height: 660px;
-      width: 100%;
-      overflow: hidden;
-      padding: 0;
-    }
-    .fv-slideshow {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
-    }
-    .fv-slide {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      opacity: 0; animation: fvFade 12s infinite;
-    }
-    .fv-slide img { width: 100%; height: 100%; object-fit: cover; }
-    .fv-slide::after {
-      content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.1); /* 画像を少し落ち着かせる */
-    }
-    .fv-slide-1 { animation-delay: 0s; }
-    .fv-slide-2 { animation-delay: 6s; }
-
-    @keyframes fvFade {
-      0% { opacity: 0; transform: scale(1.0); }
-      15% { opacity: 1; }
-      50% { opacity: 1; }
-      65% { opacity: 0; }
-      100% { opacity: 0; transform: scale(1.05); }
-    }
-
-    .fv-left-overlay {
-      position: absolute; top: 0; left: 0;
-      width: clamp(400px, 60%, 800px);
-      height: 100%; z-index: 10;
-    }
-    .fv-left-overlay::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(252,250,248,0.8) 60%, rgba(255,255,255,0) 100%);
-      backdrop-filter: blur(4px);
-      z-index: -1;
-    }
-
-    .fv-content {
-      position: relative; z-index: 2;
-      display: flex; flex-direction: column; justify-content: center;
-      height: 100%; padding: 0 clamp(30px, 8%, 80px);
-    }
-
-    .fv-deco-top { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
-    .fv-deco-line { display: block; flex: 1; height: 1px; background: var(--color-pink-main); }
-    .fv-deco-dot {
-      display: block; width: 8px; height: 8px; background: var(--color-beige-dark);
-      transform: rotate(45deg);
-    }
-
-    .fv-catch-en {
-      font-family: var(--font-en); font-size: clamp(14px, 1.5vw, 16px);
-      color: var(--color-pink-dark); letter-spacing: 0.2em; margin-bottom: 20px;
-      font-style: italic;
-    }
-    .fv-main-catch {
-      font-family: var(--font-heading); font-size: clamp(32px, 4.5vw, 54px);
-      font-weight: 500; line-height: 1.4; color: var(--color-text-main);
-      margin-bottom: 30px; letter-spacing: 0.05em;
-    }
-    .fv-main-catch-sub {
-      font-family: var(--font-jp); font-size: clamp(14px, 1.8vw, 16px);
-      line-height: 2.2; color: var(--color-text-light); margin-bottom: 50px;
-    }
-
-    .fv-pr-badges { display: flex; gap: 20px; flex-wrap: wrap; }
-    .fv-pr-badge {
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      background: rgba(255,255,255,0.8); color: var(--color-text-main);
-      font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.1em; text-align: center;
-      width: 110px; height: 110px; border-radius: 50%;
-      border: 1px solid var(--color-pink-main);
-      line-height: 1.4;
-    }
-    .fv-deco-bottom { margin-top: 50px; }
-    .fv-deco-bottom .fv-deco-line { width: 100%; }
-
-    @media (max-width: 767px) {
-      #fv { height: auto; min-height: auto; padding-top: 70px; display: flex; flex-direction: column; }
-      .fv-slideshow { position: relative; height: 50vh; }
-      .fv-left-overlay {
-        position: relative; width: 100%; height: auto; background: var(--color-white);
-      }
-      .fv-left-overlay::before { display: none; }
-      .fv-content { padding: 50px 20px; }
-      .fv-pr-badges { justify-content: center; gap: 15px; }
-      .fv-pr-badge { width: 90px; height: 90px; font-size: 12px; }
-    }
-
-    /* ==========================================================
-       WORRY
-    ========================================================== */
-    #worry { background-color: var(--color-beige-light); }
-    .worry-inner {
-      display: flex; flex-direction: column; gap: 40px;
-      background: #fff; padding: 50px; border: 1px solid var(--color-beige-main);
-    }
-    @media (min-width: 768px) {
-      .worry-inner { flex-direction: row; align-items: center; padding: 70px 50px; }
-      .worry-text { width: 55%; padding-right: 40px; }
-      .worry-image { width: 45%; }
-    }
-    .worry-catch {
-      font-family: var(--font-heading); font-size: clamp(22px, 4vw, 28px);
-      color: var(--color-text-main); margin-bottom: 30px; line-height: 1.5;
-    }
-    .worry-list { display: flex; flex-direction: column; gap: 15px; }
-    .worry-list li {
-      position: relative; padding-left: 24px; color: var(--color-text-light);
-    }
-    .worry-list li::before {
-      content: '◆'; position: absolute; left: 0; top: 0;
-      color: var(--color-pink-dark); font-size: 12px; line-height: 2;
-    }
-    .worry-image img { width: 100%; height: 350px; object-fit: cover; }
-
-    /* ==========================================================
-       CTA BANNER
-    ========================================================== */
-    .cta-band {
-      background-color: var(--color-white); padding: 80px 20px;
-      text-align: center;
-    }
-    .cta-band-inner {
-      max-width: 800px; margin: 0 auto; padding: 60px 40px;
-      background: var(--color-beige-light); border: 1px solid var(--color-pink-light);
-    }
-    .cta-tagline {
-      font-family: var(--font-heading); font-size: clamp(20px, 4vw, 26px);
-      color: var(--color-text-main); margin-bottom: 20px;
-    }
-    .cta-desc { color: var(--color-text-light); margin-bottom: 30px; }
-    .cta-btn-note { font-size: 12px; color: var(--color-text-light); margin-top: 10px; }
-
-    /* ==========================================================
-       ABOUT
-    ========================================================== */
-    #about { background-color: var(--color-white); }
-    .about-grid { display: flex; flex-direction: column; gap: 40px; }
-    @media (min-width: 768px) {
-      .about-grid { flex-direction: row; align-items: center; }
-      .about-image { width: 50%; }
-      .about-text { width: 50%; padding-left: 60px; }
-    }
-    .about-image img { width: 100%; height: 450px; object-fit: cover; }
-    .about-catch {
-      font-family: var(--font-heading); font-size: clamp(20px, 3.5vw, 26px);
-      line-height: 1.6; color: var(--color-text-main); margin-bottom: 30px;
-    }
-    .about-body p { margin-bottom: 20px; color: var(--color-text-light); }
-
-    /* ==========================================================
-       SERVICE
-    ========================================================== */
-    #service { background-color: var(--color-beige-light); }
-    .service-list { display: flex; flex-direction: column; gap: 60px; }
-    .service-item {
-      display: flex; flex-direction: column; gap: 30px;
-      background: #fff; padding: 40px; border: 1px solid var(--color-beige-main);
-    }
-    @media (min-width: 768px) {
-      .service-item { flex-direction: row; align-items: center; padding: 0; border: none; background: transparent; }
-      .service-item:nth-child(even) { flex-direction: row-reverse; }
-      .service-img { width: 45%; }
-      .service-content { width: 55%; padding: 40px 60px; background: #fff; border: 1px solid var(--color-beige-main); margin-left: -50px; position: relative; z-index: 2; }
-      .service-item:nth-child(even) .service-content { margin-left: 0; margin-right: -50px; }
-    }
-    .service-img img { width: 100%; height: 300px; object-fit: cover; }
-    .service-title {
-      font-family: var(--font-heading); font-size: 22px; color: var(--color-text-main);
-      margin-bottom: 10px; border-bottom: 1px solid var(--color-pink-light); padding-bottom: 15px;
-    }
-    .service-sub {
-      font-size: 14px; color: var(--color-pink-dark); margin-bottom: 20px; font-weight: 500;
-    }
-
-    /* ==========================================================
-       FEATURE
-    ========================================================== */
-    #feature { background-color: var(--color-white); }
-    .feature-grid {
-      display: grid; grid-template-columns: 1fr; gap: 40px;
-    }
-    @media (min-width: 768px) {
-      .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-    }
-    .feature-card {
-      background: var(--color-white);
-      border: 1px solid var(--color-beige-main);
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(214, 186, 186, 0.15);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-5px);
-    }
-    .feature-img {
-      width: 100%;
-      height: 240px;
-      overflow: hidden;
-      position: relative;
-    }
-    .feature-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .feature-card:hover .feature-img img {
-      transform: scale(1.05);
-    }
-    .feature-content {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      position: relative;
-    }
-    .feature-header {
-      display: flex;
-      align-items: baseline;
-      gap: 15px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--color-pink-light);
-      padding-bottom: 15px;
-    }
-    .feature-num {
-      font-family: var(--font-en);
-      font-size: 32px;
-      color: var(--color-pink-main);
-      font-style: italic;
-      line-height: 1;
-    }
-    .feature-title {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      color: var(--color-text-main);
-      line-height: 1.5;
-    }
-    .feature-desc { color: var(--color-text-light); text-align: left; line-height: 1.8; }
-
-    /* ==========================================================
-       PRICE
-    ========================================================== */
-    #price { background-color: var(--color-beige-light); }
-    .price-notice {
-      text-align: center; font-size: 13px; color: var(--color-text-light);
-      margin-top: 50px; padding: 20px; border: 1px solid var(--color-pink-main); background: #fff;
-    }
-    .price-list-wrapper {
-      background: #fff; padding: 50px; border: 1px solid var(--color-beige-main);
-    }
-    @media (max-width: 767px) { .price-list-wrapper { padding: 30px 20px; } }
-    
-    .price-item { margin-bottom: 40px; }
-    .price-item:last-child { margin-bottom: 0; }
-    .price-header {
-      display: flex; justify-content: space-between; align-items: baseline;
-      border-bottom: 1px solid var(--color-beige-dark); padding-bottom: 10px; margin-bottom: 15px;
-    }
-    .price-name { font-family: var(--font-heading); font-size: 18px; color: var(--color-text-main); }
-    .price-cost { font-family: var(--font-en); font-size: 22px; color: var(--color-pink-dark); }
-    .price-cost span { font-family: var(--font-jp); font-size: 14px; }
-    .price-desc { font-size: 14px; color: var(--color-text-light); }
-    .price-campaign { color: var(--color-pink-dark); font-weight: 500; margin-top: 5px; }
-
-    /* ==========================================================
-       MESSAGE & STAFF
-    ========================================================== */
-    #message { background-color: var(--color-white); text-align: center; }
-    .message-catch {
-      font-family: var(--font-heading); font-size: clamp(22px, 4vw, 28px);
-      color: var(--color-text-main); margin-bottom: 40px; line-height: 1.6;
-    }
-    .message-body {
-      color: var(--color-text-light); max-width: 700px; margin: 0 auto 80px;
-    }
-    .message-body p { margin-bottom: 25px; }
-
-    .staff-box {
-      display: flex; flex-direction: column; align-items: center; gap: 40px;
-      max-width: 800px; margin: 0 auto; text-align: left;
-    }
-    @media (min-width: 768px) {
-      .staff-box { flex-direction: row; align-items: flex-start; }
-      .staff-img { width: 250px; flex-shrink: 0; }
-      .staff-info { flex-grow: 1; }
-    }
-    .staff-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
-    .staff-role { font-size: 13px; color: var(--color-pink-dark); letter-spacing: 0.1em; }
-    .staff-name { font-family: var(--font-heading); font-size: 24px; color: var(--color-text-main); margin-bottom: 20px; }
-    .staff-cert { font-size: 13px; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.8; }
-    .staff-text { font-size: 14px; color: var(--color-text-light); }
-
-    /* ==========================================================
-       CONTACT / ACCESS
-    ========================================================== */
-    #contact { background-color: var(--color-beige-light); }
-    .contact-grid { display: flex; flex-direction: column; gap: 40px; }
-    @media (min-width: 768px) {
-      .contact-grid { flex-direction: row; align-items: stretch; }
-      .contact-info { width: 40%; }
-      .contact-map { width: 60%; }
-    }
-    .contact-info { background: #fff; padding: 40px; border: 1px solid var(--color-beige-main); }
-    .contact-name { font-family: var(--font-en); font-size: 24px; font-style: italic; margin-bottom: 30px; text-align: center;}
-    .contact-table { width: 100%; font-size: 14px; color: var(--color-text-light); }
-    .contact-table th { width: 80px; text-align: left; padding: 15px 0; font-weight: normal; border-bottom: 1px solid var(--color-beige-main); }
-    .contact-table td { padding: 15px 0; border-bottom: 1px solid var(--color-beige-main); }
-    .sns-links { margin-top: 30px; text-align: center; }
-    .sns-links a { font-size: 24px; color: var(--color-text-light); margin: 0 10px; }
-    .sns-links a:hover { color: var(--color-pink-dark); }
-    
-    .contact-map iframe { width: 100%; height: 100%; min-height: 350px; border: none; }
-
-    /* ==========================================================
-       FOOTER & UTILS
-    ========================================================== */
-    #site-footer {
-      background: var(--color-text-main); padding: 50px 20px 100px;
-      text-align: center; color: rgba(255,255,255,0.6);
-    }
-    .footer-logo { font-family: var(--font-en); font-size: 24px; font-style: italic; color: #fff; margin-bottom: 10px; }
-    .footer-copy { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
-
-    #sp-sticky-cta {
-      position: fixed; bottom: 0; left: 0; width: 100%; z-index: 900;
-      background: rgba(255,255,255,0.95); padding: 15px 20px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.05); display: flex; justify-content: center;
-    }
-    .sticky-btn { width: 100%; max-width: 400px; }
-    @media (min-width: 768px) { #sp-sticky-cta { display: none; } #site-footer { padding-bottom: 50px; } }
-
-    #scroll-top {
-      position: fixed; bottom: 90px; right: 20px; width: 45px; height: 45px;
-      background: var(--color-beige-dark); color: #fff; border: none; font-size: 18px;
-      cursor: pointer; opacity: 0; pointer-events: none; transition: 0.3s; z-index: 500;
-    }
-    @media (min-width: 768px) { #scroll-top { bottom: 30px; } }
-    #scroll-top.visible { opacity: 1; pointer-events: auto; }
-    #scroll-top:hover { background: var(--color-pink-dark); }
-
-    /* Animations */
-    .reveal { opacity: 0; transform: translateY(30px); transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
-    .delay-100 { transition-delay: 100ms; }
-    .delay-200 { transition-delay: 200ms; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -657,8 +30,7 @@
         <a href="#message">Message</a>
         <a href="#contact">Contact</a>
         <a href="https://lin.ee/YTfpfCV" target="_blank" rel="noopener noreferrer" class="btn-line">
-          <i class="fa-brands fa-line"></i> LINE予約
-        </a>
+          <i class="fa-brands fa-line"></i> LINE莠育ｴ・        </a>
       </nav>
       <button class="hamburger" id="hamburger-btn">
         <span></span><span></span><span></span>
@@ -679,8 +51,7 @@
         <li><a href="#contact">Contact</a></li>
         <li>
           <a href="https://lin.ee/YTfpfCV" target="_blank" rel="noopener noreferrer" class="btn-line" style="margin-top: 20px;">
-            <i class="fa-brands fa-line"></i> LINE予約
-          </a>
+            <i class="fa-brands fa-line"></i> LINE莠育ｴ・          </a>
         </li>
       </ul>
     </nav>
@@ -691,10 +62,10 @@
     <section id="fv">
       <div class="fv-slideshow">
         <div class="fv-slide fv-slide-1">
-          <img src="https://images.unsplash.com/photo-1530047139082-54337fae1df1?auto=format&fit=crop&w=1920&q=80" alt="マタニティ">
+          <img src="https://images.unsplash.com/photo-1530047139082-54337fae1df1?auto=format&fit=crop&w=1920&q=80" alt="繝槭ち繝九ユ繧｣">
         </div>
         <div class="fv-slide fv-slide-2">
-          <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1920&q=80" alt="赤ちゃんとママ">
+          <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1920&q=80" alt="襍､縺｡繧・ｓ縺ｨ繝槭・">
         </div>
       </div>
       <div class="fv-left-overlay">
@@ -704,16 +75,15 @@
           </div>
           <p class="fv-catch-en">For Your Mind & Body</p>
           <h2 class="fv-main-catch">
-            ママを、<br>そっと照らす光に
+            繝槭・繧偵・br>縺昴▲縺ｨ辣ｧ繧峨☆蜈峨↓
           </h2>
           <p class="fv-main-catch-sub">
-            妊娠中から産後まで。<br>助産師がご自宅へ伺い、<br class="sp-br">心と身体に寄り添います。
-          </p>
+            螯雁ｨ荳ｭ縺九ｉ逕｣蠕後∪縺ｧ縲・br>蜉ｩ逕｣蟶ｫ縺後＃閾ｪ螳・∈莨ｺ縺・・br class="sp-br">蠢・→霄ｫ菴薙↓蟇・ｊ豺ｻ縺・∪縺吶・          </p>
           <div class="fv-bottom-area">
             <div class="fv-pr-badges">
-              <span class="fv-pr-badge">訪問専門</span>
-              <span class="fv-pr-badge">助産師歴<br>25年</span>
-              <span class="fv-pr-badge">オーダー<br>メイドケア</span>
+              <span class="fv-pr-badge">險ｪ蝠丞ｰる摩</span>
+              <span class="fv-pr-badge">蜉ｩ逕｣蟶ｫ豁ｴ<br>25蟷ｴ</span>
+              <span class="fv-pr-badge">繧ｪ繝ｼ繝繝ｼ<br>繝｡繧､繝峨こ繧｢</span>
             </div>
           </div>
           <div class="fv-deco-bottom"><span class="fv-deco-line"></span></div>
@@ -726,23 +96,23 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Worry</h2>
-          <span class="section-heading-ja">こんなお悩みありませんか</span>
+          <span class="section-heading-ja">縺薙ｓ縺ｪ縺頑か縺ｿ縺ゅｊ縺ｾ縺帙ｓ縺・/span>
         </div>
         <div class="worry-inner reveal delay-100">
           <div class="worry-text">
-            <h3 class="worry-catch">心や身体に、<br>無理を重ねていませんか？</h3>
+            <h3 class="worry-catch">蠢・ｄ霄ｫ菴薙↓縲・br>辟｡逅・ｒ驥阪・縺ｦ縺・∪縺帙ｓ縺具ｼ・/h3>
             <ul class="worry-list">
-              <li>妊娠中の身体の不調が気になる</li>
-              <li>産後の腰や骨 চট্টগ্রামেরまわりに違和感がある</li>
-              <li>授乳や抱っこで肩や首がつらい</li>
-              <li>睡眠不足で疲れがなかなか取れない</li>
-              <li>むくみや身体の重さが気になる</li>
-              <li>赤ちゃんがいて、自分のケアのために外出するのが難しい</li>
-              <li>授乳や育児についても一緒に相談したい</li>
+              <li>螯雁ｨ荳ｭ縺ｮ霄ｫ菴薙・荳崎ｪｿ縺梧ｰ励↓縺ｪ繧・/li>
+              <li>逕｣蠕後・閻ｰ繧・ｪｨ 爬壟ｦ游ｧ財ｦ游ｦ伶ｧ財ｦｰ爬ｾ爬ｮ爰・ｦｰ縺ｾ繧上ｊ縺ｫ驕募柱諢溘′縺ゅｋ</li>
+              <li>謗井ｹｳ繧・干縺｣縺薙〒閧ｩ繧・ｦ悶′縺､繧峨＞</li>
+              <li>逹｡逵荳崎ｶｳ縺ｧ逍ｲ繧後′縺ｪ縺九↑縺句叙繧後↑縺・/li>
+              <li>繧縺上∩繧・ｺｫ菴薙・驥阪＆縺梧ｰ励↓縺ｪ繧・/li>
+              <li>襍､縺｡繧・ｓ縺後＞縺ｦ縲∬・蛻・・繧ｱ繧｢縺ｮ縺溘ａ縺ｫ螟門・縺吶ｋ縺ｮ縺碁屮縺励＞</li>
+              <li>謗井ｹｳ繧・ご蜈舌↓縺､縺・※繧ゆｸ邱偵↓逶ｸ隲・＠縺溘＞</li>
             </ul>
           </div>
           <div class="worry-image">
-            <img src="https://images.unsplash.com/photo-1607004468138-e7e23ea26947?auto=format&fit=crop&w=800&q=80" alt="悩む女性">
+            <img src="https://images.unsplash.com/photo-1607004468138-e7e23ea26947?auto=format&fit=crop&w=800&q=80" alt="謔ｩ繧螂ｳ諤ｧ">
           </div>
         </div>
       </div>
@@ -751,12 +121,11 @@
     <!-- CTA -->
     <div class="cta-band">
       <div class="cta-band-inner reveal">
-        <h2 class="cta-tagline">心と身体に寄り添う、<br class="sp-br">訪問ケア</h2>
-        <p class="cta-desc">「少し休みたい」「誰かに相談したい」<br>そんな時は一人で抱え込まず、ご相談ください。</p>
+        <h2 class="cta-tagline">蠢・→霄ｫ菴薙↓蟇・ｊ豺ｻ縺・・br class="sp-br">險ｪ蝠上こ繧｢</h2>
+        <p class="cta-desc">縲悟ｰ代＠莨代∩縺溘＞縲阪瑚ｪｰ縺九↓逶ｸ隲・＠縺溘＞縲・br>縺昴ｓ縺ｪ譎ゅ・荳莠ｺ縺ｧ謚ｱ縺郁ｾｼ縺ｾ縺壹√＃逶ｸ隲・￥縺縺輔＞縲・/p>
         <a href="https://lin.ee/YTfpfCV" target="_blank" rel="noopener noreferrer" class="btn-line">
-          <i class="fa-brands fa-line" style="font-size: 1.2em;"></i> お問い合わせ・LINE予約
-        </a>
-        <p class="cta-btn-note">※お友達追加後、メッセージをお送りください。</p>
+          <i class="fa-brands fa-line" style="font-size: 1.2em;"></i> 縺雁撫縺・粋繧上○繝ｻLINE莠育ｴ・        </a>
+        <p class="cta-btn-note">窶ｻ縺雁暑驕碑ｿｽ蜉蠕後√Γ繝・そ繝ｼ繧ｸ繧偵♀騾√ｊ縺上□縺輔＞縲・/p>
       </div>
     </div>
 
@@ -765,19 +134,19 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">About</h2>
-          <span class="section-heading-ja">Lumi Mamaについて</span>
+          <span class="section-heading-ja">Lumi Mama縺ｫ縺､縺・※</span>
         </div>
         <div class="about-grid">
           <div class="about-image reveal">
-            <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1000&q=80" alt="リラックスする時間">
+            <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1000&q=80" alt="繝ｪ繝ｩ繝・け繧ｹ縺吶ｋ譎る俣">
           </div>
           <div class="about-text reveal delay-100">
-            <h3 class="about-catch">外出しなくていい、<br>ママのための産前産後ケア</h3>
+            <h3 class="about-catch">螟門・縺励↑縺上※縺・＞縲・br>繝槭・縺ｮ縺溘ａ縺ｮ逕｣蜑咲肇蠕後こ繧｢</h3>
             <div class="about-body">
-              <p>Lumi Mamaは、練馬区を中心にご自宅へ伺う、訪問専門の産前産後ケアサービスです。</p>
-              <p>妊娠中や産後は、身体の変化だけでなく、睡眠不足や育児による疲れなど、さまざまな負担が重なる時期。<br>「身体をケアしたいけれど、赤ちゃんを連れて外出するのが大変」</p>
-              <p>そんなママにも、自分自身をいたわる時間を持ってほしいという想いから、訪問スタイルでケアを行っています。</p>
-              <p>助産師歴25年の経験を活かし、身体の状態やその日の体調、ご希望を伺いながら、一人ひとりに合わせたケアをご提案。<br>施術が終わったあとは移動する必要もなく、そのままご自宅でゆっくりお休みいただけます。</p>
+              <p>Lumi Mama縺ｯ縲∫ｷｴ鬥ｬ蛹ｺ繧剃ｸｭ蠢・↓縺碑・螳・∈莨ｺ縺・∬ｨｪ蝠丞ｰる摩縺ｮ逕｣蜑咲肇蠕後こ繧｢繧ｵ繝ｼ繝薙せ縺ｧ縺吶・/p>
+              <p>螯雁ｨ荳ｭ繧・肇蠕後・縲∬ｺｫ菴薙・螟牙喧縺縺代〒縺ｪ縺上∫擅逵荳崎ｶｳ繧・ご蜈舌↓繧医ｋ逍ｲ繧後↑縺ｩ縲√＆縺ｾ縺悶∪縺ｪ雋諡・′驥阪↑繧区凾譛溘・br>縲瑚ｺｫ菴薙ｒ繧ｱ繧｢縺励◆縺・￠繧後←縲∬ｵ､縺｡繧・ｓ繧帝｣繧後※螟門・縺吶ｋ縺ｮ縺悟､ｧ螟峨・/p>
+              <p>縺昴ｓ縺ｪ繝槭・縺ｫ繧ゅ∬・蛻・・霄ｫ繧偵＞縺溘ｏ繧区凾髢薙ｒ謖√▲縺ｦ縺ｻ縺励＞縺ｨ縺・≧諠ｳ縺・°繧峨∬ｨｪ蝠上せ繧ｿ繧､繝ｫ縺ｧ繧ｱ繧｢繧定｡後▲縺ｦ縺・∪縺吶・/p>
+              <p>蜉ｩ逕｣蟶ｫ豁ｴ25蟷ｴ縺ｮ邨碁ｨ薙ｒ豢ｻ縺九＠縲∬ｺｫ菴薙・迥ｶ諷九ｄ縺昴・譌･縺ｮ菴楢ｪｿ縲√＃蟶梧悍繧剃ｼｺ縺・↑縺後ｉ縲∽ｸ莠ｺ縺ｲ縺ｨ繧翫↓蜷医ｏ縺帙◆繧ｱ繧｢繧偵＃謠先｡医・br>譁ｽ陦薙′邨ゅｏ縺｣縺溘≠縺ｨ縺ｯ遘ｻ蜍輔☆繧句ｿ・ｦ√ｂ縺ｪ縺上√◎縺ｮ縺ｾ縺ｾ縺碑・螳・〒繧・▲縺上ｊ縺贋ｼ代∩縺・◆縺縺代∪縺吶・/p>
             </div>
           </div>
         </div>
@@ -789,62 +158,62 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Service</h2>
-          <span class="section-heading-ja">サービス内容</span>
+          <span class="section-heading-ja">繧ｵ繝ｼ繝薙せ蜀・ｮｹ</span>
         </div>
         <div class="service-list">
           <!-- 01 -->
           <div class="service-item reveal">
             <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80" alt="産前産後ボディケア">
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80" alt="逕｣蜑咲肇蠕後・繝・ぅ繧ｱ繧｢">
             </div>
             <div class="service-content">
-              <h3 class="service-title">産前産後ボディケア</h3>
-              <p class="service-sub">その日の身体に合わせたオーダーメイドケア</p>
-              <p>妊娠中から産後にかけて変化する身体の状態を確認しながら、無理のない範囲でケアを行います。理学療法士が考案したマタニティ・産褥ケアも取り入れ、腰や肩、骨盤まわりなど、その日の状態に合わせて内容を組み立てます。</p>
+              <h3 class="service-title">逕｣蜑咲肇蠕後・繝・ぅ繧ｱ繧｢</h3>
+              <p class="service-sub">縺昴・譌･縺ｮ霄ｫ菴薙↓蜷医ｏ縺帙◆繧ｪ繝ｼ繝繝ｼ繝｡繧､繝峨こ繧｢</p>
+              <p>螯雁ｨ荳ｭ縺九ｉ逕｣蠕後↓縺九￠縺ｦ螟牙喧縺吶ｋ霄ｫ菴薙・迥ｶ諷九ｒ遒ｺ隱阪＠縺ｪ縺後ｉ縲∫┌逅・・縺ｪ縺・ｯ・峇縺ｧ繧ｱ繧｢繧定｡後＞縺ｾ縺吶ら炊蟄ｦ逋よｳ募｣ｫ縺瑚・｡医＠縺溘・繧ｿ繝九ユ繧｣繝ｻ逕｣隍･繧ｱ繧｢繧ょ叙繧雁・繧後∬・繧・か縲・ｪｨ逶､縺ｾ繧上ｊ縺ｪ縺ｩ縲√◎縺ｮ譌･縺ｮ迥ｶ諷九↓蜷医ｏ縺帙※蜀・ｮｹ繧堤ｵ・∩遶九※縺ｾ縺吶・/p>
             </div>
           </div>
           <!-- 02 -->
           <div class="service-item reveal">
             <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="全身リンパアロマ">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="蜈ｨ霄ｫ繝ｪ繝ｳ繝代い繝ｭ繝・>
             </div>
             <div class="service-content">
-              <h3 class="service-title">全身リンパアロマ</h3>
-              <p class="service-sub">頑張る身体に、ゆっくり休まる時間を</p>
-              <p>アロマを使いながら全身をゆったりとケアする80分コースです。日々の疲れやむくみが気になる方、自分のためにゆっくりとした時間を過ごしたい方におすすめです。</p>
+              <h3 class="service-title">蜈ｨ霄ｫ繝ｪ繝ｳ繝代い繝ｭ繝・/h3>
+              <p class="service-sub">鬆大ｼｵ繧玖ｺｫ菴薙↓縲√ｆ縺｣縺上ｊ莨代∪繧区凾髢薙ｒ</p>
+              <p>繧｢繝ｭ繝槭ｒ菴ｿ縺・↑縺後ｉ蜈ｨ霄ｫ繧偵ｆ縺｣縺溘ｊ縺ｨ繧ｱ繧｢縺吶ｋ80蛻・さ繝ｼ繧ｹ縺ｧ縺吶よ律縲・・逍ｲ繧後ｄ繧縺上∩縺梧ｰ励↓縺ｪ繧区婿縲∬・蛻・・縺溘ａ縺ｫ繧・▲縺上ｊ縺ｨ縺励◆譎る俣繧帝℃縺斐＠縺溘＞譁ｹ縺ｫ縺翫☆縺吶ａ縺ｧ縺吶・/p>
             </div>
           </div>
           <!-- 03 -->
           <div class="service-item reveal">
             <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1519689582295-88e9d9afcc90?auto=format&fit=crop&w=800&q=80" alt="黄昏泣きサポート">
+              <img src="https://images.unsplash.com/photo-1519689582295-88e9d9afcc90?auto=format&fit=crop&w=800&q=80" alt="鮟・・豕｣縺阪し繝昴・繝・>
             </div>
             <div class="service-content">
-              <h3 class="service-title">黄昏泣きサポート</h3>
-              <p class="service-sub">夕方から夜の育児を、ひとりで抱え込まないために</p>
-              <p>赤ちゃんがなかなか泣き止まない時間帯など、ママの負担が大きくなりやすい時間をサポートします。赤ちゃんの様子を見ながら、ママが少し休める時間づくりをお手伝いします。</p>
+              <h3 class="service-title">鮟・・豕｣縺阪し繝昴・繝・/h3>
+              <p class="service-sub">螟墓婿縺九ｉ螟懊・閧ｲ蜈舌ｒ縲√・縺ｨ繧翫〒謚ｱ縺郁ｾｼ縺ｾ縺ｪ縺・◆繧√↓</p>
+              <p>襍､縺｡繧・ｓ縺後↑縺九↑縺区ｳ｣縺肴ｭ｢縺ｾ縺ｪ縺・凾髢灘ｸｯ縺ｪ縺ｩ縲√・繝槭・雋諡・′螟ｧ縺阪￥縺ｪ繧翫ｄ縺吶＞譎る俣繧偵し繝昴・繝医＠縺ｾ縺吶りｵ､縺｡繧・ｓ縺ｮ讒伜ｭ舌ｒ隕九↑縺後ｉ縲√・繝槭′蟆代＠莨代ａ繧区凾髢薙▼縺上ｊ繧偵♀謇倶ｼ昴＞縺励∪縺吶・/p>
             </div>
           </div>
           <!-- 04 -->
           <div class="service-item reveal">
             <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1522771731478-44befb1eead8?auto=format&fit=crop&w=800&q=80" alt="ベビーシッターサービス">
+              <img src="https://images.unsplash.com/photo-1522771731478-44befb1eead8?auto=format&fit=crop&w=800&q=80" alt="繝吶ン繝ｼ繧ｷ繝・ち繝ｼ繧ｵ繝ｼ繝薙せ">
             </div>
             <div class="service-content">
-              <h3 class="service-title">ベビーシッターサービス</h3>
-              <p class="service-sub">ママが休むための時間も大切に</p>
-              <p>赤ちゃんのお預かりにも対応しています。休息や家事、自分の時間など、「少しだけ誰かにお願いしたい」というときにもお気軽にご相談ください。</p>
+              <h3 class="service-title">繝吶ン繝ｼ繧ｷ繝・ち繝ｼ繧ｵ繝ｼ繝薙せ</h3>
+              <p class="service-sub">繝槭・縺御ｼ代・縺溘ａ縺ｮ譎る俣繧ょ､ｧ蛻・↓</p>
+              <p>襍､縺｡繧・ｓ縺ｮ縺企舌°繧翫↓繧ょｯｾ蠢懊＠縺ｦ縺・∪縺吶ゆｼ第・繧・ｮｶ莠九∬・蛻・・譎る俣縺ｪ縺ｩ縲√悟ｰ代＠縺縺題ｪｰ縺九↓縺企｡倥＞縺励◆縺・阪→縺・≧縺ｨ縺阪↓繧ゅ♀豌苓ｻｽ縺ｫ縺皮嶌隲・￥縺縺輔＞縲・/p>
             </div>
           </div>
           <!-- 05 -->
           <div class="service-item reveal">
             <div class="service-img">
-              <img src="https://images.unsplash.com/photo-1536640712-4d4c36ef0e2c?auto=format&fit=crop&w=800&q=80" alt="授乳・育児相談">
+              <img src="https://images.unsplash.com/photo-1536640712-4d4c36ef0e2c?auto=format&fit=crop&w=800&q=80" alt="謗井ｹｳ繝ｻ閧ｲ蜈千嶌隲・>
             </div>
             <div class="service-content">
-              <h3 class="service-title">授乳・育児相談</h3>
-              <p class="service-sub">助産師だからこそ相談できることも</p>
-              <p>授乳や母乳、赤ちゃんとの生活、育児に関する不安などもご相談いただけます。身体のケアだけではなく、ママと赤ちゃんの毎日に寄り添うことを大切にしています。</p>
+              <h3 class="service-title">謗井ｹｳ繝ｻ閧ｲ蜈千嶌隲・/h3>
+              <p class="service-sub">蜉ｩ逕｣蟶ｫ縺縺九ｉ縺薙◎逶ｸ隲・〒縺阪ｋ縺薙→繧・/p>
+              <p>謗井ｹｳ繧・ｯ堺ｹｳ縲∬ｵ､縺｡繧・ｓ縺ｨ縺ｮ逕滓ｴｻ縲∬ご蜈舌↓髢｢縺吶ｋ荳榊ｮ峨↑縺ｩ繧ゅ＃逶ｸ隲・＞縺溘□縺代∪縺吶りｺｫ菴薙・繧ｱ繧｢縺縺代〒縺ｯ縺ｪ縺上√・繝槭→襍､縺｡繧・ｓ縺ｮ豈取律縺ｫ蟇・ｊ豺ｻ縺・％縺ｨ繧貞､ｧ蛻・↓縺励※縺・∪縺吶・/p>
             </div>
           </div>
         </div>
@@ -856,59 +225,59 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Feature</h2>
-          <span class="section-heading-ja">4つの特徴</span>
+          <span class="section-heading-ja">4縺､縺ｮ迚ｹ蠕ｴ</span>
         </div>
         <div class="feature-grid">
           <!-- 01 -->
           <div class="feature-card reveal">
             <div class="feature-img">
-              <img src="https://images.unsplash.com/photo-1584824486516-0555a07fc511?auto=format&fit=crop&w=800&q=80" alt="助産師歴25年の経験を活かしたケア">
+              <img src="https://images.unsplash.com/photo-1584824486516-0555a07fc511?auto=format&fit=crop&w=800&q=80" alt="蜉ｩ逕｣蟶ｫ豁ｴ25蟷ｴ縺ｮ邨碁ｨ薙ｒ豢ｻ縺九＠縺溘こ繧｢">
             </div>
             <div class="feature-content">
               <div class="feature-header">
                 <span class="feature-num">01</span>
-                <h3 class="feature-title">助産師歴25年の経験を活かしたケア</h3>
+                <h3 class="feature-title">蜉ｩ逕｣蟶ｫ豁ｴ25蟷ｴ縺ｮ邨碁ｨ薙ｒ豢ｻ縺九＠縺溘こ繧｢</h3>
               </div>
-              <p class="feature-desc">妊娠・出産・産後の身体を知る助産師が、ご自宅へ伺います。一人ひとりの状態を確認しながら、産前産後の時期に配慮したケアをご提供します。</p>
+              <p class="feature-desc">螯雁ｨ繝ｻ蜃ｺ逕｣繝ｻ逕｣蠕後・霄ｫ菴薙ｒ遏･繧句勧逕｣蟶ｫ縺後√＃閾ｪ螳・∈莨ｺ縺・∪縺吶ゆｸ莠ｺ縺ｲ縺ｨ繧翫・迥ｶ諷九ｒ遒ｺ隱阪＠縺ｪ縺後ｉ縲∫肇蜑咲肇蠕後・譎よ悄縺ｫ驟肴・縺励◆繧ｱ繧｢繧偵＃謠蝉ｾ帙＠縺ｾ縺吶・/p>
             </div>
           </div>
           <!-- 02 -->
           <div class="feature-card reveal delay-100">
             <div class="feature-img">
-              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="外出不要、ご自宅でそのまま休める">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="螟門・荳崎ｦ√√＃閾ｪ螳・〒縺昴・縺ｾ縺ｾ莨代ａ繧・>
             </div>
             <div class="feature-content">
               <div class="feature-header">
                 <span class="feature-num">02</span>
-                <h3 class="feature-title">外出不要、ご自宅でそのまま休める</h3>
+                <h3 class="feature-title">螟門・荳崎ｦ√√＃閾ｪ螳・〒縺昴・縺ｾ縺ｾ莨代ａ繧・/h3>
               </div>
-              <p class="feature-desc">天候や気温を気にして外出したり、赤ちゃんの準備をしたりする必要はありません。いつものご自宅でケアを受け、終了後はそのままゆっくりお休みいただけます。</p>
+              <p class="feature-desc">螟ｩ蛟吶ｄ豌玲ｸｩ繧呈ｰ励↓縺励※螟門・縺励◆繧翫∬ｵ､縺｡繧・ｓ縺ｮ貅門ｙ繧偵＠縺溘ｊ縺吶ｋ蠢・ｦ√・縺ゅｊ縺ｾ縺帙ｓ縲ゅ＞縺､繧ゅ・縺碑・螳・〒繧ｱ繧｢繧貞女縺代∫ｵゆｺ・ｾ後・縺昴・縺ｾ縺ｾ繧・▲縺上ｊ縺贋ｼ代∩縺・◆縺縺代∪縺吶・/p>
             </div>
           </div>
           <!-- 03 -->
           <div class="feature-card reveal">
             <div class="feature-img">
-              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="毎回同じ助産師が担当">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="豈主屓蜷後§蜉ｩ逕｣蟶ｫ縺梧球蠖・>
             </div>
             <div class="feature-content">
               <div class="feature-header">
                 <span class="feature-num">03</span>
-                <h3 class="feature-title">毎回同じ助産師が担当</h3>
+                <h3 class="feature-title">豈主屓蜷後§蜉ｩ逕｣蟶ｫ縺梧球蠖・/h3>
               </div>
-              <p class="feature-desc">施術を担当するのは、代表の南郷美幸です。毎回担当者が変わらないため、身体の変化やお悩みを継続して相談しやすく、一人ひとりに寄り添ったサポートを大切にしています。</p>
+              <p class="feature-desc">譁ｽ陦薙ｒ諡・ｽ薙☆繧九・縺ｯ縲∽ｻ｣陦ｨ縺ｮ蜊鈴・鄒主ｹｸ縺ｧ縺吶よｯ主屓諡・ｽ楢・′螟峨ｏ繧峨↑縺・◆繧√∬ｺｫ菴薙・螟牙喧繧・♀謔ｩ縺ｿ繧堤ｶ咏ｶ壹＠縺ｦ逶ｸ隲・＠繧・☆縺上∽ｸ莠ｺ縺ｲ縺ｨ繧翫↓蟇・ｊ豺ｻ縺｣縺溘し繝昴・繝医ｒ螟ｧ蛻・↓縺励※縺・∪縺吶・/p>
             </div>
           </div>
           <!-- 04 -->
           <div class="feature-card reveal delay-100">
             <div class="feature-img">
-              <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&w=800&q=80" alt="身体のケアから育児まで幅広く相談">
+              <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&w=800&q=80" alt="霄ｫ菴薙・繧ｱ繧｢縺九ｉ閧ｲ蜈舌∪縺ｧ蟷・ｺ・￥逶ｸ隲・>
             </div>
             <div class="feature-content">
               <div class="feature-header">
                 <span class="feature-num">04</span>
-                <h3 class="feature-title">身体のケアから育児まで幅広く相談</h3>
+                <h3 class="feature-title">霄ｫ菴薙・繧ｱ繧｢縺九ｉ閧ｲ蜈舌∪縺ｧ蟷・ｺ・￥逶ｸ隲・/h3>
               </div>
-              <p class="feature-desc">ボディケアだけでなく、授乳や育児相談、赤ちゃんのお預かりにも対応。夜間や定休日についても状況に応じてご相談いただけます。</p>
+              <p class="feature-desc">繝懊ョ繧｣繧ｱ繧｢縺縺代〒縺ｪ縺上∵肢荵ｳ繧・ご蜈千嶌隲・∬ｵ､縺｡繧・ｓ縺ｮ縺企舌°繧翫↓繧ょｯｾ蠢懊ょ､憺俣繧・ｮ壻ｼ第律縺ｫ縺､縺・※繧ら憾豕√↓蠢懊§縺ｦ縺皮嶌隲・＞縺溘□縺代∪縺吶・/p>
             </div>
           </div>
         </div>
@@ -920,60 +289,58 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Price</h2>
-          <span class="section-heading-ja">料金のご案内</span>
+          <span class="section-heading-ja">譁咎≡縺ｮ縺疲｡亥・</span>
         </div>
         
         <div class="price-list-wrapper reveal delay-100">
           <div class="price-item">
             <div class="price-header">
-              <h3 class="price-name">メディカルエステ＋理学マタニティ産褥ケア</h3>
-              <div class="price-cost">6,600<span>円(税込)</span> / <span>60分</span></div>
+              <h3 class="price-name">繝｡繝・ぅ繧ｫ繝ｫ繧ｨ繧ｹ繝・ｼ狗炊蟄ｦ繝槭ち繝九ユ繧｣逕｣隍･繧ｱ繧｢</h3>
+              <div class="price-cost">6,600<span>蜀・遞手ｾｼ)</span> / <span>60蛻・/span></div>
             </div>
-            <p class="price-desc">身体の状態を確認しながら、一人ひとりに合わせて産前産後のボディケアを行います。</p>
-            <p class="price-campaign">【初回限定】6,600円 → 5,000円（税込）</p>
+            <p class="price-desc">霄ｫ菴薙・迥ｶ諷九ｒ遒ｺ隱阪＠縺ｪ縺後ｉ縲∽ｸ莠ｺ縺ｲ縺ｨ繧翫↓蜷医ｏ縺帙※逕｣蜑咲肇蠕後・繝懊ョ繧｣繧ｱ繧｢繧定｡後＞縺ｾ縺吶・/p>
+            <p class="price-campaign">縲仙・蝗樣剞螳壹・,600蜀・竊・5,000蜀・ｼ育ｨ手ｾｼ・・/p>
           </div>
 
           <div class="price-item">
             <div class="price-header">
-              <h3 class="price-name">全身リンパアロマコース</h3>
-              <div class="price-cost">8,800<span>円(税込)</span> / <span>80分</span></div>
+              <h3 class="price-name">蜈ｨ霄ｫ繝ｪ繝ｳ繝代い繝ｭ繝槭さ繝ｼ繧ｹ</h3>
+              <div class="price-cost">8,800<span>蜀・遞手ｾｼ)</span> / <span>80蛻・/span></div>
             </div>
-            <p class="price-desc">アロマを使用しながら、全身をゆったりケアするコースです。</p>
+            <p class="price-desc">繧｢繝ｭ繝槭ｒ菴ｿ逕ｨ縺励↑縺後ｉ縲∝・霄ｫ繧偵ｆ縺｣縺溘ｊ繧ｱ繧｢縺吶ｋ繧ｳ繝ｼ繧ｹ縺ｧ縺吶・/p>
           </div>
 
           <div class="price-item">
             <div class="price-header">
-              <h3 class="price-name">黄昏泣きサポート</h3>
-              <div class="price-cost">5,000<span>円〜(税込)</span> / <span>120分〜</span></div>
+              <h3 class="price-name">鮟・・豕｣縺阪し繝昴・繝・/h3>
+              <div class="price-cost">5,000<span>蜀・・遞手ｾｼ)</span> / <span>120蛻・・/span></div>
             </div>
-            <p class="price-desc">夕方から夜にかけての赤ちゃんのお世話や、ママの休息をサポートします。</p>
+            <p class="price-desc">螟墓婿縺九ｉ螟懊↓縺九￠縺ｦ縺ｮ襍､縺｡繧・ｓ縺ｮ縺贋ｸ冶ｩｱ繧・√・繝槭・莨第・繧偵し繝昴・繝医＠縺ｾ縺吶・/p>
           </div>
 
           <div class="price-item">
             <div class="price-header">
-              <h3 class="price-name">ベビーシッターサービス</h3>
-              <div class="price-cost">3,000<span>円(税込)</span> / <span>60分</span></div>
+              <h3 class="price-name">繝吶ン繝ｼ繧ｷ繝・ち繝ｼ繧ｵ繝ｼ繝薙せ</h3>
+              <div class="price-cost">3,000<span>蜀・遞手ｾｼ)</span> / <span>60蛻・/span></div>
             </div>
-            <p class="price-desc">赤ちゃんのお預かりをご希望の際にご利用いただけます。</p>
+            <p class="price-desc">襍､縺｡繧・ｓ縺ｮ縺企舌°繧翫ｒ縺泌ｸ梧悍縺ｮ髫帙↓縺泌茜逕ｨ縺・◆縺縺代∪縺吶・/p>
           </div>
         </div>
 
         <div class="price-notice reveal">
-          ※交通費は別途必要です。<br>
-          ※妊娠中の方は、妊娠経過に異常のない方を対象としています。<br>
-          施術前に医師へご確認いただき、母子手帳を確認させていただきます。
-        </div>
+          窶ｻ莠､騾夊ｲｻ縺ｯ蛻･騾泌ｿ・ｦ√〒縺吶・br>
+          窶ｻ螯雁ｨ荳ｭ縺ｮ譁ｹ縺ｯ縲∝ｦ雁ｨ邨碁℃縺ｫ逡ｰ蟶ｸ縺ｮ縺ｪ縺・婿繧貞ｯｾ雎｡縺ｨ縺励※縺・∪縺吶・br>
+          譁ｽ陦灘燕縺ｫ蛹ｻ蟶ｫ縺ｸ縺皮｢ｺ隱阪＞縺溘□縺阪∵ｯ榊ｭ先焔蟶ｳ繧堤｢ｺ隱阪＆縺帙※縺・◆縺縺阪∪縺吶・        </div>
       </div>
     </section>
 
     <!-- CTA 2 -->
     <div class="cta-band" style="background-color: var(--color-white);">
       <div class="cta-band-inner reveal">
-        <h2 class="cta-tagline">まずはLINEでお気軽に</h2>
-        <p class="cta-desc">ご予約やご相談など、いつでもお気軽にご連絡ください。</p>
+        <h2 class="cta-tagline">縺ｾ縺壹・LINE縺ｧ縺頑ｰ苓ｻｽ縺ｫ</h2>
+        <p class="cta-desc">縺比ｺ育ｴ・ｄ縺皮嶌隲・↑縺ｩ縲√＞縺､縺ｧ繧ゅ♀豌苓ｻｽ縺ｫ縺秘｣邨｡縺上□縺輔＞縲・/p>
         <a href="https://lin.ee/YTfpfCV" target="_blank" rel="noopener noreferrer" class="btn-line">
-          <i class="fa-brands fa-line" style="font-size: 1.2em;"></i> お問い合わせ・LINE予約
-        </a>
+          <i class="fa-brands fa-line" style="font-size: 1.2em;"></i> 縺雁撫縺・粋繧上○繝ｻLINE莠育ｴ・        </a>
       </div>
     </div>
 
@@ -982,36 +349,34 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Message</h2>
-          <span class="section-heading-ja">想いと代表紹介</span>
+          <span class="section-heading-ja">諠ｳ縺・→莉｣陦ｨ邏ｹ莉・/span>
         </div>
         
         <div class="message-content reveal">
-          <h3 class="message-catch">ママにも、自分を休ませる時間を</h3>
+          <h3 class="message-catch">繝槭・縺ｫ繧ゅ∬・蛻・ｒ莨代∪縺帙ｋ譎る俣繧・/h3>
           <div class="message-body">
-            <p>妊娠中や産後は、赤ちゃんのことを優先するあまり、自分自身のことは後回しになりがちです。</p>
-            <p>私自身、「外出しなくても、自宅で自分の身体をケアしてもらえる場所があったらいいのに」と感じていました。<br>赤ちゃんを連れて出かける準備もいらない。<br>天気を気にする必要もない。<br>ケアが終わったら、そのまま横になって休める。</p>
-            <p>そんな、ママが少しでも安心して自分自身をいたわれる時間を届けたいという想いから、Lumi Mamaを始めました。</p>
-            <p>身体のことも、授乳のことも、育児のことも、ひとりで抱え込まずにご相談ください。<br>ママの心と身体が少し休まり、また笑顔で毎日を過ごせるよう、そっと寄り添っていきます。</p>
+            <p>螯雁ｨ荳ｭ繧・肇蠕後・縲∬ｵ､縺｡繧・ｓ縺ｮ縺薙→繧貞━蜈医☆繧九≠縺ｾ繧翫∬・蛻・・霄ｫ縺ｮ縺薙→縺ｯ蠕悟屓縺励↓縺ｪ繧翫′縺｡縺ｧ縺吶・/p>
+            <p>遘∬・霄ｫ縲√悟､門・縺励↑縺上※繧ゅ∬・螳・〒閾ｪ蛻・・霄ｫ菴薙ｒ繧ｱ繧｢縺励※繧ゅｉ縺医ｋ蝣ｴ謇縺後≠縺｣縺溘ｉ縺・＞縺ｮ縺ｫ縲阪→諢溘§縺ｦ縺・∪縺励◆縲・br>襍､縺｡繧・ｓ繧帝｣繧後※蜃ｺ縺九￠繧区ｺ門ｙ繧ゅ＞繧峨↑縺・・br>螟ｩ豌励ｒ豌励↓縺吶ｋ蠢・ｦ√ｂ縺ｪ縺・・br>繧ｱ繧｢縺檎ｵゅｏ縺｣縺溘ｉ縲√◎縺ｮ縺ｾ縺ｾ讓ｪ縺ｫ縺ｪ縺｣縺ｦ莨代ａ繧九・/p>
+            <p>縺昴ｓ縺ｪ縲√・繝槭′蟆代＠縺ｧ繧ょｮ牙ｿ・＠縺ｦ閾ｪ蛻・・霄ｫ繧偵＞縺溘ｏ繧後ｋ譎る俣繧貞ｱ翫￠縺溘＞縺ｨ縺・≧諠ｳ縺・°繧峨´umi Mama繧貞ｧ九ａ縺ｾ縺励◆縲・/p>
+            <p>霄ｫ菴薙・縺薙→繧ゅ∵肢荵ｳ縺ｮ縺薙→繧ゅ∬ご蜈舌・縺薙→繧ゅ√・縺ｨ繧翫〒謚ｱ縺郁ｾｼ縺ｾ縺壹↓縺皮嶌隲・￥縺縺輔＞縲・br>繝槭・縺ｮ蠢・→霄ｫ菴薙′蟆代＠莨代∪繧翫√∪縺溽ｬ鷹｡斐〒豈取律繧帝℃縺斐○繧九ｈ縺・√◎縺｣縺ｨ蟇・ｊ豺ｻ縺｣縺ｦ縺・″縺ｾ縺吶・/p>
           </div>
         </div>
 
         <div class="staff-box reveal delay-100">
           <div class="staff-img">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="代表 南郷 美幸">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="莉｣陦ｨ 蜊鈴・ 鄒主ｹｸ">
           </div>
           <div class="staff-info">
-            <div class="staff-role">代表 / 助産師歴25年</div>
-            <h4 class="staff-name">南郷 美幸</h4>
+            <div class="staff-role">莉｣陦ｨ / 蜉ｩ逕｣蟶ｫ豁ｴ25蟷ｴ</div>
+            <h4 class="staff-name">蜊鈴・ 鄒主ｹｸ</h4>
             <div class="staff-cert">
-              助産師・保健師・看護師<br>
-              骨盤矯正ヨガインストラクター<br>
-              妊産婦ケアセラピスト
-            </div>
+              蜉ｩ逕｣蟶ｫ繝ｻ菫晏▼蟶ｫ繝ｻ逵玖ｭｷ蟶ｫ<br>
+              鬪ｨ逶､遏ｯ豁｣繝ｨ繧ｬ繧､繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ繝ｼ<br>
+              螯顔肇蟀ｦ繧ｱ繧｢繧ｻ繝ｩ繝斐せ繝・            </div>
             <div class="staff-text">
-              長年、妊娠・出産・産後に関わる中で、多くのママと赤ちゃんに寄り添ってきました。<br>
-              身体の状態も、育児環境も、感じているつらさも、一人ひとり違います。<br><br>
-              だからこそ決まった内容を当てはめるのではなく、その日の身体や気持ちを伺いながら、「今、その方に必要なケア」を一緒に考えることを大切にしています。
-            </div>
+              髟ｷ蟷ｴ縲∝ｦ雁ｨ繝ｻ蜃ｺ逕｣繝ｻ逕｣蠕後↓髢｢繧上ｋ荳ｭ縺ｧ縲∝､壹￥縺ｮ繝槭・縺ｨ襍､縺｡繧・ｓ縺ｫ蟇・ｊ豺ｻ縺｣縺ｦ縺阪∪縺励◆縲・br>
+              霄ｫ菴薙・迥ｶ諷九ｂ縲∬ご蜈千腸蠅・ｂ縲∵─縺倥※縺・ｋ縺､繧峨＆繧ゅ∽ｸ莠ｺ縺ｲ縺ｨ繧企＆縺・∪縺吶・br><br>
+              縺縺九ｉ縺薙◎豎ｺ縺ｾ縺｣縺溷・螳ｹ繧貞ｽ薙※縺ｯ繧√ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上√◎縺ｮ譌･縺ｮ霄ｫ菴薙ｄ豌玲戟縺｡繧剃ｼｺ縺・↑縺後ｉ縲√御ｻ翫√◎縺ｮ譁ｹ縺ｫ蠢・ｦ√↑繧ｱ繧｢縲阪ｒ荳邱偵↓閠・∴繧九％縺ｨ繧貞､ｧ蛻・↓縺励※縺・∪縺吶・            </div>
           </div>
         </div>
 
@@ -1023,7 +388,7 @@
       <div class="section-inner">
         <div class="section-heading reveal">
           <h2 class="section-heading-en">Access</h2>
-          <span class="section-heading-ja">店舗情報</span>
+          <span class="section-heading-ja">蠎苓・諠・ｱ</span>
         </div>
         <div class="contact-grid reveal">
           <div class="contact-info">
@@ -1031,20 +396,20 @@
             <table class="contact-table">
               <tbody>
                 <tr>
-                  <th>住所</th>
-                  <td>〒177-0041<br>東京都練馬区石神井町</td>
+                  <th>菴乗園</th>
+                  <td>縲・77-0041<br>譚ｱ莠ｬ驛ｽ邱ｴ鬥ｬ蛹ｺ遏ｳ逾樔ｺ慕伴</td>
                 </tr>
                 <tr>
-                  <th>電話番号</th>
+                  <th>髮ｻ隧ｱ逡ｪ蜿ｷ</th>
                   <td><a href="tel:080-5671-9910">080-5671-9910</a></td>
                 </tr>
                 <tr>
-                  <th>営業時間</th>
-                  <td>9:00〜18:00</td>
+                  <th>蝟ｶ讌ｭ譎る俣</th>
+                  <td>9:00縲・8:00</td>
                 </tr>
                 <tr>
-                  <th>定休日</th>
-                  <td>金・日・祝日</td>
+                  <th>螳壻ｼ第律</th>
+                  <td>驥代・譌･繝ｻ逾晄律</td>
                 </tr>
               </tbody>
             </table>
@@ -1072,80 +437,12 @@
 
   <div id="sp-sticky-cta">
     <a href="https://lin.ee/YTfpfCV" target="_blank" rel="noopener noreferrer" class="btn-line sticky-btn">
-      <i class="fa-brands fa-line"></i> LINE予約
-    </a>
+      <i class="fa-brands fa-line"></i> LINE莠育ｴ・    </a>
   </div>
 
-  <button id="scroll-top" aria-label="ページトップへ戻る"><i class="fa-solid fa-arrow-up"></i></button>
+  <button id="scroll-top" aria-label="繝壹・繧ｸ繝医ャ繝励∈謌ｻ繧・><i class="fa-solid fa-arrow-up"></i></button>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Header Scroll
-      const header = document.getElementById('site-header');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-      }, { passive: true });
-
-      // Mobile Menu
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const overlay = document.getElementById('nav-overlay');
-      const closeBtn = document.getElementById('overlay-close-btn');
-      const overlayLinks = overlay.querySelectorAll('a');
-
-      function toggleMenu() {
-        overlay.classList.toggle('open');
-        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
-      }
-      hamburgerBtn.addEventListener('click', toggleMenu);
-      closeBtn.addEventListener('click', toggleMenu);
-      overlayLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-      // Scroll to Top
-      const scrollTopBtn = document.getElementById('scroll-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) scrollTopBtn.classList.add('visible');
-        else scrollTopBtn.classList.remove('visible');
-      }, { passive: true });
-      scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-      // Smooth Scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') { e.preventDefault(); return; }
-          const target = document.querySelector(targetId);
-          if (target) {
-            e.preventDefault();
-            const headerH = document.getElementById('site-header').offsetHeight;
-            const top = target.getBoundingClientRect().top + window.scrollY - headerH;
-            window.scrollTo({ top, behavior: 'smooth' });
-          }
-        });
-      });
-
-      // Scroll Reveal
-      const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      };
-      const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.1, rootMargin: '0px 0px -50px 0px'
-      });
-      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      // Image Protection
-      document.addEventListener('contextmenu', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
-      });
-      document.addEventListener('dragstart', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+
