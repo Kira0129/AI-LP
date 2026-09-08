@@ -1120,7 +1120,6 @@ section {
   display: flex;
   flex-direction: column-reverse;
   gap: 40px;
-  margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
