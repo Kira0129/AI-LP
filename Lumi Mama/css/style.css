@@ -1076,10 +1076,58 @@ section {
   color: var(--color-text-light);
 }
 
-.price-campaign {
+.price-campaign-box {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--color-pink-light);
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border: 1px dashed var(--color-pink-main);
+  align-self: flex-start;
+}
+
+.campaign-badge {
+  background: var(--color-pink-main);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+.campaign-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--color-text-main);
+  font-family: var(--font-en);
+}
+
+.campaign-old {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: var(--color-text-light);
+}
+
+.campaign-arrow {
+  color: var(--color-pink-main);
+  font-size: 12px;
+}
+
+.campaign-new {
+  font-size: 20px;
   color: var(--color-pink-dark);
-  font-weight: 500;
-  margin-top: 5px;
+  font-weight: bold;
+}
+
+.campaign-new span {
+  font-size: 13px;
+  font-family: var(--font-jp);
+  font-weight: normal;
 }
 
 /* ==========================================================
