@@ -1118,7 +1118,7 @@ section {
 
 .message-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 40px;
   margin-bottom: 80px;
 }
@@ -1175,31 +1175,27 @@ section {
 
 .staff-top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
   align-items: center;
 }
 
 .staff-img {
-  width: 120px;
+  width: 90px;
   flex-shrink: 0;
 }
 
+.staff-header {
+  flex-grow: 1;
+}
+
 @media (min-width: 768px) {
-
-
   .staff-top {
-    flex-direction: row;
-    align-items: center;
     gap: 30px;
   }
 
   .staff-img {
     width: 130px;
-  }
-  
-  .staff-header {
-    flex-grow: 1;
   }
 }
 
@@ -1220,12 +1216,20 @@ section {
 
 .staff-name {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-text-main);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border-bottom: 1px dashed var(--color-beige-dark);
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .staff-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .staff-cert {
