@@ -627,7 +627,6 @@ section {
     ========================================================== */
 .cta-band {
   background-color: var(--color-pink-light);
-  padding: 80px 20px;
   text-align: center;
   border-top: 1px solid var(--color-pink-light);
   border-bottom: 1px solid var(--color-pink-light);
