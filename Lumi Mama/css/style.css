@@ -1002,13 +1002,19 @@ section {
 }
 
 .price-notice {
-  text-align: center;
+  text-align: left;
   font-size: 13px;
   color: var(--color-text-light);
   margin-top: 50px;
   padding: 20px;
   border: 1px solid var(--color-pink-main);
   background: #fff;
+}
+
+@media (min-width: 768px) {
+  .price-notice {
+    text-align: center;
+  }
 }
 
 .price-list-wrapper {
