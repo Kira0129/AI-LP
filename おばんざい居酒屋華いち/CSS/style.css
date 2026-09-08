@@ -1358,8 +1358,8 @@ footer {
   }
 
   .fv-stamp {
-    bottom: 30px;
-    top: auto;
+    bottom: auto;
+    top: -110px;
     right: auto;
     left: 20px;
     width: 90px;
