@@ -524,9 +524,9 @@ ul {
 .fv-stamp {
   position: absolute;
   bottom: 80px;
-  right: 60px;
-  width: 90px;
-  height: 90px;
+  left: 60px;
+  width: 110px;
+  height: 110px;
   border: 2px solid var(--accent);
   border-radius: 50%;
   display: flex;
@@ -536,15 +536,15 @@ ul {
   color: var(--accent);
   font-weight: bold;
   font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.2;
   z-index: 20;
   box-shadow: inset 0 0 0 2px var(--accent);
   animation: stampPop 0.5s 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .fv-stamp svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   margin-bottom: 2px;
 }
 @keyframes stampPop {
@@ -1358,16 +1358,17 @@ footer {
   }
 
   .fv-stamp {
-    bottom: auto;
-    top: 30px;
-    right: 20px;
-    width: 75px;
-    height: 75px;
-    font-size: 11px;
+    bottom: 30px;
+    top: auto;
+    right: auto;
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    font-size: 13px;
   }
   .fv-stamp svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
 
   #sp-fixed-cta.visible {
