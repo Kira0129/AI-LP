@@ -1526,3 +1526,25 @@ section {
 .delay-200 {
   transition-delay: 200ms;
 }
+
+/* ==========================================================
+       FONT SIZE ADJUSTMENTS
+    ========================================================== */
+#price p {
+  font-size: 14px;
+}
+
+.contact-table th, 
+.contact-table td {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  #price p {
+    font-size: 16px;
+  }
+  .contact-table th, 
+  .contact-table td {
+    font-size: 16px;
+  }
+}
