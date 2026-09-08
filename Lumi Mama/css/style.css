@@ -925,10 +925,44 @@ section {
 
 .price-item {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .price-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .price-item:last-child {
   margin-bottom: 0;
+}
+
+.price-img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .price-img {
+    width: 200px;
+    flex-shrink: 0;
+  }
+}
+
+.price-img img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.price-info {
+  flex-grow: 1;
 }
 
 .price-header {
