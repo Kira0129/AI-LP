@@ -873,6 +873,10 @@ section {
   flex-grow: 1;
 }
 
+.service-content p {
+  text-align: left;
+}
+
 .service-title {
   font-family: var(--font-heading);
   font-size: 22px;
