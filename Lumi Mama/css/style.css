@@ -662,8 +662,14 @@ section {
   position: relative;
   padding-left: 24px;
   color: var(--color-text-main);
-  font-size: clamp(13px, 3.5vw, 15px);
+  font-size: 14px;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .worry-list li {
+    font-size: 16px;
+  }
 }
 
 .worry-list li::before {
