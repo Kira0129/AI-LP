@@ -758,6 +758,13 @@ ul {
   }
 }
 
+.menu-layout-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
 .menu-box {
   background: var(--bg-light);
   border-radius: 12px;
