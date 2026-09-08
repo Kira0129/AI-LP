@@ -672,6 +672,7 @@ section {
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -923,6 +924,7 @@ section {
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -1152,6 +1154,7 @@ section {
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
