@@ -578,6 +578,26 @@ section {
     padding: 40px 15px 60px;
   }
 
+  .fv-deco-top {
+    margin-bottom: 15px;
+  }
+
+  .fv-catch-en {
+    margin-bottom: 10px;
+  }
+
+  .fv-main-catch {
+    margin-bottom: 15px;
+  }
+
+  .fv-main-catch-sub {
+    margin-bottom: 25px;
+  }
+
+  .fv-deco-bottom {
+    margin-top: 30px;
+  }
+
   .fv-pr-badges {
     justify-content: center;
     gap: 15px;
