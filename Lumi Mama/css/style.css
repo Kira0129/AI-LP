@@ -169,21 +169,22 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--color-line);
+  background: linear-gradient(135deg, #06c755 0%, #05a546 100%);
   color: #fff !important;
   font-family: var(--font-jp);
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  padding: 16px 40px;
-  border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(6, 199, 85, 0.2);
+  padding: 16px 45px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .btn-line:hover {
-  background: #05b34c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.3);
+  background: linear-gradient(135deg, #05b34c 0%, #04933e 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(6, 199, 85, 0.4);
 }
 
 /* ==========================================================
@@ -639,37 +640,49 @@ section {
     ========================================================== */
 .cta-band {
   background-color: var(--color-pink-main);
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
   .cta-band {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 }
 
 .cta-band-inner {
   max-width: 800px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(74, 62, 61, 0.08);
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 
 .cta-tagline {
   font-family: var(--font-heading);
   font-size: clamp(20px, 4vw, 24px);
   color: var(--color-text-main);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
 }
 
 .cta-desc {
-  color: var(--color-text-light);
-  margin-bottom: 20px;
+  color: var(--color-text-main);
+  margin-bottom: 25px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
 }
 
 .cta-btn-note {
   font-size: 12px;
-  color: var(--color-text-light);
-  margin-top: 10px;
+  color: var(--color-text-main);
+  margin-top: 15px;
+  opacity: 0.8;
 }
 
 /* ==========================================================
