@@ -597,17 +597,10 @@
     }
 
     .worry-list {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: inline-flex;
+      flex-direction: column;
       gap: 15px;
       text-align: left;
-    }
-
-    @media (min-width: 768px) {
-      .worry-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 30px;
-      }
     }
 
     .worry-list li {
