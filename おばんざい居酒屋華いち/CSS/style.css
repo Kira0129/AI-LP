@@ -523,7 +523,7 @@ ul {
 
 .fv-stamp {
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   left: 60px;
   width: 110px;
   height: 110px;
@@ -539,7 +539,8 @@ ul {
   font-size: 15px;
   line-height: 1.2;
   z-index: 20;
-  box-shadow: inset 0 0 0 2px var(--accent);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 0 0 2px var(--accent), 0 4px 8px rgba(0, 0, 0, 0.15);
   animation: stampPop 0.5s 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .fv-stamp svg {
@@ -1358,15 +1359,13 @@ footer {
   }
 
   .fv-stamp {
-    bottom: auto;
-    top: -110px;
+    bottom: 20px;
+    top: auto;
     right: auto;
     left: 20px;
     width: 90px;
     height: 90px;
     font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: inset 0 0 0 2px var(--accent), 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   .fv-stamp svg {
     width: 24px;
