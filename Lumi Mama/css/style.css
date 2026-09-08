@@ -1168,10 +1168,6 @@ section {
 }
 
 .staff-box {
-  background: var(--color-white);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.03);
   max-width: 550px;
   margin: 40px 0 0 0;
   text-align: left;
@@ -1190,9 +1186,7 @@ section {
 }
 
 @media (min-width: 768px) {
-  .staff-box {
-    padding: 40px;
-  }
+
 
   .staff-top {
     flex-direction: row;
