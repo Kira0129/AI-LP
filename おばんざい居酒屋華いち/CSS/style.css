@@ -1389,7 +1389,7 @@ footer {
 .banner-notes {
   max-width: 1000px;
   margin: 24px auto 0;
-  text-align: left;
+  text-align: center;
   font-size: 16px;
   color: var(--text-light);
   line-height: 1.6;
@@ -1403,5 +1403,6 @@ footer {
 @media screen and (max-width: 768px) {
   .banner-notes {
     font-size: 14px;
+    text-align: left;
   }
 }
