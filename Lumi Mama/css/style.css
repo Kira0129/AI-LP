@@ -1010,6 +1010,11 @@ section {
   align-items: center;
 }
 
+.staff-img {
+  width: 160px;
+  flex-shrink: 0;
+}
+
 @media (min-width: 768px) {
   .staff-top {
     flex-direction: row;
@@ -1018,8 +1023,7 @@ section {
   }
 
   .staff-img {
-    width: 240px;
-    flex-shrink: 0;
+    width: 180px;
   }
 
   .staff-header {
