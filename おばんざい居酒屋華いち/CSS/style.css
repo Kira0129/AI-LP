@@ -1338,3 +1338,24 @@ footer {
     padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* バナー注意事項 */
+.banner-notes {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  text-align: left;
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.6;
+  padding: 0 16px;
+}
+.banner-notes-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-notes {
+    font-size: 14px;
+  }
+}
