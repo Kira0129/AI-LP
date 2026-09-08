@@ -1,4 +1,14 @@
-﻿      const hamburgerBtn = document.getElementById('hamburger-btn');
+﻿
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header Scroll
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      }, { passive: true });
+
+      // Mobile Menu
+      const hamburgerBtn = document.getElementById('hamburger-btn');
       const overlay = document.getElementById('nav-overlay');
       const closeBtn = document.getElementById('overlay-close-btn');
       const overlayLinks = overlay.querySelectorAll('a');
@@ -56,6 +66,4 @@
         if (e.target.tagName === 'IMG') e.preventDefault();
       });
     });
-  </script>
-</body>
-</html>
+  
