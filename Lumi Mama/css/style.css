@@ -623,17 +623,16 @@ section {
        CTA BANNER
     ========================================================== */
 .cta-band {
-  background-color: var(--color-white);
+  background-color: var(--color-beige-light);
   padding: 80px 20px;
   text-align: center;
+  border-top: 1px solid var(--color-pink-light);
+  border-bottom: 1px solid var(--color-pink-light);
 }
 
 .cta-band-inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px 40px;
-  background: var(--color-beige-light);
-  border: 1px solid var(--color-pink-light);
 }
 
 .cta-tagline {
