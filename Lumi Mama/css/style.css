@@ -1002,6 +1002,114 @@ section {
 }
 
 /* ==========================================================
+       VOICE
+    ========================================================== */
+#voice {
+  background-color: var(--color-beige-light);
+}
+
+.voice-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .voice-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+.voice-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-beige-main);
+}
+
+.voice-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-pink-light);
+  color: var(--color-pink-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.voice-name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: var(--color-text-main);
+}
+
+.voice-body {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-text {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.voice-text.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.voice-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--color-pink-dark);
+  font-family: var(--font-jp);
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.voice-toggle-btn:hover {
+  color: var(--color-text-main);
+}
+
+.voice-toggle-btn i {
+  transition: transform 0.3s ease;
+}
+
+.voice-toggle-btn.is-open i {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================
        MESSAGE & STAFF
     ========================================================== */
 #message {

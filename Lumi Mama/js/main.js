@@ -1,4 +1,4 @@
-﻿
+
     document.addEventListener('DOMContentLoaded', () => {
       // Header Scroll
       const header = document.getElementById('site-header');
@@ -64,6 +64,23 @@
       });
       document.addEventListener('dragstart', e => {
         if (e.target.tagName === 'IMG') e.preventDefault();
+      });
+      // Voice Text Toggle
+      document.querySelectorAll('.voice-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const textElement = this.previousElementSibling;
+          const isExpanded = textElement.classList.contains('is-expanded');
+          
+          if (isExpanded) {
+            textElement.classList.remove('is-expanded');
+            this.classList.remove('is-open');
+            this.innerHTML = '続きを読む <i class="fa-solid fa-chevron-down"></i>';
+          } else {
+            textElement.classList.add('is-expanded');
+            this.classList.add('is-open');
+            this.innerHTML = '閉じる <i class="fa-solid fa-chevron-up"></i>';
+          }
+        });
       });
     });
   
