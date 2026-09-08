@@ -121,6 +121,27 @@ img {
   z-index: -1;
 }
 
+/* iOS Safari向けの固定背景対応 */
+@supports (-webkit-touch-callout: none) {
+  .bg-image-section {
+    background-image: none;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    pointer-events: none;
+  }
+}
+
 /* ==========================================================
    Header
 ========================================================== */
