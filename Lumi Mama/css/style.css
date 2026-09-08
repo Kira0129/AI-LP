@@ -666,6 +666,36 @@ section {
   gap: 40px;
 }
 
+.about-image {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+}
+
+.about-image img {
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(74, 62, 61, 0.1);
+  border-radius: 4px;
+}
+
+.about-img-1 {
+  width: 65%;
+  height: 75%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.about-img-2 {
+  width: 60%;
+  height: 65%;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  border: 10px solid var(--color-white);
+}
+
 @media (min-width: 768px) {
   .about-grid {
     flex-direction: row;
@@ -674,18 +704,13 @@ section {
 
   .about-image {
     width: 50%;
+    min-height: 500px;
   }
 
   .about-text {
     width: 50%;
     padding-left: 60px;
   }
-}
-
-.about-image img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
 }
 
 .about-catch {
