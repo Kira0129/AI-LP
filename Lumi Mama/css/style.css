@@ -638,7 +638,7 @@ section {
        CTA BANNER
     ========================================================== */
 .cta-band {
-  background-color: var(--color-pink-light);
+  background-color: var(--color-pink-main);
   text-align: center;
   padding: 50px 20px;
 }
