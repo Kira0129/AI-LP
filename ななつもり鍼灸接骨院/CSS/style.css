@@ -568,11 +568,25 @@ ul {
 #service,
 #voice,
 #access {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#about::before,
+#service::before,
+#voice::before,
+#access::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -1;
+  pointer-events: none;
 }
 
 
@@ -1185,11 +1199,22 @@ ul {
 
 /* Message Section */
 #message {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#message::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url('../img/messagebg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -2;
+  pointer-events: none;
 }
 
 #message::before {
