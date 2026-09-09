@@ -906,7 +906,6 @@ section {
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  border: 4px solid var(--border-color);
   background: #E8DFD5;
   cursor: pointer;
   transition: transform 0.3s;
