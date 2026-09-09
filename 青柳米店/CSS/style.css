@@ -48,6 +48,21 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   padding-bottom: 60px;
+  /* テキスト選択禁止 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* フォーム等のテキスト選択は許可（将来的な拡張のため） */
+input, textarea {
+  user-select: auto;
+}
+
+/* 画像のドラッグ禁止 */
+img {
+  -webkit-user-drag: none;
 }
 
 h1,

@@ -1,3 +1,10 @@
+// ========== PREVENT IMAGE SAVE ==========
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.tagName === 'IMG' || e.target.classList.contains('fv-bg')) {
+    e.preventDefault();
+  }
+});
+
 // ========== HAMBURGER MENU ==========
 const hamburger = document.getElementById('hamburger-btn');
 const fullscreenMenu = document.getElementById('fullscreen-menu');
