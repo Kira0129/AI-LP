@@ -1,5 +1,9 @@
 
     document.addEventListener('DOMContentLoaded', () => {
+      // 右クリック（コンテキストメニュー）とコピーの禁止
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('copy', e => e.preventDefault());
+
       // Header Scroll
       const header = document.getElementById('site-header');
       window.addEventListener('scroll', () => {
