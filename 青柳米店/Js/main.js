@@ -106,3 +106,19 @@ if (lightboxModal && lightboxImg) {
     }
   });
 }
+
+// ========== RETURN TO TOP ==========
+const returnToTop = document.getElementById('return-to-top');
+if (returnToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      returnToTop.classList.add('visible');
+    } else {
+      returnToTop.classList.remove('visible');
+    }
+  });
+
+  returnToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
