@@ -49,6 +49,10 @@ body {
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img {

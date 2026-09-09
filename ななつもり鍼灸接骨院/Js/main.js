@@ -115,4 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // テキスト選択の禁止と画像保存（右クリック・ドラッグ）の禁止
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('selectstart', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
 });
