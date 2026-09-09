@@ -893,8 +893,8 @@ section {
 
 .staff-slider {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
 }
 
@@ -1296,15 +1296,15 @@ section {
   }
 
   .staff-inner {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 360px 1fr;
     align-items: center;
     padding: 56px;
     gap: 48px;
   }
 
   .staff-slider {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
   }
 
   .staff-info {
