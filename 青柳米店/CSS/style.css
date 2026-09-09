@@ -258,7 +258,7 @@ section {
 /* ========== RECOMMEND (お悩み) ========== */
 .recommend-box {
   background: var(--bg-sub); border-radius: 12px; padding: 24px 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03); max-width: 900px; margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03); width: 100%;
   border-top: 4px solid var(--accent);
 }
 .recommend-box h2 {
@@ -444,6 +444,7 @@ section {
 
   .recommend-box { padding: 32px; }
   .recommend-list { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .recommend-list li { font-size: 16px; }
 
   .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
   .feature-card { display: flex; flex-direction: column; }
