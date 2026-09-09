@@ -584,15 +584,26 @@ section {
        WORRY
     ========================================================== */
 #worry {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#worry::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   background-image: url('../img/worrybg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -2;
 }
 
 @media (max-width: 767px) {
-  #worry {
+  #worry::after {
     background-position: 40% center;
   }
 }
@@ -728,11 +739,22 @@ section {
        ABOUT
     ========================================================== */
 #about {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#about::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -2;
 }
 
 #about::before {
@@ -986,11 +1008,22 @@ section {
        PRICE
     ========================================================== */
 #price {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#price::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -2;
 }
 
 #price::before {
@@ -1275,11 +1308,22 @@ section {
        MESSAGE & STAFF
     ========================================================== */
 #message {
+  position: relative;
+  clip-path: inset(0);
+}
+
+#message::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -2;
 }
 
 #message::before {
