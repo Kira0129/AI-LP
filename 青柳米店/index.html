@@ -379,9 +379,17 @@
         <h2 class="section-heading">店長紹介</h2>
 
         <div class="staff-inner">
-          <div class="staff-slider">
-            <img class="staff-img staff-slide-1" src="img/staffpic01.jpg" alt="店長 青柳 洋 1">
-            <img class="staff-img staff-slide-2" src="img/staffpic02.jpg" alt="店長 青柳 洋 2">
+          <div class="staff-slider-wrap">
+            <div class="staff-slider" id="staff-slider">
+              <img class="staff-img active" src="img/staffpic01.jpg" alt="店長 青柳 洋 1">
+              <img class="staff-img" src="img/staffpic02.jpg" alt="店長 青柳 洋 2">
+            </div>
+            <button class="staff-slider-btn prev" id="staff-prev" aria-label="前の画像">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="staff-slider-btn next" id="staff-next" aria-label="次の画像">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
           <div class="staff-info">
             <p class="staff-role">お米屋歴40年</p>

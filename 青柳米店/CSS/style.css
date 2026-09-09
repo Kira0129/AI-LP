@@ -891,11 +891,18 @@ section {
   gap: 32px;
 }
 
+.staff-slider-wrap {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+
 .staff-slider {
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .staff-img {
@@ -904,30 +911,53 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
   object-fit: cover;
   background: #E8DFD5;
   cursor: pointer;
-  transition: transform 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s;
+}
+
+.staff-img.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .staff-img:hover {
-  transform: translateY(-4px);
+  transform: scale(1.02);
 }
 
-.staff-slide-1 {
-  animation: staff-fade 8s infinite;
+.staff-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s;
 }
 
-.staff-slide-2 {
-  animation: staff-fade 8s infinite 4s;
-  opacity: 0;
+.staff-slider-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.05);
 }
 
-@keyframes staff-fade {
-  0%, 40% { opacity: 1; z-index: 2; }
-  50%, 90% { opacity: 0; z-index: 1; }
-  100% { opacity: 1; z-index: 2; }
+.staff-slider-btn.prev {
+  left: -20px;
+}
+
+.staff-slider-btn.next {
+  right: -20px;
 }
 
 .staff-info {
@@ -1295,15 +1325,15 @@ section {
   }
 
   .staff-inner {
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 420px 1fr;
     align-items: center;
     padding: 56px;
     gap: 48px;
   }
 
   .staff-slider {
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
   }
 
   .staff-info {
