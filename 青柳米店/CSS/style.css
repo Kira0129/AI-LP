@@ -256,7 +256,7 @@ section {
 .about-body p { margin-bottom: 16px; }
 
 /* ========== RECOMMEND (お悩み) ========== */
-#recommend { background: url('../img/worrybg.jpg') no-repeat center center / cover; }
+#recommend { background: url('../img/spworrybg.jpg') no-repeat center center / cover; }
 .recommend-box {
   background: rgba(255, 255, 255, 0.85); border-radius: 12px; padding: 40px 24px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.03); max-width: 1000px; margin: 0 auto;
@@ -443,6 +443,7 @@ section {
   .about-inner { grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
   .about-img-wrap img { height: 400px; }
 
+  #recommend { background-image: url('../img/worrybg.jpg'); }
   .recommend-box { padding: 40px; }
   .recommend-list { grid-template-columns: 1fr 1fr; gap: 20px; }
 
