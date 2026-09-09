@@ -411,7 +411,7 @@ section {
   .about-inner { grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
   .about-img-wrap img { height: 400px; }
 
-  .recommend-box { padding: 56px; }
+  .recommend-box { padding: 40px; }
   .recommend-list { grid-template-columns: 1fr 1fr; gap: 20px; }
 
   .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
