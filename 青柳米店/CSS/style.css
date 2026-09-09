@@ -11,6 +11,7 @@ html { scroll-behavior: smooth; }
   --bg-main: #FDFBF7; /* 温かみのあるベージュ */
   --bg-sub: #FFFFFF; /* 白（カードなど） */
   --bg-brown: #F4EBE1; /* 薄い茶色（セクション背景など） */
+  --bg-green: #F4F7F4; /* 自然な薄い緑（セクション背景など） */
   --text-main: #4A3A32; /* 濃い茶色（基本テキスト） */
   --text-light: #7A6B63;
   --accent: #C84B31; /* アクセントの赤 */
@@ -245,7 +246,7 @@ section {
 .cta-btn.brown { background: var(--brown); color: #fff; }
 
 /* ========== ABOUT ========== */
-#about { background: var(--bg-brown); }
+#about { background: var(--bg-sub); }
 .about-inner { display: grid; grid-template-columns: 1fr; gap: 40px; }
 .about-img-wrap { position: relative; border-radius: 8px; overflow: hidden; }
 .about-img-wrap img { width: 100%; height: 280px; object-fit: cover; }
@@ -273,7 +274,7 @@ section {
 .recommend-list svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
 
 /* ========== FEATURE (4つのこだわり) ========== */
-#feature { background: var(--bg-main); }
+#feature { background: var(--bg-green); }
 .feature-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
 .feature-card {
   background: var(--bg-sub); border-radius: 12px; overflow: hidden;
@@ -321,13 +322,13 @@ section {
 .price-note { font-size: 13px; color: var(--text-light); text-align: center; margin-top: 24px; }
 
 /* ========== MESSAGE ========== */
-#message { background: var(--bg-main); text-align: center; }
+#message { background: var(--bg-sub); text-align: center; }
 .message-inner { max-width: 700px; margin: 0 auto; }
 .message-inner h2 { font-size: clamp(24px, 5vw, 32px); margin-bottom: 32px; line-height: 1.8; }
 .message-inner p { margin-bottom: 24px; font-size: 16px; }
 
 /* ========== STAFF ========== */
-#staff { background: var(--bg-brown); }
+#staff { background: var(--bg-main); }
 .staff-inner {
   background: var(--bg-sub); border-radius: 12px; padding: 40px 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.04); display: grid; grid-template-columns: 1fr; gap: 32px;
@@ -343,7 +344,7 @@ section {
 .staff-desc p { margin-bottom: 16px; }
 
 /* ========== ACCESS ========== */
-#access { background: var(--bg-main); }
+#access { background: var(--bg-green); }
 .access-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
 .access-info {
   background: var(--bg-sub); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--border-color);
