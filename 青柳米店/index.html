@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>青柳米店 | 新潟のおいしいお米を、精米したてで食卓へ。</title>
+  <meta name="description" content="新潟県加茂市にある地域密着のお米屋「青柳米店」。コシヒカリなどお好みや用途に合わせた新潟産米をご提案。自家精米で全国へお届けします。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#top" class="logo">青柳米店</a>
+      <nav class="header-nav">
+        <a href="#about">ABOUT</a>
+        <a href="#feature">こだわり</a>
+        <a href="#price">商品・料金</a>
+        <a href="#message">メッセージ</a>
+        <a href="#staff">店長紹介</a>
+        <a href="#access">店舗情報</a>
+      </nav>
+      <div class="header-btn-wrap">
+        <a href="tel:050-5448-7663" class="header-btn tel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          050-5448-7663
+        </a>
+        <a href="mailto:komegura@nct9.ne.jpw" class="header-btn mail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          メールで相談
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== FULLSCREEN MENU (SP) ========== -->
+  <div id="fullscreen-menu">
+    <button class="menu-close" id="menu-close-btn">×</button>
+    <nav class="menu-nav">
+      <ul>
+        <li><a href="#about" class="menu-link">ABOUT</a></li>
+        <li><a href="#feature" class="menu-link">こだわり</a></li>
+        <li><a href="#price" class="menu-link">商品・料金</a></li>
+        <li><a href="#message" class="menu-link">メッセージ</a></li>
+        <li><a href="#staff" class="menu-link">店長紹介</a></li>
+        <li><a href="#access" class="menu-link">店舗情報</a></li>
+      </ul>
+      <div style="margin-top:40px; display:flex; flex-direction:column; gap:16px;">
+        <a href="tel:050-5448-7663" class="cta-btn brown menu-link" style="width: 240px;">電話で問い合わせる</a>
+        <a href="mailto:komegura@nct9.ne.jpw" class="cta-btn accent menu-link" style="width: 240px;">メールで問い合わせる</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+    <!-- ========== FV ========== -->
+    <section id="fv">
+      <div id="fv-slides-container">
+        <!-- お米や稲穂、和の食卓などの画像を設定してください -->
+        <img src="img/fv01.jpg" alt="炊きたてのご飯">
+        <img src="img/fv02.jpg" alt="お米と稲穂">
+        <img src="img/fv03.jpg" alt="精米の様子">
+      </div>
+      <div class="fv-content">
+        <h2 class="fv-heading">
+          <span class="fv-heading-line line1">新潟のおいしいお米を、</span>
+          <span class="fv-heading-line line2">精米したてで食卓へ。</span>
+        </h2>
+        <div class="fv-bottom-left">
+          <span class="fv-catch-en">AOYAGI RICE SHOP</span>
+          <p class="fv-sub">
+            産地と味を知り尽くしたお米屋が、<br class="sp-only">お好みや用途に合わせて一番合うお米をご提案。<br>
+            ご家庭用から贈答用、定期便まで、<br class="sp-only">こだわりの新潟米を全国へお届けします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BLOCK (TOP) ========== -->
+    <div class="cta-block fade-in">
+      <div class="cta-inner">
+        <div class="cta-text-wrap">
+          <h2 class="cta-heading">お米のご相談・ご注文はお気軽に</h2>
+          <p class="cta-text">ご家庭用、贈答用、定期便など用途に合わせてご提案します。</p>
+        </div>
+        <div class="cta-btn-wrap">
+          <a href="tel:050-5448-7663" class="cta-btn brown">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            050-5448-7663
+          </a>
+          <a href="mailto:komegura@nct9.ne.jpw" class="cta-btn accent">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            メールでのお問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about">
+      <div class="container about-inner">
+        <div class="about-img-wrap fade-in">
+          <img src="img/about.jpg" alt="青柳米店の様子">
+        </div>
+        <div class="about-body fade-in">
+          <span class="section-label">About Us</span>
+          <h2>お米のことなら、何でも<br>相談できる町のお米屋さん</h2>
+          <p>新潟県加茂市にある「青柳米店」は、新潟産米を中心に取り扱う地域密着のお米屋です。</p>
+          <p>コシヒカリをはじめ、新潟県内のさまざまな産地のお米をご用意し、お客様のお好みや食べ方、ご予算に合わせて最適な一品をご提案しています。</p>
+          <p>お米は自家精米し、おいしさを大切にしながら全国へ発送。毎月決まったタイミングでお届けする定期便や、高級感のある和紙の真空包装を使用した贈答用にも対応しています。</p>
+          <p>お米の選び方はもちろん、おいしい炊き方や保存方法まで、気になることがあればお気軽にご相談ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RECOMMEND (お悩み) ========== -->
+    <section id="recommend">
+      <div class="container fade-in">
+        <div class="recommend-box">
+          <h2>こんなお悩みありませんか？</h2>
+          <ul class="recommend-list">
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              どのお米を選べばいいのか分からない
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              せっかくなら本当においしい新潟米を食べたい
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              毎回お米を買いに行くのが大変
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              贈り物に喜ばれるお米を探している
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              好みや用途に合ったお米を相談しながら選びたい
+            </li>
+            <li>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              できるだけ早く、自宅まで届けてほしい
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURE ========== -->
+    <section id="feature">
+      <div class="container">
+        <span class="section-label">Our Feature</span>
+        <h2 class="section-heading">青柳米店 4つのこだわり</h2>
+        
+        <div class="feature-grid">
+          <article class="feature-card fade-in">
+            <img class="feature-img" src="img/feature01.jpg" alt="目利きのイメージ">
+            <div class="feature-body">
+              <span class="feature-num">01</span>
+              <h3>新潟産米を知り尽くした目利き</h3>
+              <p>お米屋歴40年の経験を活かし、産地や品種ごとの特徴を見極めながら、お客様のお好みや用途に合ったお米をご提案します。</p>
+            </div>
+          </article>
+
+          <article class="feature-card fade-in">
+            <img class="feature-img" src="img/feature02.jpg" alt="自家精米のイメージ">
+            <div class="feature-body">
+              <span class="feature-num">02</span>
+              <h3>自家精米で、変わらないおいしさを</h3>
+              <p>お米は自店で丁寧に精米し、精米したてのおいしさをお届け。季節が変わっても、できるだけ安定した味わいを楽しんでいただけるよう品質管理を大切にしています。</p>
+            </div>
+          </article>
+
+          <article class="feature-card fade-in">
+            <img class="feature-img" src="img/feature03.jpg" alt="全国発送のイメージ">
+            <div class="feature-body">
+              <span class="feature-num">03</span>
+              <h3>全国発送・定期便にも対応</h3>
+              <p>新潟のおいしいお米を全国へ発送。早ければ翌日、遅くても4営業日以内のお届けを心がけています。毎月便利な定期便もご相談いただけます。</p>
+            </div>
+          </article>
+
+          <article class="feature-card fade-in">
+            <img class="feature-img" src="img/feature04.jpg" alt="贈答用のイメージ">
+            <div class="feature-body">
+              <span class="feature-num">04</span>
+              <h3>ご家庭用から贈答用まで幅広く対応</h3>
+              <p>毎日の食卓はもちろん、大切な方への贈り物にも対応。贈答用には高級感のある和紙の真空包装をご用意し、用途に合わせて丁寧にお届けします。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICE (商品・料金) ========== -->
+    <section id="price">
+      <div class="container">
+        <span class="section-label">Price & Menu</span>
+        <h2 class="section-heading">おすすめのお米・料金</h2>
+
+        <div class="price-list fade-in">
+          <div class="price-card">
+            <img class="price-img" src="img/price01.jpg" alt="加茂市七谷産コシヒカリ">
+            <div class="price-body">
+              <h3 class="price-title">令和7年産<br>加茂市七谷産コシヒカリ</h3>
+              <p class="price-desc">加茂市七谷で育ったコシヒカリ。<br>毎日の食卓にはもちろん、新潟のお米をじっくり味わいたい方にもおすすめです。</p>
+              <div class="price-amount">4,500<span>円 (5kg)</span></div>
+            </div>
+          </div>
+
+          <div class="price-card">
+            <img class="price-img" src="img/price02.jpg" alt="魚沼コシヒカリ">
+            <div class="price-body">
+              <h3 class="price-title">令和7年産<br>魚沼コシヒカリ</h3>
+              <p class="price-desc">大特価でご用意している、新潟を代表するブランド米。<br>ご家庭で気軽に魚沼コシヒカリをお楽しみいただけます。</p>
+              <div class="price-amount">3,500<span>円 (5kg)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-others fade-in">
+          <div class="price-other-item">
+            <h3>その他の新潟産米</h3>
+            <p>新潟のおいしいお米を多数取り揃えています。お好みやご予算、用途に合わせておすすめをご案内しますので、お気軽にお問い合わせください。</p>
+          </div>
+          <div class="price-other-item">
+            <h3>定期便について</h3>
+            <p>毎月のお届けも承ります。お米の種類・数量・配送ペースなど、お客様のご希望に合わせてご相談いただけます。</p>
+          </div>
+          <div class="price-other-item">
+            <h3>贈答用について</h3>
+            <p>高級感のある和紙の真空包装に対応しています。料金や包装内容などの詳細につきましては、ご注文時にお問い合わせください。</p>
+          </div>
+          <p class="price-note">※価格や在庫状況は仕入れなどにより変更となる場合があります。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MESSAGE ========== -->
+    <section id="message">
+      <div class="container fade-in">
+        <div class="message-inner">
+          <span class="section-label">Message</span>
+          <div class="accent-line"></div>
+          <h2>毎日のごはんを、<br class="sp-only">もっと楽しみに</h2>
+          <p>お米は、毎日の食卓に欠かせないものだからこそ、<br class="pc-only">本当においしいものを届けたいと考えています。</p>
+          <p>産地や銘柄だけで選ぶのではなく、<br class="pc-only">お客様の好みや暮らしに合ったお米を一緒に見つけることも、<br class="pc-only">町のお米屋の役目です。</p>
+          <p>ご家庭用、贈答用、定期便など、<br class="pc-only">どんなことでもお気軽にご相談ください。</p>
+          <p>これからも新潟のおいしいお米を、<br class="pc-only">心を込めて皆さまの食卓へお届けします。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STAFF ========== -->
+    <section id="staff">
+      <div class="container fade-in">
+        <span class="section-label">Shop Manager</span>
+        <h2 class="section-heading">店長紹介</h2>
+        
+        <div class="staff-inner">
+          <img class="staff-img" src="img/staff.jpg" alt="店長 青柳 洋">
+          <div class="staff-info">
+            <p class="staff-role">お米屋歴40年</p>
+            <h3 class="staff-name">店長　青柳 洋</h3>
+            <div class="staff-desc">
+              <p>長年、新潟のお米と向き合いながら、おいしい産地や品種について今も学び続けています。<br>お客様に合ったお米をご提案することはもちろん、炊き方や保存方法など、お米に関するちょっとした疑問にも丁寧にお答えします。</p>
+              <p>実はクイズや懸賞も大好き。<br>2000年には「クイズ$ミリオネア」で14問正解し、750万円を獲得。懸賞では軽自動車やイタリア旅行に当選した経験もあります。</p>
+              <p>お米の話からちょっと楽しい話まで、気軽に声をかけていただける町のお米屋を目指しています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BLOCK (BOTTOM) ========== -->
+    <div class="cta-block fade-in" style="border-top: none; background: transparent; padding-bottom: 0;">
+      <div class="cta-inner">
+        <div class="cta-text-wrap">
+          <h2 class="cta-heading">ご注文・ご相談はお気軽にどうぞ</h2>
+        </div>
+        <div class="cta-btn-wrap">
+          <a href="tel:050-5448-7663" class="cta-btn brown">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            050-5448-7663
+          </a>
+          <a href="mailto:komegura@nct9.ne.jpw" class="cta-btn accent">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            メールでのお問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== ACCESS ========== -->
+    <section id="access">
+      <div class="container">
+        <span class="section-label">Access</span>
+        <h2 class="section-heading">店舗情報</h2>
+
+        <div class="access-grid">
+          <div class="access-info fade-in">
+            <dl>
+              <dt>店舗名</dt>
+              <dd>青柳米店</dd>
+              <dt>住所</dt>
+              <dd>〒959-1375<br>新潟県加茂市小橋１丁目４−１５</dd>
+              <dt>電話番号</dt>
+              <dd><a href="tel:050-5448-7663" class="tel-link">050-5448-7663</a></dd>
+              <dt>営業時間</dt>
+              <dd>8:00 〜 18:30</dd>
+              <dt>定休日</dt>
+              <dd>日曜日・祝日</dd>
+            </dl>
+          </div>
+          <div class="map-wrap fade-in">
+            <iframe 
+              src="https://maps.google.co.jp/maps?output=embed&q=新潟県加茂市小橋１丁目４−１５" 
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="footer-logo">青柳米店</div>
+    <div>
+      <small class="footer-copy">&copy; 青柳米店 All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING CTA (SP) ========== -->
+  <div id="floating-cta">
+    <a href="tel:050-5448-7663" class="btn-tel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      電話で相談
+    </a>
+    <a href="mailto:komegura@nct9.ne.jpw" class="btn-mail">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      メールで相談
+    </a>
+  </div>
+
+  <script src="Js/main.js"></script>
+</body>
+</html>
