@@ -116,6 +116,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // iOS Safari用の固定背景ハック
+  const fixedSections = [
+    { id: 'about', bgClass: 'bg-common' },
+    { id: 'service', bgClass: 'bg-common' },
+    { id: 'voice', bgClass: 'bg-common' },
+    { id: 'access', bgClass: 'bg-common' },
+    { id: 'message', bgClass: 'bg-message' }
+  ];
+
+  fixedSections.forEach(sec => {
+    const el = document.getElementById(sec.id);
+    if (el) {
+      const bg = document.createElement('div');
+      bg.className = 'fixed-bg-wrapper ' + sec.bgClass;
+      el.insertBefore(bg, el.firstChild);
+    }
+  });
+
   // テキスト選択の禁止と画像保存（右クリック・ドラッグ）の禁止
   document.addEventListener('contextmenu', e => e.preventDefault());
   document.addEventListener('selectstart', e => e.preventDefault());

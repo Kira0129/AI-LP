@@ -569,24 +569,38 @@ ul {
 #voice,
 #access {
   position: relative;
-  clip-path: inset(0);
+  z-index: 0;
 }
 
-#about::before,
-#service::before,
-#voice::before,
-#access::before {
+.fixed-bg-wrapper {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.fixed-bg-wrapper::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
   pointer-events: none;
+}
+
+.fixed-bg-wrapper.bg-common::before {
+  background-image: url('../img/bg.jpg');
+}
+
+.fixed-bg-wrapper.bg-message::before {
+  background-image: url('../img/messagebg.jpg');
 }
 
 
@@ -1200,21 +1214,7 @@ ul {
 /* Message Section */
 #message {
   position: relative;
-  clip-path: inset(0);
-}
-
-#message::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../img/messagebg.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  pointer-events: none;
+  z-index: 0;
 }
 
 #message::before {
@@ -1222,6 +1222,7 @@ ul {
   position: absolute;
   inset: 0;
   background: rgba(92, 141, 115, 0.7);
+  z-index: -1;
   /* 緑がかったオーバーレイ */
 }
 
