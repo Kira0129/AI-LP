@@ -46,7 +46,7 @@ const slidesContainer = document.getElementById('fv-slides-container');
 if (slidesContainer) {
   const images = slidesContainer.querySelectorAll('img');
   const bgDivs = [];
-  
+
   images.forEach((img, index) => {
     const div = document.createElement('div');
     div.className = 'fv-bg';
@@ -70,7 +70,7 @@ if (slidesContainer) {
         }, 2000);
 
         currentSlide = (currentSlide + 1) % bgDivs.length;
-        
+
         bgDivs[currentSlide].classList.add('zoom-active');
         bgDivs[currentSlide].style.opacity = '1';
       }, 6000); // 6秒ごとに切り替え
