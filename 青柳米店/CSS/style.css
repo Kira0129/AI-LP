@@ -10,6 +10,7 @@ html { scroll-behavior: smooth; }
   /* Color Palette: Beige, Brown, Red */
   --bg-main: #FDFBF7; /* 温かみのあるベージュ */
   --bg-sub: #FFFFFF; /* 白（カードなど） */
+  --bg-washi: #F9F6F0 url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
   --bg-brown: #F4EBE1; /* 薄い茶色（セクション背景など） */
   --text-main: #4A3A32; /* 濃い茶色（基本テキスト） */
   --text-light: #7A6B63;
@@ -246,7 +247,7 @@ section {
 .cta-btn.brown { background: var(--brown); color: #fff; }
 
 /* ========== ABOUT ========== */
-#about { background: var(--bg-sub); }
+#about { background: var(--bg-washi); }
 .about-inner { display: grid; grid-template-columns: 1fr; gap: 40px; }
 .about-img-wrap { position: relative; height: 320px; }
 .about-img { position: absolute; border-radius: 4px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
@@ -295,7 +296,7 @@ section {
 .feature-body p { color: var(--text-light); }
 
 /* ========== COMIC ========== */
-#comic { background: var(--bg-sub); }
+#comic { background: var(--bg-washi); }
 .comic-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
 .comic-img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; }
 .comic-img:hover { transform: translateY(-4px); }
