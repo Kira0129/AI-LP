@@ -1,8 +1,6 @@
-// ========== PREVENT IMAGE SAVE ==========
+// ========== PREVENT RIGHT CLICK & IMAGE SAVE ==========
 document.addEventListener('contextmenu', function(e) {
-  if (e.target.tagName === 'IMG' || e.target.classList.contains('fv-bg')) {
-    e.preventDefault();
-  }
+  e.preventDefault();
 });
 
 // ========== HAMBURGER MENU ==========
