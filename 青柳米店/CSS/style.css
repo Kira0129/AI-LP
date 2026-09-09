@@ -459,7 +459,7 @@ section {
   .comic-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
 
   .price-list { grid-template-columns: repeat(2, 1fr); }
-  .price-img { height: 260px; }
+  .price-img { height: 300px; }
   .price-others { padding: 48px; }
 
   #message { background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('../img/pcmessagebg.jpg'); }
