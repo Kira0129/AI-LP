@@ -377,9 +377,15 @@ section {
   background: var(--bg-sub); border-radius: 12px; padding: 40px 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.04); display: grid; grid-template-columns: 1fr; gap: 32px;
 }
+.staff-img-wrap {
+  display: flex; flex-direction: row; gap: 16px; justify-content: center; margin-bottom: 24px;
+}
 .staff-img {
-  width: 200px; height: 200px; border-radius: 50%; margin: 0 auto;
-  object-fit: cover; border: 4px solid var(--border-color); background: #E8DFD5;
+  width: 140px; height: 140px; border-radius: 8px; object-fit: cover;
+  border: 2px solid var(--border-color); background: #E8DFD5; cursor: pointer; transition: transform 0.3s;
+}
+.staff-img:hover {
+  transform: translateY(-4px);
 }
 .staff-info { text-align: center; }
 .staff-role { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
@@ -488,8 +494,9 @@ section {
   #message { background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('../img/pcmessagebg.jpg'); }
   .message-inner p { font-size: 16px; text-align: center; }
 
-  .staff-inner { grid-template-columns: 300px 1fr; align-items: center; padding: 56px; gap: 48px; }
-  .staff-img { width: 250px; height: 250px; }
+  .staff-inner { grid-template-columns: 370px 1fr; align-items: center; padding: 56px; gap: 48px; }
+  .staff-img-wrap { margin-bottom: 0; }
+  .staff-img { width: 175px; height: 175px; border-width: 4px; }
   .staff-info { text-align: left; }
 
   .access-grid { grid-template-columns: 400px 1fr; gap: 48px; }

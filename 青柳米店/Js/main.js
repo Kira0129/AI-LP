@@ -79,7 +79,7 @@ if (slidesContainer) {
 }
 
 // ========== LIGHTBOX MODAL ==========
-const zoomableImgs = document.querySelectorAll('.comic-img, .loop-slider-track img');
+const zoomableImgs = document.querySelectorAll('.comic-img, .loop-slider-track img, .staff-img');
 const lightboxModal = document.getElementById('lightbox-modal');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
