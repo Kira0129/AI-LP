@@ -292,7 +292,7 @@ section {
 .feature-body p { color: var(--text-light); }
 
 /* ========== COMIC ========== */
-#comic { background: var(--bg-sub); }
+#comic { background: var(--bg-brown); }
 .comic-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
 .comic-img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; }
 .comic-img:hover { transform: translateY(-4px); }
