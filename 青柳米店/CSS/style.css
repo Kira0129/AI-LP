@@ -300,6 +300,10 @@ section {
   background-size: cover;
 }
 
+div.fv-bg:nth-of-type(1) {
+  background-position: 40% center;
+}
+
 .fv-bg::after {
   content: '';
   position: absolute;
@@ -1194,6 +1198,10 @@ section {
     justify-content: flex-start;
     margin-top: 0;
     padding-top: 80px;
+  }
+
+  div.fv-bg:nth-of-type(1) {
+    background-position: center;
   }
 
   .fv-content {
