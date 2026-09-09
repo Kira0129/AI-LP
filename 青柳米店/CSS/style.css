@@ -341,10 +341,10 @@ section {
 .price-note { font-size: 13px; color: var(--text-light); text-align: center; margin-top: 24px; }
 
 /* ========== MESSAGE ========== */
-#message { background: var(--bg-main); text-align: center; }
+#message { background: url('../img/spmessagebg.jpg') no-repeat center center / cover; text-align: center; }
 .message-inner { max-width: 700px; margin: 0 auto; }
 .message-inner h2 { font-size: clamp(24px, 5vw, 32px); margin-bottom: 32px; line-height: 1.8; }
-.message-inner p { margin-bottom: 24px; font-size: 16px; }
+.message-inner p { margin-bottom: 24px; font-size: 14px; text-align: left; }
 
 /* ========== STAFF ========== */
 #staff { background: var(--bg-brown); }
@@ -455,6 +455,9 @@ section {
   .price-list { grid-template-columns: repeat(2, 1fr); }
   .price-img { height: 260px; }
   .price-others { padding: 48px; }
+
+  #message { background-image: url('../img/pcmessagebg.jpg'); }
+  .message-inner p { font-size: 16px; text-align: center; }
 
   .staff-inner { grid-template-columns: 300px 1fr; align-items: center; padding: 56px; gap: 48px; }
   .staff-img { width: 250px; height: 250px; }
