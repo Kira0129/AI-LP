@@ -979,7 +979,7 @@ section {
 
 .staff-desc {
   text-align: left;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .staff-desc p {
@@ -1302,6 +1302,10 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .price-desc {
+    font-size: 16px;
+  }
+
   .price-img {
     height: 300px;
   }
@@ -1338,6 +1342,10 @@ section {
 
   .staff-info {
     text-align: left;
+  }
+
+  .staff-desc p {
+    font-size: 16px;
   }
 
   .access-grid {
