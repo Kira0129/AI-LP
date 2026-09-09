@@ -599,6 +599,12 @@ ul {
   background-image: url('../img/bg.jpg');
 }
 
+@media (max-width: 767px) {
+  .fixed-bg-wrapper.bg-common::before {
+    background-image: url('../img/spbg.jpg');
+  }
+}
+
 .fixed-bg-wrapper.bg-message::before {
   background-image: url('../img/messagebg.jpg');
 }
