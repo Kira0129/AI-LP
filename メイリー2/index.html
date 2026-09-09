@@ -232,7 +232,7 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(253, 252, 249, 0.95);
+      background: rgba(244, 237, 229, 0.95);
       backdrop-filter: blur(10px);
       transition: all 0.3s;
       border-bottom: 1px solid transparent;
@@ -272,9 +272,10 @@
       .header-nav a:not(.btn-reserve) {
         font-family: var(--font-en);
         font-size: 14px;
-        color: var(--color-text-light);
+        color: var(--color-green-main);
         text-transform: uppercase;
         letter-spacing: 0.1em;
+        font-weight: 500;
       }
       .header-nav a:not(.btn-reserve):hover {
         color: var(--color-gold-main);
@@ -282,6 +283,12 @@
       .header-nav .btn-reserve {
         padding: 10px 24px;
         font-size: 13px;
+        background: var(--color-green-main);
+        box-shadow: 0 4px 15px rgba(42, 64, 52, 0.2);
+      }
+      .header-nav .btn-reserve:hover {
+        background: var(--color-green-dark);
+        box-shadow: 0 8px 25px rgba(42, 64, 52, 0.4);
       }
     }
 
@@ -303,7 +310,7 @@
       display: block;
       width: 22px;
       height: 1px;
-      background: var(--color-text-main);
+      background: var(--color-green-main);
       transition: 0.3s;
     }
 
