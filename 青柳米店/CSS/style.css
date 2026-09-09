@@ -11,7 +11,6 @@ html { scroll-behavior: smooth; }
   --bg-main: #FDFBF7; /* 温かみのあるベージュ */
   --bg-sub: #FFFFFF; /* 白（カードなど） */
   --bg-brown: #F4EBE1; /* 薄い茶色（セクション背景など） */
-  --bg-green: #F4F7F4; /* 自然な薄い緑（セクション背景など） */
   --text-main: #4A3A32; /* 濃い茶色（基本テキスト） */
   --text-light: #7A6B63;
   --accent: #C84B31; /* アクセントの赤 */
@@ -274,7 +273,7 @@ section {
 .recommend-list svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
 
 /* ========== FEATURE (4つのこだわり) ========== */
-#feature { background: var(--bg-green); }
+#feature { background: var(--bg-brown); }
 .feature-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
 .feature-card {
   background: var(--bg-sub); border-radius: 12px; overflow: hidden;
@@ -293,7 +292,7 @@ section {
 .feature-body p { color: var(--text-light); }
 
 /* ========== PRICE (料金) ========== */
-#price { background: var(--bg-brown); }
+#price { background: var(--bg-main); }
 .price-list { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
 .price-card {
   background: var(--bg-sub); border-radius: 12px; overflow: hidden;
@@ -328,7 +327,7 @@ section {
 .message-inner p { margin-bottom: 24px; font-size: 16px; }
 
 /* ========== STAFF ========== */
-#staff { background: var(--bg-main); }
+#staff { background: var(--bg-brown); }
 .staff-inner {
   background: var(--bg-sub); border-radius: 12px; padding: 40px 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.04); display: grid; grid-template-columns: 1fr; gap: 32px;
@@ -344,7 +343,7 @@ section {
 .staff-desc p { margin-bottom: 16px; }
 
 /* ========== ACCESS ========== */
-#access { background: var(--bg-green); }
+#access { background: var(--bg-main); }
 .access-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
 .access-info {
   background: var(--bg-sub); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--border-color);
