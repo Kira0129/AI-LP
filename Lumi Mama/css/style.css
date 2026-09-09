@@ -1480,9 +1480,9 @@ section {
 }
 
 .sns-links a {
-  font-size: 24px;
+  font-size: 36px;
   color: var(--color-text-light);
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .sns-links a:hover {
