@@ -356,6 +356,10 @@ section {
 }
 .loop-slider-track img {
   width: 240px; height: 160px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer; transition: transform 0.3s;
+}
+.loop-slider-track img:hover {
+  transform: translateY(-4px);
 }
 @keyframes loop-slide {
   0% { transform: translateX(0); }

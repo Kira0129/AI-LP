@@ -79,13 +79,13 @@ if (slidesContainer) {
 }
 
 // ========== LIGHTBOX MODAL ==========
-const comicImgs = document.querySelectorAll('.comic-img');
+const zoomableImgs = document.querySelectorAll('.comic-img, .loop-slider-track img');
 const lightboxModal = document.getElementById('lightbox-modal');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
 
 if (lightboxModal && lightboxImg) {
-  comicImgs.forEach(img => {
+  zoomableImgs.forEach(img => {
     img.addEventListener('click', () => {
       lightboxImg.src = img.src;
       lightboxModal.classList.add('active');
