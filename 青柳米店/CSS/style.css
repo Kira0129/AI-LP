@@ -342,7 +342,25 @@ section {
 .price-other-item h3 { font-size: 18px; color: var(--brown); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;}
 .price-other-item h3::before { content:''; display:block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
 .price-note { font-size: 13px; color: var(--text-light); text-align: center; margin-top: 24px; }
-
+/* ========== LOOP SLIDER ========== */
+.loop-slider-wrap {
+  width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;
+  overflow: hidden; padding: 20px 0;
+}
+.loop-slider-track {
+  display: flex; gap: 16px; width: max-content;
+  animation: loop-slide 40s linear infinite;
+}
+.loop-slider-track:hover {
+  animation-play-state: paused;
+}
+.loop-slider-track img {
+  width: 240px; height: 160px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+@keyframes loop-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 8px)); }
+}
 /* ========== MESSAGE ========== */
 #message { background: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('../img/spmessagebg.jpg') no-repeat center center / cover; text-align: center; }
 .message-inner { max-width: 700px; margin: 0 auto; }
@@ -461,6 +479,7 @@ section {
   .price-list { grid-template-columns: repeat(2, 1fr); }
   .price-img { height: 300px; }
   .price-others { padding: 48px; }
+  .loop-slider-track img { width: 320px; height: 220px; }
 
   #message { background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('../img/pcmessagebg.jpg'); }
   .message-inner p { font-size: 16px; text-align: center; }
