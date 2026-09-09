@@ -77,3 +77,32 @@ if (slidesContainer) {
     }
   }
 }
+
+// ========== LIGHTBOX MODAL ==========
+const comicImgs = document.querySelectorAll('.comic-img');
+const lightboxModal = document.getElementById('lightbox-modal');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+if (lightboxModal && lightboxImg) {
+  comicImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // 背景スクロール防止
+    });
+  });
+
+  const closeLightbox = () => {
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxModal.addEventListener('click', (e) => {
+    // モーダルの背景部分をクリックした時も閉じる
+    if (e.target === lightboxModal) {
+      closeLightbox();
+    }
+  });
+}
