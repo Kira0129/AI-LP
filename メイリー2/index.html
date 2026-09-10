@@ -1616,34 +1616,29 @@
       const baImages = document.querySelectorAll('.ba-img');
 
       if (lightbox && lightboxImg) {
-        let isLightboxAnimating = false;
+        let lastOpened = 0;
 
         baImages.forEach(img => {
           img.addEventListener('click', (e) => {
+            e.stopPropagation();
             e.preventDefault();
-            if (isLightboxAnimating) return;
             
+            // Set the image source and show the lightbox
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
-            isLightboxAnimating = true;
-            
-            // Prevent accidental instant close from double clicks
-            setTimeout(() => {
-              isLightboxAnimating = false;
-            }, 300);
+            lastOpened = Date.now();
           });
         });
 
         const closeLightbox = (e) => {
-          if (e) e.preventDefault();
-          if (isLightboxAnimating) return;
+          if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+          // Prevent closing if it was just opened less than 400ms ago (e.g. from a fast double-click)
+          if (Date.now() - lastOpened < 400) return;
           
           lightbox.classList.remove('active');
-          isLightboxAnimating = true;
-          
-          setTimeout(() => {
-            isLightboxAnimating = false;
-          }, 300);
         };
 
         lightboxClose.addEventListener('click', closeLightbox);
