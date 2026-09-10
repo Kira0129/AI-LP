@@ -1,4 +1,4 @@
-﻿        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             // Scroll Animation (Fade in)
             const observerOptions = {
                 threshold: 0.1,
@@ -98,6 +98,49 @@
                         spCta.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
                     }
                 }
+            });
+
+            // Voice section expand/collapse
+            const voiceContents = document.querySelectorAll('.js-voice-content');
+            const checkTruncation = () => {
+                voiceContents.forEach(content => {
+                    const toggleBtn = content.nextElementSibling;
+                    if (!toggleBtn || !toggleBtn.classList.contains('js-voice-toggle')) return;
+                    
+                    if (content.classList.contains('line-clamp-3')) {
+                        if (content.scrollHeight > content.clientHeight) {
+                            toggleBtn.classList.remove('hidden');
+                            toggleBtn.classList.add('flex');
+                        } else {
+                            toggleBtn.classList.add('hidden');
+                            toggleBtn.classList.remove('flex');
+                        }
+                    }
+                });
+            };
+
+            window.addEventListener('load', checkTruncation);
+            window.addEventListener('resize', checkTruncation);
+            checkTruncation();
+
+            document.querySelectorAll('.js-voice-toggle').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const content = this.previousElementSibling;
+                    const span = this.querySelector('span');
+                    const icon = this.querySelector('i');
+                    
+                    if (content.classList.contains('line-clamp-3')) {
+                        content.classList.remove('line-clamp-3');
+                        span.textContent = '閉じる';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        content.classList.add('line-clamp-3');
+                        span.textContent = '続きを読む';
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
             });
         });
     
