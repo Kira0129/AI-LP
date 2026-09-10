@@ -1,0 +1,112 @@
+﻿document.addEventListener('DOMContentLoaded', () => {
+      // 蜿ｳ繧ｯ繝ｪ繝・け・医さ繝ｳ繝・く繧ｹ繝医Γ繝九Η繝ｼ・峨→繧ｳ繝斐・縺ｮ遖∵ｭ｢
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('copy', e => e.preventDefault());
+
+      // Header Scroll
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      }, { passive: true });
+
+      // Mobile Menu
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const overlay = document.getElementById('nav-overlay');
+      const closeBtn = document.getElementById('overlay-close-btn');
+      const overlayLinks = overlay.querySelectorAll('a');
+
+      function toggleMenu() {
+        overlay.classList.toggle('open');
+        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+      }
+      hamburgerBtn.addEventListener('click', toggleMenu);
+      closeBtn.addEventListener('click', toggleMenu);
+      overlayLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+      // Scroll to Top
+      const scrollTopBtn = document.getElementById('scroll-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) scrollTopBtn.classList.add('visible');
+        else scrollTopBtn.classList.remove('visible');
+      }, { passive: true });
+      scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') { e.preventDefault(); return; }
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            const headerH = document.getElementById('site-header').offsetHeight;
+            const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Scroll Reveal
+      const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+      const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1, rootMargin: '0px 0px -50px 0px'
+      });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Image Protection
+      document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+      });
+      document.addEventListener('dragstart', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+      });
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const baImages = document.querySelectorAll('.ba-img');
+
+      if (lightbox && lightboxImg) {
+        let lastOpened = 0;
+
+        baImages.forEach(img => {
+          img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            
+            // Set the image source and show the lightbox
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            lastOpened = Date.now();
+          });
+        });
+
+        const closeLightbox = (e) => {
+          if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+          // Prevent closing if it was just opened less than 400ms ago (e.g. from a fast double-click)
+          if (Date.now() - lastOpened < 400) return;
+          
+          lightbox.classList.remove('active');
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        lightbox.addEventListener('click', (e) => {
+          // Allow closing by clicking the background or the expanded image itself
+          if (e.target === lightbox || e.target === lightboxImg) {
+            closeLightbox(e);
+          }
+        });
+      }
+    });
