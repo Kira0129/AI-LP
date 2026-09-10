@@ -2,449 +2,970 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>かむらど 佐島店｜気取らない鉄板焼き</title>
-  <meta name="description" content="神奈川県横須賀市佐島にある鉄板焼き「かむらど」。お好み焼きをはじめ、旬の食材を使った鉄板料理を、落ち着いた空間で気軽に楽しんでいただけます。">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>かむらど 佐島店 | 日常のひとつに。気取らない鉄板焼き</title>
+    <meta name="description" content="神奈川県横須賀市佐島にある鉄板焼きのお店「かむらど」。お好み焼きをはじめ、旬の食材を使った鉄板料理を、落ち着いた空間で気軽に楽しんでいただけます。">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#F8F6F0',      // ベージュ
+                        navy: '#1B2A47',    // ネイビー
+                        orange: '#D96F32',  // オレンジ
+                        gray: '#EAEAEA',    // グレー
+                        text: '#1B2A47',    // 基本テキスト色(ネイビー)
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        en: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --clr-bg: #F8F6F0;
+            --clr-navy: #1B2A47;
+            --clr-orange: #D96F32;
+            --clr-gray: #EAEAEA;
+            --clr-text: #1B2A47;
+        }
+
+        body {
+            background-color: var(--clr-bg);
+            color: var(--clr-text);
+            font-family: "Noto Sans JP", sans-serif;
+            line-height: 2.2;
+            letter-spacing: 0.08em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 共通アニメーション */
+        .js-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .js-fade.is-active {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* セクションタイトル */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title-en {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            color: var(--clr-orange);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        @media (min-width: 768px) {
+            .section-title-en {
+                font-size: 2.5rem;
+            }
+        }
+
+        .section-title-ja {
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--clr-text);
+            opacity: 0.8;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* ボタン */
+        .btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 3rem;
+            background-color: transparent;
+            color: var(--clr-text);
+            border: 1px solid var(--clr-navy);
+            font-size: 0.95rem;
+            letter-spacing: 0.15em;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s, border-color 0.4s;
+            text-decoration: none;
+        }
+
+        .btn-elegant::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--clr-orange);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .btn-elegant:hover {
+            color: #fff;
+            border-color: var(--clr-orange);
+        }
+
+        .btn-elegant:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+
+        /* ヘッダー */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(248, 246, 240, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 50;
+            border-bottom: 1px solid rgba(27, 42, 71, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        /* ハンバーガーメニュー */
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 60;
+            background: transparent;
+            border: none;
+        }
+
+        .hamburger span {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: var(--clr-navy);
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 9px; }
+        .hamburger span:nth-child(3) { bottom: 0; }
+
+        .hamburger.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .hamburger.is-open span:nth-child(2) { opacity: 0; }
+        .hamburger.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--clr-bg);
+            z-index: 55;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-menu.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* FV スライダー & レイアウト */
+        #fv {
+            position: relative;
+            width: 100%;
+            height: 100svh;
+            min-height: 600px;
+            display: flex;
+            background-color: var(--clr-bg);
+            overflow: hidden;
+        }
+
+        .fv-text-part {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .fv-image-part {
+            flex: 1.2;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        @media (max-width: 767px) {
+            #fv { flex-direction: column; }
+            .fv-text-part { flex: 1.2; padding-top: 70px; }
+            .fv-image-part { flex: 1; }
+        }
+
+        .fv-bg-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .fv-bg-slide {
+            position: absolute;
+            inset: 0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            animation: bgFade 18s infinite ease-in-out;
+        }
+
+        .fv-bg-slide:nth-child(1) { animation-delay: 0s; }
+        .fv-bg-slide:nth-child(2) { animation-delay: 6s; }
+        .fv-bg-slide:nth-child(3) { animation-delay: 12s; }
+
+        @keyframes bgFade {
+            0% { opacity: 0; transform: scale(1.05); }
+            10% { opacity: 1; transform: scale(1.05); }
+            33% { opacity: 1; transform: scale(1.02); }
+            43% { opacity: 0; transform: scale(1.0); }
+            100% { opacity: 0; }
+        }
+
+        .fv-divider {
+            width: 1px;
+            height: 60px;
+            background-color: var(--clr-orange);
+            margin: 0 auto 32px;
+        }
+
+        @media (max-width: 767px) {
+            .fv-divider { height: 35px; margin: 0 auto 20px; }
+        }
+
+        /* ABOUT ループスライダー */
+        @media (max-width: 767px) {
+            .loop-slider {
+                display: flex;
+                width: max-content;
+                gap: 0.5rem;
+            }
+            .loop-slider__track {
+                display: flex;
+                gap: 0.5rem;
+                animation: loop-marquee 15s linear infinite;
+            }
+            @keyframes loop-marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-100% - 0.5rem)); }
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="select-none [-webkit-touch-callout:none]" oncontextmenu="return false;" ondragstart="return false;">
 
-  <header id="header">
-    <div class="header-inner">
-      <a href="#" class="logo">
-        <span class="logo-text">かむらど<span>佐島店</span></span>
-      </a>
-      <nav class="header-nav">
-        <a href="#about">ABOUT</a>
-        <a href="#features">FEATURES</a>
-        <a href="#menu">MENU</a>
-        <a href="#voice">VOICE</a>
-        <a href="#access">ACCESS</a>
-        <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" 
-           target="_blank" rel="noopener" class="btn-primary header-btn"
-           style="height: 40px; padding: 0 24px; font-size: 12px; font-family: var(--font-ja); font-weight: 500; letter-spacing: 0.1em; border-radius: 2px;">WEBで予約する</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- Header -->
+    <header class="header" id="js-header">
+        <div class="max-w-[1440px] mx-auto px-6 h-full flex justify-between items-center">
+            <a href="#" class="text-xl tracking-widest font-sans text-navy font-medium">かむらど <span class="text-sm">佐島店</span></a>
+
+            <!-- PC Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-[14px] md:text-[15px] tracking-widest font-en">
+                <a href="#about" class="hover:text-orange transition-colors">ABOUT</a>
+                <a href="#features" class="hover:text-orange transition-colors">FEATURES</a>
+                <a href="#menu" class="hover:text-orange transition-colors">MENU</a>
+                <a href="#voice" class="hover:text-orange transition-colors">VOICE</a>
+                <a href="#message" class="hover:text-orange transition-colors">MESSAGE</a>
+                <a href="#access" class="hover:text-orange transition-colors">ACCESS</a>
+                <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" class="border border-orange bg-orange text-white px-6 py-2 hover:bg-navy hover:border-navy transition-colors">RESERVE</a>
+            </nav>
+
+            <!-- SP Hamburger -->
+            <button class="hamburger md:hidden" id="js-hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="js-mobile-menu">
+        <button id="js-mobile-close" class="absolute top-6 right-6 text-5xl text-navy hover:text-orange transition-colors z-50 leading-none" aria-label="閉じる">&times;</button>
+        <nav class="flex flex-col items-center gap-8 text-lg tracking-widest font-en">
+            <a href="#about" class="js-mobile-link hover:text-orange">ABOUT</a>
+            <a href="#features" class="js-mobile-link hover:text-orange">FEATURES</a>
+            <a href="#menu" class="js-mobile-link hover:text-orange">MENU</a>
+            <a href="#voice" class="js-mobile-link hover:text-orange">VOICE</a>
+            <a href="#message" class="js-mobile-link hover:text-orange">MESSAGE</a>
+            <a href="#access" class="js-mobile-link hover:text-orange">ACCESS</a>
+            <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" class="js-mobile-link border border-orange bg-orange text-white px-8 py-3 mt-4 hover:bg-navy hover:border-navy">RESERVE</a>
+        </nav>
     </div>
-  </header>
 
-  <div class="sp-menu" id="spMenu">
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#features">FEATURES</a>
-      <a href="#menu">MENU</a>
-      <a href="#voice">VOICE</a>
-      <a href="#access">ACCESS</a>
-      <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" 
-         target="_blank" rel="noopener" class="btn-primary"
-         style="margin-top:24px; font-family: var(--font-ja); font-size: 14px; padding: 0 32px; height: 50px; letter-spacing: 0.1em;">WEBで予約する</a>
-    </nav>
-  </div>
+    <main>
+        <!-- FV -->
+        <section id="fv">
+            <div class="fv-text-part">
+                <p class="font-en text-orange tracking-widest text-[14px] md:text-[16px] mb-2 md:mb-6 js-fade">TEPPANYAKI COMRADE</p>
 
-  <section id="fv" aria-label="ファーストビュー">
-    <div class="fv-bg-slider" role="img" aria-label="メインビジュアル">
-      <!-- 雰囲気作りのためのプレースホルダー画像 -->
-      <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1920x1080/F3EFE9/1D2D44?text=Kamurado+Sajima+1');"></div>
-      <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1920x1080/EBECEF/1D2D44?text=Kamurado+Sajima+2');"></div>
-      <div class="fv-bg-slide" style="background-image: url('https://placehold.co/1920x1080/EBECEF/E86B35?text=Kamurado+Sajima+3');"></div>
-    </div>
-    <div class="fv-content">
-      <p class="fv-eyebrow">TEPPANYAKI & IZAKAYA</p>
-      <h1 class="fv-title">
-        日常のひとつに。
-      </h1>
-      <div class="fv-divider"></div>
-      <p class="fv-sub">
-        佐島で味わう、<br>
-        気取らない鉄板焼き。
-      </p>
-    </div>
-    <div class="fv-scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="fv-scroll-line"></div>
-    </div>
-  </section>
+                <h1 class="text-[25px] md:text-4xl lg:text-5xl leading-relaxed tracking-widest mb-4 md:mb-6 font-light js-fade text-navy" style="transition-delay: 0.2s;">
+                    日常のひとつに。<br>
+                    佐島で味わう、<br>
+                    気取らない鉄板焼き。
+                </h1>
 
+                <div class="fv-divider js-fade" style="transition-delay: 0.4s;"></div>
+            </div>
 
+            <div class="fv-image-part">
+                <div class="fv-bg-slider">
+                    <!-- ダミー画像（鉄板焼き・落ち着いた空間・佐島の雰囲気） -->
+                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop');"></div>
+                    <div class="fv-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop');"></div>
+                    <div class="fv-bg-slide md:!bg-[position:40%_center]" style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop');"></div>
+                </div>
+            </div>
+        </section>
 
-  <section class="concept-section" id="about">
-    <div class="concept-grid">
-      <div class="concept-img reveal">
-        <img src="https://placehold.co/800x1000/EBECEF/1D2D44?text=About+Kamurado" alt="店内の様子">
-      </div>
-      <div class="concept-text">
-        <div class="section-inner" style="padding:0; max-width: 500px; margin-left: 48px;">
-          <span class="sec-label">About us</span>
-          <h2 class="sec-title" style="margin-bottom: 32px; font-size: clamp(20px, 3vw, 28px);">
-            気取らず通える、<br>佐島のアットホームな鉄板焼き
-          </h2>
-          <p class="concept-p reveal">
-            神奈川県横須賀市佐島にある、鉄板焼きのお店「かむらど」です。<br><br>
-            お好み焼きをはじめ、旬の食材を使った鉄板料理を、落ち着いた空間で気軽に楽しんでいただけます。
-          </p>
-          <p class="concept-p reveal">
-            外観や店内は少し特別感のある雰囲気ながら、料理は気取らず、家族でのお食事やご夫婦の時間、友人との集まりなど、日常のひとつとして通っていただけるアットホームなお店を目指しています。
-          </p>
-          <div class="reveal" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(29, 45, 68, 0.1);">
-            <p style="font-weight: 500; color: var(--text-main); margin-bottom: 12px; font-size: 15px;">こんな方におすすめです</p>
-            <ul style="list-style: none; padding-left: 0; color: var(--text-muted); font-size: 14px; line-height: 1.8; letter-spacing: 0.05em;">
-              <li style="position: relative; padding-left: 16px;"><span style="position: absolute; left: 0; top: 0; color: var(--accent);">・</span>落ち着いた空間でゆっくり食事がしたい</li>
-              <li style="position: relative; padding-left: 16px;"><span style="position: absolute; left: 0; top: 0; color: var(--accent);">・</span>家族や大切な人と気軽に楽しみたい</li>
-              <li style="position: relative; padding-left: 16px;"><span style="position: absolute; left: 0; top: 0; color: var(--accent);">・</span>おしゃれだけど気取らないお店を探している</li>
-              <li style="position: relative; padding-left: 16px;"><span style="position: absolute; left: 0; top: 0; color: var(--accent);">・</span>別荘滞在中にふらっと立ち寄りたい</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- ABOUT -->
+        <section id="about" class="py-24 md:py-32 bg-navy text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">About</h2>
+                    <span class="section-title-ja text-gray">コンセプト</span>
+                </div>
 
-  <section id="features" class="features-section">
-    <div class="section-inner">
-      <div class="sec-divider-center reveal"></div>
-      <div class="reveal" style="text-align: center;">
-        <span class="sec-label">Features</span>
-        <h2 class="sec-title">かむらどの特徴</h2>
-      </div>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 js-fade">
+                    <!-- PC 縦書きタイトル -->
+                    <div class="hidden md:block text-orange text-[28px] lg:text-[32px] font-light" style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.3em; line-height: 2;">
+                        気取らない鉄板料理を、<br>日常のひとつに。
+                    </div>
+                    <!-- SP 横書きタイトル -->
+                    <div class="md:hidden text-center text-orange text-2xl font-light mb-6" style="letter-spacing: 0.15em; line-height: 1.6;">
+                        気取らない鉄板料理を、<br>日常のひとつに。
+                    </div>
 
-      <div class="features-grid">
-        <div class="feature-item reveal">
-          <span class="feature-num">01</span>
-          <div class="feature-img"><img src="https://placehold.co/600x337/EBECEF/1D2D44?text=Feature+1" alt="落ち着いたひととき"></div>
-          <h3 class="feature-title">佐島で過ごす、<br>落ち着いたひととき</h3>
-          <p class="feature-desc">佐島の穏やかな街並みに佇む、少し特別感のある鉄板焼き店。おしゃれで落ち着いた空間の中に、気軽に立ち寄れる温かさを大切にしています。</p>
-        </div>
-        <div class="feature-item reveal">
-          <span class="feature-num">02</span>
-          <div class="feature-img"><img src="https://placehold.co/600x337/EBECEF/1D2D44?text=Feature+2" alt="音と香りを楽しむ"></div>
-          <h3 class="feature-title">音と香りまで楽しむ<br>鉄板料理</h3>
-          <p class="feature-desc">お好み焼きをはじめ、旬の食材を使った鉄板料理をご用意。目の前で焼き上がる音や香りも楽しみながら、できたてのおいしさを味わっていただけます。</p>
-        </div>
-        <div class="feature-item reveal">
-          <span class="feature-num">03</span>
-          <div class="feature-img"><img src="https://placehold.co/600x337/EBECEF/1D2D44?text=Feature+3" alt="こだわりのお好み焼き"></div>
-          <h3 class="feature-title">ふわっと軽い、<br>こだわりのお好み焼き</h3>
-          <p class="feature-desc">独自にこだわった生地で仕上げる、かむらどのお好み焼き。ふわっと軽い食感と、素材の味を生かした丁寧な仕込みで、何度でも食べたくなる一枚を目指しています。</p>
-        </div>
-        <div class="feature-item reveal">
-          <span class="feature-num">04</span>
-          <div class="feature-img"><img src="https://placehold.co/600x337/EBECEF/1D2D44?text=Feature+4" alt="居心地のよさ"></div>
-          <h3 class="feature-title">日常に寄り添う、<br>居心地のよさ</h3>
-          <p class="feature-desc">ご家族との食事やご夫婦の時間、ご友人との集まりまで、さまざまなシーンで気軽にご利用いただけます。特別な日だけでなく、普段の暮らしの中でふらっと立ち寄れるお店を目指しています。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <!-- テキストエリア -->
+                    <div class="text-[14px] md:text-[16px] text-left text-white leading-[2.2] tracking-wide max-w-xl opacity-90">
+                        <p class="mb-6">神奈川県横須賀市佐島にある、鉄板焼きのお店「かむらど」です。</p>
+                        <p class="mb-6">お好み焼きをはじめ、旬の食材を使った鉄板料理を、落ち着いた空間で気軽に楽しんでいただけます。</p>
+                        <p>外観や店内は少し特別感のある雰囲気ながら、料理は気取らず、家族でのお食事やご夫婦の時間、友人との集まりなど、日常のひとつとして通っていただけるアットホームなお店を目指しています。</p>
+                    </div>
+                </div>
+            </div>
 
-  <section class="menu-section" id="menu">
-    <div class="section-inner">
-      <div class="sec-divider-center reveal"></div>
-      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
-        <span class="sec-label">Menu</span>
-        <h2 class="sec-title">メニュー</h2>
-      </div>
+            <!-- 画像ループスライダー (PC: 3カラムグリッド / SP: 横ループ) -->
+            <div class="w-full js-fade mt-16 pb-6 md:pb-0 overflow-hidden">
+                <div class="loop-slider md:grid md:grid-cols-3 md:gap-3">
+                    <div class="loop-slider__track flex gap-2 md:contents">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="料理風景" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" alt="食材" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw] md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="店内" class="w-full h-full object-cover filter contrast-[0.9] hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                    <!-- Track 2 (SP Loop Clone) -->
+                    <div class="loop-slider__track flex gap-2 md:hidden" aria-hidden="true">
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="料理風景" class="w-full h-full object-cover filter contrast-[0.9]">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" alt="食材" class="w-full h-full object-cover filter contrast-[0.9]">
+                        </div>
+                        <div class="aspect-[16/10] overflow-hidden relative bg-gray/10 flex-shrink-0 w-[75vw]">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="店内" class="w-full h-full object-cover filter contrast-[0.9]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="menu-intro-wrapper reveal">
-        <div class="menu-intro-img-box">
-          <img src="https://placehold.co/800x600/EBECEF/E86B35?text=Teppanyaki+Course" alt="選べる鉄板焼きコース" class="menu-intro-img">
-        </div>
-        <div class="menu-intro-text">
-          <h3 class="menu-intro-heading">【選べる4つの鉄板焼きコース】<br class="sp-only">¥4,500〜</h3>
-          <p>普段のお食事から特別な日まで。</p>
-          <p>ご家族での食事やご友人との集まり、少し贅沢したい日にも合わせて楽しめる、4種類のコースをご用意しています。</p>
-          <p>かむらどこだわりのお好み焼き・もんじゃ焼きと鉄板料理を、シーンに合わせてお選びいただけます。</p>
-        </div>
-      </div>
+        <!-- RECOMMEND (こんな方におすすめ) -->
+        <section id="recommend" class="py-20 md:py-24 bg-white relative">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12 js-fade">
+                    <span class="font-en text-orange tracking-widest text-[14px] md:text-[16px] mb-2 block">RECOMMEND</span>
+                    <h2 class="text-2xl md:text-3xl tracking-widest text-navy">こんな方におすすめ</h2>
+                </div>
 
-      <div class="course-grid">
-        <div class="course-card reveal">
-          <h3 class="course-name">したまちコース</h3>
-          <p class="course-price">¥4,500</p>
-          <p class="course-note">(120分飲み放題付き)</p>
-        </div>
-        <div class="course-card reveal">
-          <h3 class="course-name">よりどりコース</h3>
-          <p class="course-price">¥4,500</p>
-          <p class="course-note">(お料理のみ)</p>
-        </div>
-        <div class="course-card reveal">
-          <h3 class="course-name">まんぞくコース</h3>
-          <p class="course-price">¥6,500</p>
-          <p class="course-note">(お料理のみ)</p>
-        </div>
-        <div class="course-card reveal">
-          <h3 class="course-name">ごほうびコース</h3>
-          <p class="course-price">¥8,800</p>
-          <p class="course-note">(お料理のみ)</p>
-        </div>
-      </div>
+                <div class="bg-bg p-8 md:p-12 border border-navy/10 shadow-sm js-fade relative">
+                    <div class="absolute -top-2 -left-2 w-4 h-4 border-t border-l border-orange"></div>
+                    <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b border-r border-orange"></div>
 
-      <h3 class="alacarte-title reveal">アラカルトメニュー</h3>
-      <div class="alacarte-grid">
-        <div class="alacarte-category reveal">
-          <h3>おつまみ</h3>
-          <ul class="alacarte-list">
-            <li class="alacarte-item">
-              <span class="alacarte-name">海鮮オイル漬け</span>
-              <span class="alacarte-price">1,480円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">たぬきやっこ</span>
-              <span class="alacarte-price">630円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">おつまみとろたく</span>
-              <span class="alacarte-price">820円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-          </ul>
-        </div>
+                    <ul class="space-y-6 text-[15px] md:text-[17px] tracking-wider text-navy opacity-90">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-orange mt-1.5 text-lg"></i>
+                            <span>落ち着いた空間で、ゆっくり食事を楽しみたい方</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-orange mt-1.5 text-lg"></i>
+                            <span>家族や大切な人と、気軽に外食を楽しみたい方</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-orange mt-1.5 text-lg"></i>
+                            <span>おしゃれな雰囲気でも、気取らず過ごせるお店を探している方</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-orange mt-1.5 text-lg"></i>
+                            <span>別荘滞在中に、気軽に立ち寄れるお店を探している方</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <div class="alacarte-category reveal">
-          <h3>一品</h3>
-          <ul class="alacarte-list">
-            <li class="alacarte-item">
-              <span class="alacarte-name">本日のアヒージョ</span>
-              <span class="alacarte-price">980円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">蒸し牡蠣</span>
-              <span class="alacarte-price">1,200円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">肉巻きしょうが</span>
-              <span class="alacarte-price">450円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-          </ul>
-        </div>
+        <!-- FEATURES -->
+        <section id="features" class="py-24 md:py-32 bg-bg relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Features</h2>
+                    <span class="section-title-ja">かむらどの特徴</span>
+                </div>
 
-        <div class="alacarte-category reveal">
-          <h3>創作鉄板</h3>
-          <ul class="alacarte-list">
-            <li class="alacarte-item">
-              <span class="alacarte-name">ホタテの焦がしバター</span>
-              <span class="alacarte-price">1,250円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">とん平焼き</span>
-              <span class="alacarte-price">880円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">せせりの山椒焼き</span>
-              <span class="alacarte-price">660円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-          </ul>
-        </div>
+                <div class="space-y-24 md:space-y-32">
+                    <!-- F1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden bg-gray">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="落ち着いた空間" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-full h-full border border-navy/20 -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gray block mb-2 leading-none">01</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">佐島で過ごす、落ち着いたひととき</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                佐島の穏やかな街並みに佇む、少し特別感のある鉄板焼き店。<br>
+                                おしゃれで落ち着いた空間の中に、気軽に立ち寄れる温かさを大切にしています。
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="alacarte-category reveal">
-          <h3>〆 (シメ)</h3>
-          <ul class="alacarte-list">
-            <li class="alacarte-item">
-              <span class="alacarte-name">そーすやきそば</span>
-              <span class="alacarte-note">- 国産小麦粉100％麺使用 -</span>
-              <span class="alacarte-price" style="margin-top:4px;">1,350円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">ガーリックライス</span>
-              <span class="alacarte-price">1,200円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-            <li class="alacarte-item">
-              <span class="alacarte-name">鉄板カルボナーラ</span>
-              <span class="alacarte-price">1,600円<span style="font-size:12px; font-family:var(--font-ja);">(税込)</span></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+                    <!-- F2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden bg-gray">
+                                <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd00c?q=80&w=800&auto=format&fit=crop" alt="音と香りまで楽しむ鉄板料理" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border border-navy/20 -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gray block mb-2 leading-none">02</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">音と香りまで楽しむ鉄板料理</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                お好み焼きをはじめ、旬の食材を使った鉄板料理をご用意。<br>
+                                目の前で焼き上がる音や香りも楽しみながら、できたてのおいしさを味わっていただけます。
+                            </p>
+                        </div>
+                    </div>
 
-    </div>
-  </section>
+                    <!-- F3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden bg-gray">
+                                <img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?q=80&w=800&auto=format&fit=crop" alt="こだわりのお好み焼き" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-full h-full border border-navy/20 -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gray block mb-2 leading-none">03</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">ふわっと軽い、こだわりのお好み焼き</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                独自にこだわった生地で仕上げる、かむらどのお好み焼き。<br>
+                                ふわっと軽い食感と、素材の味を生かした丁寧な仕込みで、何度でも食べたくなる一枚を目指しています。
+                            </p>
+                        </div>
+                    </div>
 
-  <section class="voice-section" id="voice">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="sec-label">Voice</span>
-        <h2 class="sec-title">お客様の声</h2>
-        <div class="sec-divider"></div>
-      </div>
-      <div class="voice-grid">
-        <div class="voice-card reveal">
-          <div class="voice-stars">★★★★★</div>
-          <p class="voice-author">30代 女性</p>
-          <p class="voice-text">佐島にドライブに行った帰りに立ち寄りました。店内はとてもおしゃれで落ち着いた雰囲気なのに、店員さんがアットホームに迎えてくれてリラックスして食事ができました。お好み焼きはふわふわで、ホタテの焦がしバターも最高に美味しかったです！また行きたいです。</p>
-        </div>
-        <div class="voice-card reveal">
-          <div class="voice-stars">★★★★★</div>
-          <p class="voice-author">50代 男性</p>
-          <p class="voice-text">近くに別荘があり、家族で食事をする場所を探してこちらを見つけました。鉄板焼きということで少し敷居が高いかと思いましたが、とても居心地が良く、子供たちも焼きそばやとん平焼きを喜んで食べていました。お酒の種類も豊富で、大人も大満足です。</p>
-        </div>
-        <div class="voice-card reveal">
-          <div class="voice-stars">★★★★★</div>
-          <p class="voice-author">20代 女性</p>
-          <p class="voice-text">女子会で「ごほうびコース」を予約しました。海鮮もお肉もどれも美味しくて、目の前で焼いてもらえるのでライブ感があって楽しかったです！最後に食べた鉄板カルボナーラが絶品でした。スタッフの方の気配りも素晴らしくて、素敵な時間を過ごせました。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <!-- F4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 js-fade">
+                        <div class="w-full md:w-1/2 relative z-0">
+                            <div class="aspect-[4/3] relative overflow-hidden bg-gray">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="居心地のよさ" class="w-full h-full object-cover filter contrast-[0.9]">
+                            </div>
+                            <div class="absolute -top-4 -left-4 md:top-4 md:-right-4 md:left-auto w-full h-full border border-navy/20 -z-10"></div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <span class="font-en text-6xl text-gray block mb-2 leading-none">04</span>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">日常に寄り添う、居心地のよさ</h3>
+                            <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                                ご家族との食事やご夫婦の時間、ご友人との集まりまで、さまざまなシーンで気軽にご利用いただけます。<br>
+                                特別な日だけでなく、普段の暮らしの中でふらっと立ち寄れるお店を目指しています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="pricing-band" id="reservation">
-    <div class="reveal">
-      <h2 class="pricing-title">ご予約・お問い合わせ</h2>
-      <p class="pricing-desc">
-        ご家族でのお食事や、大切な人とのひとときに。<br>
-        皆様のご来店を心よりお待ちしております。<br>
-        お席のご予約はWEB予約、またはお電話にて承ります。
-      </p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="tel:050-5448-7933" class="btn-secondary" style="background: rgba(11,19,32,0.8);">TEL: 050-5448-7933</a>
-        <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener" class="btn-primary">WEBで予約する</a>
-      </div>
-    </div>
-  </section>
+        <!-- MENU -->
+        <section id="menu" class="py-24 md:py-32 bg-white relative border-t border-gray">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Menu</h2>
+                    <span class="section-title-ja">お品書き</span>
+                </div>
 
-  <section id="message" style="padding: 0;">
-    <div class="message-grid">
-      <div class="message-content">
-        <div class="reveal">
-          <span class="sec-label">Message</span>
-          <h2 class="sec-title" style="font-size: clamp(20px, 3vw, 28px); margin-bottom: 32px;">
-            「また来よう」と<br>思っていただけるお店に
-          </h2>
-          <p class="message-text">
-            私自身が「こんなお店が近くにあったら通いたい」と思えるようなお店づくりを心がけています。
-          </p>
-          <p class="message-text">
-            地元は埼玉ですが、佐島の穏やかな景色や人の温かさに惹かれ、「ここで暮らし、お店をやりたい」と思い、この場所でかむらどを始めました。
-          </p>
-          <p class="message-text">
-            海帰りや船遊びのあと、旅行やドライブの途中にふらっと立ち寄る方も、地元の皆さまが普段のお食事で気軽に利用してくださる方も、それぞれの時間をゆっくり過ごせる場所でありたいと思っています。
-          </p>
-          <p class="message-text" style="color: var(--text-main); font-weight: 500;">
-            皆さまにとって「また来よう」と思っていただけるお店になれたら嬉しいです。
-          </p>
-        </div>
-      </div>
-      <div class="message-img reveal">
-        <img src="https://placehold.co/800x1000/EBECEF/1D2D44?text=Owner+Message" alt="メッセージイメージ">
-      </div>
-    </div>
-  </section>
+                <!-- コース説明 -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-16 js-fade">
+                    <div class="w-full md:w-1/2">
+                        <div class="aspect-[4/3] relative overflow-hidden bg-gray">
+                            <!-- メニュー用のダミー画像 -->
+                            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=800&auto=format&fit=crop" alt="鉄板焼きコース" class="w-full h-full object-cover filter contrast-[0.9]">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl text-navy tracking-widest mb-6">選べる4つの鉄板焼きコース</h3>
+                        <p class="text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90">
+                            普段のお食事から特別な日まで。<br>
+                            ご家族での食事やご友人との集まり、少し贅沢したい日にも合わせて楽しめる、4種類のコースをご用意しています。<br>
+                            かむらどこだわりのお好み焼き・もんじゃ焼きと鉄板料理を、シーンに合わせてお選びいただけます。
+                        </p>
+                    </div>
+                </div>
 
-  <section class="access-section" id="access">
-    <div class="section-inner">
-      <div class="reveal">
-        <span class="sec-label">Access</span>
-        <h2 class="sec-title">店舗情報・アクセス</h2>
-        <div class="sec-divider"></div>
-      </div>
-      <div class="access-grid reveal">
-        <div class="access-info">
-          <div class="access-row">
-            <span class="access-label">店舗名</span>
-            <span class="access-value">かむらど 佐島店</span>
-          </div>
-          <div class="access-row">
-            <span class="access-label">住所</span>
-            <span class="access-value">〒240-0103<br>神奈川県横須賀市佐島３丁目６−１３</span>
-          </div>
-          <div class="access-row">
-            <span class="access-label">電話番号</span>
-            <span class="access-value"><a href="tel:050-5448-7933" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">050-5448-7933</a></span>
-          </div>
-          <div class="access-row">
-            <span class="access-label">営業時間</span>
-            <span class="access-value">12:00〜22:00</span>
-          </div>
-          <div class="access-row">
-            <span class="access-label">定休日</span>
-            <span class="access-value">水曜定休<br><span style="font-size: 14px; color: var(--text-muted);">(夏季期間7、8月のみ定休なし)</span></span>
-          </div>
-          
-          <div class="sns-buttons">
-            <a href="https://www.instagram.com/comrade_sajima/" target="_blank" rel="noopener" class="btn-sns" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://comrade-sajima.owst.jp/" target="_blank" rel="noopener" class="btn-sns" aria-label="Official Website" style="font-family: var(--font-en); font-weight: bold; font-size: 10px; letter-spacing: 0;">
-              OWST
-            </a>
-          </div>
-        </div>
-        <div class="access-map">
-          <!-- iframe source points to the requested address in Yokosuka, Sajima -->
-          <iframe 
-            src="https://maps.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E9%A0%88%E8%B3%80%E5%B8%82%E4%BD%90%E5%B3%B6%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%96%E2%88%92%EF%BC%91%EF%BC%93&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+                <!-- コースリスト (Grid) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+                    <div class="bg-bg border border-navy/10 p-8 text-center js-fade shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+                        <div class="border-b border-orange/30 pb-4 mb-6 flex-grow flex flex-col justify-center">
+                            <h4 class="text-lg text-navy tracking-widest">したまちコース</h4>
+                            <span class="text-[11px] text-navy/70 mt-2 block tracking-wider">(120分飲み放題付き)</span>
+                        </div>
+                        <p class="text-2xl text-orange font-medium font-en mt-auto">¥4,500</p>
+                    </div>
+                    <div class="bg-bg border border-navy/10 p-8 text-center js-fade shadow-sm flex flex-col h-full hover:shadow-md transition-shadow" style="transition-delay: 0.1s;">
+                        <div class="border-b border-orange/30 pb-4 mb-6 flex-grow flex flex-col justify-center">
+                            <h4 class="text-lg text-navy tracking-widest">よりどりコース</h4>
+                        </div>
+                        <p class="text-2xl text-orange font-medium font-en mt-auto">¥4,500</p>
+                    </div>
+                    <div class="bg-bg border border-navy/10 p-8 text-center js-fade shadow-sm flex flex-col h-full hover:shadow-md transition-shadow" style="transition-delay: 0.2s;">
+                        <div class="border-b border-orange/30 pb-4 mb-6 flex-grow flex flex-col justify-center">
+                            <h4 class="text-lg text-navy tracking-widest">まんぞくコース</h4>
+                        </div>
+                        <p class="text-2xl text-orange font-medium font-en mt-auto">¥6,500</p>
+                    </div>
+                    <div class="bg-bg border border-navy/10 p-8 text-center js-fade shadow-sm flex flex-col h-full hover:shadow-md transition-shadow" style="transition-delay: 0.3s;">
+                        <div class="border-b border-orange/30 pb-4 mb-6 flex-grow flex flex-col justify-center">
+                            <h4 class="text-lg text-navy tracking-widest">ごほうびコース</h4>
+                        </div>
+                        <p class="text-2xl text-orange font-medium font-en mt-auto">¥8,800</p>
+                    </div>
+                </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <a href="#" class="footer-logo">
-          <span class="logo-text">かむらど<span>佐島店</span></span>
+                <!-- アラカルト -->
+                <div class="js-fade">
+                    <h3 class="text-2xl text-center text-navy tracking-widest mb-12">アラカルト</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+                        
+                        <!-- おつまみ -->
+                        <div>
+                            <h4 class="text-[16px] text-navy border-b border-navy/20 pb-2 mb-6 tracking-widest flex items-center">
+                                <i class="fa-solid fa-utensils text-orange text-xs mr-3"></i> おつまみ
+                            </h4>
+                            <dl class="space-y-4 text-[14px] md:text-[15px]">
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">海鮮オイル漬け</dt>
+                                    <dd class="text-orange font-medium">1,480円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">たぬきやっこ</dt>
+                                    <dd class="text-orange font-medium">630円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">おつまみとろたく</dt>
+                                    <dd class="text-orange font-medium">820円</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <!-- 一品 -->
+                        <div>
+                            <h4 class="text-[16px] text-navy border-b border-navy/20 pb-2 mb-6 tracking-widest flex items-center">
+                                <i class="fa-solid fa-plate-wheat text-orange text-xs mr-3"></i> 一品
+                            </h4>
+                            <dl class="space-y-4 text-[14px] md:text-[15px]">
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">本日のアヒージョ</dt>
+                                    <dd class="text-orange font-medium">980円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">蒸し牡蠣</dt>
+                                    <dd class="text-orange font-medium">1,200円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">肉巻きしょうが</dt>
+                                    <dd class="text-orange font-medium">450円</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <!-- 創作鉄板 -->
+                        <div>
+                            <h4 class="text-[16px] text-navy border-b border-navy/20 pb-2 mb-6 tracking-widest flex items-center">
+                                <i class="fa-solid fa-fire text-orange text-xs mr-3"></i> 創作鉄板
+                            </h4>
+                            <dl class="space-y-4 text-[14px] md:text-[15px]">
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">ホタテの焦がしバター</dt>
+                                    <dd class="text-orange font-medium">1,250円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">とん平焼き</dt>
+                                    <dd class="text-orange font-medium">880円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">せせりの山椒焼き</dt>
+                                    <dd class="text-orange font-medium">660円</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <!-- 〆 -->
+                        <div>
+                            <h4 class="text-[16px] text-navy border-b border-navy/20 pb-2 mb-6 tracking-widest flex items-center">
+                                <i class="fa-solid fa-bowl-rice text-orange text-xs mr-3"></i> 〆
+                            </h4>
+                            <dl class="space-y-4 text-[14px] md:text-[15px]">
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">そーすやきそば<br><span class="text-[10px] opacity-70">-国産小麦粉100％麺使用-</span></dt>
+                                    <dd class="text-orange font-medium">1,350円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">ガーリックライス</dt>
+                                    <dd class="text-orange font-medium">1,200円</dd>
+                                </div>
+                                <div class="flex justify-between items-baseline border-b border-gray border-dashed pb-2">
+                                    <dt class="tracking-wider">鉄板カルボナーラ</dt>
+                                    <dd class="text-orange font-medium">1,600円</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                    </div>
+                    <p class="text-right text-xs opacity-70 mt-6 tracking-wider">※価格はすべて税込です。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOICE -->
+        <section id="voice" class="py-24 md:py-32 bg-gray/30 relative border-t border-gray">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Voice</h2>
+                    <span class="section-title-ja">お客様の声</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Voice 1 -->
+                    <div class="bg-white p-8 flex flex-col relative shadow-sm border border-navy/5 js-fade">
+                        <i class="fa-solid fa-quote-left text-4xl text-orange/20 absolute top-6 left-6"></i>
+                        <p class="text-[14px] md:text-[15px] leading-loose tracking-wider flex-grow mb-6 relative z-10 pt-6 text-navy/90">
+                            「落ち着いた雰囲気で、家族でゆっくりと食事が楽しめました。お好み焼きがフワフワで絶品です。また来ます！」
+                        </p>
+                        <div class="flex items-center justify-end gap-2 border-t border-navy/10 pt-4 mt-auto relative z-10">
+                            <i class="fa-regular fa-user text-orange text-[14px]"></i>
+                            <span class="text-navy text-[13px] tracking-widest">40代 女性</span>
+                        </div>
+                    </div>
+
+                    <!-- Voice 2 -->
+                    <div class="bg-white p-8 flex flex-col relative shadow-sm border border-navy/5 js-fade" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-quote-left text-4xl text-orange/20 absolute top-6 left-6"></i>
+                        <p class="text-[14px] md:text-[15px] leading-loose tracking-wider flex-grow mb-6 relative z-10 pt-6 text-navy/90">
+                            「佐島へドライブに行った帰りに立ち寄りました。目の前で焼かれる鉄板料理はどれも美味しく、特別な時間を過ごせました。」
+                        </p>
+                        <div class="flex items-center justify-end gap-2 border-t border-navy/10 pt-4 mt-auto relative z-10">
+                            <i class="fa-regular fa-user text-orange text-[14px]"></i>
+                            <span class="text-navy text-[13px] tracking-widest">30代 男性</span>
+                        </div>
+                    </div>
+
+                    <!-- Voice 3 -->
+                    <div class="bg-white p-8 flex flex-col relative shadow-sm border border-navy/5 js-fade" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-quote-left text-4xl text-orange/20 absolute top-6 left-6"></i>
+                        <p class="text-[14px] md:text-[15px] leading-loose tracking-wider flex-grow mb-6 relative z-10 pt-6 text-navy/90">
+                            「スタッフの方が温かく迎えてくれて、とても居心地が良かったです。ワインと一緒につまむ海鮮料理が最高でした。」
+                        </p>
+                        <div class="flex items-center justify-end gap-2 border-t border-navy/10 pt-4 mt-auto relative z-10">
+                            <i class="fa-regular fa-user text-orange text-[14px]"></i>
+                            <span class="text-navy text-[13px] tracking-widest">50代 ご夫婦</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESSAGE -->
+        <section id="message" class="py-24 md:py-32 bg-white relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row gap-16 items-start">
+                    
+                    <!-- 写真エリア -->
+                    <div class="w-full md:w-5/12 js-fade">
+                        <div class="relative w-full aspect-[3/4] bg-gray">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=800&auto=format&fit=crop" alt="店主" class="w-full h-full object-cover shadow-xl filter contrast-[0.9]">
+                            <div class="absolute -bottom-6 -left-6 w-full h-full border border-navy/20 -z-10"></div>
+                        </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="w-full md:w-7/12 js-fade">
+                        <div class="mb-12">
+                            <span class="font-en tracking-widest text-orange text-[14px] md:text-[16px] block mb-2">MESSAGE</span>
+                            <h3 class="text-2xl md:text-3xl tracking-widest text-navy">店主より</h3>
+                        </div>
+
+                        <div class="space-y-6 text-[14px] md:text-[16px] leading-loose tracking-wider opacity-90 text-navy">
+                            <p>私自身が「こんなお店が近くにあったら通いたい」と思えるようなお店づくりを心がけています。</p>
+                            <p>地元は埼玉ですが、佐島の穏やかな景色や人の温かさに惹かれ、「ここで暮らし、お店をやりたい」と思い、この場所でかむらどを始めました。</p>
+                            <p>海帰りや船遊びのあと、旅行やドライブの途中にふらっと立ち寄る方も、地元の皆さまが普段のお食事で気軽に利用してくださる方も、それぞれの時間をゆっくり過ごせる場所でありたいと思っています。</p>
+                            <p>皆さまにとって「また来よう」と思っていただけるお店になれたら嬉しいです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / CONTACT -->
+        <section class="py-24 md:py-32 bg-bg text-center border-t border-b border-navy/10 relative">
+            <div class="max-w-4xl mx-auto px-6">
+                <h3 class="text-xl md:text-2xl text-navy tracking-widest mb-6 js-fade">ご予約はこちら</h3>
+                <p class="text-[14px] md:text-[16px] leading-loose tracking-wider mb-12 js-fade opacity-90">
+                    ご予約はWEB（ホットペッパー）より承っております。<br>
+                    ご家族やご友人との食事、特別な日のご利用など、皆様のお越しをお待ちしております。
+                </p>
+                <div class="flex justify-center js-fade">
+                    <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" class="btn-elegant w-full md:w-auto px-16 py-5 text-lg shadow-sm">
+                        <i class="fa-solid fa-calendar-check mr-3"></i> WEBで予約する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access & Information -->
+        <section id="access" class="py-24 md:py-32 bg-white relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="section-title js-fade">
+                    <h2 class="section-title-en">Access</h2>
+                    <span class="section-title-ja">店舗情報</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-stretch">
+                    <!-- 店舗情報 -->
+                    <div class="js-fade flex flex-col">
+                        <div class="border border-navy/10 p-8 md:p-12 bg-bg flex-grow shadow-sm">
+                            <h3 class="text-xl tracking-widest mb-8 text-navy border-b border-navy/20 pb-4">
+                                かむらど 佐島店
+                            </h3>
+                            <dl class="space-y-4 text-[14px] md:text-[15px] tracking-wider leading-loose">
+                                <div class="flex flex-col md:flex-row border-b border-navy/5 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-navy font-medium mb-1 md:mb-0">住所</dt>
+                                    <dd>〒240-0103<br>神奈川県横須賀市佐島３丁目６−１３</dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row border-b border-navy/5 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-navy font-medium mb-1 md:mb-0">電話番号</dt>
+                                    <dd><a href="tel:050-5448-7933" class="hover:text-orange transition-colors font-en text-[22px]">050-5448-7933</a></dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row border-b border-navy/5 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-navy font-medium mb-1 md:mb-0">営業時間</dt>
+                                    <dd>12:00〜22:00</dd>
+                                </div>
+                                <div class="flex flex-col md:flex-row border-b border-navy/5 pb-4">
+                                    <dt class="w-full md:w-28 flex-shrink-0 text-navy font-medium mb-1 md:mb-0">定休日</dt>
+                                    <dd>水曜定休<br><span class="text-xs opacity-80">※夏季期間(7、8月)のみ定休なし</span></dd>
+                                </div>
+                            </dl>
+
+                            <!-- SNS Links -->
+                            <div class="mt-8 pt-4">
+                                <span class="block text-[14px] text-navy font-en tracking-widest mb-4">Official Links</span>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="https://www.instagram.com/comrade_sajima/" target="_blank" class="w-12 h-12 rounded-full border border-navy/20 flex items-center justify-center text-navy hover:bg-orange hover:border-orange hover:text-white transition-all duration-300 bg-white" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-lg"></i>
+                                    </a>
+                                    <a href="https://comrade-sajima.owst.jp/" target="_blank" class="h-12 px-6 rounded-full border border-navy/20 flex items-center justify-center text-navy text-xs tracking-widest hover:bg-orange hover:border-orange hover:text-white transition-all duration-300 bg-white" aria-label="Official Website">
+                                        公式サイト
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="js-fade flex flex-col">
+                        <div class="w-full h-[350px] lg:h-full min-h-[300px] border border-navy/10 p-2 bg-white flex-grow shadow-sm">
+                            <!-- 横須賀市佐島３丁目６−１３のMap -->
+                            <iframe src="https://maps.google.com/maps?q=神奈川県横須賀市佐島３丁目６−１３&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy pt-12 pb-32 md:py-12 text-center text-white">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <a href="#" class="text-xl tracking-widest font-sans block mb-6">かむらど 佐島店</a>
+            <p class="font-en text-xs tracking-widest opacity-50">&copy; 2026 COMRADE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Page Top Button -->
+    <a href="#" id="js-page-top" class="fixed bottom-24 right-4 md:bottom-10 md:right-10 w-12 h-12 md:w-14 md:h-14 bg-navy text-white rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-orange hover:-translate-y-1" aria-label="ページトップへ戻る">
+        <i class="fa-solid fa-arrow-up text-lg md:text-xl"></i>
+    </a>
+
+    <!-- SP Floating CTA -->
+    <div id="js-sp-cta" class="fixed bottom-0 left-0 w-full z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-navy/10 px-4 py-3 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] pb-6 translate-y-full opacity-0 pointer-events-none transition-all duration-500">
+        <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" class="flex items-center justify-center w-full bg-orange text-white py-3.5 px-4 text-[14px] tracking-widest shadow-sm hover:opacity-90 transition-opacity">
+            <i class="fa-solid fa-calendar-check mr-2"></i> WEB予約はこちら
         </a>
-        <p class="footer-desc">
-          日常のひとつに。<br>
-          佐島で味わう、気取らない鉄板焼き。
-        </p>
-      </div>
-      <div class="footer-col">
-        <h4>NAVIGATE</h4>
-        <a href="#about">ABOUT - 当店について</a>
-        <a href="#features">FEATURES - 特徴</a>
-        <a href="#menu">MENU - メニュー</a>
-        <a href="#voice">VOICE - お客様の声</a>
-        <a href="#access">ACCESS - アクセス</a>
-      </div>
-      <div class="footer-col">
-        <h4>CONTACT / SNS</h4>
-        <a href="tel:050-5448-7933">TEL: 050-5448-7933</a>
-        <a href="https://www.instagram.com/comrade_sajima/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://comrade-sajima.owst.jp/" target="_blank" rel="noopener">Official Web (OWST)</a>
-        <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener" style="color: var(--accent);">WEB予約 (Hotpepper)</a>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>Copyright © Kamurado Sajima. All Rights Reserved.</p>
-    </div>
-  </footer>
 
-  <div class="sp-cta">
-    <a href="tel:050-5448-7933" class="cta-tel">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-      </svg>
-      電話で予約
-    </a>
-    <a href="https://www.hotpepper.jp/strJ003671604/yoyaku/hpds/?ROUTE_KBN=20&dspn=-iP18UJWx4cCbitXZf_rcMGvlfS35OmV1ZPBuj_eKvuLUj9NzBDkfih7tziYUq6zxSYJiJutD4idLABW_xkUfQ" target="_blank" rel="noopener" class="cta-web">
-      <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-      </svg>
-      WEB予約
-    </a>
-  </div>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Animation (Fade in)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-  <button id="back-to-top" aria-label="TOPへ戻る">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 19V5M5 12l7-7 7 7" />
-    </svg>
-  </button>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-  <script src="./Js/script.js" defer></script>
+            document.querySelectorAll('.js-fade').forEach(el => observer.observe(el));
+
+            // Header Background on Scroll
+            const header = document.getElementById('js-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(248, 246, 240, 0.98)';
+                    header.style.boxShadow = '0 4px 20px rgba(27, 42, 71, 0.05)';
+                } else {
+                    header.style.backgroundColor = 'rgba(248, 246, 240, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+
+            // Hamburger Menu
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            const mobileLinks = document.querySelectorAll('.js-mobile-link');
+            const mobileClose = document.getElementById('js-mobile-close');
+
+            if (hamburger && mobileMenu) {
+                const toggleMenu = () => {
+                    hamburger.classList.toggle('is-open');
+                    mobileMenu.classList.toggle('is-open');
+                    document.body.style.overflow = hamburger.classList.contains('is-open') ? 'hidden' : '';
+                };
+
+                const closeMenu = () => {
+                    hamburger.classList.remove('is-open');
+                    mobileMenu.classList.remove('is-open');
+                    document.body.style.overflow = '';
+                }
+
+                hamburger.addEventListener('click', toggleMenu);
+                if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+                mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+            }
+
+            // Smooth Scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerHeight = document.querySelector('.header').offsetHeight;
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Page Top Button & SP CTA Visibility
+            const pageTopBtn = document.getElementById('js-page-top');
+            const spCta = document.getElementById('js-sp-cta');
+            const aboutSection = document.getElementById('about');
+
+            window.addEventListener('scroll', () => {
+                // Page Top Button
+                if (pageTopBtn) {
+                    if (window.scrollY > 500) {
+                        pageTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                        pageTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                    } else {
+                        pageTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                        pageTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                    }
+                }
+
+                // SP Floating CTA
+                if (spCta && aboutSection) {
+                    if (window.scrollY > aboutSection.offsetTop - window.innerHeight + 100) {
+                        spCta.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        spCta.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
