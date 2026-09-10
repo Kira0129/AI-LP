@@ -1120,6 +1120,17 @@ section {
   color: var(--color-green-main);
 }
 
+.price-badge {
+  display: inline-block;
+  background-color: var(--color-green-main);
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
 .price-cost {
   font-family: var(--font-en);
   font-size: 22px;
