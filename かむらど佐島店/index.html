@@ -41,6 +41,15 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJQQQJJ1EJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NJQQQJJ1EJ');
+    </script>
+
 </head>
 
 <body>
@@ -223,19 +232,19 @@
                         class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-12 md:gap-y-8 tracking-wider text-navy opacity-90">
                         <li class="flex items-start gap-4">
                             <i class="fa-solid fa-check text-orange mt-1.5 text-lg flex-shrink-0 w-5 text-center"></i>
-                            <span>落ち着いた空間で食事を楽しみたい方</span>
+                            <span>落ち着いた空間で食事を<br class="md:hidden">楽しみたい方</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fa-solid fa-check text-orange mt-1.5 text-lg flex-shrink-0 w-5 text-center"></i>
-                            <span>家族や大切な人との時間を過ごしたい方</span>
+                            <span>家族や大切な人との時間を<br class="md:hidden">過ごしたい方</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fa-solid fa-check text-orange mt-1.5 text-lg flex-shrink-0 w-5 text-center"></i>
-                            <span>おしゃれでも気軽に入れるお店を探している方</span>
+                            <span>おしゃれでも気軽に入れるお店を<br class="md:hidden">探している方</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fa-solid fa-check text-orange mt-1.5 text-lg flex-shrink-0 w-5 text-center"></i>
-                            <span>別荘滞在中に立ち寄れるお店を探している方</span>
+                            <span>別荘滞在中に立ち寄れるお店を<br class="md:hidden">探している方</span>
                         </li>
                     </ul>
                 </div>
@@ -262,7 +271,8 @@
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gray block mb-2 leading-none">01</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">佐島で過ごす、落ち着いたひととき</h3>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">佐島で過ごす、<br
+                                    class="md:hidden">落ち着いたひととき</h3>
                             <p class="leading-loose tracking-wider opacity-90">
                                 佐島の穏やかな街並みに佇む、少し特別感のある鉄板焼き店。<br>
                                 おしゃれで落ち着いた空間の中に、気軽に立ち寄れる温かさを大切にしています。
@@ -302,7 +312,8 @@
                         </div>
                         <div class="w-full md:w-1/2">
                             <span class="font-en text-6xl text-gray block mb-2 leading-none">03</span>
-                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">ふわっと軽い、こだわりのお好み焼き</h3>
+                            <h3 class="text-xl md:text-2xl tracking-widest mb-6 text-navy">ふわっと軽い、<br
+                                    class="md:hidden">こだわりのお好み焼き</h3>
                             <p class="leading-loose tracking-wider opacity-90">
                                 独自にこだわった生地で仕上げる、かむらどのお好み焼き。<br>
                                 ふわっと軽い食感と、素材の味を生かした丁寧な仕込みで、何度でも食べたくなる一枚を目指しています。
@@ -689,8 +700,8 @@
                     <div class="w-full md:w-1/2 text-center md:text-left js-fade" style="transition-delay: 0.2s;">
                         <h3 class="text-xl md:text-2xl text-navy tracking-widest mb-6">ご予約はこちら</h3>
                         <p class="leading-loose tracking-wider opacity-90">
-                            ご予約はWEB（ホットペッパー）より承っております。<br>
-                            ご家族やご友人との食事、特別な日のご利用など、皆様のお越しをお待ちしております。
+                            ご予約はWEBより承っております。<br>
+                            ご家族やご友人との食事、特別な日の<br class="md:hidden">ご利用など、皆様のお越しを<br class="md:hidden">お待ちしております。
                         </p>
                     </div>
                 </div>
@@ -807,6 +818,14 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script>
+        // 画像保存（右クリック・長押し）の禁止
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>
