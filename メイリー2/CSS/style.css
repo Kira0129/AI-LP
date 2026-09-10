@@ -525,7 +525,8 @@ section {
   color: var(--color-text-light);
   margin-top: 12px;
   text-align: right;
-  max-width: 370px; /* Aligns with the 3 badges on PC */
+  max-width: 370px;
+  /* Aligns with the 3 badges on PC */
 }
 
 .fv-deco-bottom {
@@ -936,7 +937,7 @@ section {
        FEATURE
     ========================================================== */
 #feature {
-  background-color: var(--color-gold-light);
+  background-color: var(--color-beige-light);
 }
 
 .feature-grid {
@@ -1222,7 +1223,7 @@ section {
        BEFORE & AFTER
     ========================================================== */
 #before-after {
-  background-color: var(--color-gold-light);
+  background-color: var(--color-beige-light);
 }
 
 .ba-grid {
@@ -1354,6 +1355,7 @@ section {
     display: flex;
     flex-direction: column;
   }
+
   .message-image img {
     flex-grow: 1;
     height: auto;
@@ -1478,6 +1480,7 @@ section {
 #message p {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   #message p {
     font-size: 16px;
