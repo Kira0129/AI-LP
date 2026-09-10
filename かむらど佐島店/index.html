@@ -819,11 +819,9 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script>
-        // 画像保存（右クリック・長押し）の禁止
+        // 右クリック・長押しの禁止（サイト全体）
         document.addEventListener('contextmenu', function (e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-            }
+            e.preventDefault();
         });
     </script>
 </body>
