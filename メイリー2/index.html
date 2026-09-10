@@ -77,9 +77,18 @@
     <!-- FV -->
     <section id="fv">
       <div class="fv-image">
-        <img src="img/fvpic01.jpg" alt="ファーストビュー 1" class="fv-slide slide-1">
-        <img src="img/fvpic02.jpg" alt="ファーストビュー 2" class="fv-slide slide-2">
-        <img src="img/fvpic03.jpg" alt="ファーストビュー 3" class="fv-slide slide-3">
+        <picture class="fv-slide slide-1">
+          <source media="(min-width: 768px)" srcset="img/pcfvpic01.jpg">
+          <img src="img/fvpic01.jpg" alt="ファーストビュー 1">
+        </picture>
+        <picture class="fv-slide slide-2">
+          <source media="(min-width: 768px)" srcset="img/pcfvpic02.jpg">
+          <img src="img/fvpic02.jpg" alt="ファーストビュー 2">
+        </picture>
+        <picture class="fv-slide slide-3">
+          <source media="(min-width: 768px)" srcset="img/pcfvpic03.jpg">
+          <img src="img/fvpic03.jpg" alt="ファーストビュー 3">
+        </picture>
       </div>
       <div class="fv-left-overlay">
         <div class="fv-content">
