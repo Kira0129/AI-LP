@@ -8,9 +8,9 @@
 
     :root {
       /* Theme Colors: Navy, Gray, Orange, Beige */
-      --bg-base: #FAF9F6;     /* Deep Navy */
-      --bg-light: #FFFFFF;    /* Light Navy */
-      --bg-lighter: #F3F1ED;  /* Lighter Navy */
+      --bg-base: #F3EFE9;     /* Deep Navy */
+      --bg-light: #EBECEF;    /* Light Navy */
+      --bg-lighter: #E2E4E8;  /* Lighter Navy */
       --text-main: #1D2D44;   /* Beige */
       --text-muted: #5C6B7D;  /* Light Gray */
       --text-dark: #A0ABB8;   /* Dark Gray */
