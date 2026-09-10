@@ -782,7 +782,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(253, 252, 249, 0.85);
+  background: rgba(253, 252, 249, 0.7);
 }
 
 .about-grid {
@@ -1057,7 +1057,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(253, 252, 249, 0.9);
+  background: rgba(253, 252, 249, 0.7);
 }
 
 .price-list-wrapper {
@@ -1326,7 +1326,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(253, 252, 249, 0.9);
+  background: rgba(253, 252, 249, 0.7);
 }
 
 .message-grid {
