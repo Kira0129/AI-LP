@@ -497,6 +497,10 @@
       background-size: 60px 60px;
     }
 
+    .problem-section .section-inner {
+      max-width: 1400px;
+    }
+
     .problem-section::before {
       content: '';
       position: absolute;
@@ -506,7 +510,7 @@
     }
 
     .problem-box {
-      max-width: 1000px;
+      max-width: 1300px;
       margin: 0 auto;
       background: rgba(250, 249, 246, 0.85);
       backdrop-filter: blur(12px);
