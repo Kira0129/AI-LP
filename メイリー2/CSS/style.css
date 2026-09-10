@@ -1363,12 +1363,11 @@ section {
   text-align: left;
 }
 
-.staff-top {
+.staff-flex {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: flex-start;
 }
 
 .staff-img {
@@ -1376,12 +1375,12 @@ section {
   flex-shrink: 0;
 }
 
-.staff-header {
+.staff-info {
   flex-grow: 1;
 }
 
 @media (min-width: 768px) {
-  .staff-top {
+  .staff-flex {
     gap: 30px;
   }
 
