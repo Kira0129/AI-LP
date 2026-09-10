@@ -1,5 +1,5 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-      // 蜿ｳ繧ｯ繝ｪ繝・け・医さ繝ｳ繝・く繧ｹ繝医Γ繝九Η繝ｼ・峨→繧ｳ繝斐・縺ｮ遖∵ｭ｢
+document.addEventListener('DOMContentLoaded', () => {
+      // 右クリック（コンテキストメニュー）とコピーの禁止
       document.addEventListener('contextmenu', e => e.preventDefault());
       document.addEventListener('copy', e => e.preventDefault());
 
@@ -81,7 +81,7 @@
           img.addEventListener('click', (e) => {
             e.stopPropagation();
             e.preventDefault();
-            
+
             // Set the image source and show the lightbox
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -96,7 +96,7 @@
           }
           // Prevent closing if it was just opened less than 400ms ago (e.g. from a fast double-click)
           if (Date.now() - lastOpened < 400) return;
-          
+
           lightbox.classList.remove('active');
         };
 
