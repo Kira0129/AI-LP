@@ -1616,20 +1616,42 @@
       const baImages = document.querySelectorAll('.ba-img');
 
       if (lightbox && lightboxImg) {
+        let isLightboxAnimating = false;
+
         baImages.forEach(img => {
-          img.addEventListener('click', () => {
+          img.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (isLightboxAnimating) return;
+            
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
+            isLightboxAnimating = true;
+            
+            // Prevent accidental instant close from double clicks
+            setTimeout(() => {
+              isLightboxAnimating = false;
+            }, 300);
           });
         });
 
-        lightboxClose.addEventListener('click', () => {
+        const closeLightbox = (e) => {
+          if (e) e.preventDefault();
+          if (isLightboxAnimating) return;
+          
           lightbox.classList.remove('active');
-        });
+          isLightboxAnimating = true;
+          
+          setTimeout(() => {
+            isLightboxAnimating = false;
+          }, 300);
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
 
         lightbox.addEventListener('click', (e) => {
-          if (e.target === lightbox) {
-            lightbox.classList.remove('active');
+          // Allow closing by clicking the background or the expanded image itself
+          if (e.target === lightbox || e.target === lightboxImg) {
+            closeLightbox(e);
           }
         });
       }
