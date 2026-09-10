@@ -1,4 +1,4 @@
-﻿*,
+*,
     *::before,
     *::after {
       margin: 0;
@@ -506,7 +506,7 @@
     }
 
     .problem-box {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       background: rgba(250, 249, 246, 0.85);
       backdrop-filter: blur(12px);
