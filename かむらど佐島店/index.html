@@ -410,20 +410,29 @@
         <!-- FV -->
         <section id="fv">
             <div class="fv-text-part">
-                <img src="img/logo.png" alt="かむらど 佐島店" class="h-32 md:h-44 w-auto max-w-[90%] object-contain mb-6 md:mb-8 js-fade">
+                <div class="flex flex-row md:flex-col items-center justify-center gap-5 md:gap-0 w-full px-2 max-w-[420px] md:max-w-none mx-auto">
+                    
+                    <!-- Logo -->
+                    <div class="flex-1 md:flex-none flex justify-end md:justify-center js-fade md:mb-8">
+                        <img src="img/logo.png" alt="かむらど 佐島店" class="w-full max-w-[160px] h-auto md:w-auto md:h-44 md:max-w-[90%] object-contain">
+                    </div>
 
-                <div class="fv-divider js-fade" style="transition-delay: 0.2s;"></div>
+                    <!-- Divider (Hidden on SP) -->
+                    <div class="fv-divider hidden md:block js-fade" style="transition-delay: 0.2s;"></div>
 
-                <div class="flex flex-col items-center js-fade text-navy" style="transition-delay: 0.4s;">
-                    <p class="font-en text-orange tracking-widest text-[14px] md:text-[16px] mb-2 md:mb-4">
-                        TEPPANYAKI COMRADE</p>
-                    <h1
-                        class="text-[32px] md:text-5xl lg:text-[54px] leading-relaxed tracking-widest font-medium mb-3 md:mb-5">
-                        日常のひとつに。
-                    </h1>
-                    <p class="text-[14px] md:text-lg lg:text-xl leading-loose tracking-widest font-light opacity-90">
-                        佐島で味わう、<br class="md:hidden">気取らない鉄板焼き。
-                    </p>
+                    <!-- Text -->
+                    <div class="flex-1 md:flex-none flex flex-col items-start md:items-center text-left md:text-center js-fade text-navy" style="transition-delay: 0.4s;">
+                        <p class="font-en text-orange tracking-widest text-[10px] sm:text-[11px] md:text-[16px] mb-1 md:mb-4">
+                            TEPPANYAKI COMRADE</p>
+                        <h1
+                            class="text-[19px] sm:text-[22px] md:text-5xl lg:text-[54px] leading-snug md:leading-relaxed tracking-widest font-medium mb-1.5 md:mb-5 whitespace-nowrap">
+                            日常のひとつに。
+                        </h1>
+                        <p class="text-[11px] sm:text-[12px] md:text-lg lg:text-xl leading-relaxed md:leading-loose tracking-widest font-light opacity-90">
+                            佐島で味わう、<br class="md:hidden">気取らない鉄板焼き。
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
