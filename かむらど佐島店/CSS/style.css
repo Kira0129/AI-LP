@@ -10,9 +10,16 @@
             background-color: var(--clr-bg);
             color: var(--clr-text);
             font-family: "Noto Sans JP", sans-serif;
+            font-size: 14px;
             line-height: 2.2;
             letter-spacing: 0.08em;
             -webkit-font-smoothing: antialiased;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
         }
 
         /* 共通アニメーション */
