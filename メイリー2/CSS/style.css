@@ -936,7 +936,7 @@ section {
        FEATURE
     ========================================================== */
 #feature {
-  background-color: var(--color-beige-light);
+  background-color: var(--color-beige-main);
 }
 
 .feature-grid {
@@ -1222,7 +1222,7 @@ section {
        BEFORE & AFTER
     ========================================================== */
 #before-after {
-  background-color: var(--color-white);
+  background-color: var(--color-beige-main);
 }
 
 .ba-grid {
