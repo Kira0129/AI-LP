@@ -511,6 +511,23 @@ section {
   line-height: 1.4;
 }
 
+.badge-num {
+  font-size: 1.3em;
+  font-family: var(--font-en);
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 3px;
+  line-height: 1;
+}
+
+.fv-disclaimer {
+  font-size: 11px;
+  color: var(--color-text-light);
+  margin-top: 12px;
+  text-align: right;
+  max-width: 370px; /* Aligns with the 3 badges on PC */
+}
+
 .fv-deco-bottom {
   margin-top: 50px;
 }
