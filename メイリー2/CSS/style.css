@@ -958,6 +958,12 @@
       position: relative;
     }
 
+    @media (min-width: 768px) {
+      .feature-img {
+        height: 310px;
+      }
+    }
+
     .feature-img img {
       width: 100%;
       height: 100%;
