@@ -602,7 +602,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('img/worrybg.jpg');
+      background-image: url('../img/worrybg.jpg');
       /* ダミー画像として維持 */
       background-size: cover;
       background-position: center;
@@ -752,7 +752,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('img/bg.jpg');
+      background-image: url('../img/bg.jpg');
       background-size: cover;
       background-position: center;
       z-index: -2;
@@ -1028,7 +1028,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('img/bg.jpg');
+      background-image: url('../img/bg.jpg');
       background-size: cover;
       background-position: center;
       z-index: -2;
@@ -1287,7 +1287,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('img/bg.jpg');
+      background-image: url('../img/bg.jpg');
       background-size: cover;
       background-position: center;
       z-index: -2;
