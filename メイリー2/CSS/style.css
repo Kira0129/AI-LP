@@ -873,7 +873,6 @@ section {
   width: 100%;
   max-width: 160px;
   flex-shrink: 0;
-  margin-bottom: 20px;
 }
 
 .service-image img {
