@@ -1355,10 +1355,16 @@ section {
 
 .message-catch {
   font-family: var(--font-heading);
-  font-size: clamp(22px, 4vw, 28px);
+  font-size: 20px;
   color: var(--color-green-main);
   margin-bottom: 30px;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .message-catch {
+    font-size: clamp(22px, 4vw, 28px);
+  }
 }
 
 .message-body {
