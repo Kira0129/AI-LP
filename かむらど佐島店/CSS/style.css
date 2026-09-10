@@ -1,4 +1,4 @@
-﻿        :root {
+        :root {
             --clr-bg: #F8F6F0;
             --clr-navy: #1B2A47;
             --clr-orange: #D96F32;
@@ -313,6 +313,28 @@
                 100% {
                     transform: translateX(calc(-100% - 0.5rem));
                 }
+            }
+        }
+
+        /* 共通(PC/SP) ループスライダー */
+        .loop-slider-all {
+            display: flex;
+            width: max-content;
+            gap: 0.5rem;
+        }
+
+        .loop-slider-all__track {
+            display: flex;
+            gap: 0.5rem;
+            animation: loop-marquee-all 25s linear infinite;
+        }
+
+        @keyframes loop-marquee-all {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100% - 0.5rem));
             }
         }
     
