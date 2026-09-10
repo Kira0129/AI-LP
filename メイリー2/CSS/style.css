@@ -1368,8 +1368,9 @@ section {
 .staff-flex {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .staff-img {
@@ -1378,12 +1379,23 @@ section {
 }
 
 .staff-info {
-  flex-grow: 1;
+  display: contents;
+}
+
+.staff-header {
+  flex: 1 1 0%;
 }
 
 @media (min-width: 768px) {
   .staff-flex {
+    flex-wrap: nowrap;
+    align-items: flex-start;
     gap: 30px;
+  }
+
+  .staff-info {
+    display: block;
+    flex-grow: 1;
   }
 
   .staff-img {
@@ -1425,6 +1437,7 @@ section {
 }
 
 .staff-msg {
+  width: 100%;
   color: var(--color-text-light);
   line-height: 1.8;
 }
