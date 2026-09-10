@@ -1324,10 +1324,11 @@ section {
 
   .message-image {
     width: 45%;
+    display: flex;
   }
   .message-image img {
     height: 100%;
-    min-height: 250px;
+    min-height: 0;
     object-position: 60% center;
   }
 }
