@@ -1348,6 +1348,13 @@ footer {
     gap: 24px;
   }
 
+  .message {
+    text-align: left;
+  }
+
+  .message .rule-center {
+    margin: 32px 0;
+  }
 
   .message-bg {
     background-position: center;
@@ -1357,25 +1364,9 @@ footer {
     font-size: 14px;
   }
 
-  .info-wrap {
-    text-align: center;
-  }
-
   .info-table th,
   .info-table td {
     font-size: 14px;
-    text-align: center;
-    display: block;
-    width: 100%;
-  }
-
-  .info-table th {
-    padding-bottom: 8px;
-    border-bottom: none;
-  }
-
-  .info-table td {
-    padding-top: 0;
   }
 
   footer {
@@ -1430,6 +1421,24 @@ footer {
     width: 44px;
     height: 44px;
   }
+}
+
+@media (min-width: 901px) {
+  .sp-cta {
+    display: none;
+  }
+}
+
+color: var(--neon-orange);
+border-top: 2px solid var(--neon-orange);
+}
+
+.page-top-btn {
+  bottom: 80px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+}
 }
 
 @media (min-width: 901px) {
