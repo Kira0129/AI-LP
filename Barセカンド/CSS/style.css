@@ -1171,6 +1171,7 @@ footer {
   nav {
     padding: 0 24px;
     height: 64px;
+    backdrop-filter: none !important;
   }
 
   .nav-logo {
@@ -1197,10 +1198,6 @@ footer {
     visibility: hidden;
     transition: all 0.4s;
     z-index: 250;
-  }
-
-  nav.is-open {
-    backdrop-filter: none;
   }
 
   nav.is-open .nav-links {
