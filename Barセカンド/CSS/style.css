@@ -879,7 +879,7 @@ section { padding: 120px 56px; }
 .info-table th {
   text-align: left;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--neon-blue);
   padding: 24px 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -890,7 +890,7 @@ section { padding: 120px 56px; }
 
 .info-table td {
   padding: 24px 0;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: var(--text-main);
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1117,6 +1117,10 @@ footer {
 
   .message { padding: 100px 24px; text-align: left; }
   .message .rule-center { margin: 32px 0; }
+
+  .info-table th, .info-table td {
+    font-size: 14px;
+  }
 
   footer {
     flex-direction: column;
