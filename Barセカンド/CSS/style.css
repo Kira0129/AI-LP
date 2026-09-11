@@ -1190,8 +1190,20 @@ footer {
   .message-bg { background-position: center; }
   .message .body-text { font-size: 14px; }
 
+  .info-wrap { text-align: center; }
+  
   .info-table th, .info-table td {
     font-size: 14px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .info-table th {
+    padding-bottom: 8px;
+    border-bottom: none;
+  }
+  .info-table td {
+    padding-top: 0;
   }
 
   footer {
