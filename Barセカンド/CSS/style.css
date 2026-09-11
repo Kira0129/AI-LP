@@ -1348,13 +1348,6 @@ footer {
     gap: 24px;
   }
 
-  .message {
-    text-align: left;
-  }
-
-  .message .rule-center {
-    margin: 32px 0;
-  }
 
   .message-bg {
     background-position: center;
