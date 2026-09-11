@@ -204,8 +204,9 @@
                 </div>
 
                 <div
-                    class="w-full md:w-[40%] bg-[url('img/concept_01.jpg')] bg-cover bg-center aspect-square md:aspect-auto h-[100vw] md:h-auto relative">
-                    <div class="absolute inset-0 bg-dark/20 mix-blend-multiply"></div>
+                    class="w-full md:w-[40%] aspect-square md:aspect-auto h-[100vw] md:h-auto relative overflow-hidden">
+                    <img src="img/concept_01.jpg" alt="コンセプト" class="absolute inset-0 w-full h-full object-cover z-0">
+                    <div class="absolute inset-0 bg-dark/20 mix-blend-multiply z-10"></div>
                 </div>
             </div>
         </section>
@@ -285,7 +286,9 @@
         <!-- Menu Section -->
         <section id="menu"
             class="section-reveal py-24 md:py-32 bg-dark relative overflow-hidden border-y border-white/5">
-            <div class="absolute inset-0 opacity-10 bg-[url('img/menu_bg.jpg')] bg-cover bg-center grayscale"></div>
+            <div class="absolute inset-0 opacity-10">
+                <img src="img/menu_bg.jpg" alt="メニュー背景" class="w-full h-full object-cover grayscale">
+            </div>
 
             <div class="container mx-auto px-6 relative z-10 text-white">
                 <div class="text-center mb-16 md:mb-28">
