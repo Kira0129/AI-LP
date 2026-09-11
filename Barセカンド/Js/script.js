@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Disable right-click and drag on images
+  // Disable right-click and drag globally
   document.addEventListener('contextmenu', (e) => {
-    if (e.target.tagName === 'IMG') e.preventDefault();
+    e.preventDefault();
   });
   document.addEventListener('dragstart', (e) => {
-    if (e.target.tagName === 'IMG') e.preventDefault();
+    e.preventDefault();
   });
 
   // Mobile Menu Toggle
