@@ -143,12 +143,12 @@
         .fv-catch.is-active, .fv-sub.is-active, .fv-logo-name.is-active { opacity: 1; }
 
         .fv-catch {
+            writing-mode: vertical-rl;
             font-size: clamp(26px, 3vw, 42px);
             font-weight: 700;
             line-height: 1.8;
             color: var(--white);
             letter-spacing: 0.15em;
-            margin-bottom: 24px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .fv-catch-line { display: block; overflow: hidden; }
@@ -163,17 +163,17 @@
         .fv-catch.is-active .char { --opacity: 1; --translate-y: 0; }
 
         .fv-sub {
+            writing-mode: vertical-rl;
             font-size: clamp(14px, 1.4vw, 16px);
             letter-spacing: 0.12em;
             color: var(--white);
             opacity: 0.9;
-            margin-bottom: 48px;
             line-height: 2.2;
             font-weight: 500;
             transition: opacity 1s ease, transform 1s ease;
-            transform: translateY(15px);
+            transform: translateX(15px);
         }
-        .fv-sub.is-active { transform: translateY(0); }
+        .fv-sub.is-active { transform: translateX(0); }
 
         .fv-logo-name {
             font-size: 20px;
