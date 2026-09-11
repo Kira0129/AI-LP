@@ -267,9 +267,9 @@
             .fv-container { display: flex; flex-direction: column; gap: 0; padding: 0 24px; }
             .fv-left { min-height: auto; padding-left: 0; }
             .fv-decorations { top: 0; left: 0; right: 0; bottom: 0; height: 100%; }
-            .fv-deco-01 { top: auto; bottom: 45%; right: 5%; width: 140px; }
-            .fv-deco-02 { top: auto; bottom: 40%; right: -5%; width: 180px; }
-            .fv-deco-03 { top: auto; bottom: 50%; right: 25%; width: 60px; }
+            .fv-deco-01 { top: auto; bottom: 5%; right: 0%; width: 140px; }
+            .fv-deco-02 { top: auto; bottom: 0%; right: -10%; width: 180px; }
+            .fv-deco-03 { top: auto; bottom: 15%; right: 15%; width: 60px; }
             .fv-catch { font-size: clamp(24px, 6vw, 32px); margin-top: 40px; margin-bottom: 16px; }
             .fv-sub { margin-bottom: 24px; }
             .fv-logo-name { margin-bottom: 32px; }
