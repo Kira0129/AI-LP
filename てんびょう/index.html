@@ -216,17 +216,27 @@
 
         <!-- Features Section -->
         <section id="features" class="section-reveal py-24 md:py-32 bg-offwhite relative overflow-visible text-dark">
-            <div class="container mx-auto px-4 md:px-6 relative z-10">
-                <div class="max-w-6xl mx-auto md:grid md:grid-cols-[280px_1fr] lg:grid-cols-[340px_1fr] md:gap-8 lg:gap-16 md:items-start">
+            <style>
+                @media (min-width: 768px) {
+                    .feature-grid-wrapper {
+                        grid-template-columns: calc(max(1.5rem, (100vw - 1152px) / 2) + 340px) 1fr;
+                    }
+                    .feature-sticky-head {
+                        padding-left: max(1.5rem, calc((100vw - 1152px) / 2));
+                    }
+                }
+            </style>
+            <div class="w-full relative z-10">
+                <div class="flex flex-col md:grid md:items-start feature-grid-wrapper">
                     
                     <!-- Sticky Header (Left Column on PC) -->
-                    <div class="mb-12 md:mb-0 md:sticky md:top-32 md:pt-10">
+                    <div class="mb-12 md:mb-0 md:sticky md:top-32 md:pt-10 px-4 md:px-0 md:pr-12 feature-sticky-head">
                         <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Feature</span>
                         <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-widest">4つの特徴</h2>
                     </div>
 
                     <!-- Feature Cards (Right Column on PC) -->
-                    <div class="flex flex-col gap-12 md:gap-0">
+                    <div class="flex flex-col gap-12 md:gap-0 px-4 md:px-0">
                         
                         <!-- Feature 1 -->
                         <div class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
