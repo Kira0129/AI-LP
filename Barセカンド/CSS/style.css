@@ -817,7 +817,7 @@ section { padding: 120px 56px; }
   inset: 0;
   background-image: url('../img/messagebg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   opacity: 0.2;
 }
 
@@ -1184,6 +1184,7 @@ footer {
 
   .message { text-align: left; }
   .message .rule-center { margin: 32px 0; }
+  .message-bg { background-position: center; }
   .message .body-text { font-size: 14px; }
 
   .info-table th, .info-table td {
