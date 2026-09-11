@@ -750,8 +750,7 @@ section { padding: 120px 56px; }
 }
 .menu-gallery-img {
   width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s, opacity 0.3s;
@@ -785,6 +784,7 @@ section { padding: 120px 56px; }
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
 }
