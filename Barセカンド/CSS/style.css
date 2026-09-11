@@ -1095,6 +1095,9 @@ footer {
   }
 
   /* Sections */
+  .recommend-item span {
+    font-size: 14px;
+  }
   .about-wrap, .info-wrap {
     display: flex;
     flex-direction: column;
@@ -1117,6 +1120,7 @@ footer {
 
   .message { padding: 100px 24px; text-align: left; }
   .message .rule-center { margin: 32px 0; }
+  .message .body-text { font-size: 14px; }
 
   .info-table th, .info-table td {
     font-size: 14px;
