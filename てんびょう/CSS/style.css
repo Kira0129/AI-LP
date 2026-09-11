@@ -270,7 +270,7 @@
             .fv-deco-01 { top: auto; bottom: 5%; right: 0%; width: 140px; }
             .fv-deco-02 { top: auto; bottom: 0%; right: -10%; width: 180px; }
             .fv-deco-03 { top: auto; bottom: 15%; right: 15%; width: 60px; }
-            .fv-catch { font-size: clamp(24px, 6vw, 32px); margin-top: 40px; margin-bottom: 16px; }
+            .fv-catch { font-size: clamp(24px, 6vw, 32px); margin-bottom: 16px; }
             .fv-sub { margin-bottom: 24px; }
             .fv-logo-name { margin-bottom: 32px; }
             .fv-read-more { display: none; }
