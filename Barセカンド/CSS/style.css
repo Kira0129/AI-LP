@@ -395,12 +395,12 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.7) contrast(1.1);
-  transition: filter 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .fv-grid-item:hover img {
-  filter: brightness(0.9) contrast(1.2);
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .fv-grid-1 { grid-column: 2 / 3; grid-row: 1 / 2; }
@@ -556,7 +556,6 @@ section { padding: 120px 56px; }
 .about-img {
   position: absolute;
   object-fit: cover;
-  filter: brightness(0.8);
   border-radius: 8px;
 }
 
@@ -644,7 +643,6 @@ section { padding: 120px 56px; }
   position: relative;
   z-index: 1;
   border-radius: 8px;
-  filter: brightness(0.85);
 }
 
 .ft-content { flex: 1; }
@@ -911,7 +909,6 @@ section { padding: 120px 56px; }
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(100%) invert(90%) contrast(1.2); /* ダークマップ風に */
 }
 
 .sns-btn {
