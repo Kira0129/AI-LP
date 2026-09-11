@@ -149,9 +149,17 @@
             font-weight: 700;
             line-height: 1.8;
             color: var(--dark);
-            -webkit-text-stroke: 1.5px var(--white);
             letter-spacing: 0.15em;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-shadow: 
+                1.5px 1.5px 0 var(--white),
+               -1.5px -1.5px 0 var(--white),
+               -1.5px 1.5px 0 var(--white),
+                1.5px -1.5px 0 var(--white),
+                1.5px 0 0 var(--white),
+               -1.5px 0 0 var(--white),
+                0 1.5px 0 var(--white),
+                0 -1.5px 0 var(--white),
+                0 4px 15px rgba(0,0,0,0.2);
         }
         .fv-catch-line { display: block; overflow: hidden; }
         
