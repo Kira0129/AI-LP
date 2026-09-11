@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居酒屋 てんびょう | 吉見町の隠れ家居酒屋</title>
+    <meta name="description" content="揚げたての串と、ほっとできる時間を。埼玉県吉見町にある「居酒屋 てんびょう」は、一本ずつ丁寧に仕込む串揚げと温かな雰囲気が魅力の隠れ家居酒屋です。">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.4.0/luminous-basic.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',      // 和風の墨黒
+                        vermilion: '#EA5532', // 朱色
+                        fvbg: '#c33f08',      // FV背景色
+                        offwhite: '#F9F8F6',  // アットホームな白
+                        white: '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Shippori Mincho', 'Noto Serif JP', 'serif'],
+                        en: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden select-none" oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;" ondragstart="return false;">
+    
+    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="logo-text text-xl md:text-2xl font-serif font-bold tracking-widest transition-colors">
+                居酒屋 てんびょう
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm tracking-widest font-bold">
+                <a href="#recommend" class="nav-link transition-colors">おすすめ</a>
+                <a href="#about" class="nav-link transition-colors">こだわり</a>
+                <a href="#features" class="nav-link transition-colors">特徴</a>
+                <a href="#menu" class="nav-link transition-colors">お品書き</a>
+                <a href="#access" class="nav-link transition-colors">店舗情報</a>
+            </nav>
+
+            <a href="https://www.hotpepper.jp/strJ004660142/" target="_blank"
+                class="hidden md:block px-8 py-3 bg-dark text-white text-xs font-bold tracking-widest hover:bg-white hover:text-dark transition-all rounded-full shadow-lg">
+                WEB予約
+            </a>
+
+            <button id="menuToggle" class="hamburger-btn md:hidden z-50">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-dark/95 z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-serif font-bold opacity-0 pointer-events-none transition-all duration-500 text-center">
+        <a href="#recommend" class="mobile-nav-link text-white hover:text-vermilion">おすすめ</a>
+        <a href="#about" class="mobile-nav-link text-white hover:text-vermilion">こだわり</a>
+        <a href="#features" class="mobile-nav-link text-white hover:text-vermilion">特徴</a>
+        <a href="#menu" class="mobile-nav-link text-white hover:text-vermilion">お品書き</a>
+        <a href="#access" class="mobile-nav-link text-white hover:text-vermilion">店舗情報</a>
+        <a href="https://www.hotpepper.jp/strJ004660142/" target="_blank" class="mt-8 px-12 py-4 bg-vermilion text-white font-bold text-lg tracking-widest rounded-full">
+            WEB予約
+        </a>
+    </div>
+
+    <main>
+        <!-- FV Section -->
+        <section id="fv" class="fv-section">
+            <div class="fv-container">
+                <div class="fv-left">
+                    <div class="fv-decorations">
+                        <div class="fv-deco fv-deco-01"></div>
+                        <div class="fv-deco fv-deco-02"></div>
+                        <div class="fv-deco fv-deco-03"></div>
+                    </div>
+
+                    <div class="fv-left-content">
+                        <h1 class="fv-catch font-serif" id="fv-catch">
+                            <span class="fv-catch-line">揚げたての串と、</span>
+                            <span class="fv-catch-line">ほっとできる時間を</span>
+                        </h1>
+                        <p class="fv-sub" id="fv-sub">
+                            ひとりでも、家族でも、仲間とでも。<br>
+                            小さなご縁が自然につながる、<br>吉見町の隠れ家居酒屋です。
+                        </p>
+                        <div class="fv-logo-name font-serif" id="fv-logo">
+                            居酒屋 てんびょう
+                        </div>
+
+                        <div class="fv-read-more" id="fv-read-more">
+                            <div class="fv-read-more-line"></div>
+                            <div class="fv-read-more-text">Scroll</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fv-right">
+                    <div class="fv-image-grid" id="fv-image-grid">
+                        <div class="fv-grid-item fv-grid-1"><img src="img/fv_food_01.jpg" alt="串揚げ"></div>
+                        <div class="fv-grid-item fv-grid-2"><img src="img/concept_01.jpg" alt="居酒屋の雰囲気"></div>
+                        <div class="fv-grid-item fv-grid-3"><img src="img/fv_food_04.jpg" alt="店内"></div>
+                        <div class="fv-grid-item fv-grid-4"><img src="img/service_01.jpg" alt="料理"></div>
+                        <div class="fv-grid-item fv-grid-5"><img src="img/service_03.jpg" alt="座敷"></div>
+                        <div class="fv-grid-item fv-grid-6"><img src="img/service_02.jpg" alt="お酒"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommend Section -->
+        <section id="recommend" class="section-reveal py-24 md:py-32 bg-white text-dark">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+                    <div class="w-full md:w-1/2">
+                        <span class="text-vermilion tracking-[0.3em] text-sm font-bold uppercase block mb-4 font-en">Recommend</span>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark leading-tight mb-8">
+                            ひとりでも、家族でも、仲間とでも。<br>
+                            <span class="text-xl md:text-2xl font-normal mt-4 block leading-relaxed text-dark/80">小さなご縁が自然につながる、<br class="md:hidden">吉見町の隠れ家居酒屋です。</span>
+                        </h2>
+                        
+                        <div class="bg-offwhite p-8 md:p-10 rounded-sm border border-dark/5 shadow-sm">
+                            <h3 class="font-bold text-lg mb-6 border-b border-dark/10 pb-4">こんな方におすすめ</h3>
+                            <ul class="space-y-4 font-medium text-base text-dark/80">
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>仕事帰りに一人で気軽に飲みたい方</li>
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>揚げたての串揚げを楽しみたい方</li>
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>家族やお子様とゆっくり食事をしたい方</li>
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>友人との食事やちょっとした宴会を楽しみたい方</li>
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>初めてでも入りやすい居酒屋を探している方</li>
+                                <li class="flex items-start gap-3"><span class="text-vermilion font-bold mt-0.5">✔</span>落ち着いてお酒と料理を楽しみたい方</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 flex justify-end">
+                        <div class="w-full md:w-[90%] relative">
+                            <img src="img/scene_01.jpg" alt="おすすめシーン" class="w-full h-auto rounded-sm shadow-xl relative z-10">
+                            <div class="absolute -bottom-8 -left-8 w-2/3 h-2/3 bg-vermilion/10 z-0 rounded-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-reveal relative overflow-hidden bg-vermilion">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-[60%] p-8 md:p-12 py-24 md:py-32 flex justify-center items-center relative border-b md:border-b-0 md:border-r border-white/10">
+                    <div class="vertical-rl h-[450px] md:h-[500px] text-white">
+                        <div class="ml-8 md:ml-16">
+                            <span class="text-sm tracking-[0.3em] font-en font-bold text-white/50 mb-8 block vertical-text uppercase">About</span>
+                            <h2 class="text-2xl md:text-4xl font-serif font-bold leading-[2] tracking-widest text-white">
+                                ご縁が集まる、<br>吉見町の小さな居酒屋
+                            </h2>
+                        </div>
+                        <div class="text-white/90 text-sm md:text-base font-medium leading-[2.2] md:leading-[2.5] tracking-widest">
+                            <p class="ml-5 md:ml-8">埼玉県比企郡吉見町にある「居酒屋 てんびょう」は、<br>揚げたての串揚げとお酒を気軽に楽しめる、<br>夫婦で営むアットホームな居酒屋です。</p>
+                            <p class="ml-5 md:ml-8">一本一本丁寧に仕込む串揚げを中心に、<br>お酒によく合う一品料理や季節のメニューを<br>ご用意しています。</p>
+                            <p class="ml-5 md:ml-8">店内にはカウンターとお座敷があり、<br>おひとり様のちょい飲みから、お子様連れのご家族、<br>ご友人との食事や宴会まで幅広くご利用いただけます。</p>
+                            <p>常連の方も初めての方も自然と馴染める、<br>ほっと肩の力を抜いて過ごせる場所を目指しています。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-[40%] bg-[url('img/concept_01.jpg')] bg-cover bg-center aspect-square md:aspect-auto h-[100vw] md:h-auto relative">
+                    <div class="absolute inset-0 bg-dark/20 mix-blend-multiply"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="relative h-[500vh] bg-offwhite overflow-visible">
+            <div class="sticky top-0 left-0 h-screen w-full flex flex-col-reverse md:flex-row overflow-hidden z-20">
+                <div class="w-full md:w-[40%] h-[40%] md:h-full relative bg-dark">
+                    <div class="service-image-fixed absolute inset-0 opacity-100"><img src="img/service_01.jpg" alt="特徴1" class="w-full h-full object-cover"></div>
+                    <div class="service-image-fixed absolute inset-0 opacity-0"><img src="img/service_02.jpg" alt="特徴2" class="w-full h-full object-cover"></div>
+                    <div class="service-image-fixed absolute inset-0 opacity-0"><img src="img/service_03.jpg" alt="特徴3" class="w-full h-full object-cover"></div>
+                    <div class="service-image-fixed absolute inset-0 opacity-0"><img src="img/scene_02.jpg" alt="特徴4" class="w-full h-full object-cover"></div>
+                    <div class="absolute inset-0 bg-dark/30 pointer-events-none"></div>
+                </div>
+
+                <div class="w-full md:w-[60%] h-[60%] md:h-full bg-offwhite flex items-center p-8 md:p-20 relative overflow-hidden">
+                    <div class="service-content-inner absolute inset-0 p-8 md:p-24 flex flex-col justify-center transition-all duration-1000 opacity-100 translate-y-0">
+                        <span class="font-en text-vermilion/20 text-6xl md:text-9xl font-bold block mb-4">01</span>
+                        <h3 class="text-2xl md:text-4xl font-serif font-bold text-dark leading-tight mb-6">一本ずつ丁寧に仕込む、<br>揚げたて串揚げ</h3>
+                        <p class="text-base md:text-lg font-medium leading-loose text-dark/80">素材のおいしさを楽しんでいただけるよう、一つひとつ丁寧に仕込み、揚げたてでご提供。<br>定番はもちろん、旬の食材を使った串や季節の味もお楽しみいただけます。</p>
+                    </div>
+                    
+                    <div class="service-content-inner absolute inset-0 p-8 md:p-24 flex flex-col justify-center transition-all duration-1000 opacity-0 translate-y-8 pointer-events-none">
+                        <span class="font-en text-vermilion/20 text-6xl md:text-9xl font-bold block mb-4">02</span>
+                        <h3 class="text-2xl md:text-4xl font-serif font-bold text-dark leading-tight mb-6">おひとり様も気軽な<br>カウンター席</h3>
+                        <p class="text-base md:text-lg font-medium leading-loose text-dark/80">仕事帰りの一杯や、ちょっと飲んで帰りたい日にも気軽に立ち寄れるカウンターをご用意。<br>おひとり様でも肩肘張らず、ゆっくりお過ごしいただけます。</p>
+                    </div>
+                    
+                    <div class="service-content-inner absolute inset-0 p-8 md:p-24 flex flex-col justify-center transition-all duration-1000 opacity-0 translate-y-8 pointer-events-none">
+                        <span class="font-en text-vermilion/20 text-6xl md:text-9xl font-bold block mb-4">03</span>
+                        <h3 class="text-2xl md:text-4xl font-serif font-bold text-dark leading-tight mb-6">家族でくつろげる<br>お座敷</h3>
+                        <p class="text-base md:text-lg font-medium leading-loose text-dark/80">靴を脱いでゆったり過ごせるお座敷もご用意しています。<br>お子様連れのご家族やご友人とのお食事、グループでのお集まりにもおすすめです。</p>
+                    </div>
+
+                    <div class="service-content-inner absolute inset-0 p-8 md:p-24 flex flex-col justify-center transition-all duration-1000 opacity-0 translate-y-8 pointer-events-none">
+                        <span class="font-en text-vermilion/20 text-6xl md:text-9xl font-bold block mb-4">04</span>
+                        <h3 class="text-2xl md:text-4xl font-serif font-bold text-dark leading-tight mb-6">夫婦で迎える、<br>温かな雰囲気</h3>
+                        <p class="text-base md:text-lg font-medium leading-loose text-dark/80">夫婦で営む小さなお店だからこそ、一人ひとりとのご縁を大切に。<br>常連の方も初めての方も自然と会話が生まれ、またふらっと立ち寄りたくなるような居心地の良さを大切にしています。</p>
+                    </div>
+
+                    <div id="service-progress-container" class="absolute z-30 pointer-events-none bottom-4 left-0 w-full px-8 h-[2px] md:top-1/2 md:-translate-y-1/2 md:left-12 md:w-[2px] md:h-[60%] md:px-0">
+                        <div class="w-full h-full bg-dark/10">
+                            <div id="service-progress-line" class="absolute bg-vermilion transition-all duration-300 top-0 left-0 h-full w-0 md:w-full md:h-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute inset-0 z-10 pointer-events-none">
+                <div data-service-trigger="1" class="h-[125vh]"></div>
+                <div data-service-trigger="2" class="h-[125vh]"></div>
+                <div data-service-trigger="3" class="h-[125vh]"></div>
+                <div data-service-trigger="4" class="h-[125vh]"></div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="section-reveal py-24 md:py-32 bg-dark relative overflow-hidden border-y border-white/5">
+            <div class="absolute inset-0 opacity-10 bg-[url('img/menu_bg.jpg')] bg-cover bg-center grayscale"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-white">
+                <div class="text-center mb-16 md:mb-28">
+                    <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Menu</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-widest">お品書き</h2>
+                </div>
+
+                <div class="max-w-6xl mx-auto flex flex-col gap-20 md:gap-32">
+                    <div class="group flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                        <div class="w-full md:w-3/5 overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl border border-white/5">
+                            <img src="img/fv_food_01.jpg" alt="串5本盛り合わせ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                            <div class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700"></div>
+                        </div>
+                        <div class="w-full md:w-2/5 flex flex-col justify-center">
+                            <div class="mb-6 pb-6 border-b border-white/10">
+                                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4 tracking-wider">串5本盛り合わせ</h3>
+                                <span class="text-2xl md:text-3xl font-serif font-bold text-vermilion">650<span class="text-sm text-white/50 ml-2">円(税込)</span></span>
+                            </div>
+                            <p class="text-white/80 leading-loose font-medium text-base md:text-lg">
+                                迷ったらまずはこちら。<br>定番からおすすめまで、人気の串揚げを5本盛り合わせました。
+                            </p>
+                            <p class="text-xs text-white/50 mt-4 tracking-widest">※内容は仕入れ状況により変わります。</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+                        <div class="w-full md:w-3/5 overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl border border-white/5">
+                            <img src="img/fv_food_04.jpg" alt="串7本盛り合わせ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                            <div class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700"></div>
+                        </div>
+                        <div class="w-full md:w-2/5 flex flex-col justify-center">
+                            <div class="mb-6 pb-6 border-b border-white/10">
+                                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4 tracking-wider">串7本盛り合わせ</h3>
+                                <span class="text-2xl md:text-3xl font-serif font-bold text-vermilion">880<span class="text-sm text-white/50 ml-2">円(税込)</span></span>
+                            </div>
+                            <p class="text-white/80 leading-loose font-medium text-base md:text-lg">
+                                いろいろ楽しみたい方におすすめ。<br>定番からおすすめまで、人気の串揚げを7本盛り合わせました。
+                            </p>
+                            <p class="text-xs text-white/50 mt-4 tracking-widest">※内容は仕入れ状況により変わります。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-24">
+                    <p class="text-white/60 text-sm md:text-base font-medium tracking-widest border border-white/10 inline-block px-8 py-4 rounded-full">
+                        その他、お酒によく合う一品料理や季節のメニューも多数ご用意しております。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Section -->
+        <section id="voice" class="section-reveal py-24 md:py-32 bg-offwhite">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Voice</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark tracking-widest">お客様の声</h2>
+                </div>
+
+                <div class="swiper voice-swiper max-w-6xl mx-auto pb-12">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">仕事帰りの至福の時間</h3>
+                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
+                                    仕事帰りにふらっと一人で立ち寄りました。カウンター席で揚げたてのサクサクな串揚げとお酒をいただき、一日の疲れが吹き飛びました。居心地が良くてつい長居してしまいます。
+                                </p>
+                                <div class="mt-6 pt-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">客</div>
+                                    <span class="text-xs text-dark/50 font-bold">30代 男性 / おひとり様</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">家族でゆっくり楽しめました</h3>
+                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
+                                    座敷があるので、子供連れでも安心して利用できました。温かい接客で迎えていただき、串揚げも一品料理も美味しくて家族みんな大満足です。また休日に伺います！
+                                </p>
+                                <div class="mt-6 pt-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">客</div>
+                                    <span class="text-xs text-dark/50 font-bold">40代 女性 / ご家族連れ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">アットホームで素敵なお店</h3>
+                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
+                                    初めて行きましたが、ご夫婦のアットホームな雰囲気が最高でした。串盛り合わせはどれも美味しく、他のお客さんとも自然と会話が弾むような、素敵な空間です。
+                                </p>
+                                <div class="mt-6 pt-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">客</div>
+                                    <span class="text-xs text-dark/50 font-bold">50代 男性 / ご友人同士</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination mt-8"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="section-reveal py-24 md:py-32 bg-white px-6 w-full overflow-hidden">
+            <div class="max-w-5xl mx-auto flex justify-center items-center">
+                <div class="vertical-rl h-[450px] md:h-[500px] text-dark inline-block">
+                    <div class="ml-8 md:ml-16">
+                        <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-8 vertical-text text-sm">Message</span>
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold leading-[2] tracking-widest">
+                            小さなご縁を、大切に
+                        </h2>
+                    </div>
+                    <div class="text-dark/80 text-sm md:text-base font-medium leading-[2.2] md:leading-[2.5] tracking-widest">
+                        <p class="ml-5 md:ml-10">以前から「いつか自分たちのお店を持ちたい」という想いがありました。</p>
+                        <p class="ml-5 md:ml-10">おいしい料理とお酒を囲みながら、誰もが気軽に集まり、<br>ほっとできる時間を過ごせる場所をつくりたい。<br>そんな想いから「居酒屋 てんびょう」を始めました。</p>
+                        <p class="ml-5 md:ml-10">一人で静かに飲みたい日も、家族で食事を楽しみたい日も、<br>仲間と笑い合いたい夜も。</p>
+                        <p>ここで生まれる一つひとつのご縁を大切に、地域の皆さまに<br>「また来たい」と思っていただけるお店を<br>夫婦でつくっていきたいと思っています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="section-reveal py-24 md:py-32 bg-vermilion text-white text-center border-b border-white/10">
+            <div class="container mx-auto px-6">
+                <span class="font-en tracking-[0.3em] font-bold uppercase block mb-4 text-sm opacity-80">Reservation</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold tracking-widest mb-8">ご予約・お問い合わせ</h2>
+                <p class="mb-12 text-sm md:text-base font-medium leading-relaxed opacity-90">
+                    ご予約はお電話、またはWEBにて承っております。<br>
+                    貸切やご宴会のご相談もお気軽にお問い合わせください。
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 max-w-2xl mx-auto">
+                    <a href="tel:090-7994-5551" class="w-full md:w-1/2 px-10 py-5 bg-white text-vermilion font-bold tracking-widest rounded-sm flex items-center justify-center gap-3 hover:bg-dark hover:text-white transition-all shadow-lg">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                        090-7994-5551
+                    </a>
+                    <a href="https://www.hotpepper.jp/strJ004660142/" target="_blank" class="w-full md:w-1/2 px-10 py-5 bg-dark text-white font-bold tracking-widest rounded-sm flex items-center justify-center gap-3 hover:bg-white hover:text-dark transition-all shadow-lg border border-dark hover:border-white">
+                        <i class="fa-solid fa-utensils text-lg"></i>
+                        WEB予約はこちら
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section id="access" class="bg-dark text-white py-24 md:py-32 relative">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Information</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-widest">店舗情報</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 max-w-6xl mx-auto items-start">
+                    <div class="space-y-10 order-2 lg:order-1">
+                        <div class="border-b border-white/20 pb-6">
+                            <h3 class="text-vermilion text-sm tracking-widest font-bold mb-2">店舗名</h3>
+                            <p class="text-2xl font-serif font-bold">居酒屋 てんびょう</p>
+                        </div>
+                        <div class="border-b border-white/20 pb-6">
+                            <h3 class="text-vermilion text-sm tracking-widest font-bold mb-2">住所</h3>
+                            <p class="text-lg font-medium leading-relaxed">〒355-0156<br>埼玉県比企郡吉見町長谷１８１９−５７</p>
+                        </div>
+                        <div class="border-b border-white/20 pb-6">
+                            <h3 class="text-vermilion text-sm tracking-widest font-bold mb-2">営業時間 / 定休日</h3>
+                            <p class="text-lg font-medium leading-relaxed">17:00〜0:00<br><span class="text-white/60 text-sm mt-1 block">定休日：火曜日</span></p>
+                        </div>
+                        <div class="border-b border-white/20 pb-6">
+                            <h3 class="text-vermilion text-sm tracking-widest font-bold mb-2">電話番号</h3>
+                            <a href="tel:090-7994-5551" class="text-3xl font-en font-bold hover:text-vermilion transition-colors block">090-7994-5551</a>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://www.instagram.com/__tenbyo__" target="_blank" class="inline-flex items-center gap-3 hover:text-vermilion transition-colors group">
+                                <i class="fa-brands fa-instagram text-3xl"></i>
+                                <span class="font-bold tracking-widest text-sm">@__tenbyo__</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2 w-full h-[400px] lg:h-full min-h-[400px] bg-white/10 rounded-sm overflow-hidden shadow-2xl border border-white/10">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E6%AF%94%E4%BC%81%E9%83%A1%E5%90%89%E8%A6%8B%E7%94%BA%E9%95%B7%E8%B0%B7%EF%BC%91%EF%BC%98%EF%BC%91%EF%BC%99%E2%88%92%EF%BC%95%EF%BC%97&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark pt-12 pb-24 md:pb-12 text-center border-t border-white/10">
+        <div class="flex flex-wrap justify-center gap-6 text-white/50 font-bold tracking-widest mb-8 px-4 text-sm">
+            <a href="#recommend" class="hover:text-vermilion transition-colors">おすすめ</a>
+            <a href="#about" class="hover:text-vermilion transition-colors">こだわり</a>
+            <a href="#features" class="hover:text-vermilion transition-colors">特徴</a>
+            <a href="#menu" class="hover:text-vermilion transition-colors">お品書き</a>
+        </div>
+        <p class="text-xs text-white/30 tracking-widest font-en">&copy; 2026 Izakaya Tenbyo.</p>
+    </footer>
+
+    <div id="mobileCTA" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] w-[90%] opacity-0 pointer-events-none transition-all duration-300">
+        <a href="https://www.hotpepper.jp/strJ004660142/" target="_blank"
+            class="block w-full py-4 bg-vermilion text-white text-center font-bold text-lg tracking-widest shadow-2xl rounded-full border border-white/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-utensils text-base"></i> WEB予約
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>
