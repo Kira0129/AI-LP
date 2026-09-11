@@ -816,7 +816,7 @@ section { padding: 120px 56px; }
 .message-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=80');
+  background-image: url('../img/messagebg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.2;
