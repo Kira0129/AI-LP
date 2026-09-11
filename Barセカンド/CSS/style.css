@@ -1035,7 +1035,7 @@ footer {
   .nav-links a { font-size: 16px; color: var(--text-main); }
 
   /* FV */
-  .fv-section { padding: 80px 0 20px; }
+  .fv-section { padding: 40px 0 20px; }
   .fv-container {
     display: flex;
     flex-direction: column;
