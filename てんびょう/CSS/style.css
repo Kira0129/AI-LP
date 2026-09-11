@@ -25,8 +25,16 @@
         }
 
         /* Header Transitions */
-        #mainHeader { transition: all 0.5s ease; }
+        #mainHeader { 
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
         #mainHeader.scrolled {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
             background-color: rgba(251, 249, 246, 0.95);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
