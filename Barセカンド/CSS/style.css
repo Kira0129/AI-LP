@@ -807,7 +807,6 @@ section { padding: 120px 56px; }
    ========================================================================== */
 .message {
   position: relative;
-  padding: 160px 24px;
   background: var(--bg-dark);
   text-align: center;
   overflow: hidden;
@@ -919,7 +918,6 @@ section { padding: 120px 56px; }
    ========================================================================== */
 .info {
   background: var(--bg-dark);
-  padding-bottom: 80px;
 }
 
 .info-wrap {
@@ -1184,7 +1182,7 @@ footer {
 
   .reserve-cards { grid-template-columns: 1fr; gap: 24px; }
 
-  .message { padding: 100px 24px; text-align: left; }
+  .message { text-align: left; }
   .message .rule-center { margin: 32px 0; }
   .message .body-text { font-size: 14px; }
 
