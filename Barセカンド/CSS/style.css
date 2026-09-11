@@ -1384,7 +1384,7 @@ footer {
 
   .info-table th,
   .info-table td {
-    font-size: 14px;
+    font-size: 13px;
     display: table-cell;
     width: auto;
     text-align: left;
@@ -1393,8 +1393,8 @@ footer {
   }
 
   .info-table th {
-    width: 100px;
-    padding-right: 16px;
+    width: 75px;
+    padding-right: 8px;
   }
 
   footer {
