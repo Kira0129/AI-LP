@@ -1377,37 +1377,24 @@ footer {
     font-size: 14px;
   }
 
-  .info-table,
-  .info-table tbody,
-  .info-table tr,
-  .info-table th,
-  .info-table td {
-    display: block;
-    width: 100%;
+  .info-table {
+    width: auto;
+    margin: 0 auto;
   }
 
-  .info-table tr {
+  .info-table th,
+  .info-table td {
+    font-size: 14px;
+    display: table-cell;
+    width: auto;
+    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px 0;
-    text-align: center;
   }
 
   .info-table th {
-    padding: 0 0 12px 0;
-    border-bottom: none;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .info-table td {
-    padding: 0;
-    border-bottom: none;
-    font-size: 14px;
-  }
-
-  .info-wrap > div:first-child h2.h2,
-  .info-wrap > div:first-child p.tag {
-    text-align: center;
+    width: 100px;
+    padding-right: 16px;
   }
 
   footer {
