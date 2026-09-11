@@ -221,6 +221,7 @@
                     .feature-grid-wrapper {
                         grid-template-columns: calc(max(1.5rem, (100vw - 1152px) / 2) + 340px) 1fr;
                     }
+
                     .feature-sticky-head {
                         padding-left: max(1.5rem, calc((100vw - 1152px) / 2));
                     }
@@ -228,101 +229,147 @@
             </style>
             <div class="w-full relative z-10">
                 <div class="flex flex-col md:grid md:items-start feature-grid-wrapper">
-                    
+
                     <!-- Sticky Header (Left Column on PC) -->
                     <div class="mb-12 md:mb-0 md:sticky md:top-32 md:pt-10 px-4 md:px-0 md:pr-12 feature-sticky-head">
-                        <span class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Feature</span>
+                        <span
+                            class="text-vermilion tracking-[0.3em] font-en font-bold uppercase block mb-4 text-sm">Feature</span>
                         <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-widest">4つの特徴</h2>
                     </div>
 
                     <!-- Feature Cards (Right Column on PC) -->
                     <div class="flex flex-col gap-12 md:gap-0 px-4 md:px-0">
-                        
+
                         <!-- Feature 1 -->
-                        <div class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
+                        <div
+                            class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
                             <!-- Image -->
                             <div class="w-full h-64 md:absolute md:inset-0 md:h-full relative overflow-hidden md:-z-10">
-                                <img src="img/service_01.jpg" alt="特徴1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
+                                <img src="img/service_01.jpg" alt="特徴1"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
                             </div>
-                            
+
                             <!-- Gradient Overlay (PC Only) -->
-                            <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none"></div>
+                            <div
+                                class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none">
+                            </div>
 
                             <!-- Content -->
-                            <div class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
-                                <span class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">01</span>
-                                <span class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point 01</span>
-                                <h3 class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
+                            <div
+                                class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
+                                <span
+                                    class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">01</span>
+                                <span
+                                    class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point
+                                    01</span>
+                                <h3
+                                    class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
                                     <span class="block w-8 h-[2px] bg-vermilion mb-4 md:mb-6"></span>
                                     一本ずつ丁寧に仕込む、<br>揚げたて串揚げ
                                 </h3>
-                                <p class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">素材のおいしさを楽しんでいただけるよう、一つひとつ丁寧に仕込み、揚げたてでご提供。<br>定番はもちろん、旬の食材を使った串や季節の味もお楽しみいただけます。</p>
+                                <p
+                                    class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">
+                                    素材のおいしさを楽しんでいただけるよう、一つひとつ丁寧に仕込み、揚げたてでご提供。<br>定番はもちろん、旬の食材を使った串や季節の味もお楽しみいただけます。</p>
                             </div>
                         </div>
 
                         <!-- Feature 2 -->
-                        <div class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
+                        <div
+                            class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
                             <!-- Image -->
                             <div class="w-full h-64 md:absolute md:inset-0 md:h-full relative overflow-hidden md:-z-10">
-                                <img src="img/serpic02.jpg" alt="特徴2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
+                                <img src="img/serpic02.jpg" alt="特徴2"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
                             </div>
-                            
+
                             <!-- Gradient Overlay (PC Only) -->
-                            <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none"></div>
+                            <div
+                                class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none">
+                            </div>
 
                             <!-- Content -->
-                            <div class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
-                                <span class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">02</span>
-                                <span class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point 02</span>
-                                <h3 class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
+                            <div
+                                class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
+                                <span
+                                    class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">02</span>
+                                <span
+                                    class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point
+                                    02</span>
+                                <h3
+                                    class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
                                     <span class="block w-8 h-[2px] bg-vermilion mb-4 md:mb-6"></span>
                                     おひとり様も気軽な<br>カウンター席
                                 </h3>
-                                <p class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">仕事帰りの一杯や、ちょっと飲んで帰りたい日にも気軽に立ち寄れるカウンターをご用意。<br>おひとり様でも肩肘張らず、ゆっくりお過ごしいただけます。</p>
+                                <p
+                                    class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">
+                                    仕事帰りの一杯や、ちょっと飲んで帰りたい日にも気軽に立ち寄れるカウンターをご用意。<br>おひとり様でも肩肘張らず、ゆっくりお過ごしいただけます。</p>
                             </div>
                         </div>
 
                         <!-- Feature 3 -->
-                        <div class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
+                        <div
+                            class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
                             <!-- Image -->
                             <div class="w-full h-64 md:absolute md:inset-0 md:h-full relative overflow-hidden md:-z-10">
-                                <img src="img/serpic03.jpg" alt="特徴3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
+                                <img src="img/serpic03.jpg" alt="特徴3"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
                             </div>
-                            
+
                             <!-- Gradient Overlay (PC Only) -->
-                            <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none"></div>
+                            <div
+                                class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none">
+                            </div>
 
                             <!-- Content -->
-                            <div class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
-                                <span class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">03</span>
-                                <span class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point 03</span>
-                                <h3 class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
+                            <div
+                                class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
+                                <span
+                                    class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">03</span>
+                                <span
+                                    class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point
+                                    03</span>
+                                <h3
+                                    class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
                                     <span class="block w-8 h-[2px] bg-vermilion mb-4 md:mb-6"></span>
                                     家族でくつろげる<br>お座敷
                                 </h3>
-                                <p class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">靴を脱いでゆったり過ごせるお座敷もご用意しています。<br>お子様連れのご家族やご友人とのお食事、グループでのお集まりにもおすすめです。</p>
+                                <p
+                                    class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">
+                                    靴を脱いでゆったり過ごせるお座敷もご用意しています。<br>お子様連れのご家族やご友人とのお食事、グループでのお集まりにもおすすめです。</p>
                             </div>
                         </div>
 
                         <!-- Feature 4 -->
-                        <div class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
+                        <div
+                            class="group relative flex flex-col bg-white overflow-hidden shadow-xl border-t-4 border-vermilion md:border-t-0 md:shadow-none md:min-h-[600px] md:justify-end md:bg-transparent md:mb-0">
                             <!-- Image -->
                             <div class="w-full h-64 md:absolute md:inset-0 md:h-full relative overflow-hidden md:-z-10">
-                                <img src="img/scene_02.jpg" alt="特徴4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
+                                <img src="img/scene_02.jpg" alt="特徴4"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:duration-1000 group-hover:scale-105">
                             </div>
-                            
+
                             <!-- Gradient Overlay (PC Only) -->
-                            <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none"></div>
+                            <div
+                                class="hidden md:block absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent -z-10 pointer-events-none">
+                            </div>
 
                             <!-- Content -->
-                            <div class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
-                                <span class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">04</span>
-                                <span class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point 04</span>
-                                <h3 class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
+                            <div
+                                class="p-8 md:p-12 lg:p-16 relative z-10 flex flex-col flex-grow md:flex-grow-0 md:text-white">
+                                <span
+                                    class="font-en text-black/5 md:text-white/10 text-8xl md:text-9xl font-bold absolute top-2 right-4 md:top-8 md:right-8 leading-none select-none">04</span>
+                                <span
+                                    class="text-vermilion text-xs md:text-sm font-bold tracking-[0.2em] uppercase block mb-4 relative z-10">Point
+                                    04</span>
+                                <h3
+                                    class="text-2xl md:text-3xl font-serif font-bold text-dark md:text-white leading-tight mb-4 relative z-10">
                                     <span class="block w-8 h-[2px] bg-vermilion mb-4 md:mb-6"></span>
                                     夫婦で迎える、<br>温かな雰囲気
                                 </h3>
-                                <p class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">夫婦で営む小さなお店だからこそ、一人ひとりとのご縁を大切に。<br>常連の方も初めての方も自然と会話が生まれ、またふらっと立ち寄りたくなるような居心地の良さを大切にしています。</p>
+                                <p
+                                    class="font-medium leading-loose text-dark/80 md:text-white/90 relative z-10 mt-auto md:max-w-2xl">
+                                    夫婦で営む小さなお店だからこそ、一人ひとりとのご縁を大切に。<br>常連の方も初めての方も自然と会話が生まれ、またふらっと立ち寄りたくなるような居心地の良さを大切にしています。
+                                </p>
                             </div>
                         </div>
 
@@ -334,8 +381,8 @@
         <!-- Menu Section -->
         <section id="menu"
             class="section-reveal py-24 md:py-32 bg-dark relative overflow-hidden border-y border-white/5">
-            <div class="absolute inset-0 opacity-10">
-                <img src="img/menu_bg.jpg" alt="メニュー背景" class="w-full h-full object-cover grayscale">
+            <div class="absolute inset-0 z-0">
+                <img src="img/blackbg.jpg" alt="メニュー背景" class="w-full h-full object-cover">
             </div>
 
             <div class="container mx-auto px-4 md:px-6 relative z-10 text-white">
@@ -347,12 +394,15 @@
 
                 <div class="max-w-6xl mx-auto flex flex-col gap-20 md:gap-32">
                     <div class="group flex flex-col md:flex-row items-center gap-8 md:gap-16">
-                        <div
-                            class="w-full md:w-3/5 overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl border border-white/5">
-                            <img src="img/menupic01.jpg" alt="串5本盛り合わせ"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                            <div
-                                class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700">
+                        <div class="w-full md:w-3/5 relative p-4 md:p-6">
+                            <!-- 和モダン装飾（コーナーブラケット） -->
+                            <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-vermilion opacity-80 transition-all duration-700 group-hover:w-full group-hover:h-full group-hover:opacity-40"></div>
+                            <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-vermilion opacity-80 transition-all duration-700 group-hover:w-full group-hover:h-full group-hover:opacity-40"></div>
+                            
+                            <div class="overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl bg-dark">
+                                <img src="img/menupic01.jpg" alt="串5本盛り合わせ"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 relative z-10">
+                                <div class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700 z-20 pointer-events-none"></div>
                             </div>
                         </div>
                         <div class="w-full md:w-2/5 flex flex-col justify-center">
@@ -369,12 +419,15 @@
                     </div>
 
                     <div class="group flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
-                        <div
-                            class="w-full md:w-3/5 overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl border border-white/5">
-                            <img src="img/menupic02.jpg" alt="串7本盛り合わせ"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                            <div
-                                class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700">
+                        <div class="w-full md:w-3/5 relative p-4 md:p-6">
+                            <!-- 和モダン装飾（コーナーブラケット） -->
+                            <div class="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-vermilion opacity-80 transition-all duration-700 group-hover:w-full group-hover:h-full group-hover:opacity-40"></div>
+                            <div class="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-vermilion opacity-80 transition-all duration-700 group-hover:w-full group-hover:h-full group-hover:opacity-40"></div>
+                            
+                            <div class="overflow-hidden rounded-sm relative aspect-[4/3] md:aspect-[16/10] shadow-2xl bg-dark">
+                                <img src="img/menupic02.jpg" alt="串7本盛り合わせ"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 relative z-10">
+                                <div class="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-700 z-20 pointer-events-none"></div>
                             </div>
                         </div>
                         <div class="w-full md:w-2/5 flex flex-col justify-center">
@@ -392,13 +445,16 @@
                 </div>
 
                 <div class="text-center mt-24 flex flex-col items-center gap-8">
-                    <p class="text-white/60 font-medium tracking-widest border border-white/10 inline-block px-8 py-4 rounded-full">
+                    <p
+                        class="text-white/60 font-medium tracking-widest border border-white/10 inline-block px-8 py-4 rounded-full">
                         その他、お酒によく合う一品料理や季節のメニューも多数ご用意しております。
                     </p>
                     <a href="https://www.hotpepper.jp/strJ004660142/food/" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center justify-center bg-vermilion text-white font-bold tracking-widest px-12 py-5 rounded-sm hover:bg-white hover:text-vermilion transition-all duration-300 group">
                         その他メニューはこちら
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
@@ -482,7 +538,8 @@
                     </div>
                     <div
                         class="text-dark/80 font-medium leading-loose md:leading-[2.5] tracking-normal md:tracking-widest flex flex-col gap-5 md:block md:gap-0">
-                        <p class="max-md:ml-0 md:ml-10">以前から「いつか自分たちのお店を持ちたい」という想いがありました。</p>
+                        <p class="max-md:ml-0 md:ml-10">以前から「いつか自分たちのお店を持ちたい」という<br class="hidden md:block">想いがありました。
+                        </p>
                         <p class="max-md:ml-0 md:ml-10">
                             おいしい料理とお酒を囲みながら、誰もが気軽に集まり、<br class="hidden md:block">ほっとできる時間を過ごせる場所をつくりたい。<br
                                 class="hidden md:block">そんな想いから「居酒屋
@@ -524,6 +581,10 @@
 
         <!-- Access Section -->
         <section id="access" class="bg-dark text-white py-24 md:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="img/blackbg.jpg" alt="店舗情報背景" class="w-full h-full object-cover">
+            </div>
+            
             <div class="container mx-auto px-4 md:px-6 relative z-10">
                 <div class="text-center mb-16">
                     <span
