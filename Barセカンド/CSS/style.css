@@ -1154,6 +1154,9 @@ footer {
   }
 
   /* Sections */
+  .recommend-item {
+    padding: 15px 10px;
+  }
   .recommend-item span {
     font-size: 14px;
   }
