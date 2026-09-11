@@ -79,13 +79,16 @@ nav.is-scrolled {
 }
 
 .nav-logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  text-shadow: var(--neon-blue-glow);
+}
+
+.nav-logo-img {
+  max-height: 36px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
 }
 
 .nav-right {
@@ -314,14 +317,12 @@ nav.is-open .menu-btn span:last-child { transform: rotate(-45deg); top: 11px; }
 
 .fv-logo.is-active { transform: translateY(0); }
 
-.logo-text-large {
-  font-family: 'Space Mono', monospace;
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--text-main);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-shadow: var(--neon-blue-glow);
+.fv-logo-img {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));
 }
 
 .fv-read-more {
@@ -947,11 +948,14 @@ footer {
 }
 
 .footer-logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  max-height: 32px;
+  width: auto;
+  display: block;
 }
 
 .footer-copy {
@@ -1058,7 +1062,6 @@ footer {
     position: relative;
     z-index: 2;
   }
-  .logo-text-large { font-size: 32px; }
 
   .fv-read-more {
     order: 2;
