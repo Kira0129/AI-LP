@@ -263,7 +263,7 @@
             .fv-right { width: 115%; max-width: 115%; margin-left: -5%; }
         }
         @media (max-width: 900px) {
-            .fv-section { padding: 96px 0; } /* SP padding統一 (py-24相当) */
+            .fv-section { padding: 40px 0; } /* SP padding */
             .fv-container { display: flex; flex-direction: column; gap: 0; padding: 0 24px; }
             .fv-left { min-height: auto; padding-left: 0; }
             .fv-decorations { top: 35px; left: 0; right: 0; height: 160px; }
