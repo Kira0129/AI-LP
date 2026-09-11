@@ -173,5 +173,29 @@
                 }, 2200);
             };
 
+            // Voice Read More functionality
+            const reviewTexts = document.querySelectorAll('.review-text');
+            reviewTexts.forEach(text => {
+                const btn = text.nextElementSibling;
+                if (!btn || !btn.classList.contains('read-more-btn')) return;
+                
+                // Small delay to ensure rendering and fonts are loaded before checking height
+                setTimeout(() => {
+                    if (text.scrollHeight > text.clientHeight + 2) {
+                        btn.classList.remove('hidden');
+                        btn.addEventListener('click', function() {
+                            if (text.classList.contains('line-clamp-3')) {
+                                text.classList.remove('line-clamp-3');
+                                btn.innerHTML = '閉じる <i class="fa-solid fa-chevron-up ml-1 text-xs"></i>';
+                            } else {
+                                text.classList.add('line-clamp-3');
+                                btn.innerHTML = '続きを読む <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>';
+                            }
+                        });
+                    }
+                }, 500);
+            });
+
             setTimeout(startFVAnimation, 100);
         });
+

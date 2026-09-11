@@ -138,10 +138,14 @@
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
                     <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-                        <div class="w-full md:w-[90%] relative">
+                        <div class="w-full md:w-[90%] relative grid grid-cols-2 gap-3 md:gap-4">
                             <img src="img/recompic.jpg" alt="おすすめシーン"
-                                class="w-full h-auto rounded-sm shadow-xl relative z-10">
-                            <div class="absolute -bottom-8 -right-8 w-2/3 h-2/3 bg-vermilion/10 z-0 rounded-sm"></div>
+                                class="w-full h-full object-cover rounded-sm shadow-xl relative z-10 col-span-2 aspect-[16/10]">
+                            <img src="img/service_02.jpg" alt="お酒"
+                                class="w-full h-full object-cover rounded-sm shadow-xl relative z-10 aspect-square">
+                            <img src="img/service_03.jpg" alt="座敷"
+                                class="w-full h-full object-cover rounded-sm shadow-xl relative z-10 aspect-square">
+                            <div class="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 w-2/3 h-2/3 bg-vermilion/10 z-0 rounded-sm"></div>
                         </div>
                     </div>
 
@@ -487,53 +491,86 @@
 
                 <div class="swiper voice-swiper max-w-6xl mx-auto pb-12">
                     <div class="swiper-wrapper">
+                        <!-- Review 1 -->
                         <div class="swiper-slide h-auto">
-                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
-                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">仕事帰りの至福の時間
-                                </h3>
-                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
-                                    仕事帰りにふらっと一人で立ち寄りました。カウンター席で揚げたてのサクサクな串揚げとお酒をいただき、一日の疲れが吹き飛びました。居心地が良くてつい長居してしまいます。
-                                </p>
-                                <div class="mt-6 pt-6 flex items-center gap-3">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">
-                                        客</div>
-                                    <span class="text-xs text-dark/50 font-bold">30代 男性 / おひとり様</span>
+                            <div class="bg-white p-8 md:p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <div class="flex items-center gap-4 mb-6 border-b border-dark/10 pb-4">
+                                    <div class="w-10 h-10 rounded-full bg-vermilion flex items-center justify-center text-white font-bold text-lg">S</div>
+                                    <div>
+                                        <div class="font-bold text-dark">Shu</div>
+                                        <div class="flex items-center gap-1 text-vermilion text-sm mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-dark/80 text-sm md:text-base leading-loose font-medium flex-grow flex flex-col">
+                                    <div class="review-text line-clamp-3 overflow-hidden transition-all duration-300">
+                                        初めて家族で行きました！<br>どの料理も美味しく、居心地がとても良かったです！<br>お座敷があったのが個人的にはありがたったです。<br>また行きたいと思います。
+                                    </div>
+                                    <button class="read-more-btn text-vermilion text-sm font-bold mt-2 hover:underline focus:outline-none self-start hidden">
+                                        続きを読む <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Review 2 -->
                         <div class="swiper-slide h-auto">
-                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
-                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">家族でゆっくり楽しめました
-                                </h3>
-                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
-                                    座敷があるので、子供連れでも安心して利用できました。温かい接客で迎えていただき、串揚げも一品料理も美味しくて家族みんな大満足です。また休日に伺います！
-                                </p>
-                                <div class="mt-6 pt-6 flex items-center gap-3">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">
-                                        客</div>
-                                    <span class="text-xs text-dark/50 font-bold">40代 女性 / ご家族連れ</span>
+                            <div class="bg-white p-8 md:p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <div class="flex items-center gap-4 mb-6 border-b border-dark/10 pb-4">
+                                    <div class="w-10 h-10 rounded-full bg-vermilion flex items-center justify-center text-white font-bold text-lg">r</div>
+                                    <div>
+                                        <div class="font-bold text-dark">r. “rr” r.</div>
+                                        <div class="flex items-center gap-1 text-vermilion text-sm mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-dark/80 text-sm md:text-base leading-loose font-medium flex-grow flex flex-col">
+                                    <div class="review-text line-clamp-3 overflow-hidden transition-all duration-300">
+                                        料理が適温。揚物は新鮮な油でカリカリっと高温であげてあり、グラスも霜が付くほど冷えてました。提供スピードも速かったです。<br><br>喫煙は外みたいです。<br><br>駐車場、2台は停められました。中は意外に広くて、座敷がたくさんあったので空間を広々つかえました。
+                                    </div>
+                                    <button class="read-more-btn text-vermilion text-sm font-bold mt-2 hover:underline focus:outline-none self-start hidden">
+                                        続きを読む <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Review 3 -->
                         <div class="swiper-slide h-auto">
-                            <div class="bg-white p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
-                                <h3 class="text-lg font-bold mb-4 text-dark border-b border-dark/10 pb-4">アットホームで素敵なお店
-                                </h3>
-                                <p class="text-dark/70 text-sm md:text-base leading-loose font-medium flex-grow">
-                                    初めて行きましたが、ご夫婦のアットホームな雰囲気が最高でした。串盛り合わせはどれも美味しく、他のお客さんとも自然と会話が弾むような、素敵な空間です。
-                                </p>
-                                <div class="mt-6 pt-6 flex items-center gap-3">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-vermilion flex items-center justify-center text-white text-xs">
-                                        客</div>
-                                    <span class="text-xs text-dark/50 font-bold">50代 男性 / ご友人同士</span>
+                            <div class="bg-white p-8 md:p-10 h-full flex flex-col shadow-sm border border-dark/5 rounded-sm">
+                                <div class="flex items-center gap-4 mb-6 border-b border-dark/10 pb-4">
+                                    <div class="w-10 h-10 rounded-full bg-vermilion flex items-center justify-center text-white font-bold text-lg">石</div>
+                                    <div>
+                                        <div class="font-bold text-dark">石川和明</div>
+                                        <div class="flex items-center gap-1 text-vermilion text-sm mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-dark/80 text-sm md:text-base leading-loose font-medium flex-grow flex flex-col">
+                                    <div class="review-text line-clamp-3 overflow-hidden transition-all duration-300">
+                                        居酒屋で友人と楽しく過ごしました！コストパフォーマンスがとても良く、価格も手頃で満足度が高かったです。料理の種類も豊富で、どれも美味しかったので、おすすめです。また行きたいと思います！
+                                    </div>
+                                    <button class="read-more-btn text-vermilion text-sm font-bold mt-2 hover:underline focus:outline-none self-start hidden">
+                                        続きを読む <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-pagination mt-8"></div>
+                </div>
+
+                <!-- Google Maps Link Button -->
+                <div class="text-center mt-12">
+                    <a href="https://www.google.com/search?sca_esv=d0b419d1da6f3190&rlz=1C1TMBY_jaJP1190JP1190&sxsrf=APpeQntPqHoU0s2xMd2Hx3WHBI1JhSNW_w:1785910317869&kgmid=/g/11z5x94hpr&q=%E5%B1%85%E9%85%92%E5%B1%8B+%E3%81%A6%E3%82%93%E3%81%B3%E3%82%87%E3%81%86&shem=dlvs1,epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/1&kgs=e972f1d5caa2f663&utm_source=dlvs1,epsd1,ltae,rimspwouoe,sh/x/loc/uni/m1/1#lrd=0x6018d5c70e85b6b5:0x5eead5d91f75b573,1,,,," target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center bg-white text-dark font-bold tracking-widest px-10 py-5 rounded-sm border border-dark/10 hover:bg-dark hover:text-white transition-all shadow-sm group">
+                        <i class="fa-brands fa-google text-lg mr-3 text-[#4285F4]"></i>
+                        その他口コミはこちら
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2 opacity-50 group-hover:opacity-100"></i>
+                    </a>
                 </div>
             </div>
         </section>
